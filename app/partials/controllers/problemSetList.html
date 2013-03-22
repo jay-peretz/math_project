@@ -1,0 +1,10 @@
+<div>
+    <ul class="nav nav-list">
+        <li class="nav-header">{{unit.title}}</li>
+        <li ng-repeat="problemSet in problemSets">
+            <a href="index.html#/units/{{unit.path}}/{{problemSet.path}}/1">
+                {{problemSet.title}}
+            </a>
+        </li>
+    </ul>
+</div>
