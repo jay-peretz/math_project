@@ -51,16 +51,24 @@ angular.module('mathSkills.services')
                     return angular.copy(course);
                 },
                 getProblemData: function (unitPath, problemSetPath, problemNumber) {
+                    var problemSet = courseData.getProblemSetData(unitPath, problemSetPath),
+                        ret;
+
+                    problemSet.children.forEach(function (problem, ii) {
+                        if (ii + 1 === +problemNumber) {
+                            ret = problem;
+                        }
+                    });
+
+                    return ret;
+                },
+                getProblemSetData: function (unitPath, problemSetPath) {
                     var unit = courseData.getUnitData(unitPath),
                         ret;
 
                     unit.children.forEach(function (problemSet) {
                         if (problemSet.path === problemSetPath) {
-                            problemSet.children.forEach(function (problem, ii) {
-                                if (ii + 1 === +problemNumber) {
-                                    ret = problem;
-                                }
-                            });
+                            ret = problemSet;
                         }
                     });
 
