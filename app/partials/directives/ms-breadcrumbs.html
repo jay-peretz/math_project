@@ -1,0 +1,13 @@
+<ul class=breadcrumb>
+    <li ng-repeat="crumb in breadcrumbs" ng-class="{ active: $last }">
+        <ng-switch on=$last>
+            <span ng-switch-when=false>
+                <a href="{{crumb.path}}">{{crumb.title}}</a>
+                <span class=divider>/&nbsp;</span>
+            </span>
+            <span ng-switch-when=true>
+                {{crumb.title}}
+            </span>
+        </ng-switch>
+    </li>
+</ul>
