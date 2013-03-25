@@ -16,43 +16,43 @@ angular.module('mathSkills.services')
                                 path: '1.2-standard-notation-of-whole-numbers',
                                 children: [
                                     {
-                                        title: 'Words to Number',
+                                        title: 'Words to Number #1',
                                         children: []
                                     },
                                     {
-                                        title: 'Words to Number',
+                                        title: 'Words to Number #2',
                                         children: []
                                     },
                                     {
-                                        title: 'Words to Number',
+                                        title: 'Words to Number #3',
                                         children: []
                                     },
                                     {
-                                        title: 'Words to Number',
+                                        title: 'Words to Number #4',
                                         children: []
                                     },
                                     {
-                                        title: 'Words to Number',
+                                        title: 'Words to Number #5',
                                         children: []
                                     },
                                     {
-                                        title: 'Words to Number',
+                                        title: 'Words to Number #6',
                                         children: []
                                     },
                                     {
-                                        title: 'Words to Number',
+                                        title: 'Words to Number #7',
                                         children: []
                                     },
                                     {
-                                        title: 'Words to Number',
+                                        title: 'Words to Number #8',
                                         children: []
                                     },
                                     {
-                                        title: 'Words to Number',
+                                        title: 'Words to Number #9',
                                         children: []
                                     },
                                     {
-                                        title: 'Words to Number',
+                                        title: 'Words to Number #10',
                                         children: []
                                     }
                                 ]
