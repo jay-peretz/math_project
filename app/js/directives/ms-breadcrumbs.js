@@ -26,13 +26,15 @@ angular.module('mathSkills')
                                     title: 'Home',
                                     path: basePath + '/'
                                 }];
-                                pathParts.forEach(function (path) {
-                                    basePath += '/' + path;
-                                    $scope.breadcrumbs.push({
-                                        title: getBreadcrumbTitle(basePath),
-                                        path: basePath
+                                if (pathParts[0] !== '') {
+                                    pathParts.forEach(function (path) {
+                                        basePath += '/' + path;
+                                        $scope.breadcrumbs.push({
+                                            title: getBreadcrumbTitle(basePath),
+                                            path: basePath
+                                        });
                                     });
-                                });
+                                }
                             };
                         $rootScope.$on('$routeChangeSuccess', updateBreadcrumbs);
                         updateBreadcrumbs();
