@@ -6,6 +6,10 @@ angular.module('mathSkills', ['mathSkills.services']).
         '$routeProvider',
         function ($routeProvider) {
             $routeProvider
+                .when('/', {
+                    templateUrl: 'partials/home.html',
+                    controller: 'home'
+                })
                 .when('/units', {
                     templateUrl: 'partials/controllers/unitList.html',
                     controller: 'unitList'
@@ -19,5 +23,11 @@ angular.module('mathSkills', ['mathSkills.services']).
                     controller: 'problem'
                 })
                 .otherwise({redirectTo: '/'});
+        }
+    ])
+    .controller('home', [
+        '$scope',
+        function ($scope) {
+            $scope.course = 'CSKLS 371 GENERAL ARITHMETIC';
         }
     ]);
