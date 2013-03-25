@@ -2,21 +2,23 @@
 <html lang=en ng-app=mathSkills>
     <head>
         <meta charset=utf-8>
+        <meta name=viewport content="width=device-width, initial-scale=1.0">
         <title>MathSkills | SRJC</title>
         <link rel=stylesheet href=css/bootstrap.min.css>
         <link rel=stylesheet href=css/app.css>
     </head>
     <body>
-        <header>
-            <div>
-                <h1>Math Skills</h1>
-                <span>&copy; 2013 Santa Rosa Junior College</span>
+        <header class=container>
+            <div class="navbar navbar-inverse">
+                <div class=navbar-inner>
+                    <a class=brand href=#>Math Skills</a>
+                    <p class=navbar-text>&copy; 2013 Santa Rosa Junior College</p>
+                </div>
             </div>
         </header>
-        <div>
+        <div class=container>
             <div ng-view></div>
         </div>
-        
         <script src=//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js></script>
         <script src=lib/angular/angular.js></script>
         <script src=js/mathSkills.js></script>
