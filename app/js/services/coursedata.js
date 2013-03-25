@@ -16,8 +16,18 @@ angular.module('mathSkills.services')
                                 path: '1.2-standard-notation-of-whole-numbers',
                                 children: [
                                     {
-                                        title: 'Words to Number #1',
-                                        children: []
+                                        title: 'Words to Number',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Write eighty in number notation}',
+                                                answer: '\\input{80}',
+                                                controls: {
+                                                    checkAnswer: true,
+                                                    help: true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
                                         title: 'Words to Number #2',

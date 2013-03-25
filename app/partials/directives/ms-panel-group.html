@@ -1,0 +1,9 @@
+<div>
+    <ms-panel
+        ng-repeat="panel in panels"
+        problem={{panel.problem}}
+        answer={{panel.answer}}
+        controls={{panel.controls}}
+        ng-hide=$parent.isNotCurrent($parent.$index)
+    ></ms-panel>
+</div>

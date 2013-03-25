@@ -12,5 +12,7 @@ angular.module('mathSkills')
                 $routeParams.problemSet,
                 $routeParams.problemNumber
             );
+            $scope.mainAnswer = $scope.problem.children[0];
+            $scope.workbook = $scope.problem.children[1];
         }
     ]);
