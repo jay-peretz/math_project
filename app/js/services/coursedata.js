@@ -130,6 +130,9 @@ angular.module('mathSkills.services')
                     });
 
                     return ret;
+                },
+                setCourseData: function (data) {
+                    course = data;
                 }
             };
 

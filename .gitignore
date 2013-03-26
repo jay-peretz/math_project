@@ -1,1 +1,5 @@
+# IDE files
 .c9revisions
+
+# Build stuff
+node_modules
