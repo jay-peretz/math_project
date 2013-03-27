@@ -8,7 +8,11 @@ angular.module('mathSkills')
                 controller: [
                     '$scope',
                     function ($scope) {
-                        
+                        // Listen for panelGroupDone events.
+                        $scope.$on('panelGroupDone', function (e, data) {
+                            // $emit problemDone in response.
+                            $scope.$emit('problemDone');
+                        });
                     }
                 ],
                 restrict: 'E',

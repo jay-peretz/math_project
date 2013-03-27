@@ -23,15 +23,63 @@ angular.module('mathSkills.services')
                                                 problem: '\\str{Write eighty in number notation}',
                                                 answer: '\\input{80}',
                                                 controls: {
-                                                    checkAnswer: true,
-                                                    help: true
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }, {
+                                            title: 'Workbook',
+                                            children: [{
+                                                problem: '\\str{Write seventy in number notation}',
+                                                answer: '\\input{70}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }, {
+                                                problem: '\\str{Write sixty in number notation}',
+                                                answer: '\\input{60}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }, {
+                                                problem: '\\str{Write fifty in number notation}',
+                                                answer: '\\input{50}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }, {
+                                                problem: '\\str{Write forty in number notation}',
+                                                answer: '\\input{40}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }, {
+                                                problem: '\\str{Write thirty in number notation}',
+                                                answer: '\\input{30}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
                                                 }
                                             }]
                                         }]
                                     },
                                     {
-                                        title: 'Words to Number #2',
-                                        children: []
+                                        title: 'Words to Number',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Write sixty in number notation}',
+                                                answer: '\\input{60}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
                                         title: 'Words to Number #3',

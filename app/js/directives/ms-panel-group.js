@@ -9,11 +9,28 @@ angular.module('mathSkills')
                     '$scope',
                     function ($scope) {
                         $scope.currentPanel = 0;
-                        $scope.isNotCurrent = function (ii) {
-                            return $scope.currentPanel !== ii;
+                        $scope.isActive = function (ii) {
+                            return $scope.currentPanel === ii;
                         };
                         $scope.$watch('panelgroup', function () {
+                            $scope.title = JSON.parse($scope.panelgroup).title;
                             $scope.panels = JSON.parse($scope.panelgroup).children;
+                        });
+                        $scope.updateCurrent = function (ii) {
+                            $scope.currentPanel = ii;
+                        };
+
+                        // Listen for panelDone events.
+                        $scope.$on('panelDone', function () {
+                            // If we have more panels to show, show the next.
+                            if ($scope.currentPanel < $scope.panels.length - 1) {
+                                $scope.currentPanel += 1;
+                            // Otherwise $emit panelGroupDone
+                            } else {
+                                $scope.$emit('panelGroupDone', {
+                                    title: $scope.title
+                                });
+                            }
                         });
                     }
                 ],

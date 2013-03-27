@@ -1,9 +1,28 @@
-<div>
-    <ms-panel
-        ng-repeat="panel in panels"
-        problem={{panel.problem}}
-        answer={{panel.answer}}
-        controls={{panel.controls}}
-        ng-hide=$parent.isNotCurrent($parent.$index)
-    ></ms-panel>
+<div class="tabbable tabs-left">
+    <ul class="nav nav-tabs">
+        <li
+            ng-repeat="panel in panels"
+            ng-class="{ active: isActive($index) }"
+        >
+            <a
+                href="#step-{{$index + 1}}"
+                data-toggle="tab"
+                ng-click="updateCurrent($index)"
+            >Step #{{$index + 1}}</a>
+        </li>
+    </ul>
+    <div class=tab-content>
+        <div
+            ng-repeat="panel in panels"
+            ng-class="{ active: isActive($index) }"
+            class="tab-pane"
+            id="step-{{$index + 1}}"
+        >
+            <ms-panel
+                problem={{panel.problem}}
+                answer={{panel.answer}}
+                controls={{panel.controls}}
+            ></ms-panel>
+        </div>
+    </div>
 </div>

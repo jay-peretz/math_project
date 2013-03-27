@@ -1,3 +1,14 @@
 <div>
-    <ms-panel-group panelgroup={{mainanswer}}></ms-panel-group>
+    <ul class="nav nav-tabs">
+        <li class=active><a href="#problem" data-toggle="tab" onclick="return false;">Problem</a></li>
+        <li><a href="#workbook" data-toggle="tab" onclick="return false;">Workbook</a></li>
+    </ul>
+    <div class=tab-content>
+        <div class="tab-pane active" id=problem>
+            <ms-panel-group panelgroup={{mainanswer}}></ms-panel-group>
+        </div>
+        <div class=tab-pane id=workbook>
+            <ms-panel-group panelgroup={{workbook}}></ms-panel-group>
+        </div>
+    </div>
 </div>
