@@ -12,6 +12,110 @@ angular.module('mathSkills.services')
                         path: 'whole-numbers',
                         children: [
                             {
+                                title: '1.1 Place Value Number System of Whole Numbers',
+                                path: '1.1-place-value-number-system-of-whole-numbers',
+                                children: [
+                                    {
+                                        title: 'Whole Number Place Value',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\wholeplace{2000}{2}',
+                                                answer: '\\select{2}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }, {
+                                            title: 'Workbook',
+                                            children: [{
+                                                problem: '\\str{Write seventy in number notation}',
+                                                answer: '\\input{70}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }, {
+                                                problem: '\\str{Write sixty in number notation}',
+                                                answer: '\\input{60}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }, {
+                                                problem: '\\str{Write fifty in number notation}',
+                                                answer: '\\input{50}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }, {
+                                                problem: '\\str{Write forty in number notation}',
+                                                answer: '\\input{40}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }, {
+                                                problem: '\\str{Write thirty in number notation}',
+                                                answer: '\\input{30}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Words to Number',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Write sixty in number notation}',
+                                                answer: '\\input{60}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Words to Number #3',
+                                        children: []
+                                    },
+                                    {
+                                        title: 'Words to Number #4',
+                                        children: []
+                                    },
+                                    {
+                                        title: 'Words to Number #5',
+                                        children: []
+                                    },
+                                    {
+                                        title: 'Words to Number #6',
+                                        children: []
+                                    },
+                                    {
+                                        title: 'Words to Number #7',
+                                        children: []
+                                    },
+                                    {
+                                        title: 'Words to Number #8',
+                                        children: []
+                                    },
+                                    {
+                                        title: 'Words to Number #9',
+                                        children: []
+                                    },
+                                    {
+                                        title: 'Words to Number #10',
+                                        children: []
+                                    }
+                                ]
+                            },
+                            {
                                 title: '1.2 Standard Notation of Whole Numbers',
                                 path: '1.2-standard-notation-of-whole-numbers',
                                 children: [
@@ -114,7 +218,7 @@ angular.module('mathSkills.services')
                                         children: []
                                     }
                                 ]
-                            }
+                            }							
                         ]
                     }, {
                         title: '2 Fractions',

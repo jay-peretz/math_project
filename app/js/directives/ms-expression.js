@@ -16,7 +16,7 @@ angular.module('mathSkills')
                     expected: '@',
                     label: '@'
                 },
-                template: '<div></div>'
+                template: '<div ng-bind-html-unsafe=template></div>'
             };
         }
     ]);
