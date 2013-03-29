@@ -31,7 +31,9 @@ angular.module('mathSkills')
 				
 			 // Extract the value/s for $scope.wholenumber & $scope.wholenumberplace
 				$scope.$watch('expected', function () {
-					parser.parse($scope.expected, { scope: $scope });
+					if ($scope.expected) {
+						parser.parse($scope.expected, { scope: $scope });
+					}
 				});
 				$scope.$watch('wholenumber', function () {
 					if (typeof $scope.wholenumber === "string") {

@@ -28,7 +28,9 @@ angular.module('mathSkills')
 				
 			 // Extract the value/s for $scope.answercorrect & $scope.optionsarray
 				$scope.$watch('expected', function () {
-					parser.parse($scope.expected, { scope: $scope });
+					if ($scope.expected) {
+						parser.parse($scope.expected, { scope: $scope });
+					}
 				});
 				$scope.$watch('optionsarray', function () {
 					if (typeof $scope.optionsarray === "string") {
@@ -36,7 +38,7 @@ angular.module('mathSkills')
 					}
 				});
 				$scope.$watch('answercorrect', function () {
-					if (typeof $scope.answercorrect === "string") {
+					if (typeof $scope.answercorrect === "string"&& $scope.answercorrect !== "") {
 						$scope.answercorrect = JSON.parse($scope.answercorrect);
 					}
 				});
