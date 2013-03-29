@@ -17,7 +17,6 @@ angular.module('mathSkills')
 			restrict: 'E',
 			scope: {
 				expected: '@',
-				alternate: '@',
 				label: '@'
 			},
 			controller: function ($scope, $element) {
