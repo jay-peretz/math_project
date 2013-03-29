@@ -17,8 +17,14 @@ angular.module('mathSkills')
             $scope.workbook = $scope.problem.children[1];
 
             $scope.$on('problemDone', function () {
-                var newPath = $location.path().split('/').slice(0, -1).join('/');
-                newPath += '/' + (+$routeParams.problemNumber + 1);
+                var numberOfProblems = courseData.getNumberOfProblems($routeParams.unit, $routeParams.problemSet),
+                    newPath = $location.path().split('/').slice(0, -1).join('/');
+
+                if (+$routeParams.problemNumber + 1 <= numberOfProblems) {
+                    newPath += '/' + (+$routeParams.problemNumber + 1);
+                } else {
+                    newPath += '/all/feedback';
+                }
                 $location.path(newPath);
             });
         }

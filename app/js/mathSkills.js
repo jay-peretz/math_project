@@ -22,6 +22,10 @@ angular.module('mathSkills', ['mathSkills.services']).
                     templateUrl: 'partials/controllers/problem.html',
                     controller: 'problem'
                 })
+                .when('/units/:unit/:problemSet/all/feedback', {
+                    templateUrl: 'partials/controllers/feedback.html',
+                    controller: 'feedback'
+                })
                 .otherwise({redirectTo: '/'});
         }
     ])

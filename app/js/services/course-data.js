@@ -124,46 +124,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\str{Write eighty in number notation}',
-                                                answer: '\\input{80}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": true
-                                                }
-                                            }]
-                                        }, {
-                                            title: 'Workbook',
-                                            children: [{
-                                                problem: '\\str{Write seventy in number notation}',
-                                                answer: '\\input{70}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": true
-                                                }
-                                            }, {
-                                                problem: '\\str{Write sixty in number notation}',
-                                                answer: '\\input{60}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": true
-                                                }
-                                            }, {
-                                                problem: '\\str{Write fifty in number notation}',
-                                                answer: '\\input{50}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": true
-                                                }
-                                            }, {
-                                                problem: '\\str{Write forty in number notation}',
-                                                answer: '\\input{40}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": true
-                                                }
-                                            }, {
-                                                problem: '\\str{Write thirty in number notation}',
-                                                answer: '\\input{30}',
+                                                problem: '\\str{Write fifty-eight in number notation}',
+                                                answer: '\\input{58}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -176,8 +138,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\str{Write sixty in number notation}',
-                                                answer: '\\input{60}',
+                                                problem: '\\str{Write one hundred seventy-four in number notation}',
+                                                answer: '\\input{174}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -186,36 +148,116 @@ angular.module('mathSkills.services')
                                         }]
                                     },
                                     {
-                                        title: 'Words to Number #3',
-                                        children: []
+                                        title: 'Words to Number',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Write three hundred thirty-six in number notation}',
+                                                answer: '\\input{336}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
-                                        title: 'Words to Number #4',
-                                        children: []
+                                        title: 'Words to Number',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Write three thousand, three hundred eighty-six in number notation}',
+                                                answer: '\\input{3386}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
-                                        title: 'Words to Number #5',
-                                        children: []
+                                        title: 'Words to Number',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Write fifty thousand, nine hundred fifty-seven in number notation}',
+                                                answer: '\\input{50957}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
-                                        title: 'Words to Number #6',
-                                        children: []
+                                        title: 'Words to Number',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Write four hundred one in number notation}',
+                                                answer: '\\input{401}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
-                                        title: 'Words to Number #7',
-                                        children: []
+                                        title: 'Words to Number',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Write seven thousand, seven hundred nineteen in number notation}',
+                                                answer: '\\input{7719}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
-                                        title: 'Words to Number #8',
-                                        children: []
+                                        title: 'Words to Number',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Write seventy-three thousand, one hundred seventy-eight in number notation}',
+                                                answer: '\\input{73178}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
-                                        title: 'Words to Number #9',
-                                        children: []
+                                        title: 'Words to Number',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Write one hundred twenty-six in number notation}',
+                                                answer: '\\input{126}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
-                                        title: 'Words to Number #10',
-                                        children: []
+                                        title: 'Words to Number',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Write seven thousand, seven hundred forty-eight in number notation}',
+                                                answer: '\\input{7748}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     }
                                 ]
                             }							
@@ -247,6 +289,9 @@ angular.module('mathSkills.services')
             var courseData = {
                 getCourseData: function () {
                     return angular.copy(course);
+                },
+                getNumberOfProblems: function (unitPath, problemSetPath) {
+                    return courseData.getProblemSetData(unitPath, problemSetPath).children.length;
                 },
                 getProblemData: function (unitPath, problemSetPath, problemNumber) {
                     var problemSet = courseData.getProblemSetData(unitPath, problemSetPath),
