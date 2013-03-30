@@ -27,5 +27,9 @@ angular.module('mathSkills')
                 }
                 $location.path(newPath);
             });
+
+            $scope.$on('answer', function (e, data) {
+                data.problemNumber = $routeParams.problemNumber;
+            });
         }
     ]);
