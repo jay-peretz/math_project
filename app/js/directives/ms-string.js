@@ -1,35 +1,33 @@
 'use strict';
 /*global angular */
 
-angular.module('mathSkills')
+angular.module('mathSkills') 
     .config(['parserProvider', function (parserProvider) {
         parserProvider.register('str', {
-            argTemplates: [{
-                name: ''
-            }],
-            directiveTemplate: '<ms-string expected={{expected}} label={{string}}></ms-string>'
+            directiveTemplate: '<ms-string expected={{expected}} label=string></ms-string>'
         });
     }])
     .directive('msString', [
         'parser',
-        '$compile',
-        function (parser, $compile) {
+        'directiveUtils',
+        function (parser, directiveUtils) {
             return {
                 controller: function ($scope, $element) {
                     $scope.controllerId = Math.random().toString();
-
-                    // Extract the value.
+                    
+                    // Extract the value and sent size event.
                     $scope.$watch('expected', function () {
-                        if ($scope.expected) {
-                            $scope.string = $scope.expected.slice(5, $scope.expected.length - 1);
+                        if($scope.expected) {
+                            $scope.string = $scope.expected.slice(5, $scope.expected.length - 1); 
+                            directiveUtils.size($scope, [$scope.string], 10, 5);    
                         }
                     });
-
+                     
                     // handle check answer event for parent scope "always correct".
                     $scope.$on ('checkAnswer', function () {
                         $scope.$emit('answerCorrect');
                     });
-
+    
                     $scope.$on('checkFocus', function (e) {
                         // If this event has not been marked as ignored.
                         if (e.defaultPrevented === false) {
@@ -40,7 +38,7 @@ angular.module('mathSkills')
                             });
                         }
                     });
-
+    
                     $scope.$on('checkHelp', function (e) {
                         // If this event has not been marked as ignored.
                         if (e.defaultPrevented === false) {
@@ -48,14 +46,14 @@ angular.module('mathSkills')
                             // string does not use help, fire a notHelped event.
                             $scope.$emit('notHelped', {
                                 controllerId: $scope.controllerId
-                            });
+                            }); 
                         }
                     });
-
+                   
                 },
                 restrict: 'E',
                 scope: {
-                    expected: '@',
+                    expected: '@', 
                     label: '@'
                 },
                 template: '<span>{{string}}</span>'
