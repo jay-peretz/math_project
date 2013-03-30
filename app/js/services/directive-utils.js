@@ -77,7 +77,8 @@ angular.module('mathSkills.services')
                     });
 
                     scope.$watch('expected', function () {
-                        if (scope.expected !== undefined) {
+                        // Don't do anything is scope.expected is undefined, null or an empty string.
+                        if (scope.expected) {
                             var template,
                                 compiled,
                                 options = directiveTemplate === true ? { directiveTemplate: true } : { scope: scope };
