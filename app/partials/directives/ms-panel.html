@@ -1,5 +1,13 @@
-<div class=row-fluid>
-    <ms-expression expected={{problem}} class=span5></ms-expression>
-    <ms-expression expected={{answer}} class=span5></ms-expression>
-    <ms-controls data={{controls}} class=span2></ms-controls>
+<div>
+    <ms-help-prompt></ms-help-prompt>
+    <div class=row-fluid>
+        <ms-expression expected={{problem}} class=span5></ms-expression>
+        <div class="span5 row-fluid">
+            <ms-expression expected={{answer}} class=span8></ms-expression>
+            <div class=span4>
+                <ms-feedback></ms-feedback>
+            </div>
+        </div>
+        <ms-controls data={{controls}} class=span2></ms-controls>
+    </div>
 </div>
