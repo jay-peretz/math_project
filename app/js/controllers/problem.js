@@ -7,7 +7,8 @@ angular.module('mathSkills')
         '$location',
         '$routeParams',
         '$scope',
-        function (courseData, $location, $routeParams, $scope) {
+        '$timeout',
+        function (courseData, $location, $routeParams, $scope, $timeout) {
             $scope.problem = courseData.getProblemData(
                 $routeParams.unit,
                 $routeParams.problemSet,
@@ -25,7 +26,11 @@ angular.module('mathSkills')
                 } else {
                     newPath += '/all/feedback';
                 }
-                $location.path(newPath);
+
+                // Change the path after a short delay.
+                $timeout(function () {
+                    $location.path(newPath);
+                }, 500);
             });
 
             $scope.$on('answer', function (e, data) {
