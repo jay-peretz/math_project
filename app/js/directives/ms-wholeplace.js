@@ -38,9 +38,9 @@ angular.module('mathSkills')
 				$scope.$watch('wholenumber', function () {
 					if (typeof $scope.wholenumber === "string") {
 						$scope.numbStringCommas = getNumberStringCommas($scope.wholenumber);
-					}
-					for (var ii = 0, len = $scope.numbStringCommas.length; ii < len; ii += 1) {
-							$scope.numbarray[ii] = $scope.numbStringCommas.substr(ii, 1);
+						for (var ii = 0, len = $scope.numbStringCommas.length; ii < len; ii += 1) {
+								$scope.numbarray[ii] = $scope.numbStringCommas.substr(ii, 1);
+						}
 					}
 				});
 				
@@ -50,7 +50,7 @@ angular.module('mathSkills')
 						if ( parseInt($scope.wholenumberplace, 10) > $scope.numbarray.toString().length) {
 							console.log("place value greater than value of given number");
 						}
-						$scope.wholenumberplace = ($scope.numbarray.length - 1) - parseInt($scope.wholenumberplace, 10);
+						$scope.wholenumberplace = $scope.wholenumber.toString().length - parseInt($scope.wholenumberplace, 10);
 						//build an array the same length as $scope.numbarray with blank spaces and a carat for the indicated digit
 						for (var ii = 0, jj = 1, len1 = $scope.numbarray.toString().length; ii < len1; ii++){
 							if ($scope.numbarray[ii] != ',') {
