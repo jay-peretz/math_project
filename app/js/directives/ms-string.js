@@ -19,7 +19,7 @@ angular.module('mathSkills')
                     $scope.$watch('expected', function () {
                         if($scope.expected) {
                             $scope.string = $scope.expected.slice(5, $scope.expected.length - 1); 
-                            directiveUtils.size($scope, [$scope.string], 10, 5);    
+                            // directiveUtils.size($scope, [$scope.string], 10, 5);    
                         }
                     });
                      
