@@ -67,7 +67,7 @@ angular.module('mathSkills')
                         // Check if we can receive focus.
                         if ($scope.answer === '') {
                             // If we have no answer yet, focus on ourselves and fire a focused event.
-                            $element.find('input').focus();
+                            $element.find('select').focus();
                             $scope.$emit('focused');
                         } else {
                             // If we have an answer already, fire a notFocused event.
@@ -84,7 +84,7 @@ angular.module('mathSkills')
                         // Check if we can set our answer to expected.
                         if ($scope.answer === '') {
                             // Strip out the tag part of $scope.expected and extract the value.
-                            $scope.answer = $scope.expected.slice(7, $scope.expected.length - 1);
+                           $scope.answer = $scope.optionsarray[$scope.answercorrect];
                             $scope.$emit('helped');
                         } else {
                             // If we have an answer already, fire a notHelped event.
@@ -95,13 +95,13 @@ angular.module('mathSkills')
                     }
                 });
 
-                jQuery($element).on('keyup', 'input', function (event) {
+                jQuery($element).on('keyup', 'select', function (event) {
                     if (event.keyCode === 13 || event.keyCode === 10) {
                         $scope.$apply($scope.$emit('triggerCheckAnswer'));
                     }
                 });
 
-                jQuery($element).on('keydown', 'input', function (event) {
+                jQuery($element).on('keydown', 'select', function (event) {
                     if (event.keyCode === 9) {
                         event.preventDefault();
                         $scope.$apply($scope.$emit('triggerCheckFocus'));

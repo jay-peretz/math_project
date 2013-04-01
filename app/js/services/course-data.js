@@ -8,7 +8,7 @@ angular.module('mathSkills.services')
                 title: 'CSKLS 371 GENERAL ARITHMETIC',
                 children: [
                     {
-                        title: '1 Whole Numbers',
+						title: '1 Whole Numbers',
                         path: 'whole-numbers',
                         children: [
                             {
@@ -20,60 +20,36 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\wholeplace{2000}{2}',
+                                                problem: '\\wholeplace{44816}{3}',
+                                                answer: '\\select{3}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Whole Number Place Value',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\wholeplace{38059}{2}',
                                                 answer: '\\select{2}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
                                                 }
                                             }]
-                                        }, {
-                                            title: 'Workbook',
-                                            children: [{
-                                                problem: '\\str{Write seventy in number notation}',
-                                                answer: '\\input{70}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": true
-                                                }
-                                            }, {
-                                                problem: '\\str{Write sixty in number notation}',
-                                                answer: '\\input{60}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": true
-                                                }
-                                            }, {
-                                                problem: '\\str{Write fifty in number notation}',
-                                                answer: '\\input{50}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": true
-                                                }
-                                            }, {
-                                                problem: '\\str{Write forty in number notation}',
-                                                answer: '\\input{40}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": true
-                                                }
-                                            }, {
-                                                problem: '\\str{Write thirty in number notation}',
-                                                answer: '\\input{30}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": true
-                                                }
-                                            }]
                                         }]
                                     },
                                     {
-                                        title: 'Words to Number',
+                                        title: 'Whole Number Place Value',
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\str{Write sixty in number notation}',
-                                                answer: '\\input{60}',
+                                                problem: '\\wholeplace{3888708}{6}',
+                                                answer: '\\select{6}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -82,37 +58,103 @@ angular.module('mathSkills.services')
                                         }]
                                     },
                                     {
-                                        title: 'Words to Number #3',
-                                        children: []
+                                        title: 'Whole Number Place Value',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\wholeplace{7016486}{1}',
+                                                answer: '\\select{1}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
-                                        title: 'Words to Number #4',
-                                        children: []
+                                        title: 'Whole Number Place Value',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\wholeplace{4927857}{5}',
+                                                answer: '\\select{5}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
-                                        title: 'Words to Number #5',
-                                        children: []
+                                        title: 'Whole Number Place Value',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\wholeplace{9049152}{5}',
+                                                answer: '\\select{5}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
-                                        title: 'Words to Number #6',
-                                        children: []
+                                        title: 'Whole Number Place Value',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\wholeplace{4555517}{3}',
+                                                answer: '\\select{3}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
-                                        title: 'Words to Number #7',
-                                        children: []
+                                        title: 'Whole Number Place Value',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\wholeplace{5174344}{0}',
+                                                answer: '\\select{0}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
-                                        title: 'Words to Number #8',
-                                        children: []
+                                        title: 'Whole Number Place Value',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\wholeplace{1924837}{6}',
+                                                answer: '\\select{6}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
                                     {
-                                        title: 'Words to Number #9',
-                                        children: []
+                                        title: 'Whole Number Place Value',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\wholeplace{295082}{2}',
+                                                answer: '\\select{2}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     },
-                                    {
-                                        title: 'Words to Number #10',
-                                        children: []
-                                    }
                                 ]
                             },
                             {
