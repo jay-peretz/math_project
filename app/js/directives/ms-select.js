@@ -58,7 +58,7 @@ angular.module('mathSkills')
 						$scope.class = 'error';
 						$scope.answer = '';
 					}
-					$scope.$emit('$scope.answer', data);
+					$scope.$emit('answer', data);
 				});
 
                  $scope.$on('checkFocus', function (e) {
