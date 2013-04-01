@@ -4,7 +4,7 @@
 /* Animations */
 
 /* fadeIn */
-ms-panel div {
+ms-panel > div {
     -moz-animation: fadein 1s, slideup 0.25s ease-in;
     -ms-animation: fadein 1s, slideup 0.25s ease-in;
     -o-animation: fadein 1s, slideup 0.25s ease-in;
