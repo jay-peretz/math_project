@@ -46,8 +46,8 @@ angular.module('mathSkills')
 				$scope.$on('checkAnswer', function () {
 					var answerfromarray = $scope.optionsarray[$scope.answercorrect];
 					var data = {
-						expected: $scope.expected,
-						answer: $scope.answer,
+						expected: '\\input{'+$scope.optionsarray[$scope.answercorrect]+'}',
+						answer: '\\input{'+$scope.answer+'}',
                         label: $scope.label
 					};
 					if (answerfromarray === $scope.answer) {
