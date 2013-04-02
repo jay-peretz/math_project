@@ -1,0 +1,68 @@
+<style type="text/css">
+
+  table.td_padding td {
+	padding-left:4px;
+	padding-right:4px;
+  }
+  .collapseTable {
+	border-collapse:collapse;
+  }
+  .large-font-size {
+	  	font-size:110%;
+  }
+  .tr_height {
+	  height:1.7em;
+  }
+  .tr_height_plus {
+	  height:2em;
+  }
+
+  .text_align_right {
+	  text-align:right;
+  }
+  .carry {
+	font-size:small;
+  }
+  .border-top-2px-black {
+	  	border-top:2px solid black;
+  }    
+</style>
+
+<span>
+    	<table class="collapseTable td_padding large-font-size">
+			<tr class="tr_height">
+            	<td>
+                </td>
+				<td class='text_align_right carry' ng-repeat='columnEntry in firstArray'>{{columnEntry}}
+				</td>
+                <td>
+                </td>
+			</tr>
+			<tr class="tr_height" ng-repeat='row in secondArray'>
+            	<td>
+                	<span ng-show=$last>{{sign}}</span>
+                </td>
+				<td class='text_align_right' ng-repeat='col in row'>{{col}}
+				</td>
+                <td>
+                </td>
+			</tr>
+            <tr class="tr_height_plus">
+            	<td>
+                </td>
+				<td class='text_align_right border-top-2px-black' ng-repeat='columnEntry in thirdArray'>{{columnEntry}}
+				</td>
+                <td>
+                </td>
+			</tr>
+            <tr class="tr_height">
+            	<td>
+                </td>
+            	<!-- empty row for spacer -->
+	            <td class='text_align_right' ng-repeat='columnEntry in thirdArray'>
+				</td>
+            	<td>
+                </td>
+            </tr>
+		</table>
+</span>

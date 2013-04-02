@@ -297,6 +297,152 @@ angular.module('mathSkills.services')
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
+												}
+                                            }]
+                                        }]
+                                    },
+                                ]
+                            },
+                            {
+                                title: '1.4 Add Whole Numbers',
+                                path: '1.4-add-whole-numbers',
+                                children: [
+                                    {
+										title: 'Add Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\addwholes{false}{47}{59}',
+												answer: '\\input{106}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\addwholes{false}{301}{815}',
+												answer: '\\input{1116}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\addwholes{false}{968}{827}',
+												answer: '\\input{1795}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\addwholes{false}{68}{47}',
+												answer: '\\input{115}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\addwholes{false}{9026}{1911}',
+												answer: '\\input{10937}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\addwholes{false}{3148}{2584}',
+												answer: '\\input{5732}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\addwholes{false}{618}{489}{115}',
+												answer: '\\input{1222}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\addwholes{false}{1700}{2233}{4945}',
+												answer: '\\input{8878}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\addwholes{false}{8850}{4626}{177}{401}',
+												answer: '\\input{14054}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\addwholes{false}{832}{6223}{2705}{146}',
+												answer: '\\input{9906}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
                                                 }
                                             }]
                                         }]
