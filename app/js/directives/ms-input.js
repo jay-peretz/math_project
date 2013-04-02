@@ -6,7 +6,7 @@ angular.module('mathSkills')
         parserProvider.register('input', {
             argTemplates: [{
                 name: '',
-                value: '<div class="control-group {{class}}"><label><span>{{label}}</span><input ng-model=answer></label></div>'
+                template: '<div class="control-group {{class}}"><label><span>{{label}}</span><input ng-model=answer></label></div>'
             }],
             directiveTemplate: '<ms-input expected={{expected}} label={{label}}></ms-input>'
         });

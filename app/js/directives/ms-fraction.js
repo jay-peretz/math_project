@@ -6,10 +6,10 @@ angular.module('mathSkills')
         parserProvider.register('frac', {
             argTemplates: [{
                 name: 'numerator',
-                directive: '<ms-event-label expected={{numerator}} label=numerator></ms-event-label>'
+                template: '<ms-event-label expected={{numerator}} label=numerator></ms-event-label>'
             }, {
                 name: 'denominator',
-                directive: '<ms-event-label expected={{denominator}} label=denominator></ms-event-label>'
+                template: '<ms-event-label expected={{denominator}} label=denominator></ms-event-label>'
             }],
             directiveTemplate: '<ms-fraction expected={{expected}} label={{label}}></ms-fraction>'
         });

@@ -3,26 +3,84 @@
 
 angular.module('mathSkills.services')
     .provider('parser', function () {
+        // Private data.
         var registeredTags = {};
 
-        this.register = function (name, templates) {
+        // parserProvider API.
+        var parserProvider = {};
+
+        /**
+         * Registers a tag with the parser.  This method is available on the
+         * parserProvider service which can only be injected into .config() blocks.
+         *
+         * @param {String} name The name of the tag (e.g. 'frac').
+         * @param {Object} templates An object describing the tag's templates.
+         * @param {Array} templates.argTemplates An array of objects containing
+         *   name and template properties for each argument to the tag.  These
+         *   tell the parser how to expand out the arguments to a tag (e.g. the
+         *   numerator and denominator of a fraction).
+         * @param {String} templates.directiveTemplate A template string for the
+         *   overall tag.  This tells the parser how to expand out the tag being
+         *   registered (e.g. the fraction itself and not its arguments.)
+         *
+         * @returns undefined
+         */
+        parserProvider.register = function (name, templates) {
             registeredTags[name] = {};
             registeredTags[name].argTemplates = templates.argTemplates;
             registeredTags[name].directiveTemplate = templates.directiveTemplate;
         };
 
-        this.$get = [
+        parserProvider.$get = [
             function () {
 
+                // parser API.
                 var parser = {
-                    parse: function (string, options) {
+                    /**
+                     * Places parsed tagString argument values on the passed in
+                     * scope in the property names corresponding to the argument
+                     * names set for the tag by parserProvider.register.
+                     *
+                     * Because the 'frac' tag is registered with two arguments,
+                     * the first named 'numerator' and the second named 'denominator',
+                     * this method would place the first argument value found in
+                     * the parsedTag parameter in scope.numerator and the second
+                     * argument value in scope.denominator.
+                     *
+                     * @param {Object} parsedTag A parsed tag object produced by
+                     *   parser.extractTag.
+                     * @param {angular.$scope} scope An angular scope object to
+                     *   place the values on.
+                     *
+                     * @return undefined.
+                     */
+                    decorateScope: function (parsedTag, scope) {
+                        // Get the templates registered for this tag.
+                        var templates = registeredTags[parsedTag.tag].argTemplates;
+
+                        // Add each argTemplate to the scope.
+                        parsedTag.args.forEach(function (arg, ii) {
+                            scope[templates[ii].name] = arg;
+                        });
+                    },
+                    /**
+                     * Extracts the tag name and argument values from a tag string
+                     * and returns these in the form on a parsedTag object.
+                     *
+                     * @param {String} string The tag string to parse.
+                     *
+                     * @return {Object} A parsedTag object with the following form:
+                     *   {
+                     *     tag: {String} The tag name (e.g. 'frac')
+                     *     args: {Array} An array of argument values.
+                     *   }
+                     */
+                    extractTag: function (string) {
                         var split = string.split(''),
                             openArgs = 0,
                             args = [''],
                             currentArg = 0,
-                            tag = '',
-                            templates,
-                            parsed = '';
+                            tag = '';
 
                         // Parse the template string into a tag and an args array.
                         split.forEach(function (char, ii) {
@@ -61,36 +119,77 @@ angular.module('mathSkills.services')
                             }
                         });
 
-                        if (options && options.directiveTemplate === true) {
-                            parsed += registeredTags[tag].directiveTemplate;
+                        // Return a parsedTag object.
+                        return {
+                            tag: tag,
+                            args: args
+                        };
+                    },
+                    /**
+                     * Returns an HTML template string for a registered tag.
+                     *
+                     * @param {Object} parsedTag A parsedTag object produced by
+                     *   parser.extractTag().
+                     * @param {Object} options An options object.  Currently the
+                     *   only supported property is 'directiveTemplate', which,
+                     *   if set to true, will make this function return the template
+                     *   string for the tag itself and not its arguments.
+                     *
+                     * @return {String} An HTML template string.
+                     */
+                    generateTemplate: function (parsedTag, options) {
+                        var tagTemplate = '';
+
+                        // If the options say to use the directiveTemplate, do so.
+                        if (options.directiveTemplate === true) {
+                            tagTemplate += registeredTags[parsedTag.tag].directiveTemplate;
+                        // Otherwise, use the argument templates.
                         } else {
                             // Get the templates registered for this tag.
-                            templates = registeredTags[tag].argTemplates;
+                            var templates = registeredTags[parsedTag.tag].argTemplates;
 
-                            // Build up the templates and scope values for each tag argument.
-                            args.forEach(function (arg, ii) {
-                                // Retrieve the right template for this argument.
-                                parsed += templates[ii][parser.type(arg)];
-
-                                // Set scope properties if we have a scope argument.
-                                if (options && options.scope !== undefined) {
-                                    options.scope[templates[ii].name] = arg;
-                                }
+                            // Build up the templates for each tag argument.
+                            parsedTag.args.forEach(function (arg, ii) {
+                                tagTemplate += templates[ii].template;
                             });
                         }
 
-                        return parsed;
+                        return tagTemplate;
                     },
-                    type: function (string) {
-                        if (string[0] === '\\') {
-                            return 'directive';
-                        } else {
-                            return 'value';
+                    /**
+                     * A convienence method to parse a tag string, generate and
+                     * return the template string, and optionally decorate the
+                     * scope with tag argument values.
+                     *
+                     * @param {String} tagString A string containing a registered
+                     *   tag.
+                     * @param {Object} options An options object.  It supports
+                     *   the following properties:
+                     *     - options.scope An angular scope to decorate.  If this
+                     *         is present, the scope will be decorated.
+                     *     - options.directiveTemplate A boolean flag.  If set to
+                     *         true, the returned HTML template string will be for
+                     *         the tag itself and not its arguments.
+                     *
+                     * @return {String} An HTML template string.
+                     */
+                    parse: function (tagString, options) {
+                        // Parse the tag string.
+                        var parsedTag = parser.extractTag(tagString);
+
+                        // Decorate scope if necessary
+                        if (options.scope) {
+                            parser.decorateScope(parsedTag, options.scope);
                         }
+
+                        // Return the generated template
+                        return parser.generateTemplate(parsedTag, options);
                     }
                 };
 
                 return parser;
             }
         ];
+
+        return parserProvider;
     });
