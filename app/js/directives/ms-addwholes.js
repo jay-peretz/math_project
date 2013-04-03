@@ -2,6 +2,8 @@
 	
 angular.module('mathSkills') 
 	.config(['parserProvider', function (parserProvider) {
+		// 'mathorenglish' first parameter is 'english' to display text, otherwise displays number column
+		// 'showresult' second parameter is 'complete' to display number column with addition result
         parserProvider.register('addwholes', {
             argTemplates: [{
                 name: 'mathorenglish'
@@ -68,8 +70,9 @@ angular.module('mathSkills')
 				});
 				$scope.$watch('showresult', function () {
 					if (typeof $scope.showresult === "string") {
-						if ($scope.showresult === "true") {
+						if ($scope.showresult === "complete") {
 							$scope.displayresult = true;
+							$scope.mathdisplay = true;
 						}
 					}
 				});
