@@ -5,7 +5,7 @@ angular.module('mathSkills.services')
     .service('courseData', [
         function () {
             var course = {
-                title: 'CSKLS 371 GENERAL ARITHMETIC',
+                title: 'GENERAL ARITHMETIC',
                 children: [
                     {
 						title: '1 Whole Numbers',

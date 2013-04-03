@@ -32,6 +32,6 @@ angular.module('mathSkills', ['mathSkills.services']).
     .controller('home', [
         '$scope',
         function ($scope) {
-            $scope.course = 'CSKLS 371 GENERAL ARITHMETIC';
+            $scope.course = 'GENERAL ARITHMETIC';
         }
     ]);
