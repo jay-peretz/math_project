@@ -312,7 +312,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{47}{59}',
+												problem: '\\addwholes{math}{partial}{[47, 59]}',
 												answer: '\\input{106}',
 												controls: {
 													"checkAnswer": true,
@@ -326,7 +326,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{english}{partial}{301}{815}',
+												problem: '\\addwholes{english}{partial}{[301,815]}',
 												answer: '\\input{1116}',
 												controls: {
 													"checkAnswer": true,
@@ -340,7 +340,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{968}{827}',
+												problem: '\\addwholes{math}{partial}{[968,827]}',
 												answer: '\\input{1795}',
 												controls: {
 													"checkAnswer": true,
@@ -354,7 +354,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{68}{47}',
+												problem: '\\addwholes{math}{partial}{[68,47]}',
 												answer: '\\input{115}',
 												controls: {
 													"checkAnswer": true,
@@ -368,7 +368,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{english}{partial}{9026}{1911}',
+												problem: '\\addwholes{english}{partial}{[9026,1911]}',
 												answer: '\\input{10937}',
 												controls: {
 													"checkAnswer": true,
@@ -382,7 +382,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{3148}{2584}',
+												problem: '\\addwholes{math}{partial}{[3148,2584]}',
 												answer: '\\input{5732}',
 												controls: {
 													"checkAnswer": true,
@@ -396,7 +396,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{english}{partial}{618}{489}{115}',
+												problem: '\\addwholes{english}{partial}{[618,489,115]}',
 												answer: '\\input{1222}',
 												controls: {
 													"checkAnswer": true,
@@ -410,7 +410,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{1700}{2233}{4945}',
+												problem: '\\addwholes{math}{partial}{[1700,2233,4945]}',
 												answer: '\\input{8878}',
 												controls: {
 													"checkAnswer": true,
@@ -424,7 +424,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{8850}{4626}{177}{401}',
+												problem: '\\addwholes{math}{partial}{[8850,4626,177,401]}',
 												answer: '\\input{14054}',
 												controls: {
 													"checkAnswer": true,
@@ -438,7 +438,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{english}{partial}{832}{6223}{2705}{146}',
+												problem: '\\addwholes{english}{partial}{[832,6223,2705,146]}',
 												answer: '\\input{9906}',
 												controls: {
 													"checkAnswer": true,

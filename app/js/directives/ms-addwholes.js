@@ -10,13 +10,7 @@ angular.module('mathSkills')
             },{
                 name: 'showresult'
             },{
-                name: 'addend1'
-            },{
-                name: 'addend2'
-            },{
-                name: 'addend3'
-            },{
-                name: 'addend4'
+                name: 'addendparams'
             }],
             directiveTemplate: '<ms-addwholes expected={{expected}}></ms-addwholes>'
         });
@@ -37,10 +31,7 @@ angular.module('mathSkills')
 				$scope.mathdisplay = true;
 				$scope.showresult = [];
 				$scope.displayresult = false;
-				$scope.addend1 = [];
-				$scope.addend2 = [];
-				$scope.addend3 = [];
-				$scope.addend4 = [];
+				$scope.addendparameters = [];
 				$scope.addendnumbers = [];
 				$scope.numbarray = [];
 				$scope.randomplacearray = [];
@@ -76,25 +67,11 @@ angular.module('mathSkills')
 						}
 					}
 				});
-				$scope.$watch('addend1', function () {
-					if (typeof $scope.addend1 === "string") {
-						$scope.addendnumbers[0] = +$scope.addend1;
-					}
-				});
-				$scope.$watch('addend2', function () {
-					if (typeof $scope.addend2 === "string") {
-						$scope.addendnumbers[1] = +$scope.addend2;
-					}
-				});
-				$scope.$watch('addend3', function () {
-					if (typeof $scope.addend3 === "string") {
-						$scope.addendnumbers[2] = +$scope.addend3;
-					}
-				});
-				$scope.$watch('addend4', function () {
+				
+				$scope.$watch('addendparams', function () {
 
-					if (typeof $scope.addend4 === "string") {
-						$scope.addendnumbers[3] = +$scope.addend4;
+					if (typeof $scope.addendparams === "string") {
+						$scope.addendnumbers = $scope.addendparams.substr(1, $scope.addendparams.length - 2).split(",");
 					}
 					
 					if ($scope.addendnumbers[0] !== "undefined" && $scope.addendnumbers[1] !== "undefined") {
@@ -172,7 +149,7 @@ angular.module('mathSkills')
 									$scope.inenglish += $scope.addendnumbers[0] + " and "+$scope.addendnumbers[1];
 							} else {
 								for (var ii = 0, len = $scope.addendnumbers.length; ii < len; ii += 1) {
-									if (ii != len) { 
+									if (ii != len - 1) { 
 										$scope.inenglish += $scope.addendnumbers[ii]+", ";
 									} else {
 										$scope.inenglish += "and "+$scope.addendnumbers[ii];
