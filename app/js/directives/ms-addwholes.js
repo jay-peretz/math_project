@@ -32,10 +32,17 @@ angular.module('mathSkills')
 				$scope.showresult = [];
 				$scope.displayresult = false;
 				$scope.addendparameters = [];
-				$scope.addendnumbers = [];
-				$scope.numbarray = [];
-				$scope.randomplacearray = [];
-				$scope.emptyAnswerArray = [];
+				$scope.sign = '+';
+				
+				var numbarray = [],
+				    randomplacearray = [],
+				    emptyAnswerArray = [],
+					addendnumbers = [],
+					answerObject = "",
+					answerArray = [],
+					tightNumbersArray = [],
+					carryNumArray = [],
+					carryNumStringArray = [];
 				
 				function add(arrayNumObj) {
 					var wholeSum = 0;
@@ -71,88 +78,87 @@ angular.module('mathSkills')
 				$scope.$watch('addendparams', function () {
 
 					if (typeof $scope.addendparams === "string") {
-						$scope.addendnumbers = $scope.addendparams.substr(1, $scope.addendparams.length - 2).split(",");
+						addendnumbers = $scope.addendparams.substr(1, $scope.addendparams.length - 2).split(",");
 					}
 					
-					if ($scope.addendnumbers[0] !== "undefined" && $scope.addendnumbers[1] !== "undefined") {
+					if (addendnumbers[0] !== "undefined" && addendnumbers[1] !== "undefined") {
 						if ($scope.mathdisplay) {
-							$scope.answerObject = add($scope.addendnumbers);
-							$scope.answerArray = $scope.answerObject.toString().split("");
-							$scope.tightNumbersArray = new Array($scope.addendnumbers.length);
-							$scope.sign = '+';	
+							answerObject = add(addendnumbers);
+							answerArray = answerObject.toString().split("");
+							tightNumbersArray = new Array(addendnumbers.length);	
 							
 							// create an empty copy of the answer array for display of addition without answer
-							for (var ii = 0, len = $scope.answerArray.length; ii < len; ii += 1) {
-								$scope.emptyAnswerArray[ii] = "";
+							for (var ii = 0, len = answerArray.length; ii < len; ii += 1) {
+								emptyAnswerArray[ii] = "";
 							}
 					
-							// make arrays based on number of digits in $scope.answerArray for the problem numbers
-							for (var ii = 0, len = $scope.addendnumbers.length; ii<len; ii++) {
-								$scope.tightNumbersArray[ii] = $scope.addendnumbers[ii].toString().split("");
-								for (jj = 0; jj < $scope.answerArray.length; jj++) {
-									if ($scope.tightNumbersArray[ii].length < $scope.answerArray.length) {
-										$scope.tightNumbersArray[ii].unshift("");
+							// make arrays based on number of digits in answerArray for the problem numbers
+							for (var ii = 0, len = addendnumbers.length; ii<len; ii++) {
+								tightNumbersArray[ii] = addendnumbers[ii].toString().split("");
+								for (jj = 0; jj < answerArray.length; jj++) {
+									if (tightNumbersArray[ii].length < answerArray.length) {
+										tightNumbersArray[ii].unshift("");
 									}
 								}
 							}
 							
 							// carryNumArray represents carries 
-							$scope.carryNumArray = new Array($scope.answerArray.length);
-							for (jj = 0; jj < $scope.carryNumArray.length; jj++) {
-								$scope.carryNumArray[jj] = 0;
+							carryNumArray = new Array(answerArray.length);
+							for (jj = 0; jj < carryNumArray.length; jj++) {
+								carryNumArray[jj] = 0;
 							}
 							
-							for (var jj = $scope.carryNumArray.length - 1; jj >= 0; jj=jj-1) { 
-									$scope.sumColumn = 0;
-									if (jj != $scope.carryNumArray.length - 1) {				
-										$scope.sumColumn += parseInt($scope.carryNumArray[jj+1], 10);
+							for (var jj = carryNumArray.length - 1; jj >= 0; jj=jj-1) { 
+									var sumColumn = 0;
+									if (jj != carryNumArray.length - 1) {				
+										sumColumn += parseInt(carryNumArray[jj+1], 10);
 									}
 									if (jj != 0){
-										for (var ii = 0, len = $scope.addendnumbers.length; ii<len; ii++) {
-											if (!isNaN(parseInt($scope.tightNumbersArray[ii][jj]), 10)) {
-												$scope.sumColumn += parseInt($scope.tightNumbersArray[ii][jj], 10);
+										for (var ii = 0, len = addendnumbers.length; ii<len; ii++) {
+											if (!isNaN(parseInt(tightNumbersArray[ii][jj]), 10)) {
+												sumColumn += parseInt(tightNumbersArray[ii][jj], 10);
 											}
 										}
 									}
 									if (jj != 0) {
-										$scope.sumColumn = Math.floor($scope.sumColumn/10);
-										$scope.carryNumArray[jj] = $scope.sumColumn;
+										sumColumn = Math.floor(sumColumn/10);
+										carryNumArray[jj] = sumColumn;
 									}
 							}
 					
-							$scope.carryNumStringArray = new Array($scope.answerArray.length);
-							for (var jj = 0; jj<$scope.answerArray.length; jj++) {
-								if (!isNaN(parseInt($scope.carryNumArray[jj], 10))&&(parseInt($scope.carryNumArray[jj], 10)!=0)){
-									$scope.carryNumStringArray[jj] = parseInt($scope.carryNumArray[jj], 10).toString();
+							carryNumStringArray = new Array(answerArray.length);
+							for (var jj = 0; jj<answerArray.length; jj++) {
+								if (!isNaN(parseInt(carryNumArray[jj], 10))&&(parseInt(carryNumArray[jj], 10)!=0)){
+									carryNumStringArray[jj] = parseInt(carryNumArray[jj], 10).toString();
 								} else{
-									$scope.carryNumStringArray[jj] = "";
+									carryNumStringArray[jj] = "";
 								}
 							}
 							
 							$scope.firstArray = [];
 							$scope.secondArray = [];
 							$scope.thirdArray = [];
-							$scope.secondArray = $scope.tightNumbersArray.slice();
+							$scope.secondArray = tightNumbersArray.slice();
 							if ($scope.displayresult) {
-								$scope.firstArray = $scope.carryNumStringArray.slice();
+								$scope.firstArray = carryNumStringArray.slice();
 								$scope.firstArray.push();
 								$scope.firstArray.shift();
-								$scope.thirdArray = $scope.answerArray.slice();
+								$scope.thirdArray = answerArray.slice();
 							} else {
-								$scope.firstArray = $scope.emptyAnswerArray
-								$scope.thirdArray = $scope.emptyAnswerArray
+								$scope.firstArray = emptyAnswerArray
+								$scope.thirdArray = emptyAnswerArray
 							}
 							
 						} else {
 							$scope.inenglish = "";
-							if ($scope.addendnumbers.length == 2){
-									$scope.inenglish += $scope.addendnumbers[0] + " and "+$scope.addendnumbers[1];
+							if (addendnumbers.length == 2){
+									$scope.inenglish += addendnumbers[0] + " and "+addendnumbers[1];
 							} else {
-								for (var ii = 0, len = $scope.addendnumbers.length; ii < len; ii += 1) {
+								for (var ii = 0, len = addendnumbers.length; ii < len; ii += 1) {
 									if (ii != len - 1) { 
-										$scope.inenglish += $scope.addendnumbers[ii]+", ";
+										$scope.inenglish += addendnumbers[ii]+", ";
 									} else {
-										$scope.inenglish += "and "+$scope.addendnumbers[ii];
+										$scope.inenglish += "and "+addendnumbers[ii];
 									}
 								}
 							}
