@@ -72,8 +72,8 @@ angular.module('mathSkills')
                             data.result = 'incorrect';
                             $scope.class = 'danger';
                         }
-                        $scope.$apply();
                         $scope.$emit('answer', data);
+                        $scope.$apply();
 
                     });
 // tab might need to be set on "button" not input
