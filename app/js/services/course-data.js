@@ -20,7 +20,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\wholeplace{44816}{3}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{44816}{3}}}',
                                                 answer: '\\select{3}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -34,7 +34,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\wholeplace{38059}{2}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{38059}{2}}',
                                                 answer: '\\select{2}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -48,7 +48,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\wholeplace{3888708}{6}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{3888708}{6}}',
                                                 answer: '\\select{6}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -62,7 +62,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\wholeplace{7016486}{1}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{7016486}{1}}',
                                                 answer: '\\select{1}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -76,7 +76,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\wholeplace{4927857}{5}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{4927857}{5}}',
                                                 answer: '\\select{5}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -90,7 +90,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\wholeplace{9049152}{5}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{9049152}{5}}',
                                                 answer: '\\select{5}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -104,7 +104,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\wholeplace{4555517}{3}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{4555517}{3}}',
                                                 answer: '\\select{3}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -118,7 +118,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\wholeplace{5174344}{0}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{5174344}{0}}',
                                                 answer: '\\select{0}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -132,7 +132,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\wholeplace{1924837}{6}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{1924837}{6}}',
                                                 answer: '\\select{6}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -146,7 +146,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\wholeplace{295082}{2}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{295082}{2}}',
                                                 answer: '\\select{2}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -448,7 +448,7 @@ angular.module('mathSkills.services')
                                         }]
                                     }
                                 ]
-                            }							
+                            }
                         ]
                     }, {
                         title: '2 Fractions',
