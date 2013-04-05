@@ -72,15 +72,12 @@ angular.module('mathSkills')
 				}
 				
 				function removeLeadingZeros(zerosNumberArray) {
-					console.log("zerosNumberArray: "+zerosNumberArray);
 					for (var ii = 0, oneNotZero = 0; ii < zerosNumberArray.length; ii++) {
-						console.log("1 zerosNumberArray["+ii+"] is: "+zerosNumberArray[ii]);
 						if (zerosNumberArray[ii]!=0) {
 							oneNotZero = 1;
 						} else if (oneNotZero == 0) {
 							zerosNumberArray[ii] = "";
 						}
-						console.log("2 zerosNumberArray["+ii+"]"+zerosNumberArray[ii]);
 					}			
 				}
 				
@@ -91,15 +88,15 @@ angular.module('mathSkills')
 				
 				// add classes to elements of display that represent line-outs and borrows
 				$scope.getClass3 = function(index) {
-					var finalCarryCurrent = displayWithBorrowsArray[rowForAddClass][index],
+					var finalCarryCurrent = displayWithBorrowsClean[rowForAddClass][index],
 						finalCarryAbove = "",
 						finalCarryAboveRight = "",
 						finalCarryOdd = index%2,
 						classesReturn = "";	
 					
 					if (rowForAddClass>0) {
-						finalCarryAbove = displayWithBorrowsArray[rowForAddClass-1][index];
-						finalCarryAboveRight = displayWithBorrowsArray[rowForAddClass-1][index+1];
+						finalCarryAbove = displayWithBorrowsClean[rowForAddClass-1][index];
+						finalCarryAboveRight = displayWithBorrowsClean[rowForAddClass-1][index+1];
 					}
 						
 					if (rowForAddClass > 0) {
@@ -112,7 +109,7 @@ angular.module('mathSkills')
 						if (finalCarryOdd) {
 							classesReturn += " borrowSubtract";
 							// selector below isolates columns without a borrow 
-							if ((finalCarryCurrent == "" && finalCarryAbove == "")&&(displayWithBorrowsArray[1][index]!=1)&&((typeof displayWithBorrowsArray[2] != "undefined")&&(displayWithBorrowsArray[2][index] !=1))) {
+							if ((finalCarryCurrent == "" && finalCarryAbove == "")&&(displayWithBorrowsClean[1][index]!=1)&&((typeof displayWithBorrowsClean[2] != "undefined")&&(displayWithBorrowsClean[2][index] !=1))) {
 								classesReturn += " paddingFullSubtract";
 							// selector below isolates columns with a borrow
 							} else {
@@ -359,7 +356,13 @@ angular.module('mathSkills')
 							}
 							
 							//displayWithBorrowsArray minus undefined or empty rows, displayWithBorrowsClean
-							for (var ii = 0, len1 = displayWithBorrowsArray.length, newrowNumber = 0; ii < len1; ii += 1) {
+							//for angularjs layout, ng-class style of column elements, add empty row 0
+							displayWithBorrowsClean[0] = [];
+							for (var ii = 0, len1 = displayWithBorrowsArray[0].length; ii < len1; ii += 1) {
+								displayWithBorrowsClean[0][ii] = "";
+							}
+								
+							for (var ii = 0, len1 = displayWithBorrowsArray.length, newrowNumber = 1; ii < len1; ii += 1) {
 								if (typeof(displayWithBorrowsArray[ii]) !== "undefined") {
 									for (var jj = 0, len2 = displayWithBorrowsArray[ii].length, flag=false; jj < len2; jj += 1) {	
 										if (displayWithBorrowsArray[ii][jj] !== "") {
@@ -376,17 +379,20 @@ angular.module('mathSkills')
 								}
 							}
 							
-							for (var ii = 0, len = displayWithBorrowsClean; ii < len; ii += 1) {
+							for (var ii = 0, len = displayWithBorrowsClean.length; ii < len; ii += 1) {
 								displayWithBorrowsFinal[ii] = [];
+								displayWithBorrowsFinal[ii] = displayWithBorrowsClean[ii];
 							}
-							displayWithBorrowsFinal[0] = removeLeadingZeros(displayWithBorrowsClean[0]);
-							displayWithBorrowsFinal[1] = displayWithBorrowsClean[1];
+							
+							// if the borrows line has a leading zero (borrow from 1 remainder), remove it
+							if (displayWithBorrowsClean[1][0] == 0) {
+								displayWithBorrowsFinal[1][0] = "";
+							}
 												
 							$scope.firstArray = [];
 							$scope.secondArray = [];
 							$scope.thirdArray = [];
-							//if ($scope.displayresult) {
-							$scope.firstArray = displayWithBorrowsArray.slice();
+							$scope.firstArray = displayWithBorrowsFinal.slice();
 							$scope.secondArray = subtrahend.slice();
 							$scope.thirdArray = answerWideArray.slice();
 							$scope.secondArray.pop();
