@@ -449,6 +449,152 @@ angular.module('mathSkills.services')
                                     }
                                 ]
                             },
+                            {
+                                title: '1.5 Subtract Whole Numbers',
+                                path: '1.5-subtract-whole-numbers',
+                                children: [
+                                    {
+										title: 'Subtract Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\subtractwholes{math}{partial}{110}{99}',
+												answer: '\\input{11}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Subtract Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\subtractwholes{math}{partial}{989}{711}',
+												answer: '\\input{278}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Subtract Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\subtractwholes{math}{partial}{832}{86}',
+												answer: '\\input{746}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Subtract Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\subtractwholes{math}{partial}{518}{68}',
+												answer: '\\input{450}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Subtract Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\subtractwholes{math}{partial}{3749}{756}',
+												answer: '\\input{2993}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Subtract Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\subtractwholes{math}{partial}{8889}{549}',
+												answer: '\\input{8340}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Subtract Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\subtractwholes{math}{partial}{9475}{7493}',
+												answer: '\\input{1982}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Subtract Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\subtractwholes{math}{partial}{8206}{6863}',
+												answer: '\\input{1343}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Subtract Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\subtractwholes{math}{partial}{89686}{62438}',
+												answer: '\\input{27248}',
+												controls: {
+													"checkAnswer": true,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Subtract Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\subtractwholes{math}{partial}{45300}{20532}',
+												answer: '\\input{24768}',
+												controls: {
+													"checkAnswer": true,
+													"help": true													
+                                                }
+                                            }]
+                                        }]
+                                    }
+                                ]
+                            },
                             {// start of Justins work
                                 title: '5.3 Identifying Prime and Composite Numbers',
                                 path: '5.3-identifying-prime-and-composite-numbers',
