@@ -18,20 +18,20 @@ angular.module('mathSkills')
                                 $scope.$emit('panelDone');
                             } else {
                             // Otherwise $broadcast checkFocus.
-                                $scope.$broadcast('checkFocus');
+                                $scope.$$childHead.$$nextSibling.$broadcast('checkFocus');
                             }
                         });
 
                         $scope.$on('triggerCheckAnswer', function () {
-                            $scope.$broadcast('checkAnswer');
+                            $scope.$$childHead.$$nextSibling.$broadcast('checkAnswer');
                         });
 
                         $scope.$on('triggerCheckFocus', function() {
-                            $scope.$broadcast('checkFocus');
+                            $scope.$$childHead.$$nextSibling.$broadcast('checkFocus');
                         });
 
                         $timeout(function () {
-                            $scope.$broadcast('checkFocus');
+                            $scope.$$childHead.$$nextSibling.$broadcast('checkFocus');
                         }, 0);
                     }
                 ],
