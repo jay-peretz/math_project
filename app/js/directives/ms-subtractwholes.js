@@ -355,8 +355,10 @@ angular.module('mathSkills')
 									kk++;
 							}
 							
-							//displayWithBorrowsArray minus undefined or empty rows, displayWithBorrowsClean
+							//displayWithBorrowsArray has one row for every number in minuend
+							//displayWithBorrowsArray(displayWithBorrowsArray.length-2) is carry row
 							//for angularjs layout, ng-class style of column elements, add empty row 0
+							//displayWithBorrowsClean, displayWithBorrowsArray minus undefined or empty rows
 							displayWithBorrowsClean[0] = [];
 							for (var ii = 0, len1 = displayWithBorrowsArray[0].length; ii < len1; ii += 1) {
 								displayWithBorrowsClean[0][ii] = "";
@@ -388,6 +390,32 @@ angular.module('mathSkills')
 							if (displayWithBorrowsClean[1][0] == 0) {
 								displayWithBorrowsFinal[1][0] = "";
 							}
+							
+							// remove elements of display array if 2nd parameter is anything but "complete"
+							if (!$scope.displayresult) {
+								console.log("displayWithBorrowsArray.length is: "+displayWithBorrowsArray.length);
+								if (displayWithBorrowsFinal.length > 2) {
+									for (var ii = 0, len = displayWithBorrowsArray[0].length; ii < len; ii += 1) {							
+											displayWithBorrowsFinal[1][ii] = "";
+											if (ii % 2 !== 0) {
+												displayWithBorrowsFinal[2][ii] = "";
+											}
+									}
+								}
+								for (var ii = 0, len = answerWideArray.length; ii < len; ii += 1) {
+									answerWideArray[ii] = "";
+								}
+							}
+							
+							for (var ii = 0, len = displayWithBorrowsArray.length; ii < len; ii += 1) {
+								
+								console.log("displayWithBorrowsArray["+ii+"] :"+displayWithBorrowsArray[ii]);
+							}
+							for (var ii = 0, len = displayWithBorrowsClean.length; ii < len; ii += 1) {
+								
+								console.log("displayWithBorrowsClean["+ii+"] :"+displayWithBorrowsClean[ii]);
+								console.log("displayWithBorrowsFinal["+ii+"] :"+displayWithBorrowsFinal[ii]);
+							}
 												
 							$scope.firstArray = [];
 							$scope.secondArray = [];
@@ -399,18 +427,9 @@ angular.module('mathSkills')
 
 							
 						} else {
-							$scope.inenglish = "";
-							if (addendnumbers.length == 2){
-									$scope.inenglish += addendnumbers[0] + " and "+addendnumbers[1];
-							} else {
-								for (var ii = 0, len = addendnumbers.length; ii < len; ii += 1) {
-									if (ii != len - 1) { 
-										$scope.inenglish += addendnumbers[ii]+", ";
-									} else {
-										$scope.inenglish += "and "+addendnumbers[ii];
-									}
-								}
-							}
+							if (subtrahendParsed != ""){
+									$scope.inenglish = minuendParsed + " minus "+subtrahendParsed;
+							} 
 						}
 					}
 				});

@@ -458,7 +458,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{math}{partial}{110}{99}',
+												problem: '\\subtractwholes{english}{partial}{110}{99}',
 												answer: '\\input{11}',
 												controls: {
 													"checkAnswer": true,
@@ -486,7 +486,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{math}{partial}{832}{86}',
+												problem: '\\subtractwholes{english}{partial}{832}{86}',
 												answer: '\\input{746}',
 												controls: {
 													"checkAnswer": true,
@@ -542,7 +542,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{math}{partial}{9475}{7493}',
+												problem: '\\subtractwholes{english}{partial}{9475}{7493}',
 												answer: '\\input{1982}',
 												controls: {
 													"checkAnswer": true,
@@ -570,7 +570,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{math}{partial}{89686}{62438}',
+												problem: '\\subtractwholes{english}{partial}{89686}{62438}',
 												answer: '\\input{27248}',
 												controls: {
 													"checkAnswer": true,
