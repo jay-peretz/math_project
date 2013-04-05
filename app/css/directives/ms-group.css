@@ -1,0 +1,13 @@
+ms-group td {
+    padding: 0 5px;
+}
+ms-group input {
+    width: 40px;
+}
+ms-group ms-input label span {
+    display: none;
+}
+ms-group ms-string {
+    text-align: center;
+    font-size: 2em;
+}
