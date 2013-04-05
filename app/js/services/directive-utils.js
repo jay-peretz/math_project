@@ -58,7 +58,8 @@ angular.module('mathSkills.services')
                                     controllerId: $scope.controllerId,
                                     answer: '\\' + $scope.tag + '{' + $scope.answer.join('}{') + '}',
                                     result: $scope.result,
-                                    expected: $scope.expected
+                                    expected: $scope.expected,
+                                    label: $scope.label
                                 });
                             }
                         }
