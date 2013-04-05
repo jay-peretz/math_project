@@ -61,7 +61,7 @@ angular.module('mathSkills')
                     $element.on('click', 'button', function (event) {
                         var data = {
                         expected: $scope.expected,
-                        answer: $scope.buttonLabel,
+                        answer: '\\but{' + $scope.buttonLabel + '}{T}',
                         label: $scope.label
                         };
 
