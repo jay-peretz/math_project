@@ -596,6 +596,152 @@ angular.module('mathSkills.services')
                                 ]
                             },
                             {// start of Justins work
+                                title: '5.2 Identifying Prime and Composite Numbers',
+                                path: '5.2-identifying-prime-and-composite-numbers',
+                                children: [
+                                    {
+        								title: 'Determine whether a Number is Prime or Composite',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 42 prime or composite?}',
+												answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Determine whether a Number is Prime or Composite',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 51 prime or composite?}',
+    											answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Determine whether a Number is Prime or Composite',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 94 prime or composite?}',
+        										answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Determine whether a Number is Prime or Composite',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 43 prime or composite?}',
+            									answer: '\\row{\\but{Prime}{T}}{\\but{Composite}{F}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Determine whether a Number is Prime or Composite',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 27 prime or composite?}',
+                								answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Determine whether a Number is Prime or Composite',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 73 prime or composite?}',
+                								answer: '\\row{\\but{Prime}{T}}{\\but{Composite}{F}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Determine whether a Number is Prime or Composite',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 47 prime or composite?}',
+                								answer: '\\row{\\but{Prime}{T}}{\\but{Composite}{F}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Determine whether a Number is Prime or Composite',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 189 prime or composite?}',
+                								answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Determine whether a Number is Prime or Composite',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 187 prime or composite?}',
+                								answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Determine whether a Number is Prime or Composite',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 100 prime or composite?}',
+                								answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}', 
+												controls: {
+													"checkAnswer": false,
+													"help": true
+                                                }
+                                            }]
+                                        }]
+                                    }
+                                ]
+                            },
+                            {
                                 title: '5.3 Identifying Prime and Composite Numbers',
                                 path: '5.3-identifying-prime-and-composite-numbers',
                                 children: [
