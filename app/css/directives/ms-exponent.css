@@ -1,0 +1,18 @@
+ms-exponent ms-input label span {
+    display: none;
+}
+ms-exponent input {
+    width: 40px;
+}
+ms-exponent ms-event-label {
+    display: inline-block;
+}
+ms-exponent ms-event-label:nth-of-type(2) {
+    position: relative;
+    bottom: 10px;
+    -ms-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+}
