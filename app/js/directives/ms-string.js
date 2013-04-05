@@ -4,7 +4,7 @@
 angular.module('mathSkills') 
     .config(['parserProvider', function (parserProvider) {
         parserProvider.register('str', {
-            directiveTemplate: '<ms-string expected={{expected}} label=string></ms-string>'
+            directiveTemplate: '<ms-string expected={{expected}}></ms-string>'
         });
     }])
     .directive('msString', [
@@ -24,8 +24,13 @@ angular.module('mathSkills')
                     });
                      
                     // handle check answer event for parent scope "always correct".
-                    $scope.$on ('checkAnswer', function () {
-                        $scope.$emit('answerCorrect');
+                    $scope.$on('checkAnswer', function () {
+                        $scope.$emit('answer', {
+                            result: 'correct',
+                            expected: $scope.expected,
+                            answer: $scope.expected,
+                            label: $scope.label
+                        });
                     });
     
                     $scope.$on('checkFocus', function (e) {
