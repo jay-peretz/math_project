@@ -712,26 +712,26 @@ angular.module('mathSkills.services')
 										}]
 									},
 									{
-										title: 'Divisibility Test on Whole Numbers',
+    									title: 'Determine whether a Number is Prime or Composite',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												pproblem: '\\str{Is 142 divisible by 2?}',
-        										answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}',
+												problem: '\\str{Is 346 divisible by 3?}',
+            									answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
-												}
-											}]
-										}]
-									},
+                                                }
+                                            }]
+                                        }]
+                                    },
 									{
 										title: 'Determine whether a Number is Prime or Composite',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\str{Is 100 prime or composite?}',
-                								answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}', 
+												problem: '\\str{Is 384 divisible by 2?}',
+            									answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -876,8 +876,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\str{Is 384 divisible by 2?}',
-        										answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}',
+												problem: '\\str{Is 187 prime or composite?}',
+        										answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
