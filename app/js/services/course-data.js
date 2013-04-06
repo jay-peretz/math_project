@@ -311,7 +311,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\row{\\str{23 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 43}}',
+												problem: '\\row{\\str{80 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 91}}',
 												answer: '',
 												controls: {
 													"checkAnswer": false,
@@ -325,8 +325,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\str{Is 26 divisible by 10?}',
-    											answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+												problem: '\\rowgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{25}{33}{20}{35}}}',
+												answer: '',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -339,8 +339,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\str{Is 119 divisible by 10?}',
-        										answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+												problem: '\\row{\\str{85 \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 80}}',
+												answer: '',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -353,8 +353,9 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\str{Is 9 divisible by 2?}',
-        										answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+												problem: '\\row{\\str{53 \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 50}}',
+												answer: '',
+
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -367,8 +368,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\str{Is 132 divisible by 3?}',
-        										answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}',
+												problem: '\\row{\\str{48 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 56}}',
+												answer: '',
                                                 controls: {
 													"checkAnswer": false,
 													"help": true
@@ -381,8 +382,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\str{Is 85 divisible by 5?}',
-        										answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}',
+												problem: '\\row{\\str{54 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 60}}',
+												answer: '',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -395,8 +396,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\str{Is 323 divisible by 5?}',
-        										answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+												problem: '\\row{\\str{86 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 93}}',
+												answer: '',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -409,8 +410,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\str{Is 109 divisible by 7?}',
-        										answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+												problem: '\\row{\\str{95 \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 77}}',
+												answer: '',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -423,8 +424,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\str{Is 142 divisible by 2?}',
-        										answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}',
+												problem: '\\row{\\str{47 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 57}}',
+												answer: '',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -437,8 +438,149 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\str{Is 143 divisible by 2?}',
-                								answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}', 
+												problem: '\\row{\\str{84 \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 83}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+									{
+        								title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\row{\\str{80 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 91}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{25}{33}{20}{35}}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\row{\\str{85 \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 80}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\row{\\str{53 \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 50}}',
+												answer: '',
+
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\row{\\str{48 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 56}}',
+												answer: '',
+                                                controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\row{\\str{54 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 60}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\row{\\str{86 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 93}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\row{\\str{95 \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 77}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\row{\\str{47 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 57}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\row{\\str{84 \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 83}}',
+												answer: '',
 												controls: {
 													"checkAnswer": false,
 													"help": true

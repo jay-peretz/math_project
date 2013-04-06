@@ -1,0 +1,19 @@
+<style type="text/css">
+
+  table.td_padding td {
+	padding-left:4px;
+	padding-right:4px;
+  }
+  .border-top-2px-black {
+	  	border-top:2px solid black;
+  }    
+</style>
+<span>
+        <table class=border-top-2px-black>
+            	<tr ng-repeat='row in numberLineArray' ng-style="{true: {fontWeight: 'bold'}, false: {}}[$index==0]">
+				    <td ng-repeat='col in row' class=td_padding>
+                    	 <span>{{col}}</span>
+				    </td>
+                </tr>
+        </table>
+</span>
