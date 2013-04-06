@@ -42,15 +42,16 @@ angular.module('mathSkills')
 						$scope.answercorrect = JSON.parse($scope.answercorrect);
 					}
 				});
+				
+				
 
 				$scope.$on('checkAnswer', function () {
-					var answerfromarray = $scope.optionsarray[$scope.answercorrect];
 					var data = {
-						expected: '\\str{'+$scope.optionsarray[$scope.answercorrect]+'}',
-						answer: '\\str{'+$scope.answer+'}',
+						expected: '\\select{'+$scope.answercorrect+'}{'+$scope.optionsarray+'}',
+						answer: '\\select{'+$scope.answer+'}{'+$scope.optionsarray+'}',
                         label: $scope.label
 					};
-					if (answerfromarray === $scope.answer) {
+					if ($scope.answercorrect === $scope.answer) {
 						data.result = 'correct';
 						$scope.class = 'success';
 					} else {
