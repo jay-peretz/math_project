@@ -393,7 +393,6 @@ angular.module('mathSkills')
 							
 							// remove elements of display array if 2nd parameter is anything but "complete"
 							if (!$scope.displayresult) {
-								console.log("displayWithBorrowsArray.length is: "+displayWithBorrowsArray.length);
 								if (displayWithBorrowsFinal.length > 2) {
 									for (var ii = 0, len = displayWithBorrowsArray[0].length; ii < len; ii += 1) {							
 											displayWithBorrowsFinal[1][ii] = "";
@@ -405,16 +404,6 @@ angular.module('mathSkills')
 								for (var ii = 0, len = answerWideArray.length; ii < len; ii += 1) {
 									answerWideArray[ii] = "";
 								}
-							}
-							
-							for (var ii = 0, len = displayWithBorrowsArray.length; ii < len; ii += 1) {
-								
-								console.log("displayWithBorrowsArray["+ii+"] :"+displayWithBorrowsArray[ii]);
-							}
-							for (var ii = 0, len = displayWithBorrowsClean.length; ii < len; ii += 1) {
-								
-								console.log("displayWithBorrowsClean["+ii+"] :"+displayWithBorrowsClean[ii]);
-								console.log("displayWithBorrowsFinal["+ii+"] :"+displayWithBorrowsFinal[ii]);
 							}
 												
 							$scope.firstArray = [];
