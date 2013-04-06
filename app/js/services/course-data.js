@@ -1320,7 +1320,224 @@ angular.module('mathSkills.services')
                                     }
                                 ]
                             },
-                            {// start of Justins work
+// 3.2 Divide Whole Numbers                           
+                            {
+                                title: '3.2 Divide Whole Numbers',
+                                path: '3.2-divide-whole-numbers',
+                                children: [
+                                    {
+                                        title: 'Divide Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{How many times does 5 go into 9308.<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
+												answer: '\\css{\\divwholes{\\input{5}}{\\input{9308}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+									{
+                                        title: 'Divide Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{Find the quotient of 3239 and 3.<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
+												answer: '\\css{\\divwholes{\\input{3}}{\\input{3239}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+									{
+                                        title: 'Divide Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{Solve: x/y.<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
+												answer: '\\css{\\divwholes{\\input{y}}{\\input{x}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+									{
+                                        title: 'Divide Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{How many times does 5 go into 7916.<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
+												answer: '\\css{\\divwholes{\\input{5}}{\\input{7916}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+									{
+                                        title: 'Divide Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{How many times does 6 go into 2855.<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
+												answer: '\\css{\\divwholes{\\input{6}}{\\input{2855}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+									{
+                                        title: 'Divide Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+                                                problem: '\\html{Find the quotient of 6744 and 7.<br><br>Solve the problem.}',
+												answer: '\\css{\\grp{\\input{963}}{\\str{quotient}}{\\input{3}}{\\str{remainder}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+                                    {
+                                        title: 'Divide Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{Solve: 8306/7.<br><br>Solve the problem.}',
+												answer: '\\css{\\grp{\\input{1186}}{\\str{quotient}}{\\input{4}}{\\str{remainder}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+                                    {
+                                        title: 'Divide Whole Numbers',//////////8
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{Solve: 3027/3.<br><br>Solve the problem.}',
+												answer: '\\css{\\grp{\\input{1009}}{\\str{quotient}}{\\input{0}}{\\str{remainder}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+                                    {
+                                        title: 'Divide Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{Find the quotient of 1828 and 6.<br><br>Solve the problem.}',
+												answer: '\\css{\\grp{\\input{304}}{\\str{quotient}}{\\input{4}}{\\str{remainder}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+                                    {
+                                        title: 'Divide Whole Numbers',//////////10
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{How many times does 3 go into 9381.<br><br>Solve the problem.}',
+												answer: '\\css{\\grp{\\input{3127}}{\\str{quotient}}{\\input{0}}{\\str{remainder}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+                                    {
+                                        title: 'Divide Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{How many times does 23 go into 18300.<br><br>Solve the problem.}',
+												answer: '\\css{\\grp{\\input{795}}{\\str{quotient}}{\\input{15}}{\\str{remainder}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+                                    {
+                                        title: 'Divide Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{Solve: 8293/52.<br><br>Solve the problem.}',
+												answer: '\\css{\\grp{\\input{159}}{\\str{quotient}}{\\input{25}}{\\str{remainder}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+                                    {
+                                        title: 'Divide Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{Find the quotient of 2110 and 69.<br><br>Solve the problem.}',
+												answer: '\\css{\\grp{\\input{30}}{\\str{quotient}}{\\input{40}}{\\str{remainder}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+                                    {
+                                        title: 'Divide Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{How many times does 72 go into 63052.<br><br>Solve the problem.}',
+												answer: '\\css{\\grp{\\input{875}}{\\str{quotient}}{\\input{52}}{\\str{remainder}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+                                    {
+                                        title: 'Divide Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{Solve: 82292/905.<br><br>Solve the problem.}',
+												answer: '\\css{\\grp{\\input{90}}{\\str{quotient}}{\\input{842}}{\\str{remainder}}}{divwhole}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}]
+									},
+                                ]
+                            },
+                            {
                                 title: '5.1 Using Divisibility Tests Using Divisibility Tests',
                                 path: '5.1-using-divisibility-tests-using-divisibility-tests',
                                 children: [

@@ -1,0 +1,39 @@
+.divwhole ms-div-wholes ms-input label span {
+    display: none;
+}
+.divwhole ms-div-wholes input {
+    width: 65px;
+}
+.divwhole ms-div-wholes ms-event-label {
+    display: inline-block;
+}
+.divwhole ms-div-wholes input{
+    font-size:1.2em;
+    text-align: center;
+} 
+.divwhole ms-div-wholes #divisor {
+    border-right: 2px solid black;
+    padding: 8px 10px 11px 5px;
+    border-radius: 0 15px 15px 0;
+}
+.divwhole ms-div-wholes #dividend {
+    border-top: 2px solid black;
+    padding: 7px 10px 4px 19px;
+    position: relative;
+    left: -12px;
+}
+/* > problem 6*/
+.divwhole ms-group td {
+    padding: 0 5px;
+}
+.divwhole ms-group input {
+    text-align: center;
+    width: 40px;
+}
+.divwhole ms-group ms-input label span {
+    display: none;
+}
+.divwhole ms-group ms-string {
+    text-align: center;
+    font-size: 1em;
+}
