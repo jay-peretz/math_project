@@ -423,7 +423,7 @@ angular.module('mathSkills')
 					}
 				});
 			},
-			templateUrl: 'partials/directives/ms-subtract.html'
+			templateUrl: 'partials/directives/ms-subtraction.html'
 
 		};
 	}]);

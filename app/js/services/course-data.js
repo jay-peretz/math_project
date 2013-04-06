@@ -599,7 +599,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{[47, 59]}',
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[47, 59]}}}',
 												answer: '\\input{106}',
 												controls: {
 													"checkAnswer": true,
@@ -613,7 +613,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{english}{partial}{[301,815]}',
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\addwholes{english}{partial}{[301,815]}}}',
 												answer: '\\input{1116}',
 												controls: {
 													"checkAnswer": true,
@@ -627,7 +627,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{[968,827]}',
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[968,827]}}}',
 												answer: '\\input{1795}',
 												controls: {
 													"checkAnswer": true,
@@ -641,7 +641,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{[68,47]}',
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[68,47]}}}',
 												answer: '\\input{115}',
 												controls: {
 													"checkAnswer": true,
@@ -655,7 +655,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{english}{partial}{[9026,1911]}',
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\addwholes{english}{partial}{[9026,1911]}}}',
 												answer: '\\input{10937}',
 												controls: {
 													"checkAnswer": true,
@@ -669,7 +669,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{[3148,2584]}',
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[3148,2584]}}}',
 												answer: '\\input{5732}',
 												controls: {
 													"checkAnswer": true,
@@ -683,7 +683,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{english}{partial}{[618,489,115]}',
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\addwholes{english}{partial}{[618,489,115]}}}',
 												answer: '\\input{1222}',
 												controls: {
 													"checkAnswer": true,
@@ -697,7 +697,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{[1700,2233,4945]}',
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[1700,2233,4945]}}}',
 												answer: '\\input{8878}',
 												controls: {
 													"checkAnswer": true,
@@ -711,7 +711,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{[8850,4626,177,401]}',
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[8850,4626,177,401]}}}',
 												answer: '\\input{14054}',
 												controls: {
 													"checkAnswer": true,
@@ -725,7 +725,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{english}{partial}{[832,6223,2705,146]}',
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\addwholes{english}{partial}{[832,6223,2705,146]}}}',
 												answer: '\\input{9906}',
 												controls: {
 													"checkAnswer": true,
@@ -745,7 +745,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{english}{partial}{110}{99}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\subtractwholes{english}{partial}{110}{99}}}',
 												answer: '\\input{11}',
 												controls: {
 													"checkAnswer": true,
@@ -759,7 +759,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{math}{partial}{989}{711}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\subtractwholes{math}{partial}{989}{711}}}',
 												answer: '\\input{278}',
 												controls: {
 													"checkAnswer": true,
@@ -773,7 +773,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{english}{partial}{832}{86}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\subtractwholes{english}{partial}{832}{86}}}',
 												answer: '\\input{746}',
 												controls: {
 													"checkAnswer": true,
@@ -787,7 +787,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{math}{partial}{518}{68}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\subtractwholes{math}{partial}{518}{68}}}',
 												answer: '\\input{450}',
 												controls: {
 													"checkAnswer": true,
@@ -801,7 +801,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{math}{partial}{3749}{756}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\subtractwholes{math}{partial}{3749}{756}}}',
 												answer: '\\input{2993}',
 												controls: {
 													"checkAnswer": true,
@@ -815,7 +815,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{math}{partial}{8889}{549}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\subtractwholes{math}{partial}{8889}{549}}}',
 												answer: '\\input{8340}',
 												controls: {
 													"checkAnswer": true,
@@ -829,7 +829,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{english}{partial}{9475}{7493}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\subtractwholes{english}{partial}{9475}{7493}}}',
 												answer: '\\input{1982}',
 												controls: {
 													"checkAnswer": true,
@@ -843,7 +843,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{math}{partial}{8206}{6863}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\subtractwholes{math}{partial}{8206}{6863}}}',
 												answer: '\\input{1343}',
 												controls: {
 													"checkAnswer": true,
@@ -857,7 +857,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{english}{partial}{89686}{62438}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\subtractwholes{english}{partial}{89686}{62438}}}',
 												answer: '\\input{27248}',
 												controls: {
 													"checkAnswer": true,
@@ -871,7 +871,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\subtractwholes{math}{partial}{45300}{20532}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\subtractwholes{math}{partial}{45300}{20532}}}',
 												answer: '\\input{24768}',
 												controls: {
 													"checkAnswer": true,
@@ -1183,7 +1183,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\multiplywholes{math}{partial}{839}{3}',
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{839}{3}}}',
 												answer: '\\input{2517}',
 												controls: {
 													"checkAnswer": true,
@@ -1197,8 +1197,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{english}{partial}{[301,815]}',
-												answer: '\\input{1116}',
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{596}{6}}}',
+												answer: '\\input{3576}',
 												controls: {
 													"checkAnswer": true,
 													"help": true
@@ -1211,8 +1211,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{[968,827]}',
-												answer: '\\input{1795}',
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{english}{partial}{6453}{4}}}',
+												answer: '\\input{25812}',
 												controls: {
 													"checkAnswer": true,
 													"help": true
@@ -1225,8 +1225,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{[68,47]}',
-												answer: '\\input{115}',
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{4049}{7}}}',
+												answer: '\\input{28343}',
 												controls: {
 													"checkAnswer": true,
 													"help": true
@@ -1239,8 +1239,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{english}{partial}{[9026,1911]}',
-												answer: '\\input{10937}',
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{97}{74}}}',
+												answer: '\\input{7178}',
 												controls: {
 													"checkAnswer": true,
 													"help": true
@@ -1253,8 +1253,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{[3148,2584]}',
-												answer: '\\input{5732}',
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{english}{partial}{34}{29}}}',
+												answer: '\\input{986}',
 												controls: {
 													"checkAnswer": true,
 													"help": true
@@ -1267,8 +1267,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{english}{partial}{[618,489,115]}',
-												answer: '\\input{1222}',
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{645}{90}}}',
+												answer: '\\input{58050}',
 												controls: {
 													"checkAnswer": true,
 													"help": true
@@ -1281,8 +1281,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{[1700,2233,4945]}',
-												answer: '\\input{8878}',
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{374}{29}}}',
+												answer: '\\input{10846}',
 												controls: {
 													"checkAnswer": true,
 													"help": true
@@ -1295,8 +1295,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{math}{partial}{[8850,4626,177,401]}',
-												answer: '\\input{14054}',
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{english}{partial}{300}{356}}}',
+												answer: '\\input{106800}',
 												controls: {
 													"checkAnswer": true,
 													"help": true
@@ -1309,8 +1309,8 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\addwholes{english}{partial}{[832,6223,2705,146]}',
-												answer: '\\input{9906}',
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{508}{602}}}',
+												answer: '\\input{305}',
 												controls: {
 													"checkAnswer": true,
 													"help": true
