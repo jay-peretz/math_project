@@ -302,6 +302,151 @@ angular.module('mathSkills.services')
                                         }]
                                     },
                                 ]
+                            },{
+                                title: '1.3 Comparing Whole Numbers',
+                                path: '1.3-comparing-whole-numbers',
+                                children: [
+                                    {
+        								title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\row{\\str{23 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 43}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 26 divisible by 10?}',
+    											answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 119 divisible by 10?}',
+        										answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 9 divisible by 2?}',
+        										answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 132 divisible by 3?}',
+        										answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}',
+                                                controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 85 divisible by 5?}',
+        										answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 323 divisible by 5?}',
+        										answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 109 divisible by 7?}',
+        										answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 142 divisible by 2?}',
+        										answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}',
+												controls: {
+													"checkAnswer": false,
+													"help": true
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Comparing Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\str{Is 143 divisible by 2?}',
+                								answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}', 
+												controls: {
+													"checkAnswer": false,
+													"help": true
+                                                }
+                                            }]
+                                        }]
+                                    }
+                                ]
                             },
                             {
                                 title: '1.4 Add Whole Numbers',
