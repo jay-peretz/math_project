@@ -35,8 +35,8 @@ angular.module('mathSkills')
 					minimumGraph = [],
 					maximumGraph = [],
 					numberLineArray = [],
-					firstGraphNumber = 0,
-					secondGraphNumber = 1;
+					numberFirst = 0,
+					numberSecond = 1;
 					
 				numberLineArray[0] = [];
 				numberLineArray[1] = [];
@@ -71,19 +71,17 @@ angular.module('mathSkills')
 					if (typeof $scope.graphmaximum === "string") {
 						maximumGraph = $scope.graphmaximum;
 						
-						firstGraphNumber = numberFirst<numberSecond ? numberFirst: numberSecond;
-						secondGraphNumber = numberFirst<numberSecond ? numberSecond: numberFirst;
 						
 						// below number line display 
-						for (var ii = minimumGraph, jj = 0, len = maximumGraph; ii <= len; ii++) {
-								if ((ii != firstGraphNumber)&&(ii != secondGraphNumber)) {
+						for (var ii = minimumGraph, jj = 0; ii <= maximumGraph; ii++) {
+								if ((ii != numberFirst)&&(ii != numberSecond)) {
 									numberLineArray[1][jj] = "\xA0"+ii+"\xA0";
 									numberLineArray[0][jj] = "\xA0"+"\xA0"+"|";
 								} else {
-									if (ii == firstGraphNumber) {
+									if (ii == numberFirst) {
 										numberLineArray[1][jj] = "\xA0"+"X"+"\xA0";
 										numberLineArray[0][jj] = "\xA0"+"\xA0"+"|";
-									} else if (ii == secondGraphNumber) {
+									} else if (ii == numberSecond) {
 										numberLineArray[1][jj] = "\xA0"+"Y"+"\xA0";
 										numberLineArray[0][jj] = "\xA0"+"\xA0"+"|";
 									}
