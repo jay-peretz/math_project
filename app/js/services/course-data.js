@@ -1900,6 +1900,153 @@ angular.module('mathSkills.services')
                                     },
                                 ]
                             },
+// 4.2 Order Of Operations With Whole Numbers                    
+                            {
+                                title: '4.2 Order Of Operations With Whole Numbers',
+                                path: '4.2-order-of-operations-with-whole-numbers',
+                                children: [
+                                    {
+                                        title: 'Order Of Operations With Whole Numbers',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\str{Solve (9 / 1 + 8)}',
+                                                answer: '\\input{17}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Order Of Operations With Whole Numbers',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\str{Solve 8 * 9 + 6}',
+                                                answer: '\\input{78}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Order Of Operations With Whole Numbers',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\str{Solve 8 - (9 * 15)}',
+                                                answer: '\\input{-127}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Order Of Operations With Whole Numbers',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\str{Solve (7 * 2 + 14)}',
+                                                answer: '\\input{28}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Order Of Operations With Whole Numbers',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\str{Solve (4 + 9) - 8}',
+                                                answer: '\\input{5}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Order Of Operations With Whole Numbers',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\str{Solve 3 / (3 * 3 / 3)}',
+                                                answer: '\\input{1}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Order Of Operations With Whole Numbers',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\str{Solve 4 - (7 / 1) - 7}',
+                                                answer: '\\input{-3}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Order Of Operations With Whole Numbers',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\str{Solve (9 + 15 * 12 + 8)}',
+                                                answer: '\\input{197}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Order Of Operations With Whole Numbers',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\str{Solve 28 + 29 / 1 - 22 + 8}',
+                                                answer: '\\input{43}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Order Of Operations With Whole Numbers',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\str{Solve (17 * 29 + 19 - 46 * 45)}',
+                                                answer: '\\input{-1558}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                ]
+                            },
 // 5.1 Using Divisibility Tests Using Divisibility Tests                            
                             {
                                 title: '5.1 Using Divisibility Tests Using Divisibility Tests',
