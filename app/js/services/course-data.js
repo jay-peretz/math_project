@@ -1683,6 +1683,223 @@ angular.module('mathSkills.services')
 									},
                                 ]
                             },
+// 4.1 Mean, Median, Mode                     
+                            {
+                                title: '4.1 Mean, Median, Mode',
+                                path: '4.1-mean-median-mode',
+                                children: [
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the average for these values:<br>98, 122, 18, 38.}',
+                                                answer: '\\input{69}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the average for these values:<br>26, 107, 59, 13, 55.}',
+                                                answer: '\\input{52}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the average for these values:<br>144, 27, 3.}',
+                                                answer: '\\input{58}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the median for these values:<br>382, 338, 318, 322, 499, 425.}',
+                                                answer: '\\input{360}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the median for these values:<br>360, 483, 792, 417.}',
+                                                answer: '\\input{450}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },     
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the median for these values:<br>52, 103, 458.}',
+                                                answer: '\\input{103}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the mode(s) for these values:<br>497, 115, 594, 354.<br><br>If the numbers have no mode, enter "none".<br>If there is more than one mode, enter them in ascending order.}',
+                                                answer: '\\input{none}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the mode(s) for these values:<br>488, 488, 618, 425, 763.<br><br>If the numbers have no mode, enter "none".<br>If there is more than one mode, enter them in ascending order.}',
+                                                answer: '\\input{488}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the mode(s) for these values:<br>612, 612, 663, 579, 663, 607.<br><br>If the numbers have no mode, enter "none".<br>If there is more than one mode, enter them in ascending order.}',
+                                                answer: '\\css{grp{\\input{612}}{\\input{663}}}{mode}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the average for these values:<br>149, 19, 11, 33.}',
+                                                answer: '\\input{53}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the mode(s) for these values:<br>157, 193, 675, 732, 776.<br><br>If the numbers have no mode, enter "none".<br>If there is more than one mode, enter them in ascending order.}',
+                                                answer: '\\input{none}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the median for these values:<br>427, 262, 313, 17, 500, 481.}',
+                                                answer: '\\input{370}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the mode(s) for these values:<br>505, 795, 114, 505, 114, 424.<br><br>If the numbers have no mode, enter "none".<br>If there is more than one mode, enter them in ascending order.}',
+                                                answer: '\\css{grp{\\input{114}}{\\input{505}}}{mode}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the median for these values:<br>137, 712, 386, 126, 239.}',
+                                                answer: '\\input{239}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Mean, Median, or Mode',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\html{Determine the average for these values:<br>120, 13, 17, 58.}',
+                                                answer: '\\input{52}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                ]
+                            },
 // 5.1 Using Divisibility Tests Using Divisibility Tests                            
                             {
                                 title: '5.1 Using Divisibility Tests Using Divisibility Tests',
