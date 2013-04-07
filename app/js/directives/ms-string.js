@@ -4,7 +4,7 @@
 angular.module('mathSkills') 
     .config(['parserProvider', function (parserProvider) {
         parserProvider.register('str', {
-            directiveTemplate: '<ms-string expected={{expected}}></ms-string>'
+            directiveTemplate: '<ms-string expected={{expected}} label={{label}}></ms-string>'
         });
     }])
     .directive('msString', [

@@ -9,7 +9,7 @@ angular.module('mathSkills')
             }, {
                 name: 'correct'
             }],
-            directiveTemplate: '<ms-button expected={{expected}} label=button></ms-button>'
+            directiveTemplate: '<ms-button expected={{expected}} label={{label}}></ms-button>'
         });
     }])
     .directive('msButton', [

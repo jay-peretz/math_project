@@ -9,7 +9,7 @@ angular.module('mathSkills')
             }, {
                 name: 'check'
             }],
-            directiveTemplate: '<ms-checkbox expected={{expected}} label=checkbox></ms-checkbox>'
+            directiveTemplate: '<ms-checkbox expected={{expected}} label={{label}}></ms-checkbox>'
         });
     }])
     .directive('msCheckbox', [
