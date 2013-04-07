@@ -394,10 +394,12 @@ angular.module('mathSkills')
 							// remove elements of display array if 2nd parameter is anything but "complete"
 							if (!$scope.displayresult) {
 								if (displayWithBorrowsFinal.length > 2) {
+									// remove displayWithBorrowsFinal(0) to get even display height 
+									displayWithBorrowsFinal.splice(0, 1);
 									for (var ii = 0, len = displayWithBorrowsArray[0].length; ii < len; ii += 1) {							
-											displayWithBorrowsFinal[1][ii] = "";
+											displayWithBorrowsFinal[0][ii] = "";
 											if (ii % 2 !== 0) {
-												displayWithBorrowsFinal[2][ii] = "";
+												displayWithBorrowsFinal[1][ii] = "";
 											}
 									}
 								}
