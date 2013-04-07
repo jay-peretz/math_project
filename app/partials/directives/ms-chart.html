@@ -1,0 +1,48 @@
+<style type="text/css">
+
+  table.td_padding td {
+		padding-left:4px;
+		padding-right:4px;
+  }
+  .collapseTable {
+		border-collapse:collapse;
+  }
+  .large-font-size {
+	  	font-size:110%;
+  }
+  .tr_height {
+	  	height:1.7em;
+  }
+  .tr_height_plus {
+	  	height:2em;
+  }
+  .fontWeightBold {
+	  	font-weight:bold;
+  }
+  .text_align_center {
+	  	text-align:center;
+  }
+  .border-top-2px-black {
+	  	border-top:2px solid black;
+  } 
+  .chartTable {
+		border:1px solid black; 
+		width:100px;
+		height:30px;
+  }
+</style>
+
+<span>
+       <table class="collapseTable td_padding text_align_center large-font-size">
+            	<tr ng-show="chartTitleIn">
+                	<th colspan="{{chartColumnsIn}}">
+									<span class="fontWeightBold">{{chartTitleIn}}</span>
+                    </th>
+                </tr>
+                 <tr ng-repeat="row in chartArrayOut" ng-style="{true: {borderBottom: '2px solid black'}, false: {}}[$first]">
+			    	<td ng-repeat="col in row" class="chartTable">
+                    <span>{{col}}</span>
+					</td>
+			     </tr>
+		</table>
+</span>
