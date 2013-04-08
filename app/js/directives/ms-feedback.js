@@ -47,6 +47,11 @@ angular.module('mathSkills')
                                 $scope.feedback.icon = 'remove';
                             }
                         });
+
+                        // Hide the feedback label when the user clicks help.
+                        $scope.$on('checkHelp', function () {
+                            $scope.feedback.show = false;
+                        });
                     }
                 ],
                 restrict: 'E',

@@ -8,6 +8,8 @@ angular.module('mathSkills')
                 controller: [
                     '$scope',
                     function ($scope) {
+                        $scope.answerButtonText = 'Check Answer';
+
                         $scope.$watch('data', function () {
                             // If we haven't parsed $scope.data into an object.
                             if (typeof $scope.data === 'string') {
@@ -21,7 +23,9 @@ angular.module('mathSkills')
                                 // If we do have help, set up the actual help function.
                                 if ($scope.hasHelp) {
                                     $scope.help = function () {
-                                        $scope.$parent.$broadcast('checkHelp');
+                                        // Change 'Check Answer' button text to 'Next Problem'.
+                                        $scope.answerButtonText = 'Next Problem';
+                                        $scope.$emit('triggerCheckHelp');
                                     };
                                 }
 

@@ -26,6 +26,10 @@ angular.module('mathSkills')
                             $scope.$$childHead.$$nextSibling.$broadcast('checkAnswer');
                         });
 
+                        $scope.$on('triggerCheckHelp', function () {
+                            $scope.$broadcast('checkHelp');
+                        });
+
                         $scope.$on('triggerCheckFocus', function() {
                             $scope.$$childHead.$$nextSibling.$broadcast('checkFocus');
                         });

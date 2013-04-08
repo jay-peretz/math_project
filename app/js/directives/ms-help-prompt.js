@@ -25,6 +25,11 @@ angular.module('mathSkills')
                                 }
                             }
                         });
+
+                        // Hide the prompt when the user asks for help.
+                        $scope.$on('checkHelp', function () {
+                            $scope.helpPrompt.show = false;
+                        });
                     }
                 ],
                 restrict: 'E',

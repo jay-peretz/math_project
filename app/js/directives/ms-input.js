@@ -61,6 +61,7 @@ angular.module('mathSkills')
                             if ($scope.answer === '') {
                                 // Strip out the tag part of $scope.expected and extract the value.
                                 $scope.answer = $scope.expected.slice(7, $scope.expected.length - 1);
+                                $scope.class = '';
                                 $element.find('input').focus();
                                 $scope.$emit('helped');
                             } else {
