@@ -9,7 +9,7 @@
     <tr ng-repeat="problemFeedback in feedback" class={{rowClass(problemFeedback.result)}}>
         <td>{{problemFeedback.problemNumber}}</td>
         <td><ms-expression expected={{problemFeedback.problem}}></ms-expression></td>
-        <td><ms-expression expected="{{problemFeedback.expected | input2str  | button2str}}"></ms-expression></td>
-        <td><ms-expression expected="{{problemFeedback.answer | input2str | button2str}}"></ms-expression></td>
+        <td><ms-expression expected="{{problemFeedback.expected | input2str  | button2str | checkbox2lbl}}"></ms-expression></td>
+        <td><ms-expression expected="{{problemFeedback.answer | input2str | button2str | checkbox2lbl}}"></ms-expression></td>
     </tr>
 </table>
