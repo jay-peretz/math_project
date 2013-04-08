@@ -4,6 +4,20 @@
 
 /* app css stylesheet */
 
+/* Bootstrap Overrides */
+
+.control-group.error .checkbox,
+.control-group.error .radio,
+.control-group.error input,
+.control-group.error select,
+.control-group.error textarea,
+.control-group.success .checkbox,
+.control-group.success .radio,
+.control-group.success input,
+.control-group.success select,
+.control-group.success textarea {
+    color: black;
+}
 
 /* Animations */
 
