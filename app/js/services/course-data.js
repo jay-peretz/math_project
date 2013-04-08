@@ -2058,7 +2058,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 47 divisible by 7?}',
-												answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+												answer: '\\butgrp{\\row{\\but{YES}{F}}{\\but{NO}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2072,7 +2072,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 26 divisible by 10?}',
-                                                answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+                                                answer: '\\butgrp{\\row{\\but{YES}{F}}{\\but{NO}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2086,7 +2086,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 119 divisible by 10?}',
-                                                answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+                                                answer: '\\butgrp{\\row{\\but{YES}{F}}{\\but{NO}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2100,7 +2100,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 9 divisible by 2?}',
-                                                answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+                                                answer: '\\butgrp{\\row{\\but{YES}{F}}{\\but{NO}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2114,7 +2114,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 132 divisible by 3?}',
-                                                answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}',
+                                                answer: '\\butgrp{\\row{\\but{YES}{T}}{\\but{NO}{F}}}',
                                                 controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2128,7 +2128,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 85 divisible by 5?}',
-                                                answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}',
+                                                answer: '\\butgrp{\\row{\\but{YES}{T}}{\\but{NO}{F}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2142,7 +2142,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 323 divisible by 5?}',
-                                                answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+                                                answer: '\\butgrp{\\row{\\but{YES}{F}}{\\but{NO}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2156,7 +2156,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 109 divisible by 7?}',
-                                                answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+                                                answer: '\\butgrp{\\row{\\but{YES}{F}}{\\but{NO}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2165,12 +2165,12 @@ angular.module('mathSkills.services')
 										}]
 									},
 									{
-                                        title: 'Determine whether a Number is Prime or Composite',
+                                        title: 'Divisibility Test on Whole Numbers',
 										children: [{
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 346 divisible by 3?}',
-                                                answer: '\\row{\\but{YES}{F}}{\\but{NO}{T}}',
+                                                answer: '\\butgrp{\\row{\\but{YES}{F}}{\\but{NO}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2179,12 +2179,12 @@ angular.module('mathSkills.services')
                                         }]
                                     },
 									{
-										title: 'Determine whether a Number is Prime or Composite',
+										title: 'Divisibility Test on Whole Numbers',
 										children: [{
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 384 divisible by 2?}',
-                                                answer: '\\row{\\but{YES}{T}}{\\but{NO}{F}}',
+                                                answer: '\\butgrp{\\row{\\but{YES}{T}}{\\but{NO}{F}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2353,7 +2353,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 42 prime or composite?}',
-												answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
+												answer: '\\butgrp{\\row{\\but{Prime}{F}}{\\but{Composite}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2367,7 +2367,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 51 prime or composite?}',
-                                                answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
+                                                answer: '\\butgrp{\\row{\\but{Prime}{F}}{\\but{Composite}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2381,7 +2381,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 94 prime or composite?}',
-                                                answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
+                                                answer: '\\butgrp{\\row{\\but{Prime}{F}}{\\but{Composite}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2395,7 +2395,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 43 prime or composite?}',
-                                                answer: '\\row{\\but{Prime}{T}}{\\but{Composite}{F}}',
+                                                answer: '\\butgrp{\\row{\\but{Prime}{T}}{\\but{Composite}{F}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2409,7 +2409,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 27 prime or composite?}',
-                                                answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
+                                                answer: '\\butgrp{\\row{\\but{Prime}{F}}{\\but{Composite}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2423,7 +2423,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 73 prime or composite?}',
-                                                answer: '\\row{\\but{Prime}{T}}{\\but{Composite}{F}}',
+                                                answer: '\\butgrp{\\row{\\but{Prime}{T}}{\\but{Composite}{F}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2437,7 +2437,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 47 prime or composite?}',
-                                                answer: '\\row{\\but{Prime}{T}}{\\but{Composite}{F}}',
+                                                answer: '\\butgrp{\\row{\\but{Prime}{T}}{\\but{Composite}{F}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2451,7 +2451,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 189 prime or composite?}',
-                                                answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
+                                                answer: '\\butgrp{\\row{\\but{Prime}{F}}{\\but{Composite}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2465,7 +2465,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 187 prime or composite?}',
-                                                answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
+                                                answer: '\\butgrp{\\row{\\but{Prime}{F}}{\\but{Composite}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
@@ -2479,7 +2479,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\str{Is 187 prime or composite?}',
-                                                answer: '\\row{\\but{Prime}{F}}{\\but{Composite}{T}}',
+                                                answer: '\\butgrp{\\row{\\but{Prime}{F}}{\\but{Composite}{T}}}',
 												controls: {
 													"checkAnswer": false,
 													"help": true
