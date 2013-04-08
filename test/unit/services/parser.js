@@ -120,4 +120,27 @@ describe('parser service', function () {
             }, dummyScope);
         }));
     });
+
+    describe('replace', function () {
+        it('should replace a single tag', inject(function (parser) {
+            expect(parser.replace('\\input{1}', 'input', 'str')).toBe('\\str{1}');
+            expect(parser.replace('\\select{answer}{answer,false}', 'select', 'str')).toBe('\\str{answer}');
+            expect(parser.replace('\\but{yes}{T}', 'but', 'str')).toBe('\\str{yes}');
+            expect(parser.replace('\\chk{yes}{T}', 'chk', 'str')).toBe('\\str{yes}');
+        }));
+
+        it('should replace nested tags', inject(function (parser) {
+            expect(parser.replace('\\row{\\input{1}}', 'input', 'str')).toBe('\\row{\\str{1}}');
+            expect(parser.replace('\\row{\\select{answer}{answer,false}}', 'select', 'str')).toBe('\\row{\\str{answer}}');
+            expect(parser.replace('\\row{\\but{yes}{T}}', 'but', 'str')).toBe('\\row{\\str{yes}}');
+            expect(parser.replace('\\row{\\chk{yes}{T}}', 'chk', 'str')).toBe('\\row{\\str{yes}}');
+        }));
+
+        it('should replace multiple nested tags', inject(function (parser) {
+            expect(parser.replace('\\row{\\frac{\\input{1}}{\\input{2}}}{\\input{3}}', 'input', 'str')).toBe('\\row{\\frac{\\str{1}}{\\str{2}}}{\\str{3}}');
+            expect(parser.replace('\\row{\\select{answer}{answer,false}}{\\select{another}{another,false}}', 'select', 'str')).toBe('\\row{\\str{answer}}{\\str{another}}');
+            expect(parser.replace('\\row{\\but{yes}{T}}{\\but{no}{F}}', 'but', 'str')).toBe('\\row{\\str{yes}}{\\str{no}}');
+            expect(parser.replace('\\row{\\chk{yes}{T}}{\\chk{no}{F}}', 'chk', 'str')).toBe('\\row{\\str{yes}}{\\str{no}}');
+        }));
+    });
 });

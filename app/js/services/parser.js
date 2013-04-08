@@ -156,6 +156,9 @@ angular.module('mathSkills.services')
 
                         return tagTemplate;
                     },
+                    isTag: function (tagString) {
+                        return tagString.toString()[0] === '\\';
+                    },
                     /**
                      * A convienence method to parse a tag string, generate and
                      * return the template string, and optionally decorate the
@@ -184,6 +187,25 @@ angular.module('mathSkills.services')
 
                         // Return the generated template
                         return parser.generateTemplate(parsedTag, options);
+                    },
+                    replace: function (tagString, findTag, replaceTag) {
+                        if (!parser.isTag(tagString)) {
+                            return tagString;
+                        }
+
+                        var parsedTag = parser.extractTag(tagString),
+                            ret = '';
+
+                        if (parsedTag.tag === findTag) {
+                            ret = '\\' + replaceTag + '{' + parser.replace(parsedTag.args[0], findTag, replaceTag) + '}';
+                        } else {
+                            ret = '\\' + parsedTag.tag;
+                            parsedTag.args.forEach(function (arg) {
+                                ret += '{' + parser.replace(arg, findTag, replaceTag) + '}';
+                            });
+                        }
+
+                        return ret;
                     }
                 };
 
