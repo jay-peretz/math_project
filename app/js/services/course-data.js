@@ -1037,7 +1037,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{74 is greater than 26}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{T}}{\\str{\xA0 \xA0 74 > 26}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 26 < 74}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 74 - 26}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 74 + 26}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{74 is greater than 26}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{T}}{\\str{\xA0 \xA0 74 > 26}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 26 < 74}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 74 - 26}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 74 + 26}}}}}',
                                                 answer: 'A',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1051,7 +1051,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{9 is less than 23}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 9 - 23}}}{\\row{\\but{B}{T}}{\\str{\xA0 \xA0 9 < 23}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 9 + 23}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 23 > 9}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{9 is less than 23}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 9 - 23}}}{\\row{\\but{B}{T}}{\\str{\xA0 \xA0 9 < 23}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 9 + 23}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 23 > 9}}}}}',
                                                 answer: 'B',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1065,7 +1065,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{5 is more than 1}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 1 < 5}}}{\\row{\\but{B}{T}}{\\str{\xA0 \xA0 5 > 1}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 1 + 5}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 5 - 1}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{5 is more than 1}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 1 < 5}}}{\\row{\\but{B}{T}}{\\str{\xA0 \xA0 5 > 1}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 1 + 5}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 5 - 1}}}}}',
                                                 answer: 'B',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1079,7 +1079,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{82 is how much less than 98?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 82 + 98}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 98 > 82}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 98 - 82}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 82 < 98}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{82 is how much less than 98?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 82 + 98}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 98 > 82}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 98 - 82}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 82 < 98}}}}}',
                                                 answer: 'C',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1093,7 +1093,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{91 is more than 66}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 66 + 91}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 66 < 91}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 91 - 66}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 91 > 66}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{91 is more than 66}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 66 + 91}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 66 < 91}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 91 - 66}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 91 > 66}}}}}',
                                                 answer: 'D',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1107,7 +1107,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{13 is how much more than 12}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 13 > 12}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 12 < 13}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 12 + 13}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 13 - 12}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{13 is how much more than 12}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 13 > 12}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 12 < 13}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 12 + 13}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 13 - 12}}}}}',
                                                 answer: 'D',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1121,7 +1121,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{28 is more than 16}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 16 < 28}}}{\\row{\\but{B}{T}}{\\str{\xA0 \xA0 28 > 16}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 16 + 28}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 28 - 16}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{28 is more than 16}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 16 < 28}}}{\\row{\\but{B}{T}}{\\str{\xA0 \xA0 28 > 16}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 16 + 28}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 28 - 16}}}}}',
                                                 answer: 'B',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1135,7 +1135,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{45 is greater than 1}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 1 < 45}}}{\\row{\\but{B}{T}}{\\str{\xA0 \xA0 45 > 1}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 45 - 1}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 1 + 45}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{45 is greater than 1}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 1 < 45}}}{\\row{\\but{B}{T}}{\\str{\xA0 \xA0 45 > 1}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 45 - 1}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 1 + 45}}}}}',
                                                 answer: 'B',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1149,7 +1149,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{28 is how much less than 47?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{T}}{\\str{\xA0 \xA0 47 - 28}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 28 < 47}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 47 > 28}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 28 + 47}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{28 is how much less than 47?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{T}}{\\str{\xA0 \xA0 47 - 28}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 28 < 47}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 47 > 28}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 28 + 47}}}}}',
                                                 answer: 'A',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1163,7 +1163,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{6 is less than 73}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 6 + 73}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 73 > 6}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 73 - 6}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 6 < 73}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{6 is less than 73}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 6 + 73}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 73 > 6}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 73 - 6}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 6 < 73}}}}}',
                                                 answer: 'D',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1183,7 +1183,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 1:   Which two athletes had the best times to finish Race #1?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{T}}{\\str{\xA0 \xA0 C and D}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 A and B}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 B and C}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 D and E}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 1:   Which two athletes had the best times to finish Race #1?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{T}}{\\str{\xA0 \xA0 C and D}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 A and B}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 B and C}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 D and E}}}}}',
                                                 answer: '\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1197,7 +1197,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 2:   Which athlete took the least amount of time to finish Race #2?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 runner D}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 runner C}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 runner E}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 runner A}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 2:   Which athlete took the least amount of time to finish Race #2?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 runner D}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 runner C}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 runner E}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 runner A}}}}}',
                                                 answer: '\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1211,7 +1211,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 3:   How many of the runners had a time of 25 seconds or better in at least one race?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 2 runners}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 0 runners}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 1 runner}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 5 runners}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 3:   How many of the runners had a time of 25 seconds or better in at least one race?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 2 runners}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 0 runners}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 1 runner}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 5 runners}}}}}',
                                                 answer: '\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1225,7 +1225,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\html{<br><br>}}{\\row{\\str{Question 1:  How much more money does Nathan spend on gas than Anne?}}}{\\row{\xA0}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\html{<br><br>}}{\\row{\\str{Question 1:  How much more money does Nathan spend on gas than Anne?}}}{\\row{\xA0}}}',
                                                 answer: '\\rowgrp{\\row{\\str{$}}{\\input{2}}}{\\row{\xA0}}{\\row{\\chart{Utility Bill for Gas and Electricity}{5}{5}{["Student","Therms of Gas Used","Cost of Gas","Kilowatt Hours of Electricity Used","Cost of Electricity","Anne","18","$26","188","$41","Travis","10","$14","183","$40","Nathan","20","$28","261","$56","Sondra","12","$17","251","$54"]}}}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1239,7 +1239,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\html{<br><br>}}{\\row{\\str{Question 2:    How much more money does Nathan spend on the total utility bill (the cost of both gas and electricity) than Anne?}}}{\\row{\xA0}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\html{<br><br>}}{\\row{\\str{Question 2:    How much more money does Nathan spend on the total utility bill (the cost of both gas and electricity) than Anne?}}}{\\row{\xA0}}}',
                                                 answer: '\\rowgrp{\\row{\\str{$}}{\\input{17}}}{\\row{\xA0}}{\\row{\\chart{Utility Bill for Gas and Electricity}{5}{5}{["Student","Therms of Gas Used","Cost of Gas","Kilowatt Hours of Electricity Used","Cost of Electricity","Anne","18","$26","188","$41","Travis","10","$14","183","$40","Nathan","20","$28","261","$56","Sondra","12","$17","251","$54"]}}}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1253,7 +1253,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\html{<br><br>}}{\\row{\\str{Question 3:    How much more money does Nathan spend on electricity than on gas?}}}{\\row{\xA0}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\html{<br><br>}}{\\row{\\str{Question 3:    How much more money does Nathan spend on electricity than on gas?}}}{\\row{\xA0}}}',
                                                 answer: '\\rowgrp{\\row{\\str{$}}{\\input{28}}}{\\row{\xA0}}{\\row{\\chart{Utility Bill for Gas and Electricity}{5}{5}{["Student","Therms of Gas Used","Cost of Gas","Kilowatt Hours of Electricity Used","Cost of Electricity","Anne","18","$26","188","$41","Travis","10","$14","183","$40","Nathan","20","$28","261","$56","Sondra","12","$17","251","$54"]}}}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1267,7 +1267,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
 											children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 1:  For the four students, which student spent the most for Phone and Gas?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Sam}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Jerry}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 Maribel}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 Yvonne}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 1:  For the four students, which student spent the most for Phone and Gas?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Sam}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Jerry}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 Maribel}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 Yvonne}}}}}',
                                                 answer: '\\chart{}{5}{5}{["Student","Phone","Internet","Cable TV","Gas","Sam","41","16","40","69","Jerry","64","60","59","65","Maribel","94","67","67","99","Yvonne","41","69","34","113"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1281,7 +1281,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                               children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 2:  Which service given in these four choices is the most expensive for the four students all together?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Phone}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Internet}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 Cable TV}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 Gas}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 2:  Which service given in these four choices is the most expensive for the four students all together?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Phone}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Internet}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 Cable TV}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 Gas}}}}}',
                                                 answer: '\\chart{}{5}{5}{["Student","Phone","Internet","Cable TV","Gas","Sam","41","16","40","69","Jerry","64","60","59","65","Maribel","94","67","67","99","Yvonne","41","69","34","113"]}',
                                                 controls: {
                                                     "checkAnswer": true,
@@ -1295,7 +1295,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                            title: 'Main Answer',
                                            children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 3:  Which service given in these four choices is the least expensive for the four students all together?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Phone}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Internet}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 Cable TV}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 Gas}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 3:  Which service given in these four choices is the least expensive for the four students all together?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Phone}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Internet}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 Cable TV}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 Gas}}}}}',
                                                 answer: '\\chart{}{5}{5}{["Student","Phone","Internet","Cable TV","Gas","Sam","41","16","40","69","Jerry","64","60","59","65","Maribel","94","67","67","99","Yvonne","41","69","34","113"]}',
                                                 controls: {
                                                     "checkAnswer": true,
