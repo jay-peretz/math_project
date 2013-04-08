@@ -1266,9 +1266,9 @@ angular.module('mathSkills.services')
                                         title: 'Charts and Bar Graphs',
                                         children: [{
                                             title: 'Main Answer',
-                                            children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{4555517}{3}}',
-                                                answer: '\\select{"Thousands"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+											children: [{
+                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 1:  For the four students, which student spent the most for Phone and Gas?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Sam}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Jerry}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 Maribel}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 Yvonne}}}}',
+                                                answer: '\\chart{}{5}{5}{["Student","Phone","Internet","Cable TV","Gas","Sam","41","16","40","69","Jerry","64","60","59","65","Maribel","94","67","67","99","Yvonne","41","69","34","113"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -1280,9 +1280,9 @@ angular.module('mathSkills.services')
                                         title: 'Charts and Bar Graphs',
                                         children: [{
                                             title: 'Main Answer',
-                                            children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{5174344}{0}}',
-                                                answer: '\\select{"Ones"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                              children: [{
+                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 2:  Which service given in these four choices is the most expensive for the four students all together?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Phone}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Internet}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 Cable TV}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 Gas}}}}',
+                                                answer: '\\chart{}{5}{5}{["Student","Phone","Internet","Cable TV","Gas","Sam","41","16","40","69","Jerry","64","60","59","65","Maribel","94","67","67","99","Yvonne","41","69","34","113"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -1293,10 +1293,10 @@ angular.module('mathSkills.services')
                                     {
                                         title: 'Charts and Bar Graphs',
                                         children: [{
-                                            title: 'Main Answer',
-                                            children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{1924837}{6}}',
-                                                answer: '\\select{"Millions"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                           title: 'Main Answer',
+                                           children: [{
+                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 3:  Which service given in these four choices is the least expensive for the four students all together?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Phone}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Internet}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 Cable TV}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 Gas}}}}',
+                                                answer: '\\chart{}{5}{5}{["Student","Phone","Internet","Cable TV","Gas","Sam","41","16","40","69","Jerry","64","60","59","65","Maribel","94","67","67","99","Yvonne","41","69","34","113"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
