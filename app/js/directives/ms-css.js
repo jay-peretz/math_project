@@ -13,12 +13,16 @@ angular.module('mathSkills')
         function (parser, $compile) {
             return {
                 controller: function ($scope, $element) {
-               
                     // Extract the args array.
                     $scope.$watch('expected', function () {
                         if ($scope.expected){
                             $scope.myargs = parser.extractTag($scope.expected).args;
                         }
+                    });
+
+                    $scope.$on('answer', function (e, data) {
+                        data.expected = $scope.expected;
+                        data.answer = '\\css{' + data.answer +'}{' + $scope.myargs[1] + '}';
                     });
                 },
                 restrict: 'E',
