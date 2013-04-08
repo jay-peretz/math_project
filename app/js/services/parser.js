@@ -125,6 +125,24 @@ angular.module('mathSkills.services')
                             args: args
                         };
                     },
+                    find: function (tagString, findTag) {
+                        if (!parser.isTag(tagString)) {
+                            return [];
+                        }
+
+                        var parsedTag = parser.extractTag(tagString),
+                            ret = [];
+
+                        if (parsedTag.tag === findTag) {
+                            ret.push(parsedTag);
+                        }
+
+                        parsedTag.args.forEach(function (arg) {
+                            ret = ret.concat(parser.find(arg, findTag));
+                        });
+
+                        return ret;
+                    },
                     /**
                      * Returns an HTML template string for a registered tag.
                      *

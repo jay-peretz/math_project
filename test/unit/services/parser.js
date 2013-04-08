@@ -64,6 +64,40 @@ describe('parser service', function () {
         }));
     });
 
+    describe('find', function () {
+        it('should find a single tag', inject(function (parser) {
+            expect(parser.find('\\input{1}', 'input')).toEqual([{
+                tag: 'input',
+                args: [
+                    '1'
+                ]
+            }]);
+        }));
+
+        it('should find nested tags', inject(function (parser) {
+            expect(parser.find('\\row{\\input{1}}', 'input')).toEqual([{
+                tag: 'input',
+                args: [
+                    '1'
+                ]
+            }]);
+        }));
+
+        it('should find multiple nested tags', inject(function (parser) {
+            expect(parser.find('\\row{\\input{1}}{\\input{2}}', 'input')).toEqual([{
+                tag: 'input',
+                args: [
+                    '1'
+                ]
+            }, {
+                tag: 'input',
+                args: [
+                    '2'
+                ]
+            }]);
+        }));
+    });
+
     describe('generateTemplate', function () {
         it('should return the directive template when appropriate', inject(function (parser) {
             expect(
