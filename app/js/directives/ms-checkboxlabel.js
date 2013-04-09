@@ -30,7 +30,7 @@ angular.module('mathSkills')
                     expected: '@',
                     label: '@'
                 },
-                template: '<label style="background-color:{{color}};"><input type="checkbox" ng-model="checkValue"> {{lblValue}}</label>'
+                template: '<label style="background-color:{{color}};"><input type="checkbox" ng-model="checkValue"> {{myargs[0]}}</label>'
             };
         }
     ]);
