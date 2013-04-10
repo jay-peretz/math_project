@@ -30,6 +30,14 @@ ms-panel > div {
     animation: fadein 1s, slideup 0.25s ease-in;
 }
 
+ms-panel .helpPanel > div {
+    -ms-animation: fadein 1s, slideup 0.25s ease-in;
+    -moz-animation: fadein 1s, slideup 0.25s ease-in;
+    -o-animation: fadein 1s, slideup 0.25s ease-in;
+    -webkit-animation: fadein 1s, slideup 0.25s ease-in;
+    animation: fadein 1s, slideup 0.25s ease-in;
+}
+
 ms-panel > div {
     padding-top: 10px;
 }

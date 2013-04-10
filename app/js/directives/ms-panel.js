@@ -9,6 +9,8 @@ angular.module('mathSkills')
                     '$scope',
                     '$timeout',
                     function ($scope, $timeout) {
+                        $scope.showHelpPanel = false;
+
                         $scope.$on('answer', function (e, data) {
                             // Add problem property to all answer event data objects.
                             data.problem = $scope.problem;
@@ -28,6 +30,14 @@ angular.module('mathSkills')
 
                         $scope.$on('triggerCheckHelp', function () {
                             $scope.$broadcast('checkHelp');
+                        });
+
+                        $scope.$on('showHelpPanel', function (e, data) {
+                            e.stopPropagation();
+                            $scope.showHelpPanel = true;
+                            $scope.helpPanelClass = 'helpPanel';
+                            $scope.helpPanelWell = 'well';
+                            $scope.helpExpression = data.expression;
                         });
 
                         $scope.$on('triggerCheckFocus', function() {

@@ -2,12 +2,22 @@
     <ms-help-prompt></ms-help-prompt>
     <div class=row-fluid>
         <ms-expression expected={{problem}} class=span4></ms-expression>
-        <div class="span6 row-fluid">
-            <ms-expression expected={{answer}} class=span8></ms-expression>
-            <div class=span4>
-                <ms-feedback></ms-feedback>
-            </div>
+        <div ng-switch class="span8 row-fluid {{helpPanelWell}}" on=showHelpPanel>
+            <span ng-switch-when=false>
+                <div class="span9 row-fluid">
+                    <ms-expression expected={{answer}} class=span8></ms-expression>
+                    <div class=span4>
+                        <ms-feedback></ms-feedback>
+                    </div>
+                </div>
+                <ms-controls data={{controls}} class=span3></ms-controls>
+            </span>
+            <span ng-switch-when=true class="{{helpPanelClass}}">
+                <div>
+                    <ms-expression expected={{helpExpression}} class=span9></ms-expression>
+                    <ms-controls data='{ "nextProblem": true }' class=span3></ms-controls>
+                </div>
+            </span>
         </div>
-        <ms-controls data={{controls}} class=span2></ms-controls>
     </div>
 </div>

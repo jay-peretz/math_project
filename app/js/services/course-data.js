@@ -302,7 +302,7 @@ angular.module('mathSkills.services')
                                         }]
                                     },
                                 ]
-                            },{
+                            }, {
                                 title: '1.3 Comparing Whole Numbers',
                                 path: '1.3-comparing-whole-numbers',
                                 children: [
@@ -2061,7 +2061,7 @@ angular.module('mathSkills.services')
 												answer: '\\butgrp{\\row{\\but{YES}{F}}{\\but{NO}{T}}}',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{47 is not divisible by 7.}'
 												}
 											}]
 										}]

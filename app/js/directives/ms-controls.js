@@ -21,11 +21,17 @@ angular.module('mathSkills')
                                 $scope.hasHelp = $scope.data.help;
 
                                 // If we do have help, set up the actual help function.
-                                if ($scope.hasHelp) {
+                                if ($scope.hasHelp === true) {
                                     $scope.help = function () {
                                         // Change 'Check Answer' button text to 'Next Problem'.
                                         $scope.answerButtonText = 'Next Problem';
                                         $scope.$emit('triggerCheckHelp');
+                                    };
+                                } else {
+                                    $scope.help = function () {
+                                        $scope.$emit('showHelpPanel', {
+                                            expression: $scope.data.help
+                                        });
                                     };
                                 }
 
@@ -35,6 +41,13 @@ angular.module('mathSkills')
                                 if ($scope.hasCheckAnswer) {
                                     $scope.checkAnswer = function () {
                                         $scope.$emit('triggerCheckAnswer');
+                                    };
+                                }
+
+                                $scope.hasNextProblem = $scope.data.nextProblem;
+                                if ($scope.hasNextProblem === true) {
+                                    $scope.showNextProblem = function () {
+                                        $scope.$emit('panelDone');
                                     };
                                 }
                             }
