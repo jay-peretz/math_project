@@ -52,9 +52,21 @@ angular.module('mathSkills')
                         if (e.defaultPrevented === false) {
                             // handle check help event for parent scope.
                             // button does not use help, fire a notHelped event.
-                            $scope.$emit('notHelped', {
-                                controllerId: $scope.controllerId
-                            });
+                            
+                            if ($scope.correct === "T") {
+                                $scope.class = 'success';
+                                
+                                $scope.$emit('helped', {
+                                    controllerId: $scope.controllerId
+                                });
+                                
+                            } else {
+                                
+                                $scope.$emit('notHelped', {
+                                    controllerId: $scope.controllerId
+                                });
+                                
+                            }
                         }
                     });
 
