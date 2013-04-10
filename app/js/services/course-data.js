@@ -1483,6 +1483,16 @@ angular.module('mathSkills.services')
 													"help": false
 												}
 											}]
+										}, {
+                                            title: 'Workbook',
+                                            children: [{
+                                                problem: '\\str{Place the dividend and divisor in the proper places for the problem "9308 divided by 5"}',
+                                                answer: '\\css{\\divwholes{\\select{5}{[5,9308]}}{\\select{9308}{[5,9308]}}}{divwhole}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
 										}]
 									},
 									{
@@ -1547,12 +1557,29 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
                                                 problem: '\\html{Find the quotient of 6744 and 7.<br><br>Solve the problem.}',
-												answer: '\\css{\\grp{\\input{963}}{\\str{quotient}}{\\input{3}}{\\str{remainder}}}{divwhole}',
+												answer: '\\css{\\grp{\\input{6744}}{\\str{quotient}}{\\input{7}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
 													"help": false
 												}
 											}]
+										}, {
+                                            title: 'Workbook',
+                                            children: [{
+                                                problem: '\\str{Place the dividend and divisor in the proper places for the problem "6744 divided by 7"}',
+                                                answer: '\\css{\\divwholes{\\input{7}}{\\input{6744}}}{divwhole}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }, {
+                                                problem: '\\rowgrp{\\row{\\str{Select the first part of the dividend that is equal to or larger than the divisor.}}}{\\row{\\str{Click on the right-most digit of the number you would like to divide into.}}}',
+                                                answer: '\\css{\\divwholes{\\str{7}}{\\butgrp{\\row{\\but{6}{F}}{\\but{7}{T}}{\\but{4}{F}}{\\but{4}{F}}}}}{divwhole}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
 										}]
 									},
                                     {
