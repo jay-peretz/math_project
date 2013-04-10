@@ -6,7 +6,7 @@ angular.module('mathSkills')
         parserProvider.register('mixed', {
             argTemplates: [{
                 name: 'whole',
-                template: '<ms-label expected={{whole}} label=whole></ms-label>'
+                template: '<ms-event-label expected={{whole}} label=whole></ms-event-label>'
             }, {
                 name: 'fraction',
                 template: '<ms-fraction expected={{fraction}} label=fraction></ms-fraction>'
