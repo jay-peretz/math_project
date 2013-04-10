@@ -1,0 +1,29 @@
+<style type="text/css">
+	.rotateCounterClock90 {
+		-moz-transform: rotate(-90deg); 
+		-webkit-transform: rotate(-90deg); 
+		-o-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
+	.placeholderDimensions {
+		width: 350px;
+		height: 300px;
+	}
+	.align_center {
+		text-align:center;
+	}
+</style>
+
+<table class=tableDimensions>
+	<th colspan=2 class="align_center">
+	    {{graphTitleIn}}
+    </th>
+	<tr>
+    	<td>
+	        <div class="rotateCounterClock90 fontWeightBold">{{graphverticalIn}}</div>
+        </td>
+		<td>
+			<div id="placeholder" class=placeholderDimensions></div>
+		</td>
+	</tr>
+</table>

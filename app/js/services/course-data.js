@@ -1309,8 +1309,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{295082}{2}}',
-                                                answer: '\\select{"Hundreds"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{What is the label for the vertical axis?}}}{\\row{\xA0}}{\\row{\\str{\xA0}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Employee Classification}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0  Hourly Wages for Employees}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 Hourly Wage}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 Hourly Wages at Budget Warehouse}}}}}',
+                                                answer: '\\graph{Hourly Wages at Budget Warehouse}{[ ["A", 6], ["B", 7], ["C", 12], ["D", 15], ["E", 22], ["F", 27] ]}{30}{Hourly Wage}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
