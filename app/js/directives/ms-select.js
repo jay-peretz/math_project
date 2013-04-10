@@ -8,7 +8,7 @@ angular.module('mathSkills')
             },{
                 name: 'optionsarray'
             }],
-            directiveTemplate: '<ms-select expected={{expected}}></ms-select>'
+            directiveTemplate: '<ms-select expected={{expected}} label={{label}}></ms-select>'
         });
     }])
   .directive('msSelect', [
@@ -47,8 +47,8 @@ angular.module('mathSkills')
 
 				$scope.$on('checkAnswer', function () {
 					var data = {
-						expected: '\\select{'+$scope.answercorrect+'}{'+$scope.optionsarray+'}',
-						answer: '\\select{'+$scope.answer+'}{'+$scope.optionsarray+'}',
+						expected: '\\select{'+$scope.answercorrect+'}{['+$scope.optionsarray.join(',')+']}',
+						answer: '\\select{'+$scope.answer+'}{['+$scope.optionsarray.join(',')+']}',
                         label: $scope.label
 					};
 					if ($scope.answercorrect === $scope.answer) {
