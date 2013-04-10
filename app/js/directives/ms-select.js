@@ -83,15 +83,15 @@ angular.module('mathSkills')
                     // If this event has not been marked as ignored.
                     if (e.defaultPrevented === false) {
                         // Check if we can set our answer to expected.
-                        if ($scope.answer === '') {
-                            // Strip out the tag part of $scope.expected and extract the value.
-                           $scope.answer = $scope.optionsarray[$scope.answercorrect];
-                            $scope.$emit('helped');
-                        } else {
-                            // If we have an answer already, fire a notHelped event.
+                        if ($scope.answer !== $scope.answercorrect){
+                            $scope.answer = $scope.answercorrect; 
                             $scope.$emit('notHelped', {
                                 controllerId: $scope.controllerId
-                            });
+                            });   
+                        } else {
+                            $scope.$emit('notHelped', {
+                                controllerId: $scope.controllerId
+                            }); 
                         }
                     }
                 });
