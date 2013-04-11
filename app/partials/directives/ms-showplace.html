@@ -1,0 +1,52 @@
+<style type="text/css">
+  .collapseTable {
+	border-collapse:collapse;
+  }
+  .td_padding_small {
+		padding-left:2px;
+		padding-right:4px;
+  }
+  .margin-left-30 {
+	  margin-left: 30px;
+  }
+  .label_like {
+	color: #069;
+	font-size: 15px;
+	font-weight: normal;
+  }
+</style>
+	<span>
+    <table class=collapseTable>
+     <tr>
+      <td>
+    	<table>
+			<tr>
+				<td class='td_padding_small' ng-repeat='columnEntry in firstArray' ng-class="getClassBorder($index)">
+                	{{columnEntry}}
+				</td>
+                <td>
+                	<span ng-show="hideHelpInstructs2">%</span>
+                </td>
+			</tr>
+			<tr>
+				<td class='td_padding_small' ng-repeat='columnEntry in secondArray'>
+                	{{columnEntry}}
+				</td>
+                <td>
+                </td>
+			</tr>
+            <tr ng-repeat='row in thirdArray'>
+				<td class='td_padding_small' ng-repeat='col in row'>
+                	{{col}}<span ng-show="arrowheads" ng-class="getArrowhead($index)">&nbsp;</span>
+				</td>
+                <td>
+                </td>
+			</tr>
+		</table>
+        </td>
+        <td>
+        	<span ng-show="hideHelpInstructs2" ng-bind-html-unsafe=helpHtml></span>
+        </td>
+        </tr>
+        </table>
+	</span>

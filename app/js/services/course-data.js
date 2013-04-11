@@ -24,7 +24,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\select{"Thousands"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\rowgrp{\\row{\\css{\\showplace{"Thousands"}{44816}}{margin-left-30}}}{\\row{\\str{\xA0}}}{\\row{\\css{\\str{answer:  Thousands}}{label_like margin-left-30}}}}'
                                                 }
                                             }]
                                         }]
