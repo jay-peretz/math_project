@@ -1,0 +1,137 @@
+<style>
+    ms-long-division ms-input {
+        display: inline-block;
+    }
+    ms-long-division ms-input.digit {
+        margin: 2px 2px 2px -2px;
+        padding: 2px 8px 2px 2px;
+    }
+    ms-long-division .control-group, ms-long-division label {
+        margin-bottom: 0;
+    }
+    ms-long-division .digit {
+        display: inline-block;
+        background: #eee;
+        margin: 2px;
+        padding: 5px;
+        width: 10px;
+        text-align: center;
+    }
+    ms-long-division .digit.placeholder, ms-long-division .digit.minus {
+        width: 10px;
+        background: transparent;
+    }
+    ms-long-division .digit.arrow {
+        background: transparent;
+    }
+    ms-long-division .digit.inactive {
+        opacity: 0.5;
+    }
+    ms-long-division input {
+        padding: 2px 0 !important;
+        border: 1px inset #CCC;
+        text-align: center;
+    }
+    ms-long-division .digit input {
+        width: 14px;
+    }
+    ms-long-division input.invalid {
+        -moz-animation: invalid 1s;
+        -webkit-animation: invalid 1s;
+        -o-animation: invalid 1s;
+        -ms-animation: invalid 1s;
+        animation: invalid 1s;
+    }
+    ms-long-division td.dividend {
+        border-left: 2px solid black;
+        border-top: 2px solid black;
+    }
+    ms-long-division tbody > tr td:nth-of-type(2) {
+        padding: 2px 5px;
+    }
+    ms-long-division .completedStep td:nth-of-type(2), ms-long-division td.quotient {
+        border-left: 2px solid transparent;
+    }
+    ms-long-division .completedStep.product .answerContainer {
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+    }
+    ms-long-division ms-input.wide1 input {
+        width: 20px;
+    }
+    ms-long-division ms-input.wide2 input {
+        width: 40px;
+    }
+    ms-long-division ms-input.wide3 input {
+        width: 60px;
+    }
+    ms-long-division ms-input.wide4 input {
+        width: 80px;
+    }
+    ms-long-division ms-input.wide5 input {
+        width: 100px;
+    }
+</style>
+<div ng-switch on=complete>
+    <span ng-switch-when=true>
+        <div class="alert alert-info">{{instructions}}</div>
+        <ms-expression expected={{finalAnswer}} label=finalAnswer></ms-expression>
+    </span>
+</div>
+<table>
+    <tr>
+        <td></td>
+        <td class=quotient>
+            <span ng-bind-html-unsafe="quotientDone | digits:quotientOffset"></span>
+            <span ng-switch on=showQuotient()>
+                <span ng-switch-when=true>
+                    <ms-input expected="{{currentStep.quotient | wrap:'input'}}" class=digit></ms-input>
+                </span>
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td class=divisor>{{divisor}}</td>
+        <td class=dividend><span ng-bind-html-unsafe="dividend | digits"></span></td>
+    </tr>
+    <tr
+        ng-repeat="step in completedSteps | hideLast:showCarry"
+        class="completedStep {{step.type}}"
+    >
+        <td><span ng-show=step.gutterMinus class="digit minus">-</span></td>
+        <td><span ng-bind-html-unsafe="step.value | digits:step.offset:true"></span></td>
+    </tr>
+    <tr ng-show=showCarry()>
+    	<td></td>
+        <td>
+        	<span ng-bind-html-unsafe="currentStep.leading | digits:currentStep.offset"></span>
+            <span ng-switch on=showCarry()>
+                <span ng-switch-when=true>
+                    <ms-input expected="{{currentStep.carry | wrap:'input'}}" class=digit></ms-input>
+                </span>
+            </span>
+        </td>
+    </tr>
+    <tr ng-show=showProduct()>
+        <td></td>
+        <td>
+        	<span ng-bind-html-unsafe="[] | digits:currentOffset"></span>
+            <span ng-switch on=showProduct()>
+                <span ng-switch-when=true>
+                    <ms-input expected="{{currentStep.product | wrap:'input'}}" class={{$parent.getInputClass()}}></ms-input>
+                </span>
+            </span>
+        </td>
+    </tr>
+    <tr ng-show=showDifference()>
+        <td></td>
+        <td>
+        	<span ng-bind-html-unsafe="[] | digits:currentOffset"></span>
+            <span ng-switch on=showDifference()>
+                <span ng-switch-when=true>
+                    <ms-input expected="{{currentStep.difference | wrap:'input'}}" class={{$parent.getInputClass()}}></ms-input>
+                </span>
+            </span>
+        </td>
+    </tr>
+</table>

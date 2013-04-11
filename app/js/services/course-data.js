@@ -1578,6 +1578,13 @@ angular.module('mathSkills.services')
                                                     "checkAnswer": true,
                                                     "help": true
                                                 }
+                                            }, {
+                                                problem: '\\str{Divide 6744 by 7}',
+                                                answer: '\\longdiv{6744}{7}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
                                             }]
 										}]
 									},
@@ -2674,6 +2681,31 @@ angular.module('mathSkills.services')
                         title: '6 Measurements',
                         path: 'measurements',
                         children: []
+                    }, {
+                        title: '7 Test',
+                        path: 'test',
+                        children: [
+                            {
+                                title: '7.1 Testing Long Division',
+                                path: '7.1-testing-long-division',
+                                children: [
+                                    {
+                                        title: 'Long Division',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Divide 930 by 21.}',
+                                                answer: '\\longdiv{930}{21}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             };
