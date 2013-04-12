@@ -38,7 +38,7 @@ angular.module('mathSkills')
 					}
 				});
 				$scope.$watch('answercorrect', function () {
-					if (typeof $scope.answercorrect === "string"&& $scope.answercorrect !== "") {
+					if (typeof $scope.answercorrect === "string" && $scope.answercorrect !== "") {
 						$scope.answercorrect = JSON.parse($scope.answercorrect);
 					}
 				});
@@ -83,15 +83,15 @@ angular.module('mathSkills')
                     // If this event has not been marked as ignored.
                     if (e.defaultPrevented === false) {
                         // Check if we can set our answer to expected.
-                        if ($scope.answer !== $scope.answercorrect){
+                        if ($scope.answer !== $scope.answercorrect) {
                             $scope.answer = $scope.answercorrect; 
-                            $scope.$emit('notHelped', {
+                            $scope.$emit('helped', {
                                 controllerId: $scope.controllerId
-                            });   
+                            });
                         } else {
                             $scope.$emit('notHelped', {
                                 controllerId: $scope.controllerId
-                            }); 
+                            });
                         }
                     }
                 });
