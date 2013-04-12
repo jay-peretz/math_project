@@ -62,79 +62,117 @@ angular.module('mathSkills')
 					}
 				});
 				
-				$scope.$watch('numberforplace', function () {
+				$scope.$watch('numberforplace', function () {														 														  
 					if (typeof $scope.numberforplace === "string") {
 						$scope.numberforplaceIn = JSON.parse($scope.numberforplace);
-					}
 					
-					$scope.problemObjLen = $scope.numberforplaceIn.toString().length;
-					$scope.randomPlace = $scope.problemObjLen - $scope.placeNameArray.indexOf($scope.answercorrectIn);
-					console.log("$scope.randomPlace is: "+$scope.randomPlace);
-					$scope.numbStringCommas = getNumberStringCommas($scope.numberforplaceIn.toString());
-					
-					for (var ii = 0, len = $scope.numbStringCommas.length; ii<len; ii++) {	
-								$scope.numbArray[ii] = $scope.numbStringCommas.substring(ii,ii+1);				
-					}
-
-					//build an array the same length as $scope.numbArray with blank spaces and a carat for the indicated digit
-					for (var ii = 0, jj = 1, len1 = $scope.numbStringCommas.length; ii < len1; ii++){
-						if ($scope.numbArray[ii] != ',') {
-							if (jj == $scope.randomPlace) {
-								$scope.randomPlaceArray[ii] = "^";
+						$scope.problemObjLen = $scope.numberforplaceIn.toString().length;
+						$scope.randomPlace = $scope.problemObjLen - $scope.placeNameArray.indexOf($scope.answercorrectIn);
+						$scope.numbStringCommas = getNumberStringCommas($scope.numberforplaceIn.toString());
+				
+						
+						for (var ii = 0, len = $scope.numbStringCommas.length; ii<len; ii++) {	
+									$scope.numbArray[ii] = $scope.numbStringCommas.substring(ii,ii+1);				
+						}
+	
+						//build an array the same length as $scope.numbArray with blank spaces and a carat for the indicated digit
+						for (var ii = 0, jj = 1, len1 = $scope.numbStringCommas.length; ii < len1; ii++){
+							if ($scope.numbArray[ii] != ',') {
+								if (jj == $scope.randomPlace) {
+									$scope.randomPlaceArray[ii] = "^";
+								} else {
+									$scope.randomPlaceArray[ii] = " ";
+								}
+								jj++;
 							} else {
 								$scope.randomPlaceArray[ii] = " ";
 							}
-							jj++;
-						} else {
-							$scope.randomPlaceArray[ii] = " ";
-						}
-					}
-					
-					// set up help display
-					// set up and populate a double array to provide a table column and a table row for each digit
-					$scope.chartPlaceArray = new Array($scope.numbStringCommas.length+1);
-					for (var ii = 0; ii<$scope.numbStringCommas.length+1; ii++){			
-						$scope.chartPlaceArray[ii] = new Array($scope.numbStringCommas.length+1);
-						for (var jj = 0; jj<$scope.numbStringCommas.length+1; jj++){
-							$scope.chartPlaceArray[ii][jj] = "";
-						}
-					}
-			
-					$scope.verticalTD = "| ";
-					$scope.turnTD = "|_";
-					$scope.horizontalTD = "__";
-					
-					// fill in the double array with symbols for lines and ending each row with $scope.placeNameArray value
-					for (var ii = 0, len1 = $scope.numbStringCommas.length, jj = len1-1, gg=0; ii < len1; ii++, jj--){
-			
-						if ($scope.numbArray[len1-ii-1]!=',') {
-							for (var kk = 0; kk<len1; kk++) {
-								if ($scope.numbArray[kk] == ',') {
-									$scope.chartPlaceArray[ii][kk] = " ";
-								}
-								if (($scope.numbArray[kk] == ',')&&((ii%3)==0)) {
-									$scope.chartPlaceArray[ii][kk] = '\xA0';
-								}
-								if ((kk<len1)&&($scope.numbArray[kk] != ',')) {
-									if (kk<jj) {
-										$scope.chartPlaceArray[ii][kk] = $scope.verticalTD;
-									} else if (kk==jj){
-										$scope.chartPlaceArray[ii][kk] = $scope.turnTD;					
-									} else if (kk>jj){
-										$scope.chartPlaceArray[ii][kk] = $scope.horizontalTD;			
-									}
-								} else if ((kk<len1)&&($scope.numbArray[kk] == ',')&&(kk>jj)) {
-									$scope.chartPlaceArray[ii][kk] = $scope.horizontalTD;
-								}
-								if (kk == len1-1) {
-									$scope.chartPlaceArray[ii][len1] = $scope.placeNameArray[gg];
-									gg++;
-								}
-							}
-							
 						}
 						
+						// set up help display
+						// set up and populate a double array to provide a table column and a table row for each digit
+						$scope.chartPlaceArray = new Array($scope.numbStringCommas.length+1);
+						for (var ii = 0; ii<$scope.numbStringCommas.length+1; ii++){			
+							$scope.chartPlaceArray[ii] = new Array($scope.numbStringCommas.length+1);
+							for (var jj = 0; jj<$scope.numbStringCommas.length+1; jj++){
+								$scope.chartPlaceArray[ii][jj] = "";
+							}
+						}
+				
+						$scope.verticalTD = "| ";
+						$scope.turnTD = "|_";
+						$scope.horizontalTD = "__";
+						
+						// fill in the double array with symbols for lines and ending each row with $scope.placeNameArray value
+						for (var ii = 0, len1 = $scope.numbStringCommas.length, jj = len1-1, gg=0; ii < len1; ii++, jj--){
+				
+							if ($scope.numbArray[len1-ii-1]!=',') {
+								for (var kk = 0; kk<len1; kk++) {
+									if ($scope.numbArray[kk] == ',') {
+										$scope.chartPlaceArray[ii][kk] = " ";
+									}
+									if (($scope.numbArray[kk] == ',')&&((ii%3)==0)) {
+										$scope.chartPlaceArray[ii][kk] = '\xA0';
+									}
+									if ((kk<len1)&&($scope.numbArray[kk] != ',')) {
+										if (kk<jj) {
+											$scope.chartPlaceArray[ii][kk] = $scope.verticalTD;
+										} else if (kk==jj){
+											$scope.chartPlaceArray[ii][kk] = $scope.turnTD;					
+										} else if (kk>jj){
+											$scope.chartPlaceArray[ii][kk] = $scope.horizontalTD;			
+										}
+									} else if ((kk<len1)&&($scope.numbArray[kk] == ',')&&(kk>jj)) {
+										$scope.chartPlaceArray[ii][kk] = $scope.horizontalTD;
+									}
+									if (kk == len1-1) {
+										$scope.chartPlaceArray[ii][len1] = $scope.placeNameArray[gg];
+										gg++;
+									}
+								}
+								
+							}
+						}
 					}
+					
+					/*for (var ii = 0, len = $scope.chartPlaceArray.length; ii < len; ii += 1) {
+							console.log("$scope.chartPlaceArray["+ii+"] is: "+$scope.chartPlaceArray[ii]);
+					}
+					
+					$scope.getClass2 = function(index) {
+						$scope.displayRow = index;	
+					}
+					
+					$scope.getClass3 = function(index) {
+						var displayRow = $scope.displayRow,
+							displayColumn = index,
+							returnClass = "";
+					
+						//console.log("($scope.chartPlaceArray[row][displayColumn] ==  $scope.verticalTD) is: "+($scope.chartPlaceArray[row][displayColumn] == $scope.verticalTD)+" typeof $scope.chartPlaceArray[row][displayColumn] is: "+typeof $scope.chartPlaceArray[row][displayColumn]+" typeof $scope.verticalTD is: "+typeof $scope.verticalTD);
+						switch (true)
+							{
+							case ($scope.chartPlaceArray[displayRow][displayColumn] == $scope.verticalTD):
+								returnClass = "textRed";
+								break;	
+							case ($scope.chartPlaceArray[displayRow][displayColumn] == $scope.turnTD):
+									returnClass = "border-left border-bottom";
+									break;	
+							case ($scope.chartPlaceArray[displayRow][displayColumn] == $scope.horizontalTD):
+									returnClass = "textGreen";
+									break;
+							//default: return "textRed ";
+							}
+						console.log("$scope.chartPlaceArray[displayRow][displayColumn] is: "+$scope.chartPlaceArray[displayRow][displayColumn]+" returnClass is: "+returnClass);
+						return returnClass;
+					}
+					
+					$scope.getClass4 = function getClass4(index) {
+						  		console.log
+							  if ($scope.displayRow==6 && index == 3) {
+							  	return "textRed ";
+							  }
+						  
+					}*/
 					
 					// even the number of elements in the arrays with the number in $scope.chartPlaceArray[ii]
 					$scope.numbArray.push(" ");

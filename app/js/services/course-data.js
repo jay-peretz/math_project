@@ -24,7 +24,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\select{"Thousands"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\rowgrp{\\row{\\css{\\showplace{"Thousands"}{44816}}{margin-left-30}}}{\\row{\\str{\xA0}}}{\\row{\\css{\\str{answer:  Thousands}}{label_like margin-left-30}}}}'
+                                                    "help": '\\rowgrp{\\row{\\showplace{"Thousands"}{44816}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Thousands}}{label_like margin-left-small}}}}'
                                                 }
                                             }]
                                         }]
@@ -38,7 +38,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\select{"Hundreds"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                     "help": '\\rowgrp{\\row{\\showplace{"Hundreds"}{38059}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundreds}}{label_like margin-left-small}}}}'
                                                 }
                                             }]
                                         }]
@@ -52,7 +52,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\select{"Millions"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                     "help": '\\rowgrp{\\row{\\showplace{"Millions"}{3888708}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Millions}}{label_like margin-left-small}}}}'
                                                 }
                                             }]
                                         }]
@@ -66,7 +66,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\select{"Tens"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                     "help": '\\rowgrp{\\row{\\showplace{"Tens"}{7016486}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Tens}}{label_like margin-left-small}}}}'
                                                 }
                                             }]
                                         }]
@@ -80,7 +80,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\select{"Hundred Thousands"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                     "help": '\\rowgrp{\\row{\\showplace{"Hundred Thousands"}{4927857}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundred Thousands}}{label_like margin-left-small}}}}'
                                                 }
                                             }]
                                         }]
@@ -94,7 +94,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\select{"Hundred Thousands"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                     "help": '\\rowgrp{\\row{\\showplace{"Hundred Thousands"}{9049152}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundred Thousands}}{label_like margin-left-small}}}}'
                                                 }
                                             }]
                                         }]
@@ -108,7 +108,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\select{"Thousands"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                     "help": '\\rowgrp{\\row{\\showplace{"Thousands"}{4555517}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Thousands}}{label_like margin-left-small}}}}'
                                                 }
                                             }]
                                         }]
@@ -122,7 +122,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\select{"Ones"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                     "help": '\\rowgrp{\\row{\\showplace{"Ones"}{5174344}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Ones}}{label_like margin-left-small}}}}'
                                                 }
                                             }]
                                         }]
@@ -136,7 +136,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\select{"Millions"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                     "help": '\\rowgrp{\\row{\\showplace{"Millions"}{1924837}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Millions}}{label_like margin-left-small}}}}'
                                                 }
                                             }]
                                         }]
@@ -150,7 +150,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\select{"Hundreds"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                      "help": '\\rowgrp{\\row{\\showplace{"Hundreds"}{295082}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundreds}}{label_like margin-left-small}}}}'
                                                 }
                                             }]
                                         }]
@@ -603,7 +603,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{106}',
 												controls: {
 													"checkAnswer": true,
-													"help": true
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[47, 59]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  106}}{label_like}}}'
 												}
 											}]
 										}]
@@ -617,7 +617,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{1116}',
 												controls: {
 													"checkAnswer": true,
-													"help": true
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[301,815]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  1116}}{label_like}}}'
 												}
 											}]
 										}]
@@ -631,7 +631,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{1795}',
 												controls: {
 													"checkAnswer": true,
-													"help": true
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[968,827]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  1795}}{label_like}}}'
 												}
 											}]
 										}]
@@ -645,7 +645,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{115}',
 												controls: {
 													"checkAnswer": true,
-													"help": true
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[68,47]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  115}}{label_like}}}'
 												}
 											}]
 										}]
@@ -659,7 +659,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{10937}',
 												controls: {
 													"checkAnswer": true,
-													"help": true
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[9026,1911]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  10937}}{label_like}}}'
 												}
 											}]
 										}]
@@ -673,7 +673,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{5732}',
 												controls: {
 													"checkAnswer": true,
-													"help": true
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[3148,2584]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  5732}}{label_like}}}'
 												}
 											}]
 										}]
@@ -687,7 +687,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{1222}',
 												controls: {
 													"checkAnswer": true,
-													"help": true
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[618,489,115]}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  1222}}{label_like}}}'
 												}
 											}]
 										}]
@@ -701,7 +701,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{8878}',
 												controls: {
 													"checkAnswer": true,
-													"help": true
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[1700,2233,4945]}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  8878}}{label_like}}}'
 												}
 											}]
 										}]
@@ -715,7 +715,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{14054}',
 												controls: {
 													"checkAnswer": true,
-													"help": true
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[8850,4626,177,401]}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  14054}}{label_like}}}'
 												}
 											}]
 										}]
@@ -729,7 +729,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{9906}',
 												controls: {
 													"checkAnswer": true,
-													"help": true
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[832,6223,2705,146]}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  9906}}{label_like}}}'
                                                 }
                                             }]
                                         }]

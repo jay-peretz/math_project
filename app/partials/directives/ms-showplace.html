@@ -14,6 +14,25 @@
 	font-size: 15px;
 	font-weight: normal;
   }
+  .vertical_image {
+	  background-image:
+	  url('../../img/verical_16x16.jpg')
+  }
+  .border-left {
+	  border-left: 1px solid red;
+	  background:#ff0000;
+  }
+  .border-bottom {
+	  border-bottom: 1px solid red;
+  }
+  .label_like {
+	color: #069;
+	font-size: 15px;
+	font-weight: normal;
+  }
+  .margin-left-small {
+	margin-left:50px;
+  }
 </style>
 	<span>
     <table class=collapseTable>
@@ -35,8 +54,8 @@
                 <td>
                 </td>
 			</tr>
-            <tr ng-repeat='row in thirdArray'>
-				<td class='td_padding_small' ng-repeat='col in row'>
+            <tr ng-repeat='row in thirdArray' ng-class='getClass2($index)'>
+				<td class='td_padding_small' ng-repeat='col in row' ng-class='getClass3($index)'>
                 	{{col}}<span ng-show="arrowheads" ng-class="getArrowhead($index)">&nbsp;</span>
 				</td>
                 <td>
