@@ -72,9 +72,9 @@
         width: 100px;
     }
 </style>
+<div class="alert alert-info">{{instructions}}</div>
 <div ng-switch on=complete>
     <span ng-switch-when=true>
-        <div class="alert alert-info">{{instructions}}</div>
         <ms-expression expected={{finalAnswer}} label=finalAnswer></ms-expression>
     </span>
 </div>
