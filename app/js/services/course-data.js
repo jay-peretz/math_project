@@ -895,7 +895,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{470}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\rowgrp{\\row{\\str{471}}}{\\row{\\str{Since the number to the right of the 7 in the Tens place is 1 (4 or lower), the 7 (in the Tens place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{470}{1}}}}'
                                                 }
                                             }]
                                         }]
@@ -909,7 +909,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{1000}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\rowgrp{\\row{\\str{1346}}}{\\row{\\str{Since the number to the right of the 1 in the Thousands place is 3 (4 or lower), the 1 (in the Thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{1000}{3}}}}'
                                                 }
                                             }]
                                         }]
@@ -923,7 +923,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{680}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\rowgrp{\\row{\\str{684}}}{\\row{\\str{Since the number to the right of the 8 in the tens place is 4 (4 or lower), the 8 (in the tens place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{680}{1}}}}'
                                                 }
                                             }]
                                         }]
@@ -937,7 +937,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{960}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\rowgrp{\\row{\\str{959}}}{\\row{\\str{Since the number to the right of the 5 in the tens place is 9 (5 or higher), the 5 (in the tens place) must go up one. It becomes 6. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{960}{1}}}}'
                                                 }
                                             }]
                                         }]
@@ -951,7 +951,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{500}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\rowgrp{\\row{\\str{461}}}{\\row{\\str{Since the number to the right of the 4 in the hundreds place is 6 (5 or higher), the 4 (in the hundreds place) must go up one. It becomes 5. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{500}{2}}}}'
                                                 }
                                             }]
                                         }]
@@ -965,7 +965,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{3990000}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\rowgrp{\\row{\\str{3990495}}}{\\row{\\str{Since the number to the right of the 9 in the ten thousands place is 0 (4 or lower), the 9 (in the ten thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{3990000}{4}}}}'
                                                 }
                                             }]
                                         }]
@@ -979,7 +979,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{27520000}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\rowgrp{\\row{\\str{27523018}}}{\\row{\\str{Since the number to the right of the 2 in the ten thousands place is 3 (4 or lower), the 2 (in the ten thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{27520000}{4}}}}'
                                                 }
                                             }]
                                         }]
@@ -993,7 +993,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{600000}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                     "help": '\\rowgrp{\\row{\\str{563548}}}{\\row{\\str{Since the number to the right of the 5 in the hundred thousands place is 6 (5 or higher), the 5 (in the hundred thousands place) must go up one. It becomes 6. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{600000}{5}}}}'
                                                 }
                                             }]
                                         }]
@@ -1007,7 +1007,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{230180}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                     "help": '\\rowgrp{\\row{\\str{230179}}}{\\row{\\str{Since the number to the right of the 7 in the tens place is 9 (5 or higher), the 7 (in the tens place) must go up one. It becomes 8. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{230180}{1}}}}'
                                                 }
                                             }]
                                         }]
@@ -1021,7 +1021,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{41700}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\rowgrp{\\row{\\str{41742}}}{\\row{\\str{Since the number to the right of the 7 in the hundreds place is 4 (4 or lower), the 7 (in the hundreds place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{41700}{2}}}}'
 												}
                                             }]
                                         }]
