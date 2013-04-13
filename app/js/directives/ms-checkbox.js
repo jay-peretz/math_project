@@ -47,6 +47,23 @@ angular.module('mathSkills')
 
                         $scope.$emit('answer', data);
                     });
+                    
+                    $scope.$on('checkHelp', function (e) {
+                        // If this event has not been marked as ignored.
+                        if (e.defaultPrevented === false) {
+                            // handle check help event for parent scope.
+                            // checks the box if TRUE , fires a notHelped event so parent will check other siblings.
+                            
+                            if ($scope.check === "T") {
+                                $scope.checkValue = true;
+                            }    
+                            
+                            $scope.$emit('notHelped', {
+                                controllerId: $scope.controllerId
+                            });
+                        }
+                    });
+                    
                 },
                 restrict: 'E',
                 scope: {
