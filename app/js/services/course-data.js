@@ -1318,6 +1318,76 @@ angular.module('mathSkills.services')
                                             }]
                                         }]
                                     },
+									{
+                                        title: 'Charts and Bar Graphs',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Approximately how much more money per hour does a Class E worker make than Class A worker?}}}{\\row{\xA0}}{\\row{\\str{\xA0}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\css{\\str{$20.00 more}}{button-label-margin}}}{\\row{\\but{B}{T}}{\\css{\\str{$16.00 more}}{button-label-margin}}}{\\row{\\but{C}{F}}{\\css{\\str{$10.00 more}}{button-label-margin}}}{\\row{\\but{D}{F}}{\\css{\\str{$5.00 more}}{button-label-margin}}}}}',
+                                                answer: '\\graph{Hourly Wages at Budget Warehouse}{[ ["A", 6], ["B", 7], ["C", 12], ["D", 15], ["E", 22], ["Manager", 27] ]}{30}{Hourly Wage}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+									{
+                                        title: 'Charts and Bar Graphs',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{If there are 100 Class A workers, 50 class B workers, 30 class C workers, 10 class D workers, 5 class E workers, and 2 managers, how many employees earn $15 an hour or more?}}}{\\row{\xA0}}{\\row{\\str{\xA0}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\css{\\str{7 employees}}{button-label-margin}}}{\\row{\\but{B}{F}}{\\css{\\str{15 employees}}{button-label-margin}}}{\\row{\\but{C}{T}}{\\css{\\str{17 employees}}{button-label-margin}}}{\\row{\\but{D}{F}}{\\css{\\str{180 employees}}{button-label-margin}}}}}',
+                                                answer: '\\graph{Hourly Wages at Budget Warehouse}{[ ["A", 6], ["B", 7], ["C", 12], ["D", 15], ["E", 22], ["Manager", 27] ]}{30}{Hourly Wage}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+									{
+                                        title: 'Charts and Bar Graphs',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{What is the label for the vertical axis?}}}{\\row{\xA0}}{\\row{\\str{\xA0}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\css{\\str{Months}}{button-label-margin}}}{\\row{\\but{B}{F}}{\\css{\\str{Deer Survey in Sonoma County}}{button-label-margin}}}{\\row{\\but{C}{F}}{\\css{\\str{Deer Population}}{button-label-margin}}}{\\row{\\but{D}{T}}{\\css{\\str{Number of Deer Counted}}{button-label-margin}}}}}',
+                                                answer: '\\graph{Deer Survey in Sonoma County}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{500}{Number of Deer Counted}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+									{
+                                        title: 'Charts and Bar Graphs',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Approximately how many deer were counted in July?}}}{\\row{\xA0}}{\\row{\\str{\xA0}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{T}}{\\css{\\str{445 Deer}}{button-label-margin}}}{\\row{\\but{B}{F}}{\\css{\\str{380 Deer}}{button-label-margin}}}{\\row{\\but{C}{F}}{\\css{\\str{410 Deer}}{button-label-margin}}}{\\row{\\but{D}{F}}{\\css{\\str{300 Deer}}{button-label-margin}}}}}',
+                                                answer: '\\graph{Deer Survey in Sonoma County}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{500}{Number of Deer Counted}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+									{
+                                        title: 'Charts and Bar Graphs',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Approximately how many deer were counted in the first two months of the survey (January and April)?}}}{\\row{\xA0}}{\\row{\\str{\xA0}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\css{\\str{450 Deer}}{button-label-margin}}}{\\row{\\but{B}{F}}{\\css{\\str{680 Deer}}{button-label-margin}}}{\\row{\\but{C}{T}}{\\css{\\str{590 Deer}}{button-label-margin}}}{\\row{\\but{D}{F}}{\\css{\\str{500 Deer}}{button-label-margin}}}}}',
+                                                answer: '\\graph{Deer Survey in Sonoma County}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{500}{Number of Deer Counted}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
                                 ]
                             },
                             {
