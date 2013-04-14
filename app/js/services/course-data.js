@@ -1309,8 +1309,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{What is the label for the vertical axis?}}}{\\row{\xA0}}{\\row{\\str{\xA0}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Employee Classification}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0  Hourly Wages for Employees}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 Hourly Wage}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 Hourly Wages at Budget Warehouse}}}}}',
-                                                answer: '\\graph{Hourly Wages at Budget Warehouse}{[ ["A", 6], ["B", 7], ["C", 12], ["D", 15], ["E", 22], ["F", 27] ]}{30}{Hourly Wage}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{What is the label for the vertical axis?}}}{\\row{\xA0}}{\\row{\\str{\xA0}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\css{\\str{Employee Classification}}{button-label-margin}}}{\\row{\\but{B}{F}}{\\css{\\str{Hourly Wages for Employees}}{button-label-margin}}}{\\row{\\but{C}{T}}{\\css{\\str{Hourly Wage}}{button-label-margin}}}{\\row{\\but{D}{F}}{\\css{\\str{Hourly Wages at Budget Warehouse}}{button-label-margin}}}}}',
+                                                answer: '\\graph{Hourly Wages at Budget Warehouse}{[ ["A", 6], ["B", 7], ["C", 12], ["D", 15], ["E", 22], ["Manager", 27] ]}{30}{Hourly Wage}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true

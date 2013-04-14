@@ -125,3 +125,10 @@ ms-panel > div {
         margin-top: inherit;
     }
 }
+
+/* required for control-data.js css tag */
+
+.button-label-margin {
+	width: 160px;
+	padding-left:16px;
+}
