@@ -19,13 +19,14 @@ angular.module('mathSkills')
                     $scope.answer = '';
                     $scope.controllerId = Math.random().toString();
 
-                    $scope.$on('checkAnswer', function () {
-                        var answer = '\\input{' + $scope.answer + '}',
-                            data = {
-                                expected: $scope.expected,
-                                answer: answer,
-                                label: $scope.label
-                            };
+                    $scope.$on('checkAnswer', function (e) {
+                        if (e.defaultPrevented !== true) {
+                            var answer = '\\input{' + $scope.answer + '}',
+                                data = {
+                                    expected: $scope.expected,
+                                    answer: answer,
+                                    label: $scope.label
+                                };
                             if ($scope.expected === answer) {
                                 data.result = 'correct';
                                 $scope.class = 'success';
@@ -35,6 +36,25 @@ angular.module('mathSkills')
                                 $scope.answer = '';
                             }
                             $scope.$emit('answer', data);
+                        }
+                    });
+
+                    $scope.$on('reportAnswer', function () {
+                        var answer = '\\input{' + $scope.answer + '}',
+                            data = {
+                                answer: answer,
+                                label: $scope.label
+                            };
+                        $scope.$emit('answer', data);
+                    });
+
+                    $scope.$on('answerFeedback', function (e, data) {
+                        if (data.result === 'correct') {
+                            $scope.class = 'success';
+                        } else {
+                            $scope.class = 'error';
+                            $scope.answer = '';
+                        }
                     });
 
                     $scope.$on('checkFocus', function (e) {

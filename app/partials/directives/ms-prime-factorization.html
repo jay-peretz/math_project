@@ -1,0 +1,34 @@
+<div>
+    <div class="alert alert-info">{{instructions}}</div>
+    <div ng-switch on=complete>
+        <span ng-switch-when=true>
+            <ms-expression expected={{finalAnswer}} label=finalAnswer></ms-expression>
+        </span>
+    </div>
+    <table>
+        <tr ng-repeat="row in completedRows">
+            <td class=divisor>{{row.divisor}}</td>
+            <td class=dividend>{{row.dividend}}</td>
+        </tr>
+        <tr ng-hide=complete>
+            <td class=divisor ng-switch on=factorStep>
+                <span ng-switch-when=true>
+                    <ms-input label=divisor></ms-input>
+                </span>
+                <span ng-switch-when=false>&nbsp;</span>
+            </td>
+            <td class=dividend ng-switch on=factorStep>
+                <span ng-switch-when=true>
+                    {{factoring}}
+                </span>
+                <span ng-switch-when=false>
+                    <ms-input expected="{{factoring | wrap:'input'}}" label=dividend></ms-input>
+                </span>
+            </td>
+        </tr>
+        <tr class=complete ng-show=complete>
+            <td>&nbsp;</td>
+            <td class=dividend>1</td>
+        </tr>
+    </table>
+</div>

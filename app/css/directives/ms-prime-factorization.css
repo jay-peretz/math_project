@@ -1,0 +1,22 @@
+ms-prime-factorization table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+ms-prime-factorization .dividend {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    padding: 10px;
+}
+ms-prime-factorization .divisor {
+    padding: 10px 20px 0 0;
+}
+ms-prime-factorization input {
+    width: 40px;
+}
+ms-prime-factorization ms-input label span {
+    display: none;
+}
+ms-prime-factorization .complete .dividend {
+    text-align: center;
+    border: none;
+}
