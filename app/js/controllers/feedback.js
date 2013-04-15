@@ -23,6 +23,7 @@ angular.module('mathSkills')
                 switch (result) {
                     case 'correct': return 'success';
                     case 'incorrect': return 'error';
+                    case 'helped': return 'warning';
                     default: return '';
                 }
             };

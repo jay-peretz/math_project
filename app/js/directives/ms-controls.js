@@ -48,6 +48,7 @@ angular.module('mathSkills')
                                 if ($scope.hasNextProblem === true) {
                                     $scope.showNextProblem = function () {
                                         $scope.$emit('panelDone');
+                                        $scope.$emit('triggerCheckAnswer');
                                     };
                                 }
                             }
