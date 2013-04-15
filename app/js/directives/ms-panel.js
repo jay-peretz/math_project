@@ -38,6 +38,8 @@ angular.module('mathSkills')
                                  data.result = "helped";
                                  data.answer = "\\str{helped}";
                                  data.expected = $scope.answer;
+                                 data.problem = $scope.problem;
+                                 
                             });
                             e.stopPropagation();
                             $scope.showHelpPanel = true;
