@@ -75,6 +75,11 @@ angular.module('mathSkills')
 						
 						if (data.length > 0)
 							$.plot($("#placeholder"), data, {
+								lines: {
+									lineWidth: 10,
+									//fill: true,
+      								//fillColor: { colors: [ { opacity: 0.5}, { opacity: 0.1 } ] }
+								},
 								xaxis: {
 									xaxis: { tickDecimals: 5 },
 									max: 50

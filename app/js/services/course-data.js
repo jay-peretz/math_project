@@ -1394,7 +1394,7 @@ angular.module('mathSkills.services')
                                             title: 'Main Answer',
                                             children: [{
                                                 problem: '\\butgrp{\\rowgrp{\\row{\\str{What is the increment for the horizontal axis?}}}{\\row{\xA0}}{\\row{\\str{\xA0}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\css{\\str{20 years}}{button-label-margin}}}{\\row{\\but{B}{F}}{\\css{\\str{10 years}}{button-label-margin}}}{\\row{\\but{C}{T}}{\\css{\\str{10 million}}{button-label-margin}}}{\\row{\\but{D}{F}}{\\css{\\str{5 million}}{button-label-margin}}}}}',
-                                                answer: '\\horgraph{Country A:  Food Production and Population}{[[[0,""],[0,""]],[[0, "1965"], [5, "1965"]],[[0, "1985"], [10, "1985"]], [[0, "2005"], [15, "2005"]], [[0, "2025 (Predicted)"],[35, "2025 (Predicted)"]],[[0,"\xA0"],[0,"\xA0"]]]}{Years}{Number (in millions)}',
+                                                answer: '\\horgraph{Country A:  Food Production and Population}{[[[0,""],[0,""]],[[0, "1965"], [4, "1965"]],[[0, "1965"], [5, "1965"]],[[0, "1985"], [10, "1985"]], [[0, "2005"], [15, "2005"]], [[0, "2025 (Predicted)"],[28, "2025 (Predicted)"]], [[0, "2025 (Predicted)"],[35, "2025 (Predicted)"]], [[0,"\xA0"],[0,"\xA0"]]]}{Years}{Number (in millions)}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
