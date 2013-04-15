@@ -12,18 +12,32 @@
 	.align_center {
 		text-align:center;
 	}
+	.font_weight_bold {
+		font-weight:bold;
+	}
+	.margin_left_very_small {
+		margin-left: 20px;
+	}
+	.margin_left_small {
+		margin-left: 130px;
+	}
 </style>
 
 <table class=tableDimensions>
-	<th colspan=2 class="align_center">
-	    {{graphTitleIn}}
+	<th colspan=2 class="align_center font_weight_bold">
+	    <span class="margin_left_small">{{graphTitleIn}}</span>
     </th>
 	<tr>
     	<td>
-	        <div class="rotateCounterClock90 fontWeightBold">{{graphverticalIn}}</div>
+	        <div class="rotateCounterClock90 font_weight_bold">{{graphverticalIn}}</div>
         </td>
 		<td>
 			<div id="placeholder" class=placeholderDimensions></div>
 		</td>
 	</tr>
+    <tr>
+    	<td colspan=2 class="align_center">
+        	<span class="margin_left_small font_weight_bold">{{graphBottomText}}</span>
+        </td>
+   	</tr>
 </table>
