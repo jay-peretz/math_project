@@ -11,7 +11,7 @@ angular.module('mathSkills')
                     function ($scope, $timeout) {
                         $scope.showHelpPanel = false;
 
-                        $scope.$on('answer', function (e, data) {
+                        var turnOffAnswer = $scope.$on('answer', function (e, data) {
                             // Add problem property to all answer event data objects.
                             data.problem = $scope.problem;
 
@@ -33,6 +33,14 @@ angular.module('mathSkills')
                         });
 
                         $scope.$on('showHelpPanel', function (e, data) {
+                            turnOffAnswer();
+                            $scope.$on('answer', function (e, data) {
+                                 data.result = "helped";
+                                 data.answer = "\\str{helped}";
+                                 data.expected = $scope.answer;
+                                 data.problem = $scope.problem;
+                                 
+                            });
                             e.stopPropagation();
                             $scope.showHelpPanel = true;
                             $scope.helpPanelClass = 'helpPanel';
