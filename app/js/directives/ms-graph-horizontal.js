@@ -6,7 +6,13 @@ angular.module('mathSkills')
             argTemplates: [{
                 name: 'horgraphtitle'
             },{
-                name: 'horgraphdata'
+                name: 'horgraphdata1'
+            },{
+                name: 'horgraphlabel1'
+            },{
+                name: 'horgraphdata2'
+            },{
+                name: 'horgraphlabel2'
             },{
                 name: 'horgraphvertical'
             },{
@@ -30,11 +36,17 @@ angular.module('mathSkills')
 				$scope.answercorrect = "";
 				$scope.horgraphtitle = [];
 				$scope.graphTitleIn = "";
-				$scope.horgraphdata = [];
+				$scope.horgraphdata1 = [];
+				$scope.horgraphlabel1 = [];
+				$scope.horgraphdata2 = [];
+				$scope.horgraphlabel2 = [];
 				$scope.graphvertical = [];
 				$scope.horgraphbottom = [];
 				
-				var	horgraphdataIn = [];
+				var	horgraphdata1In = [],
+					horgraphdata2In = [],
+					horgraphlabel1In = "",
+					horgraphlabel2In = "";
 				
 			 // Extract the value for $scope.graphlinesIn
 				$scope.$watch('expected', function () {
@@ -49,48 +61,75 @@ angular.module('mathSkills')
 					}
 				});
 				
-				$scope.$watch('horgraphdata', function () {
-					if (typeof $scope.horgraphdata === "string") {
-						horgraphdataIn = JSON.parse($scope.horgraphdata);
+				$scope.$watch('horgraphdata1', function () {
+					if (typeof $scope.horgraphdata1 === "string") {
+						horgraphdata1In = JSON.parse($scope.horgraphdata1);
 					}
 				});
-					
+				
+				$scope.$watch('horgraphlabel1', function () {
+					if (typeof $scope.horgraphlabel1 === "string") {
+						horgraphlabel1In = $scope.horgraphlabel1;
+					}
+				});
+				
+				$scope.$watch('horgraphdata2', function () {
+					if (typeof $scope.horgraphdata2 === "string") {
+						horgraphdata2In = JSON.parse($scope.horgraphdata2);
+					}
+				});
+				
+				$scope.$watch('horgraphlabel2', function () {
+					if (typeof $scope.horgraphlabel2 === "string") {
+						horgraphlabel2In = $scope.horgraphlabel2;
+					}
+				});
+				
+				// vertical label on the y-axis of the graph
 				$scope.$watch('horgraphvertical', function () {
 					if (typeof $scope.horgraphvertical === "string") {
 						$scope.graphverticalIn = $scope.horgraphvertical;
 					}
 				});
 				
+				// horizontal label on the x-axis of the graph, at the bottom
 				$scope.$watch('horgraphbottom', function () {
 					if (typeof $scope.horgraphbottom === "string") {
 						$scope.graphBottomText = $scope.horgraphbottom;
 					}
-									
-					function plotAccordingToChoices() {
-						var data = [];
+					
+					var data1 = [],
+						data2 = [];
 						
-						for (var ii = 0, len = horgraphdataIn.length; ii < len; ii += 1) {
-							data.push(horgraphdataIn[ii]);
-						}
+					for (var ii = 0, len = horgraphdata1In.length; ii < len; ii += 1) {
+						data1.push(horgraphdata1In[ii]);
+					}
+					
+					for (var ii = 0, len = horgraphdata2In.length; ii < len; ii += 1) {
+						data2.push(horgraphdata2In[ii]);
+					}
+					
+					
+					function plotByInputSet() {
 						
-						if (data.length > 0)
-							$.plot($("#placeholder"), data, {
+						$.plot($("#placeholder"), [ {label: horgraphlabel1In, data: data1}, {label: horgraphlabel2In, data: data2 }], {
+							legend: {position: "se"},
+							series: { 
 								lines: {
 									lineWidth: 10,
 									//fill: true,
-      								//fillColor: { colors: [ { opacity: 0.5}, { opacity: 0.1 } ] }
+									//fillColor: { colors: [ { opacity: 0.5}, { opacity: 0.1 } ] }
 								},
-								xaxis: {
-									xaxis: { tickDecimals: 5 },
-									max: 50
+								xaxis: {									
 								},
 								 yaxis: { 
-								 	mode: "categories"
-								 }
-							});
+									mode: "categories"
+								 },
+							 },
+						});
 					}
 				
-					plotAccordingToChoices();
+					plotByInputSet();
 
 							
 							

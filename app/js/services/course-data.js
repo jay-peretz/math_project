@@ -1393,8 +1393,36 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{What is the increment for the horizontal axis?}}}{\\row{\xA0}}{\\row{\\str{\xA0}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\css{\\str{20 years}}{button-label-margin}}}{\\row{\\but{B}{F}}{\\css{\\str{10 years}}{button-label-margin}}}{\\row{\\but{C}{T}}{\\css{\\str{10 million}}{button-label-margin}}}{\\row{\\but{D}{F}}{\\css{\\str{5 million}}{button-label-margin}}}}}',
-                                                answer: '\\horgraph{Country A:  Food Production and Population}{[[[0,""],[0,""]],[[0, "1965"], [4, "1965"]],[[0, "1965"], [5, "1965"]],[[0, "1985"], [10, "1985"]], [[0, "2005"], [15, "2005"]], [[0, "2025 (Predicted)"],[28, "2025 (Predicted)"]], [[0, "2025 (Predicted)"],[35, "2025 (Predicted)"]], [[0,"\xA0"],[0,"\xA0"]]]}{Years}{Number (in millions)}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Question 1: What is the increment for the horizontal axis?}}}{\\row{\xA0}}{\\row{\\str{\xA0}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\css{\\str{20 years}}{button-label-margin}}}{\\row{\\but{B}{F}}{\\css{\\str{10 years}}{button-label-margin}}}{\\row{\\but{C}{F}}{\\css{\\str{10 million}}{button-label-margin}}}{\\row{\\but{D}{T}}{\\css{\\str{5 million}}{button-label-margin}}}}}',
+                                                answer: '\\horgraph{Country A:  Food Production and Population}{[[0, "1965"], [2, "1965"], null, [0, "1985"], [3, "1985"], null, [0, "2005"], [11, "2005"], null, [0, "2025"],[22, "2025"]]}{Population of Country A}{[[0, "1962"], [3, "1962"], null, [0, "1982"], [5, "1982"], null, [0, "2002"], [9, "2002"], null, [0, "2022"],[18, "2022"]]}{Population Country A can Feed}{Years}{Number (in millions)}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+									{
+                                        title: 'Charts and Bar Graphs',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Question 2:  Approximately what number represents the population of Country A in 2005?}}}{\\row{\xA0}}{\\row{\\str{\xA0}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\css{\\str{22 million}}{button-label-margin}}}{\\row{\\but{B}{F}}{\\css{\\str{18 million}}{button-label-margin}}}{\\row{\\but{C}{T}}{\\css{\\str{11 million}}{button-label-margin}}}{\\row{\\but{D}{F}}{\\css{\\str{9 million}}{button-label-margin}}}}}',
+                                                answer: '\\horgraph{Country A:  Food Production and Population}{[[0, "1965"], [2, "1965"], null, [0, "1985"], [3, "1985"], null, [0, "2005"], [11, "2005"], null, [0, "2025"],[22, "2025"]]}{Population of Country A}{[[0, "1962"], [3, "1962"], null, [0, "1982"], [5, "1982"], null, [0, "2002"], [9, "2002"], null, [0, "2022"],[18, "2022"]]}{Population Country A can Feed}{Years}{Number (in millions)}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+									{
+                                        title: 'Charts and Bar Graphs',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Question 3: Approximately what number represents the increase in population from 1965 to 1985?}}}{\\row{\xA0}}{\\row{\\str{\xA0}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\css{\\str{2 million}}{button-label-margin}}}{\\row{\\but{B}{F}}{\\css{\\str{3 million}}{button-label-margin}}}{\\row{\\but{C}{F}}{\\css{\\str{4 million}}{button-label-margin}}}{\\row{\\but{D}{T}}{\\css{\\str{1 million}}{button-label-margin}}}}}',
+                                                answer: '\\horgraph{Country A:  Food Production and Population}{[[0, "1965"], [2, "1965"], null, [0, "1985"], [3, "1985"], null, [0, "2005"], [11, "2005"], null, [0, "2025"],[22, "2025"]]}{Population of Country A}{[[0, "1962"], [3, "1962"], null, [0, "1982"], [5, "1982"], null, [0, "2002"], [9, "2002"], null, [0, "2022"],[18, "2022"]]}{Population Country A can Feed}{Years}{Number (in millions)}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
