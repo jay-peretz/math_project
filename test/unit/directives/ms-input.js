@@ -1,4 +1,4 @@
-/*global angular, beforeEach, browserTrigger, describe, expect, inject, it, jasmine, xit */
+/*global angular, beforeEach, describe, expect, inject, it, jasmine */
 
 describe('<ms-input>', function () {
     var element = {},
@@ -75,17 +75,19 @@ describe('<ms-input>', function () {
             $rootScope.$on('notFocused', notFocusedHanlder);
         }));
 
-        it('should respond with a focused event if the input is empty', inject(function ($rootScope) {
+        it('should respond with a focused event if the input is empty', inject(function ($rootScope, $timeout) {
             $rootScope.$broadcast('checkFocus');
+            $timeout.flush();
             expect(focusedHandler).toHaveBeenCalled();
             expect(notFocusedHanlder).not.toHaveBeenCalled();
         }));
 
-        it('should focus on its input element if the input is empty', inject(function ($rootScope) {
+        it('should focus on its input element if the input is empty', inject(function ($rootScope, $timeout) {
             // The element has be added to the DOM in order for it to gain focus.
             jQuery('body').append(element);
             expect(document.activeElement.tagName).not.toBe('INPUT');
             $rootScope.$broadcast('checkFocus');
+            $timeout.flush();
             expect(document.activeElement.tagName).toBe('INPUT');
             // Remove the element from the DOM.
             jQuery(element).remove();

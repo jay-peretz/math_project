@@ -48,8 +48,15 @@ angular.module('mathSkills')
                             $scope.helpExpression = data.expression;
                         });
 
-                        $scope.$on('triggerCheckFocus', function() {
+                        $scope.$on('triggerCheckFocus', function () {
                             $scope.$$childHead.$$nextSibling.$broadcast('checkFocus');
+                        });
+
+                        $scope.$on('checkFocus', function (e) {
+                            if (e.defaultPrevented === false) {
+                                e.preventDefault();
+                                $scope.$$childHead.$$nextSibling.$broadcast('checkFocus');
+                            }
                         });
 
                         $timeout(function () {

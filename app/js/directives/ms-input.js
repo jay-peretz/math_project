@@ -8,7 +8,8 @@ angular.module('mathSkills')
         });
     }])
     .directive('msInput', [
-        function () {
+        '$timeout',
+        function ($timeout) {
             return {
                 restrict: 'E',
                 scope: {
@@ -62,9 +63,11 @@ angular.module('mathSkills')
                         if (e.defaultPrevented === false) {
                             // Check if we can receive focus.
                             if ($scope.answer === '') {
-                                // If we have no answer yet, focus on ourselves and fire a focused event.
-                                $element.find('input').focus();
-                                $scope.$emit('focused');
+                                $timeout(function () {
+                                    // If we have no answer yet, focus on ourselves and fire a focused event.
+                                    $element.find('input').focus();
+                                    $scope.$emit('focused');
+                                }, 0);
                             } else {
                                 // If we have an answer already, fire a notFocused event.
                                 $scope.$emit('notFocused', {

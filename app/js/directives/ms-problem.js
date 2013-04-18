@@ -13,6 +13,16 @@ angular.module('mathSkills')
                             // $emit problemDone in response.
                             $scope.$emit('problemDone');
                         });
+                        $scope.updateTab = function (tab) {
+                            switch (tab) {
+                                case 'problem':
+                                    $scope.$$childHead.$broadcast('checkFocus');
+                                    break;
+                                case 'wb':
+                                    $scope.$$childHead.$$nextSibling.$broadcast('checkFocus');
+                                    break;
+                            }
+                        };
                     }
                 ],
                 restrict: 'E',

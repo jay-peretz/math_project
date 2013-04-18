@@ -7,23 +7,37 @@ angular.module('mathSkills')
             return {
                 controller: [
                     '$scope',
-                    function ($scope) {
+                    '$timeout',
+                    function ($scope, $timeout) {
                         $scope.currentPanel = 0;
+                        $scope.panelScopes = [];
                         $scope.navVisibility = 'visible';
                         $scope.isActive = function (ii) {
                             return $scope.currentPanel === ii;
                         };
                         $scope.$watch('panelgroup', function () {
                             if ($scope.panelgroup) {
+                                $scope.panelScopes = [];
                                 $scope.title = JSON.parse($scope.panelgroup).title;
                                 $scope.panels = JSON.parse($scope.panelgroup).children;
                                 if ($scope.panels.length < 2) {
                                     $scope.navVisibility = 'hidden';
                                 }
+                                // Build up an array of child <ms-panel> scopes.
+                                $timeout(function () {
+                                    var childScope = $scope.$$childHead;
+                                    while (childScope) {
+                                        if (childScope.panel) {
+                                            $scope.panelScopes.push(childScope);
+                                        }
+                                        childScope = childScope.$$nextSibling;
+                                    }
+                                }, 0);
                             }
                         });
                         $scope.updateCurrent = function (ii) {
                             $scope.currentPanel = ii;
+                            $scope.panelScopes[$scope.currentPanel].$broadcast('checkFocus');
                         };
 
                         // Listen for panelDone events.
@@ -31,11 +45,19 @@ angular.module('mathSkills')
                             // If we have more panels to show, show the next.
                             if ($scope.currentPanel < $scope.panels.length - 1) {
                                 $scope.currentPanel += 1;
+                                $scope.panelScopes[$scope.currentPanel].$broadcast('checkFocus');
                             // Otherwise $emit panelGroupDone
                             } else {
                                 $scope.$emit('panelGroupDone', {
                                     title: $scope.title
                                 });
+                            }
+                        });
+
+                        $scope.$on('checkFocus', function (e, data) {
+                            if (e.defaultPrevented === false) {
+                                e.preventDefault();
+                                $scope.panelScopes[$scope.currentPanel].$broadcast('checkFocus');
                             }
                         });
                     }
