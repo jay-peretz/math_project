@@ -2648,7 +2648,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\grp{\\input{2}}{\\str{·}}{\\input{5}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": false
                                                 }
                                             }]
                                         }, {
@@ -2661,6 +2661,19 @@ angular.module('mathSkills.services')
                                                     "help": true
                                                 }
                                             }]
+                                        }]
+                                    }, {
+                                        title: 'Writing Prime Factorization of Whole Numbers',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Write the prime factorization of 18}',
+                                                answer: '\\grp{\\input{2}}{\\str{·}}{\\exp{\\input{3}}{\\input{2}}}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": false
+                                                }
+                                            }]
                                         }, {
                                             title: 'Workbook',
                                             children: [{
@@ -2669,6 +2682,19 @@ angular.module('mathSkills.services')
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
+                                                }
+                                            }]
+                                        }]
+                                    }, {
+                                        title: 'Writing Prime Factorization of Whole Numbers',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Write the prime factorization of 36}',
+                                                answer: '\\grp{\\exp{\\input{2}}{\\input{2}}}{\\str{·}}{\\exp{\\input{3}}{\\input{2}}}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": false
                                                 }
                                             }]
                                         }, {
@@ -2687,11 +2713,11 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\str{Write the prime factorization of 18}',
-                                                answer: '\\grp{\\input{2}}{\\str{·}}{\\exp{\\input{3}}{\\input{2}}}',
+                                                problem: '\\str{Write the prime factorization of 50}',
+                                                answer: '\\grp{\\input{2}}{\\str{·}}{\\exp{\\input{5}}{\\input{2}}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": false
                                                 }
                                             }]
                                         }, {
@@ -2710,11 +2736,11 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\str{Write the prime factorization of 36}',
-                                                answer: '\\grp{\\exp{\\input{2}}{\\input{2}}}{\\str{·}}{\\exp{\\input{3}}{\\input{2}}}',
+                                                problem: '\\str{Write the prime factorization of 118}',
+                                                answer: '\\grp{\\input{2}}{\\str{·}}{\\input{59}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": false
                                                 }
                                             }]
                                         }, {
@@ -2733,11 +2759,11 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\str{Write the prime factorization of 50}',
-                                                answer: '\\grp{\\input{2}}{\\str{·}}{\\exp{\\input{5}}{\\input{2}}}',
+                                                problem: '\\str{Write the prime factorization of 130}',
+                                                answer: '\\grp{\\input{2}}{\\str{·}}{\\input{5}}{\\str{·}}{\\input{13}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": false
                                                 }
                                             }]
                                         }, {
@@ -2756,11 +2782,11 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\str{Write the prime factorization of 118}',
-                                                answer: '\\grp{\\input{2}}{\\str{·}}{\\input{59}}',
+                                                problem: '\\str{Write the prime factorization of 145}',
+                                                answer: '\\grp{\\input{5}}{\\str{·}}{\\input{29}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": false
                                                 }
                                             }]
                                         }, {
@@ -2779,11 +2805,11 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\str{Write the prime factorization of 130}',
-                                                answer: '\\grp{\\input{2}}{\\str{·}}{\\input{5}}{\\str{·}}{\\input{13}}',
+                                                problem: '\\str{Write the prime factorization of 294}',
+                                                answer: '\\grp{\\input{2}}{\\str{·}}{\\input{3}}{\\str{·}}{\\exp{\\input{7}}{\\input{2}}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": false
                                                 }
                                             }]
                                         }, {
@@ -2802,11 +2828,11 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\str{Write the prime factorization of 145}',
-                                                answer: '\\grp{\\input{5}}{\\str{·}}{\\input{29}}',
+                                                problem: '\\str{Write the prime factorization of 171}',
+                                                answer: '\\grp{\\exp{\\input{3}}{\\input{2}}}{\\str{·}}{\\input{19}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": false
                                                 }
                                             }]
                                         }, {
@@ -2825,37 +2851,11 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\str{Write the prime factorization of 294}',
-                                                answer: '\\grp{\\input{2}}{\\str{·}}{\\input{3}}{\\str{·}}{\\exp{\\input{7}}{\\input{2}}}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": true
-                                                }
-                                            }]
-                                        }]
-                                    }, {
-                                        title: 'Writing Prime Factorization of Whole Numbers',
-                                        children: [{
-                                            title: 'Main Answer',
-                                            children: [{
-                                                problem: '\\str{Write the prime factorization of 171}',
-                                                answer: '\\grp{\\exp{\\input{3}}{\\input{2}}}{\\str{·}}{\\input{19}}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": true
-                                                }
-                                            }]
-                                        }]
-                                    }, {
-                                        title: 'Writing Prime Factorization of Whole Numbers',
-                                        children: [{
-                                            title: 'Main Answer',
-                                            children: [{
                                                 problem: '\\str{Write the prime factorization of 106}',
                                                 answer: '\\grp{\\input{2}}{\\str{·}}{\\input{53}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": false
                                                 }
                                             }]
                                         }, {
