@@ -10,6 +10,13 @@ angular.module('mathSkills')
                     '$timeout',
                     function ($scope, $timeout) {
                         $scope.showHelpPanel = false;
+                        var triggerAnswerAreaEvent = function (event) {
+                            if ($scope.$$childHead && $scope.$$childHead.$$nextSibling) {
+                                $scope.$$childHead.$$nextSibling.$broadcast(event);
+                            } else {
+                                console.log('<ms-panel could not trigger ', event, ' in answer area.');
+                            }
+                        };
 
                         var turnOffAnswer = $scope.$on('answer', function (e, data) {
                             // Add problem property to all answer event data objects.
@@ -20,12 +27,12 @@ angular.module('mathSkills')
                                 $scope.$emit('panelDone');
                             } else {
                             // Otherwise $broadcast checkFocus.
-                                $scope.$$childHead.$$nextSibling.$broadcast('checkFocus');
+                                triggerAnswerAreaEvent('checkFocus');
                             }
                         });
 
                         $scope.$on('triggerCheckAnswer', function () {
-                            $scope.$$childHead.$$nextSibling.$broadcast('checkAnswer');
+                            triggerAnswerAreaEvent('checkAnswer');
                         });
 
                         $scope.$on('triggerCheckHelp', function () {
@@ -49,18 +56,18 @@ angular.module('mathSkills')
                         });
 
                         $scope.$on('triggerCheckFocus', function () {
-                            $scope.$$childHead.$$nextSibling.$broadcast('checkFocus');
+                            triggerAnswerAreaEvent('checkFocus');
                         });
 
                         $scope.$on('checkFocus', function (e) {
                             if (e.defaultPrevented === false) {
                                 e.preventDefault();
-                                $scope.$$childHead.$$nextSibling.$broadcast('checkFocus');
+                                triggerAnswerAreaEvent('checkFocus');
                             }
                         });
 
                         $timeout(function () {
-                            $scope.$$childHead.$$nextSibling.$broadcast('checkFocus');
+                            triggerAnswerAreaEvent('checkFocus');
                         }, 0);
                     }
                 ],

@@ -6,12 +6,12 @@ angular.module('mathSkills')
         parserProvider.register('divwholes', {
             argTemplates: [{
                 name: 'divisor',
-                template: '<span id="divisor"><ms-event-label expected={{divisor}} label=divisor></ms-event-label></span>'
+                template: '<span class="divisor"><ms-event-label expected={{divisor}} label=divisor></ms-event-label></span>'
             }, {
                 name: 'dividend',
-                template: '<span id="dividend"><ms-event-label expected={{dividend}} label=dividend></ms-event-label></span>'
+                template: '<span class="dividend"><ms-event-label expected={{dividend}} label=dividend></ms-event-label></span>'
             }],
-            directiveTemplate: '<ms-div-wholes expected={{expected}} label={{label}}></ms-divdiv-wholes>'
+            directiveTemplate: '<ms-div-wholes expected={{expected}} label={{label}}></ms-div-wholes>'
         });
     }])
     .directive('msDivWholes', [
