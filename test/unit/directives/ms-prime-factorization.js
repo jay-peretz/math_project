@@ -16,7 +16,7 @@ describe('<ms-prime-factorization>', function () {
                         '<ms-expression expected={{finalAnswer}} label=finalAnswer></ms-expression>' +
                     '</span>' +
                 '</div>' +
-                '<table>' +
+                '<table class=factors>' +
                     '<tr ng-repeat="row in completedRows">' +
                         '<td class=divisor>{{row.divisor}}</td>' +
                         '<td class=dividend>{{row.dividend}}</td>' +
@@ -58,7 +58,7 @@ describe('<ms-prime-factorization>', function () {
         expect($elem.find('input').length).toBe(1);
     });
 
-    xit('should present a UI that walks through the factoring process', inject(function ($rootScope) {
+    it('should present a UI that walks through the factoring process', inject(function ($rootScope) {
         // Attach the element to the DOM so that we can test element visibility.
         jQuery('body').append(elem);
 
@@ -69,11 +69,11 @@ describe('<ms-prime-factorization>', function () {
         $rootScope.$digest();
 
         // The row should have a dividend of 10 and a divisor of 5.
-        expect($elem.find('tr:first .divisor').text()).toBe('5');
-        expect($elem.find('tr:first .dividend').text()).toBe('10');
+        expect($elem.find('.factors tr:first .divisor').text()).toBe('5');
+        expect($elem.find('.factors tr:first .dividend').text()).toBe('10');
         // The second row should have an empty divisor and an input box for a dividend.
-        expect($elem.find('tr:nth-of-type(2) .divisor').text().length).toBe(1);
-        expect($elem.find('tr:nth-of-type(2) .dividend input').length).toBe(1);
+        expect($elem.find('.factors tr:nth-of-type(2) .divisor').text().length).toBe(1);
+        expect($elem.find('.factors tr:nth-of-type(2) .dividend input').length).toBe(1);
 
         // Give incorrect dividend of 3.
         $elem.find('input').val('3');
@@ -82,10 +82,10 @@ describe('<ms-prime-factorization>', function () {
         $rootScope.$digest();
 
         // All the data should be the same as after we gave it the factor of 5.
-        expect($elem.find('tr:first .divisor').text()).toBe('5');
-        expect($elem.find('tr:first .dividend').text()).toBe('10');
-        expect($elem.find('tr:nth-of-type(2) .divisor').text().length).toBe(1);
-        expect($elem.find('tr:nth-of-type(2) .dividend input').length).toBe(1);
+        expect($elem.find('.factors tr:first .divisor').text()).toBe('5');
+        expect($elem.find('.factors tr:first .dividend').text()).toBe('10');
+        expect($elem.find('.factors tr:nth-of-type(2) .divisor').text().length).toBe(1);
+        expect($elem.find('.factors tr:nth-of-type(2) .dividend input').length).toBe(1);
 
         // Give new dividend of 2.
         $elem.find('input').val('2');
@@ -94,11 +94,11 @@ describe('<ms-prime-factorization>', function () {
         $rootScope.$digest();
 
         // The row should have a dividend of 10 and a divisor of 5.
-        expect($elem.find('tr:first .divisor').text()).toBe('5');
-        expect($elem.find('tr:first .dividend').text()).toBe('10');
+        expect($elem.find('.factors tr:first .divisor').text()).toBe('5');
+        expect($elem.find('.factors tr:first .dividend').text()).toBe('10');
         // The second row should have an input for a divisor and dividend of 2.
-        expect($elem.find('tr:nth-of-type(2) .divisor input').length).toBe(1);
-        expect($elem.find('tr:nth-of-type(2) .dividend').text()).toBe('2');
+        expect($elem.find('.factors tr:nth-of-type(2) .divisor input').length).toBe(1);
+        expect($elem.find('.factors tr:nth-of-type(2) .dividend').text()).toBe('2');
 
         // Give incorrect factor of 3.
         $elem.find('input').val('3');
@@ -107,10 +107,10 @@ describe('<ms-prime-factorization>', function () {
         $rootScope.$digest();
 
         // All the data should be the same as after we gave it the dividend of 2.
-        expect($elem.find('tr:first .divisor').text()).toBe('5');
-        expect($elem.find('tr:first .dividend').text()).toBe('10');
-        expect($elem.find('tr:nth-of-type(2) .divisor input').length).toBe(1);
-        expect($elem.find('tr:nth-of-type(2) .dividend').text()).toBe('2');
+        expect($elem.find('.factors tr:first .divisor').text()).toBe('5');
+        expect($elem.find('.factors tr:first .dividend').text()).toBe('10');
+        expect($elem.find('.factors tr:nth-of-type(2) .divisor input').length).toBe(1);
+        expect($elem.find('.factors tr:nth-of-type(2) .dividend').text()).toBe('2');
 
         // Give second factor of 2.
         $elem.find('input').val('2');
@@ -119,15 +119,15 @@ describe('<ms-prime-factorization>', function () {
         $rootScope.$digest();
 
         // The row should have a dividend of 10 and a divisor of 5.
-        expect($elem.find('tr:first .divisor').text()).toBe('5');
-        expect($elem.find('tr:first .dividend').text()).toBe('10');
+        expect($elem.find('.factors tr:first .divisor').text()).toBe('5');
+        expect($elem.find('.factors tr:first .dividend').text()).toBe('10');
         // The second row should have a divisor of 2 and a dividend of 2.
-        expect($elem.find('tr:nth-of-type(2) .divisor').text()).toBe('2');
-        expect($elem.find('tr:nth-of-type(2) .dividend').text()).toBe('2');
+        expect($elem.find('.factors tr:nth-of-type(2) .divisor').text()).toBe('2');
+        expect($elem.find('.factors tr:nth-of-type(2) .dividend').text()).toBe('2');
         // The complete row should be visible.
-        expect($elem.find('tr.complete:visible').length).toBe(1);
+        expect($elem.find('.factors tr.complete:visible').length).toBe(1);
         // There should be three visible rows.
-        expect($elem.find('tr:visible').length).toBe(3);
+        expect($elem.find('.factors tr:visible').length).toBe(3);
 
         // Remove the element from the DOM.
         jQuery(elem).remove();
