@@ -10,13 +10,18 @@ angular.module('mathSkills')
                     function ($scope) {
                         // Keep track of incorrect answers.
                         var incorrectAnswers = 0;
-                        $scope.hasHelpButton = $scope.controls && JSON.parse($scope.controls).help;
 
                         // Start off with help prompt hidden.
                         $scope.helpPrompt = {
-                            show: false
+                            show: false,
+                            helpButton: true
                         };
 
+                        $scope.$watch('controls', function () {
+                            if ($scope.controls) {
+                                $scope.helpPrompt.helpButton = !!JSON.parse($scope.controls).help;
+                            }
+                        });
                         // Show help prompt after two incorrect answers.
                         $scope.$on('answer', function (e, data) {
                             if (data.result === 'incorrect') {
