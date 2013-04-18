@@ -10,6 +10,7 @@ angular.module('mathSkills')
                     function ($scope) {
                         // Keep track of incorrect answers.
                         var incorrectAnswers = 0;
+                        $scope.hasHelpButton = $scope.controls && JSON.parse($scope.controls).help;
 
                         // Start off with help prompt hidden.
                         $scope.helpPrompt = {

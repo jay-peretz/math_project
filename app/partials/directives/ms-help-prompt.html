@@ -1,4 +1,12 @@
 <div class=alert ng-show=helpPrompt.show>
     <button type=button class=close data-dismiss=alert>&times;</button>
-    <strong>Stuck?</strong> Click help to be given the correct answer.
+    <strong>Stuck?</strong>
+    <span ng-switch on=hasHelpButton>
+        <span ng-switch-when=false>
+            Click on the Workbook tab to walk through solving the problem.
+        </span>
+        <span ng-switch-default>
+            Click Help to be given the correct answer.
+        </span>
+    </span>
 </div>
