@@ -13,15 +13,6 @@ describe('<ms-showplace>', function () {
 				);				
 	}));
 	
-	/*beforeEach(inject(function ($templateCache, $http){
-		$http.get('partials/directives/ms-showplace.html', {
-                cache: $templateCache
-            }).then(function(result) {
-				cacheHTML = result.data;
-                alert('cacheHTML is:  ' + cacheHTML);
-            });
-	}));*/
-
     beforeEach(inject(function ($rootScope, $compile) {
 		var tagString ='\\showplace{"Thousands"}{12345}';
         var template = angular.element('<ms-showplace expected='+tagString+'></ms-showplace>');

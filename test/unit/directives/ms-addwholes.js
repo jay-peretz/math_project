@@ -9,19 +9,10 @@ describe('<ms-addwholes>', function () {
 	
 	beforeEach(inject(function ($templateCache){
 				$templateCache.put('partials/directives/ms-addition.html',
-					"<table><tr><td></td><td ng-repeat='columnEntry in firstArray'>{{columnEntry}}</td><td></td></tr><tr ng-repeat='row in secondArray'><td><span ng-show=$last>{{sign}}</span></td><td ng-repeat='col in row'>{{col}}</td><td></td></tr><tr><td></td><td ng-repeat='columnEntry in thirdArray'>{{columnEntry}}</td><td></td></tr><tr><td></td><td ng-repeat='columnEntry in thirdArray'></td><td></td></tr></table>"		   
+					"<span ng-hide='mathdisplay'>{{inenglish}}</span><table ng-show='mathdisplay'><tr><td></td><td ng-repeat='columnEntry in firstArray'>{{columnEntry}}</td><td></td></tr><tr ng-repeat='row in secondArray'><td><span ng-show=$last>{{sign}}</span></td><td ng-repeat='col in row'>{{col}}</td><td></td></tr><tr><td></td><td ng-repeat='columnEntry in thirdArray'>{{columnEntry}}</td><td></td></tr><tr><td></td><td ng-repeat='columnEntry in thirdArray'></td><td></td></tr></table>"		   
 				);				
 	}));
 	
-	/*beforeEach(inject(function ($templateCache, $http){
-		$http.get('partials/directives/ms-addition.html', {
-                cache: $templateCache
-            }).then(function(result) {
-				cacheHTML = result.data;
-                alert('cacheHTML is:  ' + cacheHTML);
-            });
-	}));*/
-
     beforeEach(inject(function ($rootScope, $compile) {
 		var tagString ='\\addwholes{math}{complete}{[47,59]}';
         var template = angular.element('<ms-addwholes expected='+tagString+'></ms-addwholes>');
@@ -57,4 +48,5 @@ describe('<ms-addwholes>', function () {
 		}));
 		
     });
+		
 });
