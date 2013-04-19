@@ -36,7 +36,7 @@ describe('<ms-showplace>', function () {
             expect(jQuery(element).find('table').length).toBe(1);
         }));
 		
-		it('should have a carat character in 2nd td of 2nd row of 4th table of the display array', inject(function ($rootScope) {
+		it('should have a carat character in 2nd td of 2nd row of 1st table of the display array', inject(function ($rootScope) {
 			expect(jQuery(element).find('table:nth-child(1) tr:nth-child(2) td:nth-child(2)').text()).toBe('^')																				
 		}));
 		

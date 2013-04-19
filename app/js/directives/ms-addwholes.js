@@ -80,7 +80,7 @@ angular.module('mathSkills')
 					if (typeof $scope.addendparams === "string") {
 						addendnumbers = $scope.addendparams.substr(1, $scope.addendparams.length - 2).split(",");
 					}
-					
+
 					if (addendnumbers[0] !== "undefined" && addendnumbers[1] !== "undefined") {
 						if ($scope.mathdisplay) {
 							answerObject = add(addendnumbers);
