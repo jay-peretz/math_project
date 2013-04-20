@@ -44,7 +44,6 @@ angular.module('mathSkills')
                             $scope.$on('answer', function (e, data) {
                                  data.result = "helped";
                                  data.answer = "\\str{helped}";
-                                 data.expected = $scope.answer;
                                  data.problem = $scope.problem;
                                  
                             });

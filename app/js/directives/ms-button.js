@@ -29,10 +29,12 @@ angular.module('mathSkills')
 
 // check answer might need to be an option.
                     // handle check answer event for parent scope "always correct".
-                    $scope.$on ('checkAnswer', function () {
-                        var data = {};
-                        data.result = 'correct';
-                        $scope.$emit('answer', data);
+                    $scope.$on ('checkAnswer', function (e) {
+                        if (e.defaultPrevented === false){
+                            var data = {};
+                            data.result = 'correct';
+                            $scope.$emit('answer', data);
+                        }
                     });
 
 // focus needs work to work with button.

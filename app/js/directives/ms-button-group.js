@@ -30,8 +30,16 @@ angular.module('mathSkills')
                         });
                     }
                 });
+                $scope.$on('checkAnswer', function (e, data){ console.log('ms-button got checkAnswer');
+                    e.preventDefault();
+                    $scope.$emit('answer', {
+                        result: 'correct',
+                        answer: '\\but{' + $scope.correctAnswer + '}{T}'
+                    });
+                });
                 $scope.$on('answer', function (e, data) {
-                    data.expected = '\\but{' + $scope.correctAnswer + '}{T}';
+                    data.expected = '\\but{' + $scope.correctAnswer + '}{T}';    
+                   
                 });
             },
             template: '<ms-expression expected={{containedTag}}></ms-expression>'

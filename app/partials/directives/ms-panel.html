@@ -2,8 +2,8 @@
     <ms-help-prompt></ms-help-prompt>
     <div class=row-fluid>
         <ms-expression expected={{problem}} class=span4></ms-expression>
-        <div ng-switch class="span8 row-fluid {{helpPanelWell}}" on=showHelpPanel>
-            <span ng-switch-when=false>
+        <div class="span8 row-fluid {{helpPanelWell}}">
+            <span ng-hide=showHelpPanel>
                 <div class="span9 row-fluid">
                     <ms-expression expected={{answer}} class=span8></ms-expression>
                     <div class=span4>
@@ -12,7 +12,7 @@
                 </div>
                 <ms-controls data={{controls}} class=span3></ms-controls>
             </span>
-            <span ng-switch-when=true class="{{helpPanelClass}}">
+            <span ng-show=showHelpPanel class="{{helpPanelClass}}">
                 <div>
                     <ms-expression expected={{helpExpression}} class=span9></ms-expression>
                     <ms-controls data='{ "nextProblem": true }' class=span3></ms-controls>
