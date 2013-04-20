@@ -20,8 +20,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{44816}{3}}}',
-                                                answer: '\\select{"Thousands"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{44816}{3}}}',
+                                                answer: '\\select{Thousands}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": '\\rowgrp{\\row{\\showplace{"Thousands"}{44816}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Thousands}}{label_like margin-left-small}}}}'
@@ -34,8 +34,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{38059}{2}}',
-                                                answer: '\\select{"Hundreds"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{38059}{2}}',
+                                                answer: '\\select{Hundreds}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                      "help": '\\rowgrp{\\row{\\showplace{"Hundreds"}{38059}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundreds}}{label_like margin-left-small}}}}'
@@ -48,8 +48,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{3888708}{6}}',
-                                                answer: '\\select{"Millions"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{3888708}{6}}',
+                                                answer: '\\select{Millions}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                      "help": '\\rowgrp{\\row{\\showplace{"Millions"}{3888708}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Millions}}{label_like margin-left-small}}}}'
@@ -62,8 +62,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{7016486}{1}}',
-                                                answer: '\\select{"Tens"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{7016486}{1}}',
+                                                answer: '\\select{Tens}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                      "help": '\\rowgrp{\\row{\\showplace{"Tens"}{7016486}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Tens}}{label_like margin-left-small}}}}'
@@ -76,8 +76,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{4927857}{5}}',
-                                                answer: '\\select{"Hundred Thousands"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{4927857}{5}}',
+                                                answer: '\\select{Hundred Thousands}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                      "help": '\\rowgrp{\\row{\\showplace{"Hundred Thousands"}{4927857}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundred Thousands}}{label_like margin-left-small}}}}'
@@ -90,8 +90,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{9049152}{5}}',
-                                                answer: '\\select{"Hundred Thousands"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{9049152}{5}}',
+                                                answer: '\\select{Hundred Thousands}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                      "help": '\\rowgrp{\\row{\\showplace{"Hundred Thousands"}{9049152}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundred Thousands}}{label_like margin-left-small}}}}'
@@ -104,8 +104,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{4555517}{3}}',
-                                                answer: '\\select{"Thousands"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{4555517}{3}}',
+                                                answer: '\\select{Thousands}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                      "help": '\\rowgrp{\\row{\\showplace{"Thousands"}{4555517}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Thousands}}{label_like margin-left-small}}}}'
@@ -118,8 +118,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{5174344}{0}}',
-                                                answer: '\\select{"Ones"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{5174344}{0}}',
+                                                answer: '\\select{Ones}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                      "help": '\\rowgrp{\\row{\\showplace{"Ones"}{5174344}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Ones}}{label_like margin-left-small}}}}'
@@ -132,8 +132,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{1924837}{6}}',
-                                                answer: '\\select{"Millions"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{1924837}{6}}',
+                                                answer: '\\select{Millions}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                      "help": '\\rowgrp{\\row{\\showplace{"Millions"}{1924837}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Millions}}{label_like margin-left-small}}}}'
@@ -146,8 +146,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\wholeplace{295082}{2}}',
-                                                answer: '\\select{"Hundreds"}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+                                                problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{295082}{2}}',
+                                                answer: '\\select{Hundreds}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                       "help": '\\rowgrp{\\row{\\showplace{"Hundreds"}{295082}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundreds}}{label_like margin-left-small}}}}'
@@ -895,7 +895,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{470}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\rowgrp{\\row{\\str{471}}}{\\row{\\str{Since the number to the right of the 7 in the Tens place is 1 (4 or lower), the 7 (in the Tens place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{470}{1}}}}'
+                                                    "help": '\\rowgrp{\\row{\\str{471}}}{\\row{\\str{Since the number to the right of the 7 in the Tens place is 1 (4 or lower), the 7 (in the Tens place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{470}{1}}}}'
                                                 }
                                             }]
                                         }]
@@ -909,7 +909,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{1000}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\rowgrp{\\row{\\str{1346}}}{\\row{\\str{Since the number to the right of the 1 in the Thousands place is 3 (4 or lower), the 1 (in the Thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{1000}{3}}}}'
+                                                    "help": '\\rowgrp{\\row{\\str{1346}}}{\\row{\\str{Since the number to the right of the 1 in the Thousands place is 3 (4 or lower), the 1 (in the Thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{1000}{3}}}}'
                                                 }
                                             }]
                                         }]
@@ -923,7 +923,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{680}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\rowgrp{\\row{\\str{684}}}{\\row{\\str{Since the number to the right of the 8 in the tens place is 4 (4 or lower), the 8 (in the tens place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{680}{1}}}}'
+                                                    "help": '\\rowgrp{\\row{\\str{684}}}{\\row{\\str{Since the number to the right of the 8 in the tens place is 4 (4 or lower), the 8 (in the tens place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{680}{1}}}}'
                                                 }
                                             }]
                                         }]
@@ -937,7 +937,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{960}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\rowgrp{\\row{\\str{959}}}{\\row{\\str{Since the number to the right of the 5 in the tens place is 9 (5 or higher), the 5 (in the tens place) must go up one. It becomes 6. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{960}{1}}}}'
+                                                    "help": '\\rowgrp{\\row{\\str{959}}}{\\row{\\str{Since the number to the right of the 5 in the tens place is 9 (5 or higher), the 5 (in the tens place) must go up one. It becomes 6. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{960}{1}}}}'
                                                 }
                                             }]
                                         }]
@@ -951,7 +951,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{500}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\rowgrp{\\row{\\str{461}}}{\\row{\\str{Since the number to the right of the 4 in the hundreds place is 6 (5 or higher), the 4 (in the hundreds place) must go up one. It becomes 5. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{500}{2}}}}'
+                                                    "help": '\\rowgrp{\\row{\\str{461}}}{\\row{\\str{Since the number to the right of the 4 in the hundreds place is 6 (5 or higher), the 4 (in the hundreds place) must go up one. It becomes 5. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{500}{2}}}}'
                                                 }
                                             }]
                                         }]
@@ -965,7 +965,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{3990000}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\rowgrp{\\row{\\str{3990495}}}{\\row{\\str{Since the number to the right of the 9 in the ten thousands place is 0 (4 or lower), the 9 (in the ten thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{3990000}{4}}}}'
+                                                    "help": '\\rowgrp{\\row{\\str{3990495}}}{\\row{\\str{Since the number to the right of the 9 in the ten thousands place is 0 (4 or lower), the 9 (in the ten thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{3990000}{4}}}}'
                                                 }
                                             }]
                                         }]
@@ -979,7 +979,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{27520000}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\rowgrp{\\row{\\str{27523018}}}{\\row{\\str{Since the number to the right of the 2 in the ten thousands place is 3 (4 or lower), the 2 (in the ten thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{27520000}{4}}}}'
+                                                    "help": '\\rowgrp{\\row{\\str{27523018}}}{\\row{\\str{Since the number to the right of the 2 in the ten thousands place is 3 (4 or lower), the 2 (in the ten thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{27520000}{4}}}}'
                                                 }
                                             }]
                                         }]
@@ -993,7 +993,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{600000}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                     "help": '\\rowgrp{\\row{\\str{563548}}}{\\row{\\str{Since the number to the right of the 5 in the hundred thousands place is 6 (5 or higher), the 5 (in the hundred thousands place) must go up one. It becomes 6. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{600000}{5}}}}'
+                                                     "help": '\\rowgrp{\\row{\\str{563548}}}{\\row{\\str{Since the number to the right of the 5 in the hundred thousands place is 6 (5 or higher), the 5 (in the hundred thousands place) must go up one. It becomes 6. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{600000}{5}}}}'
                                                 }
                                             }]
                                         }]
@@ -1007,7 +1007,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{230180}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                     "help": '\\rowgrp{\\row{\\str{230179}}}{\\row{\\str{Since the number to the right of the 7 in the tens place is 9 (5 or higher), the 7 (in the tens place) must go up one. It becomes 8. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{230180}{1}}}}'
+                                                     "help": '\\rowgrp{\\row{\\str{230179}}}{\\row{\\str{Since the number to the right of the 7 in the tens place is 9 (5 or higher), the 7 (in the tens place) must go up one. It becomes 8. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{230180}{1}}}}'
                                                 }
                                             }]
                                         }]
@@ -1021,7 +1021,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{41700}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\rowgrp{\\row{\\str{41742}}}{\\row{\\str{Since the number to the right of the 7 in the hundreds place is 4 (4 or lower), the 7 (in the hundreds place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\wholeplace{41700}{2}}}}'
+                                                    "help": '\\rowgrp{\\row{\\str{41742}}}{\\row{\\str{Since the number to the right of the 7 in the hundreds place is 4 (4 or lower), the 7 (in the hundreds place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{41700}{2}}}}'
 												}
                                             }]
                                         }]
@@ -2992,7 +2992,154 @@ angular.module('mathSkills.services')
                     }, {
                         title: '3 Decimals',
                         path: 'decimals',
-                        children: []
+                        children: [
+								   {
+											title: '3.1 Place Value Number System of Decimal Numbers',
+											path: '3.1-place-value-number-system-of-decimal-numbers',
+											children: [
+												{
+													title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{4481.6}{3}}}',
+															answer: '\\select{Thousands}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\showplace{"Thousands"}{44816}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Thousands}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{38059}{2}}',
+															answer: '\\select{Hundreds}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																 "help": '\\rowgrp{\\row{\\showplace{"Hundreds"}{38059}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundreds}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{3888708}{6}}',
+															answer: '\\select{Millions}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																 "help": '\\rowgrp{\\row{\\showplace{"Millions"}{3888708}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Millions}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{7016486}{1}}',
+															answer: '\\select{Tens}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																 "help": '\\rowgrp{\\row{\\showplace{"Tens"}{7016486}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Tens}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{4927857}{5}}',
+															answer: '\\select{Hundred Thousands}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																 "help": '\\rowgrp{\\row{\\showplace{"Hundred Thousands"}{4927857}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundred Thousands}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{9049152}{5}}',
+															answer: '\\select{Hundred Thousands}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																 "help": '\\rowgrp{\\row{\\showplace{"Hundred Thousands"}{9049152}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundred Thousands}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{4555517}{3}}',
+															answer: '\\select{Thousands}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																 "help": '\\rowgrp{\\row{\\showplace{"Thousands"}{4555517}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Thousands}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{5174344}{0}}',
+															answer: '\\select{Ones}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																 "help": '\\rowgrp{\\row{\\showplace{"Ones"}{5174344}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Ones}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{1924837}{6}}',
+															answer: '\\select{Millions}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																 "help": '\\rowgrp{\\row{\\showplace{"Millions"}{1924837}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Millions}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{295082}{2}}',
+															answer: '\\select{Hundreds}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																  "help": '\\rowgrp{\\row{\\showplace{"Hundreds"}{295082}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundreds}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+											]
+										},
+								   ]
                     }, {
                         title: '4 Ratios & Proportions',
                         path: 'ratios-proportions',
