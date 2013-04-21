@@ -116,7 +116,9 @@ angular.module('mathSkills.services')
                             e.preventDefault();
                             $scope.notFocused = 0;
 
-                            $scope.$$childHead.$broadcast('checkFocus');
+                            if ($scope.$$childHead) {
+                                $scope.$$childHead.$broadcast('checkFocus');
+                            }
                         }
                     });
 
