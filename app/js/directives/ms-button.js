@@ -4,30 +4,23 @@
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
         parserProvider.register('but', {
-            argTemplates: [{
-                name: 'buttonLabel'
-            }, {
-                name: 'correct'
-            }],
             directiveTemplate: '<ms-button expected={{expected}} label={{label}}></ms-button>'
         });
     }])
     .directive('msButton', [
         'parser',
-        '$compile',
-        function (parser, $compile) {
+        function (parser) {
             return {
                 controller: function ($scope, $element) {
                     $scope.controllerId = Math.random().toString();
                     
-                    // Extract the value/s.
+                    // Extract the args array.
                     $scope.$watch('expected', function () {
-                        if($scope.expected){
-                            parser.parse($scope.expected, { scope: $scope });
+                        if ($scope.expected){
+                            $scope.args = parser.extractTag($scope.expected).args;
                         }
                     });
-
-// check answer might need to be an option.
+                     
                     // handle check answer event for parent scope "always correct".
                     $scope.$on ('checkAnswer', function (e) {
                         if (e.defaultPrevented === false){
@@ -55,7 +48,7 @@ angular.module('mathSkills')
                             // handle check help event for parent scope.
                             // button does not use help, fire a notHelped event.
                             
-                            if ($scope.correct === "T") {
+                            if ($scope.args[1] === "T") {
                                 $scope.class = 'success';
                                 
                                 $scope.$emit('helped', {
@@ -67,7 +60,6 @@ angular.module('mathSkills')
                                 $scope.$emit('notHelped', {
                                     controllerId: $scope.controllerId
                                 });
-                                
                             }
                         }
                     });
@@ -75,11 +67,11 @@ angular.module('mathSkills')
                     $element.on('click', 'button', function (event) {
                         var data = {
                         expected: $scope.expected,
-                        answer: '\\but{' + $scope.buttonLabel + '}{T}',
+                        answer: '\\but{' + $scope.args[0] + '}{T}',
                         label: $scope.label
                         };
 
-                        if ($scope.correct === "T") {
+                        if ($scope.args[1] === "T") {
                             data.result = 'correct';
                             $scope.class = 'success';
                         } else {
@@ -88,23 +80,14 @@ angular.module('mathSkills')
                         }
                         $scope.$emit('answer', data);
                         $scope.$apply();
-
                     });
-// tab might need to be set on "button" not input
-                    $element.on('keydown', 'input', function (event) {
-                        if (event.keyCode === 9) {
-                            event.preventDefault();
-                            $scope.$emit('tabKey');
-                        }
-                    });
-
                 },
                 restrict: 'E',
                 scope: {
                     expected: '@',
                     label: '@'
                 },
-                template: '<button class="btn btn-{{class}}" type=button>{{buttonLabel}}</button>'
+                template: '<button class="btn btn-{{class}}" type=button>{{args[0]}}</button>'
             };
         }
     ]);
