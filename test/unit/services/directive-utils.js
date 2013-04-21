@@ -128,5 +128,43 @@ describe('directiveUtils', function () {
             expect(notFocusedHandler.calls.length).toBe(0);
             expect(childCalls).toEqual([1, 1, 0]);
         }));
+
+        it('should $emit notFocused if none of its children can receive focus', inject(function ($rootScope) {
+            var scope = $rootScope.$new(),
+                children = [scope.$new(), scope.$new()],
+                focusedHandler = jasmine.createSpy('$rootScope focused handler'),
+                notFocusedHandler = jasmine.createSpy('$rootScope notFocused handler');
+
+            scope.children = [1, 2];
+            children.forEach(function (child, childNumber) {
+                child.$on('checkFocus', function (e, data) {
+                    if (e.defaultPrevented === false) {
+                        child.$emit('notFocused', { controllerId: childNumber });
+                    }
+                });
+            });
+            du.routeFocus(scope);
+            $rootScope.$on('focused', focusedHandler);
+            $rootScope.$on('notFocused', notFocusedHandler);
+
+            $rootScope.$broadcast('checkFocus');
+            expect(focusedHandler).not.toHaveBeenCalled();
+            expect(notFocusedHandler).toHaveBeenCalled();
+        }));
+
+        it('should ignore already cancelled checkFocus events', inject(function ($rootScope) {
+            var scope = $rootScope.$new(),
+                childScope = scope.$new(),
+                childListener = jasmine.createSpy('childScope checkFocus listener');
+
+            $rootScope.$on('checkFocus', function (e) {
+                e.preventDefault();
+            });
+            childScope.$on('checkFocus', childListener);
+            du.routeFocus(scope);
+
+            $rootScope.$broadcast('checkFocus');
+            expect(childListener.calls.length).toBe(1);
+        }));
     });
 });
