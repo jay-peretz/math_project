@@ -8,7 +8,7 @@ angular.module('mathSkills')
             },{
                 name: 'numberforplace'
             }],
-            directiveTemplate: '<ms-showplace expected={{expected}} label={{label}}></ms-select>'
+            directiveTemplate: '<ms-showplace expected={{expected}} label={{label}}></ms-showplace>'
         });
     }])
   .directive('msShowplace', [
