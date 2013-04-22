@@ -29,14 +29,14 @@ angular.module('mathSkills')
                             $scope.$emit('answer', data);
                         }
                     });
-
-// focus needs work to work with button.
+                    
                     $scope.$on('checkFocus', function (e) {
                         // If this event has not been marked as ignored.
                         if (e.defaultPrevented === false) {
                             // handle check focus event for parent scope.
-                            // button cannot have focus/tab, fire a notFocused event.
-                            $scope.$emit('notFocused', {
+                            // set focus on button element, fire a focused event.
+                            $element.find('button').focus(); 
+                            $scope.$emit('focused', {
                                 controllerId: $scope.controllerId
                             });
                         }
