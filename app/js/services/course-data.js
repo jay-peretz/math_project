@@ -3151,7 +3151,7 @@ angular.module('mathSkills.services')
 															answer: '\\frac{\\input{3}}{\\input{5}}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\frac{\\str{3}}{\\str{5}}'
+																"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\html{<br><br>}}{\\row{\\frac{\\str{6}}{\\str{10}}}{\\str{=}}{\\frac{\\str{3}}{\\str{5}}}}'
 															}
 														}]
 													}]
@@ -3161,11 +3161,24 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
-															answer: '\\input{1000}',
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.3}}}}',
+															answer: '\\frac{\\input{3}}{\\input{10}}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\rowgrp{\\row{\\str{1346}}}{\\row{\\str{Since the number to the right of the 1 in the Thousands place is 3 (4 or lower), the 1 (in the Thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{1000}{3}}}}'
+																"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\html{<br><br>}}{\\row{\\frac{\\str{3}}{\\str{10}}}}'															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Decimals to Fractions and Mixed Numbers',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.57}}}}',
+															answer: '\\frac{\\input{57}}{\\input{100}}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\html{<br><br>}}{\\row{\\frac{\\str{57}}{\\str{100}}}}'
 															}
 														}]
 													}]
@@ -3175,11 +3188,24 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
-															answer: '\\input{680}',
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{8.4}}}}',
+															answer: '\\mixed{\\input{8}}{\\frac{\\input{2}}{\\input{5}}}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\rowgrp{\\row{\\str{684}}}{\\row{\\str{Since the number to the right of the 8 in the tens place is 4 (4 or lower), the 8 (in the tens place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{680}{1}}}}'
+																"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\html{<br><br>}}{\\row{\\frac{\\str{84}}{\\str{10}}}{\\str{=}}{\\str{8}}{\\frac{\\str{2}}{\\str{5}}}}'															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Decimals to Fractions and Mixed Numbers',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.9}}}}',
+															answer: '\\frac{\\input{9}}{\\input{10}}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\html{<br><br>}}{\\row{\\frac{\\str{9}}{\\str{10}}}}'			
 															}
 														}]
 													}]
@@ -3189,11 +3215,11 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
-															answer: '\\input{960}',
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{2.69}}}}',
+															answer: '\\mixed{\\input{2}}{\\frac{\\input{69}}{\\input{100}}}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\rowgrp{\\row{\\str{959}}}{\\row{\\str{Since the number to the right of the 5 in the tens place is 9 (5 or higher), the 5 (in the tens place) must go up one. It becomes 6. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{960}{1}}}}'
+																"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\html{<br><br>}}{\\row{\\frac{\\str{269}}{\\str{100}}}{\\str{=}}{\\str{2}}{\\frac{\\str{69}}{\\str{100}}}}'
 															}
 														}]
 													}]
@@ -3203,11 +3229,11 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
-															answer: '\\input{500}',
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.43}}}}',
+															answer: '\\frac{\\input{43}}{\\input{100}}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\rowgrp{\\row{\\str{461}}}{\\row{\\str{Since the number to the right of the 4 in the hundreds place is 6 (5 or higher), the 4 (in the hundreds place) must go up one. It becomes 5. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{500}{2}}}}'
+																"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\html{<br><br>}}{\\row{\\frac{\\str{43}}{\\str{100}}}}'	
 															}
 														}]
 													}]
@@ -3217,11 +3243,11 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
-															answer: '\\input{3990000}',
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.68}}}}',
+															answer: '\\frac{\\input{17}}{\\input{25}}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\rowgrp{\\row{\\str{3990495}}}{\\row{\\str{Since the number to the right of the 9 in the ten thousands place is 0 (4 or lower), the 9 (in the ten thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{3990000}{4}}}}'
+																"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\html{<br><br>}}{\\row{\\frac{\\str{68}}{\\str{100}}}{\\str{=}}{\\frac{\\str{17}}{\\str{25}}}}'
 															}
 														}]
 													}]
@@ -3231,11 +3257,11 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
-															answer: '\\input{27520000}',
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.17}}}}',
+															answer: '\\frac{\\input{17}}{\\input{100}}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\rowgrp{\\row{\\str{27523018}}}{\\row{\\str{Since the number to the right of the 2 in the ten thousands place is 3 (4 or lower), the 2 (in the ten thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{27520000}{4}}}}'
+																"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\html{<br><br>}}{\\row{\\frac{\\str{17}}{\\str{100}}}}'	
 															}
 														}]
 													}]
@@ -3245,39 +3271,11 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
-															answer: '\\input{600000}',
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{2.87}}}}',
+															answer: '\\mixed{\\input{2}}{\\frac{\\input{87}}{\\input{100}}}',
 															controls: {
 																"checkAnswer": true,
-																 "help": '\\rowgrp{\\row{\\str{563548}}}{\\row{\\str{Since the number to the right of the 5 in the hundred thousands place is 6 (5 or higher), the 5 (in the hundred thousands place) must go up one. It becomes 6. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{600000}{5}}}}'
-															}
-														}]
-													}]
-												},
-												{
-													title: 'Change Decimals to Fractions and Mixed Numbers',
-													children: [{
-														title: 'Main Answer',
-														children: [{
-															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
-															answer: '\\input{230180}',
-															controls: {
-																"checkAnswer": true,
-																 "help": '\\rowgrp{\\row{\\str{230179}}}{\\row{\\str{Since the number to the right of the 7 in the tens place is 9 (5 or higher), the 7 (in the tens place) must go up one. It becomes 8. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{230180}{1}}}}'
-															}
-														}]
-													}]
-												},
-												{
-													title: 'Change Decimals to Fractions and Mixed Numbers',
-													children: [{
-														title: 'Main Answer',
-														children: [{
-															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
-															answer: '\\input{41700}',
-															controls: {
-																"checkAnswer": true,
-																"help": '\\rowgrp{\\row{\\str{41742}}}{\\row{\\str{Since the number to the right of the 7 in the hundreds place is 4 (4 or lower), the 7 (in the hundreds place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{41700}{2}}}}'
+																"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\html{<br><br>}}{\\row{\\frac{\\str{287}}{\\str{100}}}{\\str{=}}{\\str{2}}{\\frac{\\str{87}}{\\str{100}}}}'
 															}
 														}]
 													}]

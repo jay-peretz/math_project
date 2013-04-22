@@ -11,7 +11,7 @@ angular.module('mathSkills')
                 name: 'fraction',
                 template: '<ms-fraction expected={{fraction}} label=fraction></ms-fraction>'
             }],
-            directiveTemplate: '<ms-mixednumber expected={{expected}}></ms-mixednumber>'
+            directiveTemplate: '<ms-mixed-number expected={{expected}}></ms-mixed-number>'
         });
     }])
     .directive('msMixedNumber', [
