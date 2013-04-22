@@ -3141,6 +3141,302 @@ angular.module('mathSkills.services')
 										},
 								   ]
                     }, {
+                        title: '3 Decimals',
+                        path: 'decimals',
+                        children: [
+								   {
+											title: '3.1 Place Value Number System of Decimal Numbers',
+											path: '3.1-place-value-number-system-of-decimal-numbers',
+											children: [
+												{
+													title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{2.97551}{4}}}',
+															answer: '\\select{Hundredths}{["Millionths", "Hundred-thousandths", "Ten-thousandths", "Thousandths", "Hundredths", "Tenths", "Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\showplacedecimal{"Hundredths"}{2.97551}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundredths}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+																										title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{37928.46101}{9}}}',
+															answer: '\\select{Thousands}{["Millionths", "Hundred-thousandths", "Ten-thousandths", "Thousandths", "Hundredths", "Tenths", "Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\showplacedecimal{"Thousands"}{37928.46101}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Thousands}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+																										title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{0.1569}{2}}}',
+															answer: '\\select{Thousandths}{["Millionths", "Hundred-thousandths", "Ten-thousandths", "Thousandths", "Hundredths", "Tenths", "Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\showplacedecimal{"Thousandths"}{0.1569}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Thousandths}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+																										title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{86.38456}{6}}}',
+															answer: '\\select{Ones}{["Millionths", "Hundred-thousandths", "Ten-thousandths", "Thousandths", "Hundredths", "Tenths", "Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\showplacedecimal{"Ones"}{86.38456}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Ones}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+																										title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{9956.52}{2}}}',
+															answer: '\\select{Tenths}{["Millionths", "Hundred-thousandths", "Ten-thousandths", "Thousandths", "Hundredths", "Tenths", "Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\showplacedecimal{"Tenths"}{9956.52}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Tenths}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+																										title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{83.20524}{1}}}',
+															answer: '\\select{Hundred-thousandths}{["Millionths", "Hundred-thousandths", "Ten-thousandths", "Thousandths", "Hundredths", "Tenths", "Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\showplacedecimal{"Hundred-thousandths"}{2.97551}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundred-thousandths}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+																										title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{972.6571}{1}}}',
+															answer: '\\select{Ten-thousandths}{["Millionths", "Hundred-thousandths", "Ten-thousandths", "Thousandths", "Hundredths", "Tenths", "Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\showplacedecimal{"Ten-thousandths"}{972.6571}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Ten-thousandths}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+																										title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{0.659}{4}}}',
+															answer: '\\select{Ones}{["Millionths", "Hundred-thousandths", "Ten-thousandths", "Thousandths", "Hundredths", "Tenths", "Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\showplacedecimal{"Ones"}{0.659}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Ones}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+																										title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{2.78929}{3}}}',
+															answer: '\\select{Thousandths}{["Millionths", "Hundred-thousandths", "Ten-thousandths", "Thousandths", "Hundredths", "Tenths", "Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\showplacedecimal{"Thousandths"}{2.78929}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Thousandths}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+												{
+																										title: 'Decimal Number Place Value',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Identify the place value of the indicated digit: }}}{\\row{\\placevalue{0.85237}{4}}}',
+															answer: '\\select{Hundredths}{["Millionths", "Hundred-thousandths", "Ten-thousandths", "Thousandths", "Hundredths", "Tenths", "Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\showplacedecimal{"Hundredths"}{0.85237}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  Hundredths}}{label_like margin-left-small}}}}'
+															}
+														}]
+													}]
+												},
+											]
+										},{
+											title: '3.2 Change Decimals to Fractions and Mixed Numbers',
+											path: '3.2-change-decimals-to-fractions-and-mixed-numbers',
+											children: [
+												{
+													title: 'Change Decimals to Fractions and Mixed Numbers',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
+															answer: '\\frac{\\input{3}}{\\input{5}}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\frac{\\str{3}}{\\str{5}} '
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Decimals to Fractions and Mixed Numbers',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
+															answer: '\\input{1000}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\str{1346}}}{\\row{\\str{Since the number to the right of the 1 in the Thousands place is 3 (4 or lower), the 1 (in the Thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{1000}{3}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Decimals to Fractions and Mixed Numbers',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
+															answer: '\\input{680}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\str{684}}}{\\row{\\str{Since the number to the right of the 8 in the tens place is 4 (4 or lower), the 8 (in the tens place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{680}{1}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Decimals to Fractions and Mixed Numbers',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
+															answer: '\\input{960}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\str{959}}}{\\row{\\str{Since the number to the right of the 5 in the tens place is 9 (5 or higher), the 5 (in the tens place) must go up one. It becomes 6. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{960}{1}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Decimals to Fractions and Mixed Numbers',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
+															answer: '\\input{500}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\str{461}}}{\\row{\\str{Since the number to the right of the 4 in the hundreds place is 6 (5 or higher), the 4 (in the hundreds place) must go up one. It becomes 5. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{500}{2}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Decimals to Fractions and Mixed Numbers',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
+															answer: '\\input{3990000}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\str{3990495}}}{\\row{\\str{Since the number to the right of the 9 in the ten thousands place is 0 (4 or lower), the 9 (in the ten thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{3990000}{4}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Decimals to Fractions and Mixed Numbers',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
+															answer: '\\input{27520000}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\str{27523018}}}{\\row{\\str{Since the number to the right of the 2 in the ten thousands place is 3 (4 or lower), the 2 (in the ten thousands place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{27520000}{4}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Decimals to Fractions and Mixed Numbers',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
+															answer: '\\input{600000}',
+															controls: {
+																"checkAnswer": true,
+																 "help": '\\rowgrp{\\row{\\str{563548}}}{\\row{\\str{Since the number to the right of the 5 in the hundred thousands place is 6 (5 or higher), the 5 (in the hundred thousands place) must go up one. It becomes 6. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{600000}{5}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Decimals to Fractions and Mixed Numbers',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
+															answer: '\\input{230180}',
+															controls: {
+																"checkAnswer": true,
+																 "help": '\\rowgrp{\\row{\\str{230179}}}{\\row{\\str{Since the number to the right of the 7 in the tens place is 9 (5 or higher), the 7 (in the tens place) must go up one. It becomes 8. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{230180}{1}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Decimals to Fractions and Mixed Numbers',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{0.6}}}}',
+															answer: '\\input{41700}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\rowgrp{\\row{\\str{41742}}}{\\row{\\str{Since the number to the right of the 7 in the hundreds place is 4 (4 or lower), the 7 (in the hundreds place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{41700}{2}}}}'
+															}
+														}]
+													}]
+												},
+											]
+										},
+						]
+                    }, {
                         title: '4 Ratios & Proportions',
                         path: 'ratios-proportions',
                         children: []
