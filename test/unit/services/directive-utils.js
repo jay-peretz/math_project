@@ -167,4 +167,102 @@ describe('directiveUtils', function () {
             expect(childListener.calls.length).toBe(1);
         }));
     });
+
+    describe('routeHelp', function () {
+        it('should call preventDefault on all checkHelp events.', inject(function ($rootScope) {
+            var scope = $rootScope.$new();
+            du.routeHelp(scope);
+            scope.$on('checkHelp', function (e) {
+                expect(e.defaultPrevented).toBe(true);
+            });
+            $rootScope.$broadcast('checkHelp');
+        }));
+
+        it('should refire checkHelp events on the first child scope.', inject(function ($rootScope) {
+            var scope = $rootScope.$new(),
+                childScope = scope.$new(),
+                childCheckHelpHander = jasmine.createSpy('child scope checkHelp handler');
+            du.routeHelp(scope);
+            childScope.$on('checkHelp', childCheckHelpHander);
+            $rootScope.$broadcast('checkHelp');
+            expect(childCheckHelpHander.calls.length).toBe(2);
+            // The first call is the routed call.
+            expect(childCheckHelpHander.calls[0].args[0].defaultPrevented).toBe(false);
+            // The second call is the cancelled call from $rootScope.
+            expect(childCheckHelpHander.calls[1].args[0].defaultPrevented).toBe(true);
+        }));
+
+        it('should route checkHelp to children one at a time if previous children cannot receive help', inject(function ($rootScope) {
+            var scope = $rootScope.$new(),
+                children = [scope.$new(), scope.$new(), scope.$new()],
+                childCalls = [0, 0, 0],
+                helpedHandler = jasmine.createSpy('$rootScope helped handler'),
+                notHelpedHandler = jasmine.createSpy('$rootScope notHelped handler');
+
+            scope.children = [1, 2, 3];
+            children[0].$on('checkHelp', function (e) {
+                if (e.defaultPrevented === false) {
+                    children[0].$emit('notHelped', { controllerId: 'child1' });
+                    childCalls[0] += 1;
+                }
+            });
+            children[1].$on('checkHelp', function (e) {
+                if (e.defaultPrevented === false) {
+                    children[1].$emit('helped', { controllerId: 'child2' });
+                    childCalls[1] += 1;
+                }
+            });
+            children[2].$on('checkHelp', function (e) {
+                if (e.defaultPrevented === false) {
+                    childCalls[2] += 1;
+                }
+            });
+            $rootScope.$on('helped', helpedHandler);
+            $rootScope.$on('notHelped', notHelpedHandler);
+            du.routeHelp(scope);
+
+            $rootScope.$broadcast('checkHelp');
+            expect(helpedHandler.calls.length).toBe(1);
+            expect(notHelpedHandler.calls.length).toBe(0);
+            expect(childCalls).toEqual([1, 1, 0]);
+        }));
+
+        it('should $emit notHelped if none of its children can receive help', inject(function ($rootScope) {
+            var scope = $rootScope.$new(),
+                children = [scope.$new(), scope.$new()],
+                helpedHandler = jasmine.createSpy('$rootScope helped handler'),
+                notHelpedHandler = jasmine.createSpy('$rootScope notHelped handler');
+
+            scope.children = [1, 2];
+            children.forEach(function (child, childNumber) {
+                child.$on('checkHelp', function (e, data) {
+                    if (e.defaultPrevented === false) {
+                        child.$emit('notHelped', { controllerId: childNumber });
+                    }
+                });
+            });
+            du.routeHelp(scope);
+            $rootScope.$on('helped', helpedHandler);
+            $rootScope.$on('notHelped', notHelpedHandler);
+
+            $rootScope.$broadcast('checkHelp');
+            expect(helpedHandler).not.toHaveBeenCalled();
+            expect(notHelpedHandler).toHaveBeenCalled();
+        }));
+
+        it('should ignore already cancelled checkHelp events', inject(function ($rootScope) {
+            var scope = $rootScope.$new(),
+                childScope = scope.$new(),
+                childListener = jasmine.createSpy('childScope checkHelp listener');
+
+            $rootScope.$on('checkHelp', function (e) {
+                e.preventDefault();
+            });
+            childScope.$on('checkHelp', childListener);
+            du.routeHelp(scope);
+
+            $rootScope.$broadcast('checkHelp');
+            expect(childListener.calls.length).toBe(1);
+        }));
+    });
 });
