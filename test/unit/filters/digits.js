@@ -25,5 +25,9 @@ describe ('digits', function () {
     it ('should add span enclosing character "-"', function () {
         expect(digitsFilter('-123')).toBe('<span class="digit minus">-</span><span class=digit>1</span><span class=digit>2</span><span class=digit>3</span>')
     })
+    
+    it ('should respond to an empty string by returning an empty string', function () {
+        expect(digitsFilter('')).toBe('')
+    })
 																  
 });
