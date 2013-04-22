@@ -188,7 +188,9 @@ angular.module('mathSkills.services')
                             $scope.notHelped = 0;
 
                             // Send the event to our first child.
-                            $scope.$$childHead.$broadcast('checkHelp');
+                            if ($scope.$$childHead) {
+                                $scope.$$childHead.$broadcast('checkHelp');
+                            }
                         }
                     });
 
