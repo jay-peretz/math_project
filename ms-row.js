@@ -17,6 +17,7 @@ describe('<ms-group>', function () {
         expect(jQuery(element).find('input').length).toBe(2);
     });
 
+    // This started to fail when I changed <ms-checkbox-group> to <ms-group>
     it('should only send one answer object when checkAnswer is fired', inject(function ($rootScope) {
         var handler = jasmine.createSpy('answer event');
         $rootScope.$on('answer', handler);
