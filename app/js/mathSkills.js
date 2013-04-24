@@ -7,7 +7,7 @@ angular.module('mathSkills', ['mathSkills.services']).
         function ($routeProvider) {
             $routeProvider
                 .when('/', {
-                    templateUrl: 'partials/home.html',
+                    templateUrl: 'partials/controllers/home.html',
                     controller: 'home'
                 })
                 .when('/units', {
@@ -27,11 +27,5 @@ angular.module('mathSkills', ['mathSkills.services']).
                     controller: 'feedback'
                 })
                 .otherwise({redirectTo: '/'});
-        }
-    ])
-    .controller('home', [
-        '$scope',
-        function ($scope) {
-            $scope.course = 'GENERAL ARITHMETIC';
         }
     ]);
