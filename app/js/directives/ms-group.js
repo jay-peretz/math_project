@@ -6,7 +6,7 @@ angular.module('mathSkills')
         'parserProvider',
         function (parserProvider) {
             parserProvider.register('grp', {
-                directiveTemplate: '<ms-group expected={{expected}}></ms-group>'
+                directiveTemplate: '<ms-group expected={{expected}} label={{label}}></ms-group>'
             });
         }
     ])

@@ -18,7 +18,7 @@ describe('<ms-group>', function () {
     });
 
     // This started to fail when I changed <ms-checkbox-group> to <ms-group>
-    xit('should only send one answer object when checkAnswer is fired', inject(function ($rootScope) {
+    it('should only send one answer object when checkAnswer is fired', inject(function ($rootScope) {
         var handler = jasmine.createSpy('answer event');
         $rootScope.$on('answer', handler);
         $rootScope.$broadcast('checkAnswer');
