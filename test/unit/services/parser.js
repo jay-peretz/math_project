@@ -109,7 +109,7 @@ describe('parser service', function () {
             expect(
                 parser.generateTemplate({ tag: 'frac', args: ['', ''] }, {})
             ).toBe(
-                '<table class=fraction><tr><td><ms-event-label expected={{numerator}} label=numerator></ms-event-label></td><td><hr></td></tr>' + 
+                '<table class=fraction><tr><td><ms-event-label expected={{numerator}} label=numerator></ms-event-label></td></tr><tr><td><hr></td></tr>' + 
                 '<tr><td><ms-event-label expected={{denominator}} label=denominator></td></tr></table></ms-event-label>'
             );
         }));
