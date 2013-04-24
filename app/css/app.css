@@ -1,7 +1,9 @@
-@import 'directives/mean-median-mode_4-1.css';
-@import 'directives/ms-exponent.css';
+@import 'directives/ms-button.css';
 @import 'directives/ms-div-wholes.css';
+@import 'directives/ms-exponent.css';
+@import 'directives/ms-fraction.css';
 @import 'directives/ms-group.css';
+@import 'directives/mean-median-mode_4-1.css';
 @import 'directives/ms-prime-factorization.css';
 
 
@@ -125,23 +127,4 @@ ms-panel > div {
     to {
         margin-top: inherit;
     }
-}
-
-/* required for control-data.js css tag */
-
-.button-label-margin {
-	width: 160px;
-	padding-left:16px;
-}
-.fraction {
-		border-collapse:collapse;
-}
-.fraction td{
-			display: block;
-			text-align:center;
-}
-.fraction hr {
-	color:#000;
-	background:#000;
-	height:1px;
 }
