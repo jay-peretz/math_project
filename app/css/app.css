@@ -133,3 +133,15 @@ ms-panel > div {
 	width: 160px;
 	padding-left:16px;
 }
+.fraction {
+		border-collapse:collapse;
+}
+.fraction td{
+			display: block;
+			text-align:center;
+}
+.fraction hr {
+	color:#000;
+	background:#000;
+	height:1px;
+}

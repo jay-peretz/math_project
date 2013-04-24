@@ -6,10 +6,10 @@ angular.module('mathSkills')
         parserProvider.register('mixed', {
             argTemplates: [{
                 name: 'whole',
-                template: '<ms-event-label expected={{whole}} label=whole></ms-event-label>'
+                template: '<table><tr><td><ms-event-label expected={{whole}} label=whole></ms-event-label></td>'
             }, {
                 name: 'fraction',
-                template: '<ms-fraction expected={{fraction}} label=fraction></ms-fraction>'
+                template: '<td><ms-fraction expected={{fraction}} label=fraction></ms-fraction></td></tr></table>'
             }],
             directiveTemplate: '<ms-mixed-number expected={{expected}}></ms-mixed-number>'
         });
