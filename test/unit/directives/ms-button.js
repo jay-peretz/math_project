@@ -20,9 +20,6 @@ describe('<ms-button>', function () {
             $rootScope.$digest();
         }));
         
-        it('should......', inject(function ($rootScope) {
-            
-        }));
     });
     
     describe('when clicked is incorrect', function () {
