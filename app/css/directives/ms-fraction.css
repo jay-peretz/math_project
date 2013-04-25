@@ -1,11 +1,21 @@
-.fraction {
-		border-collapse:collapse;
-}
 .fraction td{
-			text-align:center;
+	text-align:center;
+} 
+div .fraction .control-group {
+	padding:0;
+	margin:0;
 }
 .fraction hr {
 	color:#000;
 	background:#000;
 	height:1px;
+	padding:0px;
+	margin:0px;
+}
+
+.fraction tr:nth-child(2) td {
+	vertical-align:top;
+}
+.fraction tr:nth-child(3) td {
+	padding:4px;
 }
