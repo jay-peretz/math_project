@@ -22,10 +22,12 @@ angular.module('mathSkills')
                             updateBreadcrumbs = function () {
                                 var basePath = 'index.html#',
                                     pathParts = $location.path().split('/').slice(1, 4);
+
                                 $scope.breadcrumbs = [{
                                     title: 'Home',
                                     path: basePath + '/'
                                 }];
+
                                 if (pathParts[0] !== '') {
                                     pathParts.forEach(function (path) {
                                         basePath += '/' + path;
@@ -36,6 +38,7 @@ angular.module('mathSkills')
                                     });
                                 }
                             };
+
                         $rootScope.$on('$routeChangeSuccess', updateBreadcrumbs);
                         updateBreadcrumbs();
                     }
