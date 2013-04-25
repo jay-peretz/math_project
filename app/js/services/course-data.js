@@ -3281,6 +3281,151 @@ angular.module('mathSkills.services')
 													}]
 												},
 											]
+										},{
+											title: '3.3 Round Decimals',
+											path: '3.3-round-decimals',
+											children: [
+												{
+													title: 'Round Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Ones place}}}{\\row{\\str{1.96139}}}}',
+															answer: '\\input{2}',
+															controls: {
+																"checkAnswer": true,
+                                                    			"help": '\\rowgrp{\\row{\\str{1.96139}}}{\\row{\\str{Since the number to the right of the 1 in the ones place is 9 (5 or higher), the 1 (in the ones place) must go up one. It becomes 2. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{2.00000}{6}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Round Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Tenths place}}}{\\row{\\str{5.52887}}}}',
+															answer: '\\input{5.5}',
+															controls: {
+																"checkAnswer": true,
+                                                    			"help": '\\rowgrp{\\row{\\str{5.52887}}}{\\row{\\str{Since the number to the right of the 5 in the tenths place is 2 (4 or lower), the 5 (in the tenths place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{5.50000}{5}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Round Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Hundredths place}}}{\\row{\\str{6.2412}}}}',
+															answer: '\\input{6.24}',
+															controls: {
+																"checkAnswer": true,
+                                                    			"help": '\\rowgrp{\\row{\\str{6.2412}}}{\\row{\\str{Since the number to the right of the 4 in the hundredths place is 1 (4 or lower), the 4 (in the hundredths place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{6.2400}{3}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Round Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Ten-Thousandths place}}}{\\row{\\str{1.96139}}}}',
+															answer: '\\input{1.9614}',
+															controls: {
+																"checkAnswer": true,
+                                                    			"help": '\\rowgrp{\\row{\\str{1.96139}}}{\\row{\\str{Since the number to the right of the 3 in the ten-thousandths place is 9 (5 or higher), the 3 (in the ten-thousandths place) must go up one. It becomes 4. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{1.96140}{2}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Round Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Ones place}}}{\\row{\\str{1.68}}}}',
+															answer: '\\input{2}',
+															controls: {
+																"checkAnswer": true,
+                                                    			"help": '\\rowgrp{\\row{\\str{1.68}}}{\\row{\\str{Since the number to the right of the 1 in the ones place is 6 (5 or higher), the 1 (in the ones place) must go up one. It becomes 2. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{2.00}{3}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Round Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Tenths place}}}{\\row{\\str{7.19824}}}}',
+															answer: '\\input{7.2}',
+															controls: {
+																"checkAnswer": true,
+                                                    			"help": '\\rowgrp{\\row{\\str{7.19824}}}{\\row{\\str{Since the number to the right of the 1 in the tenths place is 9 (5 or higher), the 1 (in the tenths place) must go up one. It becomes 2. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{7.20000}{5}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Round Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Tenths place}}}{\\row{\\str{10.9563}}}}',
+															answer: '\\input{11}',
+															controls: {
+																"checkAnswer": true,
+                                                    			"help": '\\rowgrp{\\row{\\str{10.9563}}}{\\row{\\str{"Since the number to the right of the 9 in the tenths place is 5 (5 or higher), the 9 must go up 1. It becomes 10. Write "0" in the tenths place and add one to the column on the left, the ones place; if necessary, continue to carry and add until there are no further carries. The whole number digits to the right of the rounded value "0" in the  tenths place become zeros."}}}{\\row{\\placevalue{11.0000}{4}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Round Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Tens place}}}{\\row{\\str{49.1}}}}',
+															answer: '\\input{50}',
+															controls: {
+																"checkAnswer": true,
+                                                    			"help": '\\rowgrp{\\row{\\str{49.1}}}{\\row{\\str{Since the number to the right of the 4 in the tens place is 9 (5 or higher), the 4 (in the tens place) must go up one. It becomes 5. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{50.0}{3}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Round Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Hundredths place}}}{\\row{\\str{16.4118}}}}',
+															answer: '\\input{16.41}',
+															controls: {
+																"checkAnswer": true,
+                                                    			"help": '\\rowgrp{\\row{\\str{16.4118}}}{\\row{\\str{Since the number to the right of the 1 in the hundredths place is 1 (4 or lower), the 1 (in the hundredths place) must stay the same. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{16.4100}{3}}}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Round Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Thousands place}}}{\\row{\\str{7716.1}}}}',
+															answer: '\\input{8000}',
+															controls: {
+																"checkAnswer": true,
+                                                    			"help": '\\rowgrp{\\row{\\str{7716.1}}}{\\row{\\str{Since the number to the right of the 7 in the thousands place is 7 (5 or higher), the 7 (in the thousands place) must go up one. It becomes 8. The whole number digits to the right of the rounded value become zeros.}}}{\\row{\\placevalue{8000.0}{5}}}}'
+															}
+														}]
+													}]
+												},
+											]
 										},
 						]
                     }, {
