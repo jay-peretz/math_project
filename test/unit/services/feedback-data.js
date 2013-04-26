@@ -8,8 +8,7 @@ describe('feedbackData', function () {
             problemSet: 'set-two'
         });
     }));
-    // Load the services.
-    beforeEach(module('mathSkills.services'));
+
     // Load the rest of the app.
     beforeEach(module('mathSkills'));
 

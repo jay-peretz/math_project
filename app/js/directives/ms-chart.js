@@ -41,7 +41,7 @@ angular.module('mathSkills')
 					chartArrayIn = [];
 					
 				
-			 // Extract the value for $scope.chartArrayIn
+                // Extract the value for $scope.chartArrayIn
 				$scope.$watch('expected', function () {
 					if ($scope.expected) {
 						parser.parse($scope.expected, { scope: $scope });

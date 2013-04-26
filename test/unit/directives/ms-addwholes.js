@@ -48,5 +48,25 @@ describe('<ms-addwholes>', function () {
 		}));
 		
     });
+
+    describe('when <ms-addwholes> first tag element is english', function () {
+        describe('when there are two numbers', function () {
+            beforeEach(inject(function ($rootScope, $compile) {
+                var tagString ='\\addwholes{english}{partial}{[301,815]}';
+                var template = angular.element('<ms-addwholes expected='+tagString+'></ms-addwholes>');
+                elScope = $rootScope.$new();
+                element = $compile(template)(elScope);
+                $rootScope.$digest();
+            }));
+    
+            it('it should display two numbers in text.', inject(function ($rootScope) {
+                expect(jQuery(element).find('span').text()).toBe('301 and 815');																		
+            }));
+        });
+
+        describe('when there are more than two numbers', function () {
+            it('should display three or more numbers in text.');
+        });
+    });
 		
 });

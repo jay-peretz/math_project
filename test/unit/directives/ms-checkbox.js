@@ -5,17 +5,26 @@ describe('<ms-checkbox>', function () {
 
     beforeEach(module('mathSkills'));
 
-    describe('when value should be unchecked', function () {
+    describe('when it is placed on the page', function () {
         beforeEach(inject(function ($rootScope, $compile) {
             var template = angular.element('<ms-checkbox expected="\\chk{Test Label}{F}" label="checkbox"></ms-checkbox>');
             element = $compile(template)($rootScope.$new());
             $rootScope.$digest();
         }));
 
-        // TODO: move to own describe block.
         it('should display the passed in label', function () {
             expect(element.find('label').text()).toBe(' Test Label');
         });
+
+        it('should ignore cancelled checkHelp events.');
+    });
+
+    describe('when value should be unchecked', function () {
+        beforeEach(inject(function ($rootScope, $compile) {
+            var template = angular.element('<ms-checkbox expected="\\chk{Test Label}{F}" label="checkbox"></ms-checkbox>');
+            element = $compile(template)($rootScope.$new());
+            $rootScope.$digest();
+        }));
 
         it('should respond properly to checkAnswer events when unchecked', inject(function ($rootScope) {
             $rootScope.$on('answer', function (e, data) {
@@ -39,6 +48,8 @@ describe('<ms-checkbox>', function () {
             $rootScope.$broadcast('checkAnswer');
             $rootScope.$digest();
         }));
+
+        it('should $emit notHelped in response to a checkHelp event.');
     });
 
     describe('when value should be checked', function () {
@@ -70,5 +81,7 @@ describe('<ms-checkbox>', function () {
             $rootScope.$broadcast('checkAnswer');
             $rootScope.$digest();
         }));
+
+        it('should $emit notHelped to a checkHelp event and check the box.');
     });
 });

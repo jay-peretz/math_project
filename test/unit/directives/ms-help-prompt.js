@@ -54,4 +54,14 @@ describe('<ms-help-prompt>', function () {
 
         expect(element.find('div').css('display')).toBe('none');
     }));
+
+    describe('when there is a help button', function () {
+        it('should display certain help text.');
+    });
+
+    describe('when there is not a help button', function () {
+        it('should display different help text.');
+    });
+
+    it('should hide when checkHelp fires');
 });
