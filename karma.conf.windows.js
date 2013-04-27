@@ -12,6 +12,7 @@ files = [
   'app/lib/jquery/jquery.1.9.1.min.js',
   'app/lib/angular/angular.js',
   'test/lib/angular/angular-mocks.js',
+  'test/lib/flot-modified-for-karma/jquery.flot.modified-for-karma-by-MF-130427.js',
   'app/js/services/mathSkills.services.js',
   'app/js/*.js',
   'app/js/**/*.js',
