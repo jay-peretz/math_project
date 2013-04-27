@@ -1,4 +1,4 @@
-/*global angular, beforeEach, describe, expect, inject, it */
+/*global angular, beforeEach, describe, expect, inject, it, jasmine */
 
 describe('<ms-checkbox>', function () {
     var element;
@@ -15,8 +15,6 @@ describe('<ms-checkbox>', function () {
         it('should display the passed in label', function () {
             expect(element.find('label').text()).toBe(' Test Label');
         });
-
-        it('should ignore cancelled checkHelp events.');
     });
 
     describe('when value should be unchecked', function () {
@@ -49,7 +47,16 @@ describe('<ms-checkbox>', function () {
             $rootScope.$digest();
         }));
 
-        it('should $emit notHelped in response to a checkHelp event.');
+        it('should $emit notHelped to a checkHelp event and checkbox should be unchecked.', inject(function ($rootScope) {
+            var notHelped = jasmine.createSpy('rootScoped notHelped handler');
+
+            $rootScope.$on('notHelped', notHelped);
+            $rootScope.$broadcast('checkHelp');
+
+            $rootScope.$digest();
+            expect(notHelped).toHaveBeenCalled(); 
+            expect(jQuery(element).find('input').is(':checked')).toBe(false);
+        }));
     });
 
     describe('when value should be checked', function () {
@@ -82,6 +89,27 @@ describe('<ms-checkbox>', function () {
             $rootScope.$digest();
         }));
 
-        it('should $emit notHelped to a checkHelp event and check the box.');
-    });
+        it('should $emit notHelped to a checkHelp event and check the box.', inject(function ($rootScope) {
+            var notHelped = jasmine.createSpy('rootScoped notHelped handler');
+
+            $rootScope.$on('notHelped', notHelped);
+            $rootScope.$broadcast('checkHelp');
+
+            $rootScope.$digest();
+            expect(notHelped).toHaveBeenCalled(); 
+            expect(jQuery(element).find('input').is(':checked')).toBe(true);
+        }));
+
+         it('should ignore already cancelled checkHelp events', inject(function ($rootScope) {
+            var notHelpedHandler = jasmine.createSpy('rootScoped notHelped handler');
+
+            $rootScope.$on('checkHelp', function(e) {
+                e.preventDefault();
+            });
+
+            $rootScope.$on('notHelped', notHelpedHandler);
+            $rootScope.$broadcast('checkHelp');
+            expect(notHelpedHandler).not.toHaveBeenCalled();
+        }));
+    }); 
 });
