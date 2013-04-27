@@ -30,7 +30,7 @@ angular.module('mathSkills')
                         });
                     }
                 });
-                $scope.$on('checkAnswer', function (e, data){ console.log('ms-button got checkAnswer');
+                $scope.$on('checkAnswer', function (e, data){
                     e.preventDefault();
                     $scope.$emit('answer', {
                         result: 'correct',
