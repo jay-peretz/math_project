@@ -20,7 +20,7 @@ describe('<ms-event-label>', function () {
                 expect(data.label).toBe('test');
             });
 
-            $rootScope.$broadcast('checkAnswer');
+            $rootScope.$$childHead.$$childHead.$emit('answer', { label: undefined });
             $rootScope.$digest();
     }));
 

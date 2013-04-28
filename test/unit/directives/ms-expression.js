@@ -19,8 +19,8 @@ describe('<ms-expression>', function () {
         $rootScope.$on('answer', function (e, data) {
                 expect(data.label).toBe('test');
             });
-
-            $rootScope.$broadcast('checkAnswer');
+ 
+            $rootScope.$$childHead.$$childHead.$emit('answer', { label: undefined });
             $rootScope.$digest();
     }));
 
