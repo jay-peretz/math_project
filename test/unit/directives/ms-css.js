@@ -5,11 +5,11 @@ describe('<ms-css>', function () {
         elScope = {};
 
     beforeEach(module('mathSkills'));
-    
+
     beforeEach(inject(function ($rootScope, $compile) {
         var template = angular.element('<ms-css expected="\\css{\\str{stringTest}}{classTest}" label=css></ms-css>');
         element = $compile(template)($rootScope.$new());
-		jQuery("body").append(element);
+        jQuery("body").append(element);
         $rootScope.$digest();
     }));
 
@@ -21,9 +21,9 @@ describe('<ms-css>', function () {
         it('should be add a class to the wrapper', inject(function ($rootScope) {
             expect(jQuery("ms-css > div").hasClass('classTest')).toBe(true);
         }));
-		
+
 		it('it should contain only one ms-string', inject(function ($rootScope) {
-			expect(jQuery("ms-css ms-string").length).toBeGreaterThan(0);																			
+			expect(jQuery("ms-css ms-string").length).toBeGreaterThan(0);
 		}));
 		
 		it('it should decorate answer events coming up the scope chain', inject(function ($rootScope) {
@@ -33,5 +33,19 @@ describe('<ms-css>', function () {
 			});
 			$rootScope.$$childHead.$$childHead.$emit('answer', { answer: 'testanswer' });
 		}));
+    });
+    
+    describe('when exspected id undefined', function () {
+        
+        beforeEach(inject(function ($rootScope, $compile) {
+            var template = angular.element('<ms-css label=css></ms-css>');
+            element = $compile(template)($rootScope.$new());
+            $rootScope.$digest();
+        }));
+        
+        it('should compile without an expected attribute', function () {
+            expect(element).toBeDefined();
+        });
+        
     });
 });
