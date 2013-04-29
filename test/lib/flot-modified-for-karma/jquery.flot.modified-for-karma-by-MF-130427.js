@@ -5,6 +5,11 @@ Licensed under the MIT license.
 
 */
 
+// Modified to allow karma testing of directives that utilize jquery.flot.js
+// jquery.flot.js evaluates elements dynamically for some values, which throws errors in karma testing
+// this modification supplies height and width in canvas.prototype.resize (line 123) in place of 0's
+// and supplies css values in function parseOptions (line 673) in place of undefined.  Mark Foote 4/28/13
+
 // first an inline dependency, jquery.colorhelpers.js, we inline it here
 // for convenience
 

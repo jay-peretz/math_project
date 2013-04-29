@@ -28,12 +28,8 @@ angular.module('mathSkills')
 				$scope.answer = '';
                 $scope.controllerId = Math.random().toString();
 				$scope.answercorrect = "";
-				$scope.charttitle = [];
 				$scope.chartTitleIn = "";
-				$scope.chartrows = [];
-				$scope.chartcolumns = [];
 				$scope.chartColumnsIn = 1;
-				$scope.chartarray = [];
 				$scope.chartArrayOut = [];
 				
 				var	chartRowsIn = "",
@@ -57,14 +53,12 @@ angular.module('mathSkills')
 				$scope.$watch('chartrows', function () {
 					if (typeof $scope.chartrows === "string") {
 						chartRowsIn = $scope.chartrows;
-						console.log("chartRowsIn: "+chartRowsIn);
 					}
 				});
 								
 				$scope.$watch('chartcolumns', function () {
 					if (typeof $scope.chartcolumns === "string") {
 						$scope.chartColumnsIn = $scope.chartcolumns;
-						console.log("$scope.chartColumnsIn: "+$scope.chartColumnsIn);
 					}
 				});
 				
