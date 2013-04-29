@@ -5,13 +5,9 @@ describe('<ms-addwholes>', function () {
         elScope = {},
 		cacheHTML = {};
 
+    beforeEach(module('partials/directives/ms-addition.html'))
+
     beforeEach(module('mathSkills'));
-	
-	beforeEach(inject(function ($templateCache){
-				$templateCache.put('partials/directives/ms-addition.html',
-					"<span ng-hide='mathdisplay'>{{inenglish}}</span><table ng-show='mathdisplay'><tr><td></td><td ng-repeat='columnEntry in firstArray'>{{columnEntry}}</td><td></td></tr><tr ng-repeat='row in secondArray'><td><span ng-show=$last>{{sign}}</span></td><td ng-repeat='col in row'>{{col}}</td><td></td></tr><tr><td></td><td ng-repeat='columnEntry in thirdArray'>{{columnEntry}}</td><td></td></tr><tr><td></td><td ng-repeat='columnEntry in thirdArray'></td><td></td></tr></table>"		   
-				);				
-	}));
 	
     beforeEach(inject(function ($rootScope, $compile) {
 		var tagString ='\\addwholes{math}{complete}{[47,59]}';
@@ -28,23 +24,23 @@ describe('<ms-addwholes>', function () {
         }));
 		
 		it('number in 2nd td of 1st row of table of the display array should be 1', inject(function ($rootScope) {
-			expect(jQuery(element).find('table tr:nth-child(1) td:nth-child(2)').text()).toBe('1')																				
+			expect(jQuery(element).find('table tr:nth-child(1) td:nth-child(2)').text()).toContain('1')																				
 		}));
 		
 		it('number in 3rd td of 2st row of table of the display array should be 4', inject(function ($rootScope) {
-			expect(jQuery(element).find('table tr:nth-child(2) td:nth-child(3)').text()).toBe('4')																				
+			expect(jQuery(element).find('table tr:nth-child(2) td:nth-child(3)').text()).toContain('4')																				
 		}));
 		
 		it('value in 1st td of 3rd row of table of the display array should be +', inject(function ($rootScope) {
-			expect(jQuery(element).find('table tr:nth-child(3) td:nth-child(1)').text()).toBe('+')																				
+			expect(jQuery(element).find('table tr:nth-child(3) td:nth-child(1)').text()).toContain('+')																				
 		}));
 		
 		it('number in 4th td of 3rd row of table of the display array should be 9', inject(function ($rootScope) {
-			expect(jQuery(element).find('table tr:nth-child(3) td:nth-child(4)').text()).toBe('9')																				
+			expect(jQuery(element).find('table tr:nth-child(3) td:nth-child(4)').text()).toContain('9')																				
 		}));
 		
 		it('number in 2nd td of 4th row of table of the display array should be 1', inject(function ($rootScope) {
-			expect(jQuery(element).find('table tr:nth-child(4) td:nth-child(2)').text()).toBe('1')																				
+			expect(jQuery(element).find('table tr:nth-child(4) td:nth-child(2)').text()).toContain('1')																				
 		}));
 		
     });
@@ -60,7 +56,7 @@ describe('<ms-addwholes>', function () {
             }));
     
             it('it should display two numbers in text.', inject(function ($rootScope) {
-                expect(jQuery(element).find('span').text()).toBe('301 and 815');																		
+                expect(jQuery(element).find('span').text()).toContain('301 and 815');																		
             }));
         });
 
@@ -74,7 +70,7 @@ describe('<ms-addwholes>', function () {
             }));
     
             it('it should display two numbers in text.', inject(function ($rootScope) {
-                expect(jQuery(element).find('span').text()).toBe('301, 815, and 419');																		
+                expect(jQuery(element).find('span').text()).toContain('301, 815, and 419');																		
             }));
         });
 		
