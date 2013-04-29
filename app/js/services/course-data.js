@@ -3426,6 +3426,161 @@ angular.module('mathSkills.services')
 													}]
 												},
 											]
+										},{
+											title: '3.8 Change Fractions to Decimals',
+											path: '3.8-change-fractions-to-decimals',
+											children: [
+												{
+													title: 'Change Fractions to Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+														//	problem: '\\frac{\\str{3}}{\\str{10}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\str{3}}{\\str{10}}}{\\str{ to a decimal}}',
+															answer: '\\input{.3}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\row{\\str{3}}{\\str{ divided by }}{\\str{10}}{\\str{equals}}{\\str{.3}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Fractions to Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+														//	problem: '\\frac{\\str{3}}{\\str{10}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\str{4}}{\\str{8}}}{\\str{ to a decimal}}',
+															answer: '\\input{.5}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\row{\\str{4}}{\\str{ divided by }}{\\str{8}}{\\str{equals}}{\\str{.5}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Fractions to Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+														//	problem: '\\frac{\\str{3}}{\\str{10}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\str{6}}{\\str{8}}}{\\str{ to a decimal}}',
+															answer: '\\input{.75}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\row{\\str{6}}{\\str{ divided by }}{\\str{8}}{\\str{equals}}{\\str{.75}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Fractions to Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+														//	problem: '\\frac{\\str{3}}{\\str{10}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\str{14}}{\\str{22}}}{\\str{ to a decimal}}',
+															answer: '\\input{.64}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\row{\\str{14}}{\\str{ divided by }}{\\str{22}}{\\str{equals}}{\\str{.64}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Fractions to Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+														//	problem: '\\frac{\\str{3}}{\\str{10}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\str{14}}{\\str{24}}}{\\str{ to a decimal}}',
+															answer: '\\input{.58}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\row{\\str{14}}{\\str{ divided by }}{\\str{24}}{\\str{equals}}{\\str{.58}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Fractions to Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+														//	problem: '\\frac{\\str{3}}{\\str{10}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\str{17}}{\\str{34}}}{\\str{ to a decimal}}',
+															answer: '\\input{.5}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\row{\\str{17}}{\\str{ divided by }}{\\str{34}}{\\str{equals}}{\\str{.5}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Fractions to Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+														//	problem: '\\frac{\\str{3}}{\\str{10}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\str{10}}{\\str{15}}}{\\str{ to a decimal}}',
+															answer: '\\input{.67}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\row{\\str{10}}{\\str{ divided by }}{\\str{15}}{\\str{equals}}{\\str{.67}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Fractions to Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+														//	problem: '\\frac{\\str{3}}{\\str{10}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\str{12}}{\\str{21}}}{\\str{ to a decimal}}',
+															answer: '\\input{.57}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\row{\\str{12}}{\\str{ divided by }}{\\str{21}}{\\str{equals}}{\\str{.57}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Fractions to Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+														//	problem: '\\frac{\\str{3}}{\\str{10}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\str{28}}{\\str{52}}}{\\str{ to a decimal}}',
+															answer: '\\input{.54}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\row{\\str{28}}{\\str{ divided by }}{\\str{52}}{\\str{equals}}{\\str{.54}}'
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Change Fractions to Decimals',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+														//	problem: '\\frac{\\str{3}}{\\str{10}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\str{6}}{\\str{9}}}{\\str{ to a decimal}}',
+															answer: '\\input{.67}',
+															controls: {
+																"checkAnswer": true,
+																"help": '\\row{\\str{6}}{\\str{ divided by }}{\\str{9}}{\\str{equals}}{\\str{.67}}'
+															}
+														}]
+													}]
+												},
+											]
 										},
 						]
                     }, {
