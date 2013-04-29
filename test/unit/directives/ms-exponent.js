@@ -15,15 +15,19 @@ describe('<ms-exponent>', function () {
         expect(element).toBeDefined();
     });
 
-    it('should call four directiveUtils methods.', inject(function (directiveUtils) {
-        //spyOn(directiveUtils, 'aggregateChildAnswers');
-        //spyOn(directiveUtils, 'compileExpected');
-        // spyOn(directiveUtils, 'routeHelp');
-        // spyOn(directiveUtils, 'routeFocus');
+    it('should call four directiveUtils methods.', inject(function (directiveUtils, $compile, $rootScope) {
+        spyOn(directiveUtils, 'aggregateChildAnswers');
+        spyOn(directiveUtils, 'compileExpected');
+        spyOn(directiveUtils, 'routeHelp');
+        spyOn(directiveUtils, 'routeFocus');
         
-        //expect(directiveUtils.aggregateChildAnswers).toHaveBeenCalled();
-        //expect(directiveUtils.compileExpected).toHaveBeenCalled();
-        // expect(directiveUtils.routeHelp).toHaveBeenCalled();
-        // expect(directiveUtils.routeFocus).toHaveBeenCalled();
+        var template = angular.element('<ms-exponent expected="\\exp{\\input{3}}{\\input{2}}"></ms-exponent>');
+        element = $compile(template)($rootScope.$new());
+        $rootScope.$digest();
+        
+        expect(directiveUtils.aggregateChildAnswers).toHaveBeenCalled();
+        expect(directiveUtils.compileExpected).toHaveBeenCalled();
+        expect(directiveUtils.routeHelp).toHaveBeenCalled();
+        expect(directiveUtils.routeFocus).toHaveBeenCalled();
     }));
 });
