@@ -55,9 +55,9 @@ describe('<ms-subtractwholes>', function () {
 			$rootScope.$digest();
 		}));
 																			  
-		xit('should express the numbers as text', inject(function ($rootScope) {
+	    it('should express the numbers as text', inject(function ($rootScope) {
 			// two hyphens after the text string? - matched for now
-			expect(jQuery(element).find('span').text()).toContain('832 minus 86--')							
+			expect(jQuery(element).find('span').text()).toContain('832 minus 86')							
 		}));
 		
     });
