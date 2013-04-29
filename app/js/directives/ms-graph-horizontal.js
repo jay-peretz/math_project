@@ -18,10 +18,10 @@ angular.module('mathSkills')
             },{
                 name: 'horgraphbottom'
             }],
-            directiveTemplate: '<ms-horgraph expected={{expected}}></ms-horgraph>'
+            directiveTemplate: '<ms-graph-horizontal expected={{expected}}></ms-graph-horizontal>'
         });
     }])
-  .directive('msHorgraph', [
+  .directive('msGraphHorizontal', [
 	'parser',
 	function (parser) {
 		return {
@@ -34,14 +34,6 @@ angular.module('mathSkills')
 				$scope.answer = '';
                 $scope.controllerId = Math.random().toString();
 				$scope.answercorrect = "";
-				$scope.horgraphtitle = [];
-				$scope.graphTitleIn = "";
-				$scope.horgraphdata1 = [];
-				$scope.horgraphlabel1 = [];
-				$scope.horgraphdata2 = [];
-				$scope.horgraphlabel2 = [];
-				$scope.graphvertical = [];
-				$scope.horgraphbottom = [];
 				
 				var	horgraphdata1In = [],
 					horgraphdata2In = [],
