@@ -24,9 +24,13 @@ describe('<ms-event-label>', function () {
             $rootScope.$digest();
     }));
 
-    it('should call directiveUtils.compileExpected.', inject(function (directiveUtils, $rootScope) {
+    it('should call directiveUtils.compileExpected.', inject(function (directiveUtils, $rootScope, $compile) {
         spyOn(directiveUtils, 'compileExpected');
         
-        //expect(directiveUtils.compileExpected).toHaveBeenCalled();
+        var template = angular.element('<ms-event-label expected="\\frac{\\input{1}}{\\input{2}}" label="test"></ms-event-label>');
+        element = $compile(template)($rootScope.$new());
+        $rootScope.$digest();
+        
+        expect(directiveUtils.compileExpected).toHaveBeenCalled();
     }));
 });
