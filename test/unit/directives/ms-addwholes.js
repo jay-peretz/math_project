@@ -65,8 +65,19 @@ describe('<ms-addwholes>', function () {
         });
 
         describe('when there are more than two numbers', function () {
-            it('should display three or more numbers in text.');
+            beforeEach(inject(function ($rootScope, $compile) {
+                var tagString ='\\addwholes{english}{partial}{[301,815,419]}';
+                var template = angular.element('<ms-addwholes expected='+tagString+'></ms-addwholes>');
+                elScope = $rootScope.$new();
+                element = $compile(template)(elScope);
+                $rootScope.$digest();
+            }));
+    
+            it('it should display two numbers in text.', inject(function ($rootScope) {
+                expect(jQuery(element).find('span').text()).toBe('301, 815, and 419');																		
+            }));
         });
+		
     });
 		
 });
