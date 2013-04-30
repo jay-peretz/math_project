@@ -24,7 +24,7 @@ angular.module('mathSkills')
 				expected: '@',
 				label: '@'
 			},
-			controller: function ($scope, $element) {
+			controller: function ($scope, $element, $filter) {
 				$scope.answer = '';
                 $scope.controllerId = Math.random().toString();
 				$scope.mathdisplay = true;
@@ -40,106 +40,6 @@ angular.module('mathSkills')
 					tightNumbersArray = [],
 					carryNumArray = [],
 					carryNumStringArray = [];
-				
-				function getDecimalPlaces(givenDecimal) {
-					var givenDecimalString = "" + givenDecimal,
-						givenDecimalStringLength = givenDecimalString.length,
-						decimalPlaces = 0;
-					
-					if (givenDecimalString.indexOf(".")>0) {
-						decimalPlaces = (givenDecimalStringLength-1) - givenDecimalString.indexOf(".");
-					} else {
-						decimalPlaces = 0;
-					}
-					return decimalPlaces;				
-				};
-				
-				function addWhole(arrayNumObj) {
-					var wholeSum = 0;
-					for (var ii = 0, len = arrayNumObj.length; ii<len; ii += 1){
-						wholeSum += +arrayNumObj[ii];
-					}
-					return wholeSum;
-				}
-				
-				function addDecimal(arrayNumObj) {
-					var decimalSum = 0,
-						numberOfArrays = arrayNumObj.length,
-						toBeAdded = new Array(numberOfArrays),
-						sixteenZeros = "0000000000000000",
-						placesRight = 1,
-						numberToString = "",
-						addResult = 0,
-						stringWithDecimal = ""; 
-	
-					// get the maximum number of places to the right of the decimal in the set of numbers
-					for (var ii = 0; ii<numberOfArrays; ii++){
-						numberToString = arrayNumObj[ii].toString();
-						if (numberToString.length - numberToString.indexOf(".") - 1 > placesRight) {
-							placesRight = numberToString.length - numberToString.indexOf(".") - 1;
-						}
-					}
-					
-					for (var ii = 0, kk = 0; ii<numberOfArrays; ii++){
-						numberToString = arrayNumObj[ii].toString();
-						kk = placesRight - (numberToString.length - numberToString.indexOf(".") - 1);
-						if (kk > 0) {
-							toBeAdded[ii] = parseInt(numberToString.replace(".", "") + sixteenZeros.substr(0,kk), 10);
-						} else {
-							toBeAdded[ii] = parseInt(numberToString.replace(".", ""), 10);
-						}
-					}
-				
-					addResult = addWhole(toBeAdded);
-					numberToString = addResult.toString();
-					stringWithDecimal = numberToString.slice(0, -placesRight) + "." + numberToString.slice(-placesRight);
-					decimalSum = parseFloat(stringWithDecimal);				
-					return decimalSum;	
-				}
-				
-				function createDisplayArray(decimal, maxPlacesLeft, maxPlacesRight, withZeros) {
-					if ((typeof maxPlacesLeft === "undefined")||(typeof maxPlacesRight === "undefined")||(maxPlacesLeft + maxPlacesRight > 32)) {
-						maxPlacesLeft = 16;
-						maxPlacesRight = 16;
-					}
-					var totalNumberPlaces = maxPlacesLeft + maxPlacesRight + 1, 
-						displayArray = [],
-						decimalString = decimal.toString(),
-						digitsRight = getDecimalPlaces(decimal),
-						rightWithDecimal = digitsRight + 1,
-						decimalLength = decimalString.length,
-						digitsLeft = 0,
-						addZeros = 0;
-						
-					if (digitsRight > 0) {
-						digitsLeft = decimalLength - (digitsRight + 1);
-					} else {
-						digitsLeft = decimalLength;
-						totalNumberPlaces = maxPlacesLeft;
-					}	
-					
-					if ((typeof withZeros !== "undefined")&&(withZeros == 1)) {
-						addZeros = 1;
-					}
-									
-					for (var ii = 0, jj = 0; ii < totalNumberPlaces; ii++) {
-						if (ii < (maxPlacesLeft - digitsLeft)) {
-							// blank is "\xA0"
-							displayArray[ii] = "\xA0";
-						} else if ((ii >= (maxPlacesLeft - digitsLeft))&&(ii <= (maxPlacesLeft + rightWithDecimal))) {
-							displayArray[ii] = decimalString.charAt(jj);
-							jj++;
-						} else if (ii > (maxPlacesLeft + digitsRight)) {
-							if (addZeros == 1) {
-								displayArray[ii] = "0";							
-							} else {
-								displayArray[ii] = "\xA0";
-							}
-						}
-					}
-				
-					return displayArray;
-				}
 				
 				function removeTrailingZeros (zerosNumberArray) {
 					for (var kk = 0, len = zerosNumberArray.length; kk < len; kk++) {
@@ -185,7 +85,7 @@ angular.module('mathSkills')
 					if (addendnumbers[0] !== "undefined" && addendnumbers[1] !== "undefined") {
 						if ($scope.mathdisplay) {
 							
-							answerObject = addDecimal(addendnumbers);
+							answerObject = $filter('add-decimals')(addendnumbers);
 							$scope.answerArray = answerObject.toString().split("");							
 							$scope.answerArrayDecimal = $scope.answerArray.indexOf(".");
 							$scope.displayDigitsRight = $scope.answerArray.length-($scope.answerArrayDecimal+1);
@@ -197,16 +97,16 @@ angular.module('mathSkills')
 							$scope.emptyAnswerArray = [];
 							$scope.displayPlacesLeft = 6;  // maximum 16 places left
 							$scope.displayPlacesRight = 6; // maximum 16 places right
+							$scope.sign = '+';	
+							
 							$scope.allNumbersLength = $scope.displayPlacesLeft + $scope.displayPlacesRight + 1;
 							for (var ii = 0; ii < addendnumbers.length; ii++) {
-								$scope.numberDisplayArray[ii] = createDisplayArray(addendnumbers[ii], $scope.displayPlacesLeft, $scope.displayPlacesRight);
-								$scope.allNumbersArray[ii] = createDisplayArray(addendnumbers[ii], $scope.displayPlacesLeft, $scope.displayPlacesRight, true);
+								$scope.numberDisplayArray[ii] = $filter('decimal-to-display-array')(addendnumbers[ii], $scope.displayPlacesLeft, $scope.displayPlacesRight);
+								$scope.allNumbersArray[ii] = $filter('decimal-to-display-array')(addendnumbers[ii], $scope.displayPlacesLeft, $scope.displayPlacesRight, true);
 							}
 							
 							$scope.startTightArray = $scope.displayPlacesLeft+$scope.displayDigitsRight;
 							$scope.endTightArray = $scope.displayPlacesLeft+$scope.displayDigitsRight - ($scope.answerArray.length);  
-					
-							$scope.sign = '+';	
 							
 							// make arrays based on number of digits in $scope.answerArray for the problem numbers
 							for (var ii = 0, len = addendnumbers.length; ii<len; ii++) {

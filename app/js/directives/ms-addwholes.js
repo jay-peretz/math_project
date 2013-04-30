@@ -24,7 +24,7 @@ angular.module('mathSkills')
 				expected: '@',
 				label: '@'
 			},
-			controller: function ($scope, $element) {
+			controller: function ($scope, $element, $filter) {
 				$scope.answer = '';
                 $scope.controllerId = Math.random().toString();
 				$scope.mathorenglish = [];
@@ -83,7 +83,7 @@ angular.module('mathSkills')
 
 					if (addendnumbers[0] !== "undefined" && addendnumbers[1] !== "undefined") {
 						if ($scope.mathdisplay) {
-							answerObject = add(addendnumbers);
+							answerObject = $filter('add-wholes')(addendnumbers);
 							answerArray = answerObject.toString().split("");
 							tightNumbersArray = new Array(addendnumbers.length);	
 							
