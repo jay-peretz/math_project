@@ -26,7 +26,7 @@ angular.module('mathSkills')
 				expected: '@',
 				label: '@'
 			},
-			controller: function ($scope, $element) {
+			controller: function ($scope, $element, $filter) {
 				$scope.answer = '';
                 $scope.controllerId = Math.random().toString();
 				$scope.mathorenglish = [];
@@ -58,18 +58,6 @@ angular.module('mathSkills')
 					minuendParsed = "",
 					subtrahendParsed = "",
 					maxNumberLength = 0;
-				
-				function subtract(arrayNumObj) {
-					var wholeDiff = 0;
-					for (var ii = 0, len = arrayNumObj.length; ii<len; ii++){
-						if (ii == 0) {
-							wholeDiff = arrayNumObj[ii];
-						} else {
-							wholeDiff -= arrayNumObj[ii];
-						}
-					}
-					return wholeDiff;
-				}
 				
 				function removeLeadingZeros(zerosNumberArray) {
 					for (var ii = 0, oneNotZero = 0; ii < zerosNumberArray.length; ii++) {
@@ -164,7 +152,7 @@ angular.module('mathSkills')
 								$scope.problemObjects.reverse();
 							}
 							
-							$scope.answerObject = subtract($scope.problemObjects);
+							$scope.answerObject = $filter('subtract-wholes')($scope.problemObjects);
 							answerString = $scope.answerObject.toString();
 							
 							for (var ii = 0, len = $scope.problemObjects.length; ii<len; ii++) {

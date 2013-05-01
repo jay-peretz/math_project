@@ -26,7 +26,7 @@ angular.module('mathSkills')
 				expected: '@',
 				label: '@'
 			},
-			controller: function ($scope, $element) {
+			controller: function ($scope, $element, $filter) {
 				$scope.answer = '';
                 $scope.controllerId = Math.random().toString();
 				$scope.mathorenglish = [];
@@ -55,14 +55,6 @@ angular.module('mathSkills')
 					multiplicandParsed = "",
 					multiplierParsed = "",
 					maxNumberLength = 0;
-				
-				function multiply(arrayNumObj) {
-					var wholeProduct = 1;
-					for (var ii = 0, len = arrayNumObj.length; ii<len; ii++){
-						wholeProduct = arrayNumObj[ii]*wholeProduct;
-					}
-					return wholeProduct;
-				}
 				
 				function removeLeadingZeros (zerosNumberArray) {
 					for (var ii = 0, oneNotZero = 0; ii < zerosNumberArray.length; ii++) {
@@ -116,7 +108,7 @@ angular.module('mathSkills')
 								$scope.problemObjects.reverse();
 							}
 							
-							$scope.answerObject = multiply($scope.problemObjects);
+							$scope.answerObject = $filter('multiply-wholes')($scope.problemObjects);
 							answerString = $scope.answerObject.toString();
 							
 							// get the number of digits in the multiplicand and multiplier
