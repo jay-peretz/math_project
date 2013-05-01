@@ -2988,7 +2988,155 @@ angular.module('mathSkills.services')
                     }, {
                         title: '2 Fractions',
                         path: 'fractions',
-                        children: []
+                        children: [
+							{
+											title: '2.4 Reduce Fractions',
+											path: '2.4-reduce-fractions',
+											children: [
+												{
+													title: 'Reduce Fractions',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\row{\\str{Reduce }}{\\frac{\\str{5}}{\\str{10}}}{\\str{ to its lowest terms}}',
+															answer: '\\frac{\\input{1}}{\\input{2}}',
+															controls: {
+																"checkAnswer": true,
+																"help": false
+															}
+														}]
+												  }]
+												},
+												{
+													title: 'Reduce Fractions',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\row{\\str{Reduce }}{\\frac{\\str{6}}{\\str{10}}}{\\str{ to its lowest terms}}',
+															answer: '\\frac{\\input{3}}{\\input{5}}',
+															controls: {
+																"checkAnswer": true,
+																"help": false
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Reduce Fractions',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\row{\\str{Reduce }}{\\frac{\\str{4}}{\\str{6}}}{\\str{ to its lowest terms}}',
+															answer: '\\frac{\\input{2}}{\\input{3}}',
+															controls: {
+																"checkAnswer": true,
+																"help": false
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Reduce Fractions',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\row{\\str{Reduce }}{\\frac{\\str{13}}{\\str{26}}}{\\str{ to its lowest terms}}',
+															answer: '\\frac{\\input{1}}{\\input{2}}',
+															controls: {
+																"checkAnswer": true,
+																"help": false
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Reduce Fractions',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+														//	problem: '\\frac{\\str{3}}{\\str{10}}',
+															problem: '\\row{\\str{Reduce }}{\\frac{\\str{11}}{\\str{22}}}{\\str{ to its lowest terms}}',
+															answer: '\\frac{\\input{1}}{\\input{2}}',
+															controls: {
+																"checkAnswer": true,
+																"help": false
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Reduce Fractions',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\row{\\str{Reduce }}{\\frac{\\str{17}}{\\str{34}}}{\\str{ to its lowest terms}}',
+															answer: '\\frac{\\input{1}}{\\input{2}}',
+															controls: {
+																"checkAnswer": true,
+																"help": false
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Reduce Fractions',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\row{\\str{Reduce }}{\\frac{\\str{10}}{\\str{15}}}{\\str{ to its lowest terms}}',
+															answer: '\\frac{\\input{2}}{\\input{3}}',
+															controls: {
+																"checkAnswer": true,
+																"help": false
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Reduce Fractions',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\row{\\str{Reduce }}{\\frac{\\str{12}}{\\str{48}}}{\\str{ to its lowest terms}}',
+															answer: '\\frac{\\input{1}}{\\input{4}}',
+															controls: {
+																"checkAnswer": true,
+																"help": false
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Reduce Fractions',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\row{\\str{Reduce }}{\\frac{\\str{18}}{\\str{24}}}{\\str{ to its lowest terms}}',
+															answer: '\\frac{\\input{3}}{\\input{4}}',
+															controls: {
+																"checkAnswer": true,
+																"help": false
+															}
+														}]
+													}]
+												},
+												{
+													title: 'Reduce Fractions',
+													children: [{
+														title: 'Main Answer',
+														children: [{
+															problem: '\\row{\\str{Reduce }}{\\frac{\\str{16}}{\\str{24}}}{\\str{ to its lowest terms}}',
+															answer: '\\frac{\\input{2}}{\\input{3}}',
+															controls: {
+																"checkAnswer": true,
+																"help": false
+															}
+														}]
+													}]
+												},
+											]
+										}
+						]
                     }, {
                         title: '3 Decimals',
                         path: 'decimals',
