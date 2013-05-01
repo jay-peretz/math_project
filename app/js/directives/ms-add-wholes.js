@@ -12,10 +12,10 @@ angular.module('mathSkills')
             },{
                 name: 'addendparams'
             }],
-            directiveTemplate: '<ms-addwholes expected={{expected}}></ms-addwholes>'
+            directiveTemplate: '<ms-add-wholes expected={{expected}}></ms-add-wholes>'
         });
     }])
-  .directive('msAddwholes', [
+  .directive('msAddWholes', [
 	'parser',
 	function (parser) {
 		return {

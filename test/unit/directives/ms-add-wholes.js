@@ -1,6 +1,6 @@
 /*global angular, beforeEach, browserTrigger, describe, expect, inject, it, jasmine, xit */
 
-describe('<ms-addwholes>', function () {
+describe('<ms-add-wholes>', function () {
     var element = {},
         elScope = {},
 		cacheHTML = {};
@@ -11,13 +11,13 @@ describe('<ms-addwholes>', function () {
 	
     beforeEach(inject(function ($rootScope, $compile) {
 		var tagString ='\\addwholes{math}{complete}{[47,59]}';
-        var template = angular.element('<ms-addwholes expected='+tagString+'></ms-addwholes>');
+        var template = angular.element('<ms-add-wholes expected='+tagString+'></ms-add-wholes>');
         elScope = $rootScope.$new();
         element = $compile(template)(elScope);
         $rootScope.$digest();
     }));
 
-    describe('when ms-addplace tag element is added', function () {
+    describe('when ms-add-wholes tag element is added', function () {
 
         it('should be present on the page', inject(function ($rootScope) {
             expect(jQuery(element).find('table').length).toBe(1);
@@ -45,11 +45,11 @@ describe('<ms-addwholes>', function () {
 		
     });
 
-    describe('when <ms-addwholes> first tag element is english', function () {
+    describe('when <ms-add-wholes> first tag element is english', function () {
         describe('when there are two numbers', function () {
             beforeEach(inject(function ($rootScope, $compile) {
                 var tagString ='\\addwholes{english}{partial}{[301,815]}';
-                var template = angular.element('<ms-addwholes expected='+tagString+'></ms-addwholes>');
+                var template = angular.element('<ms-add-wholes expected='+tagString+'></ms-add-wholes>');
                 elScope = $rootScope.$new();
                 element = $compile(template)(elScope);
                 $rootScope.$digest();
@@ -63,7 +63,7 @@ describe('<ms-addwholes>', function () {
         describe('when there are three numbers', function () {
             beforeEach(inject(function ($rootScope, $compile) {
                 var tagString ='\\addwholes{english}{partial}{[301,815,419]}';
-                var template = angular.element('<ms-addwholes expected='+tagString+'></ms-addwholes>');
+                var template = angular.element('<ms-add-wholes expected='+tagString+'></ms-add-wholes>');
                 elScope = $rootScope.$new();
                 element = $compile(template)(elScope);
                 $rootScope.$digest();
