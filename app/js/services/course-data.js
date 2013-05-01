@@ -3736,6 +3736,151 @@ angular.module('mathSkills.services')
                                         }]
                                     }
                                 ]
+                            },
+								{
+                                title: '3.5 Subtract Decimal Numbers',
+                                path: '3.5-subtract-decimal-numbers',
+                                children: [
+                                    {
+										title: 'Subtract Decimal Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{math}{partial}{[47.2,59.6]}}}',
+												answer: '\\input{106.8}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[47.2,59.6]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  106.8}}{label_like}}}'
+												}
+											}]
+										}]
+									},{
+										title: 'Add Decimal Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{english}{partial}{[73.98,396.43,47.514]}}}',
+												answer: '\\input{517.924}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[73.98,396.43,47.514]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  517.924}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Decimal Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{english}{partial}{[95.2,53.3,75.12]}}}',
+												answer: '\\input{223.62}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[95.2,53.3,75.12]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  223.62}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Decimal Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{math}{partial}{[86.21,8.83,235.755]}}}',
+												answer: '\\input{330.795}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[86.21,8.83,235.755]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  330.795}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Decimal Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{english}{partial}{[3.471,92.43,8.11]}}}',
+												answer: '\\input{104.011}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[3.471,92.43,8.11]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  104.011}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Decimal Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{math}{partial}{[66.6,36.94,7.44]}}}',
+												answer: '\\input{110.98}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[66.6,36.94,7.44]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  110.98}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Decimal Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{math}{partial}{[4.2,1.883,72.79]}}}',
+												answer: '\\input{78.873}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[4.2,1.883,72.79]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  78.873}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Decimal Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{english}{partial}{[4068.97963, 343390.77255, 537.75789]}}}',
+												answer: '\\input{347997.51007}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[4068.97963, 343390.77255, 537.75789]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  347997.51007}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Decimal Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{math}{partial}{[532.2879,51694.671,685.8118]}}}',
+												answer: '\\input{52912.7707}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[532.2879,51694.671,685.8118]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  52912.7707}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Add Decimal Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{english}{partial}{[5267.4401,583.1444,938.78761]}}}',
+												answer: '\\input{6789.37211}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[5267.4401,583.1444,938.78761]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  6789.37211}}{label_like}}}'
+												}
+											}]
+                                        }]
+                                    }
+                                ]
                             },{
 											title: '3.8 Change Fractions to Decimals',
 											path: '3.8-change-fractions-to-decimals',
