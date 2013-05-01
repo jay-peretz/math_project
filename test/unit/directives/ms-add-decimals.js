@@ -1,6 +1,6 @@
 /*global angular, beforeEach, browserTrigger, describe, expect, inject, it, jasmine, xit */
 
-describe('<ms-addwholes>', function () {
+describe('<ms-add-decimals>', function () {
     var element = {},
         elScope = {},
 		cacheHTML = {};
@@ -10,14 +10,14 @@ describe('<ms-addwholes>', function () {
     beforeEach(module('mathSkills'));
 	
     beforeEach(inject(function ($rootScope, $compile) {
-		var tagString ='\\addwholes{math}{complete}{[47,59]}';
-        var template = angular.element('<ms-addwholes expected='+tagString+'></ms-addwholes>');
+		var tagString ='\\adddecimals{math}{complete}{[47.2,59.6]}';
+        var template = angular.element('<ms-add-decimals expected='+tagString+'></ms-add-decimals>');
         elScope = $rootScope.$new();
         element = $compile(template)(elScope);
         $rootScope.$digest();
     }));
 
-    describe('when ms-addplace tag element is added', function () {
+    describe('when ms-add-decimals tag element is added', function () {
 
         it('should be present on the page', inject(function ($rootScope) {
             expect(jQuery(element).find('table').length).toBe(1);
@@ -45,32 +45,32 @@ describe('<ms-addwholes>', function () {
 		
     });
 
-    describe('when <ms-addwholes> first tag element is english', function () {
+    describe('when <ms-add-decimals> first tag element is english', function () {
         describe('when there are two numbers', function () {
             beforeEach(inject(function ($rootScope, $compile) {
-                var tagString ='\\addwholes{english}{partial}{[301,815]}';
-                var template = angular.element('<ms-addwholes expected='+tagString+'></ms-addwholes>');
+                var tagString ='\\adddecimals{english}{partial}{[47.2,59.6]}';
+                var template = angular.element('<ms-add-decimals expected='+tagString+'></ms-add-decimals>');
                 elScope = $rootScope.$new();
                 element = $compile(template)(elScope);
                 $rootScope.$digest();
             }));
     
             it('it should display two numbers in text.', inject(function ($rootScope) {
-                expect(jQuery(element).find('span').text()).toContain('301 and 815');																		
+                expect(jQuery(element).find('span').text()).toContain('47.2 and 59.6');																		
             }));
         });
 
         describe('when there are three numbers', function () {
             beforeEach(inject(function ($rootScope, $compile) {
-                var tagString ='\\addwholes{english}{partial}{[301,815,419]}';
-                var template = angular.element('<ms-addwholes expected='+tagString+'></ms-addwholes>');
+                var tagString ='\\adddecimals{english}{partial}{[301.1,815.2,419.3]}';
+                var template = angular.element('<ms-add-decimals expected='+tagString+'></ms-add-decimals>');
                 elScope = $rootScope.$new();
                 element = $compile(template)(elScope);
                 $rootScope.$digest();
             }));
     
             it('it should display three numbers in text.', inject(function ($rootScope) {
-                expect(jQuery(element).find('span').text()).toContain('301, 815, and 419');																		
+                expect(jQuery(element).find('span').text()).toContain('301.1, 815.2, and 419.3');																		
             }));
         });
 		
