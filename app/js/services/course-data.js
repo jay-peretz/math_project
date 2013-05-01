@@ -3005,7 +3005,24 @@ angular.module('mathSkills.services')
 																"help": false
 															}
 														}]
-												  }]
+												  }, {
+                                            title: 'Workbook',
+                                            children: [{
+                                                problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{5}}{\\str{10}}}',
+                                                answer: '\\input{5}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": false
+                                                }
+                                            },{
+                                                problem: '\\row{\\str{Factor out a 5}}{\\frac{\\str{5 div 5}}{\\str{10 div 5}}}',
+                                                answer: '\\frac{\\input{1}}{\\input{2}}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": false
+                                                }
+                                            }]
+                                        }]
 												},
 												{
 													title: 'Reduce Fractions',
