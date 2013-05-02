@@ -10,20 +10,16 @@ angular.module('mathSkills')
                 };
 
                 var totalDecimals = arrayNumObj.reduce(function (a, b) {
-                    return a + decimalDigits(b);
+                    return (a + decimalDigits(b));
                 }, 0);
-
-               var productNoDecimal = String(arrayNumObj.map(String).reduce(function (a, b) {
-					var bnodecimal = b.replace(/\./g, "");
-					return (a * bnodecimal);
-                }, 1));	
-			   
-			   if (productNoDecimal.length > 17) {
-			   		console.log("large digit products may lose accuracy due to Javascript IEEE 754 implementation- number of digits: "+productNoDecimal.length);
-			   }
-			   
-			   return Number([productNoDecimal.slice(0, productNoDecimal.length-totalDecimals), '.', productNoDecimal.slice(productNoDecimal.length-totalDecimals)].join(''));
 				
+				if (totalDecimals > 14) {
+					console.log("due to IEEE 754 implementation in Javascript, operations on numbers with large decimal portions may not produce accurate results")
+				}
+
+               return Number(arrayNumObj.map(Number).reduce(function (a, b) {
+                    return a * b;
+                }).toFixed(totalDecimals));	
             };
         }
     ]);

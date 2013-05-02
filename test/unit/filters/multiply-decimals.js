@@ -18,15 +18,11 @@ describe('multiply-decimals filter', function () {
     });
 		
 	it('should return the product of four decimal numbers', function () {
-        expect(multiplyDecimalsFilter([9.9, 99.99, 999.999, 1.1])).toBe(1088890.0111089);
+        expect(multiplyDecimalsFilter([9.9, 99.99, 999.999, 999.999])).toBe(989899020.198989901);
     });
 	
-	it('should return the product of two decimal numbers with 8 decimal places', function () {
-        expect(multiplyDecimalsFilter([1.11111112, 2.88888889])).toBe(3.2098765701234568);
-    });
-	
-	it('will return an inaccurate answer for certain large decimal multiplications', function () {
-        expect(multiplyDecimalsFilter([9.9, 99.99, 999.999, 999.999])).not.toBe(989899020.198989901);
+	it('should fail to return the accurate product of two decimal numbers with 8 decimal places', function () {
+        expect(multiplyDecimalsFilter([1.11111112, 2.88888889])).not.toBe(3.2098765701234568);
     });
 
 });
