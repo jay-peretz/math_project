@@ -3,7 +3,9 @@
 
 angular.module('mathSkills.services')
     .service('panelGroupData', [
-        function () {
+        '$q',
+        '$timeout',
+        function ($q, $timeout) {
             var privateData = {};
 
             var panelGroupData = {
@@ -20,6 +22,19 @@ angular.module('mathSkills.services')
                         privateData.index = ii;
                     }
                     return privateData.index === ii;
+                },
+                getIndex: function () {
+                    var deferred = $q.defer();
+
+                    $timeout(function () {
+                        if (privateData.index === undefined) {
+                            deferred.resolve(0);
+                        } else {
+                            deferred.resolve(privateData.index);
+                        }
+                    }, 0);
+
+                    return deferred.promise;
                 },
                 /**
                  * Resets the current answer index for a multiple answer problem.

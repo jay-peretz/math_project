@@ -14,53 +14,88 @@ describe('<ms-input>', function () {
     }));
 
     describe('when responding to checkAnswer events', function () {
-        it('should respond properly to empty answers', inject(function ($rootScope) {
-            $rootScope.$on('answer', function (e, data) {
-                expect(data.result).toBe('incorrect');
-                expect(data.answer).toBe('\\input{}');
-                expect(data.label).toBeUndefined();
-                expect(data.expected).toBe('\\input{3}');
+        describe('when it has a known answer', function () {
+            it('should respond properly to empty answers', inject(function ($rootScope) {
+                $rootScope.$on('answer', function (e, data) {
+                    expect(data.result).toBe('incorrect');
+                    expect(data.answer).toBe('\\input{}');
+                    expect(data.label).toBeUndefined();
+                    expect(data.expected).toBe('\\input{3}');
+                });
+    
+                $rootScope.$broadcast('checkAnswer');
+                $rootScope.$digest();
+            }));
+    
+            it('should respond properly to correct answers', inject(function ($rootScope) {
+                element.find('input').val('3');
+                expect(element.find('input').val()).toBe('3');
+    
+                // This is the magic to get the answer ng-model to update.
+                jQuery(element).find('input').trigger('input');
+    
+                $rootScope.$on('answer', function (e, data) {
+                    expect(data.result).toBe('correct');
+                    expect(data.answer).toBe('\\input{3}');
+                    expect(data.label).toBeUndefined();
+                    expect(data.expected).toBe('\\input{3}');
+                });
+    
+                $rootScope.$broadcast('checkAnswer');
+                $rootScope.$digest();
+            }));
+    
+            it('should respond properly to incorrect answers', inject(function ($rootScope) {
+                element.find('input').val('4');
+                expect(element.find('input').val()).toBe('4');
+    
+                // This is the magic to get the answer ng-model to update.
+                jQuery(element).find('input').trigger('input');
+    
+                $rootScope.$on('answer', function (e, data) {
+                    expect(data.result).toBe('incorrect');
+                    expect(data.answer).toBe('\\input{4}');
+                    expect(data.label).toBeUndefined();
+                    expect(data.expected).toBe('\\input{3}');
+                });
+    
+                $rootScope.$broadcast('checkAnswer');
+                $rootScope.$digest();
+            }));
+        });
+
+        describe('when it has multiple answers', function () {
+            beforeEach(inject(function ($compile, $rootScope) {
+                var template = angular.element('<ms-input expected=\\input{[1, 2, 3]}></ms-input>');
+                element = $compile(template)($rootScope);
+                $rootScope.$digest();
+            }));
+
+            describe('when the answer is a possible answer', function () {
+                it('should query the data service and give the appropriate feedback.');
             });
 
-            $rootScope.$broadcast('checkAnswer');
-            $rootScope.$digest();
-        }));
-
-        it('should respond properly to correct answers', inject(function ($rootScope) {
-            element.find('input').val('3');
-            expect(element.find('input').val()).toBe('3');
-
-            // This is the magic to get the answer ng-model to update.
-            jQuery(element).find('input').trigger('input');
-
-            $rootScope.$on('answer', function (e, data) {
-                expect(data.result).toBe('correct');
-                expect(data.answer).toBe('\\input{3}');
-                expect(data.label).toBeUndefined();
-                expect(data.expected).toBe('\\input{3}');
+            describe('when the answer is not a possible answer', function () {
+                it('should give incorrect feedback.', inject(function ($rootScope, $timeout) {
+                    element.find('input').val('4');
+                    expect(element.find('input').val()).toBe('4');
+        
+                    // This is the magic to get the answer ng-model to update.
+                    jQuery(element).find('input').trigger('input');
+        
+                    $rootScope.$on('answer', function (e, data) {
+                        expect(data.result).toBe('incorrect');
+                        expect(data.answer).toBe('\\input{4}');
+                        expect(data.label).toBeUndefined();
+                        expect(data.expected).toBe('\\input{1}');
+                    });
+        
+                    $rootScope.$broadcast('checkAnswer');
+                    $rootScope.$digest();
+                    $timeout.flush();
+                }));
             });
-
-            $rootScope.$broadcast('checkAnswer');
-            $rootScope.$digest();
-        }));
-
-        it('should respond properly to incorrect answers', inject(function ($rootScope) {
-            element.find('input').val('4');
-            expect(element.find('input').val()).toBe('4');
-
-            // This is the magic to get the answer ng-model to update.
-            jQuery(element).find('input').trigger('input');
-
-            $rootScope.$on('answer', function (e, data) {
-                expect(data.result).toBe('incorrect');
-                expect(data.answer).toBe('\\input{4}');
-                expect(data.label).toBeUndefined();
-                expect(data.expected).toBe('\\input{3}');
-            });
-
-            $rootScope.$broadcast('checkAnswer');
-            $rootScope.$digest();
-        }));
+        });
     });
 
     describe('when responding to checkFocus events', function () {
