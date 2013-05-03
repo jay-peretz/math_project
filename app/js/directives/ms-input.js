@@ -9,7 +9,9 @@ angular.module('mathSkills')
     }])
     .directive('msInput', [
         '$timeout',
-        function ($timeout) {
+        'parser',
+        'panelGroupData',
+        function ($timeout, parser, panelGroupData) {
             return {
                 restrict: 'E',
                 scope: {
@@ -22,21 +24,50 @@ angular.module('mathSkills')
 
                     $scope.$on('checkAnswer', function (e) {
                         if (e.defaultPrevented !== true) {
+                            var parsedExpected = parser.extractTag($scope.expected).args[0];
                             var answer = '\\input{' + $scope.answer + '}',
                                 data = {
                                     expected: $scope.expected,
                                     answer: answer,
                                     label: $scope.label
                                 };
-                            if ($scope.expected === answer) {
-                                data.result = 'correct';
-                                $scope.class = 'success';
+
+                            if (parsedExpected[0] === '[') {
+                                var possibleAnswers = JSON.parse(parsedExpected);
+                                var answerIndex = possibleAnswers.indexOf($scope.answer);
+                                if (answerIndex !== -1) {
+                                    var correctAnswerIndex = panelGroupData.index(answerIndex);
+                                    if (correctAnswerIndex === answerIndex) {
+                                        data.result = 'correct';
+                                        data.expected = data.answer;
+                                        $scope.class = 'success';
+                                    } else {
+                                        data.result = 'incorrect';
+                                        data.expected = '\\input{' + possibleAnswers[correctAnswerIndex] + '}';
+                                        $scope.class = 'error';
+                                        $scope.answer = "";
+                                    }
+                                    $scope.$emit('answer', data);
+                                } else {
+                                    panelGroupData.getIndex().then(function (index){
+                                        data.result = 'incorrect';
+                                        data.expected = '\\input{' + possibleAnswers[index] + '}';
+                                        $scope.class = 'error';
+                                        $scope.answer = "";
+                                        $scope.$emit('answer', data);
+                                    });
+                                }
                             } else {
-                                data.result = 'incorrect';
-                                $scope.class = 'error';
-                                $scope.answer = '';
+                                if ($scope.expected === answer) {
+                                    data.result = 'correct';
+                                    $scope.class = 'success';
+                                } else {
+                                    data.result = 'incorrect';
+                                    $scope.class = 'error';
+                                    $scope.answer = '';
+                                }
+                                $scope.$emit('answer', data);
                             }
-                            $scope.$emit('answer', data);
                         }
                     });
 

@@ -21,7 +21,7 @@ angular.module('mathSkills.services')
                     if (privateData.index === undefined) {
                         privateData.index = ii;
                     }
-                    return privateData.index === ii;
+                    return privateData.index;
                 },
                 getIndex: function () {
                     var deferred = $q.defer();
