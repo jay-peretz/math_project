@@ -72,8 +72,18 @@ angular.module('mathSkills')
 				// functions to style the help-display borrows
 								
 				$scope.getClass2 = function(index) {
+						var arrayRow = [],
+							returnClasses = "";
+						
 						rowForAddClass = index;	
-				}
+						
+						arrayRow = ["row-zero", "row-one", "row-two"];
+						if ($scope.displayresult) {
+							returnClasses += "displayresult ";
+							returnClasses += arrayRow[index];
+						}
+						return returnClasses;
+				}			
 						
 				$scope.getClass3 = function(index) {
 					var finalCarryCurrent = displayWithBorrowsFinal[rowForAddClass][index],
