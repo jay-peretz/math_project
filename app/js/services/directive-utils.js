@@ -6,7 +6,8 @@ angular.module('mathSkills.services')
     .service('directiveUtils', [
         'parser',
         '$compile',
-        function (parser, $compile) {
+        '$timeout',
+        function (parser, $compile, $timeout) {
             return {
                 /**
                  * Places the appropriate properties and listeners on a scope
@@ -229,6 +230,39 @@ angular.module('mathSkills.services')
                             }
                         }
                     });
+                },
+
+                size: function ($scope) {
+                    $scope.$on('size', function(e, data, id, type) {
+
+                        var endnode = data.label === 'numerator' || data.label  === 'denominator' ? 'fraction' + type : data.label + type;
+                        $scope[endnode] = $scope[endnode] !== undefined ? Math.max(data.size, $scope[endnode]) : data.size;
+
+                        $timeout(function () {
+                            $scope.$broadcast('resize', {size: $scope[endnode], label: endnode}, id);
+                        }, 0);
+                    });
+                },
+
+                resize: function ($scope, arr, type, pix, pad) {
+                    $scope.$on('resize', function(e, data, id) {
+                        if ($scope.controllerId ===  id){
+                            $scope.width = data.size + 'px';
+                        }
+                    });
+
+                    $scope.$watch('expected', function () {
+                        if($scope.expected) {
+                            $scope.$emit('size', {size: getSize(arr, pix, pad)}, $scope.controllerId, type);
+                        }
+                    });
+
+                    function getSize(arr, pix, pad) {
+                        var size= arr.reduce(function (a, b) {
+                            return a.length > b.length ? a.length : b.length; 
+                        }, "");
+                        return (+size * pix) + pad;
+                    }
                 }
             };
         }

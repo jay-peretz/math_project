@@ -8,10 +8,11 @@ angular.module('mathSkills')
         });
     }])
     .directive('msInput', [
+        'directiveUtils',
         '$timeout',
         'parser',
         'panelGroupData',
-        function ($timeout, parser, panelGroupData) {
+        function (directiveUtils, $timeout, parser, panelGroupData) {
             return {
                 restrict: 'E',
                 scope: {
@@ -134,6 +135,14 @@ angular.module('mathSkills')
                             }
                         }
                     });
+                    
+                    $scope.$watch('expected', function () {
+                        if($scope.expected) {
+                            var arr = [];
+                            arr.push($scope.expected.slice(7, $scope.expected.length - 1));
+                            directiveUtils.resize($scope, arr, 'input', 10, 10);
+                        }
+                    });
 
                     jQuery($element).on('keyup', 'input', function (event) {
                         if (event.keyCode === 13 || event.keyCode === 10) {
@@ -148,7 +157,7 @@ angular.module('mathSkills')
                         }
                     });
                 },
-                template: '<div class="control-group {{class}}"><label><span>{{label}}</span><input ng-model=answer></label></div>'
+                template: '<div class="control-group {{class}}"><label><span>{{label}}</span><input style="width:{{width}};" ng-model=answer></label></div>'
             };
         }
     ]);

@@ -16,7 +16,8 @@ angular.module('mathSkills')
     }])
     .directive('msFraction', [
         'directiveUtils',
-        function (directiveUtils) {
+        '$timeout',
+        function (directiveUtils, $timeout) {
             return {
                 controller: function ($scope, $element) {
                     $scope.tag = 'frac';
@@ -26,6 +27,7 @@ angular.module('mathSkills')
                     directiveUtils.compileExpected($scope, $element);
                     directiveUtils.routeHelp($scope);
                     directiveUtils.routeFocus($scope);
+                    directiveUtils.size($scope);
                 },
                 restrict: 'E',
                 scope: {

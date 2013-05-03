@@ -13,6 +13,12 @@ angular.module('mathSkills')
                     $scope.$on('answer', function (e, data) {
                         data.label = $scope.label;
                     });
+                    
+                    $scope.$on('size', function (e, data) {
+                        if (!data.label){
+                            data.label = $scope.label;
+                        }
+                    });
 
                     // Let the parser determine our template.
                     directiveUtils.compileExpected($scope, $element, true);

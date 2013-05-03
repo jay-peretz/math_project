@@ -13,7 +13,8 @@ angular.module('mathSkills')
     }])
   .directive('msSelect', [
 	'parser',
-	function (parser) {
+    'directiveUtils',
+	function (parser, directiveUtils) {
 		return {
 			restrict: 'E',
 			scope: {
@@ -95,7 +96,13 @@ angular.module('mathSkills')
                         }
                     }
                 });
-
+ 
+                $scope.$watch('expected', function () {
+                    if($scope.expected) {
+                        directiveUtils.resize($scope, $scope.optionsarray, 'select', 10, 10);
+                    }
+                });
+                
                 jQuery($element).on('keyup', 'select', function (event) {
                     if (event.keyCode === 13 || event.keyCode === 10) {
                         $scope.$apply($scope.$emit('triggerCheckAnswer'));
@@ -110,6 +117,6 @@ angular.module('mathSkills')
                 });
 	
 			},
-			template: '<div class="control-group {{class}}"><label><span>{{label}}</span><select ng-model="answer" ng-options="value for value in optionsarray"> <option value="">-- choose --</option></select></label></div>'
+			template: '<div class="control-group {{class}}"><label><span>{{label}}</span><select style="width:{{width}};" ng-model="answer" ng-options="value for value in optionsarray"> <option value="">-- choose --</option></select></label></div>'
 		};
 	}]);

@@ -4839,6 +4839,29 @@ angular.module('mathSkills.services')
                                         }]
                                     }
                                 ]
+                            }, {
+                                title: 'Testing width',
+                                path: 'width',
+                                children: [
+                                    {
+                                        title: 'width',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{this is a width test}',
+                                                //answer: '\\mixed{\\input{55}}{\\frac{\\input{66}}{\\input{99999}}}',
+                                                //answer: '\\frac{\\mixed{\\input{5555}}{\\frac{\\input{66}}{\\input{99999}}}}{\\mixed{\\input{55}}{\\frac{\\input{2}}{\\input{33}}}}',
+                                                answer: 'frac{\\frac{\\mixed{\\input{1}}{\\frac{\\select{Tens}{["Ones", "Tens"]}}{\\input{20}}}}{\\mixed{\\input{55}}{\\frac{\\input{2}}{\\input{33}}}}}{\\frac{\\mixed{\\input{55}}{\\frac{\\select{Tens}{["Ones", "Tens", "Hundreds", "Thousands"]}}{\\input{99999}}}}{\\mixed{\\input{55}}{\\frac{\\input{2}}{\\input{33}}}}}',
+                                                //answer: '\\mixed{\\input{55}}{\\frac{\\select{Tens}{["Ones", "Tens", "Hundreds", "Thousands"]}}{\\select{Tens}{["Ones", "Tens"]}}',
+                                                //answer: '\\frac{\\mixed{\\input{55}}{\\frac{\\select{Tens}{["Ones", "Tens", "Hundreds", "Thousands"]}}{\\select{Tens}{["Ones", "Tens"]}}}{\\mixed{\\input{55}}{\\frac{\\select{Tens}{["Ones", "Tens", "Hundreds", "Thousands"]}}{\\select{Tens}{["Ones", "Tens"]}}}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    }
+                                ]
                             }
                         ]
                     }
