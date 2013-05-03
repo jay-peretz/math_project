@@ -3746,136 +3746,136 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{math}{partial}{[47.2,59.6]}}}',
-												answer: '\\input{106.8}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{math}{partial}{17.3}{5.22}}}',
+												answer: '\\input{12.08}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[47.2,59.6]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  106.8}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{17.3}{5.22}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  12.08}}{label_like}}}'
 												}
 											}]
 										}]
 									},{
-										title: 'Add Decimal Numbers',
+										title: 'Subtract Decimal Numbers',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{english}{partial}{[73.98,396.43,47.514]}}}',
-												answer: '\\input{517.924}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{math}{partial}{3}{0.12}}}',
+												answer: '\\input{2.88}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[73.98,396.43,47.514]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  517.924}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{3}{0.12}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  2.88}}{label_like}}}'
 												}
 											}]
 										}]
 									},
 									{
-										title: 'Add Decimal Numbers',
+										title: 'Subtract Decimal Numbers',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{english}{partial}{[95.2,53.3,75.12]}}}',
-												answer: '\\input{223.62}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{math}{partial}{8.42}{5.75}}}',
+												answer: '\\input{2.67}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[95.2,53.3,75.12]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  223.62}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{8.42}{5.75}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  2.67}}{label_like}}}'
 												}
 											}]
 										}]
 									},
 									{
-										title: 'Add Decimal Numbers',
+										title: 'Subtract Decimal Numbers',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{math}{partial}{[86.21,8.83,235.755]}}}',
-												answer: '\\input{330.795}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{english}{partial}{8.7}{5.33}}}',
+												answer: '\\input{3.37}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[86.21,8.83,235.755]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  330.795}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{8.7}{5.33}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  3.37}}{label_like}}}'
 												}
 											}]
 										}]
 									},
 									{
-										title: 'Add Decimal Numbers',
+										title: 'Subtract Decimal Numbers',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{english}{partial}{[3.471,92.43,8.11]}}}',
-												answer: '\\input{104.011}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{math}{partial}{27.15}{2.75}}}',
+												answer: '\\input{24.4}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[3.471,92.43,8.11]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  104.011}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{27.15}{2.75}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  24.4}}{label_like}}}'
 												}
 											}]
 										}]
 									},
 									{
-										title: 'Add Decimal Numbers',
+										title: 'Subtract Decimal Numbers',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{math}{partial}{[66.6,36.94,7.44]}}}',
-												answer: '\\input{110.98}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{english}{partial}{22.1}{3.8}}}',
+												answer: '\\input{18.3}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[66.6,36.94,7.44]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  110.98}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{22.1}{3.8}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  18.3}}{label_like}}}'
 												}
 											}]
 										}]
 									},
 									{
-										title: 'Add Decimal Numbers',
+										title: 'Subtract Decimal Numbers',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{math}{partial}{[4.2,1.883,72.79]}}}',
-												answer: '\\input{78.873}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{math}{partial}{458.5}{84.158}}}',
+												answer: '\\input{374.342}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[4.2,1.883,72.79]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  78.873}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{458.5}{84.158}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  374.342}}{label_like}}}'
 												}
 											}]
 										}]
 									},
 									{
-										title: 'Add Decimal Numbers',
+										title: 'Subtract Decimal Numbers',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{english}{partial}{[4068.97963, 343390.77255, 537.75789]}}}',
-												answer: '\\input{347997.51007}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{english}{partial}{292.653}{6.32}}}',
+												answer: '\\input{286.333}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[4068.97963, 343390.77255, 537.75789]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  347997.51007}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{292.653}{6.32}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  286.333}}{label_like}}}'
 												}
 											}]
 										}]
 									},
 									{
-										title: 'Add Decimal Numbers',
+										title: 'Subtract Decimal Numbers',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{math}{partial}{[532.2879,51694.671,685.8118]}}}',
-												answer: '\\input{52912.7707}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{english}{partial}{9.28}{5.84}}}',
+												answer: '\\input{3.39}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[532.2879,51694.671,685.8118]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  52912.7707}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{9.28}{5.84}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  3.39}}{label_like}}}'
 												}
 											}]
 										}]
 									},
 									{
-										title: 'Add Decimal Numbers',
+										title: 'Subtract Decimal Numbers',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the sum of the decimal numbers:}}}{\\row{\\adddecimals{english}{partial}{[5267.4401,583.1444,938.78761]}}}',
-												answer: '\\input{6789.37211}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{math}{partial}{955.707}{87.475}}}',
+												answer: '\\input{868.232}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[5267.4401,583.1444,938.78761]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  6789.37211}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{955.707}{87.475}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  868.232}}{label_like}}}'
 												}
 											}]
                                         }]

@@ -5,7 +5,6 @@ angular.module('mathSkills')
     .filter('decimal-to-display-array', [
         function () {
             return function (decimal, maxPlacesLeft, maxPlacesRight, withZeros) {
-				
 				function getDecimalPlaces (givenDecimal) {
 					var givenDecimalString = "" + givenDecimal,
 						givenDecimalStringLength = givenDecimalString.length,
