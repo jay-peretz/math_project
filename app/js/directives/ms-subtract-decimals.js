@@ -74,72 +74,40 @@ angular.module('mathSkills')
 				$scope.getClass2 = function(index) {
 						rowForAddClass = index;	
 				}
-				
-				/*$scope.getClass3 = function(index) {
-					var finalCarryCurrent = $scope.displayBorrowsDecimal[rowForAddClass][index],
+						
+				$scope.getClass3 = function(index) {
+					var finalCarryCurrent = displayWithBorrowsFinal[rowForAddClass][index],
 						finalCarryAbove = "",
 						finalCarryAboveRight = "",
 						finalCarryOdd = index%2,
 						classesReturn = "";	
-						
-					if (index%2==1) {
-						classesReturn += "borrowSubtract "; 
-					}
-						
+					
 					if (rowForAddClass>0) {
-						finalCarryAbove = $scope.displayBorrowsDecimal[rowForAddClass-1][index];
-						finalCarryAboveRight = $scope.displayBorrowsDecimal[rowForAddClass-1][index+1];
+						finalCarryAbove = displayWithBorrowsFinal[rowForAddClass-1][index];
+						finalCarryAboveRight = displayWithBorrowsFinal[rowForAddClass-1][index+1];
 					}
 						
 					if (rowForAddClass > 0) {
 						if (finalCarryCurrent !== "" && finalCarryAbove !== "") {		
-							classesReturn += "line_through_dimmed ";
-						}
+							classesReturn = "line_through_dimmed ";
+						} 
 						if (finalCarryCurrent !== "" && finalCarryAboveRight !== "" &&finalCarryOdd){
-							classesReturn += "line_through_dimmed ";
-						}
+							classesReturn = "line_through_dimmed ";
+						} 
+						if (finalCarryOdd) {
+							classesReturn += " borrowSubtract";
+							// selector below isolates columns without a borrow 
+							if ((finalCarryCurrent == "" && finalCarryAbove == "")&&(displayWithBorrowsFinal[1][index]!=1)&&((typeof displayWithBorrowsFinal[2] != "undefined")&&(displayWithBorrowsFinal[2][index] !=1))) {
+								classesReturn += " paddingFullSubtract";
+							// selector below isolates columns with a borrow
+							} else {
+								classesReturn += " paddingHalfSubtract";
+							}
+						} 
 					}
 					
 					return classesReturn;
-				}*/
-			
-			
-		$scope.getClass3 = function(index) {
-			var finalCarryCurrent = $scope.displayBorrowsDecimal[rowForAddClass][index],
-				finalCarryAbove = "",
-				finalCarryAboveRight = "",
-				finalCarryOdd = index%2,
-				classesReturn = "";	
-			
-			for (var ii = $scope.displayBorrowsDecimal.length; ii > 0; ii--) {
-				console.log ("$scope.displayBorrowsDecimal["+ii+"] is: "+$scope.displayBorrowsDecimal[ii]);
-			}
-			if (rowForAddClass>0) {
-				finalCarryAbove = $scope.displayBorrowsDecimal[rowForAddClass-1][index];
-				finalCarryAboveRight = $scope.displayBorrowsDecimal[rowForAddClass-1][index+1];
-			}
-				
-			if (rowForAddClass > 0) {
-				if (finalCarryCurrent !== "" && finalCarryAbove !== "") {		
-					classesReturn = "line_through_dimmed ";
-				} 
-				if (finalCarryCurrent !== "" && finalCarryAboveRight !== "" &&finalCarryOdd){
-					classesReturn = "line_through_dimmed ";
-				} 
-				if (finalCarryOdd) {
-					classesReturn += " borrowSubtract";
-					// selector below isolates columns without a borrow 
-					if ((finalCarryCurrent == "" && finalCarryAbove == "")&&($scope.displayBorrowsDecimal[1][index]!=1)&&((typeof $scope.displayBorrowsDecimal[2] != "undefined")&&($scope.displayBorrowsDecimal[2][index] !=1))) {
-						classesReturn += " paddingFullSubtract";
-					// selector below isolates columns with a borrow
-					} else {
-						classesReturn += " paddingHalfSubtract";
-					}
-				} 
-			}
-			
-			return classesReturn;
-		}
+				}
 
 			
 				
@@ -488,13 +456,18 @@ angular.module('mathSkills')
 							
 							// remove elements of display array if 2nd parameter is anything but "complete"
 							if ($scope.displayresult) {
-									displayWithBorrowsFinal = $scope.displayBorrowsDecimal.slice();
-							} else {
-									for (var ii = 0, len = $scope.displayBorrowsDecimal[0].length; ii < len; ii += 1) {
-										displayWithBorrowsFinal[0] = $scope.displayBorrowsDecimal[$scope.displayBorrowsDecimal.length-1];
+									for (ii = $scope.displayBorrowsDecimal.length - 1; ii >= 0; ii--) {
+										if ($scope.displayBorrowsDecimal[ii].every(function(value) {
+											 return (value === '');
+										})) {
+											$scope.displayBorrowsDecimal.shift();
+										} 
 									}
-
-									for (var ii = 0, len = displayWithBorrowsFinal[0].length; ii < len; ii += 1) {																				// remove carries
+									displayWithBorrowsFinal = $scope.displayBorrowsDecimal.slice();
+									
+							} else {
+									displayWithBorrowsFinal[0] = $scope.displayBorrowsDecimal[$scope.displayBorrowsDecimal.length-1];
+									for (var ii = 0, len = displayWithBorrowsFinal[0].length; ii < len; ii += 1) {										// remove carries
 											if (ii % 2 !== 0) {
 												displayWithBorrowsFinal[0][ii] = "";
 											}
@@ -503,8 +476,7 @@ angular.module('mathSkills')
 									for (var ii = 0, len = $scope.answerWideArrayDecimal.length; ii < len; ii += 1) {
 										$scope.answerWideArrayDecimal[ii] = "";
 									}
-							}
-								
+							}								
 							$scope.firstArray = [];
 							$scope.secondArray = [];
 							$scope.thirdArray = [];
