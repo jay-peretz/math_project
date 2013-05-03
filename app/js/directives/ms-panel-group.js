@@ -3,7 +3,8 @@
 
 angular.module('mathSkills')
     .directive('msPanelGroup', [
-        function () {
+        'panelGroupData',
+        function (panelGroupData) {
             return {
                 controller: [
                     '$scope',
@@ -33,11 +34,17 @@ angular.module('mathSkills')
                                         childScope = childScope.$$nextSibling;
                                     }
                                 }, 0);
+
+                                // Reset the answer index in panelGroupData.
+                                panelGroupData.resetIndex();
                             }
                         });
                         $scope.updateCurrent = function (ii) {
                             $scope.currentPanel = ii;
                             $scope.panelScopes[$scope.currentPanel].$broadcast('checkFocus');
+
+                            // Reset the panelGroupData.
+                            panelGroupData.resetIndex();
                         };
 
                         // Listen for panelDone events.
@@ -46,6 +53,9 @@ angular.module('mathSkills')
                             if ($scope.currentPanel < $scope.panels.length - 1) {
                                 $scope.currentPanel += 1;
                                 $scope.panelScopes[$scope.currentPanel].$broadcast('checkFocus');
+
+                                // Reset the panelGroupData.
+                                panelGroupData.resetIndex();
                             // Otherwise $emit panelGroupDone
                             } else {
                                 $scope.$emit('panelGroupDone', {
