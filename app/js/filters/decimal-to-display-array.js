@@ -4,6 +4,7 @@
 angular.module('mathSkills')
     .filter('decimal-to-display-array', [
         function () {
+			// withZeros = 1 fills in zeros to the right of the last digit, to the right of the decimal
             return function (decimal, maxPlacesLeft, maxPlacesRight, withZeros) {
 				function getDecimalPlaces (givenDecimal) {
 					var givenDecimalString = "" + givenDecimal,
@@ -25,12 +26,23 @@ angular.module('mathSkills')
 				
 				var totalNumberPlaces = maxPlacesLeft + maxPlacesRight + 1, 
 					displayArray = [],
-					decimalString = decimal.toString(),
-					digitsRight = getDecimalPlaces(decimal),
-					rightWithDecimal = digitsRight + 1,
-					decimalLength = decimalString.length,
+					decimalString,
+					digitsRight,
+					rightWithDecimal,
+					decimalLength,
+					decimalWithFix,
 					digitsLeft = 0,
 					addZeros = 0;
+				
+				if ((typeof withZeros !== "undefined")&&(withZeros == 1)) {
+					addZeros = 1;
+				}
+				
+				
+				decimalString = decimal.toString();
+				digitsRight = getDecimalPlaces(decimal);
+				rightWithDecimal = digitsRight + 1;
+				decimalLength = decimalString.length;
 				
 				if (digitsRight > 0) {
 					digitsLeft = decimalLength - (digitsRight + 1);
@@ -39,20 +51,16 @@ angular.module('mathSkills')
 					totalNumberPlaces = maxPlacesLeft;
 				}	
 				
-				if ((typeof withZeros !== "undefined")&&(withZeros == 1)) {
-					addZeros = 1;
-				}
-								
 				for (var ii = 0, jj = 0; ii < totalNumberPlaces; ii++) {
 					if (ii < (maxPlacesLeft - digitsLeft)) {
 						// blank is "\xA0"
 						displayArray[ii] = "\xA0";
-					} else if ((ii >= (maxPlacesLeft - digitsLeft))&&(ii <= (maxPlacesLeft + rightWithDecimal))) {
+					} else if ((ii >= (maxPlacesLeft - digitsLeft))&&(ii <= (maxPlacesLeft + digitsRight))) {
 						displayArray[ii] = decimalString.charAt(jj);
 						jj++;
 					} else if (ii > (maxPlacesLeft + digitsRight)) {
 						if (addZeros == 1) {
-							displayArray[ii] = "0";							
+							displayArray[ii] = "0";	
 						} else {
 							displayArray[ii] = "\xA0";
 						}
