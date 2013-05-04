@@ -13,9 +13,11 @@ angular.module('mathSkills')
                     return (a + decimalDigits(b));
                 }, 0);
 				
-				if (totalDecimals > 14) {
-					console.log("due to IEEE 754 implementation in Javascript, operations on numbers with large decimal portions may not produce accurate results")
-				}
+				if (navigator.userAgent.indexOf('phantom') !== -1) {
+					if (totalDecimals > 14) {
+						console.log("due to IEEE 754 implementation in Javascript, operations on numbers with large decimal portions may not produce accurate results")
+					}
+				}	
 
                return Number(arrayNumObj.map(Number).reduce(function (a, b) {
                     return a * b;
