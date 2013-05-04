@@ -27,20 +27,10 @@ angular.module('mathSkills')
 				label: '@'
 			},
 			controller: function ($scope, $element, $filter) {
-				$scope.answer = '';
-                $scope.controllerId = Math.random().toString();
-				$scope.mathorenglish = [];
-				$scope.mathdisplay = true;
-				$scope.showresult = [];
-				$scope.displayresult = false;
-				$scope.minuendIn = [];
-				$scope.subtrahendIn = [];
-				$scope.problemObjects = [];
-				$scope.answerObject = 0;
-				$scope.sign = '-';
 				
-				var numberArrays = new Array(2), //string arrays for minuend and subtrahend
+				var numberArrays, //string arrays for minuend and subtrahend
 					maxDigits = 0,  // the value of the length of the larger of minuend or subtrahend
+					problemObjects = [], // two element array, minuend and subtrahend
 					allNumbersArray = [], // array of problemObject number arrays, each maxDigit length, zeros fill lead places 
 					workingCarriesArray = [], // a single-dimensional array to represent the effect of borrowing on the minuend
 					levelsCarryArray = [], // array of borrowing-steps arrays, each maxDigit length, zeros fill lead places
@@ -49,26 +39,32 @@ angular.module('mathSkills')
 					displayWithBorrowsArray = [],
 					displayWithBorrowsClean = [],
 					displayWithBorrowsFinal = [],
+					problemObjectsNoDecimal = [],
+					numbersIntArray = [],
+					numberQuestionArray = [],
+					numberDisplayArray = [],
+					answerDisplayArray = [],
 					subtrahend = [],
-					answerString = "",
 					answerArray = [],
 					answerWideArray = [],
+					answerDisplayArray = [],
+					answerWideArrayDecimal,
+					subtrahendDecimal,
+					displayBorrowsDecimal,
+					answerObject = 0,
+					answerString = "",
 					gotCarry = 0,
 					rowForAddClass = 0,
 					wideArrayLength = 0,
 					minuendParsed = "",
 					subtrahendParsed = "",
-					maxNumberLength = 0;
-				
-				function removeLeadingZeros(zerosNumberArray) {
-					for (var ii = 0, oneNotZero = 0; ii < zerosNumberArray.length; ii++) {
-						if (zerosNumberArray[ii]!=0) {
-							oneNotZero = 1;
-						} else if (oneNotZero == 0) {
-							zerosNumberArray[ii] = "";
-						}
-					}			
-				}
+					maxNumberLength = 0,
+					holdDecimalPlaces = 0,
+					placesLeft = 0,
+					placesRight = 0,
+					answerObject,
+					decimalPointAt = 0,
+					borrowArrayLength = 0;
 				
 				// functions to style the help-display borrows
 								
@@ -119,7 +115,9 @@ angular.module('mathSkills')
 					return classesReturn;
 				}
 
-			
+				$scope.mathdisplay = true;
+				$scope.displayresult = false;
+				$scope.sign = '-';
 				
 			 // Extract the value/s for $scope.wholenumber & $scope.wholenumberplace
 				$scope.$watch('expected', function () {
@@ -155,82 +153,78 @@ angular.module('mathSkills')
 						subtrahendParsed = JSON.parse($scope.subtrahendIn);
 						if ($scope.mathdisplay) {
 							
-							$scope.problemObjects[0] = minuendParsed;
-							$scope.problemObjects[1] = subtrahendParsed;
+							problemObjects[0] = minuendParsed;
+							problemObjects[1] = subtrahendParsed;
 							//  if minuend < subtrahend exchange the numbers
-							if ($scope.problemObjects[0]<$scope.problemObjects[1]) {
-								$scope.problemObjects.reverse();
+							if (problemObjects[0]<problemObjects[1]) {
+								problemObjects.reverse();
 							}
-							
-							$scope.numberQuestionArray = new Array($scope.problemObjects.length);
-							$scope.numberDisplayArray = new Array($scope.problemObjects.length);
-							$scope.answerDisplayArray = [];
 
-							$scope.holdDecimalPlaces = 0;
-							$scope.placesLeft = 0;
-							$scope.placesRight = 0;
+							numberArrays = new Array(2);
+							numberQuestionArray = new Array(problemObjects.length);
+							numberDisplayArray = new Array(problemObjects.length);
 							
 							// find the maximum number of places right and left of the decimal for numbers in the subtraction
 							// find the maximum number of places right and left of the decimal for numbers in the subtraction
-							for (var ii = 0, currentPlacesLeft = 0; ii < $scope.problemObjects.length; ii++) {
+							for (var ii = 0, currentPlacesLeft = 0; ii < problemObjects.length; ii++) {
 								// check for decimal portion
-								if ($scope.problemObjects[ii].toString().split('.')[0].length != $scope.problemObjects[ii].toString().length) {
+								if (problemObjects[ii].toString().split('.')[0].length != problemObjects[ii].toString().length) {
 									// if the number has a decimal portion get the number of decimal places
-									$scope.holdDecimalPlaces = $scope.problemObjects[ii].toString().split('.')[1].length;
+									holdDecimalPlaces = problemObjects[ii].toString().split('.')[1].length;
 								} else {
 									// if the number doesn't have a decimal portion make one 
-									$scope.holdDecimalPlaces = 1;
-									$scope.problemObjects[ii] = Number($scope.problemObjects[ii].toString()+'.0').toFixed(1);
+									holdDecimalPlaces = 1;
+									problemObjects[ii] = Number(problemObjects[ii].toString()+'.0').toFixed(1);
 								}
-								if ($scope.holdDecimalPlaces > $scope.placesRight) {
-									$scope.placesRight = $scope.holdDecimalPlaces;
+								if (holdDecimalPlaces > placesRight) {
+									placesRight = holdDecimalPlaces;
 								}
-								currentPlacesLeft = $scope.problemObjects[ii].toString().length - ($scope.holdDecimalPlaces + 1);
-								if ($scope.placesLeft < currentPlacesLeft) {
-									$scope.placesLeft = currentPlacesLeft;
+								currentPlacesLeft = problemObjects[ii].toString().length - (holdDecimalPlaces + 1);
+								if (placesLeft < currentPlacesLeft) {
+									placesLeft = currentPlacesLeft;
 								}
 					
 							}
 							
 							// width for final display arrays
-							wideArrayLength = 2*($scope.placesLeft + $scope.placesRight+1);
+							wideArrayLength = 2*(placesLeft + placesRight+1);
 							
 														
 							// logic to standardize position of decimal point in numbers
-							$scope.answerObject = $filter("subtract-decimals")($scope.problemObjects);
+							answerObject = $filter("subtract-decimals")(problemObjects);
 							
-							for (var ii = 0; ii < $scope.problemObjects.length; ii++) {
-								$scope.numberQuestionArray[ii] = $filter("decimal-to-display-array")($scope.problemObjects[ii], $scope.placesLeft, $scope.placesRight);
-								$scope.numberDisplayArray[ii] = $filter("decimal-to-display-array")($scope.problemObjects[ii], $scope.placesLeft, $scope.placesRight, 1);	
+							for (var ii = 0; ii < problemObjects.length; ii++) {
+								numberQuestionArray[ii] = $filter("decimal-to-display-array")(problemObjects[ii], placesLeft, placesRight);
+								numberDisplayArray[ii] = $filter("decimal-to-display-array")(problemObjects[ii], placesLeft, placesRight, 1);	
 							}
 									
-							$scope.answerDisplayArray = $filter("decimal-to-display-array")($scope.answerObject, $scope.placesLeft, $scope.placesRight, 1);
+							answerDisplayArray = $filter("decimal-to-display-array")(answerObject, placesLeft, placesRight, 1);
 							
-							$scope.numbersIntArray = new Array(2);
-							$scope.numbersIntArray[0] = new Array($scope.numberDisplayArray[0].length-1);
-							$scope.numbersIntArray[1] = new Array($scope.numberDisplayArray[0].length-1);
+							numbersIntArray = new Array(2);
+							numbersIntArray[0] = new Array(numberDisplayArray[0].length-1);
+							numbersIntArray[1] = new Array(numberDisplayArray[0].length-1);
 							
-							// populate $scope.numbersIntArray[ii] with $scope.numberDisplayArray[ii] digits or "0", no decimal point
+							// populate numbersIntArray[ii] with numberDisplayArray[ii] digits or "0", no decimal point
 							for (ii = 0; ii < 2; ii++) {
-									for (var jj = 0, kk = 0, len = $scope.numberDisplayArray[0].length; jj < len; jj++) {
-										if ($scope.numberDisplayArray[ii][jj] != ".") {
-											if (/^\d$/.test($scope.numberDisplayArray[ii][jj])) {
-												$scope.numbersIntArray[ii][kk] = $scope.numberDisplayArray[ii][jj];
+									for (var jj = 0, kk = 0, len = numberDisplayArray[0].length; jj < len; jj++) {
+										if (numberDisplayArray[ii][jj] != ".") {
+											if (/^\d$/.test(numberDisplayArray[ii][jj])) {
+												numbersIntArray[ii][kk] = numberDisplayArray[ii][jj];
 												kk++;
 											} else {
-												$scope.numbersIntArray[ii][kk] = "0";
+												numbersIntArray[ii][kk] = "0";
 												kk++;
 											}
 										}
 									}
 							}
 							
-							$scope.problemObjectsNoDecimal = [
-										parseInt($scope.numbersIntArray[0].toString().replace(/,/g,''),10),
-										parseInt($scope.numbersIntArray[1].toString().replace(/,/g,''),10)	
+							problemObjectsNoDecimal = [
+										parseInt(numbersIntArray[0].toString().replace(/,/g,''),10),
+										parseInt(numbersIntArray[1].toString().replace(/,/g,''),10)	
 							]	
 							
-							maxDigits = $scope.placesRight + $scope.placesLeft;
+							maxDigits = placesRight + placesLeft;
 							
 							for (ii = 0; ii< maxDigits; ii++) {
 								levelsCarryArray[ii] = new Array(maxDigits);
@@ -255,8 +249,8 @@ angular.module('mathSkills')
 							// numberStringArray- has # of rows = # of problemObjects and # of columns in each row = maxDigits
 							// numberStringArray- each row a given number, if the number has fewer places than maxDigits extra cols are ""
 							// problemObjects become strings to get the length, then string arrays, then number arrays
-							for (var ii = 0, len = $scope.problemObjectsNoDecimal.length; ii<len; ii++) {
-								var numberString = $scope.problemObjectsNoDecimal[ii].toString(),
+							for (var ii = 0, len = problemObjectsNoDecimal.length; ii<len; ii++) {
+								var numberString = problemObjectsNoDecimal[ii].toString(),
 									numberLength = numberString.length,
 									numberStringArray = new Array(maxDigits),
 									eachNumberArray = new Array(maxDigits),
@@ -402,55 +396,55 @@ angular.module('mathSkills')
 							}
 							
 							// transition from whole numbers back to decimal numbers
-							$scope.answerWideArrayDecimal = new Array(wideArrayLength);
-							$scope.subtrahendDecimal = new Array(wideArrayLength);
-							$scope.displayBorrowsDecimal = new Array(displayWithBorrowsArray.length);
+							answerWideArrayDecimal = new Array(wideArrayLength);
+							subtrahendDecimal = new Array(wideArrayLength);
+							displayBorrowsDecimal = new Array(displayWithBorrowsArray.length);
 							
-							$scope.decimalPointAt = (wideArrayLength)-($scope.placesRight*2+2)
+							decimalPointAt = (wideArrayLength)-(placesRight*2+2)
 							 							
 							// add the subtrahend with decimal to double-wide array
 							for (var jj = 0, kk = 0, len = wideArrayLength; jj < len; jj++) {
-									if ((jj != $scope.decimalPointAt)&&(jj != $scope.decimalPointAt - 1)) {
-										$scope.subtrahendDecimal[jj] = subtrahend[kk]
+									if ((jj != decimalPointAt)&&(jj != decimalPointAt - 1)) {
+										subtrahendDecimal[jj] = subtrahend[kk]
 										kk++;
 									} 
-									if (jj == $scope.decimalPointAt - 1) {
-										$scope.subtrahendDecimal[jj] = "";
+									if (jj == decimalPointAt - 1) {
+										subtrahendDecimal[jj] = "";
 									}
-									if (jj == $scope.decimalPointAt) {
-										$scope.subtrahendDecimal[jj] = ".";
+									if (jj == decimalPointAt) {
+										subtrahendDecimal[jj] = ".";
 									}
 							}
 							
 							// add the answer with decimal point to double-wide array
 							for (var ii = 0, kk = 0; ii < wideArrayLength; ii++) {
 								if (ii%2 == 1) {
-									$scope.answerWideArrayDecimal[ii] = "";
+									answerWideArrayDecimal[ii] = "";
 								} else {
-									$scope.answerWideArrayDecimal[ii] = $scope.answerDisplayArray[kk];
+									answerWideArrayDecimal[ii] = answerDisplayArray[kk];
 									kk += 1;
 								}
 							}
 							
-							$scope.borrowArrayLength = displayWithBorrowsArray.length;
+							borrowArrayLength = displayWithBorrowsArray.length;
 							
 							// add the decimal point or appropriate spaces to the borrows arrays
-							for (var ii = 0, kk = 0; ii < $scope.borrowArrayLength; ii++) {
+							for (var ii = 0, kk = 0; ii < borrowArrayLength; ii++) {
 									kk = 0;
-									$scope.displayBorrowsDecimal[ii] = new Array(answerWideArray.length+2);
+									displayBorrowsDecimal[ii] = new Array(answerWideArray.length+2);
 									for (var jj = 0, len = answerWideArray.length+2; jj < len; jj++) {
-										if ((jj != $scope.decimalPointAt)&&(jj != $scope.decimalPointAt - 1)) {
-											$scope.displayBorrowsDecimal[ii][jj] = displayWithBorrowsArray[ii][kk];
+										if ((jj != decimalPointAt)&&(jj != decimalPointAt - 1)) {
+											displayBorrowsDecimal[ii][jj] = displayWithBorrowsArray[ii][kk];
 											kk++
 										} 
-										if (jj == $scope.decimalPointAt - 1) {
-											$scope.displayBorrowsDecimal[ii][jj] = "";
+										if (jj == decimalPointAt - 1) {
+											displayBorrowsDecimal[ii][jj] = "";
 										}
-										if (jj == $scope.decimalPointAt) {
-											if (ii == ($scope.borrowArrayLength - 1)) {
-												$scope.displayBorrowsDecimal[ii][jj] = ".";
+										if (jj == decimalPointAt) {
+											if (ii == (borrowArrayLength - 1)) {
+												displayBorrowsDecimal[ii][jj] = ".";
 											} else {
-												$scope.displayBorrowsDecimal[ii][jj] = "";
+												displayBorrowsDecimal[ii][jj] = "";
 											}
 										}
 									}
@@ -458,33 +452,33 @@ angular.module('mathSkills')
 							
 							// remove elements of display array if 2nd parameter is anything but "complete"
 							if ($scope.displayresult) {
-									for (ii = $scope.displayBorrowsDecimal.length - 1; ii >= 0; ii--) {
-										if ($scope.displayBorrowsDecimal[ii].every(function(value) {
+									for (ii = displayBorrowsDecimal.length - 1; ii >= 0; ii--) {
+										if (displayBorrowsDecimal[ii].every(function(value) {
 											 return (value === '');
 										})) {
-											$scope.displayBorrowsDecimal.shift();
+											displayBorrowsDecimal.shift();
 										} 
 									}
-									displayWithBorrowsFinal = $scope.displayBorrowsDecimal.slice();
+									displayWithBorrowsFinal = displayBorrowsDecimal.slice();
 									
 							} else {
-									displayWithBorrowsFinal[0] = $scope.displayBorrowsDecimal[$scope.displayBorrowsDecimal.length-1];
+									displayWithBorrowsFinal[0] = displayBorrowsDecimal[displayBorrowsDecimal.length-1];
 									for (var ii = 0, len = displayWithBorrowsFinal[0].length; ii < len; ii += 1) {										// remove carries
 											if (ii % 2 !== 0) {
 												displayWithBorrowsFinal[0][ii] = "";
 											}
 									}
 
-									for (var ii = 0, len = $scope.answerWideArrayDecimal.length; ii < len; ii += 1) {
-										$scope.answerWideArrayDecimal[ii] = "";
+									for (var ii = 0, len = answerWideArrayDecimal.length; ii < len; ii += 1) {
+										answerWideArrayDecimal[ii] = "";
 									}
 							}								
 							$scope.firstArray = [];
 							$scope.secondArray = [];
 							$scope.thirdArray = [];
 							$scope.firstArray = displayWithBorrowsFinal.slice();
-							$scope.secondArray = $scope.subtrahendDecimal.slice();
-							$scope.thirdArray = $scope.answerWideArrayDecimal.slice();
+							$scope.secondArray = subtrahendDecimal.slice();
+							$scope.thirdArray = answerWideArrayDecimal.slice();
 							$scope.secondArray.pop();
 
 							
