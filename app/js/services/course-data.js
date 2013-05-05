@@ -3881,6 +3881,151 @@ angular.module('mathSkills.services')
                                         }]
                                     }
                                 ]
+                            },
+                            {
+                                title: '3.6 Multiply Decimal Numbers',
+                                path: '3.6-multiply-decimal-numbers',
+                                children: [
+                                    {
+										title: 'Multiply Decimal Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{839}{3}}}',
+												answer: '\\input{2517}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{839}{3}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  2517}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{596}{6}}}',
+												answer: '\\input{3576}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{596}{6}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  3576}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{english}{partial}{6453}{4}}}',
+												answer: '\\input{25812}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{6453}{4}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  25812}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{4049}{7}}}',
+												answer: '\\input{28343}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{4049}{7}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  28343}}{label_like}}}'												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{97}{74}}}',
+												answer: '\\input{7178}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{97}{74}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  7178}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{english}{partial}{34}{29}}}',
+												answer: '\\input{986}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{34}{29}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  986}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{645}{90}}}',
+												answer: '\\input{58050}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{645}{90}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  58050}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{374}{29}}}',
+												answer: '\\input{10846}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{374}{29}}{\\css{\\html{<br><br><br><br><br><br><br><br><br><br><br>Answer:  10846}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{english}{partial}{300}{356}}}',
+												answer: '\\input{106800}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{300}{356}}{\\css{\\html{<br><br><br><br><br><br><br><br><br><br><br>Answer:  106800}}{label_like}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply Whole Numbers',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{508}{602}}}',
+												answer: '\\input{305}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{508}{602}}{\\css{\\html{<br><br><br><br><br><br><br><br><br><br><br>Answer:  305816}}{label_like}}}'
+                                                }
+                                            }]
+                                        }]
+                                    }
+                                ]
                             },{
 											title: '3.8 Change Fractions to Decimals',
 											path: '3.8-change-fractions-to-decimals',
