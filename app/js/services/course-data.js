@@ -3746,11 +3746,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{math}{partial}{17.3}{5.22}}}',
-												answer: '\\input{12.08}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{math}{partial}{17.3}{8.22}}}',
+												answer: '\\input{9.08}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{17.3}{5.22}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  12.08}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{17.3}{8.22}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  9.08}}{label_like}}}'
 												}
 											}]
 										}]
@@ -3871,11 +3871,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{math}{partial}{955.707}{87.475}}}',
-												answer: '\\input{868.232}',
+												problem: '\\rowgrp{\\row{\\str{Find the difference of the decimal numbers:}}}{\\row{\\subtractdecimals{math}{partial}{955.707}{87.998}}}',
+												answer: '\\input{867.709}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{955.707}{87.475}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  868.232}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{955.707}{87.998}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  867.709}}{label_like}}}'
 												}
 											}]
                                         }]

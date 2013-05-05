@@ -448,7 +448,7 @@ angular.module('mathSkills')
 											}
 										}
 									}
-							}
+							}							
 							
 							// remove elements of display array if 2nd parameter is anything but "complete"
 							if ($scope.displayresult) {
@@ -461,6 +461,11 @@ angular.module('mathSkills')
 									}
 									displayWithBorrowsFinal = displayBorrowsDecimal.slice();
 									
+									// remove leading zero in borrows row if present
+									if (displayWithBorrowsFinal[0][0] == "0") {
+										displayWithBorrowsFinal[0][0] = "\xA0";
+									}
+									
 							} else {
 									displayWithBorrowsFinal[0] = displayBorrowsDecimal[displayBorrowsDecimal.length-1];
 									for (var ii = 0, len = displayWithBorrowsFinal[0].length; ii < len; ii += 1) {										// remove carries
@@ -472,7 +477,8 @@ angular.module('mathSkills')
 									for (var ii = 0, len = answerWideArrayDecimal.length; ii < len; ii += 1) {
 										answerWideArrayDecimal[ii] = "";
 									}
-							}								
+							}
+							
 							$scope.firstArray = [];
 							$scope.secondArray = [];
 							$scope.thirdArray = [];

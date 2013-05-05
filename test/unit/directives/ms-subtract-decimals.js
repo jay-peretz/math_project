@@ -9,7 +9,7 @@ describe('<ms-subtract-decimals>', function () {
 
     beforeEach(module('mathSkills'));
 
-    describe('when ms-subtract-decimals tag element is added', function () {
+    describe('when ms-subtract-decimals tag element is added with values 27.15 and 2.75', function () {
 																	  
 		beforeEach(inject(function ($rootScope, $compile) {
 			var tagString ='\\subtractdecimals{math}{complete}{27.15}{2.75}';
@@ -61,6 +61,35 @@ describe('<ms-subtract-decimals>', function () {
 		
     });
 	
+	// tests for case when first digit of minuend is 1 and is borrowed- line through, no zero above
+	describe('when ms-subtract-decimals tag element is added with values 17.3 and 8.22', function () {
+																	  
+			beforeEach(inject(function ($rootScope, $compile) {
+				var tagString ='\\subtractdecimals{math}{complete}{17.3}{8.22}';
+				var template = angular.element('<ms-subtract-decimals expected='+tagString+'></ms-subtract-decimals>');
+				elScope = $rootScope.$new();
+				element = $compile(template)(elScope);
+				$rootScope.$digest();
+			}));
+			
+			beforeEach(function() {
+			  this.addMatchers({
+				toHaveClass: function(className) {
+				  return this.actual.hasClass(className);
+				}
+			  });
+			});
+			
+			it('character in 2nd td of 1st row of table of the display array should be \xA0', inject(function ($rootScope) {
+			expect(jQuery(element).find('table tr:nth-child(1) td:nth-child(2)').text()).toContain('\xA0')																				
+		}));
+		
+		it('number in 2nd td of 2nd row of table of the display array should be dynamically styled with line-through', inject(function ($rootScope) {
+			expect(jQuery(element).find('table tr:nth-child(2) td:nth-child(2)')).toHaveClass('line_through_dimmed')																				
+		}));
+			
+	});
+	
 	describe('when ms-subtract-decimals first tag element is english', function () {
 																			  
 		beforeEach(inject(function ($rootScope, $compile) {
@@ -71,7 +100,7 @@ describe('<ms-subtract-decimals>', function () {
 			$rootScope.$digest();
 		}));
 																			  
-	    xit('should express the numbers as text', inject(function ($rootScope) {
+	    it('should express the numbers as text', inject(function ($rootScope) {
 			// two hyphens after the text string? - matched for now
 			expect(jQuery(element).find('span').text()).toContain('832 minus 86')							
 		}));
