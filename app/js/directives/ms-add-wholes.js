@@ -2,16 +2,9 @@
 	
 angular.module('mathSkills') 
 	.config(['parserProvider', function (parserProvider) {
-		// 'mathorenglish' first parameter is 'english' to display text, otherwise displays number column
-		// 'showresult' second parameter is 'complete' to display number column with addition result
+		// first parameter is 'english' to display text, otherwise displays number column
+		// second parameter is 'complete' to display number column with addition result
         parserProvider.register('addwholes', {
-            argTemplates: [{
-                name: 'mathorenglish'
-            },{
-                name: 'showresult'
-            },{
-                name: 'addendparams'
-            }],
             directiveTemplate: '<ms-add-wholes expected={{expected}}></ms-add-wholes>'
         });
     }])
@@ -25,16 +18,13 @@ angular.module('mathSkills')
 				label: '@'
 			},
 			controller: function ($scope, $element, $filter) {
-				$scope.answer = '';
                 $scope.controllerId = Math.random().toString();
-				$scope.mathorenglish = [];
 				$scope.mathdisplay = true;
-				$scope.showresult = [];
 				$scope.displayresult = false;
-				$scope.addendparameters = [];
 				$scope.sign = '+';
 				
-				var numbarray = [],
+				var tagParameters = [],
+					numbarray = [],
 				    randomplacearray = [],
 				    emptyAnswerArray = [],
 					addendnumbers = [],
@@ -52,34 +42,22 @@ angular.module('mathSkills')
 					return wholeSum;
 				}
 				
-			 // Extract the value/s for $scope.wholenumber & $scope.wholenumberplace
-				$scope.$watch('expected', function () {
+			 // Extract the tag values
+				$scope.$watch('expected', function () { 
 					if ($scope.expected) {
-						parser.parse($scope.expected, { scope: $scope });
+						tagParameters = parser.extractTag($scope.expected).args;
 					}
-				});
-				
-				$scope.$watch('mathorenglish', function () {
-					if (typeof $scope.showresult === "string") {
-						if ($scope.mathorenglish === "english") {
-							$scope.mathdisplay = false;
-						}
+					
+					if (tagParameters[0] === "english") {
+						$scope.mathdisplay = false;
 					}
-				});
-				$scope.$watch('showresult', function () {
-					if (typeof $scope.showresult === "string") {
-						if ($scope.showresult === "complete") {
-							$scope.displayresult = true;
-							$scope.mathdisplay = true;
-						}
+					
+					if (tagParameters[1] === "complete") {
+						$scope.displayresult = true;
+						$scope.mathdisplay = true;
 					}
-				});
-				
-				$scope.$watch('addendparams', function () {
-
-					if (typeof $scope.addendparams === "string") {
-						addendnumbers = $scope.addendparams.substr(1, $scope.addendparams.length - 2).split(",");
-					}
+					
+					addendnumbers = JSON.parse(tagParameters[2]).map(String);
 
 					if (addendnumbers[0] !== "undefined" && addendnumbers[1] !== "undefined") {
 						if ($scope.mathdisplay) {

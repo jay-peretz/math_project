@@ -2,16 +2,9 @@
 	
 angular.module('mathSkills') 
 	.config(['parserProvider', function (parserProvider) {
-		// 'mathorenglish' first parameter is 'english' to display text, otherwise displays number column
-		// 'showresult' second parameter is 'complete' to display number column with addition result
+		// first parameter is 'english' to display text, otherwise displays number column
+		// second parameter is 'complete' to display number column with addition result
         parserProvider.register('adddecimals', {
-            argTemplates: [{
-                name: 'mathorenglish'
-            },{
-                name: 'showresult'
-            },{
-                name: 'addendparams'
-            }],
             directiveTemplate: '<ms-add-decimals expected={{expected}}></ms-add-decimals>'
         });
     }])
@@ -25,21 +18,12 @@ angular.module('mathSkills')
 				label: '@'
 			},
 			controller: function ($scope, $element, $filter) {
-				$scope.answer = '';
-                $scope.controllerId = Math.random().toString();
 				$scope.mathdisplay = true;
 				$scope.displayresult = false;
 				$scope.sign = '+';
 				
-				var numbarray = [],
-				    randomplacearray = [],
-				    emptyAnswerArray = [],
-					addendnumbers = [],
-					answerObject = "",
-					answerArray = [],
-					tightNumbersArray = [],
-					carryNumArray = [],
-					carryNumStringArray = [];
+				var tagParameters = [],
+					addendnumbers = [];
 				
 				function removeTrailingZeros (zerosNumberArray) {
 					for (var kk = 0, len = zerosNumberArray.length; kk < len; kk++) {
@@ -53,125 +37,129 @@ angular.module('mathSkills')
 					}
 				}
 				
-			 // Extract the value/s for $scope.wholenumber & $scope.wholenumberplace
-				$scope.$watch('expected', function () {
+			 // Extract the tag values
+				$scope.$watch('expected', function () { 
 					if ($scope.expected) {
-						parser.parse($scope.expected, { scope: $scope });
+						tagParameters = parser.extractTag($scope.expected).args;
 					}
-				});
-				
-				$scope.$watch('mathorenglish', function () {
-					if (typeof $scope.showresult === "string") {
-						if ($scope.mathorenglish === "english") {
-							$scope.mathdisplay = false;
-						}
+					
+					if (tagParameters[0] === "english") {
+						$scope.mathdisplay = false;
 					}
-				});
-				$scope.$watch('showresult', function () {
-					if (typeof $scope.showresult === "string") {
-						if ($scope.showresult === "complete") {
-							$scope.displayresult = true;
-							$scope.mathdisplay = true;
-						}
+					
+					if (tagParameters[1] === "complete") {
+						$scope.displayresult = true;
+						$scope.mathdisplay = true;
 					}
-				});
-				
-				$scope.$watch('addendparams', function () {
-
-					if (typeof $scope.addendparams === "string") {
-						addendnumbers = $scope.addendparams.substr(1, $scope.addendparams.length - 2).split(",");
-					}
+					
+					addendnumbers = JSON.parse(tagParameters[2]).map(String);
 
 					if (addendnumbers[0] !== "undefined" && addendnumbers[1] !== "undefined") {
 						if ($scope.mathdisplay) {
 							
-							answerObject = $filter('add-decimals')(addendnumbers);
-							$scope.answerArray = answerObject.toString().split("");							
-							$scope.answerArrayDecimal = $scope.answerArray.indexOf(".");
-							$scope.displayDigitsRight = $scope.answerArray.length-($scope.answerArrayDecimal+1);
-							
-							$scope.numberDisplayArray = new Array(addendnumbers.length);
-							$scope.allNumbersArray = new Array(addendnumbers.length);
-							$scope.tightNumbersArray = new Array(addendnumbers.length);
-							$scope.tightNoDecimal = new Array(addendnumbers.length);
-							$scope.emptyAnswerArray = [];
-							$scope.displayPlacesLeft = 6;  // maximum 16 places left
-							$scope.displayPlacesRight = 6; // maximum 16 places right
+							var numbarray = [],
+								randomplacearray = [],
+								emptyAnswerArray = [],
+								answerObject = "",
+								answerArray = [],
+								tightNumbersArray = [],
+								carryNumArray = [],
+								carryNumStringArray = [],					
+								answerArray,			
+								answerArrayDecimal,
+								displayDigitsRight,							
+								startTightArray,
+								endTightArray,
+								sumColumn,
+								displayPlacesLeft = 6,  // maximum 16 places left
+								displayPlacesRight = 6, // maximum 16 places right
+								numberDisplayArray = new Array(addendnumbers.length),
+								allNumbersArray = new Array(addendnumbers.length),
+								allNumbersLength,
+								tightNumbersArray = new Array(addendnumbers.length),
+								tightNoDecimal = new Array(addendnumbers.length),
+								emptyAnswerArray = [];
+								
 							$scope.sign = '+';	
+					
+							answerObject = $filter('add-decimals')(addendnumbers);
+							answerArray = answerObject.toString().split("");							
+							answerArrayDecimal = answerArray.indexOf(".");
+							displayDigitsRight = answerArray.length-(answerArrayDecimal+1);
 							
-							$scope.allNumbersLength = $scope.displayPlacesLeft + $scope.displayPlacesRight + 1;
+							allNumbersLength = displayPlacesLeft + displayPlacesRight + 1;
 							for (var ii = 0; ii < addendnumbers.length; ii++) {
-								$scope.numberDisplayArray[ii] = $filter('decimal-to-display-array')(addendnumbers[ii], $scope.displayPlacesLeft, $scope.displayPlacesRight);
-								$scope.allNumbersArray[ii] = $filter('decimal-to-display-array')(addendnumbers[ii], $scope.displayPlacesLeft, $scope.displayPlacesRight, true);
+								numberDisplayArray[ii] = $filter('decimal-to-display-array')(addendnumbers[ii], displayPlacesLeft, displayPlacesRight);
+								allNumbersArray[ii] = $filter('decimal-to-display-array')(addendnumbers[ii], displayPlacesLeft, displayPlacesRight, true);
 							}
 							
-							$scope.startTightArray = $scope.displayPlacesLeft+$scope.displayDigitsRight;
-							$scope.endTightArray = $scope.displayPlacesLeft+$scope.displayDigitsRight - ($scope.answerArray.length);  
+							startTightArray = displayPlacesLeft+displayDigitsRight;
+							endTightArray = displayPlacesLeft+displayDigitsRight - (answerArray.length);  
 							
-							// make arrays based on number of digits in $scope.answerArray for the problem numbers
+							// make arrays based on number of digits in answerArray for the problem numbers
 							for (var ii = 0, len = addendnumbers.length; ii<len; ii++) {
-								$scope.tightNumbersArray[ii] = new Array($scope.answerArray.length);
-								for (var kk = $scope.answerArray.length-1, jj = $scope.startTightArray; jj > $scope.endTightArray; jj--) {
-										$scope.tightNumbersArray[ii][kk] = $scope.allNumbersArray[ii][jj];
+								tightNumbersArray[ii] = new Array(answerArray.length);
+								for (var kk = answerArray.length-1, jj = startTightArray; jj > endTightArray; jj--) {
+										tightNumbersArray[ii][kk] = allNumbersArray[ii][jj];
 										kk--;
 								}
-								$scope.tightNoDecimal[ii] = $scope.tightNumbersArray[ii].slice();
-								$scope.tightNoDecimal[ii].splice($scope.tightNoDecimal[ii].indexOf("."),1);
+								tightNoDecimal[ii] = tightNumbersArray[ii].slice();
+								tightNoDecimal[ii].splice(tightNoDecimal[ii].indexOf("."),1);
 							}
 							
 							// carryNumArray represents carries only, no decimal point
-							$scope.carryNumArray = new Array($scope.answerArray.length-1);
-							for (jj = 0; jj < $scope.carryNumArray.length; jj++) {
-								$scope.carryNumArray[jj] = 0;
+							carryNumArray = new Array(answerArray.length-1);
+							for (jj = 0; jj < carryNumArray.length; jj++) {
+								carryNumArray[jj] = 0;
 							}
 							
-							for (var jj = $scope.carryNumArray.length - 1; jj >= 0; jj=jj-1) { 
-									$scope.sumColumn = 0;
-									if (jj != $scope.carryNumArray.length - 1) {				
-										$scope.sumColumn += parseInt($scope.carryNumArray[jj+1], 10);
+							for (var jj = carryNumArray.length - 1; jj >= 0; jj=jj-1) { 
+									sumColumn = 0;
+									if (jj != carryNumArray.length - 1) {				
+										sumColumn += parseInt(carryNumArray[jj+1], 10);
 									}
 									if (jj != 0){
 										for (var ii = 0, len = addendnumbers.length; ii<len; ii++) {
-											if (!isNaN(parseInt($scope.tightNoDecimal[ii][jj]), 10)) {
-												$scope.sumColumn += parseInt($scope.tightNoDecimal[ii][jj], 10);
+											if (!isNaN(parseInt(tightNoDecimal[ii][jj]), 10)) {
+												sumColumn += parseInt(tightNoDecimal[ii][jj], 10);
 											}
 										}
 									}
 									if (jj != 0) {
-										$scope.sumColumn = Math.floor($scope.sumColumn/10);
-										$scope.carryNumArray[jj] = $scope.sumColumn;
+										sumColumn = Math.floor(sumColumn/10);
+										carryNumArray[jj] = sumColumn;
 									}
 							}
-							$scope.carryNumArray.splice($scope.answerArrayDecimal+1, 0, ".");
+							carryNumArray.splice(answerArrayDecimal+1, 0, ".");
 					
-							$scope.carryNumStringArray = new Array($scope.answerArray.length);
-							for (var jj = 0; jj<$scope.answerArray.length; jj++) {
-								if (!isNaN(parseInt($scope.carryNumArray[jj], 10))&&(parseInt($scope.carryNumArray[jj], 10)!=0)){
-									$scope.carryNumStringArray[jj] = parseInt($scope.carryNumArray[jj], 10).toString();
+							carryNumStringArray = new Array(answerArray.length);
+							for (var jj = 0; jj<answerArray.length; jj++) {
+								if (!isNaN(parseInt(carryNumArray[jj], 10))&&(parseInt(carryNumArray[jj], 10)!=0)){
+									carryNumStringArray[jj] = parseInt(carryNumArray[jj], 10).toString();
 								} else{
-									$scope.carryNumStringArray[jj] = "";
+									carryNumStringArray[jj] = "";
 								}
 							}
 							
-							removeTrailingZeros($scope.tightNumbersArray);
+							removeTrailingZeros(tightNumbersArray);
 							
 							// create an empty copy of the answer array for display of addition without answer
-							for (var ii = 0, len = $scope.answerArray.length; ii < len; ii += 1) {
-								$scope.emptyAnswerArray[ii] = "";
+							for (var ii = 0, len = answerArray.length; ii < len; ii += 1) {
+								emptyAnswerArray[ii] = "";
 							}
 							
 							$scope.firstArray = [];
 							$scope.secondArray = [];
 							$scope.thirdArray = [];
-							$scope.secondArray = $scope.tightNumbersArray.slice();
+							$scope.secondArray = tightNumbersArray.slice();
 							if ($scope.displayresult) {
-								$scope.firstArray = $scope.carryNumStringArray.slice();
+								$scope.firstArray = carryNumStringArray.slice();
 								$scope.firstArray.push();
 								$scope.firstArray.shift();
-								$scope.thirdArray = $scope.answerArray.slice();
+								$scope.thirdArray = answerArray.slice();
 							} else {
-								$scope.firstArray = $scope.emptyAnswerArray
-								$scope.thirdArray = $scope.emptyAnswerArray
+								$scope.firstArray = emptyAnswerArray
+								$scope.thirdArray = emptyAnswerArray
 							}
 							
 						} else {
