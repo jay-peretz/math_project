@@ -3006,23 +3006,23 @@ angular.module('mathSkills.services')
 															}
 														}]
 												  }, {
-                                            title: 'Workbook',
-                                            children: [{
-                                                problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{5}}{\\str{10}}}',
-                                                answer: '\\input{5}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": false
-                                                }
-                                            },{
-                                                problem: '\\row{\\str{Factor out a 5}}{\\frac{\\str{5 div 5}}{\\str{10 div 5}}}',
-                                                answer: '\\frac{\\input{1}}{\\input{2}}',
-                                                controls: {
-                                                    "checkAnswer": true,
-                                                    "help": false
-                                                }
-                                            }]
-                                        }]
+														title: 'Workbook',
+														children: [{
+																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{5}}{\\str{10}}}',
+																	answer: '\\input{5}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																},{
+																	problem: '\\row{\\str{Factor out a 5}}{\\frac{\\str{5 divided by 5}}{\\str{10 divided by 5}}}',
+																	answer: '\\frac{\\input{1}}{\\input{2}}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																}]
+                                                       }]
 												},
 												{
 													title: 'Reduce Fractions',
@@ -3036,7 +3036,24 @@ angular.module('mathSkills.services')
 																"help": false
 															}
 														}]
-													}]
+													}, {
+														title: 'Workbook',
+														children: [{
+																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{6}}{\\str{10}}}',
+																	answer: '\\input{2}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																},{
+																	problem: '\\row{\\str{Factor out a 2}}{\\frac{\\str{6 divided by 2}}{\\str{10 divided by 2}}}',
+																	answer: '\\frac{\\input{3}}{\\input{5}}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																}]
+                                                       }]
 												},
 												{
 													title: 'Reduce Fractions',
@@ -3050,7 +3067,24 @@ angular.module('mathSkills.services')
 																"help": false
 															}
 														}]
-													}]
+													}, {
+														title: 'Workbook',
+														children: [{
+																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{4}}{\\str{6}}}',
+																	answer: '\\input{2}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																},{
+																	problem: '\\row{\\str{Factor out a 2}}{\\frac{\\str{4 divided by 2}}{\\str{6 divided by 2}}}',
+																	answer: '\\frac{\\input{2}}{\\input{3}}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																}]
+                                                       }]
 												},
 												{
 													title: 'Reduce Fractions',
@@ -3064,7 +3098,24 @@ angular.module('mathSkills.services')
 																"help": false
 															}
 														}]
-													}]
+													}, {
+														title: 'Workbook',
+														children: [{
+																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{13}}{\\str{26}}}',
+																	answer: '\\input{13}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																},{
+																	problem: '\\row{\\str{Factor out a 13}}{\\frac{\\str{13 divided by 13}}{\\str{26 divided by 13}}}',
+																	answer: '\\frac{\\input{1}}{\\input{2}}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																}]
+                                                       }]
 												},
 												{
 													title: 'Reduce Fractions',
@@ -3079,7 +3130,24 @@ angular.module('mathSkills.services')
 																"help": false
 															}
 														}]
-													}]
+													}, {
+														title: 'Workbook',
+														children: [{
+																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{11}}{\\str{22}}}',
+																	answer: '\\input{11}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																},{
+																	problem: '\\row{\\str{Factor out an 11}}{\\frac{\\str{11 divided by 11}}{\\str{22 divided by 11}}}',
+																	answer: '\\frac{\\input{1}}{\\input{2}}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																}]
+                                                       }]
 												},
 												{
 													title: 'Reduce Fractions',
@@ -3093,7 +3161,24 @@ angular.module('mathSkills.services')
 																"help": false
 															}
 														}]
-													}]
+													}, {
+														title: 'Workbook',
+														children: [{
+																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{17}}{\\str{34}}}',
+																	answer: '\\input{17}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																},{
+																	problem: '\\row{\\str{Factor out a 17}}{\\frac{\\str{17 divided by 17}}{\\str{34 divided by 34}}}',
+																	answer: '\\frac{\\input{1}}{\\input{2}}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																}]
+                                                       }]
 												},
 												{
 													title: 'Reduce Fractions',
@@ -3107,7 +3192,24 @@ angular.module('mathSkills.services')
 																"help": false
 															}
 														}]
-													}]
+													}, {
+														title: 'Workbook',
+														children: [{
+																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{10}}{\\str{15}}}',
+																	answer: '\\input{5}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																},{
+																	problem: '\\row{\\str{Factor out a 5}}{\\frac{\\str{10 divided by 5}}{\\str{15 divided by 5}}}',
+																	answer: '\\frac{\\input{2}}{\\input{3}}',
+																	controls: {
+																		"checkAnswer": true,
+																		"help": false
+																	}
+																}]
+                                                       }]
 												},
 												{
 													title: 'Reduce Fractions',
