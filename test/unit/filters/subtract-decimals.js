@@ -9,6 +9,10 @@ describe('add-decimals filter', function () {
         subtractDecimalsFilter = $filter('subtract-decimals');
     }));
 
+    it('should return the difference of a decimal number and a whole number', function () {
+        expect(subtractDecimalsFilter([42, 1.1])).toBe(40.9);
+    });
+
     it('should return the difference of two decimal numbers', function () {
         expect(subtractDecimalsFilter([42.32, 1.1])).toBe(41.22);
     });

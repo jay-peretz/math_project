@@ -12,5 +12,4 @@ describe('subtract-wholes filter', function () {
     it('should return the difference of two whole numbers', function () {
         expect(subtractWholesFilter([430, 210])).toBe(220);
     });
-
 });

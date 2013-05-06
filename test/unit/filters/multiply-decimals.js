@@ -9,6 +9,10 @@ describe('multiply-decimals filter', function () {
         multiplyDecimalsFilter = $filter('multiply-decimals');
     }));
 
+    it('should return the product of a decimal and a whole number', function() {
+        expect(multiplyDecimalsFilter([1.1, 2])).toBe(2.2);
+    });
+
     it('should return the product of two decimal numbers', function () {
         expect(multiplyDecimalsFilter([1.1, 42.32])).toBe(46.552);
     });

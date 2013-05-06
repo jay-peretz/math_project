@@ -9,6 +9,10 @@ describe('add-decimals filter', function () {
         addDecimalsFilter = $filter('add-decimals');
     }));
 
+    it('should return the sum of a decimal number and a whole number', function () {
+        expect(addDecimalsFilter([1.1, 42])).toBe(43.1);
+    });
+
     it('should return the sum of two decimal numbers', function () {
         expect(addDecimalsFilter([1.1, 42.32])).toBe(43.42);
     });
