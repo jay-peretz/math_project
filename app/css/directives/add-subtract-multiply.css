@@ -1,0 +1,9 @@
+/* required for control-data.js css tag */
+
+.help-answer-text {
+	display:block;	
+	margin-left:50px;
+	color: #069;
+	font-size: 15px;
+	font-weight: normal;
+}

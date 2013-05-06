@@ -603,7 +603,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{106}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[47, 59]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  106}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[47, 59]}}{\\css{\\str{Answer:  106}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -617,7 +617,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{1116}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[301,815]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  1116}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[301,815]}}{\\css{\\str{Answer:  1116}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -631,7 +631,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{1795}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[968,827]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  1795}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[968,827]}}{\\css{\\str{Answer:  1795}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -645,7 +645,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{115}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[68,47]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  115}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[68,47]}}{\\css{\\str{Answer:  115}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -659,7 +659,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{10937}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[9026,1911]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  10937}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[9026,1911]}}{\\css{\\str{Answer:  10937}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -673,7 +673,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{5732}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[3148,2584]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  5732}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[3148,2584]}}{\\css{\\str{Answer:  5732}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -687,7 +687,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{1222}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[618,489,115]}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  1222}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[618,489,115]}}{\\css{\\str{Answer:  1222}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -701,7 +701,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{8878}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[1700,2233,4945]}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  8878}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[1700,2233,4945]}}{\\css{\\str{Answer:  8878}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -715,7 +715,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{14054}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[8850,4626,177,401]}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  14054}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[8850,4626,177,401]}}{\\css{\\str{Answer:  14054}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -729,7 +729,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{9906}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[832,6223,2705,146]}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  9906}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[832,6223,2705,146]}}{\\css{\\str{Answer:  9906}}{help-answer-text}}}'
                                                 }
                                             }]
                                         }]
@@ -749,7 +749,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{11}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{110}{99}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  11}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{110}{99}}{\\css{\\str{Answer:  11}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -763,7 +763,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{278}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{989}{711}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  278}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{989}{711}}{\\css{\\str{Answer:  278}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -777,7 +777,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{746}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{832}{86}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  746}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{832}{86}}{\\css{\\str{Answer:  746}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -791,7 +791,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{450}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{518}{68}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  450}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{518}{68}}{\\css{\\str{Answer:  450}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -805,7 +805,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{2993}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{3749}{756}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  2993}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{3749}{756}}{\\css{\\str{Answer:  2993}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -819,7 +819,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{8340}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{8889}{549}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  8340}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{8889}{549}}{\\css{\\str{Answer:  8340}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -833,7 +833,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{1982}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{9475}{7493}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  1982}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{9475}{7493}}{\\css{\\str{Answer:  1982}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -847,7 +847,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{1343}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{8206}{6863}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  1343}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{8206}{6863}}{\\css{\\str{Answer:  1343}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -861,7 +861,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{27248}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\subtractwholes{math}{complete}{89686}{62438}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  27248}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\subtractwholes{math}{complete}{89686}{62438}}{\\css{\\str{Answer:  27248}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -875,7 +875,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{24768}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\subtractwholes{math}{complete}{45300}{20532}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  24768}}{label_like}}}'													
+													"help": '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\subtractwholes{math}{complete}{45300}{20532}}{\\css{\\str{Answer:  24768}}{help-answer-text}}}'													
                                                 }
                                             }]
                                         }]
@@ -1445,7 +1445,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{2517}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{839}{3}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  2517}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{839}{3}}{\\css{\\str{Answer:  2517}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -1459,7 +1459,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{3576}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{596}{6}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  3576}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{596}{6}}{\\css{\\str{Answer:  3576}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -1473,7 +1473,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{25812}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{6453}{4}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  25812}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{6453}{4}}{\\css{\\str{Answer:  25812}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -1487,7 +1487,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{28343}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{4049}{7}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  28343}}{label_like}}}'												}
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{4049}{7}}{\\css{\\str{Answer:  28343}}{help-answer-text}}}'												}
 											}]
 										}]
 									},
@@ -1500,7 +1500,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{7178}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{97}{74}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  7178}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{97}{74}}{\\css{\\str{Answer:  7178}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -1514,7 +1514,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{986}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{34}{29}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  986}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{34}{29}}{\\css{\\str{Answer:  986}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -1528,7 +1528,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{58050}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{645}{90}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  58050}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{645}{90}}{\\css{\\str{Answer:  58050}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -1542,7 +1542,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{10846}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{374}{29}}{\\css{\\html{<br><br><br><br><br><br><br><br><br><br><br>Answer:  10846}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{374}{29}}{\\css{\\str{Answer:  10846}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -1556,7 +1556,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{106800}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{300}{356}}{\\css{\\html{<br><br><br><br><br><br><br><br><br><br><br>Answer:  106800}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{300}{356}}{\\css{\\str{Answer:  106800}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -1570,7 +1570,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{305}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{508}{602}}{\\css{\\html{<br><br><br><br><br><br><br><br><br><br><br>Answer:  305816}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{508}{602}}{\\css{\\str{Answer:  305816}}{help-answer-text}}}'
                                                 }
                                             }]
                                         }]
@@ -3707,7 +3707,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{106.8}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[47.2,59.6]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  106.8}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[47.2,59.6]}}{\\css{\\str{Answer:  106.8}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3720,7 +3720,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{517.924}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[73.98,396.43,47.514]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  517.924}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[73.98,396.43,47.514]}}{\\css{\\str{Answer:  517.924}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3734,7 +3734,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{223.62}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[95.2,53.3,75.12]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  223.62}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[95.2,53.3,75.12]}}{\\css{\\str{Answer:  223.62}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3748,7 +3748,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{330.795}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[86.21,8.83,235.755]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  330.795}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[86.21,8.83,235.755]}}{\\css{\\str{Answer:  330.795}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3762,7 +3762,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{104.011}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[3.471,92.43,8.11]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  104.011}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[3.471,92.43,8.11]}}{\\css{\\str{Answer:  104.011}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3776,7 +3776,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{110.98}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[66.6,36.94,7.44]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  110.98}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[66.6,36.94,7.44]}}{\\css{\\str{Answer:  110.98}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3790,7 +3790,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{78.873}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[4.2,1.883,72.79]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  78.873}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[4.2,1.883,72.79]}}{\\css{\\str{Answer:  78.873}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3804,7 +3804,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{347997.51007}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[4068.97963, 343390.77255, 537.75789]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  347997.51007}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[4068.97963, 343390.77255, 537.75789]}}{\\css{\\str{Answer:  347997.51007}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3818,7 +3818,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{52912.7707}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[532.2879,51694.671,685.8118]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  52912.7707}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[532.2879,51694.671,685.8118]}}{\\css{\\str{Answer:  52912.7707}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3832,7 +3832,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{6789.37211}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[5267.4401,583.1444,938.78761]}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  6789.37211}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\adddecimals{math}{complete}{[5267.4401,583.1444,938.78761]}}{\\css{\\str{Answer:  6789.37211}}{help-answer-text}}}'
 												}
 											}]
                                         }]
@@ -3852,7 +3852,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{9.08}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{17.3}{8.22}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  9.08}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{17.3}{8.22}}{\\css{\\str{Answer:  9.08}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3865,7 +3865,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{2.88}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{3}{0.12}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  2.88}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{3}{0.12}}{\\css{\\str{Answer:  2.88}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3879,7 +3879,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{2.67}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{8.42}{5.75}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  2.67}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{8.42}{5.75}}{\\css{\\str{Answer:  2.67}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3893,7 +3893,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{3.37}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{8.7}{5.33}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  3.37}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{8.7}{5.33}}{\\css{\\str{Answer:  3.37}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3907,7 +3907,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{24.4}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{27.15}{2.75}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  24.4}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{27.15}{2.75}}{\\css{\\str{Answer:  24.4}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3921,7 +3921,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{18.3}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{22.1}{3.8}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  18.3}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{22.1}{3.8}}{\\css{\\str{Answer:  18.3}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3935,7 +3935,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{374.342}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{458.5}{84.158}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  374.342}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{458.5}{84.158}}{\\css{\\str{Answer:  374.342}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3949,7 +3949,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{286.333}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{292.653}{6.32}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  286.333}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{292.653}{6.32}}{\\css{\\str{Answer:  286.333}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3963,7 +3963,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{3.39}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{9.28}{5.84}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  3.39}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{9.28}{5.84}}{\\css{\\str{Answer:  3.39}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -3977,7 +3977,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{867.709}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{955.707}{87.998}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  867.709}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\subtractdecimals{math}{complete}{955.707}{87.998}}{\\css{\\str{Answer:  867.709}}{help-answer-text}}}'
 												}
 											}]
                                         }]
@@ -3997,7 +3997,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{2835.393}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{83.3}{3.21}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  2835.393}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{83.3}{3.21}}{\\css{\\str{Answer:  2835.393}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -4011,7 +4011,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{3576}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{596}{6}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  3576}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{596}{6}}{\\css{\\str{Answer:  3576}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -4025,7 +4025,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{25812}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{6453}{4}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  25812}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{6453}{4}}{\\css{\\str{Answer:  25812}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -4039,7 +4039,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{28343}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{4049}{7}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  28343}}{label_like}}}'												}
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{4049}{7}}{\\css{\\str{Answer:  28343}}{help-answer-text}}}'												}
 											}]
 										}]
 									},
@@ -4052,7 +4052,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{7178}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{97}{74}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  7178}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{97}{74}}{\\css{\\str{Answer:  7178}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -4066,7 +4066,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{986}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{34}{29}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  986}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{34}{29}}{\\css{\\str{Answer:  986}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -4080,7 +4080,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{58050}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{645}{90}}{\\css{\\html{<br><br><br><br><br><br><br><br><br>Answer:  58050}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{645}{90}}{\\css{\\str{Answer:  58050}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -4094,7 +4094,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{10846}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{374}{29}}{\\css{\\html{<br><br><br><br><br><br><br><br><br><br><br>Answer:  10846}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{374}{29}}{\\css{\\str{Answer:  10846}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -4108,7 +4108,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{106800}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{300}{356}}{\\css{\\html{<br><br><br><br><br><br><br><br><br><br><br>Answer:  106800}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{300}{356}}{\\css{\\str{Answer:  106800}}{help-answer-text}}}'
 												}
 											}]
 										}]
@@ -4122,7 +4122,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{305}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{508}{602}}{\\css{\\html{<br><br><br><br><br><br><br><br><br><br><br>Answer:  305816}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{508}{602}}{\\css{\\str{Answer:  305816}}{help-answer-text}}}'
                                                 }
                                             }]
                                         }]
