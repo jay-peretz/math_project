@@ -14,7 +14,8 @@ angular.module('mathSkills')
   .directive('msSelect', [
 	'parser',
     'directiveUtils',
-	function (parser, directiveUtils) {
+    'panelGroupData',
+	function (parser, directiveUtils, panelGroupData) {
 		return {
 			restrict: 'E',
 			scope: {
@@ -47,20 +48,50 @@ angular.module('mathSkills')
 				
 
 				$scope.$on('checkAnswer', function () {
-					var data = {
-						expected: '\\select{'+$scope.answercorrect+'}{['+$scope.optionsarray.join(',')+']}',
+                    
+                    var data = {
+    					expected: '\\select{'+$scope.answercorrect+'}{['+$scope.optionsarray.join(',')+']}',
 						answer: '\\select{'+$scope.answer+'}{['+$scope.optionsarray.join(',')+']}',
                         label: $scope.label
 					};
-					if ($scope.answercorrect === $scope.answer) {
-						data.result = 'correct';
-						$scope.class = 'success';
-					} else {
-						data.result = 'incorrect';
-						$scope.class = 'error';
-						$scope.answer = '';
-					}
-					$scope.$emit('answer', data);
+                    
+                    if (Array.isArray($scope.answercorrect)){
+                        data.answer = '\\select{"'+$scope.answer+'"}{["'+$scope.optionsarray.join('","')+'"]}';
+                        var answerIndex = $scope.answercorrect.indexOf($scope.answer);
+                        if (answerIndex !== -1) {
+                            var correctAnswerIndex = panelGroupData.index(answerIndex);
+                            if (correctAnswerIndex === answerIndex) {
+                                data.result = 'correct';
+                                data.expected = data.answer;
+                                $scope.class = 'success';
+                            } else {
+                                data.result = 'incorrect';
+                                data.expected = '\\select{"'+$scope.answercorrect[correctAnswerIndex]+'"}{["'+$scope.optionsarray.join('","')+'"]}';
+                                $scope.class = 'error';
+                                $scope.answer = "";
+                            }
+                            $scope.$emit('answer', data);
+                        } else {
+                            panelGroupData.getIndex().then(function (index){
+                                data.result = 'incorrect';
+                                data.expected = '\\select{"'+$scope.answercorrect[index]+'"}{["'+$scope.optionsarray.join('","')+'"]}';
+                                $scope.class = 'error';
+                                $scope.answer = "";
+                                $scope.$emit('answer', data);
+                            });
+                        }
+                    }else {
+                     
+        				if ($scope.answercorrect === $scope.answer) {
+        					data.result = 'correct';
+        					$scope.class = 'success';
+        				} else {
+        					data.result = 'incorrect';
+        					$scope.class = 'error';
+        					$scope.answer = '';
+        				}
+        				$scope.$emit('answer', data);
+                    }
 				});
 
                  $scope.$on('checkFocus', function (e) {
@@ -84,8 +115,16 @@ angular.module('mathSkills')
                     // If this event has not been marked as ignored.
                     if (e.defaultPrevented === false) {
                         // Check if we can set our answer to expected.
-                        if ($scope.answer !== $scope.answercorrect) {
-                            $scope.answer = $scope.answercorrect; 
+                        if ($scope.answer !== $scope.answercorrect) {  var parsedExpected = parser.extractTag($scope.expected).args[0];
+                            if (parsedExpected[0] === '[') {
+                                var possibleAnswers = JSON.parse(parsedExpected);
+                                panelGroupData.getIndex().then(function (index) {
+                                    $scope.answer = possibleAnswers[index];
+                                });
+                            } else {
+                                // Strip out the tag part of $scope.expected and extract the value.
+                                $scope.answer = $scope.answercorrect; 
+                            }
                             $scope.$emit('helped', {
                                 controllerId: $scope.controllerId
                             });
