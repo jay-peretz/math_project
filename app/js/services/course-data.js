@@ -3015,7 +3015,7 @@ angular.module('mathSkills.services')
 																		"help": false
 																	}
 																},{
-																	problem: '\\row{\\str{Factor out a 5}}{\\frac{\\str{5 divided by 5}}{\\str{10 divided by 5}}}',
+																	problem: '\\row{\\str{Factor out a 5}}{\\frac{\\str{5 \xF7 5}}{\\str{10 \xF7 5}}}',
 																	answer: '\\frac{\\input{1}}{\\input{2}}',
 																	controls: {
 																		"checkAnswer": true,
@@ -3046,7 +3046,7 @@ angular.module('mathSkills.services')
 																		"help": false
 																	}
 																},{
-																	problem: '\\row{\\str{Factor out a 2}}{\\frac{\\str{6 divided by 2}}{\\str{10 divided by 2}}}',
+																	problem: '\\row{\\str{Factor out a 2}}{\\frac{\\str{6 \xF7 2}}{\\str{10 \xF7 2}}}',
 																	answer: '\\frac{\\input{3}}{\\input{5}}',
 																	controls: {
 																		"checkAnswer": true,
@@ -3077,7 +3077,7 @@ angular.module('mathSkills.services')
 																		"help": false
 																	}
 																},{
-																	problem: '\\row{\\str{Factor out a 2}}{\\frac{\\str{4 divided by 2}}{\\str{6 divided by 2}}}',
+																	problem: '\\row{\\str{Factor out a 2}}{\\frac{\\str{4 \xF7 2}}{\\str{6 \xF7 2}}}',
 																	answer: '\\frac{\\input{2}}{\\input{3}}',
 																	controls: {
 																		"checkAnswer": true,
@@ -3108,7 +3108,7 @@ angular.module('mathSkills.services')
 																		"help": false
 																	}
 																},{
-																	problem: '\\row{\\str{Factor out a 13}}{\\frac{\\str{13 divided by 13}}{\\str{26 divided by 13}}}',
+																	problem: '\\row{\\str{Factor out a 13}}{\\frac{\\str{13 \xF7 13}}{\\str{26 \xF7 13}}}',
 																	answer: '\\frac{\\input{1}}{\\input{2}}',
 																	controls: {
 																		"checkAnswer": true,
@@ -3140,7 +3140,7 @@ angular.module('mathSkills.services')
 																		"help": false
 																	}
 																},{
-																	problem: '\\row{\\str{Factor out an 11}}{\\frac{\\str{11 divided by 11}}{\\str{22 divided by 11}}}',
+																	problem: '\\row{\\str{Factor out an 11}}{\\frac{\\str{11 \xF7 11}}{\\str{22 \xF7 11}}}',
 																	answer: '\\frac{\\input{1}}{\\input{2}}',
 																	controls: {
 																		"checkAnswer": true,
@@ -3171,7 +3171,7 @@ angular.module('mathSkills.services')
 																		"help": false
 																	}
 																},{
-																	problem: '\\row{\\str{Factor out a 17}}{\\frac{\\str{17 divided by 17}}{\\str{34 divided by 34}}}',
+																	problem: '\\row{\\str{Factor out a 17}}{\\frac{\\str{17 \xF7 17}}{\\str{34 \xF7 17}}}',
 																	answer: '\\frac{\\input{1}}{\\input{2}}',
 																	controls: {
 																		"checkAnswer": true,
@@ -3202,7 +3202,7 @@ angular.module('mathSkills.services')
 																		"help": false
 																	}
 																},{
-																	problem: '\\row{\\str{Factor out a 5}}{\\frac{\\str{10 divided by 5}}{\\str{15 divided by 5}}}',
+																	problem: '\\row{\\str{Factor out a 5}}{\\frac{\\str{10 \xF7 5}}{\\str{15 \xF7 5}}}',
 																	answer: '\\frac{\\input{2}}{\\input{3}}',
 																	controls: {
 																		"checkAnswer": true,
