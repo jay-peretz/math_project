@@ -6,7 +6,7 @@ angular.module('mathSkills')
         function () {
             return function (arrayNumObj) {
                 var decimalDigits = function (num) {
-					if (typeof num.toString().split('.')[1] != "undefined") {
+					if (num.toString().indexOf('.') > 0) {
                     	return num.toString().split('.')[1].length;
 					} else {
 						return 0;

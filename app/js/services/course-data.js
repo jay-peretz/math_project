@@ -3891,11 +3891,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{839}{3}}}',
-												answer: '\\input{2517}',
+												problem: '\\rowgrp{\\row{\\str{Find the product of the decimal numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplydecimals{math}{partial}{83.3}{3.21}}}',
+												answer: '\\input{2835.393}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{839}{3}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  2517}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{83.3}{3.21}}{\\css{\\html{<br><br><br><br><br><br><br>Answer:  2835.393}}{label_like}}}'
 												}
 											}]
 										}]

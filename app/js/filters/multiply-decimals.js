@@ -6,7 +6,11 @@ angular.module('mathSkills')
         function () {
             return function (arrayNumObj) {
                 var decimalDigits = function (num) {
-                    return num.toString().split('.')[1].length;
+					if (num.toString().indexOf('.') > 0) {
+                    	return num.toString().split('.')[1].length;
+					} else {
+						return 0;
+					}
                 };
 
                 var totalDecimals = arrayNumObj.reduce(function (a, b) {
