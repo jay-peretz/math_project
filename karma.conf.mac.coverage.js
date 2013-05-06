@@ -16,8 +16,9 @@ files = [
   'app/js/services/mathSkills.services.js',
   'app/js/*.js',
   'app/js/**/*.js',
-  //'test/unit/*.js',
-  'test/unit/**/*.js'
+  'test/unit/*.js',
+  'test/unit/**/*.js',
+  'app/partials/**/*.html'
 ];
 
 
@@ -27,7 +28,8 @@ exclude = [
 ];
 
 preprocessors = {
-  '**/app/js/**/*.js': 'coverage'
+  '**/app/js/**/*.js': 'coverage',
+  '**/app/partials/**/*.html': 'html2js'
 };
 
 // test results reporter to use
