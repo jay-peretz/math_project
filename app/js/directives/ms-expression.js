@@ -12,7 +12,7 @@ angular.module('mathSkills')
                     directiveUtils.compileExpected($scope, $element, true);
                     // Relabel any events.
                     $scope.$on('answer', function (e, data) {
-                        if (data.label === undefined) {
+                       if (data.label === undefined || data.label === "") {
                             data.label = $scope.label;
                         }
                     });

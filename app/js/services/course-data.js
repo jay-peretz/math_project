@@ -2998,8 +2998,8 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\str{5}}{\\str{10}}}{\\str{ to its lowest terms}}',
-															answer: '\\frac{\\input{1}}{\\input{2}}',
+															problem: '\\row{\\str{Reduce }}{\\frac{\\str{12}}{\\str{48}}}{\\str{ to its lowest terms}}',
+															answer: '\\frac{\\input{1}}{\\input{4}}',
 															controls: {
 																"checkAnswer": true,
 																"help": false
@@ -3008,15 +3008,8 @@ angular.module('mathSkills.services')
 												  }, {
 														title: 'Workbook',
 														children: [{
-																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{5}}{\\str{10}}}',
-																	answer: '\\input{5}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																},{
-																	problem: '\\row{\\str{Factor out a 5}}{\\frac{\\str{5 \xF7 5}}{\\str{10 \xF7 5}}}',
-																	answer: '\\frac{\\input{1}}{\\input{2}}',
+																	problem: '\\row{\\str{Reduce }}{\\frac{\\str{12}}{\\str{48}}}{\\str{ to its lowest terms }}',
+																	answer: '\\reducefrac{12}{48}',
 																	controls: {
 																		"checkAnswer": true,
 																		"help": false
