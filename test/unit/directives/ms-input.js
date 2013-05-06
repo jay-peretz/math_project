@@ -283,5 +283,24 @@ describe('<ms-input>', function () {
                 $timeout.flush();
             }));
         });
+        
+        describe('when responding to checkHelp events', function () {
+            it('it should fill in the input with the first possible answer if there is no answer index', inject(function ($rootScope, $timeout){
+                
+                $rootScope.$broadcast("checkHelp");
+                $rootScope.$digest();
+                $timeout.flush();
+                expect(element.find('input').val()).toBe('1');
+                
+            }));
+
+            it('should fill in the correct possiblle answer if there is an answer index', inject(function (panelGroupData, $rootScope, $timeout) {
+                panelGroupData.index(2);
+                $rootScope.$broadcast("checkHelp");
+                $rootScope.$digest();
+                $timeout.flush();
+                expect(element.find('input').val()).toBe('3');
+            }));
+        });
     });
 });

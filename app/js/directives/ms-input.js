@@ -113,11 +113,19 @@ angular.module('mathSkills')
                         if (e.defaultPrevented === false) {
                             // Check if we can set our answer to expected.
                             if ($scope.answer === '') {
-                                // Strip out the tag part of $scope.expected and extract the value.
-                                $scope.answer = $scope.expected.slice(7, $scope.expected.length - 1);
-                                $scope.class = '';
-                                $element.find('input').focus();
-                                $scope.$emit('helped');
+                                var parsedExpected = parser.extractTag($scope.expected).args[0];
+                                if (parsedExpected[0] === '[') {
+                                    var possibleAnswers = JSON.parse(parsedExpected);
+                                    panelGroupData.getIndex().then(function (index) {
+                                        $scope.answer = possibleAnswers[index];
+                                    });
+                                } else {
+                                    // Strip out the tag part of $scope.expected and extract the value.
+                                    $scope.answer = $scope.expected.slice(7, $scope.expected.length - 1);
+                                    $scope.class = '';
+                                    $element.find('input').focus();
+                                    $scope.$emit('helped');
+                                }
                             } else {
                                 // If we have an answer already, fire a notHelped event.
                                 $scope.$emit('notHelped', {
