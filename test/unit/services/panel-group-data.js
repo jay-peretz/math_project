@@ -12,9 +12,14 @@ beforeEach(module('mathSkills'));
     }));
 
     describe('.index', function () {
-        it('should return true if it does not already have an index.');
-        it('should return true if passed the already saved index.');
-        it('should return false if passed a different index.');
+        it('should return the passed index if it does not have a saved value.', function () {
+            expect(panelGroupData.index(1)).toBe(1);
+        });
+
+        it('should return the saved index if it has one.', function () {
+            expect(panelGroupData.index(2)).toBe(2);
+            expect(panelGroupData.index(1)).toBe(2);
+        });
     });
 
     describe('.getIndex', function () {
@@ -35,7 +40,19 @@ beforeEach(module('mathSkills'));
     });
 
     describe('.resetIndex', function () {
-        it('should reset the data used by panelGroupData.index');
-        it('should return true');
+        it('should reset the data used by panelGroupData.index', function () {
+            // Save an index.
+            panelGroupData.index(2);
+            // Verify .index is returning the saved index.
+            expect(panelGroupData.index(1)).toBe(2);
+            // Reset the index.
+            panelGroupData.resetIndex();
+            // Set a new index and verify it is returned.
+            expect(panelGroupData.index(1)).toBe(1);
+        });
+
+        it('should return true', function () {
+            expect(panelGroupData.resetIndex()).toBe(true);
+        });
     });
 });
