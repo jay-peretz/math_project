@@ -4129,6 +4129,151 @@ angular.module('mathSkills.services')
                                         }]
                                     }
                                 ]
+                            },
+                            {
+                                title: '3.7 Multiply by Powers of Ten',
+                                path: '3.7-multiply-by-powers-of-ten',
+                                children: [
+                                    {
+										title: 'Multiply by Powers of Ten',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the decimal numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplydecimals{math}{partial}{83.3}{3.21}}}',
+												answer: '\\input{2835.393}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{83.3}{3.21}}{\\css{\\str{Answer:  2835.393}}{help-answer-text}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply by Powers of Ten',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{596}{6}}}',
+												answer: '\\input{3576}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{596}{6}}{\\css{\\str{Answer:  3576}}{help-answer-text}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply by Powers of Ten',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{english}{partial}{6453}{4}}}',
+												answer: '\\input{25812}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{6453}{4}}{\\css{\\str{Answer:  25812}}{help-answer-text}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply by Powers of Ten',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{4049}{7}}}',
+												answer: '\\input{28343}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{4049}{7}}{\\css{\\str{Answer:  28343}}{help-answer-text}}}'												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply by Powers of Ten',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{97}{74}}}',
+												answer: '\\input{7178}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{97}{74}}{\\css{\\str{Answer:  7178}}{help-answer-text}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply by Powers of Ten',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{english}{partial}{34}{29}}}',
+												answer: '\\input{986}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{34}{29}}{\\css{\\str{Answer:  986}}{help-answer-text}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply by Powers of Ten',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{645}{90}}}',
+												answer: '\\input{58050}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{645}{90}}{\\css{\\str{Answer:  58050}}{help-answer-text}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply by Powers of Ten',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{374}{29}}}',
+												answer: '\\input{10846}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{374}{29}}{\\css{\\str{Answer:  10846}}{help-answer-text}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply by Powers of Ten',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{english}{partial}{300}{356}}}',
+												answer: '\\input{106800}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{300}{356}}{\\css{\\str{Answer:  106800}}{help-answer-text}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply by Powers of Ten',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{508}{602}}}',
+												answer: '\\input{305}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{508}{602}}{\\css{\\str{Answer:  305816}}{help-answer-text}}}'
+                                                }
+                                            }]
+                                        }]
+                                    }
+                                ]
                             },{
 											title: '3.8 Change Fractions to Decimals',
 											path: '3.8-change-fractions-to-decimals',
