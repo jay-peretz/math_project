@@ -104,9 +104,9 @@ angular.module('mathSkills')
 						problemObjects[0] = Number(tagParameters[2]);
 						problemObjects[1] = Number(tagParameters[3]);
 						//  if multiplicand < multiplier exchange the numbers
-						if (problemObjects[0]<problemObjects[1]) {
+						/*if (problemObjects[0]<problemObjects[1]) {
 							problemObjects.reverse();
-						}
+						}*/
 						
 						answerObject = $filter('multiply-decimals')(problemObjects);
 						answerString = answerObject.toString();
@@ -140,10 +140,8 @@ angular.module('mathSkills')
 		
 						// set up display arrays with correct number of places left and right
 						for (var ii = 0; ii < problemObjects.length; ii++) {
-							console.log("problemObjects[ii] is: "+problemObjects[ii]+" placesLeft is: "+placesLeft+" placesRight is: "+placesRight);
 							numberDisplayArray[ii] = $filter('decimal-to-display-array')(problemObjects[ii], placesLeft, placesRight);
 						}
-						console.log("answerObject is: "+answerObject+" placesLeft is: "+placesLeft+" placesRight is: "+placesRight);
 						answerDisplayArray = $filter('decimal-to-display-array')(answerObject, placesLeft, placesRight, 1);
 						
 						
