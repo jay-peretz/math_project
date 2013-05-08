@@ -1,9 +1,2 @@
 <div class="alert alert-info">{{instructions}}</div>
-<div ng-switch on=step>
-    <span ng-switch-when="simplified">
-        <ms-expression label={{simplifiedlbl}} expected={{simplifiedexp}}></ms-expression>
-    </span>
-    <span ng-switch-when="factor">
-        <ms-expression label={{factorlbl}} expected={{factorexp}}></ms-expression>
-    </span>
-</div>
+<ms-expression label={{answerlbl}} expected={{answerexp}}></ms-expression>

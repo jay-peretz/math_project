@@ -9,12 +9,6 @@ angular.module('mathSkills')
     }])
     .directive('msReduceFraction', ['parser', function (parser) {
         return {
-            restrict: 'E',
-            scope: {
-                expected: '@',
-                label: '@'
-            },
-            templateUrl: 'partials/directives/ms-reduce-fraction.html',
             controller: ['$scope', function ($scope) {
                 var yes = '\\butgrp{\\row{\\but{Yes}{T}}{\\but{No}{F}}}',
                     no = '\\butgrp{\\row{\\but{Yes}{F}}{\\but{No}{T}}}',
@@ -56,28 +50,31 @@ angular.module('mathSkills')
                     if ($scope.expected) {
                         $scope.args = parser.extractTag($scope.expected).args;
                         $scope.instructions = "Can the fraction be simplified?";
-                        $scope.simplifiedexp = simplified($scope.args[0], $scope.args[1]) ? no : yes;
-                        $scope.simplifiedlbl = "simplified";
-                        $scope.step = 'simplified';
+                        $scope.answerexp = simplified($scope.args[0], $scope.args[1]) ? no : yes;
+                        $scope.answerlbl = "simplified";
                     }
                 });
 
                 $scope.$on('answer', function(e, data) {
-                    console.log(data);
                     e.stopPropagation();
                     switch (data.label) {
                         case "simplified":
                             if (data.result === "correct") {
                                 $scope.instructions = "What is a common factor of the numerator and denominator?";
-                                $scope.factorexp = '\\input{["' + commonFactors($scope.args[0], $scope.args[1]).join('","') + '"]}';
-                                $scope.factorlbl = "factor";
-                                $scope.step = 'factor';
+                                $scope.answerexp = '\\input{["' + commonFactors($scope.args[0], $scope.args[1]).join('","') + '"]}';
+                                $scope.answerlbl = "factor";
                             } else {
                                 $scope.$emit('checkFocus');
                             }
                             break;
                     }
                 });
-            }]
+            }],
+            restrict: 'E',
+            scope: {
+                expected: '@',
+                label: '@'
+            },
+            templateUrl: 'partials/directives/ms-reduce-fraction.html'
         };
     }]);
