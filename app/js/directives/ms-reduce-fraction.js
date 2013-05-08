@@ -7,11 +7,12 @@ angular.module('mathSkills')
             directiveTemplate: '<ms-reduce-fraction expected={{expected}}></ms-reduce-fraction>'
         });
     }])
-    .directive('msReduceFraction', ['parser', function (parser) {
+    .directive('msReduceFraction', ['parser', 'panelGroupData', function (parser, panelGroupData) {
         return {
             controller: ['$scope', function ($scope) {
                 var yes = '\\butgrp{\\row{\\but{Yes}{T}}{\\but{No}{F}}}',
                     no = '\\butgrp{\\row{\\but{Yes}{F}}{\\but{No}{T}}}',
+					factorsUsed = [],
                     simplify = function(num, den) {
                         var leastPart = num > den ? den : num,
                             ii;
@@ -31,7 +32,7 @@ angular.module('mathSkills')
                     },
                     simplified = function(num, den) {
                         var simplified = simplify(num, den);
-                        return num === simplified.numerator && den === simplified.den;
+                        return num === simplified.numerator && den === simplified.denominator;
                     },
                     commonFactors = function(num, den) {
                         var factors = [];
@@ -44,30 +45,86 @@ angular.module('mathSkills')
                             }
                         }
                         return factors;
-                    };
+                    },
+					reduceFraction = function(skipFirstFactor) {
+						var currentFactors,
+							productFactors;
+						if (skipFirstFactor) {
+							currentFactors = factorsUsed.slice(0, -1);
+						} else {
+							currentFactors = factorsUsed.slice();
+						}
+						productFactors = currentFactors.reduce(function(a, b) {
+								return a * b;										
+						}, 1);
+						return {
+							numerator: $scope.args[0]/productFactors,
+							denominator: $scope.args[1]/productFactors
+							}
+					},
+					currentFraction = function(skipFirstFactor){
+						return '\\frac{\\str{'+reduceFraction(skipFirstFactor||false).numerator+'}}{\\str{'+reduceFraction(skipFirstFactor||false).denominator+'}}';
+					};
+					
+				$scope.controllerId = Math.random().toString();
 
                 $scope.$watch('expected', function() {
                     if ($scope.expected) {
                         $scope.args = parser.extractTag($scope.expected).args;
-                        $scope.instructions = "Can the fraction be simplified?";
+                        $scope.instructions = "\\row{\\str{Can \xA0}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
                         $scope.answerexp = simplified($scope.args[0], $scope.args[1]) ? no : yes;
                         $scope.answerlbl = "simplified";
                     }
                 });
 
                 $scope.$on('answer', function(e, data) {
-                    e.stopPropagation();
-                    switch (data.label) {
-                        case "simplified":
-                            if (data.result === "correct") {
-                                $scope.instructions = "What is a common factor of the numerator and denominator?";
-                                $scope.answerexp = '\\input{["' + commonFactors($scope.args[0], $scope.args[1]).join('","') + '"]}';
-                                $scope.answerlbl = "factor";
-                            } else {
-                                $scope.$emit('checkFocus');
-                            }
-                            break;
-                    }
+					if (data.controllerId !== $scope.controllerId) {						  
+						e.stopPropagation();
+						
+						switch (data.label) {
+							case "simplified":
+								if (data.result === "correct") {
+									console.log(" data is: ",data);
+									if (parser.extractTag(data.expected).args[0] !== 'No') {
+										$scope.instructions = "\\row{\\str{What is a common factor of the numerator and denominator of \xA0}}{"+currentFraction()+"}{\\str{\xA0 ?}}";
+										$scope.answerexp = '\\input{["' + commonFactors(reduceFraction(false).numerator, reduceFraction(false).denominator).join('","') + '"]}';
+										$scope.answerlbl = "factor";
+									} else {
+										var eventData = {
+											result: "correct",
+											expected: currentFraction(),
+											label: $scope.label,
+											answer: currentFraction(),
+											controllerId: $scope.controllerId
+										}
+										$scope.$emit("answer", eventData);										
+									}
+								} else {
+									$scope.$broadcast('checkFocus');
+								}
+								break;
+							case "factor":
+								if (data.result === "correct") {
+									panelGroupData.resetIndex();
+									factorsUsed.push(parser.extractTag(data.answer).args[0]);
+									$scope.instructions = "\\row{\\str{Factor a "+factorsUsed[factorsUsed.length - 1]+" out of \xA0}}{"+currentFraction(true)+"}{\\str{\xA0 :}}";
+									$scope.answerexp = '\\row{\\frac{\\str{'+reduceFraction(true).numerator+' \xF7 '+factorsUsed[factorsUsed.length - 1]+'}}{\\str{'+reduceFraction(true).denominator+' \xF7 '+factorsUsed[factorsUsed.length - 1]+'}}}{\\str{\xA0 = \xA0}}{\\frac{\\input{'+reduceFraction(false).numerator+'}}{\\input{'+reduceFraction(false).denominator+'}}}';
+									$scope.answerlbl = "reduce";
+								} else {
+									$scope.$broadcast('checkFocus');
+								}
+								break;
+							case "reduce":
+								if (data.result === "correct") {
+									 $scope.instructions = "\\row{\\str{Can \xA0}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
+									$scope.answerexp = simplified(reduceFraction(false).numerator, reduceFraction(false).denominator) ? no : yes;
+									$scope.answerlbl = "simplified";                                
+								} else {
+									$scope.$broadcast('checkFocus');
+								}
+								break;
+						}
+					}
                 });
             }],
             restrict: 'E',
