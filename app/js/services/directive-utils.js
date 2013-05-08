@@ -264,8 +264,8 @@ angular.module('mathSkills.services')
 
                     function getSize(arr, pix, pad) {
                         var size= arr.reduce(function (a, b) {
-                            return a.length > b.length ? a.length : b.length; 
-                        }, "");
+                            return a > b.length ? a : b.length;
+                        }, 0);
                         return (+size * pix) + pad;
                     }
                 }
