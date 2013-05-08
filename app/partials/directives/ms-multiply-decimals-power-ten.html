@@ -1,0 +1,45 @@
+	<span>
+    <table>
+     <tr>
+      <td>
+    	<table class="margin-bottom-very-small margin-left-30 text_align_center">
+			<tr>
+				<td class='td_padding_small' ng-repeat='columnEntry in firstArray' ng-class="getClassBorder($index)">
+                	{{columnEntry}}
+				</td>
+                <td>
+                	<span ng-show="hideHelpInstructs2">%</span>
+                </td>
+			</tr>
+			<tr>
+				<td class='text_align_center' ng-repeat='columnEntry in secondArray'>
+                	{{columnEntry}}
+				</td>
+                <td>
+                </td>
+			</tr>
+            <tr ng-repeat='row in thirdArray'>
+				<td class='text_align_center' ng-repeat='col in row'>
+                	{{col}}<span ng-show="arrowheads" ng-class="getArrowhead($index)">&nbsp;</span>
+				</td>
+                <td>
+                </td>
+			</tr>
+            <tr>
+	            <td class='text_align_center' ng-repeat='columnEntry in secondArray'>
+				</td>
+            	<td>
+                	<br />
+                	<span class=label_like>{{addendumText}}</span>
+                </td>
+            </tr>	
+		</table>
+        </td>
+        <td>
+        	<span class="help-answer-text" ng-show="hideHelpInstructs2" ng-bind-html-unsafe=helpHtml></span>
+        </td>
+        </tr>
+        </table>
+	</span>
+    <br />
+<span class="help-answer-text" ng-hide="hideInstructions" style="text-align:left;">{{helpInstructions}}<span ng-hide="hideHelpInstructs2" ng-bind-html-unsafe=helpHtml></span>{{helpInstructions2}}</span>

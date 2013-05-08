@@ -4139,11 +4139,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the product of the decimal numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplydecimals{math}{partial}{83.3}{3.21}}}',
-												answer: '\\input{2835.393}',
+												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{833 \(100\)}}}',
+												answer: '\\input{83300}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{83.3}{3.21}}{\\css{\\str{Answer:  2835.393}}{help-answer-text}}}'
+													"help": '\\rowgrp{\\row{\\multiplydecpowten{833}{100}}{\\css{\\str{Answer:  83300}}{help-answer-text}}}'
 												}
 											}]
 										}]
