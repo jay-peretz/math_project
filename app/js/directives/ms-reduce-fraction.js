@@ -78,9 +78,9 @@ angular.module('mathSkills')
                 });
 
                 $scope.$on('answer', function(e, data) {
-					if (data.controllerId !== $scope.controllerId) {						  
+					if (data.controllerId !== $scope.controllerId) {
+                        console.log(data);
 						e.stopPropagation();
-						
 						switch (data.label) {
 							case "simplified":
 								if (data.result === "correct") {
@@ -115,7 +115,7 @@ angular.module('mathSkills')
 								}
 								break;
 							case "reduce":
-								if (data.result === "correct") {
+								if (data.result === "correct" && data.answer.indexOf('str') === -1) {
 									 $scope.instructions = "\\row{\\str{Can \xA0}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
 									$scope.answerexp = simplified(reduceFraction(false).numerator, reduceFraction(false).denominator) ? no : yes;
 									$scope.answerlbl = "simplified";                                
