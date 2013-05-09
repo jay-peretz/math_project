@@ -57,6 +57,11 @@ angular.module('mathSkills')
 				// function getClass2, classes for display- finds the row $index for function getClass3
 				$scope.getClass2 = function(index) {
 						rowForAddClass = index;	
+						if ($scope.displayresult && index == 2) {
+							return "row-line-through";
+						} else {
+						 	return "";
+						}
 				}
 				
 				// add classes to elements of display that represent line-outs and borrows

@@ -66,7 +66,7 @@ angular.module('mathSkills')
 						
 						rowForAddClass = index;	
 						
-						arrayRow = ["row-zero", "row-one", "row-two"];
+						arrayRow = ["row-zero", "row-line-through", "row-two"];
 						if ($scope.displayresult) {
 							returnClasses += arrayRow[index];
 						}
