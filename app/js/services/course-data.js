@@ -4136,7 +4136,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{83300}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecpowten{833}{100}}{\\css{\\str{Answer:  83300}}{help-answer-text}}}'
+													"help": '\\rowgrp{\\row{\\multiplydecpowten{833}{100}}{\\css{\\str{Answer:  83300}}{help-answer-text help-answer-margin-right}}}'
 												}
 											}]
 										}]
@@ -4146,11 +4146,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{596}{6}}}',
-												answer: '\\input{3576}',
+												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{722 \(10\)}}}',
+												answer: '\\input{7220}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{596}{6}}{\\css{\\str{Answer:  3576}}{help-answer-text}}}'
+													"help": '\\rowgrp{\\row{\\multiplydecpowten{722}{10}}{\\css{\\str{Answer:  7220}}{help-answer-text help-answer-margin-right}}}'
 												}
 											}]
 										}]
@@ -4160,11 +4160,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{english}{partial}{6453}{4}}}',
-												answer: '\\input{25812}',
+												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.1 \(1000\)}}}',
+												answer: '\\input{100}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{6453}{4}}{\\css{\\str{Answer:  25812}}{help-answer-text}}}'
+													"help": '\\rowgrp{\\row{\\multiplydecpowten{0.1}{1000}}{\\css{\\str{Answer:  100}}{help-answer-text help-answer-margin-right}}}'
 												}
 											}]
 										}]
@@ -4174,24 +4174,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{4049}{7}}}',
-												answer: '\\input{28343}',
+												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{3.36 \(1000\)}}}',
+												answer: '\\input{3360}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{4049}{7}}{\\css{\\str{Answer:  28343}}{help-answer-text}}}'												}
-											}]
-										}]
-									},
-									{
-										title: 'Multiply by Powers of Ten',
-										children: [{
-											title: 'Main Answer',
-											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{97}{74}}}',
-												answer: '\\input{7178}',
-												controls: {
-													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{97}{74}}{\\css{\\str{Answer:  7178}}{help-answer-text}}}'
+													"help": '\\rowgrp{\\row{\\multiplydecpowten{3.36}{1000}}{\\css{\\str{Answer:  3360}}{help-answer-text help-answer-margin-right}}}'
 												}
 											}]
 										}]
@@ -4201,11 +4188,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{english}{partial}{34}{29}}}',
-												answer: '\\input{986}',
+												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{82 \(0.001\)}}}',
+												answer: '\\input{.082}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{34}{29}}{\\css{\\str{Answer:  986}}{help-answer-text}}}'
+													"help": '\\rowgrp{\\row{\\multiplydecpowten{82}{0.001}}{\\css{\\str{Answer:  .082}}{help-answer-text help-answer-margin-right}}}'
 												}
 											}]
 										}]
@@ -4215,11 +4202,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{645}{90}}}',
-												answer: '\\input{58050}',
+												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.1 \(0.001\)}}}',
+												answer: '\\input{.0001}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{645}{90}}{\\css{\\str{Answer:  58050}}{help-answer-text}}}'
+													"help": '\\rowgrp{\\row{\\multiplydecpowten{0.1}{0.001}}{\\css{\\str{Answer:  .0001}}{help-answer-text help-answer-margin-right}}}'
 												}
 											}]
 										}]
@@ -4229,11 +4216,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{374}{29}}}',
-												answer: '\\input{10846}',
+												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{38.5 \(0.001\)}}}',
+												answer: '\\input{.0385}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{374}{29}}{\\css{\\str{Answer:  10846}}{help-answer-text}}}'
+													"help": '\\rowgrp{\\row{\\multiplydecpowten{38.5}{0.001}}{\\css{\\str{Answer:  .0385}}{help-answer-text help-answer-margin-right}}}'
 												}
 											}]
 										}]
@@ -4243,11 +4230,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{english}{partial}{300}{356}}}',
-												answer: '\\input{106800}',
+												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{80.62 \(0.00001\)}}}',
+												answer: '\\input{.0008062}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{300}{356}}{\\css{\\str{Answer:  106800}}{help-answer-text}}}'
+													"help": '\\rowgrp{\\row{\\multiplydecpowten{80.62}{0.00001}}{\\css{\\str{Answer:  .0008062}}{help-answer-text help-answer-margin-right}}}'
 												}
 											}]
 										}]
@@ -4257,12 +4244,26 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Find the product of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\multiplywholes{math}{partial}{508}{602}}}',
-												answer: '\\input{305}',
+												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{988 \(1000\)}}}',
+												answer: '\\input{988000}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{508}{602}}{\\css{\\str{Answer:  305816}}{help-answer-text}}}'
-                                                }
+													"help": '\\rowgrp{\\row{\\multiplydecpowten{988}{1000}}{\\css{\\str{Answer:  988000}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Multiply by Powers of Ten',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{7.6 \(0.01\)}}}',
+												answer: '\\input{.076}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\multiplydecpowten{7.6}{0.01}}{\\css{\\str{Answer:  .076}}{help-answer-text help-answer-margin-right}}}'
+												}
                                             }]
                                         }]
                                     }

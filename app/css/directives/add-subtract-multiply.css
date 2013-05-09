@@ -45,6 +45,7 @@
 .borderArrowhead{
 	position: relative;
 	text-align:center;
+	border-spacing: 1px;
     border-bottom: 1px solid black;
     border-radius:0 0 1em 1em;
 }
@@ -80,6 +81,9 @@
 .large-font-size {
 	font-size:110%;
 }
+.help-answer-margin-right {
+	margin-right: 50px;
+}
 .paddingHalfSubtract {
 	padding-left:8px;
 }
@@ -92,6 +96,9 @@
 .row-line-through .line_through_dimmed {
 	text-decoration: line-through;
 	color: rgba(0, 0, 0, .7);
+}
+.separateTable {
+	border-collapse:separate;
 }
 table.td_padding td {
 	padding-left:4px;

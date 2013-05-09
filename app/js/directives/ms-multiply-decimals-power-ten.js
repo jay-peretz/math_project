@@ -117,7 +117,7 @@ angular.module('mathSkills')
 						
 						// get the maximum number of digits right and left of the multiplicand decimal place
 						
-						multiplicandPlacesRight = decimalDigits(problemObjects[1]);
+						multiplicandPlacesRight = decimalDigits(problemObjects[0]);
 						if (problemObjects[0].toString().indexOf('.') > 0) {
 							multiplicandPlacesLeft = problemObjects[0].toString().length - (multiplicandPlacesRight + 1);
 						} else {
@@ -140,6 +140,7 @@ angular.module('mathSkills')
 						
 						//build an array with blank spaces and a carat for the indicated digit
 						//build an array with blank spaces and "\xe2" (half circle below) to indicate shift of decimal
+			
 						for (var ii = 0, lengthAnswerArray = answerDisplayArray.length; ii<lengthAnswerArray; ii++){
 								if (answerDisplayArray[ii] == '.') {
 									$scope.decimalPointerArray[ii] = "^";
@@ -159,8 +160,8 @@ angular.module('mathSkills')
 											break;
 											
 										case ((ii > answerPlacesLeft)
-											   && (answerPlacesRight > multiplierPlacesRight)
-											   && (ii < (answerPlacesLeft + 1 + (answerPlacesRight - multiplierPlacesRight)))):
+											   && (answerPlacesRight > multiplicandPlacesRight)
+											   && (ii < (answerPlacesLeft + 1 + (answerPlacesRight - multiplicandPlacesRight)))):
 											// \u25e1 is Unicode UTF-16 for half-moon
 											//$scope.decimalPointerArray[ii] = '\u25e1';  
 											$scope.borderBelowArray[ii] = 'arrowLeft';
@@ -171,12 +172,13 @@ angular.module('mathSkills')
 								
 						}				
 						
-						// for whole number results, display decimal to the right of the ones place and add "write the answer"
-						$scope.addendumText = "";
+						// for whole number results, display decimal to the right of the ones place
+						
 						if (answerPlacesRight == 0) {
-							$scope.addendumText = "(write the answer:  \xA0"+answerObject.toString().replace(/,/g, "")+")";
 							answerDisplayArray.push(".");
+							// use this to add a carat under the decimal point if desired
 							$scope.decimalPointerArray.push("^");
+							$scope.decimalPointerArray.push("\xA0");
 						}
 						
 						// get the number of places shifted and whether the shift is left or right

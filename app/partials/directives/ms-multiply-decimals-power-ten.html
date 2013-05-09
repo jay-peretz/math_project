@@ -1,8 +1,5 @@
 	<span>
-    <table>
-     <tr>
-      <td>
-    	<table class="margin-bottom-very-small margin-left-30 text_align_center">
+    	<table class="text_align_center separateTable">
 			<tr>
 				<td class='td_padding_small' ng-repeat='columnEntry in firstArray' ng-class="getClassBorder($index)">
                 	{{columnEntry}}
@@ -29,17 +26,10 @@
 	            <td class='text_align_center' ng-repeat='columnEntry in secondArray'>
 				</td>
             	<td>
-                	<br />
-                	<span class=label_like>{{addendumText}}</span>
+         
                 </td>
             </tr>	
 		</table>
-        </td>
-        <td>
-        	<span class="help-answer-text" ng-show="hideHelpInstructs2" ng-bind-html-unsafe=helpHtml></span>
-        </td>
-        </tr>
-        </table>
 	</span>
-    <br />
-<span class="help-answer-text" ng-hide="hideInstructions" style="text-align:left;">{{helpInstructions}}<span ng-hide="hideHelpInstructs2" ng-bind-html-unsafe=helpHtml></span>{{helpInstructions2}}</span>
+    <span ng-hide="hideInstructions" class='label_like text_align_left'>{{helpInstructions}}</span>
+
