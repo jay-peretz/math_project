@@ -2167,8 +2167,18 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                                 children: [{
-                                                problem: '\\str{Solve (9 / 1 + 8)}',
-                                                answer: '\\input{17}',
+                                                problem: '\\str{Solve 7 * 2 + 4}',
+                                                answer: '\\input{18}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }, {
+                                            title: 'Workbook',
+                                                children: [{
+                                                problem: '\\str{Solve 7 * 2 + 4}',
+                                                answer: '\\ordops{7 * 2 + 4}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -2181,8 +2191,18 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                                 children: [{
-                                                problem: '\\str{Solve 8 * 9 + 6}',
-                                                answer: '\\input{78}',
+                                                problem: '\\str{Solve (15 - 10) / 5}',
+                                                answer: '\\input{1}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }, {
+                                            title: 'Workbook',
+                                                children: [{
+                                                problem: '\\str{Solve (15 - 10) / 5}',
+                                                answer: '\\ordops{(15 - 10) / 5}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -2195,8 +2215,18 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                                 children: [{
-                                                problem: '\\str{Solve 8 - (9 * 15)}',
-                                                answer: '\\input{-127}',
+                                                problem: '\\str{Solve 4 / 2 + 9}',
+                                                answer: '\\input{11}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }, {
+                                            title: 'Workbook',
+                                                children: [{
+                                                problem: '\\str{Solve 4 / 2 + 9}',
+                                                answer: '\\ordops{4 / 2 + 9}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -2209,8 +2239,18 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                                 children: [{
-                                                problem: '\\str{Solve (7 * 2 + 14)}',
-                                                answer: '\\input{28}',
+                                                problem: '\\str{Solve 6 - (6 / 3)}',
+                                                answer: '\\input{4}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }, {
+                                            title: 'Workbook',
+                                                children: [{
+                                                problem: '\\str{Solve 6 - (6 / 3)}',
+                                                answer: '\\ordops{6 - (6 / 3)}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -2223,8 +2263,18 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                                 children: [{
-                                                problem: '\\str{Solve (4 + 9) - 8}',
-                                                answer: '\\input{5}',
+                                                problem: '\\str{Solve 7 + 15 / 3}',
+                                                answer: '\\input{12}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }, {
+                                            title: 'Workbook',
+                                                children: [{
+                                                problem: '\\str{Solve 7 + 15 / 3}',
+                                                answer: '\\ordops{7 + 15 / 3}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -2244,15 +2294,11 @@ angular.module('mathSkills.services')
                                                     "help": true
                                                 }
                                             }]
-                                        }]
-                                    },
-                                    {
-                                        title: 'Order Of Operations With Whole Numbers',
-                                        children: [{
-                                            title: 'Main Answer',
+                                        }, {
+                                            title: 'Workbook',
                                                 children: [{
-                                                problem: '\\str{Solve 4 - (7 / 1) - 7}',
-                                                answer: '\\input{-3}',
+                                                problem: '\\str{Solve 3 / (3 * 3 / 3)}',
+                                                answer: '\\ordops{3 / (3 * 3 / 3)}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -2265,8 +2311,18 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                                 children: [{
-                                                problem: '\\str{Solve (9 + 15 * 12 + 8)}',
-                                                answer: '\\input{197}',
+                                                problem: '\\str{Solve 15 - ((7 - 4) * 2)}',
+                                                answer: '\\input{9}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }, {
+                                            title: 'Workbook',
+                                                children: [{
+                                                problem: '\\str{Solve 15 - ((7 - 4) * 2)}',
+                                                answer: '\\ordops{15 - ((7 - 4) * 2)}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -2279,8 +2335,18 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                                 children: [{
-                                                problem: '\\str{Solve 28 + 29 / 1 - 22 + 8}',
-                                                answer: '\\input{43}',
+                                                problem: '\\str{Solve 15 - 8 * 2 / 4}',
+                                                answer: '\\input{11}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }, {
+                                            title: 'Workbook',
+                                                children: [{
+                                                problem: '\\str{Solve 15 - 8 * 2 / 4}',
+                                                answer: '\\ordops{15 - 8 * 2 / 4}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -2293,8 +2359,42 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                                 children: [{
-                                                problem: '\\str{Solve (17 * 29 + 19 - 46 * 45)}',
-                                                answer: '\\input{-1558}',
+                                                problem: '\\str{Solve (28 + 15 / 5) - (22 - 8)}',
+                                                answer: '\\input{17}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }, {
+                                            title: 'Workbook',
+                                                children: [{
+                                                problem: '\\str{Solve (28 + 15 / 5) - (22 - 8)}',
+                                                answer: '\\ordops{(28 + 15 / 5) - (22 - 8)}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    },
+                                    {
+                                        title: 'Order Of Operations With Whole Numbers',
+                                        children: [{
+                                            title: 'Main Answer',
+                                                children: [{
+                                                problem: '\\str{Solve 27 / 9 + 6 * 8 - (10 + 25)}',
+                                                answer: '\\input{16}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }, {
+                                            title: 'Workbook',
+                                                children: [{
+                                                problem: '\\str{Solve 27 / 9 + 6 * 8 - (10 + 25)}',
+                                                answer: '\\ordops{27 / 9 + 6 * 8 - (10 + 25)}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true

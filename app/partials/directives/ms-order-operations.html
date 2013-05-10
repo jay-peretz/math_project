@@ -1,0 +1,31 @@
+<style>
+    ms-order-operations input {
+        width: 20px;
+    }
+    ms-order-operations td {
+        text-align: center;
+        vertical-align: top;
+        padding: 0 5px;
+        min-height: 30px;
+    }
+    ms-order-operations ms-string {
+        padding: 4px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+</style>
+<div class="alert alert-info">{{instructions}}</div>
+<table>
+    <tr ng-repeat="row in finished">
+        <td ng-repeat="item in row">
+            <ms-expression expected={{getFinishedExpected(item)}}></ms-expression>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td ng-repeat="item in queue">
+            <ms-expression expected={{getExpected(item,$index)}} label={{$index}}></ms-expression>
+        </td>
+    </tr>
+</table>
