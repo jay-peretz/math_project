@@ -3511,7 +3511,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{3}}{\\input{5}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{6}}{\\str{10}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\frac{\\str{3}}{\\str{5}}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{6}}{\\str{10}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\frac{\\str{3}}{\\str{5}}}{\\str{ \xA0 \xA0 \xA0 \xA0 }}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{3}}{\\str{5}}}{help-answer-text-tight}}'
 													}
 												}]
 											}]
@@ -3525,7 +3525,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{3}}{\\input{10}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{3}}{\\str{10}}}}'															}
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{3}}{\\str{10}}}{help-answer-text-tight}}}'															}
 												}]
 											}]
 										},
@@ -3538,7 +3538,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{57}}{\\input{100}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{57}}{\\str{100}}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{57}}{\\str{100}}}{help-answer-text-tight}}}'
 													}
 												}]
 											}]
@@ -3552,7 +3552,7 @@ angular.module('mathSkills.services')
 													answer: '\\mixed{\\input{8}}{\\frac{\\input{2}}{\\input{5}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{84}}{\\str{10}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\str{8}}{\\frac{\\str{2}}{\\str{5}}}}'															}
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{84}}{\\str{10}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\str{8}}{\\frac{\\str{2}}{\\str{5}}}}{\\row{css{\\str{Answer:  \xA0 \xA0}}{help-answer-text}}{css{\\str{8}}{help-answer-text-tight}}{css{\\frac{\\str{2}}{\\str{5}}}{help-answer-text-tight}}}'															}
 												}]
 											}]
 										},
@@ -3565,7 +3565,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{9}}{\\input{10}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{9}}{\\str{10}}}}'			
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{9}}{\\str{10}}}{help-answer-text-tight}}}'			
 													}
 												}]
 											}]
@@ -3579,7 +3579,7 @@ angular.module('mathSkills.services')
 													answer: '\\mixed{\\input{2}}{\\frac{\\input{69}}{\\input{100}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{269}}{\\str{100}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\str{2}}{\\frac{\\str{69}}{\\str{100}}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{269}}{\\str{100}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\str{2}}{\\frac{\\str{69}}{\\str{100}}}}{\\row{css{\\str{Answer:  \xA0 \xA0}}{help-answer-text}}{css{\\str{2 }}{help-answer-text-tight}}{css{\\frac{\\str{69}}{\\str{100}}}{help-answer-text-tight}}}'
 													}
 												}]
 											}]
@@ -3593,7 +3593,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{43}}{\\input{100}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{43}}{\\str{100}}}}'	
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{43}}{\\str{100}}}{help-answer-text-tight}}}'	
 													}
 												}]
 											}]
@@ -3607,7 +3607,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{17}}{\\input{25}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{68}}{\\str{100}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\frac{\\str{17}}{\\str{25}}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{68}}{\\str{100}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\frac{\\str{17}}{\\str{25}}}{\\str{ \xA0 \xA0 \xA0 \xA0 }}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{17}}{\\str{25}}}{help-answer-text-tight}}}'
 													}
 												}]
 											}]
@@ -3621,7 +3621,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{17}}{\\input{100}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{17}}{\\str{100}}}}'	
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{17}}{\\str{100}}}{help-answer-text-tight}}}'	
 													}
 												}]
 											}]
@@ -3635,7 +3635,7 @@ angular.module('mathSkills.services')
 													answer: '\\mixed{\\input{2}}{\\frac{\\input{87}}{\\input{100}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{287}}{\\str{100}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\str{2}}{\\frac{\\str{87}}{\\str{100}}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{287}}{\\str{100}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\str{2}}{\\frac{\\str{87}}{\\str{100}}}}{\\row{css{\\str{Answer:  \xA0 \xA0}}{help-answer-text}}{css{\\str{2 }}{help-answer-text-tight}}{css{\\frac{\\str{87}}{\\str{100}}}{help-answer-text-tight}}}'
 													}
 												}]
 											}]
