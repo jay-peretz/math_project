@@ -18,6 +18,9 @@ angular.module('mathSkills.services')
                  * @return {Boolean} Whether the passed in index is correct.
                  */
                 index: function (ii) {
+                    if (privateData.flipIndex === undefined) {
+                        privateData.flipIndex = ii;
+                    }
                     if (privateData.index === undefined) {
                         privateData.index = ii;
                     }
@@ -43,6 +46,17 @@ angular.module('mathSkills.services')
                  */
                 resetIndex: function () {
                     return delete privateData.index;
+                },
+                getFlipIndex: function () {
+                    return privateData.flipIndex;
+                },
+                /**
+                 * Resets the current answer FlipIndex for panel set
+                 *
+                 * @return {Boolean} Whether the index was deleted.
+                 */
+                resetFlipIndex: function () {
+                    return delete privateData.flipIndex;
                 }
             };
 
