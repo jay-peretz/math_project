@@ -5,7 +5,8 @@ angular.module('mathSkills.services')
     .service('panelGroupData', [
         '$q',
         '$timeout',
-        function ($q, $timeout) {
+        '$rootScope',
+        function ($q, $timeout, $rootScope) {
             var privateData = {};
 
             var panelGroupData = {
@@ -20,6 +21,7 @@ angular.module('mathSkills.services')
                 index: function (ii) {
                     if (privateData.flipIndex === undefined) {
                         privateData.flipIndex = ii;
+                        $rootScope.$broadcast('flip', privateData.flipIndex);
                     }
                     if (privateData.index === undefined) {
                         privateData.index = ii;

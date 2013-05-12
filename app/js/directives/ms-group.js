@@ -33,6 +33,10 @@ angular.module('mathSkills')
                         directiveUtils.routeHelp($scope);
                     }
                 ],
+                scope: {
+                    expected: '@',
+                    label: '@'
+                },
                 restrict: 'E',
                 template: '<div><table><tr><td ng-repeat="child in childElements"><ms-expression expected={{child}} label={{$index}}></ms-expression></td></tr></table></div>'
             };

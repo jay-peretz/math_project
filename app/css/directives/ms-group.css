@@ -8,6 +8,6 @@ ms-group ms-input label span {
     display: none;
 }
 ms-group ms-string {
-    text-align: center;
-    font-size: 2em;
+    Xtext-align: center;
+    Xfont-size: 2em;
 }

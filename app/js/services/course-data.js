@@ -4882,7 +4882,52 @@ angular.module('mathSkills.services')
                     }, {
                         title: '4 Ratios & Proportions',
                         path: 'ratios-proportions',
-                        children: []
+                        children: [
+                            {
+                                title: '16.4 Proportion Application Problems',
+                                path: '16.4-proportion-application-problems',
+                                children: [
+                                    {
+                                        title: 'Proportion Application Problems',
+    									children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\html{In a park, there are five oak trees to every three elm trees.<br><br>If there are 20 Oak trees, how many elm trees are there?}',
+												answer: '\\flip{\\grp{\\input{["1","2"]}}{\\str{=}}{\\input{["2","1"]}}}{[2]}',
+												controls: {
+													"checkAnswer": true,
+													"help": false
+												}
+											}]
+										}, {
+                                            title: 'Workbook',
+                                            children: [{
+                                                problem: '\\html{In a park, there are five oak trees to every three elm trees.<br><br>If there are 20 Oak trees, how many elm trees are there?}',
+                                                answer: '\\frac{\\select{[\"oak trees\",\"elm trees\"]}{[\"oak trees\",\"elm trees\",\"parks\"]}}{\\select{[\"elm trees\",\"oak trees\"]}{[\"oak trees\",\"elm trees\",\"parks\"]}}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }, {
+                                                problem: '\\html{In a park, there are five oak trees to every three elm trees.<br><br>If there are 20 Oak trees, how many elm trees are there?}',
+                                                answer: '\\flip{\\frac{\\grp{\\input{5}}{\\str{ oak trees}}}{\\grp{\\input{3}}{\\str{ elm trees}}}}{[1]}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }, {
+                                                problem: '\\html{In a park, there are five oak trees to every three elm trees.<br><br>If there are 20 Oak trees, how many elm trees are there?}',
+                                                answer: '\\grp{\\flip{\\frac{\\grp{\\str{5}}{\\str{ oak trees}}}{\\grp{\\str{3}}{\\str{ elm trees}}}}{[1]}}{\\str{=}}{\\flip{\\frac{\\grp{\\input{20}}{\\select{oak trees}{[\"oak trees\",\"elm trees\",\"parks\"]}}}{\\grp{\\input{x}}{\\select{elm trees}{[\"oak trees\",\"elm trees\",\"parks\"]}}}}{[1]}}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+										}]
+									},
+                                ]
+                            }//*********************
+                        ]
                     }, {
                         title: '5 Percents',
                         path: 'percents',
