@@ -5206,6 +5206,32 @@ angular.module('mathSkills.services')
                                                 }
                                             }]
                                         }]
+                                    }, {
+                                        title: 'Multiply Fractions',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Multiply the fractions together.}',
+                                                answer: '\\multiplyfracs{\\frac{\\str{12}}{\\str{36}}}{\\frac{\\str{2}}{\\str{24}}}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    }, {
+                                        title: 'Multiply Fractions',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Multiply the fractions together.}',
+                                                answer: '\\multiplyfracs{\\frac{\\str{12}}{\\str{36}}}{\\frac{\\str{2}}{\\str{24}}}{\\frac{\\str{10}}{\\str{8}}}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
                                     }
                                 ]
                             }, {
@@ -5219,6 +5245,25 @@ angular.module('mathSkills.services')
                                             children: [{
                                                 problem: '\\str{Prime factor 10.}',
                                                 answer: '\\primefac{10}',
+                                                controls: {
+                                                    "checkAnswer": true,
+                                                    "help": true
+                                                }
+                                            }]
+                                        }]
+                                    }
+                                ]
+                            },{
+                                title: 'Testing Multiply Fractions',
+                                path: 'testing-multiply-fractions',
+                                children: [
+                                    {
+                                        title: 'Multiply Fractions',
+                                        children: [{
+                                            title: 'Main Answer',
+                                            children: [{
+                                                problem: '\\str{Multiply the fractions together.}',
+                                                answer: '\\multiplyfracs{\\frac{\\str{10}}{\\str{20}}}{\\frac{\\str{2}}{\\str{3}}}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
