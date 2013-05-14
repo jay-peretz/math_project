@@ -4931,7 +4931,153 @@ angular.module('mathSkills.services')
                     }, {
                         title: '5 Percents',
                         path: 'percents',
-                        children: []
+                        children: [
+							{
+									title: '5.1 Decimal & Fraction Form of Percents',
+									path: '5.1-decimal-fraction-form-percents',
+									children: [
+										{
+											title: 'Decimal & Fraction Form of Percents',
+											children: [{
+												title: 'Main Answer',
+												children: [{
+													problem: '\\rowgrp{\\row{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\row{\\str{4.7}}}',
+													answer: '\\mixed{\\input{4}}{\\frac{\\input{7}}{\\input{10}}}',
+													controls: {
+														"checkAnswer": true,
+														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[47, 59]}}{\\css{\\str{Answer:  106}}{help-answer-text}}}'
+													}
+												}]
+											}]
+										},
+										{
+											title: 'Decimal & Fraction Form of Percents',
+											children: [{
+												title: 'Main Answer',
+												children: [{
+													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\addwholes{english}{partial}{[301,815]}}}',
+													answer: '\\input{1116}',
+													controls: {
+														"checkAnswer": true,
+														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[301,815]}}{\\css{\\str{Answer:  1116}}{help-answer-text}}}'
+													}
+												}]
+											}]
+										},
+										{
+											title: 'Decimal & Fraction Form of Percents',
+											children: [{
+												title: 'Main Answer',
+												children: [{
+													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[968,827]}}}',
+													answer: '\\input{1795}',
+													controls: {
+														"checkAnswer": true,
+														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[968,827]}}{\\css{\\str{Answer:  1795}}{help-answer-text}}}'
+													}
+												}]
+											}]
+										},
+										{
+											title: 'Decimal & Fraction Form of Percents',
+											children: [{
+												title: 'Main Answer',
+												children: [{
+													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[68,47]}}}',
+													answer: '\\input{115}',
+													controls: {
+														"checkAnswer": true,
+														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[68,47]}}{\\css{\\str{Answer:  115}}{help-answer-text}}}'
+													}
+												}]
+											}]
+										},
+										{
+											title: 'Decimal & Fraction Form of Percents',
+											children: [{
+												title: 'Main Answer',
+												children: [{
+													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\addwholes{english}{partial}{[9026,1911]}}}',
+													answer: '\\input{10937}',
+													controls: {
+														"checkAnswer": true,
+														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[9026,1911]}}{\\css{\\str{Answer:  10937}}{help-answer-text}}}'
+													}
+												}]
+											}]
+										},
+										{
+											title: 'Decimal & Fraction Form of Percents',
+											children: [{
+												title: 'Main Answer',
+												children: [{
+													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[3148,2584]}}}',
+													answer: '\\input{5732}',
+													controls: {
+														"checkAnswer": true,
+														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[3148,2584]}}{\\css{\\str{Answer:  5732}}{help-answer-text}}}'
+													}
+												}]
+											}]
+										},
+										{
+											title: 'Decimal & Fraction Form of Percents',
+											children: [{
+												title: 'Main Answer',
+												children: [{
+													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\addwholes{english}{partial}{[618,489,115]}}}',
+													answer: '\\input{1222}',
+													controls: {
+														"checkAnswer": true,
+														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[618,489,115]}}{\\css{\\str{Answer:  1222}}{help-answer-text}}}'
+													}
+												}]
+											}]
+										},
+										{
+											title: 'Decimal & Fraction Form of Percents',
+											children: [{
+												title: 'Main Answer',
+												children: [{
+													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[1700,2233,4945]}}}',
+													answer: '\\input{8878}',
+													controls: {
+														"checkAnswer": true,
+														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[1700,2233,4945]}}{\\css{\\str{Answer:  8878}}{help-answer-text}}}'
+													}
+												}]
+											}]
+										},
+										{
+											title: 'Decimal & Fraction Form of Percents',
+											children: [{
+												title: 'Main Answer',
+												children: [{
+													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[8850,4626,177,401]}}}',
+													answer: '\\input{14054}',
+													controls: {
+														"checkAnswer": true,
+														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[8850,4626,177,401]}}{\\css{\\str{Answer:  14054}}{help-answer-text}}}'
+													}
+												}]
+											}]
+										},
+										{
+											title: 'Decimal & Fraction Form of Percents',
+											children: [{
+												title: 'Main Answer',
+												children: [{
+													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\addwholes{english}{partial}{[832,6223,2705,146]}}}',
+													answer: '\\input{9906}',
+													controls: {
+														"checkAnswer": true,
+														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[832,6223,2705,146]}}{\\css{\\str{Answer:  9906}}{help-answer-text}}}'
+													}
+												}]
+											}]
+										}
+                                ]									
+							}]
                     }, {
                         title: '6 Measurements',
                         path: 'measurements',
