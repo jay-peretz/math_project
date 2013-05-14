@@ -4945,7 +4945,7 @@ angular.module('mathSkills.services')
 													answer: '\\mixed{\\input{4}}{\\frac{\\input{7}}{\\input{10}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[47, 59]}}{\\css{\\str{Answer:  106}}{help-answer-text}}}'
+														"help": '\\rowgrp{\\row{\\percentsdecimalfrac{4.7}{decimalNotPercent}{percentAsFraction}}}'
 													}
 												}]
 											}]
