@@ -16,11 +16,19 @@ describe('<ms-placevalue>', function () {
     describe('when ms-placevalue tag element is added', function () {
 
         it('should be present on the page', inject(function ($rootScope) {
-            expect(jQuery(element).find('table').length).toBe(1);
+            expect(jQuery(element).find('table').length).toBe(2);
         }));
 		
-		it('should have a carat character in the 2nd td of the 2nd row of the display array', inject(function ($rootScope) {
-			expect(jQuery(element).find('table tr:nth-child(2) td:nth-child(2)').text()).toBe('^')																				
+		it('the display should have text reading "the 2 must stay the same"', inject(function ($rootScope) {
+			expect(jQuery(element).find('table span').text()).toContain('the 2 must stay the same')																				
+		}));
+		
+		it('should have a "2" in the 2nd td, 1st row of the last table in the display array', inject(function ($rootScope) {
+			expect(jQuery(element).find('table:last tr:nth-child(1) td:nth-child(2)').text()).toContain('2')																				
+		}));
+		
+		it('should have a carat character 2nd row of the last table of the display array', inject(function ($rootScope) {
+			expect(jQuery(element).find('table:last tr:nth-child(2)').text()).toContain('^')																				
 		}));
 		
     });

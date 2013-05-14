@@ -3,11 +3,6 @@
 angular.module('mathSkills') 
 	.config(['parserProvider', function (parserProvider) {
         parserProvider.register('placevalue', {
-            argTemplates: [{
-                name: 'numberdigits'
-            },{
-                name: 'numberdigitsplace'
-            }],
             directiveTemplate: '<ms-placevalue expected={{expected}}></ms-placevalue>'
         });
     }])
@@ -21,59 +16,39 @@ angular.module('mathSkills')
 				label: '@'
 			},
 			controller: function ($scope, $element) {
-				$scope.answer = '';
-                $scope.controllerId = Math.random().toString();
-				$scope.numberdigits = [];
-				$scope.numberdigitsplace = [];
-				$scope.numbarray = [];
+				$scope.numberArray = [];
 				$scope.randomplacearray = [];
-				$scope.numbStringCommas = "";
-				
-			 // Extract the value/s for $scope.numberdigits & $scope.numberdigitsplace
-				$scope.$watch('expected', function () {
-					if ($scope.expected) {
-						parser.parse($scope.expected, { scope: $scope });
-					}
-				});
-				$scope.$watch('numberdigits', function () {
-					if (typeof $scope.numberdigits === "string") {
-						if ($scope.numberdigits.indexOf('.') < 0) {
-							$scope.numbStringCommas = getNumberStringCommas($scope.numberdigits);
-							for (var ii = 0, len = $scope.numbStringCommas.length; ii < len; ii += 1) {
-									$scope.numbarray[ii] = $scope.numbStringCommas.substr(ii, 1);
-							}
-						} else {
-							for (var ii = 0, len = $scope.numberdigits.length; ii < len; ii += 1) {
-									$scope.numbarray[ii] = $scope.numberdigits.substr(ii, 1);
-							}
-						}
-					}
-				});
-				
-				$scope.$watch('numberdigitsplace', function () {
-					if (typeof $scope.numberdigitsplace === "string") {
-						// check for numberdigitsplace value > the number of places in numberdigits
-						if ( parseInt($scope.numberdigitsplace, 10) > $scope.numbarray.toString().length) {
-							console.log("place value greater than value of given number");
-						}
-						$scope.numberdigitsplace = $scope.numberdigits.toString().length - parseInt($scope.numberdigitsplace, 10);
-						//build an array the same length as $scope.numbarray with blank spaces and a carat for the indicated digit
-						for (var ii = 0, jj = 1, len1 = $scope.numbarray.toString().length; ii < len1; ii++){
-							if (($scope.numbarray[ii] != ',')&&($scope.numbarray[ii] != '.')) {
-								if (jj == parseInt($scope.numberdigitsplace,10)) {
-									$scope.randomplacearray[ii] = "^";
-								} else {
-									$scope.randomplacearray[ii] = " ";
-								}
-								jj++;
+				$scope.numbStringCommas = "";				
+								
+				var tagParameters = [],
+					tagParmsZeroArray = [],
+					roundedDecimalArray = [],
+					problemDigit,
+					problemDigitRight,
+					problemDecimalIndex,
+					roundToThisPlace,
+					roundedIntegerNumber;
+					
+				var getRounded = function(numberObject, numberOfPlaces){
+				     var leftNumber = 0,
+					     givenNumberString = numberObject.toString(),
+					     truncatedDecimal = numberObject/Math.pow(10, numberOfPlaces),
+					     roundedDecimal = Math.round(truncatedDecimal);
+     
+				     leftNumber = roundedDecimal*Math.pow(10, numberOfPlaces);
+					 
+				     return leftNumber;    
+				 };
+				 
+				 var decimalDigits = function (num) {
+							if (num.toString().indexOf('.') > 0) {
+								return num.toString().split('.')[1].length;
 							} else {
-								$scope.randomplacearray[ii] = " ";
+								return 0;
 							}
-						}
-					}
-				});
-
-				// receives string representation of number without commas, returns an array with commas
+				 };
+				 
+				/*// receives string representation of number without commas, returns an array with commas
 				function getNumberStringCommas(givenWhole) {
 					var needsCommas = givenWhole,
 						buildCommas = [],
@@ -90,9 +65,76 @@ angular.module('mathSkills')
 					numberWithCommas = buildCommas.reverse();
 					numberWithCommas = numberWithCommas.join();
 					return numberWithCommas;				
-				}
+				  }*/
 				
+			 // Extract the value/s for $scope.numberdigits & $scope.numberdigitsplace
+				$scope.$watch('expected', function () {
+					if ($scope.expected) {
+						tagParameters = parser.extractTag($scope.expected).args;
+						tagParmsZeroArray = tagParameters[0].split("");
+						problemDecimalIndex = tagParameters[0].indexOf(".");
+						if (problemDecimalIndex > 0) {
+							roundedIntegerNumber = getRounded(Number(tagParameters[0].replace(".", "")), tagParameters[1] - 1);
+							roundedDecimalArray = roundedIntegerNumber.toString().split("");
+							roundedDecimalArray.splice(problemDecimalIndex,0,".");
+						} else {
+							roundedIntegerNumber = getRounded(Number(tagParameters[0]), tagParameters[1]);
+							roundedDecimalArray = roundedIntegerNumber.toString().split("");
+						}
+						
+						//logic for commas for the future
+						/*if (tagParameters[0].indexOf('.') < 0) {
+							$scope.numbStringCommas = getNumberStringCommas(tagParameters[0]);
+							for (var ii = 0, len = $scope.numbStringCommas.length; ii < len; ii += 1) {
+									$scope.numberArray[ii] = $scope.numbStringCommas.substr(ii, 1);
+							}
+						} else {*/							
+									$scope.numberArray = roundedDecimalArray.slice();
+						/*}*/
+
+						// check for numberdigitsplace value > the number of places in numberdigits
+						if ( parseInt(tagParameters[1], 10) > $scope.numberArray.toString().length) {
+							console.log("place value greater than value of given number");
+						}
+						
+						//build an array the same length as $scope.numberArray with blank spaces and a carat for the indicated digit
+						for (var ii = 0, jj = 1, len1 = $scope.numberArray.length; ii < len1; ii++){
+							if (($scope.numberArray[ii] != ',')&&($scope.numberArray[ii] != '.')) {
+								if (jj == tagParameters[0].length - tagParameters[1]) {
+									$scope.randomplacearray[ii] = "^";
+									problemDigit = tagParmsZeroArray[ii];
+									if ($scope.numberArray[ii + 1] != '.') {
+										problemDigitRight = tagParmsZeroArray[ii + 1];
+									} else {
+										problemDigitRight = tagParmsZeroArray[ii + 2];
+									}
+								} else {
+									$scope.randomplacearray[ii] = " ";
+								}
+								jj++;
+							} else {
+								$scope.randomplacearray[ii] = " ";
+							}
+						}
+						
+						switch (true) {
+				
+							case (problemDigitRight < 5):
+								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" is "+problemDigitRight+" (4 or lower), the "+problemDigit+" must stay the same. The whole number digits to the right of the rounded value become zeros.";
+								break;
+							case ((problemDigitRight >= 5)&&((parseInt(problemDigit, 10)+1)<10)):
+								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" is "+problemDigitRight+" (5 or higher), the "+problemDigit+" must go up one. It becomes "+(parseInt(problemDigit, 10)+1)+". The whole number digits to the right of the rounded value become zeros.";
+								break;
+							case ((problemDigitRight >= 5)&&((parseInt(problemDigit, 10)+1)>9)):
+								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" is "+problemDigitRight+" (5 or higher), the "+problemDigit+" must go up one. It becomes "+(parseInt(problemDigit, 10)+1)+". Write '0' in place of the "+problemDigit+" and add one to the column on the left; if necessary, continue to carry and add until there are no further carries. The whole number digits to the right of the rounded value '0' become zeros.";
+								break;
+							default:
+								break;
+					}
+
+					}
+				});				
 			},
-			template: '<div class="control-group {{class}}"><label><span>{{label}}</span><table class="margin-left-small"><tr><td ng-repeat="number in numbarray">{{number}}</td></tr><tr><td ng-repeat="place in randomplacearray">{{place}}</td></tr></table></label></div>'
+			template: '<div class="control-group {{class}}"><label><span>{{label}}</span><table class="margin-left-small"><tr><td><span class="label_like"><br>{{helpInstructions2}}</span></td></tr><tr class="label_like"><td><span><br> Answer: \xA0</span></td></tr></table><table class="margin-left-small"><tr class="label_like"><td ng-repeat="number in numberArray">{{number}}</td></tr><tr><td ng-repeat="place in randomplacearray">{{place}}</td></tr></table></label></div>'
 		};
 	}]);
