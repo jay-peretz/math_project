@@ -4961,7 +4961,7 @@ angular.module('mathSkills.services')
                                                 }
                                             }, {
                                                 problem: '\\html{In a park, there are five oak trees to every three elm trees.<br><br>If there are 20 Oak trees, how many elm trees are there?}',
-                                                answer: '\\flip{\\frac{\\grp{\\input{5}}{\\str{ oak trees}}}{\\grp{\\input{3}}{\\str{ elm trees}}}}{[1]}',
+                                                answer: '\\ins{\\flip{\\frac{\\grp{\\input{5}}{\\str{ oak trees}}}{\\grp{\\input{3}}{\\str{ elm trees}}}}{[1]}}{[\"test 1\",\"test 2\"]}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -5185,9 +5185,10 @@ angular.module('mathSkills.services')
                                             title: 'Main Answer',
                                             children: [{
                                                 problem: '\\str{this is a width test}',
+                                                answer: '\\row{\\str{5}}{\\sign{\xb7}}{\\str{8}}',
                                                 //answer: '\\mixed{\\input{55}}{\\frac{\\input{66}}{\\input{99999}}}',
                                                 //answer: '\\frac{\\mixed{\\input{5555}}{\\frac{\\input{66}}{\\input{99999}}}}{\\mixed{\\input{55}}{\\frac{\\input{2}}{\\input{33}}}}',
-                                                answer: 'frac{\\frac{\\mixed{\\input{1}}{\\frac{\\select{Tens}{["Ones", "Tens"]}}{\\input{20}}}}{\\mixed{\\input{55}}{\\frac{\\input{2}}{\\input{33}}}}}{\\frac{\\mixed{\\input{55}}{\\frac{\\select{Tens}{["Ones", "Tens", "Hundreds", "Thousands"]}}{\\input{99999}}}}{\\mixed{\\input{55}}{\\frac{\\input{2}}{\\input{33}}}}}',
+                                                //answer: 'frac{\\frac{\\mixed{\\input{1}}{\\frac{\\select{Tens}{["Ones", "Tens"]}}{\\input{20}}}}{\\mixed{\\input{55}}{\\frac{\\input{2}}{\\input{33}}}}}{\\frac{\\mixed{\\input{55}}{\\frac{\\select{Tens}{["Ones", "Tens", "Hundreds", "Thousands"]}}{\\input{99999}}}}{\\mixed{\\input{55}}{\\frac{\\input{2}}{\\input{33}}}}}',
                                                 //answer: '\\mixed{\\input{55}}{\\frac{\\select{Tens}{["Ones", "Tens", "Hundreds", "Thousands"]}}{\\select{Tens}{["Ones", "Tens"]}}',
                                                 //answer: '\\frac{\\mixed{\\input{55}}{\\frac{\\select{Tens}{["Ones", "Tens", "Hundreds", "Thousands"]}}{\\select{Tens}{["Ones", "Tens"]}}}{\\mixed{\\input{55}}{\\frac{\\select{Tens}{["Ones", "Tens", "Hundreds", "Thousands"]}}{\\select{Tens}{["Ones", "Tens"]}}}',
                                                 controls: {
