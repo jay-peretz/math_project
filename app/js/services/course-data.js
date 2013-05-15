@@ -1591,7 +1591,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\divwholes{\\input{5}}{\\input{9308}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -1615,7 +1616,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\divwholes{\\input{3}}{\\input{3239}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -1639,14 +1641,15 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\divwholes{\\input{y}}{\\input{x}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
                                             title: 'Workbook',
                                             children: [{
                                                 problem: '\\str{Place the dividend and divisor in the proper places for the problem "x divided by y"}',
-                                                answer: '\\css{\\divwholes{\\select{x}{[x,y]}}{\\select{y}{[x,y]}}}{divwhole}',
+                                                answer: '\\css{\\divwholes{\\select{"x"}{["x","y"]}}{\\select{"y"}{["x","y"]}}}{divwhole}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
@@ -1663,7 +1666,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\divwholes{\\input{5}}{\\input{7916}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -1687,7 +1691,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\divwholes{\\input{6}}{\\input{2855}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -1711,7 +1716,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{6744}}{\\str{quotient}}{\\input{7}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -1749,7 +1755,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{1186}}{\\str{quotient}}{\\input{4}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -1787,7 +1794,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{1009}}{\\str{quotient}}{\\input{0}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -1825,7 +1833,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{304}}{\\str{quotient}}{\\input{4}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -1863,7 +1872,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{3127}}{\\str{quotient}}{\\input{0}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}]
@@ -1877,7 +1887,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{795}}{\\str{quotient}}{\\input{15}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}]
@@ -1891,7 +1902,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{159}}{\\str{quotient}}{\\input{25}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}]
@@ -1905,7 +1917,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{30}}{\\str{quotient}}{\\input{40}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}]
@@ -1919,7 +1932,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{875}}{\\str{quotient}}{\\input{52}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}]
@@ -1933,7 +1947,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{90}}{\\str{quotient}}{\\input{842}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}]
@@ -2860,7 +2875,8 @@ angular.module('mathSkills.services')
                                                 answer: '\\grp{\\input{2}}{\\str{·}}{\\input{5}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": false
+                                                    "help": false,
+                                                    "workbook": true
                                                 }
                                             }]
                                         }, {
@@ -2883,7 +2899,8 @@ angular.module('mathSkills.services')
                                                 answer: '\\grp{\\input{2}}{\\str{·}}{\\exp{\\input{3}}{\\input{2}}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": false
+                                                    "help": false,
+                                                    "workbook": true
                                                 }
                                             }]
                                         }, {
@@ -2906,7 +2923,8 @@ angular.module('mathSkills.services')
                                                 answer: '\\grp{\\exp{\\input{2}}{\\input{2}}}{\\str{·}}{\\exp{\\input{3}}{\\input{2}}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": false
+                                                    "help": false,
+                                                    "workbook": true
                                                 }
                                             }]
                                         }, {
@@ -2929,7 +2947,8 @@ angular.module('mathSkills.services')
                                                 answer: '\\grp{\\input{2}}{\\str{·}}{\\exp{\\input{5}}{\\input{2}}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": false
+                                                    "help": false,
+                                                    "workbook": true
                                                 }
                                             }]
                                         }, {
@@ -2952,7 +2971,8 @@ angular.module('mathSkills.services')
                                                 answer: '\\grp{\\input{2}}{\\str{·}}{\\input{59}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": false
+                                                    "help": false,
+                                                    "workbook": true
                                                 }
                                             }]
                                         }, {
@@ -2975,7 +2995,8 @@ angular.module('mathSkills.services')
                                                 answer: '\\grp{\\input{2}}{\\str{·}}{\\input{5}}{\\str{·}}{\\input{13}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": false
+                                                    "help": false,
+                                                    "workbook": true
                                                 }
                                             }]
                                         }, {
@@ -2998,7 +3019,8 @@ angular.module('mathSkills.services')
                                                 answer: '\\grp{\\input{5}}{\\str{·}}{\\input{29}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": false
+                                                    "help": false,
+                                                    "workbook": true
                                                 }
                                             }]
                                         }, {
@@ -3021,7 +3043,8 @@ angular.module('mathSkills.services')
                                                 answer: '\\grp{\\input{2}}{\\str{·}}{\\input{3}}{\\str{·}}{\\exp{\\input{7}}{\\input{2}}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": false
+                                                    "help": false,
+                                                    "workbook": true
                                                 }
                                             }]
                                         }, {
@@ -3044,7 +3067,8 @@ angular.module('mathSkills.services')
                                                 answer: '\\grp{\\exp{\\input{3}}{\\input{2}}}{\\str{·}}{\\input{19}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": false
+                                                    "help": false,
+                                                    "workbook": true
                                                 }
                                             }]
                                         }, {
@@ -3067,7 +3091,8 @@ angular.module('mathSkills.services')
                                                 answer: '\\grp{\\input{2}}{\\str{·}}{\\input{53}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": false
+                                                    "help": false,
+                                                    "workbook": true
                                                 }
                                             }]
                                         }, {
@@ -3102,7 +3127,8 @@ angular.module('mathSkills.services')
 															answer: '\\frac{\\input{1}}{\\input{4}}',
 															controls: {
 																"checkAnswer": true,
-																"help": false
+																"help": false,
+                                                                "workbook": true
 															}
 														}]
 												  }, {
@@ -3126,7 +3152,8 @@ angular.module('mathSkills.services')
 															answer: '\\frac{\\input{3}}{\\input{5}}',
 															controls: {
 																"checkAnswer": true,
-																"help": false
+																"help": false,
+                                                                "workbook": true
 															}
 														}]
 													}, {
@@ -3157,7 +3184,8 @@ angular.module('mathSkills.services')
 															answer: '\\frac{\\input{2}}{\\input{3}}',
 															controls: {
 																"checkAnswer": true,
-																"help": false
+																"help": false,
+                                                                "workbook": true
 															}
 														}]
 													}, {
@@ -3188,7 +3216,8 @@ angular.module('mathSkills.services')
 															answer: '\\frac{\\input{1}}{\\input{2}}',
 															controls: {
 																"checkAnswer": true,
-																"help": false
+																"help": false,
+                                                                "workbook": true
 															}
 														}]
 													}, {
@@ -3220,7 +3249,8 @@ angular.module('mathSkills.services')
 															answer: '\\frac{\\input{1}}{\\input{2}}',
 															controls: {
 																"checkAnswer": true,
-																"help": false
+																"help": false,
+                                                                "workbook": true
 															}
 														}]
 													}, {
@@ -3251,7 +3281,8 @@ angular.module('mathSkills.services')
 															answer: '\\frac{\\input{1}}{\\input{2}}',
 															controls: {
 																"checkAnswer": true,
-																"help": false
+																"help": false,
+                                                                "workbook": true
 															}
 														}]
 													}, {
@@ -3282,7 +3313,8 @@ angular.module('mathSkills.services')
 															answer: '\\frac{\\input{2}}{\\input{3}}',
 															controls: {
 																"checkAnswer": true,
-																"help": false
+																"help": false,
+                                                                "workbook": true
 															}
 														}]
 													}, {
@@ -3313,7 +3345,8 @@ angular.module('mathSkills.services')
 															answer: '\\frac{\\input{1}}{\\input{4}}',
 															controls: {
 																"checkAnswer": true,
-																"help": false
+																"help": false,
+                                                                "workbook": true
 															}
 														}]
 													}]
@@ -3327,7 +3360,8 @@ angular.module('mathSkills.services')
 															answer: '\\frac{\\input{3}}{\\input{4}}',
 															controls: {
 																"checkAnswer": true,
-																"help": false
+																"help": false,
+                                                                "workbook": true
 															}
 														}]
 													}]
@@ -3341,7 +3375,8 @@ angular.module('mathSkills.services')
 															answer: '\\frac{\\input{2}}{\\input{3}}',
 															controls: {
 																"checkAnswer": true,
-																"help": false
+																"help": false,
+                                                                "workbook": true
 															}
 														}]
 													}]
@@ -4529,7 +4564,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\divwholes{\\input{5}}{\\input{9308}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -4553,7 +4589,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\divwholes{\\input{3}}{\\input{3239}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -4577,7 +4614,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\divwholes{\\input{y}}{\\input{x}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -4601,7 +4639,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\divwholes{\\input{5}}{\\input{7916}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -4625,7 +4664,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\divwholes{\\input{6}}{\\input{2855}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -4649,7 +4689,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{6744}}{\\str{quotient}}{\\input{7}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -4687,7 +4728,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{1186}}{\\str{quotient}}{\\input{4}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -4725,7 +4767,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{1009}}{\\str{quotient}}{\\input{0}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -4763,7 +4806,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{304}}{\\str{quotient}}{\\input{4}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {
@@ -4801,7 +4845,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{3127}}{\\str{quotient}}{\\input{0}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}]
@@ -4815,7 +4860,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{795}}{\\str{quotient}}{\\input{15}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}]
@@ -4829,7 +4875,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{159}}{\\str{quotient}}{\\input{25}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}]
@@ -4843,7 +4890,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{30}}{\\str{quotient}}{\\input{40}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}]
@@ -4857,7 +4905,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{875}}{\\str{quotient}}{\\input{52}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}]
@@ -4871,7 +4920,8 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\input{90}}{\\str{quotient}}{\\input{842}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}]
@@ -4896,7 +4946,8 @@ angular.module('mathSkills.services')
 												answer: '\\flip{\\grp{\\input{["1","2"]}}{\\str{=}}{\\input{["2","1"]}}}{[2]}',
 												controls: {
 													"checkAnswer": true,
-													"help": false
+													"help": false,
+                                                    "workbook": true
 												}
 											}]
 										}, {

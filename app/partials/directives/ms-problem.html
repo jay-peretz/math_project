@@ -1,16 +1,16 @@
 <div>
     <ul class="nav nav-tabs">
-        <li class=active><a href="#problem" data-toggle="tab" ng-click="updateTab('problem')" onclick="return false;">Problem</a></li>
-        <li ng-class="{ disabled: !workbook }" ng-switch on=!workbook>
+        <li ng-class="{ active: isCurrent('problem') }"><a href="#problem" data-toggle="tab" ng-click="updateTab('problem')" onclick="return false;">Problem</a></li>
+        <li ng-class="{ disabled: !workbook, active: isCurrent('wb') }" ng-switch on=!workbook>
             <a ng-switch-when=false href="#workbook" data-toggle="tab" ng-click="updateTab('wb')" onclick="return false;">Workbook</a>
             <a ng-switch-when=true ng-click="updateTab('wb')" onclick="return false;">Workbook</a>
         </li>
     </ul>
     <div class=tab-content>
-        <div class="tab-pane active" id=problem>
+        <div class=tab-pane ng-class="{ active: isCurrent('problem') }" id=problem>
             <ms-panel-group panelgroup={{mainanswer}}></ms-panel-group>
         </div>
-        <div class=tab-pane id=workbook>
+        <div class=tab-pane ng-class="{ active: isCurrent('wb') }" id=workbook>
             <ms-panel-group panelgroup={{workbook}}></ms-panel-group>
         </div>
     </div>

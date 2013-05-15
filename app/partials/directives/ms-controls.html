@@ -8,6 +8,14 @@
         {{answerButtonText}}
     </button>
     <button
+        class="btn btn-primary btn-block"
+        ng-click=showNextProblem()
+        ng-show=hasNextProblem
+    >
+        <i class="icon-arrow-right icon-white"></i>
+        Next Problem
+    </button>
+    <button
         class="btn btn-warning btn-block"
         ng-click=help()
         ng-show=hasHelp
@@ -16,11 +24,11 @@
         Help
     </button>
     <button
-        class="btn btn-primary btn-block"
-        ng-click=showNextProblem()
-        ng-show=hasNextProblem
+        class="btn btn-warning btn-block"
+        ng-click=openWorkbook()
+        ng-show=hasWorkbook
     >
-        <i class="icon-arrow-right icon-white"></i>
-        Next Problem
+        <i class="icon-question-sign icon-white"></i>
+        Open Workbook
     </button>
 </div>

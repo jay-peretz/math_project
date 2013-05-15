@@ -35,6 +35,16 @@ angular.module('mathSkills')
                                     };
                                 }
 
+                                // Setup the hasWorkbook variable which shows/hides the workbook button.
+                                $scope.hasWorkbook = $scope.data.workbook;
+
+                                // If we do have help, set up the actual help function.
+                                if ($scope.hasWorkbook === true) {
+                                    $scope.openWorkbook = function () {
+                                        $scope.$emit('showWorkbook');
+                                    };
+                                }
+
                                 // Setup the hasCheckAnswer flag to show/hide the Check Answer button.
                                 $scope.hasCheckAnswer = $scope.data.checkAnswer;
 
