@@ -257,7 +257,8 @@ angular.module('mathSkills')
 						}
 					
 					} else {
-								$scope.inenglish = tagParameters[2] + "\xA0 \xb7 \xA0"+tagParameters[3];
+								$scope.inenglishfirst = tagParameters[2]
+								$scope.inenglishsecond = tagParameters[3];
 					}
 					
 				});
