@@ -1107,7 +1107,7 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{13 is how much more than 12}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 13 > 12}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 12 < 13}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 12 + 13}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 13 - 12}}}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\xA0}}{\\row{\\str{13 is how much more than 12?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 13 > 12}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 12 < 13}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 12 + 13}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 13 - 12}}}}}',
                                                 answer: 'D',
                                                 controls: {
                                                     "checkAnswer": true,
