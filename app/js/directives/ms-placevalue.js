@@ -88,8 +88,9 @@ angular.module('mathSkills')
 							for (var ii = 0, len = $scope.numbStringCommas.length; ii < len; ii += 1) {
 									$scope.numberArray[ii] = $scope.numbStringCommas.substr(ii, 1);
 							}
-						} else {*/							
-									$scope.numberArray = roundedDecimalArray.slice();
+						} else {*/		
+								$scope.givenNumberArray = tagParmsZeroArray.slice();
+								$scope.numberArray = roundedDecimalArray.slice();
 						/*}*/
 
 						// check for numberdigitsplace value > the number of places in numberdigits
@@ -133,11 +134,11 @@ angular.module('mathSkills')
 								break;
 							default:
 								break;
-					}
+						}
 
 					}
 				});				
 			},
-			template: '<div class="control-group {{class}}"><label><span>{{label}}</span><table class="margin-left-small"><tr><td><span class="label_like"><br>{{helpInstructions2}}<br><br>{{helpInstructions3}}</span></td></tr><tr class="label_like"><td><span><br> Answer: \xA0</span></td></tr></table><table class="margin-left-small"><tr class="label_like"><td ng-repeat="number in numberArray">{{number}}</td></tr><tr><td ng-repeat="place in randomplacearray">{{place}}</td></tr></table></label></div>'
+			templateUrl: 'partials/directives/ms-placevalue.html'
 		};
 	}]);
