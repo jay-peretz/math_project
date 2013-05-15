@@ -67,7 +67,7 @@ angular.module('mathSkills')
 					return numberWithCommas;				
 				  }*/
 				
-			 // Extract the value/s for $scope.numberdigits & $scope.numberdigitsplace
+			 // Extract the value/s for parameters- second parameter is array elements from right for round place, counting decimal
 				$scope.$watch('expected', function () {
 					if ($scope.expected) {
 						tagParameters = parser.extractTag($scope.expected).args;
