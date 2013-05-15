@@ -1,4 +1,4 @@
-<span>
+<span><br />
        <table>
             <tr>
             	<td ng-repeat="number in givenNumberArray">
@@ -11,7 +11,7 @@
                 </td>
             </tr>
        </table>
-       <table>
+       <table ng-show="showanswer">
         	<tr>
             	<td>
                 	<br />
@@ -21,14 +21,14 @@
                 </td>
             </tr>
         </table>
-        <table class="margin-left-small label_like">
+        <table ng-show="showanswer" class="margin-left-small label_like">
       		<tr>
             	<td>
                 	<span><br />Answer:</span>
                 </td>
             </tr>
         </table>
-        <table class="margin-left-small label_like">
+        <table ng-show="showanswer" class="margin-left-small label_like">
             <tr>
                 <td ng-repeat="number in numberArray">
                     {{number}}

@@ -895,7 +895,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{470}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\placevalue{471}{1}'
+                                                    "help": '\\placevalue{471}{1}{showanswer}'
                                                 }
                                             }]
                                         }]
@@ -909,7 +909,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{1000}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\placevalue{1346}{3}'
+                                                    "help": '\\placevalue{1346}{3}{showanswer}'
                                                 }
                                             }]
                                         }]
@@ -923,7 +923,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{680}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\placevalue{684}{1}'
+                                                    "help": '\\placevalue{684}{1}{showanswer}'
                                                 }
                                             }]
                                         }]
@@ -937,7 +937,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{960}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\placevalue{959}{1}'
+                                                    "help": '\\placevalue{959}{1}{showanswer}'
                                                 }
                                             }]
                                         }]
@@ -951,7 +951,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{500}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\placevalue{461}{2}'
+                                                    "help": '\\placevalue{461}{2}{showanswer}'
                                                 }
                                             }]
                                         }]
@@ -965,7 +965,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{3990000}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\placevalue{3990495}{4}'
+                                                    "help": '\\placevalue{3990495}{4}{showanswer}'
                                                 }
                                             }]
                                         }]
@@ -979,7 +979,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{27520000}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\placevalue{27523018}{4}'
+                                                    "help": '\\placevalue{27523018}{4}{showanswer}'
                                                 }
                                             }]
                                         }]
@@ -993,7 +993,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{600000}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                     "help": '\\placevalue{563548}{5}'
+                                                     "help": '\\placevalue{563548}{5}{showanswer}'
                                                 }
                                             }]
                                         }]
@@ -1007,7 +1007,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{230180}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                     "help": '\\placevalue{230179}{1}'
+                                                     "help": '\\placevalue{230179}{1}{showanswer}'
                                                 }
                                             }]
                                         }]
@@ -1021,7 +1021,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{50000}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": '\\placevalue{49952}{2}'
+                                                    "help": '\\placevalue{49952}{2}{showanswer}'
 												}
                                             }]
                                         }]
@@ -3689,7 +3689,7 @@ angular.module('mathSkills.services')
 													answer: '\\input{2}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\placevalue{1.96139}{6}'
+														"help": '\\placevalue{1.96139}{6}{showanswer}'
 													}
 												}]
 											}]
@@ -3703,7 +3703,7 @@ angular.module('mathSkills.services')
 													answer: '\\input{5.5}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\placevalue{5.52887}{5}}}'
+														"help": '\\placevalue{5.52887}{5}{showanswer}'
 													}
 												}]
 											}]
@@ -3717,7 +3717,7 @@ angular.module('mathSkills.services')
 													answer: '\\input{6.24}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\placevalue{6.2412}{3}'
+														"help": '\\placevalue{6.2412}{3}{showanswer}'
 													}
 												}]
 											}]
@@ -3731,7 +3731,7 @@ angular.module('mathSkills.services')
 													answer: '\\input{1.9614}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\placevalue{1.96139}{2}'
+														"help": '\\placevalue{1.96139}{2}{showanswer}'
 													}
 												}]
 											}]
@@ -3745,7 +3745,7 @@ angular.module('mathSkills.services')
 													answer: '\\input{2}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\placevalue{1.68}{3}'
+														"help": '\\placevalue{1.68}{3}{showanswer}'
 													}
 												}]
 											}]
@@ -3759,7 +3759,7 @@ angular.module('mathSkills.services')
 													answer: '\\input{7.2}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\placevalue{7.19824}{5}'
+														"help": '\\placevalue{7.19824}{5}{showanswer}'
 													}
 												}]
 											}]
@@ -3773,7 +3773,7 @@ angular.module('mathSkills.services')
 													answer: '\\input{11}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\placevalue{10.9563}{4}'
+														"help": '\\placevalue{10.9563}{4}{showanswer}'
 													}
 												}]
 											}]
@@ -3787,7 +3787,7 @@ angular.module('mathSkills.services')
 													answer: '\\input{50}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\placevalue{49.1}{3}'
+														"help": '\\placevalue{49.1}{3}{showanswer}'
 													}
 												}]
 											}]
@@ -3801,7 +3801,7 @@ angular.module('mathSkills.services')
 													answer: '\\input{16.41}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\placevalue{16.4118}{3}'
+														"help": '\\placevalue{16.4118}{3}{showanswer}'
 													}
 												}]
 											}]
@@ -3815,7 +3815,7 @@ angular.module('mathSkills.services')
 													answer: '\\input{8000}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\placevalue{7716.1}{5}'
+														"help": '\\placevalue{7716.1}{5}{showanswer}'
 													}
 												}]
 											}]

@@ -71,6 +71,13 @@ angular.module('mathSkills')
 				$scope.$watch('expected', function () {
 					if ($scope.expected) {
 						tagParameters = parser.extractTag($scope.expected).args;
+						
+						if (tagParameters[2] !== "undefined" && tagParameters[2] === "showanswer") {
+							$scope.showanswer = true;
+						} else {
+							$scope.showanswer = false;
+						}
+						
 						tagParmsZeroArray = tagParameters[0].split("");
 						problemDecimalIndex = tagParameters[0].indexOf(".");
 						if (problemDecimalIndex > 0) {
