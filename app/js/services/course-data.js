@@ -1587,7 +1587,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\html{How many times does 5 go into 9308.<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
+												problem: '\\html{How many times does 5 go into 9308?<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
 												answer: '\\css{\\divwholes{\\input{5}}{\\input{9308}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
@@ -1662,7 +1662,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\html{How many times does 5 go into 7916.<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
+												problem: '\\html{How many times does 5 go into 7916?<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
 												answer: '\\css{\\divwholes{\\input{5}}{\\input{7916}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
@@ -1687,7 +1687,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\html{How many times does 6 go into 2855.<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
+												problem: '\\html{How many times does 6 go into 2855?<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
 												answer: '\\css{\\divwholes{\\input{6}}{\\input{2855}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
@@ -1868,7 +1868,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\html{How many times does 3 go into 9381.<br><br>Solve the problem.}',
+												problem: '\\html{How many times does 3 go into 9381?<br><br>Solve the problem.}',
 												answer: '\\css{\\grp{\\input{3127}}{\\str{quotient}}{\\input{0}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
@@ -1883,7 +1883,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\html{How many times does 23 go into 18300.<br><br>Solve the problem.}',
+												problem: '\\html{How many times does 23 go into 18300?<br><br>Solve the problem.}',
 												answer: '\\css{\\grp{\\input{795}}{\\str{quotient}}{\\input{15}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
@@ -1928,7 +1928,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\html{How many times does 72 go into 63052.<br><br>Solve the problem.}',
+												problem: '\\html{How many times does 72 go into 63052?<br><br>Solve the problem.}',
 												answer: '\\css{\\grp{\\input{875}}{\\str{quotient}}{\\input{52}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
@@ -4560,7 +4560,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\html{How many times does 5 go into 9308.<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
+												problem: '\\html{How many times does 5 go into 9308?<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
 												answer: '\\css{\\divwholes{\\input{5}}{\\input{9308}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
@@ -4635,7 +4635,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\html{How many times does 5 go into 7916.<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
+												problem: '\\html{How many times does 5 go into 7916?<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
 												answer: '\\css{\\divwholes{\\input{5}}{\\input{7916}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
@@ -4660,7 +4660,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\html{How many times does 6 go into 2855.<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
+												problem: '\\html{How many times does 6 go into 2855?<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
 												answer: '\\css{\\divwholes{\\input{6}}{\\input{2855}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
@@ -4841,7 +4841,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\html{How many times does 3 go into 9381.<br><br>Solve the problem.}',
+												problem: '\\html{How many times does 3 go into 9381?<br><br>Solve the problem.}',
 												answer: '\\css{\\grp{\\input{3127}}{\\str{quotient}}{\\input{0}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
@@ -4856,7 +4856,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\html{How many times does 23 go into 18300.<br><br>Solve the problem.}',
+												problem: '\\html{How many times does 23 go into 18300?<br><br>Solve the problem.}',
 												answer: '\\css{\\grp{\\input{795}}{\\str{quotient}}{\\input{15}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
@@ -4901,7 +4901,7 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\html{How many times does 72 go into 63052.<br><br>Solve the problem.}',
+												problem: '\\html{How many times does 72 go into 63052?<br><br>Solve the problem.}',
 												answer: '\\css{\\grp{\\input{875}}{\\str{quotient}}{\\input{52}}{\\str{remainder}}}{divwhole}',
 												controls: {
 													"checkAnswer": true,
