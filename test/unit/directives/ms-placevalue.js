@@ -9,7 +9,7 @@ describe('<ms-placevalue>', function () {
 	beforeEach(module('partials/directives/ms-placevalue.html'))
 
     beforeEach(inject(function ($rootScope, $compile) {
-        var template = angular.element('<ms-placevalue expected="\\placevalue{12345}{3}"></ms-placevalue>');
+        var template = angular.element('<ms-placevalue expected="\\placevalue{12345}{3}{showanswer}"></ms-placevalue>');
         elScope = $rootScope.$new();
         element = $compile(template)(elScope);
         $rootScope.$digest();
