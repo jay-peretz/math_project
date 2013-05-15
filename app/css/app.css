@@ -27,6 +27,15 @@
     color: black;
 }
 
+/* Give error inputs a red background */
+.control-group.error .checkbox,
+.control-group.error .radio,
+.control-group.error input,
+.control-group.error select,
+.control-group.error textarea {
+    background: rgb(185, 74, 72);
+}
+
 /* Animations */
 
 /* fadeIn */
