@@ -120,13 +120,16 @@ angular.module('mathSkills')
 						switch (true) {
 				
 							case (problemDigitRight < 5):
-								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" is "+problemDigitRight+" (4 or lower), the "+problemDigit+" must stay the same. The whole number digits to the right of the rounded value become zeros.";
+								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" is "+problemDigitRight+" (4 or lower), the "+problemDigit+" must stay the same.";
+								$scope.helpInstructions3 = "The whole number digits to the right of the rounded value become zeros.";
 								break;
 							case ((problemDigitRight >= 5)&&((parseInt(problemDigit, 10)+1)<10)):
-								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" is "+problemDigitRight+" (5 or higher), the "+problemDigit+" must go up one. It becomes "+(parseInt(problemDigit, 10)+1)+". The whole number digits to the right of the rounded value become zeros.";
+								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" is "+problemDigitRight+" (5 or higher), the "+problemDigit+" must go up one. It becomes "+(parseInt(problemDigit, 10)+1)+".";
+								$scope.helpInstructions3 = "The whole number digits to the right of the rounded value become zeros.";
 								break;
 							case ((problemDigitRight >= 5)&&((parseInt(problemDigit, 10)+1)>9)):
-								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" is "+problemDigitRight+" (5 or higher), the "+problemDigit+" must go up one. It becomes "+(parseInt(problemDigit, 10)+1)+". Write '0' in place of the "+problemDigit+" and add one to the column on the left; if necessary, continue to carry and add until there are no further carries. The whole number digits to the right of the rounded value '0' become zeros.";
+								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" is "+problemDigitRight+" (5 or higher), the "+problemDigit+" must go up one. It becomes "+(parseInt(problemDigit, 10)+1)+". Write '0' in place of the "+problemDigit+" and add one to the column on the left; if necessary, continue to carry and add until there are no further carries." ;
+								$scope.helpInstructions3 = "The whole number digits to the right of the rounded value '0' become zeros.";
 								break;
 							default:
 								break;
@@ -135,6 +138,6 @@ angular.module('mathSkills')
 					}
 				});				
 			},
-			template: '<div class="control-group {{class}}"><label><span>{{label}}</span><table class="margin-left-small"><tr><td><span class="label_like"><br>{{helpInstructions2}}</span></td></tr><tr class="label_like"><td><span><br> Answer: \xA0</span></td></tr></table><table class="margin-left-small"><tr class="label_like"><td ng-repeat="number in numberArray">{{number}}</td></tr><tr><td ng-repeat="place in randomplacearray">{{place}}</td></tr></table></label></div>'
+			template: '<div class="control-group {{class}}"><label><span>{{label}}</span><table class="margin-left-small"><tr><td><span class="label_like"><br>{{helpInstructions2}}<br><br>{{helpInstructions3}}</span></td></tr><tr class="label_like"><td><span><br> Answer: \xA0</span></td></tr></table><table class="margin-left-small"><tr class="label_like"><td ng-repeat="number in numberArray">{{number}}</td></tr><tr><td ng-repeat="place in randomplacearray">{{place}}</td></tr></table></label></div>'
 		};
 	}]);
