@@ -90,4 +90,39 @@ describe('<ms-placevalue>', function () {
 		
     });
 	
+	describe('when ms-placevalue tag element is added and the place to round has a 9 and rounds up ', function () {
+																  
+		beforeEach(inject(function ($rootScope, $compile) {
+			var template = angular.element('<ms-placevalue expected="\\placevalue{12395}{1}{showanswer}"></ms-placevalue>');
+			elScope = $rootScope.$new();
+			element = $compile(template)(elScope);
+			$rootScope.$digest();
+		}));
+		
+		it('the display should have text reading "if necessary, continue to carry and add"', inject(function ($rootScope) {
+			expect(jQuery(element).find('table span').text()).toContain('if necessary, continue to carry and add')																				
+		}));
+		
+		// check that number display and round place pointer are working correctly
+		it('should have a "9" in the 4th td, 1st row of the first table in the display array', inject(function ($rootScope) {
+			expect(jQuery(element).find('table:first tr:nth-child(1) td:nth-child(4)').text()).toContain('9')																				
+		}));
+		
+		// check that rounding is happening correctly
+		it('should have a "0" in the 4th td, 1st row of the last table in the display array', inject(function ($rootScope) {
+			expect(jQuery(element).find('table:last tr:nth-child(1) td:nth-child(4)').text()).toContain('0')																				
+		}));
+		
+		// check that rounding is happening correctly
+		it('should have a "4" in the 3rd td, 1st row of the last table in the display array', inject(function ($rootScope) {
+			expect(jQuery(element).find('table:last tr:nth-child(1) td:nth-child(3)').text()).toContain('4')																				
+		}));
+		
+		it('should have a carat character 2nd row of the last table of the display array', inject(function ($rootScope) {
+			expect(jQuery(element).find('table:last tr:nth-child(2)').text()).toContain('^')																				
+		}));
+		
+    });
+
+	
 });
