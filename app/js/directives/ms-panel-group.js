@@ -51,11 +51,14 @@ angular.module('mathSkills')
                         $scope.$on('panelDone', function () {
                             // If we have more panels to show, show the next.
                             if ($scope.currentPanel < $scope.panels.length - 1) {
-                                $scope.currentPanel += 1;
-                                $scope.panelScopes[$scope.currentPanel].$broadcast('checkFocus');
+                                // After a 1 second delay.
+                                $timeout(function () {
+                                    $scope.currentPanel += 1;
+                                    $scope.panelScopes[$scope.currentPanel].$broadcast('checkFocus');
 
-                                // Reset the panelGroupData.
-                                panelGroupData.resetIndex();
+                                    // Reset the panelGroupData.
+                                    panelGroupData.resetIndex();
+                                }, 1000);
                             // Otherwise $emit panelGroupDone
                             } else {
                                 $scope.$emit('panelGroupDone', {
