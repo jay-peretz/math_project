@@ -157,7 +157,7 @@ angular.module('mathSkills')
                         }
                     });
                 },
-                template: '<div class="control-group {{class}}"><label><span>{{label}}</span><input style="width:{{width}};" ng-model=answer></label></div>'
+                template: '<div class="control-group {{class}}"><label><span>{{label}}</span><input style="width:{{width}};" ng-model=answer ms-strip-commas></label></div>'
             };
         }
     ]);
