@@ -170,7 +170,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{58}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{Fifty-eight in number notation is 58}'
                                                 }
                                             }]
                                         }]
@@ -184,7 +184,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{174}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{One hundred seventy-four in number notation is 174}'
                                                 }
                                             }]
                                         }]
@@ -198,7 +198,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{336}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{Three hundred thirty-six in number notation is 336}'
                                                 }
                                             }]
                                         }]
@@ -212,7 +212,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{3386}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{3,386}'
                                                 }
                                             }]
                                         }]
@@ -226,7 +226,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{50957}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{50,957}'
                                                 }
                                             }]
                                         }]
@@ -240,7 +240,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{401}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{Four hundred one in number notation is 401}'
                                                 }
                                             }]
                                         }]
@@ -254,7 +254,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{7719}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{7,719}'
                                                 }
                                             }]
                                         }]
@@ -268,7 +268,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{73178}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{73,178}'
                                                 }
                                             }]
                                         }]
@@ -296,7 +296,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{7748}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{7,748}'
 												}
                                             }]
                                         }]
@@ -315,7 +315,7 @@ angular.module('mathSkills.services')
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{80 is LESS THAN 91}'
 												}
 											}]
 										}]
@@ -329,7 +329,7 @@ angular.module('mathSkills.services')
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{X or 25 is LESS THAN Y or 33}'
 												}
 											}]
 										}]
@@ -343,7 +343,7 @@ angular.module('mathSkills.services')
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{85 is GREATER THAN 80}'
 												}
 											}]
 										}]
@@ -358,7 +358,7 @@ angular.module('mathSkills.services')
 
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{53 is GREATER THAN 50}'
 												}
 											}]
 										}]
@@ -372,7 +372,7 @@ angular.module('mathSkills.services')
 												answer: '',
                                                 controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{X or 56 is GREATER THAN Y or 48}'
 												}
 											}]
 										}]
@@ -386,7 +386,7 @@ angular.module('mathSkills.services')
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{54 is LESS THAN 60}'
 												}
 											}]
 										}]
@@ -400,7 +400,7 @@ angular.module('mathSkills.services')
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{86 is LESS THAN 93}'
 												}
 											}]
 										}]
@@ -414,7 +414,7 @@ angular.module('mathSkills.services')
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{86 is MORE THAN 77}'
 												}
 											}]
 										}]
@@ -428,7 +428,7 @@ angular.module('mathSkills.services')
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{47 is LESS THAN 57}'
 												}
 											}]
 										}]
@@ -442,7 +442,7 @@ angular.module('mathSkills.services')
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{83 is LESS THAN 84}'
                                                 }
                                             }]
                                         }]
@@ -452,11 +452,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\butgrp{\\row{\\str{80 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 91}}',
+												problem: '\\butgrp{\\row{\\str{69 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 70}}',
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{69 is LESS THAN 70}'
 												}
 											}]
 										}]
@@ -466,11 +466,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{25}{33}{20}{35}}}',
+												problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{15}{18}{10}{25}}}',
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{15 is LESS THAN 18}'
 												}
 											}]
 										}]
@@ -480,11 +480,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{85}{80}{72}{88}}}',
+												problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{84}{78}{72}{88}}}',
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{84 is GREATER THAN 78}'
 												}
 											}]
 										}]
@@ -494,12 +494,12 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\butgrp{\\row{\\str{53 \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 50}}',
+												problem: '\\butgrp{\\row{\\str{50 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 53}}',
 												answer: '',
 
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{50 is LESS THAN 53}'
 												}
 											}]
 										}]
@@ -513,7 +513,7 @@ angular.module('mathSkills.services')
 												answer: '',
                                                 controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{50 is LESS THAN 53}'
 												}
 											}]
 										}]
@@ -527,7 +527,7 @@ angular.module('mathSkills.services')
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{54 is LESS THAN 60}'
 												}
 											}]
 										}]
@@ -541,7 +541,7 @@ angular.module('mathSkills.services')
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{86 is LESS THAN 93}'
 												}
 											}]
 										}]
@@ -555,7 +555,7 @@ angular.module('mathSkills.services')
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{95 is GREATER THAN 77}'
 												}
 											}]
 										}]
@@ -569,7 +569,7 @@ angular.module('mathSkills.services')
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{52 is GREATER THAN 48}'
 												}
 											}]
 										}]
@@ -583,7 +583,7 @@ angular.module('mathSkills.services')
 												answer: '',
 												controls: {
 													"checkAnswer": false,
-													"help": true
+													"help": '\\str{26 is GREATER THAN 16}'
                                                 }
                                             }]
                                         }]
