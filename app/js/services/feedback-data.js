@@ -15,10 +15,15 @@ angular.module('mathSkills.services')
                 }
                 if (privateData[$routeParams.unit][$routeParams.problemSet] === undefined) {
                     privateData[$routeParams.unit][$routeParams.problemSet] = [];
-                }
-
+                } 
                 // Store the answer event data.
                 privateData[$routeParams.unit][$routeParams.problemSet].push(data);
+                // set previous answer data
+                if (data.result === 'correct') {
+                    privateData.previous = true;
+                }else{
+                    privateData.previous = false;
+                }
             });
         }
     ])
@@ -40,6 +45,14 @@ angular.module('mathSkills.services')
                  */
                 getData: function (unitPath, problemSetPath) {
                     return privateData[unitPath][problemSetPath];
+                },
+                /**
+                 * Returns answer result of the last answer event.
+                 * 
+                 * @return {boolean} true if correct and false if incorrect.
+                 */
+                getPrevious: function () {
+                    return privateData.previous;
                 }
             };
 
