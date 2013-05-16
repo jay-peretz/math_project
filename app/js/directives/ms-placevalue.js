@@ -15,7 +15,7 @@ angular.module('mathSkills')
 				expected: '@',
 				label: '@'
 			},
-			controller: function ($scope, $element) {
+			controller: function ($scope, $element, $filter) {
 				$scope.numberArray = [];
 				$scope.randomplacearray = [];
 				$scope.numbStringCommas = "";				
@@ -47,25 +47,6 @@ angular.module('mathSkills')
 								return 0;
 							}
 				 };
-				 
-				/*// receives string representation of number without commas, returns an array with commas
-				function getNumberStringCommas(givenWhole) {
-					var needsCommas = givenWhole,
-						buildCommas = [],
-						thisManyCommas = Math.floor((needsCommas.length-1)/3),
-						numberWithCommas = '';
-					
-					for (var i=0; i<thisManyCommas+1; i+=1){
-							if (i<thisManyCommas){
-								buildCommas[i] =  needsCommas.substr(needsCommas.length-(3*(i+1)), 3);
-							} else {
-								buildCommas[i] =  needsCommas.substr(0, needsCommas.length-(3*i));
-							}					
-					}
-					numberWithCommas = buildCommas.reverse();
-					numberWithCommas = numberWithCommas.join();
-					return numberWithCommas;				
-				  }*/
 				
 			 // Extract the value/s for parameters- second parameter is array elements from right for round place, counting decimal
 				$scope.$watch('expected', function () {
@@ -88,17 +69,9 @@ angular.module('mathSkills')
 							roundedIntegerNumber = getRounded(Number(tagParameters[0]), tagParameters[1]);
 							roundedDecimalArray = roundedIntegerNumber.toString().split("");
 						}
-						
-						//logic for commas for the future
-						/*if (tagParameters[0].indexOf('.') < 0) {
-							$scope.numbStringCommas = getNumberStringCommas(tagParameters[0]);
-							for (var ii = 0, len = $scope.numbStringCommas.length; ii < len; ii += 1) {
-									$scope.numberArray[ii] = $scope.numbStringCommas.substr(ii, 1);
-							}
-						} else {*/		
-								$scope.givenNumberArray = tagParmsZeroArray.slice();
-								$scope.numberArray = roundedDecimalArray.slice();
-						/*}*/
+
+						$scope.givenNumberArray = tagParmsZeroArray.slice();
+						$scope.numberArray = roundedDecimalArray.slice();
 
 						// check for numberdigitsplace value > the number of places in numberdigits
 						if ( parseInt(tagParameters[1], 10) > $scope.numberArray.toString().length) {
