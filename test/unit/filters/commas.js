@@ -27,5 +27,9 @@ describe('commas filter', function () {
 	it('should return a given decimal number as a string', function () {
 		expect(typeof commasFilter(1234567890.1)).toBe('string');
 	});
+	
+	it('should return a non-number as submitted', function () {
+		expect(commasFilter('this is a string')).toBe('this is a string');
+	});
 
 });

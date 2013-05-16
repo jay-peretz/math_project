@@ -12,25 +12,31 @@ angular.module('mathSkills')
 						thisManyCommas,
 						numberWithCommas = '';
 					
-					// check for decimal point in the number- if so return the number, else add commas- either way return string
-					if (needsCommas.indexOf(".") < 0) {
-					
-						thisManyCommas = Math.floor((needsCommasLength-1)/3);
+					if (typeof givenWhole === "number") {
+						// check for decimal point in the number- if so return the number, else add commas- either way return string
+						if (needsCommas.indexOf(".") < 0) {
 						
-						for (var i=0; i<thisManyCommas+1; i+=1){
-								if (i<thisManyCommas){
-									buildCommas[i] =  needsCommas.substr(needsCommasLength-(3*(i+1)), 3);
-								} else {
-									buildCommas[i] =  needsCommas.substr(0, needsCommasLength-(3*i));
-								}					
+							thisManyCommas = Math.floor((needsCommasLength-1)/3);
+							
+							for (var i=0; i<thisManyCommas+1; i+=1){
+									if (i<thisManyCommas){
+										buildCommas[i] =  needsCommas.substr(needsCommasLength-(3*(i+1)), 3);
+									} else {
+										buildCommas[i] =  needsCommas.substr(0, needsCommasLength-(3*i));
+									}					
+							}
+							
+							numberWithCommas = buildCommas.reverse();
+							numberWithCommas = numberWithCommas.join();;
+							return numberWithCommas;
+						} else {
+							return needsCommas;
 						}
 						
-						numberWithCommas = buildCommas.reverse();
-						numberWithCommas = numberWithCommas.join();;
-						return numberWithCommas;
 					} else {
-						return needsCommas;
+						return givenWhole;
 					}
+						
             };
         }
     ]);
