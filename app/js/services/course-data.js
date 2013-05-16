@@ -282,7 +282,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{126}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{126}'
                                                 }
                                             }]
                                         }]
@@ -1041,7 +1041,7 @@ angular.module('mathSkills.services')
                                                 answer: 'A',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{A: 74 > 26}'
                                                 }
                                             }]
                                         }]
@@ -1055,7 +1055,7 @@ angular.module('mathSkills.services')
                                                 answer: 'B',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{B: 9 < 23}'
                                                 }
                                             }]
                                         }]
@@ -1069,7 +1069,7 @@ angular.module('mathSkills.services')
                                                 answer: 'B',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{B: 5 > 1}'
                                                 }
                                             }]
                                         }]
@@ -1083,7 +1083,7 @@ angular.module('mathSkills.services')
                                                 answer: 'C',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{C: 98 - 82}'
                                                 }
                                             }]
                                         }]
@@ -1097,7 +1097,7 @@ angular.module('mathSkills.services')
                                                 answer: 'D',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{D: 91 > 66}'
                                                 }
                                             }]
                                         }]
@@ -1111,7 +1111,7 @@ angular.module('mathSkills.services')
                                                 answer: 'D',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{D: 13 - 12}'
                                                 }
                                             }]
                                         }]
@@ -1125,7 +1125,7 @@ angular.module('mathSkills.services')
                                                 answer: 'B',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{B: 28 > 16}'
                                                 }
                                             }]
                                         }]
@@ -1139,7 +1139,7 @@ angular.module('mathSkills.services')
                                                 answer: 'B',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{B: 45 > 1}'
                                                 }
                                             }]
                                         }]
@@ -1153,7 +1153,7 @@ angular.module('mathSkills.services')
                                                 answer: 'A',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{A: 47 - 28}'
                                                 }
                                             }]
                                         }]
@@ -1167,7 +1167,7 @@ angular.module('mathSkills.services')
                                                 answer: 'D',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{D: 6 < 73}'
 												}
                                             }]
                                         }]
@@ -2186,7 +2186,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{18}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{7 * 2 + 4 = 18}'
                                                 }
                                             }]
                                         }, {
@@ -2210,7 +2210,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{1}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{15 - 10 = 5 / 5 = 1}'
                                                 }
                                             }]
                                         }, {
@@ -2234,7 +2234,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{11}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{4 / 2 = 2 + 9 = 11}'
                                                 }
                                             }]
                                         }, {
@@ -2258,7 +2258,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{4}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{6 / 3 = 2.   6 - 2 = 4}'
                                                 }
                                             }]
                                         }, {
@@ -2282,7 +2282,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{12}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{15 / 3 = 5.   7 + 5 = 12}'
                                                 }
                                             }]
                                         }, {
@@ -2306,7 +2306,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{1}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{3 * 3 = 9 / 3 = 3.  3 / 3 = 1}'
                                                 }
                                             }]
                                         }, {
@@ -2330,7 +2330,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{9}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{7 - 4 = 3 * 2 = 6.   15 - 6 = 9}'
                                                 }
                                             }]
                                         }, {
@@ -2354,7 +2354,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{11}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{11}'
                                                 }
                                             }]
                                         }, {
@@ -2378,7 +2378,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{17}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{17}'
                                                 }
                                             }]
                                         }, {
@@ -2402,7 +2402,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\input{16}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{16}'
                                                 }
                                             }]
                                         }, {
@@ -2580,7 +2580,7 @@ angular.module('mathSkills.services')
 												answer: '\\css{\\grp{\\chk{1}{T}}{\\chk{2}{F}}{\\chk{3}{F}}{\\chk{5}{T}}{\\chk{7}{F}}{\\chk{10}{F}}}{factors}',
 												controls: {
 													"checkAnswer": true,
-													"help": true
+													"help": '\\str{1 & 5}'
 												}
 											}]
 										}]
