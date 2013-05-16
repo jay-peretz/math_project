@@ -12,13 +12,16 @@ angular.module('mathSkills')
         'directiveUtils',
         function (parser, directiveUtils) {
             return {
-                controller: function ($scope, $element) {
+                controller: function ($scope, $element, $filter) {
                     $scope.controllerId = Math.random().toString();
                     
                     // Extract the value and sent size event.
                     $scope.$watch('expected', function () {
                         if($scope.expected) {
                             $scope.string = $scope.expected.slice(5, $scope.expected.length - 1); 
+							if (isNaN($scope.string) === false && $scope.string !== "\xA0") {
+								$scope.string = Number($scope.string);
+							}
                             // directiveUtils.size($scope, [$scope.string], 10, 5);    
                         }
                     });
@@ -61,7 +64,7 @@ angular.module('mathSkills')
                     expected: '@', 
                     label: '@'
                 },
-                template: '<span>{{string}}</span>'
+                template: '<span>{{string | commas}}</span>'
             };
         }
     ]);
