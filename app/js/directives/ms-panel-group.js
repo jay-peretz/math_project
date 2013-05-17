@@ -9,7 +9,8 @@ angular.module('mathSkills')
                 controller: [
                     '$scope',
                     '$timeout',
-                    function ($scope, $timeout) {
+                    '$rootScope',
+                    function ($scope, $timeout, $rootScope) {
                         $scope.currentPanel = 0;
                         $scope.panelScopes = [];
                         $scope.navVisibility = 'visible';
@@ -58,12 +59,16 @@ angular.module('mathSkills')
 
                                     // Reset the panelGroupData.
                                     panelGroupData.resetIndex();
+                                    // broadcast branch event to switch ms-instruction instructions
+                                    $rootScope.$broadcast('switch');
                                 }, 1000);
                             // Otherwise $emit panelGroupDone
                             } else {
                                 $scope.$emit('panelGroupDone', {
                                     title: $scope.title
                                 });
+                                // Reset the panelGroupData flip index. 
+                                panelGroupData.resetFlipIndex();
                             }
                         });
 

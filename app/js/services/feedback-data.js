@@ -7,6 +7,7 @@ angular.module('mathSkills.services')
         '$rootScope',
         '$routeParams',
         function ($rootScope, $routeParams) {
+            
             // Store answer events.
             $rootScope.$on('answer', function (e, data) {
                 // Generate our storage structure if this is the first answer for a problem set.

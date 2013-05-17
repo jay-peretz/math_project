@@ -30,6 +30,16 @@
     color: black;
 }
 
+/* Bootstrap Override set workbook nav-tabs width */
+.tabs-left>.nav-tabs>li>a,.tabs-right>.nav-tabs>li>a{
+    min-width: 54px;
+}
+
+/* problem text highlight-class (blue) */
+.blue-text{
+    color: #0088cc;
+}
+
 /* Give error inputs a red background */
 .control-group.error .checkbox,
 .control-group.error .radio,

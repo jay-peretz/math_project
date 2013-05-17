@@ -23,8 +23,8 @@ angular.module('mathSkills')
                             }
                         });
                         // Show help prompt after two incorrect answers.
-                        $scope.$on('answer', function (e, data) {
-                            if (data.result === 'incorrect') {
+                        $scope.$on('answer', function (e, data) {console.log(data);
+                            if (data.result === 'incorrect' && data.noHelpPrompt === undefined) {
                                 incorrectAnswers += 1;
                                 if (incorrectAnswers === 2) {
                                     $scope.helpPrompt.show = true;

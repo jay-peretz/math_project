@@ -60,14 +60,6 @@ angular.module('mathSkills.services')
                 resetFlipIndex: function () {
                     return delete privateData.flipIndex;
                 },
-                gitPrevious: function () {
-                
-                    return ;
-                },
-                setPrevious: function () {
-                
-                    return ;
-                } 
             };
 
             return panelGroupData;
