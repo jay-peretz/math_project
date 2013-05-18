@@ -11,6 +11,8 @@
 @import 'directives/ms-sign.css';
 @import 'directives/mean-median-mode_4-1.css';
 @import 'directives/ms-prime-factorization.css';
+@import 'directives/ms-problem-pager.css';
+@import 'directives/ms-breadcrumbs.css';
 
 
 /* app css stylesheet */
