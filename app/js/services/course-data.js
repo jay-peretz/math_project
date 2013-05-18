@@ -4996,8 +4996,8 @@ angular.module('mathSkills.services')
 													answer: '\\mixed{\\input{4}}{\\frac{\\input{7}}{\\input{10}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\percentsdecimalfrac{4.7}{decimalNotPercent}{percentAsFraction}}}'
-													}
+														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{0.8}{decimalNotPercent}{percentAsFraction}{help}}}'
+													} 
 												}]
 											}]
 										},

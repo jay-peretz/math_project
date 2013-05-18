@@ -16,124 +16,101 @@ angular.module('mathSkills')
 				label: '@'
 			},
 			controller: function ($scope, $element, $filter) {
-				var tagParameters = [];
+				var tagParameters = [],
+					filterResult,
+					filterResultSimple,
+					wholePart;
+					
+				var simplify = function(num, den) {
+                        var leastPart = num > den ? den : num,
+                            ii;
+
+                        for (ii = 2; ii <= leastPart; ii += 1) {
+                            while (num % ii === 0 && den % ii === 0) {
+                                num = num / ii;
+                                den = den / ii;
+                                leastPart = leastPart / ii;
+                            }
+                        }
+
+                        return {
+                            numerator: num,
+                            denominator: den
+                        };
+                    },
+          			simplified = function(num, den) {
+                        var simplified = simplify(num, den);
+                        return num === simplified.numerator && den === simplified.denominator;
+                    },
+             		commonFactors = function(num, den) {
+                        var factors = [];
+                        var leastPart = num > den ? den : num,
+                            ii;
+
+                        for (ii = 2; ii <= leastPart; ii += 1) {
+                            if (num % ii === 0 && den % ii === 0) {
+                                factors.push(ii.toString());
+                            }
+                        }
+                        return factors;
+                    },
+			 		reduceFraction = function(skipFirstFactor) {
+						var currentFactors,
+							productFactors;
+						if (skipFirstFactor) {
+							currentFactors = factorsUsed.slice(0, -1);
+						} else {
+							currentFactors = factorsUsed.slice();
+						}
+						productFactors = currentFactors.reduce(function(a, b) {
+								return a * b;										
+						}, 1);
+						return {
+							numerator: $scope.args[0]/productFactors,
+							denominator: $scope.args[1]/productFactors
+							}
+					}
 				
-			 // Extract the tag values
+			 // Extract the tag values- tagParameters[0] will be transformed from tagParameters[1] form to tagParameters[2] form
+			 // if tagParameters[3] === "help" style the expression with "label_like" to color it blue
 				$scope.$watch('expected', function () { 
 					if ($scope.expected) {
 						tagParameters = parser.extractTag($scope.expected).args;
 					}
-					
-					// set up help display
-					$scope.helpInstructions1 = "Write the decimal place value as the denominator of the fraction:";
-					$scope.firstText = $filter("percent-conversion")(tagParameters);
-					console.log("JSON.stringify($scope.firstText) is: "+JSON.stringify($scope.firstText));
-					$scope.afterFirstText = false;
-			
-					/*
-					$scope.probDecimalString = $scope.problemObject.getDecimalNotPercent().toString().replace(/,/g, "");
-					$scope.probDecimalDigitsRight = $scope.problemObject.getDecimalNotPercent().getDecimalPlaces();
-					$scope.probDecimalHasDecimal = $scope.probDecimalString.indexOf(".")<0?0:1;
-					$scope.probDecimalDigitsLeft = $scope.probDecimalString.length - ($scope.probDecimalHasDecimal + $scope.probDecimalDigitsRight);
-					$scope.probDecimalRight = parseInt($scope.probDecimalString.substr($scope.probDecimalDigitsLeft+1), 10);
-					$scope.fractionPercent = Fraction.create({numerator: $scope.probDecimalRight, denominator: Math.pow(10, $scope.probDecimalDigitsRight+$scope.probDecimalDigitsLeft-1)});
-					
-					// denominator not divisible by 10 and fraction not simplified, display fraction divisor divisible 10
-					if (($scope.problemObject.getPercentAsFraction().getDenominator() % 10 != 0)&&($scope.problemObject.getPercentAsFraction().isSimplified() == true)) {
-							$scope.secondEquals = true;
-							$scope.secondFraction = true;
-							$scope.numerator2 = $scope.fractionPercent.getGivenNumerator();
-							$scope.denominator2 = $scope.fractionPercent.getGivenDenominator();
-							if ($scope.problemObject.getPercentAsFraction().isImproper()) {
-								$scope.whole2 = $scope.problemObject.getPercentAsFraction().mixed().getWhole();
-							}
-							if (problemNumber > 10) {
-								$scope.afterSecondFraction = "%";
-							}
-					} 
-					
-					if ($scope.problemObject.getPercentAsFraction().isSimplified() == false) {
-							$scope.secondEquals = true;
-							$scope.secondFraction = true;
-							$scope.numerator2 = $scope.problemObject.getPercentAsFraction().mixed().getNumerator();
-							$scope.denominator2 = $scope.problemObject.getPercentAsFraction().mixed().getDenominator();
-							if ($scope.problemObject.getPercentAsFraction().isImproper()) {
-								$scope.whole2 = $scope.problemObject.getPercentAsFraction().mixed().getWhole();
-							}
-					}
-			
-					$scope.thirdEquals = true;
-					$scope.thirdFraction = true;
-					$scope.afterThirdFraction = false;
-					$scope.numerator3 = $scope.problemObject.getPercentAsFraction().simplified().mixed().getNumerator();
-					$scope.denominator3 = $scope.problemObject.getPercentAsFraction().simplified().mixed().getDenominator();
-					if ($scope.problemObject.getPercentAsFraction().isImproper()) {
-							$scope.whole3 = $scope.problemObject.getPercentAsFraction().simplified().mixed().getWhole();
+
+					if (typeof tagParameters[3] !== "undefined" && tagParameters[3] === "help") {
+						$scope.addClass = "label_like";
+					} else {
+						$scope.addClass = "";
 					}
 					
-					if ((problemNumber > 10)&&(problemNumber < 14)) {
-						$scope.afterFirstText = "%";
-						$scope.afterThirdFraction = "%";
-					}
+					// transform the percent form by using "percent-conversion" filter
+					filterResult = $filter("percent-conversion")(tagParameters);
 					
-					if (((problemNumber > 5)&&(problemNumber < 11))||(problemNumber > 13)) {
-						// set up problem display
-						$scope.templates = {
-							mainProblem: 'partials/main-problem/main-problem-template-two.html'
-						};
-			
-						if ((problemNumber > 5)&&(problemNumber < 11)) {
-							$scope.instructionsMainTwo = 'Write the equivalent decimal value of this fraction:';
-						}
-						if (problemNumber > 13) {
-							if ($scope.problemObject.getPercentAsFraction().isImproper() == false) {
-								$scope.instructionsMainTwo = 'Express the fractional percent as a decimal percent:';
-							} else {
-								$scope.instructionsMainTwo = 'Express the mixed number percent as a decimal percent:';
-							}
-							$scope.afterFirstFractionMainTwo = "%";
-							$scope.afterSign = "%";
-							$scope.afterFourthText = "%";
-						}
-						$scope.firstFractionMainTwo = true;
-						$scope.numeratorMainTwo1 = $scope.problemObject.getPercentAsFraction().simplified().mixed().getNumerator();
-						$scope.denominatorMainTwo1 = $scope.problemObject.getPercentAsFraction().simplified().mixed().getDenominator();
-						if ($scope.problemObject.getPercentAsFraction().isImproper()) {
-							$scope.wholeMainTwo1 = $scope.problemObject.getPercentAsFraction().simplified().mixed().getWhole();
-						}
-						$scope.firstTextMainTwo = false;
-						$scope.afterFirstTextMainTwo = false;
-						Answer.singleValueDecimal($scope, $scope.problemObject.getDecimalNotPercent().getDecimal());
+					// make the transformation into a fraction form (in our language)
+					if (tagParameters[2] == "percentAsFraction" || tagParameters[2] == "fractionPercentAsFraction" || tagParameters[2] == "decimalAsFractionPercent" ) {
 						
-						//set up help display
-						$scope.firstText = false;
-						$scope.secondFraction = true;
-						$scope.thirdFraction = false;
-						$scope.thirdEquals = false;
-						$scope.numerator2 = $scope.problemObject.getPercentAsFraction().simplified().mixed().getNumerator();
-						$scope.denominator2 = $scope.problemObject.getPercentAsFraction().simplified().mixed().getDenominator();
-						$scope.secondEquals = false;
-						// displays improper first fraction instead of simple if getPercentAsFraction().isImproper()
-						if ($scope.problemObject.getPercentAsFraction().isImproper()) {
-							$scope.whole2 = $scope.problemObject.getPercentAsFraction().simplified().mixed().getWhole();
-							$scope.thirdFraction = true;
-							$scope.numerator3 = $scope.problemObject.getPercentAsFraction().simplified().getNumerator();
-							$scope.denominator3 = $scope.problemObject.getPercentAsFraction().simplified().getDenominator();
-							$scope.whole3 = "";
-							if (problemNumber > 10) {
-								$scope.afterThirdFraction = "%";
-							}
-						}	
+						switch (true) {
+							case (filterResult.numerator > filterResult.denominator):
+								wholePart = Math.floor(filterResult.numerator / filterResult.denominator);
+								$scope.languageExpression = '\\mixed{\\str{'+wholePart+'}}{\\frac{\\str{'+filterResult.numerator%filterResult.denominator+'}}{\\str{'+filterResult.denominator+'}}}';
+								break;
+							case (simplified(filterResult.numerator, filterResult.denominator)):
+								$scope.languageExpression = '\\frac{\\str{'+filterResult.numerator+'}}{\\str{'+filterResult.denominator+'}';
+								break;
+							case (!simplified(filterResult.numerator, filterResult.denominator)):
+								filterResultSimple = simplify(filterResult.numerator, filterResult.denominator);
+								$scope.languageExpression = '\\frac{\\str{'+filterResultSimple.numerator+'}}{\\str{'+filterResultSimple.denominator+'}';
+								break;
+							
+						}
+					} else {
+						$scope.languageExpression = '\\str{'+filterResult+'}';
+					}
 			
-						$scope.secondText = false;
-						$scope.fourthEquals = true;
-						$scope.thirdText = "\xA0 \xA0 means \xA0"+$scope.problemObject.getPercentAsFraction().simplified().getNumerator()+"\xA0 \xf7 \xA0"+$scope.problemObject.getPercentAsFraction().simplified().getDenominator();
-						$scope.sixthEquals = true;
-						$scope.fourthText = $scope.problemObject.getDecimalNotPercent().getDecimal();
-					}*/
 				});
 			},
-			templateUrl: 'partials/directives/ms-percents-display.html'
+			template: '<span class={{addClass}}><ms-expression expected={{languageExpression}} label=languageExpression></ms-expression></span>'
 
 		};
 	}]);
