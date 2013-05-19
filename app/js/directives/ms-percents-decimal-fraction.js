@@ -49,12 +49,6 @@ angular.module('mathSkills')
 					if ($scope.expected) {
 						tagParameters = parser.extractTag($scope.expected).args;
 					}
-
-					if (typeof tagParameters[3] !== "undefined" && tagParameters[3] === "help") {
-						$scope.addClass = "label_like";
-					} else {
-						$scope.addClass = "";
-					}
 					
 					// transform the percent form by using "percent-conversion" filter
 					filterResult = $filter("percent-conversion")(tagParameters);
@@ -83,7 +77,7 @@ angular.module('mathSkills')
 			
 				});
 			},
-			template: '<span class={{addClass}}><ms-expression expected={{languageExpression}} label=languageExpression></ms-expression></span>'
+			template: '<span><ms-expression expected={{languageExpression}} label=languageExpression></ms-expression></span>'
 
 		};
 	}]);
