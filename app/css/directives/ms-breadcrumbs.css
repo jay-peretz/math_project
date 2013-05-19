@@ -1,5 +1,16 @@
-ul.breadcrumb li.active {
-	font-weight:bold;
+ul.breadcrumb li.active {	
 	color:black;
 	font-size:150%;
+}
+ul.breadcrumb {
+	margin-bottom:5px;
+	background-color:rgb(221, 221, 221);
+	font-weight:bold;
+}
+header div.navbar {
+	margin-bottom:5px;
+	color:white;
+}
+.navbar-inverse .brand , .navbar-inverse .navbar-text {
+	color: #FFFFFF;
 }
