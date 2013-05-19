@@ -41,35 +41,7 @@ angular.module('mathSkills')
           			simplified = function(num, den) {
                         var simplified = simplify(num, den);
                         return num === simplified.numerator && den === simplified.denominator;
-                    },
-             		commonFactors = function(num, den) {
-                        var factors = [];
-                        var leastPart = num > den ? den : num,
-                            ii;
-
-                        for (ii = 2; ii <= leastPart; ii += 1) {
-                            if (num % ii === 0 && den % ii === 0) {
-                                factors.push(ii.toString());
-                            }
-                        }
-                        return factors;
-                    },
-			 		reduceFraction = function(skipFirstFactor) {
-						var currentFactors,
-							productFactors;
-						if (skipFirstFactor) {
-							currentFactors = factorsUsed.slice(0, -1);
-						} else {
-							currentFactors = factorsUsed.slice();
-						}
-						productFactors = currentFactors.reduce(function(a, b) {
-								return a * b;										
-						}, 1);
-						return {
-							numerator: $scope.args[0]/productFactors,
-							denominator: $scope.args[1]/productFactors
-							}
-					}
+                    }
 				
 			 // Extract the tag values- tagParameters[0] will be transformed from tagParameters[1] form to tagParameters[2] form
 			 // if tagParameters[3] === "help" style the expression with "label_like" to color it blue
@@ -93,14 +65,15 @@ angular.module('mathSkills')
 						switch (true) {
 							case (filterResult.numerator > filterResult.denominator):
 								wholePart = Math.floor(filterResult.numerator / filterResult.denominator);
-								$scope.languageExpression = '\\mixed{\\str{'+wholePart+'}}{\\frac{\\str{'+filterResult.numerator%filterResult.denominator+'}}{\\str{'+filterResult.denominator+'}}}';
+								filterResultSimple = simplify(filterResult.numerator%filterResult.denominator, filterResult.denominator);
+								$scope.languageExpression = '\\grp{\\row{\\mixed{\\str{'+wholePart+'}}{\\frac{\\fracstr{'+filterResult.numerator%filterResult.denominator+'}}{\\fracstr{'+filterResult.denominator+'}}}}{\\row{\\str{ = }}}}{\\row{\\mixed{\\str{'+wholePart+'}}{\\frac{\\fracstr{'+filterResultSimple.numerator+'}}{\\fracstr{'+filterResultSimple.denominator+'}}}}';
 								break;
 							case (simplified(filterResult.numerator, filterResult.denominator)):
-								$scope.languageExpression = '\\frac{\\str{'+filterResult.numerator+'}}{\\str{'+filterResult.denominator+'}';
+								$scope.languageExpression = '\\frac{\\fracstr{'+filterResult.numerator+'}}{\\fracstr{'+filterResult.denominator+'}';
 								break;
 							case (!simplified(filterResult.numerator, filterResult.denominator)):
 								filterResultSimple = simplify(filterResult.numerator, filterResult.denominator);
-								$scope.languageExpression = '\\frac{\\str{'+filterResultSimple.numerator+'}}{\\str{'+filterResultSimple.denominator+'}';
+								$scope.languageExpression = '\\grp{\\row{\\frac{\\fracstr{'+filterResult.numerator+'}}{\\fracstr{'+filterResult.denominator+'}}}{\\row{\\str{ = }}}}{\\row{\\frac{\\fracstr{'+filterResultSimple.numerator+'}}{\\fracstr{'+filterResultSimple.denominator+'}}}';
 								break;
 							
 						}

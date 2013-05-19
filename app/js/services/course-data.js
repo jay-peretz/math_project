@@ -3134,7 +3134,7 @@ angular.module('mathSkills.services')
 												  }, {
 														title: 'Workbook',
 														children: [{
-																	problem: '\\row{\\str{Reduce }}{\\frac{\\str{12}}{\\str{48}}}{\\str{ to its lowest terms }}',
+																	problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{12}}{\\fracstr{48}}}{\\str{ to its lowest terms }}',
 																	answer: '\\reducefrac{12}{48}',
 																	controls: {
 																		"checkAnswer": true,
@@ -3148,7 +3148,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\str{6}}{\\str{10}}}{\\str{ to its lowest terms}}',
+															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{6}}{\\fracstr{10}}}{\\str{ to its lowest terms}}',
 															answer: '\\frac{\\input{3}}{\\input{5}}',
 															controls: {
 																"checkAnswer": true,
@@ -3159,7 +3159,7 @@ angular.module('mathSkills.services')
 													}, {
 														title: 'Workbook',
 														children: [{
-																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{6}}{\\str{10}}}',
+																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{6}}{\\fracstr{10}}}',
 																	answer: '\\input{2}',
 																	controls: {
 																		"checkAnswer": true,
@@ -3180,7 +3180,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\str{4}}{\\str{6}}}{\\str{ to its lowest terms}}',
+															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{4}}{\\fracstr{6}}}{\\str{ to its lowest terms}}',
 															answer: '\\frac{\\input{2}}{\\input{3}}',
 															controls: {
 																"checkAnswer": true,
@@ -3191,7 +3191,7 @@ angular.module('mathSkills.services')
 													}, {
 														title: 'Workbook',
 														children: [{
-																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{4}}{\\str{6}}}',
+																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{4}}{\\fracstr{6}}}',
 																	answer: '\\input{2}',
 																	controls: {
 																		"checkAnswer": true,
@@ -3212,7 +3212,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\str{13}}{\\str{26}}}{\\str{ to its lowest terms}}',
+															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{13}}{\\fracstr{26}}}{\\str{ to its lowest terms}}',
 															answer: '\\frac{\\input{1}}{\\input{2}}',
 															controls: {
 																"checkAnswer": true,
@@ -3223,7 +3223,7 @@ angular.module('mathSkills.services')
 													}, {
 														title: 'Workbook',
 														children: [{
-																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{13}}{\\str{26}}}',
+																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{13}}{\\fracstr{26}}}',
 																	answer: '\\input{13}',
 																	controls: {
 																		"checkAnswer": true,
@@ -3244,8 +3244,8 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-														//	problem: '\\frac{\\str{3}}{\\str{10}}',
-															problem: '\\row{\\str{Reduce }}{\\frac{\\str{11}}{\\str{22}}}{\\str{ to its lowest terms}}',
+														//	problem: '\\frac{\\fracstr{3}}{\\fracstr{10}}',
+															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{11}}{\\fracstr{22}}}{\\str{ to its lowest terms}}',
 															answer: '\\frac{\\input{1}}{\\input{2}}',
 															controls: {
 																"checkAnswer": true,
@@ -3256,7 +3256,7 @@ angular.module('mathSkills.services')
 													}, {
 														title: 'Workbook',
 														children: [{
-																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{11}}{\\str{22}}}',
+																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{11}}{\\fracstr{22}}}',
 																	answer: '\\input{11}',
 																	controls: {
 																		"checkAnswer": true,
@@ -3277,7 +3277,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\str{17}}{\\str{34}}}{\\str{ to its lowest terms}}',
+															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{17}}{\\fracstr{34}}}{\\str{ to its lowest terms}}',
 															answer: '\\frac{\\input{1}}{\\input{2}}',
 															controls: {
 																"checkAnswer": true,
@@ -3288,7 +3288,7 @@ angular.module('mathSkills.services')
 													}, {
 														title: 'Workbook',
 														children: [{
-																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{17}}{\\str{34}}}',
+																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{17}}{\\fracstr{34}}}',
 																	answer: '\\input{17}',
 																	controls: {
 																		"checkAnswer": true,
@@ -3309,7 +3309,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\str{10}}{\\str{15}}}{\\str{ to its lowest terms}}',
+															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{10}}{\\fracstr{15}}}{\\str{ to its lowest terms}}',
 															answer: '\\frac{\\input{2}}{\\input{3}}',
 															controls: {
 																"checkAnswer": true,
@@ -3320,7 +3320,7 @@ angular.module('mathSkills.services')
 													}, {
 														title: 'Workbook',
 														children: [{
-																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\str{10}}{\\str{15}}}',
+																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{10}}{\\fracstr{15}}}',
 																	answer: '\\input{5}',
 																	controls: {
 																		"checkAnswer": true,
@@ -3341,7 +3341,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\str{12}}{\\str{48}}}{\\str{ to its lowest terms}}',
+															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{12}}{\\fracstr{48}}}{\\str{ to its lowest terms}}',
 															answer: '\\frac{\\input{1}}{\\input{4}}',
 															controls: {
 																"checkAnswer": true,
@@ -3356,7 +3356,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\str{18}}{\\str{24}}}{\\str{ to its lowest terms}}',
+															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{18}}{\\fracstr{24}}}{\\str{ to its lowest terms}}',
 															answer: '\\frac{\\input{3}}{\\input{4}}',
 															controls: {
 																"checkAnswer": true,
@@ -3371,7 +3371,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\str{16}}{\\str{24}}}{\\str{ to its lowest terms}}',
+															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{16}}{\\fracstr{24}}}{\\str{ to its lowest terms}}',
 															answer: '\\frac{\\input{2}}{\\input{3}}',
 															controls: {
 																"checkAnswer": true,
@@ -3546,7 +3546,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{3}}{\\input{5}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{6}}{\\str{10}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\frac{\\str{3}}{\\str{5}}}{\\str{ \xA0 \xA0 \xA0 \xA0 }}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{3}}{\\str{5}}}{help-answer-text-tight}}'
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\fracstr{6}}{\\fracstr{10}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\frac{\\fracstr{3}}{\\fracstr{5}}}{\\str{ \xA0 \xA0 \xA0 \xA0 }}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{3}}{\\fracstr{5}}}{help-answer-text-tight}}'
 													}
 												}]
 											}]
@@ -3560,7 +3560,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{3}}{\\input{10}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{3}}{\\str{10}}}{help-answer-text-tight}}}'															}
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{3}}{\\fracstr{10}}}{help-answer-text-tight}}}'															}
 												}]
 											}]
 										},
@@ -3573,7 +3573,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{57}}{\\input{100}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{57}}{\\str{100}}}{help-answer-text-tight}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{57}}{\\fracstr{100}}}{help-answer-text-tight}}}'
 													}
 												}]
 											}]
@@ -3587,7 +3587,7 @@ angular.module('mathSkills.services')
 													answer: '\\mixed{\\input{8}}{\\frac{\\input{2}}{\\input{5}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{84}}{\\str{10}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\str{8}}{\\frac{\\str{2}}{\\str{5}}}}{\\row{css{\\str{Answer:  \xA0 \xA0}}{help-answer-text}}{css{\\str{8}}{help-answer-text-tight}}{css{\\frac{\\str{2}}{\\str{5}}}{help-answer-text-tight}}}'															}
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\fracstr{84}}{\\fracstr{10}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\str{8}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}}{\\row{css{\\str{Answer:  \xA0 \xA0}}{help-answer-text}}{css{\\str{8}}{help-answer-text-tight}}{css{\\frac{\\fracstr{2}}{\\fracstr{5}}}{help-answer-text-tight}}}'															}
 												}]
 											}]
 										},
@@ -3600,7 +3600,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{9}}{\\input{10}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{9}}{\\str{10}}}{help-answer-text-tight}}}'			
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{9}}{\\fracstr{10}}}{help-answer-text-tight}}}'			
 													}
 												}]
 											}]
@@ -3614,7 +3614,7 @@ angular.module('mathSkills.services')
 													answer: '\\mixed{\\input{2}}{\\frac{\\input{69}}{\\input{100}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{269}}{\\str{100}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\str{2}}{\\frac{\\str{69}}{\\str{100}}}}{\\row{css{\\str{Answer:  \xA0 \xA0}}{help-answer-text}}{css{\\str{2 }}{help-answer-text-tight}}{css{\\frac{\\str{69}}{\\str{100}}}{help-answer-text-tight}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\fracstr{269}}{\\fracstr{100}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\str{2}}{\\frac{\\fracstr{69}}{\\fracstr{100}}}}{\\row{css{\\str{Answer:  \xA0 \xA0}}{help-answer-text}}{css{\\str{2 }}{help-answer-text-tight}}{css{\\frac{\\fracstr{69}}{\\fracstr{100}}}{help-answer-text-tight}}}'
 													}
 												}]
 											}]
@@ -3628,7 +3628,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{43}}{\\input{100}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{43}}{\\str{100}}}{help-answer-text-tight}}}'	
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{43}}{\\fracstr{100}}}{help-answer-text-tight}}}'	
 													}
 												}]
 											}]
@@ -3642,7 +3642,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{17}}{\\input{25}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{68}}{\\str{100}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\frac{\\str{17}}{\\str{25}}}{\\str{ \xA0 \xA0 \xA0 \xA0 }}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{17}}{\\str{25}}}{help-answer-text-tight}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\fracstr{68}}{\\fracstr{100}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\frac{\\fracstr{17}}{\\fracstr{25}}}{\\str{ \xA0 \xA0 \xA0 \xA0 }}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{17}}{\\fracstr{25}}}{help-answer-text-tight}}}'
 													}
 												}]
 											}]
@@ -3656,7 +3656,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{17}}{\\input{100}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\str{17}}{\\str{100}}}{help-answer-text-tight}}}'	
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{17}}{\\fracstr{100}}}{help-answer-text-tight}}}'	
 													}
 												}]
 											}]
@@ -3670,7 +3670,7 @@ angular.module('mathSkills.services')
 													answer: '\\mixed{\\input{2}}{\\frac{\\input{87}}{\\input{100}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{287}}{\\str{100}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\str{2}}{\\frac{\\str{87}}{\\str{100}}}}{\\row{css{\\str{Answer:  \xA0 \xA0}}{help-answer-text}}{css{\\str{2 }}{help-answer-text-tight}}{css{\\frac{\\str{87}}{\\str{100}}}{help-answer-text-tight}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\fracstr{287}}{\\fracstr{100}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\str{2}}{\\frac{\\fracstr{87}}{\\fracstr{100}}}}{\\row{css{\\str{Answer:  \xA0 \xA0}}{help-answer-text}}{css{\\str{2 }}{help-answer-text-tight}}{css{\\frac{\\fracstr{87}}{\\fracstr{100}}}{help-answer-text-tight}}}'
 													}
 												}]
 											}]
@@ -4412,7 +4412,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\str{3}}{\\str{10}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{3}}{\\fracstr{10}}}{\\str{ to a decimal}}',
 															answer: '\\input{.3}',
 															controls: {
 																"checkAnswer": true,
@@ -4426,7 +4426,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\str{4}}{\\str{8}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{4}}{\\fracstr{8}}}{\\str{ to a decimal}}',
 															answer: '\\input{.5}',
 															controls: {
 																"checkAnswer": true,
@@ -4440,7 +4440,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\str{6}}{\\str{8}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{6}}{\\fracstr{8}}}{\\str{ to a decimal}}',
 															answer: '\\input{.75}',
 															controls: {
 																"checkAnswer": true,
@@ -4454,7 +4454,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\str{14}}{\\str{22}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{14}}{\\fracstr{22}}}{\\str{ to a decimal}}',
 															answer: '\\input{.64}',
 															controls: {
 																"checkAnswer": true,
@@ -4469,7 +4469,7 @@ angular.module('mathSkills.services')
 														title: 'Main Answer',
 														children: [{
 														//	problem: '\\frac{\\str{3}}{\\str{10}}',
-															problem: '\\row{\\str{Change }}{\\frac{\\str{14}}{\\str{24}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{14}}{\\fracstr{24}}}{\\str{ to a decimal}}',
 															answer: '\\input{.58}',
 															controls: {
 																"checkAnswer": true,
@@ -4483,7 +4483,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\str{17}}{\\str{34}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{17}}{\\fracstr{34}}}{\\str{ to a decimal}}',
 															answer: '\\input{.5}',
 															controls: {
 																"checkAnswer": true,
@@ -4497,7 +4497,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\str{10}}{\\str{15}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{10}}{\\fracstr{15}}}{\\str{ to a decimal}}',
 															answer: '\\input{.67}',
 															controls: {
 																"checkAnswer": true,
@@ -4511,7 +4511,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\str{12}}{\\str{21}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{12}}{\\fracstr{21}}}{\\str{ to a decimal}}',
 															answer: '\\input{.57}',
 															controls: {
 																"checkAnswer": true,
@@ -4525,7 +4525,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\str{28}}{\\str{52}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{28}}{\\fracstr{52}}}{\\str{ to a decimal}}',
 															answer: '\\input{.54}',
 															controls: {
 																"checkAnswer": true,
@@ -4539,7 +4539,7 @@ angular.module('mathSkills.services')
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\str{6}}{\\str{9}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{6}}{\\fracstr{9}}}{\\str{ to a decimal}}',
 															answer: '\\input{.67}',
 															controls: {
 																"checkAnswer": true,
@@ -4992,11 +4992,11 @@ angular.module('mathSkills.services')
 											children: [{
 												title: 'Main Answer',
 												children: [{
-													problem: '\\rowgrp{\\row{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\row{\\str{4.7}}}',
-													answer: '\\mixed{\\input{4}}{\\frac{\\input{7}}{\\input{10}}}',
+													problem: '\\rowgrp{\\row{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\row{\\str{4.8}}}',
+													answer: '\\mixed{\\input{4}}{\\frac{\\input{4}}{\\input{5}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{0.8}{decimalNotPercent}{percentAsFraction}{help}}}'
+														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{4.8}{decimalNotPercent}{percentAsFraction}{help}}}'
 													} 
 												}]
 											}]
@@ -5006,12 +5006,12 @@ angular.module('mathSkills.services')
 											children: [{
 												title: 'Main Answer',
 												children: [{
-													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\addwholes{english}{partial}{[301,815]}}}',
-													answer: '\\input{1116}',
+													problem: '\\rowgrp{\\row{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\row{\\str{0.125}}}',
+													answer: '\\frac{\\input{1}}{\\input{8}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[301,815]}}{\\css{\\str{Answer:  1116}}{help-answer-text}}}'
-													}
+														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{0.125}{decimalNotPercent}{percentAsFraction}{help}}}'
+													} 
 												}]
 											}]
 										},
@@ -5020,12 +5020,12 @@ angular.module('mathSkills.services')
 											children: [{
 												title: 'Main Answer',
 												children: [{
-													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[968,827]}}}',
-													answer: '\\input{1795}',
+													problem: '\\rowgrp{\\row{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\row{\\str{3.2}}}',
+													answer: '\\mixed{\\input{3}}{\\frac{\\input{1}}{\\input{5}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[968,827]}}{\\css{\\str{Answer:  1795}}{help-answer-text}}}'
-													}
+														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{3.2}{decimalNotPercent}{percentAsFraction}{help}}}'
+													} 
 												}]
 											}]
 										},
@@ -5034,12 +5034,12 @@ angular.module('mathSkills.services')
 											children: [{
 												title: 'Main Answer',
 												children: [{
-													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[68,47]}}}',
-													answer: '\\input{115}',
+													problem: '\\rowgrp{\\row{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\row{\\str{0.5}}}',
+													answer: '\\frac{\\input{1}}{\\input{2}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[68,47]}}{\\css{\\str{Answer:  115}}{help-answer-text}}}'
-													}
+														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{0.5}{decimalNotPercent}{percentAsFraction}{help}}}'
+													} 
 												}]
 											}]
 										},
@@ -5048,12 +5048,12 @@ angular.module('mathSkills.services')
 											children: [{
 												title: 'Main Answer',
 												children: [{
-													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\addwholes{english}{partial}{[9026,1911]}}}',
-													answer: '\\input{10937}',
+													problem: '\\rowgrp{\\row{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\row{\\str{0.75}}}',
+													answer: '\\frac{\\input{3}}{\\input{4}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[9026,1911]}}{\\css{\\str{Answer:  10937}}{help-answer-text}}}'
-													}
+														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{0.75}{decimalNotPercent}{percentAsFraction}{help}}}'
+													} 
 												}]
 											}]
 										},
@@ -5062,12 +5062,12 @@ angular.module('mathSkills.services')
 											children: [{
 												title: 'Main Answer',
 												children: [{
-													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[3148,2584]}}}',
-													answer: '\\input{5732}',
+													problem: '\\rowgrp{\\row{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\row{\\str{4.8}}}',
+													answer: '\\mixed{\\input{4}}{\\frac{\\input{4}}{\\input{5}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[3148,2584]}}{\\css{\\str{Answer:  5732}}{help-answer-text}}}'
-													}
+														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{4.8}{decimalNotPercent}{percentAsFraction}{help}}}'
+													} 
 												}]
 											}]
 										},
@@ -5076,12 +5076,12 @@ angular.module('mathSkills.services')
 											children: [{
 												title: 'Main Answer',
 												children: [{
-													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\addwholes{english}{partial}{[618,489,115]}}}',
-													answer: '\\input{1222}',
+													problem: '\\rowgrp{\\row{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\row{\\str{4.8}}}',
+													answer: '\\mixed{\\input{4}}{\\frac{\\input{4}}{\\input{5}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[618,489,115]}}{\\css{\\str{Answer:  1222}}{help-answer-text}}}'
-													}
+														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{4.8}{decimalNotPercent}{percentAsFraction}{help}}}'
+													} 
 												}]
 											}]
 										},
@@ -5090,12 +5090,12 @@ angular.module('mathSkills.services')
 											children: [{
 												title: 'Main Answer',
 												children: [{
-													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[1700,2233,4945]}}}',
-													answer: '\\input{8878}',
+													problem: '\\rowgrp{\\row{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\row{\\str{4.8}}}',
+													answer: '\\mixed{\\input{4}}{\\frac{\\input{4}}{\\input{5}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[1700,2233,4945]}}{\\css{\\str{Answer:  8878}}{help-answer-text}}}'
-													}
+														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{4.8}{decimalNotPercent}{percentAsFraction}{help}}}'
+													} 
 												}]
 											}]
 										},
@@ -5104,12 +5104,12 @@ angular.module('mathSkills.services')
 											children: [{
 												title: 'Main Answer',
 												children: [{
-													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\addwholes{math}{partial}{[8850,4626,177,401]}}}',
-													answer: '\\input{14054}',
+													problem: '\\rowgrp{\\row{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\row{\\str{4.8}}}',
+													answer: '\\mixed{\\input{4}}{\\frac{\\input{4}}{\\input{5}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[8850,4626,177,401]}}{\\css{\\str{Answer:  14054}}{help-answer-text}}}'
-													}
+														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{4.8}{decimalNotPercent}{percentAsFraction}{help}}}'
+													} 
 												}]
 											}]
 										},
@@ -5118,12 +5118,12 @@ angular.module('mathSkills.services')
 											children: [{
 												title: 'Main Answer',
 												children: [{
-													problem: '\\rowgrp{\\row{\\str{Find the sum of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\addwholes{english}{partial}{[832,6223,2705,146]}}}',
-													answer: '\\input{9906}',
+													problem: '\\rowgrp{\\row{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\row{\\str{4.8}}}',
+													answer: '\\mixed{\\input{4}}{\\frac{\\input{4}}{\\input{5}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\addwholes{math}{complete}{[832,6223,2705,146]}}{\\css{\\str{Answer:  9906}}{help-answer-text}}}'
-													}
+														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{4.8}{decimalNotPercent}{percentAsFraction}{help}}}'
+													} 
 												}]
 											}]
 										}
