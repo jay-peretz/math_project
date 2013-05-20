@@ -1183,11 +1183,11 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 1:   Which two athletes had the best times to finish Race #1?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{T}}{\\str{\xA0 \xA0 C and D}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 A and B}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 B and C}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 D and E}}}}}',
-                                                answer: '\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}',
+                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart below.}}}{\\row{\xA0}}{\\row{\\str{Question 1:   Which two athletes had the best times to finish Race #1?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}}}',
+                                                answer: '\\butgrp{\\rowgrp{\\row{\\but{A}{T}}{\\str{\xA0 \xA0 C and D}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 A and B}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 B and C}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 D and E}}}}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{A: Runners C & D ran fastest in Race #1}'
                                                 }
                                             }]
                                         }]
@@ -1197,11 +1197,11 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 2:   Which athlete took the least amount of time to finish Race #2?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 runner D}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 runner C}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 runner E}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 runner A}}}}}',
-                                                answer: '\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}',
+                                                problem:'\\rowgrp{\\row{\\str{Answer the following questions by using the chart to below.}}}{\\row{\xA0}}{\\row{\\str{Question 2:   Which athlete took the least amount of time to finish Race #2?}}}{\\row{\xA0}}{\\row{\xA0}}{\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}}' ,
+                                                answer: '\\butgrp{\\rowgrp{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 runner D}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 runner C}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 runner E}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 runner A}}}}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{C: Runner E ran Race # 2 in the shortest amount of time}'
                                                 }
                                             }]
                                         }]
@@ -1211,11 +1211,11 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\row{\\str{Question 3:   How many of the runners had a time of 25 seconds or better in at least one race?}}}{\\row{\xA0}}{\\row{\xA0}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 2 runners}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 0 runners}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 1 runner}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 3 runners}}}}}',
-                                                answer: '\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}',
+                                                problem: '\\rowgrp{\\row{\\str{Answer the following questions by using the chart to below.}}}{\\row{\xA0}}{\\row{\\str{Question 3:   How many of the runners had a time of 25 seconds or better in at least one race?}}}{\\row{\xA0}}{\\row{\xA0}}{\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}}',
+                                                answer: '\\butgrp{\\rowgrp{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 2 runners}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 0 runners}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 1 runner}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 3 runners}}}}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{D: 3 runners ran at least one race under 25 seconds}'
                                                 }
                                             }]
                                         }]
@@ -1225,8 +1225,8 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\html{<br><br>}}{\\row{\\str{Question 1:  How much more money does Nathan spend on gas than Anne?}}}{\\row{\xA0}}}',
-                                                answer: '\\rowgrp{\\row{\\str{$}}{\\input{2}}}{\\row{\xA0}}{\\row{\\chart{Utility Bill for Gas and Electricity}{5}{5}{["Student","Therms of Gas Used","Cost of Gas","Kilowatt Hours of Electricity Used","Cost of Electricity","Anne","18","$26","188","$41","Travis","10","$14","183","$40","Nathan","20","$28","261","$56","Sondra","12","$17","251","$54"]}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\html{<br><br>}}{\\row{\\str{Question 1:  How much more money does Nathan spend on gas than Anne?}}}{\\row{\xA0}{\\row{\\chart{Utility Bill for Gas and Electricity}{5}{5}{["Student","Therms of Gas Used","Cost of Gas","Kilowatt Hours of Electricity Used","Cost of Electricity","Anne","18","$26","188","$41","Travis","10","$14","183","$40","Nathan","20","$28","261","$56","Sondra","12","$17","251","$54"]}}}}',
+                                                answer: '\\row{\\str{$}}{\\input{2}}}',
                                                 controls: {
                                                     "checkAnswer": true,
                                                     "help": true
