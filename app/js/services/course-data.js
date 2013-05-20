@@ -3141,7 +3141,7 @@ angular.module('mathSkills.services')
                                             "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{1}}{\\str{3}}}'
                                         }
                                     }, {
-                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{2}{3}}',
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{1}{3}}',
                                         answer: '\\frac{\\input{2}}{\\input{3}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -3174,7 +3174,7 @@ angular.module('mathSkills.services')
                                             "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{1}}{\\str{6}}}'
                                         }
                                     }, {
-                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{5}{6}}',
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{1}{6}}',
                                         answer: '\\frac{\\input{5}}{\\input{6}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -3207,7 +3207,7 @@ angular.module('mathSkills.services')
                                             "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{2}}{\\str{6}}}'
                                         }
                                     }, {
-                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{4}{6}}',
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{2}{6}}',
                                         answer: '\\frac{\\input{4}}{\\input{6}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -3240,7 +3240,7 @@ angular.module('mathSkills.services')
                                             "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{3}}{\\str{8}}}'
                                         }
                                     }, {
-                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{5}{8}}',
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{3}{8}}',
                                         answer: '\\frac{\\input{5}}{\\input{8}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -3273,7 +3273,7 @@ angular.module('mathSkills.services')
                                             "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{6}}{\\str{10}}}'
                                         }
                                     }, {
-                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{4}{10}}',
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{6}{10}}',
                                         answer: '\\frac{\\input{4}}{\\input{10}}',
                                         controls: {
                                             "checkAnswer": true,
