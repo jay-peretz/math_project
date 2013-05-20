@@ -3417,15 +3417,15 @@ angular.module('mathSkills.services')
                                 }]
                             }]
                         }, {
-                            title: '2.4 Reduce Fractions',
-                            path: '2.4-reduce-fractions',
+                            title: '6.4 Reduce Fractions',
+                            path: '6.4-reduce-fractions',
                             children: [{
                                 title: 'Reduce Fractions',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\str{Reduce }}{\\frac{\\str{12}}{\\str{48}}}{\\str{ to its lowest terms}}',
-                                        answer: '\\frac{\\input{1}}{\\input{4}}',
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{3}}{\\str{6}}}{\\str{\xA0 to its lowest terms}}',
+                                        answer: '\\frac{\\input{1}}{\\input{2}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
@@ -3435,8 +3435,8 @@ angular.module('mathSkills.services')
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{12}}{\\fracstr{48}}}{\\str{ to its lowest terms }}',
-                                        answer: '\\reducefrac{12}{48}',
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{3}}{\\fracstr{6}}}{\\str{\xA0 to its lowest terms }}',
+                                        answer: '\\reducefrac{3}{6}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -3448,7 +3448,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{6}}{\\fracstr{10}}}{\\str{ to its lowest terms}}',
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{9}}{\\str{15}}}{\\str{\xA0 to its lowest terms}}',
                                         answer: '\\frac{\\input{3}}{\\input{5}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -3459,30 +3459,143 @@ angular.module('mathSkills.services')
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-                                        problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{6}}{\\fracstr{10}}}',
-                                        answer: '\\input{2}',
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{9}}{\\fracstr{15}}}{\\str{\xA0 to its lowest terms }}',
+                                        answer: '\\reducefrac{9}{15}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
                                         }
-                                    }, {
-                                        problem: '\\row{\\str{Factor out a 2}}{\\frac{\\str{6 \xF7 2}}{\\str{10 \xF7 2}}}',
+                                    }]
+                                }]
+                            },{
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{24}}{\\str{28}}}{\\str{\xA0 to its lowest terms}}',
+                                        answer: '\\frac{\\input{6}}{\\input{7}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{24}}{\\fracstr{28}}}{\\str{\xA0 to its lowest terms }}',
+                                        answer: '\\reducefrac{24}{28}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
+                                }]
+                            },{
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{8}}{\\str{12}}}{\\str{\xA0 to its lowest terms}}',
+                                        answer: '\\frac{\\input{2}}{\\input{3}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{8}}{\\fracstr{12}}}{\\str{\xA0 to its lowest terms }}',
+                                        answer: '\\reducefrac{8}{12}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
+                                }]
+                            },{
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{4}}{\\str{13}}}{\\str{\xA0 to its lowest terms}}',
+                                        answer: '\\frac{\\input{4}}{\\input{13}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{4}}{\\fracstr{13}}}{\\str{\xA0 to its lowest terms }}',
+                                        answer: '\\reducefrac{4}{13}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
+                                }]
+                            },{
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{7}}{\\str{14}}}{\\str{\xA0 to its lowest terms}}',
+                                        answer: '\\frac{\\input{1}}{\\input{2}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{7}}{\\fracstr{14}}}{\\str{\xA0 to its lowest terms }}',
+                                        answer: '\\reducefrac{7}{14}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
+                                }]
+                            },{
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{10}}{\\str{12}}}{\\str{\xA0 to its lowest terms}}',
+                                        answer: '\\frac{\\input{5}}{\\input{6}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{10}}{\\fracstr{12}}}{\\str{\xA0 to its lowest terms }}',
+                                        answer: '\\reducefrac{10}{12}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
+                                }]
+                            },{
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{21}}{\\str{35}}}{\\str{\xA0 to its lowest terms}}',
                                         answer: '\\frac{\\input{3}}{\\input{5}}',
                                         controls: {
                                             "checkAnswer": true,
-                                            "help": false
-                                        }
-                                    }]
-                                }]
-                            }, {
-                                title: 'Reduce Fractions',
-                                children: [{
-                                    title: 'Main Answer',
-                                    children: [{
-                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{4}}{\\fracstr{6}}}{\\str{ to its lowest terms}}',
-                                        answer: '\\frac{\\input{2}}{\\input{3}}',
-                                        controls: {
-                                            "checkAnswer": true,
                                             "help": false,
                                             "workbook": true
                                         }
@@ -3490,166 +3603,20 @@ angular.module('mathSkills.services')
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-                                        problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{4}}{\\fracstr{6}}}',
-                                        answer: '\\input{2}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false
-                                        }
-                                    }, {
-                                        problem: '\\row{\\str{Factor out a 2}}{\\frac{\\str{4 \xF7 2}}{\\str{6 \xF7 2}}}',
-                                        answer: '\\frac{\\input{2}}{\\input{3}}',
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{21}}{\\fracstr{35}}}{\\str{\xA0 to its lowest terms }}',
+                                        answer: '\\reducefrac{21}{35}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
                                         }
                                     }]
                                 }]
-                            }, {
+                            },{
                                 title: 'Reduce Fractions',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{13}}{\\fracstr{26}}}{\\str{ to its lowest terms}}',
-                                        answer: '\\frac{\\input{1}}{\\input{2}}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false,
-                                            "workbook": true
-                                        }
-                                    }]
-                                }, {
-                                    title: 'Workbook',
-                                    children: [{
-                                        problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{13}}{\\fracstr{26}}}',
-                                        answer: '\\input{13}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false
-                                        }
-                                    }, {
-                                        problem: '\\row{\\str{Factor out a 13}}{\\frac{\\str{13 \xF7 13}}{\\str{26 \xF7 13}}}',
-                                        answer: '\\frac{\\input{1}}{\\input{2}}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false
-                                        }
-                                    }]
-                                }]
-                            }, {
-                                title: 'Reduce Fractions',
-                                children: [{
-                                    title: 'Main Answer',
-                                    children: [{
-                                        //	problem: '\\frac{\\fracstr{3}}{\\fracstr{10}}',
-                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{11}}{\\fracstr{22}}}{\\str{ to its lowest terms}}',
-                                        answer: '\\frac{\\input{1}}{\\input{2}}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false,
-                                            "workbook": true
-                                        }
-                                    }]
-                                }, {
-                                    title: 'Workbook',
-                                    children: [{
-                                        problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{11}}{\\fracstr{22}}}',
-                                        answer: '\\input{11}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false
-                                        }
-                                    }, {
-                                        problem: '\\row{\\str{Factor out an 11}}{\\frac{\\str{11 \xF7 11}}{\\str{22 \xF7 11}}}',
-                                        answer: '\\frac{\\input{1}}{\\input{2}}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false
-                                        }
-                                    }]
-                                }]
-                            }, {
-                                title: 'Reduce Fractions',
-                                children: [{
-                                    title: 'Main Answer',
-                                    children: [{
-                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{17}}{\\fracstr{34}}}{\\str{ to its lowest terms}}',
-                                        answer: '\\frac{\\input{1}}{\\input{2}}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false,
-                                            "workbook": true
-                                        }
-                                    }]
-                                }, {
-                                    title: 'Workbook',
-                                    children: [{
-                                        problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{17}}{\\fracstr{34}}}',
-                                        answer: '\\input{17}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false
-                                        }
-                                    }, {
-                                        problem: '\\row{\\str{Factor out a 17}}{\\frac{\\str{17 \xF7 17}}{\\str{34 \xF7 17}}}',
-                                        answer: '\\frac{\\input{1}}{\\input{2}}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false
-                                        }
-                                    }]
-                                }]
-                            }, {
-                                title: 'Reduce Fractions',
-                                children: [{
-                                    title: 'Main Answer',
-                                    children: [{
-                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{10}}{\\fracstr{15}}}{\\str{ to its lowest terms}}',
-                                        answer: '\\frac{\\input{2}}{\\input{3}}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false,
-                                            "workbook": true
-                                        }
-                                    }]
-                                }, {
-                                    title: 'Workbook',
-                                    children: [{
-                                        problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{10}}{\\fracstr{15}}}',
-                                        answer: '\\input{5}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false
-                                        }
-                                    }, {
-                                        problem: '\\row{\\str{Factor out a 5}}{\\frac{\\str{10 \xF7 5}}{\\str{15 \xF7 5}}}',
-                                        answer: '\\frac{\\input{2}}{\\input{3}}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false
-                                        }
-                                    }]
-                                }]
-                            }, {
-                                title: 'Reduce Fractions',
-                                children: [{
-                                    title: 'Main Answer',
-                                    children: [{
-                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{12}}{\\fracstr{48}}}{\\str{ to its lowest terms}}',
-                                        answer: '\\frac{\\input{1}}{\\input{4}}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false,
-                                            "workbook": true
-                                        }
-                                    }]
-                                }]
-                            }, {
-                                title: 'Reduce Fractions',
-                                children: [{
-                                    title: 'Main Answer',
-                                    children: [{
-                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{18}}{\\fracstr{24}}}{\\str{ to its lowest terms}}',
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{6}}{\\str{8}}}{\\str{\xA0 to its lowest terms}}',
                                         answer: '\\frac{\\input{3}}{\\input{4}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -3657,22 +3624,42 @@ angular.module('mathSkills.services')
                                             "workbook": true
                                         }
                                     }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{6}}{\\fracstr{8}}}{\\str{\xA0 to its lowest terms }}',
+                                        answer: '\\reducefrac{6}{8}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
                                 }]
-                            }, {
+                            },{
                                 title: 'Reduce Fractions',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{16}}{\\fracstr{24}}}{\\str{ to its lowest terms}}',
-                                        answer: '\\frac{\\input{2}}{\\input{3}}',
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{12}}{\\str{48}}}{\\str{\xA0 to its lowest terms}}',
+                                        answer: '\\frac{\\input{1}}{\\input{4}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
                                             "workbook": true
                                         }
                                     }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{12}}{\\fracstr{48}}}{\\str{\xA0 to its lowest terms }}',
+                                        answer: '\\reducefrac{12}{48}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
                                 }]
-                            }, ]
+                            }]
                         }]
                     }, {
                         title: '3 Decimals',
