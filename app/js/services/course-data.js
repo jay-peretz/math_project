@@ -5048,7 +5048,7 @@ angular.module('mathSkills.services')
 													answer: '\\mixed{\\input{4}}{\\frac{\\input{4}}{\\input{5}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{\\percentsdecimalfrac{4.8}{decimalNotPercent}{percentAsFraction}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\str{4}}{\\frac{\\fracstr{4}}{\\fracstr{5}}}}{help-answer-text-tight}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{\\percentsdecimalfrac{\\str{4.8}}{decimalNotPercent}{percentAsFraction}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\str{4}}{\\frac{\\fracstr{4}}{\\fracstr{5}}}}{help-answer-text-tight}}'
 													} 
 												}]
 											}]
@@ -5062,7 +5062,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{1}}{\\input{8}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{0.125}{decimalNotPercent}{percentAsFraction}}{label_like}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\str{0.125}}{decimalNotPercent}{percentAsFraction}}{label_like}}}'
 													} 
 												}]
 											}]
@@ -5076,7 +5076,7 @@ angular.module('mathSkills.services')
 													answer: '\\mixed{\\input{3}}{\\frac{\\input{1}}{\\input{5}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{\\percentsdecimalfrac{3.2}{decimalNotPercent}{percentAsFraction}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\str{3}}{\\frac{\\fracstr{1}}{\\fracstr{5}}}}{help-answer-text-tight}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{\\percentsdecimalfrac{\\str{3.2}}{decimalNotPercent}{percentAsFraction}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\str{3}}{\\frac{\\fracstr{1}}{\\fracstr{5}}}}{help-answer-text-tight}}'
 													} 
 												}]
 											}]
@@ -5090,7 +5090,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{1}}{\\input{2}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{0.5}{decimalNotPercent}{percentAsFraction}}{label_like}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\str{0.5}}{decimalNotPercent}{percentAsFraction}}{label_like}}}'
 													} 
 												}]
 											}]
@@ -5104,7 +5104,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{3}}{\\input{4}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{0.75}{decimalNotPercent}{percentAsFraction}}{label_like}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\str{0.75}}{decimalNotPercent}{percentAsFraction}}{label_like}}}'
 													} 
 												}]
 											}]
@@ -5114,11 +5114,11 @@ angular.module('mathSkills.services')
 											children: [{
 												title: 'Main Answer',
 												children: [{
-													problem: '\\rowgrp{\\row{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\row{\\str{4.8}}}',
-													answer: '\\mixed{\\input{4}}{\\frac{\\input{4}}{\\input{5}}}',
+													problem: '\\rowgrp{\\row{\\str{Write the equivalent decimal value of this fraction:}}}{\\row{\\frac{\\str{7}}{\\str{8}}}}',
+													answer: '\\input{0.875}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{4.8}{decimalNotPercent}{percentAsFraction}}}'
+														"help": '\\rowgrp{\\row{\\str{Divide the numerator by the denominator.}}}{\\row{\\percentsdecimalfrac{\\frac{\\str{7}}{\\str{8}}}{percentAsFraction}{decimalNotPercent}}}'
 													} 
 												}]
 											}]

@@ -33,7 +33,7 @@ angular.module('mathSkills')
 					}
 				
 					var decimalNotPercentFunc = function(parametersArray) {
-						decimalNotPercent = parametersArray[0];
+						decimalNotPercent = parametersArray[0].slice(5, parametersArray[0].length - 1);
 						percentAsFraction = ({numerator: parseInt(decimalNotPercent.toString().replace(/,/g, '').replace('.', ''), 10), denominator: Math.pow(10, decimalDigits(decimalNotPercent))});
 						decimalAsPercent = ([decimalNotPercent * (100)]);
 						fractionPercentAsFraction = fractionMultiply([percentAsFraction, ({numerator: 1, denominator: 100})]);
