@@ -3660,7 +3660,153 @@ angular.module('mathSkills.services')
                                     }]
                                 }]
                             }]
-                        }]
+                        }, {
+                                title: '7.2 Find the Reciprocal of a Fraction',
+                                path: '7.2-find-the-reciprocal-of-a-fraction',
+                                children: [
+                                    {
+        								title: 'Find the Reciprocal of a Fraction',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\butgrp{\\row{\\str{80 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 91}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": '\\str{80 is LESS THAN 91}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Find the Reciprocal of a Fraction',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{25}{33}{20}{35}}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": '\\str{X or 25 is LESS THAN Y or 33}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Find the Reciprocal of a Fraction',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{25}{33}{20}{35}}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": '\\str{X or 25 is LESS THAN Y or 33}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Find the Reciprocal of a Fraction',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\butgrp{\\row{\\str{85 \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 80}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": '\\str{85 is GREATER THAN 80}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Find the Reciprocal of a Fraction',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\butgrp{\\row{\\str{53 \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 50}}',
+												answer: '',
+
+												controls: {
+													"checkAnswer": false,
+													"help": '\\str{53 is GREATER THAN 50}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Find the Reciprocal of a Fraction',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{56}{48}{45}{60}}}',
+												answer: '',
+                                                controls: {
+													"checkAnswer": false,
+													"help": '\\str{X or 56 is GREATER THAN Y or 48}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Find the Reciprocal of a Fraction',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\butgrp{\\row{\\str{54 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 60}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": '\\str{54 is LESS THAN 60}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Find the Reciprocal of a Fraction',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\butgrp{\\row{\\str{86 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 93}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": '\\str{86 is LESS THAN 93}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Find the Reciprocal of a Fraction',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{86}{77}{72}{88}}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": '\\str{86 is MORE THAN 77}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Find the Reciprocal of a Fraction',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\butgrp{\\row{\\str{47 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 57}}',
+												answer: '',
+												controls: {
+													"checkAnswer": false,
+													"help": '\\str{47 is LESS THAN 57}'
+												}
+											}]
+										}]
+									}
+                                ]
+                            }]
                     }, {
                         title: '3 Decimals',
                         path: 'decimals',
