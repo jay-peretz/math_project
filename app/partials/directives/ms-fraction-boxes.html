@@ -1,5 +1,5 @@
 <style>
-    ms-fraction-boxes td {
+    ms-fraction-boxes td.border {
         width: 30px;
         height: 30px;
         border: 1px solid black;
@@ -11,8 +11,8 @@
 
 <table>
     <tbody>
-        <tr>
-            <td ng-repeat="box in boxes" ng-class="{ highlight: isHighlighted($index) }"></td>
+        <tr ng-repeat="row in rows">
+            <td><table><tr><td ng-repeat="box in row" class=border ng-class="{ highlight: isHighlighted($parent.$index, $index) }"></td></tr></table></td>
         </tr>
     </tbody>
 </table>
