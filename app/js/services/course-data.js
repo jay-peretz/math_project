@@ -4996,7 +4996,7 @@ angular.module('mathSkills.services')
 													answer: '\\mixed{\\input{4}}{\\frac{\\input{4}}{\\input{5}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{4.8}{decimalNotPercent}{percentAsFraction}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\str{4}}{\\frac{\\fracstr{4}}{\\fracstr{5}}}}{help-answer-text-tight}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{\\percentsdecimalfrac{4.8}{decimalNotPercent}{percentAsFraction}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\str{4}}{\\frac{\\fracstr{4}}{\\fracstr{5}}}}{help-answer-text-tight}}'
 													} 
 												}]
 											}]
@@ -5010,7 +5010,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{1}}{\\input{8}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{0.125}{decimalNotPercent}{percentAsFraction}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{0.125}{decimalNotPercent}{percentAsFraction}}{label_like}}}'
 													} 
 												}]
 											}]
@@ -5024,7 +5024,7 @@ angular.module('mathSkills.services')
 													answer: '\\mixed{\\input{3}}{\\frac{\\input{1}}{\\input{5}}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{3.2}{decimalNotPercent}{percentAsFraction}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{\\percentsdecimalfrac{3.2}{decimalNotPercent}{percentAsFraction}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\str{3}}{\\frac{\\fracstr{1}}{\\fracstr{5}}}}{help-answer-text-tight}}'
 													} 
 												}]
 											}]
@@ -5038,7 +5038,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{1}}{\\input{2}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{0.5}{decimalNotPercent}{percentAsFraction}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{0.5}{decimalNotPercent}{percentAsFraction}}{label_like}}}'
 													} 
 												}]
 											}]
@@ -5052,7 +5052,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{3}}{\\input{4}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}}{\\row{\\percentsdecimalfrac{0.75}{decimalNotPercent}{percentAsFraction}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{0.75}{decimalNotPercent}{percentAsFraction}}{label_like}}}'
 													} 
 												}]
 											}]
