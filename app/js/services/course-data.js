@@ -3113,277 +3113,433 @@ angular.module('mathSkills.services')
                     }, {
                         title: '2 Fractions',
                         path: 'fractions',
-                        children: [
-							{
-											title: '2.4 Reduce Fractions',
-											path: '2.4-reduce-fractions',
-											children: [
-												{
-													title: 'Reduce Fractions',
-													children: [{
-														title: 'Main Answer',
-														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\str{12}}{\\str{48}}}{\\str{ to its lowest terms}}',
-															answer: '\\frac{\\input{1}}{\\input{4}}',
-															controls: {
-																"checkAnswer": true,
-																"help": false,
-                                                                "workbook": true
-															}
-														}]
-												  }, {
-														title: 'Workbook',
-														children: [{
-																	problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{12}}{\\fracstr{48}}}{\\str{ to its lowest terms }}',
-																	answer: '\\reducefrac{12}{48}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																}]
-                                                       }]
-												},
-												{
-													title: 'Reduce Fractions',
-													children: [{
-														title: 'Main Answer',
-														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{6}}{\\fracstr{10}}}{\\str{ to its lowest terms}}',
-															answer: '\\frac{\\input{3}}{\\input{5}}',
-															controls: {
-																"checkAnswer": true,
-																"help": false,
-                                                                "workbook": true
-															}
-														}]
-													}, {
-														title: 'Workbook',
-														children: [{
-																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{6}}{\\fracstr{10}}}',
-																	answer: '\\input{2}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																},{
-																	problem: '\\row{\\str{Factor out a 2}}{\\frac{\\str{6 \xF7 2}}{\\str{10 \xF7 2}}}',
-																	answer: '\\frac{\\input{3}}{\\input{5}}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																}]
-                                                       }]
-												},
-												{
-													title: 'Reduce Fractions',
-													children: [{
-														title: 'Main Answer',
-														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{4}}{\\fracstr{6}}}{\\str{ to its lowest terms}}',
-															answer: '\\frac{\\input{2}}{\\input{3}}',
-															controls: {
-																"checkAnswer": true,
-																"help": false,
-                                                                "workbook": true
-															}
-														}]
-													}, {
-														title: 'Workbook',
-														children: [{
-																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{4}}{\\fracstr{6}}}',
-																	answer: '\\input{2}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																},{
-																	problem: '\\row{\\str{Factor out a 2}}{\\frac{\\str{4 \xF7 2}}{\\str{6 \xF7 2}}}',
-																	answer: '\\frac{\\input{2}}{\\input{3}}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																}]
-                                                       }]
-												},
-												{
-													title: 'Reduce Fractions',
-													children: [{
-														title: 'Main Answer',
-														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{13}}{\\fracstr{26}}}{\\str{ to its lowest terms}}',
-															answer: '\\frac{\\input{1}}{\\input{2}}',
-															controls: {
-																"checkAnswer": true,
-																"help": false,
-                                                                "workbook": true
-															}
-														}]
-													}, {
-														title: 'Workbook',
-														children: [{
-																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{13}}{\\fracstr{26}}}',
-																	answer: '\\input{13}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																},{
-																	problem: '\\row{\\str{Factor out a 13}}{\\frac{\\str{13 \xF7 13}}{\\str{26 \xF7 13}}}',
-																	answer: '\\frac{\\input{1}}{\\input{2}}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																}]
-                                                       }]
-												},
-												{
-													title: 'Reduce Fractions',
-													children: [{
-														title: 'Main Answer',
-														children: [{
-														//	problem: '\\frac{\\fracstr{3}}{\\fracstr{10}}',
-															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{11}}{\\fracstr{22}}}{\\str{ to its lowest terms}}',
-															answer: '\\frac{\\input{1}}{\\input{2}}',
-															controls: {
-																"checkAnswer": true,
-																"help": false,
-                                                                "workbook": true
-															}
-														}]
-													}, {
-														title: 'Workbook',
-														children: [{
-																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{11}}{\\fracstr{22}}}',
-																	answer: '\\input{11}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																},{
-																	problem: '\\row{\\str{Factor out an 11}}{\\frac{\\str{11 \xF7 11}}{\\str{22 \xF7 11}}}',
-																	answer: '\\frac{\\input{1}}{\\input{2}}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																}]
-                                                       }]
-												},
-												{
-													title: 'Reduce Fractions',
-													children: [{
-														title: 'Main Answer',
-														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{17}}{\\fracstr{34}}}{\\str{ to its lowest terms}}',
-															answer: '\\frac{\\input{1}}{\\input{2}}',
-															controls: {
-																"checkAnswer": true,
-																"help": false,
-                                                                "workbook": true
-															}
-														}]
-													}, {
-														title: 'Workbook',
-														children: [{
-																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{17}}{\\fracstr{34}}}',
-																	answer: '\\input{17}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																},{
-																	problem: '\\row{\\str{Factor out a 17}}{\\frac{\\str{17 \xF7 17}}{\\str{34 \xF7 17}}}',
-																	answer: '\\frac{\\input{1}}{\\input{2}}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																}]
-                                                       }]
-												},
-												{
-													title: 'Reduce Fractions',
-													children: [{
-														title: 'Main Answer',
-														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{10}}{\\fracstr{15}}}{\\str{ to its lowest terms}}',
-															answer: '\\frac{\\input{2}}{\\input{3}}',
-															controls: {
-																"checkAnswer": true,
-																"help": false,
-                                                                "workbook": true
-															}
-														}]
-													}, {
-														title: 'Workbook',
-														children: [{
-																	problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{10}}{\\fracstr{15}}}',
-																	answer: '\\input{5}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																},{
-																	problem: '\\row{\\str{Factor out a 5}}{\\frac{\\str{10 \xF7 5}}{\\str{15 \xF7 5}}}',
-																	answer: '\\frac{\\input{2}}{\\input{3}}',
-																	controls: {
-																		"checkAnswer": true,
-																		"help": false
-																	}
-																}]
-                                                       }]
-												},
-												{
-													title: 'Reduce Fractions',
-													children: [{
-														title: 'Main Answer',
-														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{12}}{\\fracstr{48}}}{\\str{ to its lowest terms}}',
-															answer: '\\frac{\\input{1}}{\\input{4}}',
-															controls: {
-																"checkAnswer": true,
-																"help": false,
-                                                                "workbook": true
-															}
-														}]
-													}]
-												},
-												{
-													title: 'Reduce Fractions',
-													children: [{
-														title: 'Main Answer',
-														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{18}}{\\fracstr{24}}}{\\str{ to its lowest terms}}',
-															answer: '\\frac{\\input{3}}{\\input{4}}',
-															controls: {
-																"checkAnswer": true,
-																"help": false,
-                                                                "workbook": true
-															}
-														}]
-													}]
-												},
-												{
-													title: 'Reduce Fractions',
-													children: [{
-														title: 'Main Answer',
-														children: [{
-															problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{16}}{\\fracstr{24}}}{\\str{ to its lowest terms}}',
-															answer: '\\frac{\\input{2}}{\\input{3}}',
-															controls: {
-																"checkAnswer": true,
-																"help": false,
-                                                                "workbook": true
-															}
-														}]
-													}]
-												},
-											]
-										}
-						]
+                        children: [{
+                            title: '6.1 Meaning of Fractions',
+                            path: '6.1-meaning-of-fractions',
+                            children: [{
+                                title: 'The Meaning of Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is shaded?}}{\\fracbox{3}{4}}',
+                                        answer: '\\frac{\\input{3}}{\\input{4}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{3}}{\\str{4}}}'
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'The Meaning of Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is shaded?}}{\\fracbox{1}{3}}',
+                                        answer: '\\frac{\\input{1}}{\\input{3}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{1}}{\\str{3}}}'
+                                        }
+                                    }, {
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{2}{3}}',
+                                        answer: '\\frac{\\input{2}}{\\input{3}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{2}}{\\str{3}}}'
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'The Meaning of Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is shaded?}}{\\fracbox{2}{5}}',
+                                        answer: '\\frac{\\input{2}}{\\input{5}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{2}}{\\str{5}}}'
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'The Meaning of Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is shaded?}}{\\fracbox{1}{6}}',
+                                        answer: '\\frac{\\input{1}}{\\input{6}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{1}}{\\str{6}}}'
+                                        }
+                                    }, {
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{5}{6}}',
+                                        answer: '\\frac{\\input{5}}{\\input{6}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{5}}{\\str{6}}}'
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'The Meaning of Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is shaded?}}{\\fracbox{3}{7}}',
+                                        answer: '\\frac{\\input{3}}{\\input{7}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{3}}{\\str{7}}}'
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'The Meaning of Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is shaded?}}{\\fracbox{2}{6}}',
+                                        answer: '\\frac{\\input{2}}{\\input{6}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{2}}{\\str{6}}}'
+                                        }
+                                    }, {
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{4}{6}}',
+                                        answer: '\\frac{\\input{4}}{\\input{6}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{4}}{\\str{6}}}'
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'The Meaning of Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is shaded?}}{\\fracbox{4}{9}}',
+                                        answer: '\\frac{\\input{4}}{\\input{9}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{4}}{\\str{9}}}'
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'The Meaning of Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is shaded?}}{\\fracbox{3}{8}}',
+                                        answer: '\\frac{\\input{3}}{\\input{8}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{3}}{\\str{8}}}'
+                                        }
+                                    }, {
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{5}{8}}',
+                                        answer: '\\frac{\\input{5}}{\\input{8}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{5}}{\\str{8}}}'
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'The Meaning of Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is shaded?}}{\\fracbox{3}{10}}',
+                                        answer: '\\frac{\\input{3}}{\\input{10}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{3}}{\\str{10}}}'
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'The Meaning of Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is shaded?}}{\\fracbox{6}{10}}',
+                                        answer: '\\frac{\\input{6}}{\\input{10}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{6}}{\\str{10}}}'
+                                        }
+                                    }, {
+                                        problem: '\\rowgrp{\\str{What fraction of the figure is NOT shaded?}}{\\fracbox{4}{10}}',
+                                        answer: '\\frac{\\input{4}}{\\input{10}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": '\\row{\\html{The answer is &nbsp;&nbsp;}}{\\frac{\\str{4}}{\\str{10}}}'
+                                        }
+                                    }]
+                                }]
+                            }]
+                        }, {
+                            title: '2.4 Reduce Fractions',
+                            path: '2.4-reduce-fractions',
+                            children: [{
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce }}{\\frac{\\str{12}}{\\str{48}}}{\\str{ to its lowest terms}}',
+                                        answer: '\\frac{\\input{1}}{\\input{4}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{12}}{\\fracstr{48}}}{\\str{ to its lowest terms }}',
+                                        answer: '\\reducefrac{12}{48}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{6}}{\\fracstr{10}}}{\\str{ to its lowest terms}}',
+                                        answer: '\\frac{\\input{3}}{\\input{5}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{6}}{\\fracstr{10}}}',
+                                        answer: '\\input{2}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }, {
+                                        problem: '\\row{\\str{Factor out a 2}}{\\frac{\\str{6 \xF7 2}}{\\str{10 \xF7 2}}}',
+                                        answer: '\\frac{\\input{3}}{\\input{5}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{4}}{\\fracstr{6}}}{\\str{ to its lowest terms}}',
+                                        answer: '\\frac{\\input{2}}{\\input{3}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{4}}{\\fracstr{6}}}',
+                                        answer: '\\input{2}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }, {
+                                        problem: '\\row{\\str{Factor out a 2}}{\\frac{\\str{4 \xF7 2}}{\\str{6 \xF7 2}}}',
+                                        answer: '\\frac{\\input{2}}{\\input{3}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{13}}{\\fracstr{26}}}{\\str{ to its lowest terms}}',
+                                        answer: '\\frac{\\input{1}}{\\input{2}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{13}}{\\fracstr{26}}}',
+                                        answer: '\\input{13}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }, {
+                                        problem: '\\row{\\str{Factor out a 13}}{\\frac{\\str{13 \xF7 13}}{\\str{26 \xF7 13}}}',
+                                        answer: '\\frac{\\input{1}}{\\input{2}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        //	problem: '\\frac{\\fracstr{3}}{\\fracstr{10}}',
+                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{11}}{\\fracstr{22}}}{\\str{ to its lowest terms}}',
+                                        answer: '\\frac{\\input{1}}{\\input{2}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{11}}{\\fracstr{22}}}',
+                                        answer: '\\input{11}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }, {
+                                        problem: '\\row{\\str{Factor out an 11}}{\\frac{\\str{11 \xF7 11}}{\\str{22 \xF7 11}}}',
+                                        answer: '\\frac{\\input{1}}{\\input{2}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{17}}{\\fracstr{34}}}{\\str{ to its lowest terms}}',
+                                        answer: '\\frac{\\input{1}}{\\input{2}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{17}}{\\fracstr{34}}}',
+                                        answer: '\\input{17}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }, {
+                                        problem: '\\row{\\str{Factor out a 17}}{\\frac{\\str{17 \xF7 17}}{\\str{34 \xF7 17}}}',
+                                        answer: '\\frac{\\input{1}}{\\input{2}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{10}}{\\fracstr{15}}}{\\str{ to its lowest terms}}',
+                                        answer: '\\frac{\\input{2}}{\\input{3}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\row{\\str{What is a common factor of the numerator and denominator?}}{\\frac{\\fracstr{10}}{\\fracstr{15}}}',
+                                        answer: '\\input{5}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }, {
+                                        problem: '\\row{\\str{Factor out a 5}}{\\frac{\\str{10 \xF7 5}}{\\str{15 \xF7 5}}}',
+                                        answer: '\\frac{\\input{2}}{\\input{3}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{12}}{\\fracstr{48}}}{\\str{ to its lowest terms}}',
+                                        answer: '\\frac{\\input{1}}{\\input{4}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{18}}{\\fracstr{24}}}{\\str{ to its lowest terms}}',
+                                        answer: '\\frac{\\input{3}}{\\input{4}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'Reduce Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\row{\\str{Reduce }}{\\frac{\\fracstr{16}}{\\fracstr{24}}}{\\str{ to its lowest terms}}',
+                                        answer: '\\frac{\\input{2}}{\\input{3}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }]
+                            }, ]
+                        }]
                     }, {
                         title: '3 Decimals',
                         path: 'decimals',
