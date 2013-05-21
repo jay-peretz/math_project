@@ -20,11 +20,8 @@ angular.module('mathSkills.services')
                 // Store the answer event data.
                 privateData[$routeParams.unit][$routeParams.problemSet].push(data);
                 // set previous answer data
-                if (data.result === 'correct') {
-                    privateData.previous = true;
-                }else{
-                    privateData.previous = false;
-                }
+                privateData.previous = data;
+                privateData.previousResult = data.result === 'correct' ? true : false;
             });
         }
     ])
@@ -54,6 +51,9 @@ angular.module('mathSkills.services')
                  */
                 getPrevious: function () {
                     return privateData.previous;
+                },
+                getPreviousResult: function () {
+                    return privateData.previousResult;
                 }
             };
 
