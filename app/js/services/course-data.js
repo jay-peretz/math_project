@@ -3436,7 +3436,7 @@ angular.module('mathSkills.services')
                                     title: 'Workbook',
                                     children: [{
                                         problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{3}}{\\fracstr{6}}}{\\str{\xA0 to its lowest terms }}',
-                                        answer: '\\reducefrac{3}{6}',
+                                        answer: '\\reducefrac{\\frac{\\fracstr{3}}{\\fracstr{6}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -3460,7 +3460,7 @@ angular.module('mathSkills.services')
                                     title: 'Workbook',
                                     children: [{
                                         problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{9}}{\\fracstr{15}}}{\\str{\xA0 to its lowest terms }}',
-                                        answer: '\\reducefrac{9}{15}',
+                                        answer: '\\reducefrac{\\frac{\\fracstr{9}}{\\fracstr{15}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -3484,7 +3484,7 @@ angular.module('mathSkills.services')
                                     title: 'Workbook',
                                     children: [{
                                         problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{24}}{\\fracstr{28}}}{\\str{\xA0 to its lowest terms }}',
-                                        answer: '\\reducefrac{24}{28}',
+                                        answer: '\\reducefrac{\\frac{\\fracstr{24}}{\\fracstr{28}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -3508,7 +3508,7 @@ angular.module('mathSkills.services')
                                     title: 'Workbook',
                                     children: [{
                                         problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{8}}{\\fracstr{12}}}{\\str{\xA0 to its lowest terms }}',
-                                        answer: '\\reducefrac{8}{12}',
+                                        answer: '\\reducefrac{\\frac{\\fracstr{8}}{\\fracstr{12}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -3532,7 +3532,7 @@ angular.module('mathSkills.services')
                                     title: 'Workbook',
                                     children: [{
                                         problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{4}}{\\fracstr{13}}}{\\str{\xA0 to its lowest terms }}',
-                                        answer: '\\reducefrac{4}{13}',
+                                        answer: '\\reducefrac{\\frac{\\fracstr{4}}{\\fracstr{13}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -3556,7 +3556,7 @@ angular.module('mathSkills.services')
                                     title: 'Workbook',
                                     children: [{
                                         problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{7}}{\\fracstr{14}}}{\\str{\xA0 to its lowest terms }}',
-                                        answer: '\\reducefrac{7}{14}',
+                                        answer: '\\reducefrac{\\frac{\\fracstr{7}}{\\fracstr{14}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": true
@@ -3580,7 +3580,7 @@ angular.module('mathSkills.services')
                                     title: 'Workbook',
                                     children: [{
                                         problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{10}}{\\fracstr{12}}}{\\str{\xA0 to its lowest terms }}',
-                                        answer: '\\reducefrac{10}{12}',
+                                        answer: '\\reducefrac{\\frac{\\fracstr{10}}{\\fracstr{12}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": true
@@ -3604,7 +3604,7 @@ angular.module('mathSkills.services')
                                     title: 'Workbook',
                                     children: [{
                                         problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{21}}{\\fracstr{35}}}{\\str{\xA0 to its lowest terms }}',
-                                        answer: '\\reducefrac{21}{35}',
+                                        answer: '\\reducefrac{\\frac{\\fracstr{21}}{\\fracstr{35}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -3628,7 +3628,7 @@ angular.module('mathSkills.services')
                                     title: 'Workbook',
                                     children: [{
                                         problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{6}}{\\fracstr{8}}}{\\str{\xA0 to its lowest terms }}',
-                                        answer: '\\reducefrac{6}{8}',
+                                        answer: '\\reducefrac{\\frac{\\fracstr{6}}{\\fracstr{8}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -3652,7 +3652,7 @@ angular.module('mathSkills.services')
                                     title: 'Workbook',
                                     children: [{
                                         problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{12}}{\\fracstr{48}}}{\\str{\xA0 to its lowest terms }}',
-                                        answer: '\\reducefrac{12}{48}',
+                                        answer: '\\reducefrac{\\frac{\\fracstr{12}}{\\fracstr{48}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
