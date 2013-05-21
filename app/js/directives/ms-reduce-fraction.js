@@ -70,7 +70,9 @@ angular.module('mathSkills')
 
                 $scope.$watch('expected', function() {
                     if ($scope.expected) {
-                        $scope.args = parser.extractTag($scope.expected).args;
+                        $scope.args = parser.extractTag(parser.extractTag($scope.expected).args[0]).args.map(function (tag) {
+                            return parser.extractTag(tag).args[0];
+                        });
                         $scope.instructions = "\\row{\\str{Can \xA0}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
                         $scope.answerexp = simplified($scope.args[0], $scope.args[1]) ? no : yes;
                         $scope.answerlbl = "simplified";
