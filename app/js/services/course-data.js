@@ -4267,7 +4267,7 @@ angular.module('mathSkills.services')
                                 path: '8.2-change-improper-fractions-into-mixed-numbers',
                                 children: [
                                     {
-        								title: 'Change Improper Fractions into Mixed Numbers',
+        								title: 'Change Mixed Numbers into Improper Fractions',
 										children: [{
 											title: 'Main Answer',
 											children: [{
