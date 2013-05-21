@@ -3669,11 +3669,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\butgrp{\\row{\\str{80 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 91}}',
-												answer: '',
+												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{1}}{\\str{4}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
+												answer: '\\input{\\str{4}}',
 												controls: {
-													"checkAnswer": false,
-													"help": '\\str{80 is LESS THAN 91}'
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{1}}{\\str{4}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{4}}{\\str{1}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\str{ 4}}{label_like}}}}'
 												}
 											}]
 										}]
@@ -3683,11 +3683,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{25}{33}{20}{35}}}',
-												answer: '',
+												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{2}}{\\str{3}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
+												answer: '\\mixed{\\input{1}}{\\frac{\\input{1}}{\\input{2}}}',
 												controls: {
-													"checkAnswer": false,
-													"help": '\\str{X or 25 is LESS THAN Y or 33}'
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{2}}{\\str{3}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{3}}{\\str{2}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{label_like}}}'
 												}
 											}]
 										}]
@@ -3697,11 +3697,25 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{25}{33}{20}{35}}}',
-												answer: '',
+												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{9}}{\\str{10}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
+												answer: '\\mixed{\\input{1}}{\\frac{\\input{1}}{\\input{9}}}',
 												controls: {
-													"checkAnswer": false,
-													"help": '\\str{X or 25 is LESS THAN Y or 33}'
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{9}}{\\str{10}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{10}}{\\str{9}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{9}}}}{label_like}}}'										
+													}
+											}]
+										}]
+									},
+									{
+										title: 'Find the Reciprocal of a Fraction',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{13}}{\\str{30}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
+												answer: '\\mixed{\\input{2}}{\\frac{\\input{4}}{\\input{13}}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{13}}{\\str{30}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{30}}{\\str{13}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\str{2}}{\\frac{\\fracstr{4}}{\\fracstr{13}}}}{label_like}}}'
 												}
 											}]
 										}]
@@ -3711,11 +3725,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\butgrp{\\row{\\str{85 \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 80}}',
-												answer: '',
+												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{1}}{\\str{2}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
+												answer: '\\input{\\str{2}}',
 												controls: {
-													"checkAnswer": false,
-													"help": '\\str{85 is GREATER THAN 80}'
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{1}}{\\str{2}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{2}}{\\str{1}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\str{ 2}}{label_like}}}}'
 												}
 											}]
 										}]
@@ -3725,12 +3739,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\butgrp{\\row{\\str{53 \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 50}}',
-												answer: '',
-
+												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{9}}{\\str{10}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
+												answer: '\\mixed{\\input{1}}{\\frac{\\input{1}}{\\input{9}}}',
 												controls: {
-													"checkAnswer": false,
-													"help": '\\str{53 is GREATER THAN 50}'
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{9}}{\\str{10}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{10}}{\\str{9}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{9}}}}{label_like}}}'		
 												}
 											}]
 										}]
@@ -3740,11 +3753,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{56}{48}{45}{60}}}',
-												answer: '',
-                                                controls: {
-													"checkAnswer": false,
-													"help": '\\str{X or 56 is GREATER THAN Y or 48}'
+												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{6}}{\\str{4}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
+												answer: '\\frac{\\input{2}}{\\input{3}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{6}}{\\str{4}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{4}}{\\str{6}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\frac{\\fracstr{2}}{\\fracstr{3}}}{label_like}}}'
 												}
 											}]
 										}]
@@ -3754,11 +3767,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\butgrp{\\row{\\str{54 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 60}}',
-												answer: '',
+												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{3}}{\\str{4}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
+												answer: '\\mixed{\\input{1}}{\\frac{\\input{1}}{\\input{3}}}',
 												controls: {
-													"checkAnswer": false,
-													"help": '\\str{54 is LESS THAN 60}'
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{3}}{\\str{4}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{4}}{\\str{3}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{label_like}}}'
 												}
 											}]
 										}]
@@ -3768,11 +3781,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\butgrp{\\row{\\str{86 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 93}}',
-												answer: '',
+												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\mixed{\\str{1}}{\\frac{\\fracstr{4}}{\\fracstr{6}}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
+												answer: '\\frac{\\input{3}}{\\input{5}}',
 												controls: {
-													"checkAnswer": false,
-													"help": '\\str{86 is LESS THAN 93}'
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\mixed{\\str{1}}{\\frac{\\fracstr{4}}{\\fracstr{6}}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{6}}{\\str{10}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\frac{\\fracstr{3}}{\\fracstr{5}}}{label_like}}}'	
 												}
 											}]
 										}]
@@ -3782,25 +3795,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{86}{77}{72}{88}}}',
-												answer: '',
+												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\mixed{\\str{1}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
+												answer: '\\frac{\\input{6}}{\\input{11}}',
 												controls: {
-													"checkAnswer": false,
-													"help": '\\str{86 is MORE THAN 77}'
-												}
-											}]
-										}]
-									},
-									{
-										title: 'Find the Reciprocal of a Fraction',
-										children: [{
-											title: 'Main Answer',
-											children: [{
-												problem: '\\butgrp{\\row{\\str{47 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 57}}',
-												answer: '',
-												controls: {
-													"checkAnswer": false,
-													"help": '\\str{47 is LESS THAN 57}'
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\mixed{\\str{1}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{6}}{\\str{11}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\frac{\\fracstr{6}}{\\fracstr{11}}}{label_like}}}'	
 												}
 											}]
 										}]
