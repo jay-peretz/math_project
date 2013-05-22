@@ -3,7 +3,8 @@
 
 angular.module('mathSkills')
     .filter('percent-conversion', [
-        function () {
+		'parser',
+        function (parser) {
             return function (parametersArray) {
 					var decimalNotPercent = (1),
 						decimalAsPercent = (100),
@@ -69,7 +70,7 @@ angular.module('mathSkills')
 						}
 					}
 					
-					var decimalAsPercentFunc = function(decimalNumber) {
+					var decimalAsPercentFunc = function(parametersArray) {
 						
 						decimalNotPercent = (parseFloat((decimalNumber/100).toFixed(5)));
 						percentAsFraction = ({numerator: parseInt(decimalNotPercent.toString().replace(/,/g, '').replace('.', ''), 10), denominator: Math.pow(10, decimalDigits(decimalNotPercent))});
@@ -107,19 +108,38 @@ angular.module('mathSkills')
 						}
 					}
 					
-					var percentAsFractionFunc = function(fraction) {
+					var percentAsFractionFunc = function(parametersArray) {
+						var whole = 0, 
+							tagsNumerator = 1, 
+							tagsDenominator = 1,
+							interiorTags;
+							
+							interiorTags = parser.extractTag(parametersArray[0]).args;
 						
-						if (((fraction.getNumerator()/fraction.getDenominator()))==((fraction.getNumerator()/fraction.getDenominator()).toFixed(5))) {
-							decimalNotPercent = ((fraction.getNumerator()/fraction.getDenominator()));
-						} else {
-							decimalNotPercent = ((fraction.getNumerator()/fraction.getDenominator()).toFixed(5));
+						
+						if (interiorTags[1].substr(1, 3) == "str") {							
+							tagsNumerator = interiorTags[0].substring(interiorTags[0].indexOf('{')+1,interiorTags[0].indexOf("}"));
+							tagsDenominator = interiorTags[1].substring(interiorTags[1].indexOf('{')+1,interiorTags[1].indexOf("}"));
+							console.log("see comments line 126 percent-conversion- tagsNumerator is: "+tagsNumerator+" tagsDenominator is: "+tagsDenominator);
+							
 						}
-						percentAsFraction = angular.copy(fraction);
+						// need "else" case for "mixed"- maybe return expressions in language due to fraction to decimal conversion in help?
+						
+						if (((tagsNumerator/tagsDenominator))==((tagsNumerator/tagsDenominator).toFixed(5))) {
+							decimalNotPercent = ((tagsNumerator/tagsDenominator));
+						} else {
+							decimalNotPercent = ((tagsNumerator/tagsDenominator).toFixed(5));
+						}
+
+						percentAsFraction = {numerator: tagsNumerator, denominator: tagsDenominator};
 						decimalAsPercent = ([decimalNotPercent * (100)]);
-						fractionPercentAsFraction = fractionMultiply([fraction, ({numerator: 1, denominator: 100})]);
+						fractionPercentAsFraction = fractionMultiply([({numerator: tagsNumerator, denominator: tagsDenominator}), ({numerator: 1, denominator: 100})]);
 						decimalAsFractionPercent = fractionMultiply([percentAsFraction, ({numerator: 100, denominator: 1})]);
 						fractionPercentAsDecimal = ([decimalNotPercent * (.01)]);
 						switch (true) {
+							case (parametersArray[2] === "decimalNotPercent"):	
+								return decimalNotPercent;
+								break;
 							case (parametersArray[2] === "percentAsFraction"):	
 								return percentAsFraction;
 								break;
@@ -149,7 +169,7 @@ angular.module('mathSkills')
 						}
 					}
 					
-					var fractionPercentAsFractionFunc = function(fraction) {
+					var fractionPercentAsFractionFunc = function(parametersArray) {
 						
 						fractionPercentAsFraction = angular.copy(fraction);
 						percentAsFraction = fractionMultiply([fractionPercentAsFraction, ({numerator: 100, denominator: 1})]);
@@ -187,7 +207,7 @@ angular.module('mathSkills')
 						}
 					}
 					
-					var decimalAsFractionPercentFunc = function(fraction) {
+					var decimalAsFractionPercentFunc = function(parametersArray) {
 
 						decimalAsFractionPercent = angular.copy(fraction);  
 						decimalNotPercent = (parseFloat((decimalAsFractionPercent.getNumerator()/decimalAsFractionPercent.getDenominator()).toFixed(5))); // 
@@ -225,7 +245,7 @@ angular.module('mathSkills')
 						}
 					}
 					
-					var fractionPercentAsDecimalFunc = function(decimalNumber) {
+					var fractionPercentAsDecimalFunc = function(parametersArray) {
 
 						fractionPercentAsDecimal = decimalNumber;
 						decimalNotPercent = ([fractionPercentAsDecimal * (100)]);
@@ -268,19 +288,19 @@ angular.module('mathSkills')
 							return (decimalNotPercentFunc(parametersArray));
 						break;
 						case (parametersArray[1] === "decimalAsPercent"):
-							return decimalAsPercentFunc();
+							return decimalAsPercentFunc(parametersArray);
 						break;
 						case (parametersArray[1] === "percentAsFraction"):
-							return percentAsFractionFunc();
+							return percentAsFractionFunc(parametersArray);
 						break;
 						case (parametersArray[1] === "fractionPercentAsFraction"):
-							return fractionPercentAsFractionFunc();
+							return fractionPercentAsFractionFunc(parametersArray);
 						break;
 						case (parametersArray[1] === "decimalAsFractionPercent"):
-							return decimalAsFractionPercentFunc();
+							return decimalAsFractionPercentFunc(parametersArray);
 						break;
 						case (parametersArray[1] === "fractionPercentAsDecimal"):
-							return fractionPercentAsDecimalFunc();
+							return fractionPercentAsDecimalFunc(parametersArray);
 						break;
 						
 						default:

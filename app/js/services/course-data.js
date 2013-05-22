@@ -6113,7 +6113,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{1}}{\\input{2}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\str{0.5}}{decimalNotPercent}{percentAsFraction}}{label_like}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{\\percentsdecimalfrac{\\str{0.5}}{decimalNotPercent}{percentAsFraction}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{1}}{\\fracstr{2}}}{help-answer-text-tight}}'
 													} 
 												}]
 											}]
@@ -6127,7 +6127,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{3}}{\\input{4}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\str{0.75}}{decimalNotPercent}{percentAsFraction}}{label_like}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{\\percentsdecimalfrac{\\str{0.75}}{decimalNotPercent}{percentAsFraction}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{3}}{\\fracstr{4}}}{help-answer-text-tight}}'
 													} 
 												}]
 											}]
@@ -6141,7 +6141,7 @@ angular.module('mathSkills.services')
 													answer: '\\input{0.875}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Divide the numerator by the denominator.}}}{\\row{\\percentsdecimalfrac{\\frac{\\str{7}}{\\str{8}}}{percentAsFraction}{decimalNotPercent}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction"}}}{\\row{\\percentsdecimalfrac{\\frac{\\str{7}}{\\str{8}}}{percentAsFraction}{decimalNotPercent}}}'
 													} 
 												}]
 											}]
