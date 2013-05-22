@@ -3427,7 +3427,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{4}}{\\str{6}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{8}}{\\str{12}}}',
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{4}}{\\str{6}}}{\\sign{=}}{\\frac{\\str{8}}{\\str{12}}}',
                                             answer: '\\butgrp{\\row{\\but{True}{T}}{\\but{False}{F}}}',
                                             controls: {
                                                 "checkAnswer": false,
@@ -3441,7 +3441,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{14}}{\\str{16}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{20}}{\\str{35}}}',
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{14}}{\\str{16}}}{\\sign{=}}{\\frac{\\str{20}}{\\str{35}}}',
                                             answer: '\\butgrp{\\row{\\but{True}{F}}{\\but{False}{T}}}',
                                             controls: {
                                                 "checkAnswer": false,
@@ -3455,7 +3455,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{14}}{\\str{16}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{16}}{\\str{36}}}',
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{14}}{\\str{16}}}{\\sign{=}}{\\frac{\\str{16}}{\\str{36}}}',
                                             answer: '\\butgrp{\\row{\\but{True}{F}}{\\but{False}{T}}}',
                                             controls: {
                                                 "checkAnswer": false,
@@ -3469,7 +3469,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{6}}{\\str{9}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{10}}{\\str{15}}}',
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{6}}{\\str{9}}}{\\sign{=}}{\\frac{\\str{10}}{\\str{15}}}',
                                             answer: '\\butgrp{\\row{\\but{True}{T}}{\\but{False}{F}}}',
                                             controls: {
                                                 "checkAnswer": false,
@@ -3483,7 +3483,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{15}}{\\str{18}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{8}}{\\str{20}}}',
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{15}}{\\str{18}}}{\\sign{=}}{\\frac{\\str{8}}{\\str{20}}}',
                                             answer: '\\butgrp{\\row{\\but{True}{F}}{\\but{False}{T}}}',
                                             controls: {
                                                 "checkAnswer": false,
@@ -3497,7 +3497,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{3}}{\\str{6}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{15}}{\\str{X}}}',
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{3}}{\\str{6}}}{\\sign{=}}{\\frac{\\str{15}}{\\str{X}}}',
                                             answer: '\\row{\\str{X \xA0= \xA0}}{\\input{30}}',
                                             controls: {
                                                 "checkAnswer": true,
@@ -3511,7 +3511,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{76}}{\\str{X}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{19}}{\\str{21}}}',
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{76}}{\\str{X}}}{\\sign{=}}{\\frac{\\str{19}}{\\str{21}}}',
                                             answer: '\\row{\\str{X \xA0= \xA0}}{\\input{84}}',
                                             controls: {
                                                 "checkAnswer": true,
@@ -3525,7 +3525,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{27}}{\\str{26}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{X}}{\\str{104}}}',
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{27}}{\\str{26}}}{\\sign{=}}{\\frac{\\str{X}}{\\str{104}}}',
                                             answer: '\\row{\\str{X \xA0= \xA0}}{\\input{108}}',
                                             controls: {
                                                 "checkAnswer": true,
@@ -3539,7 +3539,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{25}}{\\str{45}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{75}}{\\str{X}}}',
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{25}}{\\str{45}}}{\\sign{=}}{\\frac{\\str{75}}{\\str{X}}}',
                                             answer: '\\row{\\str{X \xA0= \xA0}}{\\input{135}}',
                                             controls: {
                                                 "checkAnswer": true,
@@ -3553,7 +3553,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{19}}{\\str{38}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{X}}{\\str{152}}}',
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{19}}{\\str{38}}}{\\sign{=}}{\\frac{\\str{X}}{\\str{152}}}',
                                             answer: '\\row{\\str{X \xA0= \xA0}}{\\input{76}}',
                                             controls: {
                                                 "checkAnswer": true,
@@ -3815,7 +3815,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{1}}{\\str{2}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{2}}{\\str{3}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{1}}{\\str{2}}}{\\sign{&times;}}{\\frac{\\str{2}}{\\str{3}}}',
                                         answer: '\\frac{\\input{1}}{\\input{3}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -3846,7 +3846,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{1}}{\\str{4}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{2}}{\\str{6}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{1}}{\\str{4}}}{\\sign{&times;}}{\\frac{\\str{2}}{\\str{6}}}',
                                         answer: '\\frac{\\input{1}}{\\input{12}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -3877,7 +3877,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{6}}{\\str{8}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{10}}{\\str{9}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{6}}{\\str{8}}}{\\sign{&times;}}{\\frac{\\str{10}}{\\str{9}}}',
                                         answer: '\\frac{\\input{5}}{\\input{6}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -3908,7 +3908,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{3}}{\\str{6}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{6}}{\\str{2}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{3}}{\\str{6}}}{\\sign{&times;}}{\\frac{\\str{6}}{\\str{2}}}',
                                         answer: '\\frac{\\input{3}}{\\input{2}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -3939,7 +3939,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{42}}{\\str{8}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{12}}{\\str{14}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{42}}{\\str{8}}}{\\sign{&times;}}{\\frac{\\str{12}}{\\str{14}}}',
                                         answer: '\\frac{\\input{9}}{\\input{2}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -3970,7 +3970,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{15}}{\\str{6}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{20}}{\\str{35}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{15}}{\\str{6}}}{\\sign{&times;}}{\\frac{\\str{20}}{\\str{35}}}',
                                         answer: '\\frac{\\input{10}}{\\input{7}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4001,7 +4001,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{63}}{\\str{72}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{64}}{\\str{99}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{63}}{\\str{72}}}{\\sign{&times;}}{\\frac{\\str{64}}{\\str{99}}}',
                                         answer: '\\frac{\\input{56}}{\\input{99}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4032,7 +4032,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{3}}{\\str{5}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{10}}{\\str{18}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{15}}{\\str{20}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{3}}{\\str{5}}}{\\sign{&times;}}{\\frac{\\str{10}}{\\str{18}}}{\\sign{&times;}}{\\frac{\\str{15}}{\\str{20}}}',
                                         answer: '\\frac{\\input{1}}{\\input{4}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4063,7 +4063,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{12}}{\\str{24}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{36}}{\\str{6}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{18}}{\\str{32}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{12}}{\\str{24}}}{\\sign{&times;}}{\\frac{\\str{36}}{\\str{6}}}{\\sign{&times;}}{\\frac{\\str{18}}{\\str{32}}}',
                                         answer: '\\frac{\\input{27}}{\\input{16}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4094,7 +4094,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{65}}{\\str{77}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{55}}{\\str{104}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{84}}{\\str{132}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{65}}{\\str{77}}}{\\sign{&times;}}{\\frac{\\str{55}}{\\str{104}}}{\\sign{&times;}}{\\frac{\\str{84}}{\\str{132}}}',
                                         answer: '\\frac{\\input{25}}{\\input{88}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4561,7 +4561,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{1}}{\\str{2}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{2}}{\\str{3}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{1}}{\\str{2}}}{\\sign{&times;}}{\\frac{\\str{2}}{\\str{3}}}',
                                         answer: '\\frac{\\input{1}}{\\input{3}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4592,7 +4592,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{1}}{\\str{4}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{2}}{\\str{6}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{1}}{\\str{4}}}{\\sign{&times;}}{\\frac{\\str{2}}{\\str{6}}}',
                                         answer: '\\frac{\\input{1}}{\\input{12}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4623,7 +4623,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{6}}{\\str{8}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{10}}{\\str{9}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{6}}{\\str{8}}}{\\sign{&times;}}{\\frac{\\str{10}}{\\str{9}}}',
                                         answer: '\\frac{\\input{5}}{\\input{6}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4654,7 +4654,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{3}}{\\str{6}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{6}}{\\str{2}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{3}}{\\str{6}}}{\\sign{&times;}}{\\frac{\\str{6}}{\\str{2}}}',
                                         answer: '\\frac{\\input{3}}{\\input{2}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4685,7 +4685,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{42}}{\\str{8}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{12}}{\\str{14}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{42}}{\\str{8}}}{\\sign{&times;}}{\\frac{\\str{12}}{\\str{14}}}',
                                         answer: '\\frac{\\input{9}}{\\input{2}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4716,7 +4716,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{15}}{\\str{6}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{20}}{\\str{35}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{15}}{\\str{6}}}{\\sign{&times;}}{\\frac{\\str{20}}{\\str{35}}}',
                                         answer: '\\frac{\\input{10}}{\\input{7}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4747,7 +4747,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{63}}{\\str{72}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{64}}{\\str{99}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{63}}{\\str{72}}}{\\sign{&times;}}{\\frac{\\str{64}}{\\str{99}}}',
                                         answer: '\\frac{\\input{56}}{\\input{99}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4778,7 +4778,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{3}}{\\str{5}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{10}}{\\str{18}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{15}}{\\str{20}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{3}}{\\str{5}}}{\\sign{&times;}}{\\frac{\\str{10}}{\\str{18}}}{\\sign{&times;}}{\\frac{\\str{15}}{\\str{20}}}',
                                         answer: '\\frac{\\input{1}}{\\input{4}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4809,7 +4809,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{12}}{\\str{24}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{36}}{\\str{6}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{18}}{\\str{32}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{12}}{\\str{24}}}{\\sign{&times;}}{\\frac{\\str{36}}{\\str{6}}}{\\sign{&times;}}{\\frac{\\str{18}}{\\str{32}}}',
                                         answer: '\\frac{\\input{27}}{\\input{16}}',
                                         controls: {
                                             "checkAnswer": true,
@@ -4840,7 +4840,7 @@ angular.module('mathSkills.services')
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{65}}{\\str{77}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{55}}{\\str{104}}}{\\sign{&nbsp; &times; &nbsp;}}{\\frac{\\str{84}}{\\str{132}}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{65}}{\\str{77}}}{\\sign{&times;}}{\\frac{\\str{55}}{\\str{104}}}{\\sign{&times;}}{\\frac{\\str{84}}{\\str{132}}}',
                                         answer: '\\frac{\\input{25}}{\\input{88}}',
                                         controls: {
                                             "checkAnswer": true,
