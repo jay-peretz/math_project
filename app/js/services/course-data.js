@@ -6085,7 +6085,7 @@ angular.module('mathSkills.services')
 													answer: '\\frac{\\input{1}}{\\input{8}}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\str{0.125}}{decimalNotPercent}{percentAsFraction}}{label_like}}}'
+														"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{\\percentsdecimalfrac{\\str{0.125}}{decimalNotPercent}{percentAsFraction}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{1}}{\\fracstr{8}}}{help-answer-text-tight}}'
 													} 
 												}]
 											}]

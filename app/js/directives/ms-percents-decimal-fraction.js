@@ -44,7 +44,6 @@ angular.module('mathSkills')
                     }
 				
 			 // Extract the tag values- tagParameters[0] will be transformed from tagParameters[1] form to tagParameters[2] form
-			 // if tagParameters[3] === "help" style the expression with "label_like" to color it blue
 				$scope.$watch('expected', function () { 
 					if ($scope.expected) {
 						tagParameters = parser.extractTag($scope.expected).args;
