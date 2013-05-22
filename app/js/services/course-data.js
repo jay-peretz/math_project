@@ -3416,7 +3416,154 @@ angular.module('mathSkills.services')
                                     }]
                                 }]
                             }]
-                        }, {
+                        },
+//6.3 Equivalent Fractions                        
+                        {
+                            title: '6.3 Equivalent Fractions',
+                            path: '6.3-equivalent-fractions  ',
+                            children: [
+                                {//----1
+                                    title: 'Equivalent Fractions',
+                                    children: [{
+                                        title: 'Main Answer',
+                                        children: [{
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{4}}{\\str{6}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{8}}{\\str{12}}}',
+                                            answer: '\\butgrp{\\row{\\but{True}{T}}{\\but{False}{F}}}',
+                                            controls: {
+                                                "checkAnswer": false,
+                                                "help": '\\css{\\rowgrp{\\html{4 · 12\xA0 = \xA08 · 6<br><br>}}{\\html{\xA0 48\xA0 = \xA048}}}{equivalent-fractions}'
+                                            }
+                                        }]
+                                    }]
+                                },
+                                {//----2
+                                    title: 'Equivalent Fractions',
+                                    children: [{
+                                        title: 'Main Answer',
+                                        children: [{
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{14}}{\\str{16}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{20}}{\\str{35}}}',
+                                            answer: '\\butgrp{\\row{\\but{True}{F}}{\\but{False}{T}}}',
+                                            controls: {
+                                                "checkAnswer": false,
+                                                "help": '\\css{\\rowgrp{\\html{14 · 35\xA0 \u2260 \xA020 · 16<br><br>}}{\\html{490\xA0 \u2260 \xA0320}}}{equivalent-fractions}'
+                                            }
+                                        }]
+                                    }]
+                                },
+                                {//----3
+                                    title: 'Equivalent Fractions',
+                                    children: [{
+                                        title: 'Main Answer',
+                                        children: [{
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{14}}{\\str{16}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{16}}{\\str{36}}}',
+                                            answer: '\\butgrp{\\row{\\but{True}{F}}{\\but{False}{T}}}',
+                                            controls: {
+                                                "checkAnswer": false,
+                                                "help": '\\css{\\rowgrp{\\html{14 · 36\xA0 \u2260 \xA016 · 16<br><br>}}{\\html{504\xA0 \u2260 \xA0256}}}{equivalent-fractions}'
+                                            }
+                                        }]
+                                    }]
+                                },
+                                {//----4
+                                    title: 'Equivalent Fractions',
+                                    children: [{
+                                        title: 'Main Answer',
+                                        children: [{
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{6}}{\\str{9}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{10}}{\\str{15}}}',
+                                            answer: '\\butgrp{\\row{\\but{True}{T}}{\\but{False}{F}}}',
+                                            controls: {
+                                                "checkAnswer": false,
+                                                "help": '\\css{\\rowgrp{\\html{6 · 15\xA0 = \xA010 · 9<br><br>}}{\\html{90\xA0 = \xA090}}}{equivalent-fractions}'
+                                            }
+                                        }]
+                                    }]
+                                },
+                                {//----5
+                                    title: 'Equivalent Fractions',
+                                    children: [{
+                                        title: 'Main Answer',
+                                        children: [{
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{15}}{\\str{18}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{8}}{\\str{20}}}',
+                                            answer: '\\butgrp{\\row{\\but{True}{F}}{\\but{False}{T}}}',
+                                            controls: {
+                                                "checkAnswer": false,
+                                                "help": '\\css{\\rowgrp{\\html{15 · 20\xA0 \u2260 \xA08 · 18<br><br>}}{\\html{300\xA0 \u2260 \xA0144}}}{equivalent-fractions}'
+                                            }
+                                        }]
+                                    }]
+                                },
+                                {//----6
+                                    title: 'Equivalent Fractions',
+                                    children: [{
+                                        title: 'Main Answer',
+                                        children: [{
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{3}}{\\str{6}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{15}}{\\str{X}}}',
+                                            answer: '\\row{\\str{X \xA0= \xA0}}{\\input{30}}',
+                                            controls: {
+                                                "checkAnswer": true,
+                                                "help": '\\css{\\rowgrp{\\html{3 · X\xA0 = \xA06 · 15<br><br>}}{\\html{X\xA0 = \xA0(6 · 15)\xA0 \xF7 \xA03<br><br>}}{\\html{X\xA0 = \xA030}}}{equivalent-fractions}'
+                                            }
+                                        }]
+                                    }]
+                                },
+                                {//----7
+                                    title: 'Equivalent Fractions',
+                                    children: [{
+                                        title: 'Main Answer',
+                                        children: [{
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{76}}{\\str{X}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{19}}{\\str{21}}}',
+                                            answer: '\\row{\\str{X \xA0= \xA0}}{\\input{84}}',
+                                            controls: {
+                                                "checkAnswer": true,
+                                                "help": '\\css{\\rowgrp{\\html{76 · 21\xA0 = \xA0X · 19<br><br>}}{\\html{(76 · 21)\xA0 \xF7 \xA019 = X<br><br>}}{\\html{84\xA0 = \xA0X}}}{equivalent-fractions}'
+                                            }
+                                        }]
+                                    }]
+                                },
+                                {//----8
+                                    title: 'Equivalent Fractions',
+                                    children: [{
+                                        title: 'Main Answer',
+                                        children: [{
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{27}}{\\str{26}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{X}}{\\str{104}}}',
+                                            answer: '\\row{\\str{X \xA0= \xA0}}{\\input{108}}',
+                                            controls: {
+                                                "checkAnswer": true,
+                                                "help": '\\css{\\rowgrp{\\html{27 · 104\xA0 = \xA026 · X<br><br>}}{\\html{(27 · 104)\xA0 \xF7 \xA026 =\xA0X<br><br>}}{\\html{108\xA0 = \xA0X}}}{equivalent-fractions}'
+                                            }
+                                        }]
+                                    }]
+                                },
+                                {//----9
+                                    title: 'Equivalent Fractions',
+                                    children: [{
+                                        title: 'Main Answer',
+                                        children: [{
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{25}}{\\str{45}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{75}}{\\str{X}}}',
+                                            answer: '\\row{\\str{X \xA0= \xA0}}{\\input{135}}',
+                                            controls: {
+                                                "checkAnswer": true,
+                                                "help": '\\css{\\rowgrp{\\html{25 · X\xA0 = \xA045 · 75<br><br>}}{\\html{X\xA0 = \xA0(45 · 75)\xA0 \xF7 \xA025<br><br>}}{\\html{X\xA0 = \xA0135}}}{equivalent-fractions}'
+                                            }
+                                        }]
+                                    }]
+                                },
+                                {//----10
+                                    title: 'Equivalent Fractions',
+                                    children: [{
+                                        title: 'Main Answer',
+                                        children: [{
+                                            problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{19}}{\\str{38}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{X}}{\\str{152}}}',
+                                            answer: '\\row{\\str{X \xA0= \xA0}}{\\input{76}}',
+                                            controls: {
+                                                "checkAnswer": true,
+                                                "help": '\\css{\\rowgrp{\\html{19 · 152\xA0 = \xA038 · X<br><br>}}{\\html{(19 · 152)\xA0 \xF7 \xA038\xA0 = \xA0X<br><br>}}{\\html{76\xA0 = \xA0X}}}{equivalent-fractions}'
+                                            }
+                                        }]
+                                    }]
+                                },
+							]
+						},{
                             title: '6.4 Reduce Fractions',
                             path: '6.4-reduce-fractions',
                             children: [{
