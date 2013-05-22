@@ -1229,7 +1229,7 @@ angular.module('mathSkills.services')
                                                 answer: '\\row{\\str{$}}{\\input{2}}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{Nathan spends $2 more than Anne on gas}'
                                                 }
                                             }]
                                         }]
@@ -1239,11 +1239,11 @@ angular.module('mathSkills.services')
                                         children: [{
                                             title: 'Main Answer',
                                             children: [{
-                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\html{<br><br>}}{\\row{\\str{Question 2:    How much more money does Nathan spend on the total utility bill (the cost of both gas and electricity) than Anne?}}}{\\row{\xA0}}}',
-                                                answer: '\\rowgrp{\\row{\\str{$}}{\\input{17}}}{\\row{\xA0}}{\\row{\\chart{Utility Bill for Gas and Electricity}{5}{5}{["Student","Therms of Gas Used","Cost of Gas","Kilowatt Hours of Electricity Used","Cost of Electricity","Anne","18","$26","188","$41","Travis","10","$14","183","$40","Nathan","20","$28","261","$56","Sondra","12","$17","251","$54"]}}}',
+                                                problem: '\\butgrp{\\rowgrp{\\row{\\str{Answer the following questions by using the chart to the right.}}}{\\row{\xA0}}{\\html{<br><br>}}{\\row{\\str{Question 2:    How much more money does Nathan spend on the total utility bill (the cost of both gas and electricity) than Anne?}}}{\\row{\xA0}}{\\row{\\chart{Utility Bill for Gas and Electricity}{5}{5}{["Student","Therms of Gas Used","Cost of Gas","Kilowatt Hours of Electricity Used","Cost of Electricity","Anne","18","$26","188","$41","Travis","10","$14","183","$40","Nathan","20","$28","261","$56","Sondra","12","$17","251","$54"]}}}',
+                                                answer: '\\rowgrp{\\row{\\str{$}}{\\input{17}}}{\\row{\xA0}}}',
                                                 controls: {
                                                     "checkAnswer": true,
-                                                    "help": true
+                                                    "help": '\\str{Nathan spends a total of $84, $17 more than Anne.}'
                                                 }
                                             }]
                                         }]
