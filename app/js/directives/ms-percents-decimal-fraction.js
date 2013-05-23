@@ -54,7 +54,6 @@ angular.module('mathSkills')
 					
 					// make the transformation into a fraction form (in our language)
 					if (tagParameters[2] == "percentAsFraction" || tagParameters[2] == "fractionPercentAsFraction" || tagParameters[2] == "decimalAsFractionPercent" ) {
-						console.log("in fraction section, filterResult is: "+filterResult);
 						switch (true) {
 							case (filterResult.numerator > filterResult.denominator):
 								wholePart = Math.floor(filterResult.numerator / filterResult.denominator);
