@@ -8,23 +8,33 @@ angular.module('mathSkills')
         });
     }])
   .directive('msRowGroup', [
-    'parser',
-    function (parser) {
-        return {
-            restrict: 'E',
-            scope: {
-                expected: '@',
-                label: '@'
-            },
-            controller: function ($scope) {
+        function () {
+            return {
+                controller: [
+                    'directiveUtils',
+                    'parser',
+                    '$scope',
+                    function (directiveUtils, parser, $scope) {
+                        $scope.tag = 'grp';
+                        $scope.$watch('expected', function () {
+                            if ($scope.expected) {
+                                $scope.childElements = parser.extractTag($scope.expected).args;
+                                $scope.children = $scope.childElements.map(function (val, ii) {
+                                    return ii.toString();
+                                });
+                            }
+                        });
 
-               // Extract the args array.
-                $scope.$watch('expected', function () {
-                    if ($scope.expected){
-                        $scope.rows = parser.extractTag($scope.expected).args;
+                        directiveUtils.aggregateChildAnswers($scope);
+                        directiveUtils.routeFocus($scope);
+                        directiveUtils.routeHelp($scope);
                     }
-                });
-            },
-            template: '<table><tr ng-repeat="row in rows"><td><ms-expression expected={{row}}></td></tr></table>'
+                ],
+                scope: {
+                    expected: '@',
+                    label: '@'
+                },
+                restrict: 'E',
+            template: '<table><tr ng-repeat="child in childElements"><td><ms-expression expected={{child}}></td></tr></table>'
         };
     }]);
