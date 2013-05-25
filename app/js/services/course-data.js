@@ -6133,8 +6133,8 @@ title: 'Main Answer',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\rowgrp{\\row{\\str{Start with the fraction \xA0}}{\\frac{\\str{3}}{\\str{5}}}}{\\row{\\str{ and build an equivalent fraction that has a denominator of 20.}}}',
-                                        answer: '\\frac{\\input{12}}{\\fracstr{20}}',
+                                        problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{1}}{\\str{4}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{3}}{\\str{5}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
+                                        answer: '\\row{\\frac{\\input{5}}{\\input{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{12}}{\\input{20}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
@@ -6144,8 +6144,15 @@ title: 'Main Answer',
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-                                        problem: '\\row{\\str{Multiply numerator and denominator by the same number: \xA0}}}',
-                                        answer: '\\row{\\buildequivfracs{\\frac{\\str{3}}{\\str{5}}}{\\frac{\\input{4}}{\\input{4}}}}{\\frac{\\input{12}}{\\fracstr{20}}}}',
+                                        problem: '\\rowgrp{\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}{\\row{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}',
+                                        answer: '\\row{\\input{20}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        },
+                                    }, {
+                                        problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}',
+                                        answer: '\\row{\\frac{\\input{5}}{\\fracstr{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{12}}{\\fracstr{20}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -6157,8 +6164,8 @@ title: 'Main Answer',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\rowgrp{\\row{\\str{Start with the fraction \xA0}}{\\frac{\\str{7}}{\\str{6}}}}{\\row{\\str{ and build an equivalent fraction that has a numerator of 21.}}}',
-                                        answer: '\\frac{\\fracstr{21}}{\\input{18}}',
+                                        problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{3}}{\\str{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{5}}{\\str{6}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
+                                        answer: '\\row{\\frac{\\input{9}}{\\input{24}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{20}}{\\input{24}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
@@ -6168,8 +6175,15 @@ title: 'Main Answer',
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-                                        problem: '\\row{\\str{Multiply numerator and denominator by the same number: \xA0}}}',
-                                        answer: '\\row{\\buildequivfracs{\\frac{\\str{7}}{\\str{6}}}{\\frac{\\input{3}}{\\input{3}}}}{\\frac{\\fracstr{21}}{\\input{18}}}}',
+                                        problem: '\\rowgrp{\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}{\\row{\\frac{\\fracstr{3}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}',
+                                        answer: '\\row{\\input{24}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        },
+                                    }, {
+                                        problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{3}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}',
+                                        answer: '\\row{\\frac{\\input{9}}{\\fracstr{24}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{20}}{\\fracstr{24}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -6181,8 +6195,8 @@ title: 'Main Answer',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\rowgrp{\\row{\\str{Start with the fraction \xA0}}{\\frac{\\str{11}}{\\str{9}}}}{\\row{\\str{ and build an equivalent fraction that has a numerator of 22.}}}',
-                                        answer: '\\frac{\\fracstr{22}}{\\input{18}}',
+                                        problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{4}}{\\str{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{5}}{\\str{4}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
+                                        answer: '\\row{\\frac{\\input{16}}{\\input{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{25}}{\\input{20}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
@@ -6192,8 +6206,15 @@ title: 'Main Answer',
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-                                        problem: '\\row{\\str{Multiply numerator and denominator by the same number: \xA0}}}',
-                                        answer: '\\row{\\buildequivfracs{\\frac{\\str{11}}{\\str{9}}}{\\frac{\\input{2}}{\\input{2}}}}{\\frac{\\fracstr{22}}{\\input{18}}}}',
+                                        problem: '\\rowgrp{\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}{\\row{\\frac{\\fracstr{4}}{\\fracstr{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{4}}}}',
+                                        answer: '\\row{\\input{20}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        },
+                                    }, {
+                                        problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{4}}{\\fracstr{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{4}}}}',
+                                        answer: '\\row{\\frac{\\input{16}}{\\fracstr{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{25}}{\\fracstr{20}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -6205,8 +6226,8 @@ title: 'Main Answer',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\rowgrp{\\row{\\str{Start with the fraction \xA0}}{\\frac{\\str{11}}{\\str{8}}}}{\\row{\\str{ and build an equivalent fraction that has a denominator of 24.}}}',
-                                        answer: '\\frac{\\input{33}}{\\fracstr{24}}',
+                                        problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{2}}{\\str{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{5}}{\\str{6}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
+                                        answer: '\\row{\\frac{\\input{4}}{\\input{6}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{5}}{\\input{6}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
@@ -6216,8 +6237,15 @@ title: 'Main Answer',
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-                                        problem: '\\row{\\str{Multiply numerator and denominator by the same number: \xA0}}}',
-                                        answer: '\\row{\\buildequivfracs{\\frac{\\str{11}}{\\str{8}}}{\\frac{\\input{3}}{\\input{3}}}}{\\frac{\\input{33}}{\\fracstr{24}}}}',
+                                        problem: '\\rowgrp{\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}{\\row{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}',
+                                        answer: '\\row{\\input{6}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        },
+                                    }, {
+                                        problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}',
+                                        answer: '\\row{\\frac{\\input{4}}{\\fracstr{6}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{5}}{\\fracstr{6}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -6229,8 +6257,8 @@ title: 'Main Answer',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\rowgrp{\\row{\\str{Start with the fraction \xA0}}{\\frac{\\str{3}}{\\str{4}}}}{\\row{\\str{ and build an equivalent fraction that has a denominator of 12.}}}',
-                                        answer: '\\frac{\\input{9}}{\\fracstr{12}}',
+                                        problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{5}}{\\str{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{6}}{\\str{5}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
+                                        answer: '\\row{\\frac{\\input{25}}{\\input{40}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{48}}{\\input{40}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
@@ -6240,8 +6268,15 @@ title: 'Main Answer',
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-                                        problem: '\\row{\\str{Multiply numerator and denominator by the same number: \xA0}}}',
-                                        answer: '\\row{\\buildequivfracs{\\frac{\\str{3}}{\\str{4}}}{\\frac{\\input{3}}{\\input{3}}}}{\\frac{\\input{9}}{\\fracstr{12}}}}',
+                                        problem: '\\rowgrp{\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}{\\row{\\frac{\\fracstr{5}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{6}}{\\fracstr{5}}}}',
+                                        answer: '\\row{\\input{40}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        },
+                                    }, {
+                                        problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{5}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{6}}{\\fracstr{5}}}}',
+                                        answer: '\\row{\\frac{\\input{25}}{\\fracstr{40}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{48}}{\\fracstr{40}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -6253,8 +6288,8 @@ title: 'Main Answer',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\rowgrp{\\row{\\str{Start with the fraction \xA0}}{\\frac{\\str{3}}{\\str{8}}}}{\\row{\\str{ and build an equivalent fraction that has a numerator of 12.}}}',
-                                        answer: '\\frac{\\fracstr{12}}{\\input{32}}',
+                                        problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{1}}{\\str{10}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{3}}{\\str{4}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
+                                        answer: '\\row{\\frac{\\input{2}}{\\input{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{15}}{\\input{20}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
@@ -6264,8 +6299,15 @@ title: 'Main Answer',
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-                                        problem: '\\row{\\str{Multiply numerator and denominator by the same number: \xA0}}}',
-                                        answer: '\\row{\\buildequivfracs{\\frac{\\str{3}}{\\str{8}}}{\\frac{\\input{4}}{\\input{4}}}}{\\frac{\\fracstr{12}}{\\input{32}}}}',
+                                        problem: '\\rowgrp{\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}{\\row{\\frac{\\fracstr{1}}{\\fracstr{10}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{4}}}}',
+                                        answer: '\\row{\\input{20}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        },
+                                    }, {
+                                        problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{1}}{\\fracstr{10}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{4}}}}',
+                                        answer: '\\row{\\frac{\\input{2}}{\\fracstr{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{15}}{\\fracstr{20}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -6277,8 +6319,8 @@ title: 'Main Answer',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\rowgrp{\\row{\\str{Start with the fraction \xA0}}{\\frac{\\str{5}}{\\str{10}}}}{\\row{\\str{ and build an equivalent fraction that has a numerator of 35.}}}',
-                                        answer: '\\frac{\\fracstr{35}}{\\input{70}}',
+                                        problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{10}}{\\str{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{7}}{\\str{5}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
+                                        answer: '\\row{\\frac{\\input{50}}{\\input{15}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{21}}{\\input{15}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
@@ -6288,8 +6330,15 @@ title: 'Main Answer',
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-                                        problem: '\\row{\\str{Multiply numerator and denominator by the same number: \xA0}}}',
-                                        answer: '\\row{\\buildequivfracs{\\frac{\\str{5}}{\\str{10}}}{\\frac{\\input{7}}{\\input{7}}}}{\\frac{\\fracstr{35}}{\\input{70}}}}',
+                                        problem: '\\rowgrp{\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}{\\row{\\frac{\\fracstr{10}}{\\fracstr{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{5}}}}',
+                                        answer: '\\row{\\input{15}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        },
+                                    }, {
+                                        problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{10}}{\\fracstr{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{5}}}}',
+                                        answer: '\\row{\\frac{\\input{50}}{\\fracstr{15}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{21}}{\\fracstr{15}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -6301,44 +6350,26 @@ title: 'Main Answer',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\rowgrp{\\row{\\str{Start with the fraction \xA0}}{\\frac{\\str{10}}{\\str{15}}}}{\\row{\\str{ and build an equivalent fraction that has a denominator of 90.}}}',
-                                        answer: '\\frac{\\input{60}}{\\fracstr{90}}',
+                                        problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{9}}{\\str{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{7}}{\\str{2}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
+                                        answer: '\\row{\\frac{\\input{18}}{\\input{10}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{35}}{\\input{10}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
-
                                             "workbook": true
                                         }
                                     }]
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-                                        problem: '\\row{\\str{Multiply numerator and denominator by the same number: \xA0}}}',
-                                        answer: '\\row{\\buildequivfracs{\\frac{\\str{10}}{\\str{15}}}{\\frac{\\input{6}}{\\input{6}}}}{\\frac{\\input{60}}{\\fracstr{90}}}}',
+                                        problem: '\\rowgrp{\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}{\\row{\\frac{\\fracstr{9}}{\\fracstr{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{2}}}}',
+                                        answer: '\\row{\\input{10}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
-                                        }
-                                    }]
-                                }]
-                            }, {
-                               title: 'Build Equivalent Fractions',
-                                children: [{
-                                    title: 'Main Answer',
-                                    children: [{
-                                        problem: '\\rowgrp{\\row{\\str{Start with the fraction \xA0}}{\\frac{\\str{9}}{\\str{12}}}}{\\row{\\str{ and build an equivalent fraction that has a numerator of 18.}}}',
-                                        answer: '\\frac{\\fracstr{18}}{\\input{24}}',
-                                        controls: {
-                                            "checkAnswer": true,
-                                            "help": false,
-                                            "workbook": true
-                                        }
-                                    }]
-                                }, {
-                                    title: 'Workbook',
-                                    children: [{
-                                        problem: '\\row{\\str{Multiply numerator and denominator by the same number: \xA0}}}',
-                                        answer: '\\row{\\buildequivfracs{\\frac{\\str{9}}{\\str{12}}}{\\frac{\\input{2}}{\\input{2}}}}{\\frac{\\fracstr{18}}{\\input{24}}}}',
+                                        },
+                                    }, {
+                                        problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{9}}{\\fracstr{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{2}}}}',
+                                        answer: '\\row{\\frac{\\input{18}}{\\fracstr{10}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{35}}{\\fracstr{10}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -6350,8 +6381,8 @@ title: 'Main Answer',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\rowgrp{\\row{\\str{Start with the fraction \xA0}}{\\frac{\\str{6}}{\\str{25}}}}{\\row{\\str{ and build an equivalent fraction that has a denominator of 100.}}}',
-                                        answer: '\\frac{\\input{24}}{\\fracstr{100}}',
+                                        problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{3}}{\\str{7}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{7}}{\\str{8}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
+                                        answer: '\\row{\\frac{\\input{24}}{\\input{56}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{49}}{\\input{56}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
@@ -6361,8 +6392,46 @@ title: 'Main Answer',
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-                                        problem: '\\row{\\str{Multiply numerator and denominator by the same number: \xA0}}}',
-                                        answer: '\\row{\\buildequivfracs{\\frac{\\str{6}}{\\str{25}}}{\\frac{\\input{4}}{\\input{4}}}}{\\frac{\\input{24}}{\\fracstr{100}}}}',
+                                        problem: '\\rowgrp{\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}{\\row{\\frac{\\fracstr{3}}{\\fracstr{7}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{8}}}}',
+                                        answer: '\\row{\\input{56}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        },
+                                    }, {
+                                        problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{3}}{\\fracstr{7}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{8}}}}',
+                                        answer: '\\row{\\frac{\\input{21}}{\\fracstr{56}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{49}}{\\fracstr{56}}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        }
+                                    }]
+                                }]
+                            }, {
+                                title: 'Build Equivalent Fractions',
+                                children: [{
+                                    title: 'Main Answer',
+                                    children: [{
+                                        problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{15}}{\\str{6}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{3}}{\\str{10}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
+                                        answer: '\\row{\\frac{\\input{75}}{\\input{30}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{9}}{\\input{30}}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false,
+                                            "workbook": true
+                                        }
+                                    }]
+                                }, {
+                                    title: 'Workbook',
+                                    children: [{
+                                        problem: '\\rowgrp{\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}{\\row{\\frac{\\fracstr{15}}{\\fracstr{6}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{10}}}}',
+                                        answer: '\\row{\\input{30}}',
+                                        controls: {
+                                            "checkAnswer": true,
+                                            "help": false
+                                        },
+                                    }, {
+                                        problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{15}}{\\fracstr{6}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{10}}}}',
+                                        answer: '\\row{\\frac{\\input{75}}{\\fracstr{30}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{9}}{\\fracstr{30}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
