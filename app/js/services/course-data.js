@@ -5736,8 +5736,8 @@ title: 'Main Answer',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\sign{&nbsp; &divide; &nbsp;}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}}',
-                                        answer: '\\frac{\\input{4}}{\\input{5}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{10}}}}{\\sign{&nbsp; &divide; &nbsp;}}{\\mixed{\\fracstr{2}}{\\frac{\\fracstr{3}}{\\fracstr{4}}}}',
+                                        answer: '\\frac{\\input{2}}{\\input{5}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
@@ -5747,29 +5747,29 @@ title: 'Main Answer',
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-											problem: '\\rowgrp{\\row{\\str{Change the mixed numbers into improper fractions.}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\sign{&nbsp; &divide; &nbsp;}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}}',
-											answer: '\\grp{\\frac{\\input{4}}{\\input{3}}}{\\sign{&divide;}}{\\frac{\\input{5}}{\\input{3}}}',
+											problem: '\\rowgrp{\\row{\\str{Change the mixed numbers into improper fractions.}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{10}}}}{\\sign{&nbsp; &divide; &nbsp;}}{\\mixed{\\fracstr{2}}{\\frac{\\fracstr{3}}{\\fracstr{4}}}}',
+											answer: '\\grp{\\frac{\\input{11}}{\\input{10}}}{\\sign{&divide;}}{\\frac{\\input{11}}{\\input{4}}}',
 											controls: {
 												"checkAnswer": true,
 												"help": true
 											}
 										}, {
-                                            problem: '\\rowgrp{\\row{\\str{Rewrite the problem as the product of the fractions.}}}{\\row{\\frac{\\str{4}}{\\str{3}}}{\\sign{&divide;}}{\\frac{\\str{5}}{\\str{3}}}}',
-                                            answer: '\\grp{\\frac{\\input{4}}{\\input{3}}}{\\sign{&times;}}{\\frac{\\input{3}}{\\input{5}}}',
+                                            problem: '\\rowgrp{\\row{\\str{Rewrite the problem as the product of the fractions.}}}{\\row{\\frac{\\str{11}}{\\str{10}}}{\\sign{&divide;}}{\\frac{\\str{11}}{\\str{4}}}}',
+                                            answer: '\\grp{\\frac{\\input{11}}{\\input{10}}}{\\sign{&times;}}{\\frac{\\input{4}}{\\input{11}}}',
                                             controls: {
                                                 "checkAnswer": true,
                                                 "help": true
                                             }
                                         }, {
                                             problem: '\\str{Multiply the fractions together.}',
-                                            answer: '\\multiplyfracs{\\frac{\\str{4}}{\\str{3}}}{\\frac{\\str{3}}{\\str{5}}}',
+                                            answer: '\\multiplyfracs{\\frac{\\str{11}}{\\str{10}}}{\\frac{\\str{4}}{\\str{11}}}',
                                             controls: {
                                                 "checkAnswer": true,
                                                 "help": true
                                             }
                                         }, {
                                             problem: '\\str{Reduce the fraction to its lowest terms.}',
-                                            answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{4}}{\\str{5}}}',
+                                            answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{10}}{\\str{4}}}',
                                             controls: {
                                                 "checkAnswer": true,
                                                 "help": true
@@ -5777,12 +5777,12 @@ title: 'Main Answer',
                                         }]
                                     }]
                                 }, {
-                                title: 'Divide Mixed Numbers',
+                                 title: 'Divide Mixed Numbers',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\sign{&nbsp; &divide; &nbsp;}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}}',
-                                        answer: '\\frac{\\input{4}}{\\input{5}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{5}}{\\fracstr{12}}}}{\\sign{&nbsp; &divide; &nbsp;}}{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}',
+                                        answer: '{\\mixed{\\input{1}}{\\frac{\\input{1}}{\\input{40}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
@@ -5792,42 +5792,49 @@ title: 'Main Answer',
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-											problem: '\\rowgrp{\\row{\\str{Change the mixed numbers into improper fractions.}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\sign{&nbsp; &divide; &nbsp;}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}}',
-											answer: '\\grp{\\frac{\\input{4}}{\\input{3}}}{\\sign{&divide;}}{\\frac{\\input{5}}{\\input{3}}}',
+											problem: '\\rowgrp{\\row{\\str{Change the mixed numbers into improper fractions.}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{5}}{\\fracstr{12}}}}{\\sign{&nbsp; &divide; &nbsp;}}{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}',
+											answer: '\\grp{\\frac{\\input{41}}{\\input{12}}}{\\sign{&divide;}}{\\frac{\\input{10}}{\\input{3}}}',
 											controls: {
 												"checkAnswer": true,
 												"help": true
 											}
 										}, {
-                                            problem: '\\rowgrp{\\row{\\str{Rewrite the problem as the product of the fractions.}}}{\\row{\\frac{\\str{4}}{\\str{3}}}{\\sign{&divide;}}{\\frac{\\str{5}}{\\str{3}}}}',
-                                            answer: '\\grp{\\frac{\\input{4}}{\\input{3}}}{\\sign{&times;}}{\\frac{\\input{3}}{\\input{5}}}',
+                                            problem: '\\rowgrp{\\row{\\str{Rewrite the problem as the product of the fractions.}}}{\\row{\\frac{\\str{41}}{\\str{12}}}{\\sign{&divide;}}{\\frac{\\str{10}}{\\str{3}}}}',
+                                            answer: '\\grp{\\frac{\\input{41}}{\\input{12}}}{\\sign{&times;}}{\\frac{\\input{3}}{\\input{10}}}',
                                             controls: {
                                                 "checkAnswer": true,
                                                 "help": true
                                             }
                                         }, {
                                             problem: '\\str{Multiply the fractions together.}',
-                                            answer: '\\multiplyfracs{\\frac{\\str{4}}{\\str{3}}}{\\frac{\\str{3}}{\\str{5}}}',
+                                            answer: '\\multiplyfracs{\\frac{\\str{41}}{\\str{12}}}{\\frac{\\str{3}}{\\str{10}}}',
                                             controls: {
                                                 "checkAnswer": true,
                                                 "help": true
                                             }
                                         }, {
                                             problem: '\\str{Reduce the fraction to its lowest terms.}',
-                                            answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{4}}{\\str{5}}}',
+                                            answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{41}}{\\str{40}}}',
                                             controls: {
                                                 "checkAnswer": true,
                                                 "help": true
                                             }
-                                        }]
+                                        }, {
+											problem: '\\rowgrp{\\row{\\str{Write the fraction as a mixed number.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{41}}{\\str{40}}}',
+											answer: '\\mixed{\\input{1}}{\\frac{\\input{1}}{\\input{40}}}',
+											controls: {
+												"checkAnswer": true,
+												"help": '\\rowgrp{\\row{\\str{Divide the numerator by the denominator, then make the quotient the mixed number whole and the remainder the mixed number numerator. \xA0}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\fracstr{41}}{\\fracstr{40}}}{\\row{\\str{\xA0 = \xA0}}}{\\row{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{40}}}}{\\row{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{40}}}}{label_like}}}}'
+											}
+                                    	}]
                                     }]
                                 }, {
-                                title: 'Divide Mixed Numbers',
+                                 title: 'Divide Mixed Numbers',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\html{Solve &nbsp;}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\sign{&nbsp; &divide; &nbsp;}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}}',
-                                        answer: '\\frac{\\input{4}}{\\input{5}}',
+                                        problem: '\\row{\\html{Solve &nbsp;}}{\\mixed{\\fracstr{7}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\sign{&nbsp; &divide; &nbsp;}}{\\mixed{\\fracstr{6}}{\\frac{\\fracstr{7}}{\\fracstr{8}}}}',
+                                        answer: '{\\mixed{\\input{1}}{\\frac{\\input{3}}{\\input{55}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
@@ -5837,34 +5844,41 @@ title: 'Main Answer',
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-											problem: '\\rowgrp{\\row{\\str{Change the mixed numbers into improper fractions.}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\sign{&nbsp; &divide; &nbsp;}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}}',
-											answer: '\\grp{\\frac{\\input{4}}{\\input{3}}}{\\sign{&divide;}}{\\frac{\\input{5}}{\\input{3}}}',
+											problem: '\\rowgrp{\\row{\\str{Change the mixed numbers into improper fractions.}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\fracstr{7}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\sign{&nbsp; &divide; &nbsp;}}{\\mixed{\\fracstr{6}}{\\frac{\\fracstr{7}}{\\fracstr{8}}}}',
+											answer: '\\grp{\\frac{\\input{29}}{\\input{4}}}{\\sign{&divide;}}{\\frac{\\input{55}}{\\input{8}}}',
 											controls: {
 												"checkAnswer": true,
 												"help": true
 											}
 										}, {
-                                            problem: '\\rowgrp{\\row{\\str{Rewrite the problem as the product of the fractions.}}}{\\row{\\frac{\\str{4}}{\\str{3}}}{\\sign{&divide;}}{\\frac{\\str{5}}{\\str{3}}}}',
-                                            answer: '\\grp{\\frac{\\input{4}}{\\input{3}}}{\\sign{&times;}}{\\frac{\\input{3}}{\\input{5}}}',
+                                            problem: '\\rowgrp{\\row{\\str{Rewrite the problem as the product of the fractions.}}}{\\row{\\frac{\\str{29}}{\\str{4}}}{\\sign{&divide;}}{\\frac{\\str{55}}{\\str{8}}}}',
+                                            answer: '\\grp{\\frac{\\input{29}}{\\input{4}}}{\\sign{&times;}}{\\frac{\\input{8}}{\\input{55}}}',
                                             controls: {
                                                 "checkAnswer": true,
                                                 "help": true
                                             }
                                         }, {
                                             problem: '\\str{Multiply the fractions together.}',
-                                            answer: '\\multiplyfracs{\\frac{\\str{4}}{\\str{3}}}{\\frac{\\str{3}}{\\str{5}}}',
+                                            answer: '\\multiplyfracs{\\frac{\\str{29}}{\\str{4}}}{\\frac{\\str{8}}{\\str{55}}}',
                                             controls: {
                                                 "checkAnswer": true,
                                                 "help": true
                                             }
                                         }, {
                                             problem: '\\str{Reduce the fraction to its lowest terms.}',
-                                            answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{4}}{\\str{5}}}',
+                                            answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{58}}{\\str{55}}}',
                                             controls: {
                                                 "checkAnswer": true,
                                                 "help": true
                                             }
-                                        }]
+                                        }, {
+											problem: '\\rowgrp{\\row{\\str{Write the fraction as a mixed number.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{58}}{\\str{55}}}',
+											answer: '\\mixed{\\input{1}}{\\frac{\\input{3}}{\\input{55}}}',
+											controls: {
+												"checkAnswer": true,
+												"help": '\\rowgrp{\\row{\\str{Divide the numerator by the denominator, then make the quotient the mixed number whole and the remainder the mixed number numerator. \xA0}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\fracstr{58}}{\\fracstr{55}}}{\\row{\\str{\xA0 = \xA0}}}{\\row{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{3}}{\\fracstr{55}}}}{\\row{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{3}}{\\fracstr{55}}}}{label_like}}}}'
+											}
+                                    	}]
                                     }]
                                 }]
                         }]
