@@ -1,5 +1,5 @@
 @import 'directives/add-subtract-multiply.css';
-@import 'directives/help-style.css';
+@import 'directives/general.css';
 @import 'directives/ms-button.css';
 @import 'directives/ms-chart.css';
 @import 'directives/ms-div-wholes.css';
@@ -38,11 +38,6 @@
 /* Bootstrap Override set workbook nav-tabs width */
 .tabs-left>.nav-tabs>li>a,.tabs-right>.nav-tabs>li>a{
     min-width: 54px;
-}
-
-/* problem text highlight-class (blue) */
-.blue-text{
-    color: #0088cc;
 }
 
 /* Give error inputs a red background */

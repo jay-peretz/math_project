@@ -1,0 +1,20 @@
+
+
+/* center the text in <tr> tags in help panel (6.3 Equivalent Fractions & 9.1 Add and Subtract Like Fractions)*/
+.center-tr-txt{
+    text-align: center;
+}
+
+/* add paddin and set width on input box (16.4 proportion-application)*/
+.proportion-application{
+    padding: 0 0 0 20px;
+}
+.proportion-application input{
+    width: 40px;
+    text-align: center;
+}
+
+/* problem text highlight-class (blue) */
+.blue-text{
+    color: #0088cc;
+}
