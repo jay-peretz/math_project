@@ -15,7 +15,7 @@ angular.module('mathSkills')
 						displayConsoleLogPercentObjects;
 					
 					// displayConsoleLogPercentObjects = true -- console logs all Percent object values at init
-					displayConsoleLogPercentObjects = true;	
+					displayConsoleLogPercentObjects = false;	
 					
 					var decimalDigits = function (num) {
 							if (num.toString().indexOf('.') > 0) {
@@ -40,6 +40,18 @@ angular.module('mathSkills')
 						fractionPercentAsFraction = fractionMultiply([percentAsFraction, ({numerator: 1, denominator: 100})]);
 						decimalAsFractionPercent = fractionMultiply([percentAsFraction, ({numerator: 100, denominator: 1})]);
 						fractionPercentAsDecimal = ([decimalNotPercent * (.01)]);
+						
+						if (displayConsoleLogPercentObjects) {
+							console.log (
+								 "in decimalNotPercent decimalNotPercent is: "+decimalNotPercent+
+								 " decimalAsPercent is: "+decimalAsPercent+
+								 " percentAsFraction is: "+JSON.stringify(percentAsFraction)+
+								 " fractionPercentAsFraction is: "+JSON.stringify(fractionPercentAsFraction)+
+								 " decimalAsFractionPercent is: "+JSON.stringify(decimalAsFractionPercent)+
+								 " fractionPercentAsDecimal is: "+fractionPercentAsDecimal
+							);
+						}
+						
 						switch (true) {
 							case (parametersArray[2] === "percentAsFraction"):	
 								return percentAsFraction;
@@ -56,17 +68,6 @@ angular.module('mathSkills')
 							case (parametersArray[2] === "fractionPercentAsDecimal"):										
 								return fractionPercentAsDecimal;
 								break;
-						}
-								
-						if (displayConsoleLogPercentObjects) {
-							console.log (
-								 "in decimalNotPercent decimalNotPercent is: "+decimalNotPercent+
-								 " decimalAsPercent is: "+decimalAsPercent+
-								 " percentAsFraction is: "+JSON.stringify(percentAsFraction)+
-								 " fractionPercentAsFraction is: "+JSON.stringify(fractionPercentAsFraction)+
-								 " decimalAsFractionPercent is: "+JSON.stringify(decimalAsFractionPercent)+
-								 " fractionPercentAsDecimal is: "+fractionPercentAsDecimal
-							);
 						}
 					}
 					
@@ -78,6 +79,18 @@ angular.module('mathSkills')
 						fractionPercentAsFraction = fractionMultiply([percentAsFraction, ({numerator: 1, denominator: 100})]);
 						decimalAsFractionPercent = fractionMultiply([percentAsFraction, ({numerator: 100, denominator: 1})]);
 						fractionPercentAsDecimal = ([decimalNotPercent * (.01)]);
+						
+						if (displayConsoleLogPercentObjects) {
+							console.log (
+								 "decimalNotPercent is: "+decimalNotPercent+
+								 " in decimalAsPercent, decimalAsPercent is: "+decimalAsPercent+
+								 " percentAsFraction is: "+JSON.stringify(percentAsFraction)+
+								 " fractionPercentAsFraction is: "+JSON.stringify(fractionPercentAsFraction)+
+								 " decimalAsFractionPercent is: "+JSON.stringify(decimalAsFractionPercent)+
+								 " fractionPercentAsDecimal is: "+fractionPercentAsDecimal
+							);
+						}
+						
 						switch (true) {
 							case (parametersArray[2] === "percentAsFraction"):	
 								return percentAsFraction;
@@ -95,47 +108,54 @@ angular.module('mathSkills')
 								return fractionPercentAsDecimal;
 								break;
 						}
-								
-						if (displayConsoleLogPercentObjects) {
-							console.log (
-								 "in decimalNotPercent decimalNotPercent is: "+decimalNotPercent+
-								 " decimalAsPercent is: "+decimalAsPercent+
-								 " percentAsFraction is: "+JSON.stringify(percentAsFraction)+
-								 " fractionPercentAsFraction is: "+JSON.stringify(fractionPercentAsFraction)+
-								 " decimalAsFractionPercent is: "+JSON.stringify(decimalAsFractionPercent)+
-								 " fractionPercentAsDecimal is: "+fractionPercentAsDecimal
-							);
-						}
 					}
 					
 					var percentAsFractionFunc = function(parametersArray) {
-						var whole = 0, 
+						var tagsWhole = 0, 
 							tagsNumerator = 1, 
 							tagsDenominator = 1,
 							interiorTags;
 							
 							interiorTags = parser.extractTag(parametersArray[0]).args;
 						
-						
-						if (interiorTags[1].substr(1, 3) == "str") {							
-							tagsNumerator = interiorTags[0].substring(interiorTags[0].indexOf('{')+1,interiorTags[0].indexOf("}"));
-							tagsDenominator = interiorTags[1].substring(interiorTags[1].indexOf('{')+1,interiorTags[1].indexOf("}"));
-							console.log("see comments line 126 percent-conversion- tagsNumerator is: "+tagsNumerator+" tagsDenominator is: "+tagsDenominator);
+						switch (true) {
+							case (interiorTags[1].substr(1, 3) == "str" || interiorTags[1].substr(1, 7) == "fracstr"):							
+								tagsNumerator = interiorTags[0].substring(interiorTags[0].indexOf('{')+1,interiorTags[0].indexOf("}"));
+								tagsDenominator = interiorTags[1].substring(interiorTags[1].indexOf('{')+1,interiorTags[1].indexOf("}"));
+								break;
+								
+							case (interiorTags[1].substr(1, 4) == "frac"):
+								tagsWhole = interiorTags[0].substring(interiorTags[0].indexOf('{')+1,interiorTags[0].indexOf("}"));
+								interiorTags = parser.extractTag(interiorTags[1]).args;
+								tagsNumerator = interiorTags[0].substring(interiorTags[0].indexOf('{')+1,interiorTags[0].indexOf("}"));
+								tagsDenominator = interiorTags[1].substring(interiorTags[1].indexOf('{')+1,interiorTags[1].indexOf("}"));
+								break;
 							
 						}
-						// need "else" case for "mixed"- maybe return expressions in language due to fraction to decimal conversion in help?
 						
 						if (((tagsNumerator/tagsDenominator))==((tagsNumerator/tagsDenominator).toFixed(5))) {
 							decimalNotPercent = ((tagsNumerator/tagsDenominator));
 						} else {
 							decimalNotPercent = ((tagsNumerator/tagsDenominator).toFixed(5));
 						}
-
+						decimalNotPercent = tagsWhole + decimalNotPercent.toString().substring(decimalNotPercent.toString().indexOf('.'));
 						percentAsFraction = {numerator: tagsNumerator, denominator: tagsDenominator};
 						decimalAsPercent = ([decimalNotPercent * (100)]);
 						fractionPercentAsFraction = fractionMultiply([({numerator: tagsNumerator, denominator: tagsDenominator}), ({numerator: 1, denominator: 100})]);
 						decimalAsFractionPercent = fractionMultiply([percentAsFraction, ({numerator: 100, denominator: 1})]);
 						fractionPercentAsDecimal = ([decimalNotPercent * (.01)]);
+						
+						if (displayConsoleLogPercentObjects) {
+							console.log (
+								 "decimalNotPercent is: "+decimalNotPercent+
+								 " decimalAsPercent is: "+decimalAsPercent+
+								 " in percentAsFraction, percentAsFraction is: "+JSON.stringify(percentAsFraction)+
+								 " fractionPercentAsFraction is: "+JSON.stringify(fractionPercentAsFraction)+
+								 " decimalAsFractionPercent is: "+JSON.stringify(decimalAsFractionPercent)+
+								 " fractionPercentAsDecimal is: "+fractionPercentAsDecimal
+							);
+						}
+						
 						switch (true) {
 							case (parametersArray[2] === "decimalNotPercent"):	
 								return decimalNotPercent;
@@ -156,17 +176,6 @@ angular.module('mathSkills')
 								return fractionPercentAsDecimal;
 								break;
 						}
-								
-						if (displayConsoleLogPercentObjects) {
-							console.log (
-								 "in decimalNotPercent decimalNotPercent is: "+decimalNotPercent+
-								 " decimalAsPercent is: "+decimalAsPercent+
-								 " percentAsFraction is: "+JSON.stringify(percentAsFraction)+
-								 " fractionPercentAsFraction is: "+JSON.stringify(fractionPercentAsFraction)+
-								 " decimalAsFractionPercent is: "+JSON.stringify(decimalAsFractionPercent)+
-								 " fractionPercentAsDecimal is: "+fractionPercentAsDecimal
-							);
-						}
 					}
 					
 					var fractionPercentAsFractionFunc = function(parametersArray) {
@@ -177,6 +186,18 @@ angular.module('mathSkills')
 						decimalAsPercent = ([decimalNotPercent * (100)]);
 						decimalAsFractionPercent = fractionMultiply([percentAsFraction, ({numerator: 100, denominator: 1})]);
 						fractionPercentAsDecimal = ([decimalNotPercent * (.01)]);
+						
+						if (displayConsoleLogPercentObjects) {
+							console.log (
+								 "decimalNotPercent is: "+decimalNotPercent+
+								 " decimalAsPercent is: "+decimalAsPercent+
+								 " percentAsFraction is: "+JSON.stringify(percentAsFraction)+
+								 " in fractionPercentAsFraction, fractionPercentAsFraction is: "+JSON.stringify(fractionPercentAsFraction)+
+								 " decimalAsFractionPercent is: "+JSON.stringify(decimalAsFractionPercent)+
+								 " fractionPercentAsDecimal is: "+fractionPercentAsDecimal
+							);
+						}
+						
 						switch (true) {
 							case (parametersArray[2] === "percentAsFraction"):	
 								return percentAsFraction;
@@ -193,17 +214,6 @@ angular.module('mathSkills')
 							case (parametersArray[2] === "fractionPercentAsDecimal"):										
 								return fractionPercentAsDecimal;
 								break;
-						}
-								
-						if (displayConsoleLogPercentObjects) {
-							console.log (
-								 "in decimalNotPercent decimalNotPercent is: "+decimalNotPercent+
-								 " decimalAsPercent is: "+decimalAsPercent+
-								 " percentAsFraction is: "+JSON.stringify(percentAsFraction)+
-								 " fractionPercentAsFraction is: "+JSON.stringify(fractionPercentAsFraction)+
-								 " decimalAsFractionPercent is: "+JSON.stringify(decimalAsFractionPercent)+
-								 " fractionPercentAsDecimal is: "+fractionPercentAsDecimal
-							);
 						}
 					}
 					
@@ -215,6 +225,18 @@ angular.module('mathSkills')
 						percentAsFraction = fractionMultiply([decimalAsFractionPercent, ({numerator: 1, denominator: 100})]);  
 		fractionPercentAsFraction = fractionMultiply([percentAsFraction, ({numerator: 1, denominator: 100})]);
 						fractionPercentAsDecimal = ([decimalNotPercent * (.01)]);
+						
+						if (displayConsoleLogPercentObjects) {
+							console.log (
+								 "decimalNotPercent is: "+decimalNotPercent+
+								 " decimalAsPercent is: "+decimalAsPercent+
+								 " percentAsFraction is: "+JSON.stringify(percentAsFraction)+
+								 " fractionPercentAsFraction is: "+JSON.stringify(fractionPercentAsFraction)+
+								 " in decimalAsFractionPercent, decimalAsFractionPercent is: "+JSON.stringify(decimalAsFractionPercent)+
+								 " fractionPercentAsDecimal is: "+fractionPercentAsDecimal
+							);
+						}
+						
 						switch (true) {
 							case (parametersArray[2] === "percentAsFraction"):	
 								return percentAsFraction;
@@ -231,17 +253,6 @@ angular.module('mathSkills')
 							case (parametersArray[2] === "fractionPercentAsDecimal"):										
 								return fractionPercentAsDecimal;
 								break;
-						}
-								
-						if (displayConsoleLogPercentObjects) {
-							console.log (
-								 "in decimalNotPercent decimalNotPercent is: "+decimalNotPercent+
-								 " decimalAsPercent is: "+decimalAsPercent+
-								 " percentAsFraction is: "+JSON.stringify(percentAsFraction)+
-								 " fractionPercentAsFraction is: "+JSON.stringify(fractionPercentAsFraction)+
-								 " decimalAsFractionPercent is: "+JSON.stringify(decimalAsFractionPercent)+
-								 " fractionPercentAsDecimal is: "+fractionPercentAsDecimal
-							);
 						}
 					}
 					
@@ -253,6 +264,18 @@ angular.module('mathSkills')
 						decimalAsPercent = ([decimalNotPercent * (100)]);
 						fractionPercentAsFraction = fractionMultiply([percentAsFraction, ({numerator: 1, denominator: 100})]);
 						decimalAsFractionPercent = fractionMultiply([percentAsFraction, ({numerator: 100, denominator: 1})]);
+						
+						if (displayConsoleLogPercentObjects) {
+							console.log (
+								 "decimalNotPercent is: "+decimalNotPercent+
+								 " decimalAsPercent is: "+decimalAsPercent+
+								 " percentAsFraction is: "+JSON.stringify(percentAsFraction)+
+								 " fractionPercentAsFraction is: "+JSON.stringify(fractionPercentAsFraction)+
+								 " decimalAsFractionPercent is: "+JSON.stringify(decimalAsFractionPercent)+
+								 " in fractionPercentAsDecimal, fractionPercentAsDecimal is: "+fractionPercentAsDecimal
+							);
+						}
+						
 						switch (true) {
 							case (parametersArray[2] === "percentAsFraction"):	
 								return percentAsFraction;
@@ -269,17 +292,6 @@ angular.module('mathSkills')
 							case (parametersArray[2] === "fractionPercentAsDecimal"):										
 								return fractionPercentAsDecimal;
 								break;
-						}
-								
-						if (displayConsoleLogPercentObjects) {
-							console.log (
-								 "in decimalNotPercent decimalNotPercent is: "+decimalNotPercent+
-								 " decimalAsPercent is: "+decimalAsPercent+
-								 " percentAsFraction is: "+JSON.stringify(percentAsFraction)+
-								 " fractionPercentAsFraction is: "+JSON.stringify(fractionPercentAsFraction)+
-								 " decimalAsFractionPercent is: "+JSON.stringify(decimalAsFractionPercent)+
-								 " fractionPercentAsDecimal is: "+fractionPercentAsDecimal
-							);
 						}
 					}						
 					
