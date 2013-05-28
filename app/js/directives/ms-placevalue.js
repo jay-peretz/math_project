@@ -18,7 +18,8 @@ angular.module('mathSkills')
 			controller: function ($scope, $element, $filter) {
 				$scope.numberArray = [];
 				$scope.randomplacearray = [];
-				$scope.numbStringCommas = "";				
+				$scope.decimalAnswerArray = [];
+				$scope.numbStringCommas = "";
 								
 				var tagParameters = [],
 					tagParmsZeroArray = [],
@@ -47,6 +48,19 @@ angular.module('mathSkills')
 								return 0;
 							}
 				 };
+				 
+				 var removeTrailingZeros = function (numberArray) {
+					var zerosNumberArray = [];
+					zerosNumberArray = numberArray.slice();
+					for (var ii = zerosNumberArray.length - 1, oneNotZero = 0; ii >= 0; ii--) {
+						if (zerosNumberArray[ii]!=0) {
+							oneNotZero = 1;
+						} else if (oneNotZero == 0) {
+							zerosNumberArray.pop();
+						}
+					}			
+					return zerosNumberArray;
+				}
 				
 			 // Extract the value/s for parameters- second parameter is array elements from right for round place, counting decimal
 				$scope.$watch('expected', function () {
@@ -61,13 +75,28 @@ angular.module('mathSkills')
 						
 						tagParmsZeroArray = tagParameters[0].split("");
 						problemDecimalIndex = tagParameters[0].indexOf(".");
-						if (problemDecimalIndex > 0) {
+
+						if (problemDecimalIndex >= 0) {
 							roundedIntegerNumber = getRounded(Number(tagParameters[0].replace(".", "")), tagParameters[1] - 1);
 							roundedDecimalArray = roundedIntegerNumber.toString().split("");
+							// if the leading character of the given number was zero or decimal point, add lead "0" to rounded
+							if (tagParameters[0].charAt(0) === "0" || tagParameters[0].charAt(0) === ".") {
+								roundedDecimalArray.unshift("0");
+								// if the leading character was the decimal point, increase decimal location index for added zero  
+								if (tagParameters[0].charAt(0) === ".") {
+									problemDecimalIndex += 1;
+								}
+							} 
 							roundedDecimalArray.splice(problemDecimalIndex,0,".");
+							$scope.decimalAnswerArray = removeTrailingZeros(roundedDecimalArray);
+							//remove decimal point if there are no digits to the right of the decimal
+							if (typeof $scope.decimalAnswerArray[$scope.decimalAnswerArray.indexOf(".") + 1] == "undefined") {
+								$scope.decimalAnswerArray.pop();
+							}
 						} else {
 							roundedIntegerNumber = getRounded(Number(tagParameters[0]), tagParameters[1]);
 							roundedDecimalArray = roundedIntegerNumber.toString().split("");
+							$scope.decimalAnswerArray = roundedDecimalArray.slice();
 						}
 
 						$scope.givenNumberArray = tagParmsZeroArray.slice();

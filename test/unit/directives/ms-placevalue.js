@@ -80,8 +80,8 @@ describe('<ms-placevalue>', function () {
 		}));
 		
 		// check that rounding is happening correctly
-		it('should have a "0" in the 7th td, 1st row of the last table in the display array', inject(function ($rootScope) {
-			expect(jQuery(element).find('table:last tr:nth-child(1) td:nth-child(7)').text()).toContain('0')																				
+		it('should have a "" in the 7th td, 1st row of the last table in the display array', inject(function ($rootScope) {
+			expect(jQuery(element).find('table:last tr:nth-child(1) td:nth-child(7)').text()).toContain('')																				
 		}));
 		
 		it('should have a carat character 2nd row of the last table of the display array', inject(function ($rootScope) {

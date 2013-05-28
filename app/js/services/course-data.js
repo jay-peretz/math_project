@@ -6886,11 +6886,11 @@ title: 'Main Answer',
 											children: [{
 												title: 'Main Answer',
 												children: [{
-													problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Ones place}}}{\\row{\\str{1.96139}}}}',
-													answer: '\\input{2}',
+													problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Hundredths place}}}{\\row{\\str{0.96139}}}}',
+													answer: '\\input{0.96}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\placevalue{1.96139}{6}{showanswer}'
+														"help": '\\placevalue{0.96139}{4}{showanswer}'
 													}
 												}]
 											}]
