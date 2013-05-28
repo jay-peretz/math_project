@@ -7525,7 +7525,7 @@ title: 'Main Answer',
 											title: 'Main Answer',
 											children: [{
 												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{82 \(0.001\)}}}',
-												answer: '\\input{.082}',
+												answer: '\\input{0.082}',
 												controls: {
 													"checkAnswer": true,
 													"help": '\\rowgrp{\\row{\\multiplydecpowten{82}{0.001}}{\\css{\\str{Answer:  .082}}{help-answer-text help-answer-margin-right}}}'
@@ -7539,7 +7539,7 @@ title: 'Main Answer',
 											title: 'Main Answer',
 											children: [{
 												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.1 \(0.001\)}}}',
-												answer: '\\input{.0001}',
+												answer: '\\input{0.0001}',
 												controls: {
 													"checkAnswer": true,
 													"help": '\\rowgrp{\\row{\\multiplydecpowten{0.1}{0.001}}{\\css{\\str{Answer:  .0001}}{help-answer-text help-answer-margin-right}}}'
@@ -7553,7 +7553,7 @@ title: 'Main Answer',
 											title: 'Main Answer',
 											children: [{
 												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{38.5 \(0.001\)}}}',
-												answer: '\\input{.0385}',
+												answer: '\\input{0.0385}',
 												controls: {
 													"checkAnswer": true,
 													"help": '\\rowgrp{\\row{\\multiplydecpowten{38.5}{0.001}}{\\css{\\str{Answer:  .0385}}{help-answer-text help-answer-margin-right}}}'
@@ -7567,7 +7567,7 @@ title: 'Main Answer',
 											title: 'Main Answer',
 											children: [{
 												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{80.62 \(0.00001\)}}}',
-												answer: '\\input{.0008062}',
+												answer: '\\input{0.0008062}',
 												controls: {
 													"checkAnswer": true,
 													"help": '\\rowgrp{\\row{\\multiplydecpowten{80.62}{0.00001}}{\\css{\\str{Answer:  .0008062}}{help-answer-text help-answer-margin-right}}}'
@@ -7595,7 +7595,7 @@ title: 'Main Answer',
 											title: 'Main Answer',
 											children: [{
 												problem: '\\rowgrp{\\row{\\str{Determine the product of:}}}{\\row{\\str{\xA0}}}{\\row{\\str{7.6 \(0.01\)}}}',
-												answer: '\\input{.076}',
+												answer: '\\input{0.076}',
 												controls: {
 													"checkAnswer": true,
 													"help": '\\rowgrp{\\row{\\multiplydecpowten{7.6}{0.01}}{\\css{\\str{Answer:  .076}}{help-answer-text help-answer-margin-right}}}'
