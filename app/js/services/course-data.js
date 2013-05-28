@@ -8237,8 +8237,8 @@ title: 'Main Answer',
                         path: 'percents',
                         children: [
 							{
-									title: '5.1 Decimal & Fraction Form of Percents',
-									path: '5.1-decimal-fraction-form-percents',
+									title: '18.1 Decimal & Fraction Form of Percents',
+									path: '18.1-decimal-fraction-form-percents',
 									children: [
 										{
 											title: 'Decimal & Fraction Form of Percents',
@@ -8446,11 +8446,155 @@ title: 'Main Answer',
 													controls: {
 														"checkAnswer": true,
 														"help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{9}}{\\str{10}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}}'
-													} 
-												}]
+													}
 											}]
-										}
-                                ]									
+										}]
+									}]
+                            }, {
+                                title: '18.2 Change a Decimal to a Percent',
+                                path: '18.2-change-a-decimal-to-a-percent',
+                                children: [
+                                    {
+										title: 'Change a Decimal to a Percent',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this decimal into a percent:}}}{\\row{\\str{\xA0}}}{\\row{\\str{8.41}}}',
+												answer: '\\row{\\input{841}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\decimaltopercent{8.41}{100}}{\\css{\\str{Answer:  841%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Decimal to a Percent',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this decimal into a percent:}}}{\\row{\\str{\xA0}}}{\\row{\\str{8.41}}}',
+												answer: '\\row{\\input{841}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\decimaltopercent{8.41}{100}}{\\css{\\str{Answer:  841%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Decimal to a Percent',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this decimal into a percent:}}}{\\row{\\str{\xA0}}}{\\row{\\str{8.41}}}',
+												answer: '\\row{\\input{841}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\decimaltopercent{8.41}{100}}{\\css{\\str{Answer:  841%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Decimal to a Percent',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this decimal into a percent:}}}{\\row{\\str{\xA0}}}{\\row{\\str{8.41}}}',
+												answer: '\\row{\\input{841}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\decimaltopercent{8.41}{100}}{\\css{\\str{Answer:  841%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Decimal to a Percent',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this decimal into a percent:}}}{\\row{\\str{\xA0}}}{\\row{\\str{8.41}}}',
+												answer: '\\row{\\input{841}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\decimaltopercent{8.41}{100}}{\\css{\\str{Answer:  841%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Decimal to a Percent',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this decimal into a percent:}}}{\\row{\\str{\xA0}}}{\\row{\\str{8.41}}}',
+												answer: '\\row{\\input{841}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\decimaltopercent{8.41}{100}}{\\css{\\str{Answer:  841%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Decimal to a Percent',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this decimal into a percent:}}}{\\row{\\str{\xA0}}}{\\row{\\str{8.41}}}',
+												answer: '\\row{\\input{841}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\decimaltopercent{8.41}{100}}{\\css{\\str{Answer:  841%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Decimal to a Percent',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this decimal into a percent:}}}{\\row{\\str{\xA0}}}{\\row{\\str{8.41}}}',
+												answer: '\\row{\\input{841}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\decimaltopercent{8.41}{100}}{\\css{\\str{Answer:  841%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Decimal to a Percent',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this decimal into a percent:}}}{\\row{\\str{\xA0}}}{\\row{\\str{8.41}}}',
+												answer: '\\row{\\input{841}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\decimaltopercent{8.41}{100}}{\\css{\\str{Answer:  841%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Decimal to a Percent',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this decimal into a percent:}}}{\\row{\\str{\xA0}}}{\\row{\\str{8.41}}}',
+												answer: '\\row{\\input{841}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\decimaltopercent{8.41}{100}}{\\css{\\str{Answer:  841%}}{help-answer-text help-answer-margin-right}}}'
+												}
+                                            }]
+                                        }]
+                                    }
+                                ]					
 							}]
                     }, {
                         title: '6 Measurements',

@@ -2,11 +2,13 @@
 	
 angular.module('mathSkills') 
 	.config(['parserProvider', function (parserProvider) {
-        parserProvider.register('multiplydecpowten', {
-            directiveTemplate: '<ms-multiply-decimals-power-ten expected={{expected}}></ms-multiply-decimals-power-ten>'
+        parserProvider.register('decimaltopercent', {
+            directiveTemplate: '<ms-decimal-to-percent expected={{expected}}></ms-decimal-to-percent>'
         });
     }])
-  .directive('msMultiplyDecimalsPowerTen', [
+	// decimaltopercent receives two parameters, a decimal number to convert, and a multiplier-
+	// for conversion to a percentage the multiplier should be 100
+  .directive('msDecimalToPercent', [
 	'parser',
 	function (parser) {
 		return {
@@ -188,7 +190,7 @@ angular.module('mathSkills')
 							$scope.decimalDisplacement = Math.abs(Math.round(Math.log(problemObjects[1])/Math.log(10)));
 						}
 						
-						$scope.addDecimalText = 'The result of multiplying '+problemObjects[0]+' by '+problemObjects[1]+' is formed by displacing the decimal point '+$scope.decimalDisplacement+' place(s) to the '+$scope.pointLeftOrRight+' and filling in any "open" place holders with zeros:'
+						$scope.addDecimalText = 'The decimal '+problemObjects[0]+' is converted to a percentage by displacing the decimal point '+$scope.decimalDisplacement+' place(s) to the '+$scope.pointLeftOrRight+' and filling in any "open" place holders with zeros:'
 						
 						$scope.emptyArray = [];
 						$scope.emptyArray[0] = [];
