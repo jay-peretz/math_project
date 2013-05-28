@@ -6608,7 +6608,7 @@ title: 'Main Answer',
 											}]
 										},
 										{
-																								title: 'Decimal Number Place Value',
+											title: 'Decimal Number Place Value',
 											children: [{
 												title: 'Main Answer',
 												children: [{
@@ -6622,7 +6622,7 @@ title: 'Main Answer',
 											}]
 										},
 										{
-																								title: 'Decimal Number Place Value',
+											title: 'Decimal Number Place Value',
 											children: [{
 												title: 'Main Answer',
 												children: [{
@@ -6636,7 +6636,7 @@ title: 'Main Answer',
 											}]
 										},
 										{
-																								title: 'Decimal Number Place Value',
+											title: 'Decimal Number Place Value',
 											children: [{
 												title: 'Main Answer',
 												children: [{
@@ -6650,7 +6650,7 @@ title: 'Main Answer',
 											}]
 										},
 										{
-																								title: 'Decimal Number Place Value',
+											title: 'Decimal Number Place Value',
 											children: [{
 												title: 'Main Answer',
 												children: [{
@@ -6664,7 +6664,7 @@ title: 'Main Answer',
 											}]
 										},
 										{
-																								title: 'Decimal Number Place Value',
+											title: 'Decimal Number Place Value',
 											children: [{
 												title: 'Main Answer',
 												children: [{
@@ -6678,7 +6678,7 @@ title: 'Main Answer',
 											}]
 										},
 										{
-																								title: 'Decimal Number Place Value',
+											title: 'Decimal Number Place Value',
 											children: [{
 												title: 'Main Answer',
 												children: [{
@@ -6692,7 +6692,7 @@ title: 'Main Answer',
 											}]
 										},
 										{
-																								title: 'Decimal Number Place Value',
+											title: 'Decimal Number Place Value',
 											children: [{
 												title: 'Main Answer',
 												children: [{
@@ -6706,7 +6706,7 @@ title: 'Main Answer',
 											}]
 										},
 										{
-																								title: 'Decimal Number Place Value',
+											title: 'Decimal Number Place Value',
 											children: [{
 												title: 'Main Answer',
 												children: [{
@@ -6720,7 +6720,7 @@ title: 'Main Answer',
 											}]
 										},
 										{
-																								title: 'Decimal Number Place Value',
+											title: 'Decimal Number Place Value',
 											children: [{
 												title: 'Main Answer',
 												children: [{
@@ -7614,7 +7614,7 @@ title: 'Main Answer',
 														title: 'Main Answer',
 														children: [{
 															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{3}}{\\fracstr{10}}}{\\str{ to a decimal}}',
-															answer: '\\input{.3}',
+															answer: '\\input{0.3}',
 															controls: {
 																"checkAnswer": true,
 																"help": '\\row{\\str{3}}{\\str{ divided by }}{\\str{10}}{\\str{equals}}{\\str{.3}}'
@@ -7628,7 +7628,7 @@ title: 'Main Answer',
 														title: 'Main Answer',
 														children: [{
 															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{4}}{\\fracstr{8}}}{\\str{ to a decimal}}',
-															answer: '\\input{.5}',
+															answer: '\\input{0.5}',
 															controls: {
 																"checkAnswer": true,
 																"help": '\\row{\\str{4}}{\\str{ divided by }}{\\str{8}}{\\str{equals}}{\\str{.5}}'
@@ -7642,7 +7642,7 @@ title: 'Main Answer',
 														title: 'Main Answer',
 														children: [{
 															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{6}}{\\fracstr{8}}}{\\str{ to a decimal}}',
-															answer: '\\input{.75}',
+															answer: '\\input{0.75}',
 															controls: {
 																"checkAnswer": true,
 																"help": '\\row{\\str{6}}{\\str{ divided by }}{\\str{8}}{\\str{equals}}{\\str{.75}}'
@@ -7656,7 +7656,7 @@ title: 'Main Answer',
 														title: 'Main Answer',
 														children: [{
 															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{14}}{\\fracstr{22}}}{\\str{ to a decimal}}',
-															answer: '\\input{.64}',
+															answer: '\\input{0.64}',
 															controls: {
 																"checkAnswer": true,
 																"help": '\\row{\\str{14}}{\\str{ divided by }}{\\str{22}}{\\str{equals}}{\\str{.64}}'
@@ -7671,7 +7671,7 @@ title: 'Main Answer',
 														children: [{
 														//	problem: '\\frac{\\str{3}}{\\str{10}}',
 															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{14}}{\\fracstr{24}}}{\\str{ to a decimal}}',
-															answer: '\\input{.58}',
+															answer: '\\input{0.58}',
 															controls: {
 																"checkAnswer": true,
 																"help": '\\row{\\str{14}}{\\str{ divided by }}{\\str{24}}{\\str{equals}}{\\str{.58}}'
@@ -7685,7 +7685,7 @@ title: 'Main Answer',
 														title: 'Main Answer',
 														children: [{
 															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{17}}{\\fracstr{34}}}{\\str{ to a decimal}}',
-															answer: '\\input{.5}',
+															answer: '\\input{0.5}',
 															controls: {
 																"checkAnswer": true,
 																"help": '\\row{\\str{17}}{\\str{ divided by }}{\\str{34}}{\\str{equals}}{\\str{.5}}'
@@ -7699,7 +7699,7 @@ title: 'Main Answer',
 														title: 'Main Answer',
 														children: [{
 															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{10}}{\\fracstr{15}}}{\\str{ to a decimal}}',
-															answer: '\\input{.67}',
+															answer: '\\input{0.67}',
 															controls: {
 																"checkAnswer": true,
 																"help": '\\row{\\str{10}}{\\str{ divided by }}{\\str{15}}{\\str{equals}}{\\str{.67}}'
@@ -7713,7 +7713,7 @@ title: 'Main Answer',
 														title: 'Main Answer',
 														children: [{
 															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{12}}{\\fracstr{21}}}{\\str{ to a decimal}}',
-															answer: '\\input{.57}',
+															answer: '\\input{0.57}',
 															controls: {
 																"checkAnswer": true,
 																"help": '\\row{\\str{12}}{\\str{ divided by }}{\\str{21}}{\\str{equals}}{\\str{.57}}'
@@ -7727,7 +7727,7 @@ title: 'Main Answer',
 														title: 'Main Answer',
 														children: [{
 															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{28}}{\\fracstr{52}}}{\\str{ to a decimal}}',
-															answer: '\\input{.54}',
+															answer: '\\input{0.54}',
 															controls: {
 																"checkAnswer": true,
 																"help": '\\row{\\str{28}}{\\str{ divided by }}{\\str{52}}{\\str{equals}}{\\str{.54}}'
@@ -7741,7 +7741,7 @@ title: 'Main Answer',
 														title: 'Main Answer',
 														children: [{
 															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{6}}{\\fracstr{9}}}{\\str{ to a decimal}}',
-															answer: '\\input{.67}',
+															answer: '\\input{0.67}',
 															controls: {
 																"checkAnswer": true,
 																"help": '\\row{\\str{6}}{\\str{ divided by }}{\\str{9}}{\\str{equals}}{\\str{.67}}'
