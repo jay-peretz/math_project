@@ -15,7 +15,7 @@ angular.module('mathSkills')
                     'parser',
                     '$scope',
                     function (directiveUtils, parser, $scope) {
-                        $scope.tag = 'grp';
+                        $scope.tag = 'rowgrp';
                         $scope.$watch('expected', function () {
                             if ($scope.expected) {
                                 $scope.childElements = parser.extractTag($scope.expected).args;
@@ -35,6 +35,6 @@ angular.module('mathSkills')
                     label: '@'
                 },
                 restrict: 'E',
-            template: '<table><tr ng-repeat="child in childElements"><td><ms-expression expected={{child}}></td></tr></table>'
+            template: '<table><tr ng-repeat="child in childElements"><td><ms-expression expected={{child}} label={{$index}}></td></tr></table>'
         };
     }]);

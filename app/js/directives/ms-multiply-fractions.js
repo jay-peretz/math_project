@@ -129,7 +129,7 @@ angular.module('mathSkills')
                                         scope.cancelling.numerator.clear();
                                     }
                                     scope.cancelling.numerator = clickedScope;
-                                    scope.cancelling.numerator.expected = '\\rowgrp{\\input{}}{\\css{' + scope.cancelling.numerator.expected + '}{cancel}}';
+                                    scope.cancelling.numerator.expected = '\\col{\\input{}}{\\css{' + scope.cancelling.numerator.expected + '}{cancel}}';
                                     scope.cancelling.numerator.clear = scope.cancelling.numerator.$on('answer', scope.cancelHandler);
                                     scope.cancelling.numerator.index = jQuery('ms-multiply-fractions ms-fraction').index(jQuery(e.target).closest('ms-fraction'));
                                 });
@@ -143,7 +143,7 @@ angular.module('mathSkills')
                                         scope.cancelling.denominator.clear();
                                     }
                                     scope.cancelling.denominator = clickedScope;
-                                    scope.cancelling.denominator.expected = '\\rowgrp{\\css{' + scope.cancelling.denominator.expected + '}{cancel}}{\\input{}}';
+                                    scope.cancelling.denominator.expected = '\\col{\\css{' + scope.cancelling.denominator.expected + '}{cancel}}{\\input{}}';
                                     scope.cancelling.denominator.clear = scope.cancelling.denominator.$on('answer', scope.cancelHandler);
                                     scope.cancelling.denominator.index = jQuery('ms-multiply-fractions ms-fraction').index(jQuery(e.target).closest('ms-fraction'));
                                 });
