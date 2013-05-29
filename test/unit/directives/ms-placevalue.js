@@ -124,5 +124,24 @@ describe('<ms-placevalue>', function () {
 		
     });
 
+	describe('when ms-placevalue tag element is added with decimal number less than one', function () {
+																  
+		beforeEach(inject(function ($rootScope, $compile) {
+			var template = angular.element('<ms-placevalue expected="\\placevalue{0.678}{2}{showanswer}"></ms-placevalue>');
+			elScope = $rootScope.$new();
+			element = $compile(template)(elScope);
+			$rootScope.$digest();
+		}));
+		
+		// check that number display is working correctly
+		it('should have a "0" in the 1st td, 1st row of the first table in the display array', inject(function ($rootScope) {
+			expect(jQuery(element).find('table:first tr:nth-child(1) td:nth-child(1)').text()).toContain('0')																				
+		}));
+		
+		it('should have a "." in the 2nd td, 1st row of the first table in the display array', inject(function ($rootScope) {
+			expect(jQuery(element).find('table:first tr:nth-child(1) td:nth-child(2)').text()).toContain('.')																				
+		}));
+
+    });
 	
 });
