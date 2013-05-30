@@ -24,11 +24,19 @@ angular.module('mathSkills')
 				var tagParameters = [],
 					tagParmsZeroArray = [],
 					roundedDecimalArray = [],
+					wholesPlaceArray = [],
+					decimalsPlaceArray = [],
 					problemDigit,
 					problemDigitRight,
 					problemDecimalIndex,
+					problemDecimalPlaces,
 					roundToThisPlace,
-					roundedIntegerNumber;
+					roundedIntegerNumber,
+					numberPlaceWords;
+					
+				wholesPlaceArray = ["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]	
+				
+				decimalsPlaceArray = ["Millionths", "Hundred-thousandths", "Ten-thousandths", "Thousandths", "Hundredths", "Tenths", "Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"];
 					
 				var getRounded = function(numberObject, numberOfPlaces){
 				     var leftNumber = 0,
@@ -41,9 +49,9 @@ angular.module('mathSkills')
 				     return leftNumber;    
 				 };
 				 
-				 var decimalDigits = function (num) {
-							if (num.toString().indexOf('.') > 0) {
-								return num.toString().split('.')[1].length;
+				 var decimalDigits = function (numString) {
+							if (numString.indexOf('.') > 0) {
+								return numString.split('.')[1].length;
 							} else {
 								return 0;
 							}
@@ -75,6 +83,7 @@ angular.module('mathSkills')
 						
 						tagParmsZeroArray = tagParameters[0].split("");
 						problemDecimalIndex = tagParameters[0].indexOf(".");
+						problemDecimalPlaces = decimalDigits(tagParameters[0]);
 
 						if (problemDecimalIndex >= 0) {
 							roundedIntegerNumber = getRounded(Number(tagParameters[0].replace(".", "")), tagParameters[1] - 1);
@@ -93,10 +102,14 @@ angular.module('mathSkills')
 							if (typeof $scope.decimalAnswerArray[$scope.decimalAnswerArray.indexOf(".") + 1] == "undefined") {
 								$scope.decimalAnswerArray.pop();
 							}
+							// get the placename from decimalsPlaceArray
+							numberPlaceWords = decimalsPlaceArray[Number(tagParameters[1]) + (5 - problemDecimalPlaces)];
 						} else {
 							roundedIntegerNumber = getRounded(Number(tagParameters[0]), tagParameters[1]);
 							roundedDecimalArray = roundedIntegerNumber.toString().split("");
 							$scope.decimalAnswerArray = roundedDecimalArray.slice();
+							// get the placename from wholesPlaceArray
+							numberPlaceWords = wholesPlaceArray[tagParameters[1]];
 						}
 
 						$scope.givenNumberArray = tagParmsZeroArray.slice();
@@ -127,19 +140,21 @@ angular.module('mathSkills')
 							}
 						}
 						
+						
+						
 						switch (true) {
 				
 							case (problemDigitRight < 5):
-								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" is "+problemDigitRight+" (4 or lower), the "+problemDigit+" must stay the same.";
+								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" in the "+numberPlaceWords+" place is "+problemDigitRight+" (4 or lower), the "+problemDigit+" (in the "+numberPlaceWords+" place) must stay the same."
 								$scope.helpInstructions3 = "The whole number digits to the right of the rounded value become zeros.";
 								break;
 							case ((problemDigitRight >= 5)&&((parseInt(problemDigit, 10)+1)<10)):
-								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" is "+problemDigitRight+" (5 or higher), the "+problemDigit+" must go up one. It becomes "+(parseInt(problemDigit, 10)+1)+".";
+								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" in the "+numberPlaceWords+" place is "+problemDigitRight+" (5 or higher), the "+problemDigit+" must go up 1. It becomes "+(parseInt(problemDigit, 10)+1)+".";
 								$scope.helpInstructions3 = "The whole number digits to the right of the rounded value become zeros.";
 								break;
 							case ((problemDigitRight >= 5)&&((parseInt(problemDigit, 10)+1)>9)):
-								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" is "+problemDigitRight+" (5 or higher), the "+problemDigit+" must go up one. It becomes "+(parseInt(problemDigit, 10)+1)+". Write '0' in place of the "+problemDigit+" and add one to the column on the left; if necessary, continue to carry and add until there are no further carries." ;
-								$scope.helpInstructions3 = "The whole number digits to the right of the rounded value '0' become zeros.";
+								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" in the "+numberPlaceWords+" place is "+problemDigitRight+" (5 or higher), the "+problemDigit+" must go up 1. It becomes "+(parseInt(problemDigit, 10)+1)+". Write '0' in the "+numberPlaceWords+" place and add one to the number on the left; if necessary, continue to carry and add until there are no further carries." ;
+								$scope.helpInstructions3 = "The whole number digits to the right of the rounded value become zeros.";
 								break;
 							default:
 								break;
