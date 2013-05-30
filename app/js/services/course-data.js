@@ -3497,7 +3497,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\row{\\frac{\\str{3}}{\\str{6}}}{\\sign{=}}{\\frac{\\str{15}}{\\str{X}}',
+                                            problem: '\\rowgrp{\\str{Solve for the missing number.}}{\\row{\\frac{\\str{3}}{\\str{6}}}{\\sign{=}}{\\frac{\\str{15}}{\\str{X}}}',
                                             answer: '\\row{\\str{X \xA0= \xA0}}{\\input{30}}',
                                             controls: {
                                                 "checkAnswer": true,
@@ -3511,7 +3511,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\row{\\frac{\\str{76}}{\\str{X}}}{\\sign{=}}{\\frac{\\str{19}}{\\str{21}}',
+                                            problem: '\\rowgrp{\\str{Solve for the missing number.}}{\\row{\\frac{\\str{76}}{\\str{X}}}{\\sign{=}}{\\frac{\\str{19}}{\\str{21}}}',
                                             answer: '\\row{\\str{X \xA0= \xA0}}{\\input{84}}',
                                             controls: {
                                                 "checkAnswer": true,
@@ -3525,7 +3525,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\row{\\frac{\\str{27}}{\\str{26}}}{\\sign{=}}{\\frac{\\str{X}}{\\str{104}}',
+                                            problem: '\\rowgrp{\\str{Solve for the missing number.}}{\\row{\\frac{\\str{27}}{\\str{26}}}{\\sign{=}}{\\frac{\\str{X}}{\\str{104}}}',
                                             answer: '\\row{\\str{X \xA0= \xA0}}{\\input{108}}',
                                             controls: {
                                                 "checkAnswer": true,
@@ -3539,7 +3539,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\row{\\frac{\\str{25}}{\\str{45}}}{\\sign{=}}{\\frac{\\str{75}}{\\str{X}}',
+                                            problem: '\\rowgrp{\\str{Solve for the missing number.}}{\\row{\\frac{\\str{25}}{\\str{45}}}{\\sign{=}}{\\frac{\\str{75}}{\\str{X}}}',
                                             answer: '\\row{\\str{X \xA0= \xA0}}{\\input{135}}',
                                             controls: {
                                                 "checkAnswer": true,
@@ -3553,7 +3553,7 @@ angular.module('mathSkills.services')
                                     children: [{
                                         title: 'Main Answer',
                                         children: [{
-                                            problem: '\\row{\\frac{\\str{19}}{\\str{38}}}{\\sign{=}}{\\frac{\\str{X}}{\\str{152}}',
+                                            problem: '\\rowgrp{\\str{Solve for the missing number.}}{\\row{\\frac{\\str{19}}{\\str{38}}}{\\sign{=}}{\\frac{\\str{X}}{\\str{152}}}',
                                             answer: '\\row{\\str{X \xA0= \xA0}}{\\input{76}}',
                                             controls: {
                                                 "checkAnswer": true,
