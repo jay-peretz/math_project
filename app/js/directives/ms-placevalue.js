@@ -57,16 +57,25 @@ angular.module('mathSkills')
 							}
 				 };
 				 
-				 var removeTrailingZeros = function (numberArray) {
-					var zerosNumberArray = [];
+				 var adjustTrailingZeros = function (numberArray, tagParamsOne) {
+					var zerosNumberArray = [],
+						oneNotZero = 0,
+						decimalsNumberArray = 0,
+						finalDecimalPlaces = 0,
+						finalPlacesIndex = 0;
 					zerosNumberArray = numberArray.slice();
-					for (var ii = zerosNumberArray.length - 1, oneNotZero = 0; ii >= 0; ii--) {
+					decimalsNumberArray = decimalDigits(numberArray.join(""));
+					finalDecimalPlaces = decimalsNumberArray - (tagParamsOne - 1);
+					finalPlacesIndex = zerosNumberArray.length - (decimalsNumberArray - finalDecimalPlaces);
+				
+					for (var ii = zerosNumberArray.length - 1; ii >= finalPlacesIndex; ii--) {
 						if (zerosNumberArray[ii]!=0) {
 							oneNotZero = 1;
 						} else if (oneNotZero == 0) {
 							zerosNumberArray.pop();
 						}
-					}			
+					}	
+					
 					return zerosNumberArray;
 				}
 				
@@ -97,7 +106,7 @@ angular.module('mathSkills')
 								}
 							} 
 							roundedDecimalArray.splice(problemDecimalIndex,0,".");
-							$scope.decimalAnswerArray = removeTrailingZeros(roundedDecimalArray);
+							$scope.decimalAnswerArray = adjustTrailingZeros(roundedDecimalArray, tagParameters[1]);
 							//remove decimal point if there are no digits to the right of the decimal
 							if (typeof $scope.decimalAnswerArray[$scope.decimalAnswerArray.indexOf(".") + 1] == "undefined") {
 								$scope.decimalAnswerArray.pop();
