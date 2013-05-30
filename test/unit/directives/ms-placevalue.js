@@ -144,4 +144,20 @@ describe('<ms-placevalue>', function () {
 
     });
 	
+	describe('when ms-placevalue tag element is added and rounding is expected after the decimal point at a place that rounds to zero', function () {
+																  
+		beforeEach(inject(function ($rootScope, $compile) {
+			var template = angular.element('<ms-placevalue expected="\\placevalue{7.7195}{2}{showanswer}"></ms-placevalue>');
+			elScope = $rootScope.$new();
+			element = $compile(template)(elScope);
+			$rootScope.$digest();
+		}));
+		
+		// check that number display is working correctly
+		it('"0" should show in the display array at the place where rounding', inject(function ($rootScope) {
+			expect(jQuery(element).find('table:last tr:nth-child(1) td:nth-child(5)').text()).toContain('0')																				
+		}));
+
+    });
+	
 });
