@@ -98,7 +98,7 @@ angular.module('mathSkills')
 						$scope.displayresult = true;
 						$scope.mathdisplay = true;
 					}
-					
+
 					if ($scope.mathdisplay) {
 						
 						problemObjects[0] = Number(tagParameters[2]);
@@ -237,6 +237,9 @@ angular.module('mathSkills')
 						for (var ii = 0, len = productArray.length; ii < len; ii++) {
 							removeLeadingZeros(productArray[ii]);
 						}		
+						
+						$scope.helpTextDecimals = "Add the number of decimal places in the multiplicand to the number of decimal places in the multiplier to obtain the number of decimal places in the answer.";
+						$scope.answerObject = answerObject;
 						
 						$scope.firstArray = [];
 						$scope.secondArray = [];

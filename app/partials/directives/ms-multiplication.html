@@ -1,38 +1,64 @@
 <span ng-hide="mathdisplay">{{inenglishfirst}}</span><span ng-hide="mathdisplay" class="bigger"> &sdot; </span><span ng-hide="mathdisplay">{{inenglishsecond}}</span>
 <span>
-    	<table ng-show="mathdisplay" class="collapseTable td_padding large-font-size">
-			<tr class="tr_height">
-            	<td>
-                </td>
-				<td class='text_align_right' ng-repeat='col in firstArray'>{{col}}
-				</td>
-                <td>
-                </td>
-			</tr>
-			<tr class="tr_height_plus">
-            	<td>
-                	<span>{{sign}}</span>
-                </td>
-				<td class="border-bottom-2px-black text_align_right" ng-repeat='col in secondArray'>{{col}}
-				</td>
-                <td>
-                </td>
-			</tr>
-            <tr ng-repeat='row in thirdArray' class='tr_height'>
-            	<td>
-                </td>
-                <td class='text_align_right' ng-repeat='col in row'>{{col}}
-				</td>
-                <td>
-                </td>
-			</tr>
-            <tr>
-            	<td>
-                </td>
-	            <td class='text_align_right border-top-2px-black tr_height'  ng-repeat='col in fourthArray'>{{col}}
-				</td>
-            	<td>
-                </td>
-            </tr>
-		</table>
+	<table>
+    	<tr>
+        	<td>
+                <table ng-show="mathdisplay" class="collapseTable td_padding large-font-size">
+                    <tr class="tr_height">
+                        <td>
+                        </td>
+                        <td class='text_align_right' ng-repeat='col in firstArray'>{{col}}
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr class="tr_height_plus">
+                        <td>
+                            <span>{{sign}}</span>
+                        </td>
+                        <td class="border-bottom-2px-black text_align_right" ng-repeat='col in secondArray'>{{col}}
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr ng-repeat='row in thirdArray' class='tr_height'>
+                        <td>
+                        </td>
+                        <td class='text_align_right' ng-repeat='col in row'>{{col}}
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td class='text_align_right border-top-2px-black tr_height'  ng-repeat='col in fourthArray'>{{col}}
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table  class="help-answer-text" ng-show="displayresult"> 
+                    <tr>
+                        <td>
+                            <span>{{helpTextDecimals}}</span>
+                        </td>
+                    </tr>  
+                    <tr>
+                    	<td>
+                        	<span>&nbsp;</span>
+                        </td>
+                    </tr>                  
+                    <tr>
+                        <td>
+                            <span ng-hide="helpTextDecimals">Answer: &nbsp;{{answerObject | commas}}</span>
+                            <span ng-show="helpTextDecimals">Answer: &nbsp;{{answerObject}}</span>
+                        </td>
+                    </tr>
+                </table> 
+            </td>
+        </tr>
+    </table>       
 </span>

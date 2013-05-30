@@ -18,11 +18,6 @@ describe('<ms-multiply-wholes>', function () {
 			element = $compile(template)(elScope);
 			$rootScope.$digest();
 		}));
-
-		
-        it('should be present on the page', inject(function ($rootScope) {
-            expect(jQuery(element).find('table').length).toBe(1);
-        }));
 		
 		it('number in 5th td of 1st row of table of the display array should be 9', inject(function ($rootScope) {
 			expect(jQuery(element).find('table tr:nth-child(1) td:nth-child(5)').text()).toContain('9')																				

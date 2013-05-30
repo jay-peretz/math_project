@@ -1445,7 +1445,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{2517}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{839}{3}}{\\css{\\str{Answer:  \xA0}}{help-answer-text}}{\\css{\\str{ 2517}}{label_like}}}'
+													"help": '\\multiplywholes{math}{complete}{839}{3}'
 												}
 											}]
 										}]
@@ -1459,7 +1459,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{3576}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{596}{6}}{\\css{\\str{Answer:  \xA0}}{help-answer-text}}{\\css{\\str{3576}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{596}{6}'
 												}
 											}]
 										}]
@@ -1473,7 +1473,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{25812}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{6453}{4}}{\\css{\\str{Answer:  \xA0}}{help-answer-text}}{\\css{\\str{25812}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{6453}{4}'
 												}
 											}]
 										}]
@@ -1487,7 +1487,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{28343}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{4049}{7}}{\\css{\\str{Answer:  \xA0}}{help-answer-text}}{\\css{\\str{28343}}{label_like}}}'												}
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{4049}{7}'												}
 											}]
 										}]
 									},
@@ -1500,7 +1500,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{7178}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{97}{74}}{\\css{\\str{Answer:  \xA0}}{help-answer-text}}{\\css{\\str{7178}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{97}{74}'
 												}
 											}]
 										}]
@@ -1514,7 +1514,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{986}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{34}{29}}{\\css{\\str{Answer:  \xA0}}{help-answer-text}}{\\css{\\str{986}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{34}{29}'
 												}
 											}]
 										}]
@@ -1528,7 +1528,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{58050}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{645}{90}}{\\css{\\str{Answer:  \xA0}}{help-answer-text}}{\\css{\\str{58050}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{645}{90}'
 												}
 											}]
 										}]
@@ -1542,7 +1542,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{10846}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{374}{29}}{\\css{\\str{Answer:  \xA0}}{help-answer-text}}{\\css{\\str{10846}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{374}{29}'
 												}
 											}]
 										}]
@@ -1556,7 +1556,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{106800}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{300}{356}}{\\css{\\str{Answer:  \xA0}}{help-answer-text}}{\\css{\\str{106800}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{300}{356}'
 												}
 											}]
 										}]
@@ -1570,7 +1570,7 @@ angular.module('mathSkills.services')
 												answer: '\\input{305}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{508}{602}}{\\css{\\str{Answer:  \xA0}}{help-answer-text}}{\\css{\\str{305816}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\multiplywholes{math}{complete}{508}{602}'
                                                 }
                                             }]
                                         }]
@@ -7326,7 +7326,7 @@ title: 'Main Answer',
 												answer: '\\input{56.28}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{8.4}{6.7}}{\\css{\\str{Answer:  56.28}}{help-answer-text}}}'
+													"help": '\\multiplydecimals{math}{complete}{8.4}{6.7}'
 												}
 											}]
 										}]
@@ -7340,7 +7340,7 @@ title: 'Main Answer',
 												answer: '\\input{3.48}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{0.4}{8.7}}{\\css{\\str{Answer:  3.48}}{help-answer-text}}}'
+													"help": '\\multiplydecimals{math}{complete}{0.4}{8.7}'
 												}
 											}]
 										}]
@@ -7354,7 +7354,7 @@ title: 'Main Answer',
 												answer: '\\input{20.01}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{8.7}{2.3}}{\\css{\\str{Answer:  20.01}}{help-answer-text}}}'
+													"help": '\\multiplydecimals{math}{complete}{8.7}{2.3}'
 												}
 											}]
 										}]
@@ -7368,7 +7368,7 @@ title: 'Main Answer',
 												answer: '\\input{5.98}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{2.6}{2.3}}{\\css{\\str{Answer:  5.98}}{help-answer-text}}}'
+													"help": '\\multiplydecimals{math}{complete}{2.6}{2.3}}'
 												}
 											}]
 										}]
@@ -7382,7 +7382,7 @@ title: 'Main Answer',
 												answer: '\\input{29.04}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{6.6}{4.4}}{\\css{\\str{Answer:  29.04}}{help-answer-text}}}'
+													"help": '\\multiplydecimals{math}{complete}{6.6}{4.4}}'
 												}
 											}]
 										}]
@@ -7396,7 +7396,7 @@ title: 'Main Answer',
 												answer: '\\input{12.24}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{3.4}{3.6}}{\\css{\\str{Answer:  12.24}}{help-answer-text}}}'
+													"help": '\\multiplydecimals{math}{complete}{3.4}{3.6}}'
 												}
 											}]
 										}]
@@ -7410,7 +7410,7 @@ title: 'Main Answer',
 												answer: '\\input{6.851}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{5.27}{1.3}}{\\css{\\str{Answer:  6.851}}{help-answer-text}}}'
+													"help": '\\multiplydecimals{math}{complete}{5.27}{1.3}'
 												}
 											}]
 										}]
@@ -7424,7 +7424,7 @@ title: 'Main Answer',
 												answer: '\\input{345.464}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{8.68}{39.8}}{\\css{\\str{Answer:  345.464}}{help-answer-text}}}'
+													"help": '\\multiplydecimals{math}{complete}{8.68}{39.8}'
 												}
 											}]
 										}]
@@ -7438,7 +7438,7 @@ title: 'Main Answer',
 												answer: '\\input{17.172}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{5.4}{3.18}}{\\css{\\str{Answer:  17.172}}{help-answer-text}}}'
+													"help": '\\multiplydecimals{math}{complete}{5.4}{3.18}'
 												}
 											}]
 										}]
@@ -7452,7 +7452,7 @@ title: 'Main Answer',
 												answer: '\\input{5.3098}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecimals{math}{complete}{1.39}{3.82}}{\\css{\\str{Answer:  5.3098}}{help-answer-text}}}'
+													"help": '\\multiplydecimals{math}{complete}{1.39}{3.82}'
 												}
                                             }]
                                         }]

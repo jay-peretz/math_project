@@ -224,6 +224,8 @@ angular.module('mathSkills')
 							}
 						}
 						
+						$scope.answerObject = answerObject;
+						
 						$scope.firstArray = [];
 						$scope.secondArray = [];
 						$scope.thirdArray = [];
