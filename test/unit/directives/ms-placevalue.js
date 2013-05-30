@@ -17,8 +17,8 @@ describe('<ms-placevalue>', function () {
 			$rootScope.$digest();
 		}));
 		
-		it('the display should have text reading "the 2 must stay the same"', inject(function ($rootScope) {
-			expect(jQuery(element).find('table span').text()).toContain('the 2 must stay the same')																				
+		it('the display should have text reading "to the right of the 2 in the Thousands"', inject(function ($rootScope) {
+			expect(jQuery(element).find('table span').text()).toContain('to the right of the 2 in the Thousands')																				
 		}));
 		
 		// check that number display and round place pointer are working correctly
@@ -58,8 +58,8 @@ describe('<ms-placevalue>', function () {
 			$rootScope.$digest();
 		}));
 		
-		it('the display should have text reading "the 5 must go up one."', inject(function ($rootScope) {
-			expect(jQuery(element).find('table span').text()).toContain('the 5 must go up one.')																				
+		it('the display should have text reading "the number to the right of the 5 in the Ones"', inject(function ($rootScope) {
+			expect(jQuery(element).find('table span').text()).toContain('the number to the right of the 5 in the Ones')																				
 		}));
 		
 		// check that number display and round place pointer are working correctly
