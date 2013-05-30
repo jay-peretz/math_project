@@ -155,18 +155,21 @@ angular.module('mathSkills')
 				
 							case (problemDigitRight < 5):
 								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" in the "+numberPlaceWords+" place is "+problemDigitRight+" (4 or lower), the "+problemDigit+" (in the "+numberPlaceWords+" place) must stay the same."
-								$scope.helpInstructions3 = "The whole number digits to the right of the rounded value become zeros.";
 								break;
 							case ((problemDigitRight >= 5)&&((parseInt(problemDigit, 10)+1)<10)):
 								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" in the "+numberPlaceWords+" place is "+problemDigitRight+" (5 or higher), the "+problemDigit+" must go up 1. It becomes "+(parseInt(problemDigit, 10)+1)+".";
-								$scope.helpInstructions3 = "The whole number digits to the right of the rounded value become zeros.";
 								break;
 							case ((problemDigitRight >= 5)&&((parseInt(problemDigit, 10)+1)>9)):
 								$scope.helpInstructions2 = "Since the number to the right of the "+problemDigit+" in the "+numberPlaceWords+" place is "+problemDigitRight+" (5 or higher), the "+problemDigit+" must go up 1. It becomes "+(parseInt(problemDigit, 10)+1)+". Write '0' in the "+numberPlaceWords+" place and add one to the number on the left; if necessary, continue to carry and add until there are no further carries." ;
-								$scope.helpInstructions3 = "The whole number digits to the right of the rounded value become zeros.";
 								break;
 							default:
 								break;
+						}
+						
+						if (problemDecimalIndex >= 0) {
+							$scope.helpInstructions3 = "The digits after the decimal point to the right of the rounded value are dropped.";
+						} else {
+							$scope.helpInstructions3 = "The whole number digits to the right of the rounded value become zeros.";
 						}
 
 					}

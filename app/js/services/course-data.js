@@ -6971,7 +6971,7 @@ title: 'Main Answer',
 												title: 'Main Answer',
 												children: [{
 													problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Tenths place}}}{\\row{\\str{10.9563}}}}',
-													answer: '\\input{11}',
+													answer: '\\input{11.0}',
 													controls: {
 														"checkAnswer": true,
 														"help": '\\placevalue{10.9563}{4}{showanswer}'
@@ -7012,11 +7012,11 @@ title: 'Main Answer',
 											children: [{
 												title: 'Main Answer',
 												children: [{
-													problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Thousands place}}}{\\row{\\str{7716.1}}}}',
-													answer: '\\input{8000}',
+													problem: '\\rowgrp{\\row{\\str{Round this decimal number to the indicated place value: Nearest Thousandths place}}}{\\row{\\str{7.7195}}}}',
+													answer: '\\input{7.720}',
 													controls: {
 														"checkAnswer": true,
-														"help": '\\placevalue{7716.1}{5}{showanswer}'
+														"help": '\\placevalue{7.7195}{2}{showanswer}'
 													}
 												}]
 											}]
