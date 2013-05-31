@@ -7570,7 +7570,7 @@ title: 'Main Answer',
 												answer: '\\input{0.0008062}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\multiplydecpowten{80.62}{0.00001}}{\\css{\\str{Answer:  .0008062}}{help-answer-text help-answer-margin-right}}}'
+													"help": '\\rowgrp{\\row{\\multiplydecpowten{80.62}{0.00001}}{\\css{\\str{Answer:  0.0008062}}{help-answer-text help-answer-margin-right}}}'
 												}
 											}]
 										}]
@@ -7613,11 +7613,11 @@ title: 'Main Answer',
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{3}}{\\fracstr{10}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change \xA0}}{\\frac{\\fracstr{3}}{\\fracstr{10}}}{\\str{\xA0 to a decimal:}}',
 															answer: '\\input{0.3}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\row{\\str{3}}{\\str{ divided by }}{\\str{10}}{\\str{equals}}{\\str{.3}}'
+																"help": '\\rowgrp{\\row{\\str{3}}{\\str{\xA0 divided by \xA0}}{\\str{10}}{\\str{\xA0 equals \xA0}}{\\str{0.3}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.3}}}{help-answer-text help-answer-margin-right}}}}'
 															}
 														}]
 													}]
@@ -7627,11 +7627,12 @@ title: 'Main Answer',
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{4}}{\\fracstr{8}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change \xA0}}{\\frac{\\fracstr{4}}{\\fracstr{8}}}{\\str{\xA0 to a decimal:}}',
 															answer: '\\input{0.5}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\row{\\str{4}}{\\str{ divided by }}{\\str{8}}{\\str{equals}}{\\str{.5}}'
+																"help": '\\rowgrp{\\row{\\str{4}}{\\str{\xA0 divided by \xA0}}{\\str{8}}{\\str{\xA0 equals \xA0}}{\\str{0.5}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.5}}}{help-answer-text help-answer-margin-right}}}}'
+							
 															}
 														}]
 													}]
@@ -7641,11 +7642,12 @@ title: 'Main Answer',
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{6}}{\\fracstr{8}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change \xA0}}{\\frac{\\fracstr{6}}{\\fracstr{8}}}{\\str{\xA0 to a decimal:}}',
 															answer: '\\input{0.75}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\row{\\str{6}}{\\str{ divided by }}{\\str{8}}{\\str{equals}}{\\str{.75}}'
+																"help": '\\rowgrp{\\row{\\str{6}}{\\str{\xA0 divided by \xA0}}{\\str{8}}{\\str{\xA0 equals \xA0}}{\\str{0.75}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.75}}}{help-answer-text help-answer-margin-right}}}}'
+
 															}
 														}]
 													}]
@@ -7655,11 +7657,12 @@ title: 'Main Answer',
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{14}}{\\fracstr{22}}}{\\str{ to a decimal}}',
+															problem: '\\rowgrp{\\row{\\str{Change \xA0}}{\\frac{\\fracstr{14}}{\\fracstr{22}}}{\\str{\xA0 to a decimal;}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round to the hundredths place if necessary.}}}',
 															answer: '\\input{0.64}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\row{\\str{14}}{\\str{ divided by }}{\\str{22}}{\\str{equals}}{\\str{.64}}'
+																"help": '\\rowgrp{\\row{\\str{14}}{\\str{\xA0 divided by \xA0}}{\\str{22}}{\\str{\xA0 equals \xA0}}{\\str{0.636...}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.64}}}{help-answer-text help-answer-margin-right}}}}'
+
 															}
 														}]
 													}]
@@ -7670,11 +7673,11 @@ title: 'Main Answer',
 														title: 'Main Answer',
 														children: [{
 														//	problem: '\\frac{\\str{3}}{\\str{10}}',
-															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{14}}{\\fracstr{24}}}{\\str{ to a decimal}}',
+															problem: '\\rowgrp{\\row{\\str{Change \xA0}}{\\frac{\\fracstr{14}}{\\fracstr{24}}}{\\str{\xA0 to a decimal;}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round to the hundredths place if necessary.}}}',
 															answer: '\\input{0.58}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\row{\\str{14}}{\\str{ divided by }}{\\str{24}}{\\str{equals}}{\\str{.58}}'
+																"help": '\\rowgrp{\\row{\\str{14}}{\\str{\xA0 divided by \xA0}}{\\str{24}}{\\str{\xA0 equals \xA0}}{\\str{0.583...}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.58}}}{help-answer-text help-answer-margin-right}}}}'
 															}
 														}]
 													}]
@@ -7684,11 +7687,11 @@ title: 'Main Answer',
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{17}}{\\fracstr{34}}}{\\str{ to a decimal}}',
+															problem: '\\row{\\str{Change \xA0}}{\\frac{\\fracstr{17}}{\\fracstr{34}}}{\\str{\xA0 to a decimal:}}',
 															answer: '\\input{0.5}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\row{\\str{17}}{\\str{ divided by }}{\\str{34}}{\\str{equals}}{\\str{.5}}'
+																"help": '\\rowgrp{\\row{\\str{17}}{\\str{\xA0 divided by \xA0}}{\\str{34}}{\\str{\xA0 equals \xA0}}{\\str{0.5}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.5}}}{help-answer-text help-answer-margin-right}}}}'
 															}
 														}]
 													}]
@@ -7698,11 +7701,11 @@ title: 'Main Answer',
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{10}}{\\fracstr{15}}}{\\str{ to a decimal}}',
+															problem: '\\rowgrp{\\row{\\str{Change \xA0}}{\\frac{\\fracstr{10}}{\\fracstr{15}}}{\\str{\xA0 to a decimal;}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round to the hundredths place if necessary.}}}',
 															answer: '\\input{0.67}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\row{\\str{10}}{\\str{ divided by }}{\\str{15}}{\\str{equals}}{\\str{.67}}'
+																"help": '\\rowgrp{\\row{\\str{10}}{\\str{\xA0 divided by \xA0}}{\\str{15}}{\\str{\xA0 equals \xA0}}{\\str{0.666...}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.67}}}{help-answer-text help-answer-margin-right}}}}'
 															}
 														}]
 													}]
@@ -7712,11 +7715,11 @@ title: 'Main Answer',
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{12}}{\\fracstr{21}}}{\\str{ to a decimal}}',
+															problem: '\\rowgrp{\\row{\\str{Change \xA0}}{\\frac{\\fracstr{12}}{\\fracstr{21}}}{\\str{\xA0 to a decimal;}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round to the hundredths place if necessary.}}}',
 															answer: '\\input{0.57}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\row{\\str{12}}{\\str{ divided by }}{\\str{21}}{\\str{equals}}{\\str{.57}}'
+																"help": '\\rowgrp{\\row{\\str{12}}{\\str{\xA0 divided by \xA0}}{\\str{21}}{\\str{\xA0 equals \xA0}}{\\str{0.571...}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.57}}}{help-answer-text help-answer-margin-right}}}}'
 															}
 														}]
 													}]
@@ -7726,11 +7729,11 @@ title: 'Main Answer',
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{28}}{\\fracstr{52}}}{\\str{ to a decimal}}',
+															problem: '\\rowgrp{\\row{\\str{Change \xA0}}{\\frac{\\fracstr{28}}{\\fracstr{52}}}{\\str{\xA0 to a decimal;}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round to the hundredths place if necessary.}}}',
 															answer: '\\input{0.54}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\row{\\str{28}}{\\str{ divided by }}{\\str{52}}{\\str{equals}}{\\str{.54}}'
+																"help": '\\rowgrp{\\row{\\str{28}}{\\str{\xA0 divided by \xA0}}{\\str{52}}{\\str{\xA0 equals \xA0}}{\\str{0.538...}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.54}}}{help-answer-text help-answer-margin-right}}}}'
 															}
 														}]
 													}]
@@ -7740,11 +7743,11 @@ title: 'Main Answer',
 													children: [{
 														title: 'Main Answer',
 														children: [{
-															problem: '\\row{\\str{Change }}{\\frac{\\fracstr{6}}{\\fracstr{9}}}{\\str{ to a decimal}}',
+															problem: '\\rowgrp{\\row{\\str{Change \xA0}}{\\frac{\\fracstr{6}}{\\fracstr{9}}}{\\str{\xA0 to a decimal;}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round to the hundredths place if necessary.}}}',
 															answer: '\\input{0.67}',
 															controls: {
 																"checkAnswer": true,
-																"help": '\\row{\\str{6}}{\\str{ divided by }}{\\str{9}}{\\str{equals}}{\\str{.67}}'
+																"help": '\\rowgrp{\\row{\\str{6}}{\\str{\xA0 divided by \xA0}}{\\str{9}}{\\str{\xA0 equals \xA0}}{\\str{0.666...}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.67}}}{help-answer-text help-answer-margin-right}}}}'
 															}
 														}]
 													}]
