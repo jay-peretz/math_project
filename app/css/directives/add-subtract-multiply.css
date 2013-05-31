@@ -42,6 +42,10 @@
 	  -ms-transform: rotate(-45deg);
 	  -o-transform: rotate(-45deg);
 }
+.multiply-dot {
+	font-size: 200%;
+    padding: .5em .5em 0 .5em;
+}
 .borderArrowhead{
 	position: relative;
 	text-align:center;
