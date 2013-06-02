@@ -8729,7 +8729,151 @@ title: 'Main Answer',
 										}]
 									},
 									{
-										title: 'Change a Decimal to a Percent',
+										title: 'Change a Percent to a Decimal',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this fraction percent to a decimal percent:}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{12}}}}{\\str{%}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round the decimal percent to the hundredths place.}}}',
+												answer: '\\row{\\input{1.08}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{12}}}}{\\str{%}}{\\sign{=}}{\\str{1.08%}}{\\css{\\str{Answer:  1.08%}}{help-answer-text help-answer-margin-right}}}'
+												}
+                                            }]
+                                        }]
+                                    }]					
+							}, {
+                                title: '18.4 Change a Fraction to a Percent (directly)',
+                                path: '18.4-change-a-percent-to-a-decimal',
+                                children: [
+                                    									{
+										title: 'Change a Fraction to a Percent (directly)',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this fraction percent to a decimal percent:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{5}}{\\str{7}}}{\\str{%}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round the decimal percent to the hundredths place.}}}',
+												answer: '\\row{\\input{0.71}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\frac{\\str{5}}{\\str{7}}}{\\str{%}}{\\sign{=}}{\\str{0.71%}}{\\css{\\str{Answer:  0.71%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Fraction to a Percent (directly)',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this fraction percent to a decimal percent:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{4}}{\\str{5}}}{\\str{%}}}',
+												answer: '\\row{\\input{0.8}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\frac{\\str{4}}{\\str{5}}}{\\str{%}}{\\sign{=}}{\\str{0.8%}}{\\css{\\str{Answer:  0.8%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Fraction to a Percent (directly)',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this fraction percent to a decimal percent:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{2}}{\\str{3}}}{\\str{%}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round the decimal percent to the hundredths place.}}}',
+												answer: '\\row{\\input{0.67}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\frac{\\str{2}}{\\str{3}}}{\\str{%}}{\\sign{=}}{\\str{0.67%}}{\\css{\\str{Answer:  0.67%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Fraction to a Percent (directly)',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this fraction percent to a decimal percent:}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\str{%}}}',
+												answer: '\\row{\\input{1.25}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\str{%}}{\\sign{=}}{\\str{1.25%}}{\\css{\\str{Answer:  1.25%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Fraction to a Percent (directly)',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this fraction percent to a decimal percent:}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{12}}}}{\\str{%}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round the decimal percent to the hundredths place.}}}',
+												answer: '\\row{\\input{1.08}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{12}}}}{\\str{%}}{\\sign{=}}{\\str{1.08%}}{\\css{\\str{Answer:  1.08%}}{help-answer-text help-answer-margin-right}}}'
+												}
+                                            }]
+                                        }]
+                                    },
+									{
+										title: 'Change a Fraction to a Percent (directly)',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this fraction percent to a decimal percent:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{5}}{\\str{7}}}{\\str{%}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round the decimal percent to the hundredths place.}}}',
+												answer: '\\row{\\input{0.71}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\frac{\\str{5}}{\\str{7}}}{\\str{%}}{\\sign{=}}{\\str{0.71%}}{\\css{\\str{Answer:  0.71%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Fraction to a Percent (directly)',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this fraction percent to a decimal percent:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{4}}{\\str{5}}}{\\str{%}}}',
+												answer: '\\row{\\input{0.8}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\frac{\\str{4}}{\\str{5}}}{\\str{%}}{\\sign{=}}{\\str{0.8%}}{\\css{\\str{Answer:  0.8%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Fraction to a Percent (directly)',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this fraction percent to a decimal percent:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{2}}{\\str{3}}}{\\str{%}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round the decimal percent to the hundredths place.}}}',
+												answer: '\\row{\\input{0.67}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\frac{\\str{2}}{\\str{3}}}{\\str{%}}{\\sign{=}}{\\str{0.67%}}{\\css{\\str{Answer:  0.67%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Fraction to a Percent (directly)',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change this fraction percent to a decimal percent:}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\str{%}}}',
+												answer: '\\row{\\input{1.25}}{\\str{%}}',
+												controls: {
+													"checkAnswer": true,
+													"help": '\\rowgrp{\\row{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\str{%}}{\\sign{=}}{\\str{1.25%}}{\\css{\\str{Answer:  1.25%}}{help-answer-text help-answer-margin-right}}}'
+												}
+											}]
+										}]
+									},
+									{
+										title: 'Change a Fraction to a Percent (directly)',
 										children: [{
 											title: 'Main Answer',
 											children: [{
