@@ -9122,12 +9122,19 @@ title: 'Main Answer',
 													"checkAnswer": true,
 													"help": '\\rowgrp{\\row{\\str{11% \xA0 = \xA0}}{\\frac{\\fracstr{11}}{\\fracstr{100}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{11}}{\\fracstr{100}}}{help-answer-text-tight}}}'
 												}
-											},{
-												problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.9}}}',
-												answer: '\\row{\\input{90}}{\\str{%}}',
+											}]
+										}]
+									},
+									{
+										title: 'Change a Percent to a Fraction (Directly)',
+										children: [{
+											title: 'Main Answer',
+											children: [{
+												problem: '\\rowgrp{\\row{\\str{Change the percent into a fraction (reduced to lowest terms:}}}{\\row{\\str{\xA0}}}{\\row{\\str{44%}}',
+												answer: '\\frac{\\input{11}}{\\input{25}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\percentarrows{0.9}{100}{decimal}{percent}}{\\css{\\str{Answer:  90%}}{help-answer-text help-answer-margin-right}}}'
+													"help": '\\rowgrp{\\row{\\str{44%}}{\\str{ \xA0 = \xA0}}{\\frac{\\fracstr{44}}{\\fracstr{100}}}{\\str{ \xA0 = \xA0}}{\\frac{\\fracstr{11}}{\\fracstr{25}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{11}}{\\fracstr{25}}}{help-answer-text-tight}}}'
 												}
 											}]
 										}]
@@ -9137,18 +9144,11 @@ title: 'Main Answer',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{67}}{\\str{100}}}',
-												answer: '\\input{0.67}',
+												problem: '\\rowgrp{\\row{\\str{Change the percent into a fraction (reduced to lowest terms:}}}{\\row{\\str{\xA0}}}{\\row{\\str{35%}}',
+												answer: '\\frac{\\input{7}}{\\input{25}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{67}}{\\str{100}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-												}
-											},{
-												problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.67}}}',
-												answer: '\\row{\\input{67}}{\\str{%}}',
-												controls: {
-													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\percentarrows{0.67}{100}{decimal}{percent}}{\\css{\\str{Answer:  67%}}{help-answer-text help-answer-margin-right}}}'
+													"help": '\\rowgrp{\\row{\\str{35%}}{\\str{ \xA0 = \xA0}}{\\frac{\\fracstr{35}}{\\fracstr{100}}}{\\str{ \xA0 = \xA0}}{\\frac{\\fracstr{7}}{\\fracstr{25}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{7}}{\\fracstr{25}}}{help-answer-text-tight}}}'
 												}
 											}]
 										}]
@@ -9158,18 +9158,11 @@ title: 'Main Answer',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{5}}{\\str{10}}}',
-												answer: '\\input{0.5}',
+												problem: '\\rowgrp{\\row{\\str{Change the percent into a fraction (reduced to lowest terms:}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{8}}}}{\\str{%}}}}',
+												answer: '\\frac{\\input{9}}{\\input{800}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{5}}{\\str{10}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-												}
-											},{
-												problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.5}}}',
-												answer: '\\row{\\input{50}}{\\str{%}}',
-												controls: {
-													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\percentarrows{0.5}{100}{decimal}{percent}}{\\css{\\str{Answer:  50%}}{help-answer-text help-answer-margin-right}}}'
+													"help": '\\rowgrp{\\row{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{8}}}}{\\str{%}}{\\str{\xA0 = \xA0}}{\\frac{\\fracstr{9}}{\\fracstr{800}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{9}}{\\fracstr{800}}}{help-answer-text-tight}}}'
 												}
 											}]
 										}]
@@ -9179,39 +9172,11 @@ title: 'Main Answer',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{29}}{\\str{50}}}',
-												answer: '\\input{0.58}',
+												problem: '\\rowgrp{\\row{\\str{Change the percent into a fraction (reduced to lowest terms:}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\str{%}}}}',
+												answer: '\\frac{\\input{1}}{\\input{80}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{29}}{\\str{50}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-												}
-											},{
-												problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.58}}}',
-												answer: '\\row{\\input{58}}{\\str{%}}',
-												controls: {
-													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\percentarrows{0.58}{100}{decimal}{percent}}{\\css{\\str{Answer:  58%}}{help-answer-text help-answer-margin-right}}}'
-												}
-											}]
-										}]
-									},
-									{
-										title: 'Change a Percent to a Fraction (Directly)',
-										children: [{
-											title: 'Main Answer',
-											children: [{
-												problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{38}}{\\str{20}}}',
-												answer: '\\input{1.9}',
-												controls: {
-													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{38}}{\\str{20}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-												}
-											},{
-												problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{1.9}}}',
-												answer: '\\row{\\input{190}}{\\str{%}}',
-												controls: {
-													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\percentarrows{1.9}{100}{decimal}{percent}}{\\css{\\str{Answer:  190%}}{help-answer-text help-answer-margin-right}}}'
+													"help": '\\rowgrp{\\row{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\str{%}}{\\str{\xA0 = \xA0}}{\\frac{\\fracstr{5}}{\\fracstr{400}}}{\\str{\xA0 = \xA0}}{\\frac{\\fracstr{1}}{\\fracstr{80}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{1}}{\\fracstr{80}}}{help-answer-text-tight}}}'
 												}
 											}]
                                         }]
@@ -9221,18 +9186,11 @@ title: 'Main Answer',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{79}}{\\str{160}}}',
-												answer: '\\input{0.49375}',
+												problem: '\\rowgrp{\\row{\\str{Change the percent into a fraction (reduced to lowest terms:}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{7}}{\\fracstr{8}}}}{\\str{%}}}}',
+												answer: '\\frac{\\input{3}}{\\input{160}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{79}}{\\str{160}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-												}
-											},{
-												problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.49375}}}',
-												answer: '\\row{\\input{49.375}}{\\str{%}}',
-												controls: {
-													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\percentarrows{0.49375}{100}{decimal}{percent}}{\\css{\\str{Answer:  49.375%}}{help-answer-text help-answer-margin-right}}}'
+													"help": '\\rowgrp{\\row{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{7}}{\\fracstr{8}}}}{\\str{%}}{\\str{\xA0 = \xA0}}{\\frac{\\fracstr{15}}{\\fracstr{800}}}{\\str{\xA0 = \xA0}}{\\frac{\\fracstr{3}}{\\fracstr{160}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{3}}{\\fracstr{160}}}{help-answer-text-tight}}}'
 												}
 											}]
 										}]
@@ -9242,18 +9200,18 @@ title: 'Main Answer',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{71}}{\\str{160}}}',
-												answer: '\\input{0.44375}',
+												problem: '\\rowgrp{\\row{\\str{Write the decimal percent as a percent in mixed number form:}}}{\\row{\\str{\xA0}}}{\\row{\\str{8.1%}}',
+												answer: '\\grp{\\mixed{\\input{8}}{\\frac{\\input{1}}{\\input{10}}}}{\\str{%}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{71}}{\\str{160}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
+													"help": '\\rowgrp{\\row{\\str{8.1%}}{\\str{\xA0 = \xA0}}{\\mixed{\\fracstr{8}}{\\frac{\\fracstr{1}}{\\fracstr{10}}}}{\\str{%}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\fracstr{8}}{\\frac{\\fracstr{1}}{\\fracstr{10}}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
 												}
 											},{
-												problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.44375}}}',
-												answer: '\\row{\\input{44.375}}{\\str{%}}',
+												problem: '\\rowgrp{\\row{\\str{Change the percent into the equivalent fraction:}}}{\\row{\\str{\xA0}}}{\\row{\\str{8.1%}}{\\str{\xA0 = \xA0}}{\\mixed{\\fracstr{8}}{\\frac{\\fracstr{1}}{\\fracstr{10}}}}{\\str{%}}',
+												answer: '\\frac{\\input{81}}{\\input{1000}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\percentarrows{0.44375}{100}{decimal}{percent}}{\\css{\\str{Answer:  44.375%}}{help-answer-text help-answer-margin-right}}}'
+													"help": '\\rowgrp{\\row{\\str{8.1%}}{\\str{\xA0 = \xA0}}{\\mixed{\\fracstr{8}}{\\frac{\\fracstr{1}}{\\fracstr{10}}}}{\\str{%}}{\\str{\xA0 = \xA0}}{\\frac{\\fracstr{81}}{\\fracstr{1000}}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{81}}{\\fracstr{1000}}}{help-answer-text-tight}}'
 												}
 											}]
 										}]
@@ -9263,18 +9221,18 @@ title: 'Main Answer',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{771}}{\\str{800}}}',
-												answer: '\\input{0.96375}',
+												problem: '\\rowgrp{\\row{\\str{Write the decimal percent as a percent in mixed number form:}}}{\\row{\\str{\xA0}}}{\\row{\\str{3.6%}}',
+												answer: '\\grp{\\mixed{\\input{3}}{\\frac{\\input{3}}{\\input{5}}}}{\\str{%}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{771}}{\\str{800}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
+													"help": '\\rowgrp{\\row{\\str{3.6%}}{\\str{\xA0 = \xA0}}{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{6}}{\\fracstr{10}}}}{\\str{%}}{\\str{\xA0 = \xA0}}{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}{\\str{%}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
 												}
 											},{
-												problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.96375}}}',
-												answer: '\\row{\\input{96.375}}{\\str{%}}',
+												problem: '\\rowgrp{\\row{\\str{Change the percent into the equivalent fraction:}}}{\\row{\\str{\xA0}}}{\\row{\\str{3.6%}}{\\str{\xA0 = \xA0}}{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}{\\str{%}}',
+												answer: '\\frac{\\input{9}}{\\input{250}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\percentarrows{0.96375}{100}{decimal}{percent}}{\\css{\\str{Answer:  96.375%}}{help-answer-text help-answer-margin-right}}}'
+													"help": '\\rowgrp{\\row{\\str{3.6%}}{\\str{\xA0 = \xA0}}{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}{\\str{%}}{\\str{\xA0 = \xA0}}{\\frac{\\fracstr{18}}{\\fracstr{500}}}{\\str{\xA0 = \xA0}}{\\frac{\\fracstr{9}}{\\fracstr{250}}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{9}}{\\fracstr{250}}}{help-answer-text-tight}}'
 												}
 											}]
 										}]
@@ -9284,18 +9242,18 @@ title: 'Main Answer',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{2}}{\\str{125}}}',
-												answer: '\\input{0.016}',
+												problem: '\\rowgrp{\\row{\\str{Write the decimal percent as a percent in mixed number form:}}}{\\row{\\str{\xA0}}}{\\row{\\str{2.3%}}',
+												answer: '\\grp{\\mixed{\\input{2}}{\\frac{\\input{3}}{\\input{10}}}}{\\str{%}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{2}}{\\str{125}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
+													"help": '\\rowgrp{\\row{\\str{2.3%}}{\\str{\xA0 = \xA0}}{\\mixed{\\fracstr{2}}{\\frac{\\fracstr{3}}{\\fracstr{10}}}}{\\str{%}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\fracstr{2}}{\\frac{\\fracstr{3}}{\\fracstr{10}}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
 												}
 											},{
-												problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.016}}}',
-												answer: '\\row{\\input{1.6}}{\\str{%}}',
+												problem: '\\rowgrp{\\row{\\str{Change the percent into the equivalent fraction:}}}{\\row{\\str{\xA0}}}{\\row{\\str{2.3%}}{\\str{\xA0 = \xA0}}{\\mixed{\\fracstr{2}}{\\frac{\\fracstr{3}}{\\fracstr{10}}}}{\\str{%}}',
+												answer: '\\frac{\\input{23}}{\\input{1000}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\percentarrows{0.016}{100}{decimal}{percent}}{\\css{\\str{Answer:  1.6%}}{help-answer-text help-answer-margin-right}}}'
+													"help": '\\rowgrp{\\row{\\str{2.3%}}{\\str{\xA0 = \xA0}}{\\mixed{\\fracstr{2}}{\\frac{\\fracstr{3}}{\\fracstr{10}}}}{\\str{%}}{\\str{\xA0 = \xA0}}{\\frac{\\fracstr{23}}{\\fracstr{1000}}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{23}}{\\fracstr{1000}}}{help-answer-text-tight}}'
 												}
 											}]
 										}]
@@ -9305,18 +9263,18 @@ title: 'Main Answer',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{189}}{\\str{200}}}',
-												answer: '\\input{0.945}',
+												problem: '\\rowgrp{\\row{\\str{Write the decimal percent as a percent in mixed number form:}}}{\\row{\\str{\xA0}}}{\\row{\\str{3.5%}}',
+												answer: '\\grp{\\mixed{\\input{3}}{\\frac{\\input{1}}{\\input{2}}}}{\\str{%}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{189}}{\\str{200}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
+													"help": '\\rowgrp{\\row{\\str{3.5%}}{\\str{\xA0 = \xA0}}{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\str{%}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
 												}
 											},{
-												problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.945}}}',
-												answer: '\\row{\\input{94.5}}{\\str{%}}',
+												problem: '\\rowgrp{\\row{\\str{Change the percent into the equivalent fraction:}}}{\\row{\\str{\xA0}}}{\\row{\\str{3.5%}}{\\str{\xA0 = \xA0}}{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\str{%}}',
+												answer: '\\frac{\\input{7}}{\\input{200}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\percentarrows{0.945}{100}{decimal}{percent}}{\\css{\\str{Answer:  94.5%}}{help-answer-text help-answer-margin-right}}}'
+													"help": '\\rowgrp{\\row{\\str{3.5%}}{\\str{\xA0 = \xA0}}{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\str{%}}{\\str{\xA0 = \xA0}}{\\frac{\\fracstr{7}}{\\fracstr{200}}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{7}}{\\fracstr{200}}}{help-answer-text-tight}}'
 												}
 											}]
                                         }]
