@@ -34,7 +34,7 @@ angular.module('mathSkills')
                                 };
 
                             if (parsedExpected[0] === '[') {
-                                var possibleAnswers = JSON.parse(parsedExpected);
+                                var possibleAnswers = JSON.parse(parsedExpected).map(String);
                                 var answerIndex = possibleAnswers.indexOf($scope.answer);
                                 if (answerIndex !== -1) {
                                     var correctAnswerIndex = panelGroupData.index(answerIndex);

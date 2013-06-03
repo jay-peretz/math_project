@@ -1,0 +1,25 @@
+ms-find-lcm table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+ms-find-lcm .dividend {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    padding: 10px;
+}
+ms-find-lcm .noborder .dividend {
+    border: none;
+}
+ms-find-lcm .divisor {
+    padding: 10px 20px 0 0;
+}
+ms-find-lcm input {
+    width: 40px;
+}
+ms-find-lcm .factoring {
+    width: 40px;
+    display: inline-block;
+}
+ms-find-lcm ms-input label span {
+    display: none;
+}
