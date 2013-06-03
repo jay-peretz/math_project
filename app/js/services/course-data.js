@@ -4131,7 +4131,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{1}}{\\str{4}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
-												answer: '\\input{\\str{4}}',
+												answer: '\\input{4}',
 												controls: {
 													"checkAnswer": true,
 													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{1}}{\\str{4}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{4}}{\\str{1}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\str{ 4}}{label_like}}}}'
@@ -4187,7 +4187,7 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{1}}{\\str{2}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
-												answer: '\\input{\\str{2}}',
+												answer: '\\input{2}',
 												controls: {
 													"checkAnswer": true,
 													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{1}}{\\str{2}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{2}}{\\str{1}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\str{ 2}}{label_like}}}}'
