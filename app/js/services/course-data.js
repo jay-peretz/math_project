@@ -9109,11 +9109,11 @@ title: 'Main Answer',
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{9}}{\\str{10}}}',
-												answer: '\\input{0.9}',
+												problem: '\\rowgrp{\\row{\\str{Change the percent into a fraction (reduced to lowest terms:}}}{\\row{\\str{\xA0}}}{\\row{\\str{11%}}',
+												answer: '\\frac{\\input{11}}{\\input{100}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{9}}{\\str{10}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
+													"help": '\\rowgrp{\\row{\\str{11% \xA0 = \xA0}}{\\frac{\\fracstr{11}}{\\fracstr{100}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{11}}{\\fracstr{100}}}{help-answer-text-tight}}}'
 												}
 											},{
 												problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.9}}}',
