@@ -33,7 +33,7 @@ angular.module('mathSkills')
                     
                     function branch () { 
                         if ($scope.expectedArgs[1][0] === '[') {
-                            if (feedbackData.getPrevious()){
+                            if (feedbackData.getPreviousResult()){
                                 $scope.instructions1 = JSON.parse($scope.expectedArgs[1])[1]; 
                             }else {
                                 $scope.instructions1 = JSON.parse($scope.expectedArgs[1])[0];  
