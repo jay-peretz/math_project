@@ -3,12 +3,12 @@
 angular.module('mathSkills') 
 	.config(['parserProvider', function (parserProvider) {
         parserProvider.register('percentarrows', {
-            directiveTemplate: '<ms-percent-convert-arrows expected={{expected}}></ms-percent-convert-arrows>'
+            directiveTemplate: '<ms-percent-arrows expected={{expected}}></ms-percent-arrows>'
         });
     }])
 	// decimaltopercent receives four parameters:  a decimal number to convert, a multiplier for conversion (e.g. 100),
 	// the name of the type converted from (e.g., decimal), and the name of the type converted to (e.g., percentage)
-  .directive('msPercentConvertArrows', [
+  .directive('msPercentArrows', [
 	'parser',
 	function (parser) {
 		return {
