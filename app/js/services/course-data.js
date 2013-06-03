@@ -4145,10 +4145,10 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{2}}{\\str{3}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
-												answer: '\\mixed{\\input{1}}{\\frac{\\input{1}}{\\input{2}}}',
+												answer: '\\frac{\\input{3}}{\\input{2}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{2}}{\\str{3}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{3}}{\\str{2}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{2}}{\\str{3}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{3}}{\\str{2}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\frac{\\str{3}}{\\str{2}}}{label_like}}}'
 												}
 											}]
 										}]
@@ -4159,10 +4159,10 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{9}}{\\str{10}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
-												answer: '\\mixed{\\input{1}}{\\frac{\\input{1}}{\\input{9}}}',
+												answer: '\\frac{\\input{10}}{\\input{9}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{9}}{\\str{10}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{10}}{\\str{9}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{9}}}}{label_like}}}'										
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{9}}{\\str{10}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{10}}{\\str{9}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\frac{\\str{10}}{\\str{9}}}{label_like}}}'										
 													}
 											}]
 										}]
@@ -4173,10 +4173,10 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{13}}{\\str{30}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
-												answer: '\\mixed{\\input{2}}{\\frac{\\input{4}}{\\input{13}}}',
+												answer: '\\frac{\\input{30}}{\\input{13}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{13}}{\\str{30}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{30}}{\\str{13}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\str{2}}{\\frac{\\fracstr{4}}{\\fracstr{13}}}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{13}}{\\str{30}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{30}}{\\str{13}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\frac{\\str{30}}{\\str{13}}}{label_like}}}'
 												}
 											}]
 										}]
@@ -4200,11 +4200,11 @@ angular.module('mathSkills.services')
 										children: [{
 											title: 'Main Answer',
 											children: [{
-												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{9}}{\\str{10}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
-												answer: '\\mixed{\\input{1}}{\\frac{\\input{1}}{\\input{9}}}',
+												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{3}}{\\str{10}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
+												answer: '\\frac{\\input{10}}{\\input{3}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{9}}{\\str{10}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{10}}{\\str{9}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{9}}}}{label_like}}}'		
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{3}}{\\str{10}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{10}}{\\str{3}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\frac{\\str{10}}{\\str{3}}}{label_like}}}'		
 												}
 											}]
 										}]
@@ -4229,10 +4229,10 @@ angular.module('mathSkills.services')
 											title: 'Main Answer',
 											children: [{
 												problem: '\\rowgrp{\\row{\\str{What is the reciprocal of \xA0}}{\\frac{\\str{3}}{\\str{4}}}{\\str{ ?}}}{\\row{\\str{Simplify if necessary.}}}}',
-												answer: '\\mixed{\\input{1}}{\\frac{\\input{1}}{\\input{3}}}',
+												answer: '\\frac{\\input{4}}{\\input{3}}',
 												controls: {
 													"checkAnswer": true,
-													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{3}}{\\str{4}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{4}}{\\str{3}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{label_like}}}'
+													"help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{3}}{\\str{4}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{4}}{\\str{3}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\frac{\\str{4}}{\\str{3}}}{label_like}}}'
 												}
 											}]
 										}]
