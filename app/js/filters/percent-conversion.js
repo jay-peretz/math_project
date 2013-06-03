@@ -138,6 +138,8 @@ angular.module('mathSkills')
 						} else {
 							decimalNotPercent = ((tagsNumerator/tagsDenominator).toFixed(5));
 						}
+
+						tagsWhole = tagsWhole + Math.floor(tagsNumerator/tagsDenominator);
 						decimalNotPercent = tagsWhole + decimalNotPercent.toString().substring(decimalNotPercent.toString().indexOf('.'));
 						percentAsFraction = {numerator: tagsNumerator, denominator: tagsDenominator};
 						decimalAsPercent = ([decimalNotPercent * (100)]);

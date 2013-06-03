@@ -77,13 +77,13 @@ angular.module('mathSkills')
 						
 						answerObject = $filter('multiply-decimals')(problemObjects);
 						answerString = answerObject.toString();
-						
+					
 						// get the number of digits in the multiplicand and multiplier
 						multiplicandDigits = problemObjects[0].toString().length;
 						multiplierDigits = problemObjects[1].toString().length;
 						
 						// get the maximum number of digits
-						maxAnswerDigits = answerObject.toString().length;
+						maxAnswerDigits = answerString.length;
 						
 						var decimalDigits = function (num) {
 							if (num.toString().indexOf('.') > 0) {
@@ -96,10 +96,10 @@ angular.module('mathSkills')
 						// get the maximum number of digits right and left of the answer decimal place
 						
 						answerPlacesRight = decimalDigits(answerObject);
-						if (answerObject.toString().indexOf('.') > 0) {
-							answerPlacesLeft = answerObject.toString().length - (answerPlacesRight + 1);
+						if (answerString.indexOf('.') > 0) {
+							answerPlacesLeft = answerString.length - (answerPlacesRight + 1);
 						} else {
-							answerPlacesLeft = answerObject.toString().length;
+							answerPlacesLeft = answerString.length;
 						}
 						
 						// get the maximum number of digits right and left of the multiplier decimal place
@@ -128,9 +128,12 @@ angular.module('mathSkills')
 							numberDisplayArray[ii] = $filter('decimal-to-display-array')(problemObjects[ii], answerPlacesLeft, answerPlacesRight);
 						}
 						answerDisplayArray = $filter('decimal-to-display-array')(answerObject, answerPlacesLeft, answerPlacesRight, 1);
-						
+						// account for case where decimal has zero in the tens place
+						if (typeof problemObjects[0].toString().charAt(problemObjects[0].toString().indexOf('.') + 1) !== "undefined" && problemObjects[0].toString().charAt(problemObjects[0].toString().indexOf('.') + 1) == 0) {
+							answerDisplayArray.unshift("0");
+							answerPlacesLeft = answerPlacesLeft + 1;
+						}
 
-		
 						$scope.decimalPointerArray = [];
 						$scope.borderBelowArray = [];
 						
