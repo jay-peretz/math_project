@@ -77,7 +77,7 @@ angular.module('mathSkills').value('data6_3', {
                 answer: '\\row{\\str{X \xA0= \xA0}}{\\input{30}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\css{\\rowgrp{\\html{3 · X\xA0 = \xA06 · 15<br><br>}}{\\html{X\xA0 = \xA0(6 · 15)\xA0 \xF7 \xA03<br><br>}}{\\html{X\xA0 = \xA030}}}{center-tr-txt}'
+                    "help": '\\css{\\rowgrp{\\html{3 · X\xA0 = \xA06 · 15<br><br>}}{\\html{3 · X\xA0 = \xA0 90<br><br>}}{\\html{X\xA0 = \xA0 90 \xA0 \xF7 \xA03<br><br>}}{\\html{X\xA0 = \xA030}}}{center-tr-txt}'
                 }
             }]
         }]
@@ -90,7 +90,7 @@ angular.module('mathSkills').value('data6_3', {
                 answer: '\\row{\\str{X \xA0= \xA0}}{\\input{84}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\css{\\rowgrp{\\html{76 · 21\xA0 = \xA0X · 19<br><br>}}{\\html{(76 · 21)\xA0 \xF7 \xA019 = X<br><br>}}{\\html{84\xA0 = \xA0X}}}{center-tr-txt}'
+                    "help": '\\css{\\rowgrp{\\html{76 · 21\xA0 = \xA0X · 19<br><br>}}{\\html{ 1596 \xA0  = \xA0X · 19<br><br>}}{\\html{ 1596 \xA0 \xF7 \xA019 = X<br><br>}}{\\html{84\xA0 = \xA0X}}}{center-tr-txt}'
                 }
             }]
         }]
@@ -103,7 +103,7 @@ angular.module('mathSkills').value('data6_3', {
                 answer: '\\row{\\str{X \xA0= \xA0}}{\\input{108}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\css{\\rowgrp{\\html{\xA0 27 · 104\xA0 = \xA026 · X<br><br>}}{\\html{(27 · 104)\xA0 \xF7 \xA026 =\xA0X<br><br>}}{\\html{\xA0 108\xA0 = \xA0X}}}{center-tr-txt}'
+                    "help": '\\css{\\rowgrp{\\html{\xA0 27 · 104\xA0 = \xA026 · X<br><br>}}{\\html{\xA0 2808 \xA0 = \xA026 · X<br><br>}}{\\html{ 2808  \xA0 \xF7 \xA026 =\xA0X<br><br>}}{\\html{\xA0 108\xA0 = \xA0X}}}{center-tr-txt}'
                 }
             }]
         }]
@@ -116,7 +116,7 @@ angular.module('mathSkills').value('data6_3', {
                 answer: '\\row{\\str{X \xA0= \xA0}}{\\input{135}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\css{\\rowgrp{\\html{25 · X\xA0 = \xA045 · 75<br><br>}}{\\html{X\xA0 = \xA0(45 · 75)\xA0 \xF7 \xA025<br><br>}}{\\html{X\xA0 = \xA0135}}}{center-tr-txt}'
+                    "help": '\\css{\\rowgrp{\\html{25 · X\xA0 = \xA045 · 75<br><br>}}{\\html{25 · X\xA0 = \xA0 3375 <br><br>}}{\\html{X\xA0 = \xA0 3375 \xA0 \xF7 \xA025<br><br>}}{\\html{X\xA0 = \xA0135}}}{center-tr-txt}'
                 }
             }]
         }]
@@ -129,7 +129,7 @@ angular.module('mathSkills').value('data6_3', {
                 answer: '\\row{\\str{X \xA0= \xA0}}{\\input{76}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\css{\\rowgrp{\\html{19 · 152\xA0 = \xA038 · X<br><br>}}{\\html{(19 · 152)\xA0 \xF7 \xA038\xA0 = \xA0X<br><br>}}{\\html{\xA0 76\xA0 = \xA0X}}}{center-tr-txt}'
+                    "help": '\\css{\\rowgrp{\\html{19 · 152\xA0 = \xA038 · X<br><br>}}{\\html{ 2888 \xA0 = \xA038 · X<br><br>}}{\\html{ 2888 \xA0 \xF7 \xA038\xA0 = \xA0X<br><br>}}{\\html{\xA0 76\xA0 = \xA0X}}}{center-tr-txt}'
                 }
             }]
         }]
