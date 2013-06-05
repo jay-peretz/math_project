@@ -115,23 +115,29 @@ angular.module('mathSkills')
                     // If this event has not been marked as ignored.
                     if (e.defaultPrevented === false) {
                         // Check if we can set our answer to expected.
-                        if ($scope.answer !== $scope.answercorrect) {  var parsedExpected = parser.extractTag($scope.expected).args[0];
-                            if (parsedExpected[0] === '[') {
-                                var possibleAnswers = JSON.parse(parsedExpected);
-                                panelGroupData.getIndex().then(function (index) {
-                                    $scope.answer = possibleAnswers[index];
-                                });
-                            } else {
-                                // Strip out the tag part of $scope.expected and extract the value.
-                                $scope.answer = $scope.answercorrect; 
-                            }
-                            $scope.$emit('helped', {
-                                controllerId: $scope.controllerId
+                        var parsedExpected = parser.extractTag($scope.expected).args[0],
+                            correctAnswer = "",
+                            handleHelp = function () {
+                                if ($scope.answer !== correctAnswer) {  
+                                    $scope.answer = correctAnswer; 
+                                    $scope.$emit('helped', {
+                                        controllerId: $scope.controllerId
+                                    });
+                                } else {
+                                    $scope.$emit('notHelped', {
+                                        controllerId: $scope.controllerId
+                                    });
+                                }    
+                            };
+                        if (parsedExpected[0] === '[') {
+                            var possibleAnswers = JSON.parse(parsedExpected);
+                            panelGroupData.getIndex().then(function (index) {
+                                correctAnswer = possibleAnswers[index];
+                                handleHelp();
                             });
-                        } else {
-                            $scope.$emit('notHelped', {
-                                controllerId: $scope.controllerId
-                            });
+                        } else{
+                            correctAnswer = $scope.answercorrect;
+                            handleHelp();
                         }
                     }
                 });
