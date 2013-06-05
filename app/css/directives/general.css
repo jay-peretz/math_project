@@ -18,3 +18,7 @@
 .blue-text{
     color: #0088cc;
 }
+/* add margin to avoid charts that are wider than the problem panel   */
+.buttonsright {
+	margin-left:50px;
+}
