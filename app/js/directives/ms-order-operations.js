@@ -65,7 +65,7 @@ angular.module('mathSkills')
                         case 'parens': return '\\str{' + op.value.toString() + '}';
                         case 'operator':
                             if (index === $scope.index) {
-                                return '\\rowgrp{\\str{' + convertSigns(op.value) + '}}{\\html{&#9660;}}{\\input{' + Expression.evalQueueValue($scope.currentExpression) + '}}';
+                                return '\\col{\\str{' + convertSigns(op.value) + '}}{\\html{&#9660;}}{\\input{' + Expression.evalQueueValue($scope.currentExpression) + '}}';
                             } else {
                                 return '\\but{' + convertSigns(op.value) + '}{' + (op.operation === $scope.evalQueue[0].operator.operation ? 'T' : 'F') + '}';
                             }
