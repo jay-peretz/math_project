@@ -1,3 +1,7 @@
+.centerTableText4 table tr td {
+	width: 4em;
+	text-align: center;
+}
 .arrowheadRight {
 	  position: relative;
 	  width: 0;
@@ -42,10 +46,6 @@
 	  -ms-transform: rotate(-45deg);
 	  -o-transform: rotate(-45deg);
 }
-.multiply-dot {
-	font-size: 200%;
-    padding: .5em .5em 0 .5em;
-}
 .borderArrowhead{
 	position: relative;
 	text-align:center;
@@ -87,6 +87,10 @@
 }
 .help-answer-margin-right {
 	margin-right: 50px;
+}
+.multiply-dot {
+	font-size: 200%;
+    padding: .5em .5em 0 .5em;
 }
 .paddingHalfSubtract {
 	padding-left:8px;

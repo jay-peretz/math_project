@@ -7604,12 +7604,12 @@ title: 'Main Answer',
                             title: '10.3 Adding Mixed Numbers',
                             path: '10.3-adding-mixed-numbers',
                             children: [{
-                                title: 'Subtracting Unlike Fractions',
+                                title: 'Adding Mixed Numbers',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
-                                        problem: '\\row{\\frac{\\str{4}}{\\str{5}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{3}}{\\str{4}}}{\\sign{\xA0 \xA0 = \xA0}}',
-                                        answer: '\\row{\\frac{\\input{1}}{\\input{20}}}',
+                                        problem: '\xA0',
+                                        answer: '\\css{\\rowgrp{\\row{\\sign{\xA0 \xA0  \xA0 \xA0}}{\\frac{\\str{4}}{\\str{5}}}}{\\row{\\str{\xA0}}}{\\row{\\sign{\xA0 \xA0 + \xA0}}{\\frac{\\str{3}}{\\str{4}}}}{\\row{\\str{\xA0}}}{\\row{\\sign{\xA0 \xA0 \xA0 \xA0 \xA0}}{\\frac{\\input{31}}{\\input{20}}}}}{centerTableText4}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false,
@@ -7619,22 +7619,22 @@ title: 'Main Answer',
                                 }, {
                                     title: 'Workbook',
                                     children: [{
-                                        problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}{\\row{\\frac{\\fracstr{4}}{\\fracstr{5}}}{\\row{\\sign{\xA0 + \xA0}}}{\\frac{\\fracstr{3}}{\\fracstr{4}}}}',
-                                        answer: '\\input{20}',
+                                        problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}',
+                                        answer: '\\css{\\rowgrp{\\row{\\sign{\xA0 \xA0  \xA0 \xA0}}{\\frac{\\str{4}}{\\str{5}}}}{\\row{\\str{\xA0}}}{\\row{\\sign{\xA0 \xA0 + \xA0}}{\\frac{\\str{3}}{\\str{4}}}}{\\row{\\str{\xA0}}}{\\row{\\sign{\xA0 \xA0 \xA0 \xA0 \xA0}}{\\input{20}}}}{centerTableText4}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
                                         },
                                     }, {
-                                        problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{4}}{\\fracstr{5}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{3}}{\\fracstr{4}}}}',
-                                        answer: '\\grp{\\frac{\\input{16}}{\\fracstr{20}}}{\\sign{\xA0 - \xA0}}{\\frac{\\input{15}}{\\fracstr{20}}}',
+                                        problem: '\\str{Use the LCD to convert the fractions: }',
+                                        answer: '\\rowgrp{\\row{\\sign{\xA0 \xA0 \xA0 \xA0 }}{\\frac{\\str{4}}{\\str{5}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\frac{\\input{16}}{\\str{20}}}}{\\row{\\str{\xA0}}}{\\row{\\sign{\xA0 \xA0 + \xA0}}{\\frac{\\str{3}}{\\str{4}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\frac{\\input{15}}{\\str{20}}}}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
                                         }
                                     }, {
-                                        problem: '\\rowgrp{\\row{\\str{Subtract the fractions: }}}{\\row{\\frac{\\fracstr{16}}{\\fracstr{20}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{15}}{\\fracstr{20}}}}',
-                                        answer: '\\row{\\frac{\\input{1}}{\\input{20}}}',
+                                        problem: '\\str{Add the fractions:}',
+                                        answer: '\\css{\\rowgrp{\\row{\\sign{\xA0 \xA0  \xA0 \xA0}}{\\frac{\\str{16}}{\\str{20}}}}{\\row{\\str{\xA0}}}{\\row{\\sign{\xA0 \xA0 + \xA0}}{\\frac{\\str{15}}{\\str{20}}}}{\\row{\\str{\xA0}}}{\\row{\\sign{\xA0 \xA0 \xA0 \xA0 \xA0}}{\\frac{\\input{31}}{\\input{20}}}}}{centerTableText4}',
                                         controls: {
                                             "checkAnswer": true,
                                             "help": false
@@ -7642,7 +7642,7 @@ title: 'Main Answer',
                                     }]
                                 }]
                             }, {
-                                title: 'Subtracting Unlike Fractions',
+                                title: 'Adding Mixed Numbers',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
@@ -7680,7 +7680,7 @@ title: 'Main Answer',
                                     }]
                                 }]
                             }, {
-                                title: 'Subtracting Unlike Fractions',
+                                title: 'Adding Mixed Numbers',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
@@ -7718,7 +7718,7 @@ title: 'Main Answer',
                                     }]
                                 }]
                             }, {
-                                title: 'Subtracting Unlike Fractions',
+                                title: 'Adding Mixed Numbers',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
@@ -7756,7 +7756,7 @@ title: 'Main Answer',
                                     }]
                                 }]
                             }, {
-                                title: 'Subtracting Unlike Fractions',
+                                title: 'Adding Mixed Numbers',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
@@ -7794,7 +7794,7 @@ title: 'Main Answer',
                                     }]
                                 }]
                             }, {
-                                title: 'Subtracting Unlike Fractions',
+                                title: 'Adding Mixed Numbers',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
@@ -7832,7 +7832,7 @@ title: 'Main Answer',
                                     }]
                                 }]
                             }, {
-                                title: 'Subtracting Unlike Fractions',
+                                title: 'Adding Mixed Numbers',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
@@ -7870,7 +7870,7 @@ title: 'Main Answer',
                                     }]
                                 }]
                             }, {
-                                title: 'Subtracting Unlike Fractions',
+                                title: 'Adding Mixed Numbers',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
@@ -7908,7 +7908,7 @@ title: 'Main Answer',
                                     }]
                                 }]
                             }, {
-                                title: 'Subtracting Unlike Fractions',
+                                title: 'Adding Mixed Numbers',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
@@ -7946,7 +7946,7 @@ title: 'Main Answer',
                                     }]
                                 }]
                             }, {
-                                title: 'Subtracting Unlike Fractions',
+                                title: 'Adding Mixed Numbers',
                                 children: [{
                                     title: 'Main Answer',
                                     children: [{
