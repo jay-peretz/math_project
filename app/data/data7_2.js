@@ -116,7 +116,7 @@ angular.module('mathSkills').value('data7_2', {
                 answer: '\\frac{\\input{3}}{\\input{5}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\mixed{\\str{1}}{\\frac{\\fracstr{4}}{\\fracstr{6}}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{6}}{\\str{10}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\frac{\\fracstr{3}}{\\fracstr{5}}}{label_like}}}'
+                    "help": '\\rowgrp{\\row{\\mixed{\\str{1}}{\\frac{\\fracstr{4}}{\\fracstr{6}}}}{\\str{\xA0 equals \xA0}}{\\frac{\\str{10}}{\\str{6}}}}{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{10}}{\\str{6}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{6}}{\\str{10}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\frac{\\fracstr{3}}{\\fracstr{5}}}{label_like}}}'
                 }
             }]
         }]
@@ -129,7 +129,7 @@ angular.module('mathSkills').value('data7_2', {
                 answer: '\\frac{\\input{6}}{\\input{11}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{The reciprocal of \xA0}}{\\mixed{\\str{1}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{6}}{\\str{11}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\frac{\\fracstr{6}}{\\fracstr{11}}}{label_like}}}'
+                    "help": '\\rowgrp{\\row{\\mixed{\\str{1}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}{\\str{\xA0 equals \xA0}}{\\frac{\\str{11}}{\\str{6}}}}{\\row{\\str{The reciprocal of \xA0}}{\\frac{\\str{11}}{\\str{6}}}{\\str{\xA0 is \xA0}}{\\frac{\\str{6}}{\\str{11}}}{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\frac{\\fracstr{6}}{\\fracstr{11}}}{label_like}}}'
                 }
             }]
         }]
