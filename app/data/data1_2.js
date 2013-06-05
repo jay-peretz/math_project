@@ -1,137 +1,52 @@
 /*global angular */
 
-angular.module('mathSkills').value('data1_2', {
-    title: '1.2 Standard Notation of Whole Numbers',
-    path: '1.2-standard-notation-of-whole-numbers',
-    children: [{
-        title: 'Words to Number',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\str{Write fifty-eight in number notation}',
-                answer: '\\input{58}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{Fifty-eight in number notation is 58}'
+angular.module('mathSkills').service('data1_2', function () {
+    var ret = {
+            title: '1.2 Standard Notation of Whole Numbers',
+            path: '1.2-standard-notation-of-whole-numbers',
+            children: []
+        },
+        template = {
+            main: {
+                title: 'Words to Number',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\str{Write $words in number notation}',
+                        answer: '\\input{$number}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\str{$words in number notation is $number}'
+                        }
+                    }]
+                }]
+            }
+        },
+        data = [
+            { words: 'fifty-eight', number: 58, template: 'main' },
+            { words: 'one hundred, seventy-four', number: 174, template: 'main' },
+            { words: 'three hundred, thirty-six', number: 336, template: 'main' },
+            { words: 'three thousand, three hundred eighty-six', number: 3386, template: 'main' },
+            { words: 'fifty thousand, nine hundred fifty-seven', number: 50957, template: 'main' },
+            { words: 'four hundred one', number: 401, template: 'main' },
+            { words: 'seven thousand, seven hundred nineteen', number: 7719, template: 'main' },
+            { words: 'seventy-three thousand, one hundred seventy-eight', number: 73178, template: 'main' },
+            { words: 'one hundred twenty-six', number: 126, template: 'main' },
+            { words: 'seven thousand, seven hundred forty-eight', number: 7748, template: 'main' }
+        ],
+        interpolate = function (obj, data) {
+            var string = JSON.stringify(obj);
+            for (var symbol in data) {
+                if (data.hasOwnProperty(symbol)) {
+                    string = string.replace(new RegExp('\\$' + symbol, 'g'), data[symbol]);
                 }
-            }]
-        }]
-    }, {
-        title: 'Words to Number',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\str{Write one hundred seventy-four in number notation}',
-                answer: '\\input{174}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{One hundred seventy-four in number notation is 174}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Words to Number',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\str{Write three hundred thirty-six in number notation}',
-                answer: '\\input{336}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{Three hundred thirty-six in number notation is 336}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Words to Number',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\str{Write three thousand, three hundred eighty-six in number notation}',
-                answer: '\\input{3386}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{3,386}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Words to Number',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\str{Write fifty thousand, nine hundred fifty-seven in number notation}',
-                answer: '\\input{50957}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{50,957}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Words to Number',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\str{Write four hundred one in number notation}',
-                answer: '\\input{401}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{Four hundred one in number notation is 401}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Words to Number',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\str{Write seven thousand, seven hundred nineteen in number notation}',
-                answer: '\\input{7719}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{7,719}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Words to Number',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\str{Write seventy-three thousand, one hundred seventy-eight in number notation}',
-                answer: '\\input{73178}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{73,178}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Words to Number',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\str{Write one hundred twenty-six in number notation}',
-                answer: '\\input{126}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{126}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Words to Number',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\str{Write seven thousand, seven hundred forty-eight in number notation}',
-                answer: '\\input{7748}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{7,748}'
-                }
-            }]
-        }]
-    }, ]
+            }
+            return JSON.parse(string);
+        };
+
+    ret.children = data.map(function (problem) {
+        return interpolate(template[problem.template], problem);
+    });
+
+    return ret;
 });
