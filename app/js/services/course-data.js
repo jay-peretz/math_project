@@ -20,6 +20,7 @@ angular.module('mathSkills.services')
         'data16_4',
         'data18_1', 'data18_2', 'data18_3',
         'data19_1', 'data19_2', 'data19_3',
+        'data20_2',
         function (
             data1_1, data1_2, data1_3, data1_4, data1_5,
             data2_1, data2A_1, data2A_2,
@@ -37,7 +38,8 @@ angular.module('mathSkills.services')
             data15_1, data15_2,
             data16_4,
             data18_1, data18_2, data18_3,
-            data19_1, data19_2, data19_3
+            data19_1, data19_2, data19_3,
+            data20_2
         ) {
             var course = {
                 title: 'GENERAL ARITHMETIC',
@@ -81,7 +83,8 @@ angular.module('mathSkills.services')
                     path: 'percents',
                     children: [
                         data18_1, data18_2, data18_3,
-                        data19_1, data19_2, data19_3
+                        data19_1, data19_2, data19_3,
+                        data20_2
                     ]
                 }]
             };
