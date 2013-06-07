@@ -19,22 +19,23 @@ angular.module('mathSkills').value('data9_4', {
         }, {
             title: 'Workbook',
             children: [{
-                problem: '\\rowgrp{\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}{\\row{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}',
-                answer: '\\row{\\input{20}}',
+                problem: '\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}',
+                answer: '\\rowgrp{\\row{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}{\\row{\\input{20}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": '\\row{\\str{20 is the LCD of 4 and 5.}}}'
                 },
             }, {
-                problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}',
-                answer: '\\row{\\frac{\\input{5}}{\\fracstr{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{12}}{\\fracstr{20}}}',
+                problem: '\\row{\\str{Use the LCD to convert the fractions: }}',
+                answer: '\\rowgrp{\\row{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}{\\row{\\frac{\\input{5}}{\\fracstr{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{12}}{\\fracstr{20}}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": '\\rowgrp{\\row{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}{\\row{\\str{converts to}}}{\\row{\\frac{\\fracstr{5}}{\\fracstr{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{12}}{\\fracstr{20}}}}'
                 }
             }]
         }]
     }, {
+		// problem 2
         title: 'Build Equivalent Fractions',
         children: [{
             title: 'Main Answer',
@@ -50,22 +51,23 @@ angular.module('mathSkills').value('data9_4', {
         }, {
             title: 'Workbook',
             children: [{
-                problem: '\\rowgrp{\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}{\\row{\\frac{\\fracstr{3}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}',
-                answer: '\\row{\\input{24}}',
+                problem: '\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}',
+                answer: '\\rowgrp{\\row{\\frac{\\fracstr{3}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}{\\row{\\input{24}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": '\\row{\\str{24 is the LCD of 8 and 6.}}}'
                 },
             }, {
-                problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{3}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}',
-                answer: '\\row{\\frac{\\input{9}}{\\fracstr{24}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{20}}{\\fracstr{24}}}',
+                problem: '\\row{\\str{Use the LCD to convert the fractions: }}',
+                answer: '\\rowgrp{\\row{\\frac{\\fracstr{3}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}{\\row{\\frac{\\input{9}}{\\fracstr{24}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{20}}{\\fracstr{24}}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": '\\rowgrp{\\row{\\frac{\\fracstr{3}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}{\\row{\\str{converts to}}}{\\row{\\frac{\\fracstr{9}}{\\fracstr{24}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{20}}{\\fracstr{24}}}}'
                 }
             }]
         }]
     }, {
+		//problem 3
         title: 'Build Equivalent Fractions',
         children: [{
             title: 'Main Answer',
