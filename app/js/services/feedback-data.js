@@ -9,7 +9,7 @@ angular.module('mathSkills.services')
         function ($rootScope, $routeParams) {
             
             // Store answer events.
-            $rootScope.$on('answer', function (e, data) {
+            $rootScope.$on('answer', function (e, data) { console.log(data);
                 // Generate our storage structure if this is the first answer for a problem set.
                 if (privateData[$routeParams.unit] === undefined) {
                     privateData[$routeParams.unit] = {};
