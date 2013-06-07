@@ -23,7 +23,7 @@ angular.module('mathSkills').value('data5_4', {
                 answer: '\\primefac{10}',
                 controls: {
                     "checkAnswer": true,
-                    "help": true
+                    "help": '\\row{\\str{2}}{\\sign{·}}{\\str{5}}{\\sign{=}}{\\str{10}}'
                 }
             }]
         }]
@@ -47,7 +47,7 @@ angular.module('mathSkills').value('data5_4', {
                 answer: '\\primefac{18}',
                 controls: {
                     "checkAnswer": true,
-                    "help": true
+                    "help": '\\row{\\str{2}}{\\sign{·}}{\\exp{\\str{3}}{\\str{2}}}{\\sign{=}}{\\str{18}}'
                 }
             }]
         }]
@@ -71,7 +71,7 @@ angular.module('mathSkills').value('data5_4', {
                 answer: '\\primefac{36}',
                 controls: {
                     "checkAnswer": true,
-                    "help": true
+                    "help": '\\row{\\exp{\\str{2}}{\\str{2}}}{\\sign{·}}{\\exp{\\str{3}}{\\str{2}}}{\\sign{=}}{\\str{36}}'
                 }
             }]
         }]
@@ -95,7 +95,7 @@ angular.module('mathSkills').value('data5_4', {
                 answer: '\\primefac{50}',
                 controls: {
                     "checkAnswer": true,
-                    "help": true
+                    "help": '\\row{\\str{2}}{\\sign{·}}{\\exp{\\str{5}}{\\str{2}}}{\\sign{=}}{\\str{50}}'
                 }
             }]
         }]
@@ -119,7 +119,7 @@ angular.module('mathSkills').value('data5_4', {
                 answer: '\\primefac{118}',
                 controls: {
                     "checkAnswer": true,
-                    "help": true
+                    "help": '\\row{\\str{2}}{\\sign{·}}{\\str{59}}{\\sign{=}}{\\str{118}}'
                 }
             }]
         }]
@@ -143,7 +143,7 @@ angular.module('mathSkills').value('data5_4', {
                 answer: '\\primefac{130}',
                 controls: {
                     "checkAnswer": true,
-                    "help": true
+                    "help": '\\row{\\str{2}}{\\sign{·}}{\\str{5}}{\\sign{·}}{\\str{13}}{\\sign{=}}{\\str{130}}'
                 }
             }]
         }]
@@ -167,7 +167,7 @@ angular.module('mathSkills').value('data5_4', {
                 answer: '\\primefac{145}',
                 controls: {
                     "checkAnswer": true,
-                    "help": true
+                    "help": '\\row{\\str{5}}{\\sign{·}}{\\str{29}}{\\sign{=}}{\\str{145}}'
                 }
             }]
         }]
@@ -191,7 +191,7 @@ angular.module('mathSkills').value('data5_4', {
                 answer: '\\primefac{294}',
                 controls: {
                     "checkAnswer": true,
-                    "help": true
+                    "help": '\\row{\\str{2}}{\\sign{·}}{\\str{3}}{\\sign{·}}{\\exp{\\str{7}}{\\str{2}}}{\\sign{=}}{\\str{294}}'
                 }
             }]
         }]
@@ -215,7 +215,7 @@ angular.module('mathSkills').value('data5_4', {
                 answer: '\\primefac{171}',
                 controls: {
                     "checkAnswer": true,
-                    "help": true
+                    "help": '\\row{\\exp{\\str{3}}{\\str{2}}}{\\sign{·}}{\\str{19}}{\\sign{=}}{\\str{171}}'
                 }
             }]
         }]
@@ -239,7 +239,7 @@ angular.module('mathSkills').value('data5_4', {
                 answer: '\\primefac{106}',
                 controls: {
                     "checkAnswer": true,
-                    "help": true
+                    "help": '\\row{\\str{2}}{\\sign{·}}{\\str{53}}{\\sign{=}}{\\str{106}}'
                 }
             }]
         }]
