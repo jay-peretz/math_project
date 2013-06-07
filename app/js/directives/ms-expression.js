@@ -5,7 +5,8 @@ angular.module('mathSkills')
     .directive('msExpression', [
         'directiveUtils',
         'parser',
-        function (directiveUtils, parser) {
+        'problemData',
+        function (directiveUtils, parser, problemData) {
             return {
                 controller: function ($scope, $element) {
                     // Let the parser determine our template.

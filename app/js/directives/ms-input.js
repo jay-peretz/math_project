@@ -11,8 +11,8 @@ angular.module('mathSkills')
         'directiveUtils',
         '$timeout',
         'parser',
-        'panelGroupData',
-        function (directiveUtils, $timeout, parser, panelGroupData) {
+        'problemData',
+        function (directiveUtils, $timeout, parser, problemData) {
             return {
                 restrict: 'E',
                 scope: {
@@ -37,7 +37,7 @@ angular.module('mathSkills')
                                 var possibleAnswers = JSON.parse(parsedExpected).map(String);
                                 var answerIndex = possibleAnswers.indexOf($scope.answer);
                                 if (answerIndex !== -1) {
-                                    var correctAnswerIndex = panelGroupData.index(answerIndex);
+                                    var correctAnswerIndex = problemData.index(answerIndex);
                                     if (correctAnswerIndex === answerIndex) {
                                         data.result = 'correct';
                                         data.expected = data.answer;
@@ -50,7 +50,7 @@ angular.module('mathSkills')
                                     }
                                     $scope.$emit('answer', data);
                                 } else {
-                                    panelGroupData.getIndex().then(function (index){
+                                    problemData.getIndex().then(function (index){
                                         data.result = 'incorrect';
                                         data.expected = '\\input{' + possibleAnswers[index] + '}';
                                         $scope.class = 'error';
@@ -117,7 +117,7 @@ angular.module('mathSkills')
                                 var parsedExpected = parser.extractTag($scope.expected).args[0];
                                 if (parsedExpected[0] === '[') {
                                     var possibleAnswers = JSON.parse(parsedExpected);
-                                    panelGroupData.getIndex().then(function (index) {
+                                    problemData.getIndex().then(function (index) {
                                         $scope.answer = possibleAnswers[index];
                                     });
                                 } else {

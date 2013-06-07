@@ -8,13 +8,18 @@ angular.module('mathSkills')
         '$routeParams',
         '$scope',
         '$timeout',
-        function (courseData, $location, $routeParams, $scope, $timeout) {
+        'problemData',
+        function (courseData, $location, $routeParams, $scope, $timeout, problemData) {
             $scope.problem = courseData.getProblemData(
                 $routeParams.unit,
                 $routeParams.problemSet,
                 $routeParams.problemNumber
             );
+            /* add problem data object (from course-data.js "data") to problem-data.js service
+             *
+            */
             problemData.setObject($scope.problem.data);
+
             $scope.mainAnswer = $scope.problem.children[0];
             $scope.workbook = $scope.problem.children[1];
 

@@ -1,6 +1,7 @@
 'use strict';
 /*global angular */
-var privateData = {};
+var privateData = {},
+    varData = {};
 
 angular.module('mathSkills.services')
     .run([
@@ -9,7 +10,8 @@ angular.module('mathSkills.services')
         function ($rootScope, $routeParams) {
             
             // Store answer events.
-            $rootScope.$on('answer', function (e, data) { console.log(data);
+            $rootScope.$on('answer', function (e, data) {
+
                 // Generate our storage structure if this is the first answer for a problem set.
                 if (privateData[$routeParams.unit] === undefined) {
                     privateData[$routeParams.unit] = {};
@@ -21,7 +23,7 @@ angular.module('mathSkills.services')
                 privateData[$routeParams.unit][$routeParams.problemSet].push(data);
                 // set previous answer data
                 privateData.previous = data;
-                privateData.previousResult = data.result === 'correct' ? true : false;
+                //privateData.previousResult = data.result === 'correct' ? true : false; //########################################################################
             });
         }
     ])
@@ -52,11 +54,10 @@ angular.module('mathSkills.services')
                 getPrevious: function () {
                     return privateData.previous;
                 },
-                getPreviousResult: function () {
-                    return privateData.previousResult;
-                }
+                // getPreviousResult: function () { //########################################################################
+                //     return privateData.previousResult;
+                // },
             };
-
             return feedbackData;
         }
     ]);

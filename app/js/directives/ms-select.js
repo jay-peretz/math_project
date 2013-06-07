@@ -14,8 +14,8 @@ angular.module('mathSkills')
   .directive('msSelect', [
 	'parser',
     'directiveUtils',
-    'panelGroupData',
-	function (parser, directiveUtils, panelGroupData) {
+    'problemData',
+	function (parser, directiveUtils, problemData) {
 		return {
 			restrict: 'E',
 			scope: {
@@ -36,7 +36,10 @@ angular.module('mathSkills')
 				});
 				$scope.$watch('optionsarray', function () {
 					if (typeof $scope.optionsarray === "string") {
+                        $scope.optionsarray = $scope.optionsarray.replace(new RegExp('\\\\', 'g'),'');
+                        //console.log('select arr no json', $scope.optionsarray);
 						$scope.optionsarray = JSON.parse($scope.optionsarray);
+                        //console.log('select arr json-ed', $scope.optionsarray);
 					}
 				});
 				$scope.$watch('answercorrect', function () {
@@ -59,7 +62,7 @@ angular.module('mathSkills')
                         data.answer = '\\select{"'+$scope.answer+'"}{["'+$scope.optionsarray.join('","')+'"]}';
                         var answerIndex = $scope.answercorrect.indexOf($scope.answer);
                         if (answerIndex !== -1) {
-                            var correctAnswerIndex = panelGroupData.index(answerIndex);
+                            var correctAnswerIndex = problemData.index(answerIndex);
                             if (correctAnswerIndex === answerIndex) {
                                 data.result = 'correct';
                                 data.expected = data.answer;
@@ -72,7 +75,7 @@ angular.module('mathSkills')
                             }
                             $scope.$emit('answer', data);
                         } else {
-                            panelGroupData.getIndex().then(function (index){
+                            problemData.getIndex().then(function (index){
                                 data.result = 'incorrect';
                                 data.expected = '\\select{"'+$scope.answercorrect[index]+'"}{["'+$scope.optionsarray.join('","')+'"]}';
                                 $scope.class = 'error';
@@ -131,7 +134,7 @@ angular.module('mathSkills')
                             };
                         if (parsedExpected[0] === '[') {
                             var possibleAnswers = JSON.parse(parsedExpected);
-                            panelGroupData.getIndex().then(function (index) {
+                            problemData.getIndex().then(function (index) {
                                 correctAnswer = possibleAnswers[index];
                                 handleHelp();
                             });

@@ -3,8 +3,8 @@
 
 angular.module('mathSkills')
     .directive('msPanelGroup', [
-        'panelGroupData',
-        function (panelGroupData) {
+        
+        function () {
             return {
                 controller: [
                     '$scope',
@@ -35,17 +35,11 @@ angular.module('mathSkills')
                                         childScope = childScope.$$nextSibling;
                                     }
                                 }, 0);
-
-                                // Reset the answer index in panelGroupData.
-                                panelGroupData.resetIndex();
                             }
                         });
                         $scope.updateCurrent = function (ii) {
                             $scope.currentPanel = ii;
                             $scope.panelScopes[$scope.currentPanel].$broadcast('checkFocus');
-
-                            // Reset the panelGroupData.
-                            panelGroupData.resetIndex();
                         };
 
                         // Listen for panelDone events.
@@ -56,19 +50,12 @@ angular.module('mathSkills')
                                 $timeout(function () {
                                     $scope.currentPanel += 1;
                                     $scope.panelScopes[$scope.currentPanel].$broadcast('checkFocus');
-
-                                    // Reset the panelGroupData.
-                                    panelGroupData.resetIndex();
-                                    // broadcast branch event to switch ms-instruction instructions
-                                    $rootScope.$broadcast('switch');
                                 }, 1000);
                             // Otherwise $emit panelGroupDone
                             } else {
                                 $scope.$emit('panelGroupDone', {
                                     title: $scope.title
                                 });
-                                // Reset the panelGroupData flip index. 
-                                panelGroupData.resetFlipIndex();
                             }
                         });
 

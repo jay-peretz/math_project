@@ -38,7 +38,8 @@ angular.module('mathSkills.services')
                         $scope.result = 'correct';
                     });
 
-                    $scope.$on('answer', function (e, data) {
+                    $scope.$on('answer', function (e, data) { 
+
                         // If this event was not fired by us.
                         if (data.controllerId !== $scope.controllerId) {
                             // Stop this event from going up the scope chain.
