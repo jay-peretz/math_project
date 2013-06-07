@@ -53,7 +53,7 @@ angular.module('mathSkills').value('data15_1', {
                 answer: '\\input{0.64}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{14}}{\\str{\xA0 divided by \xA0}}{\\str{22}}{\\str{\xA0 equals \xA0}}{\\str{0.636...}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.64}}}{help-answer-text help-answer-margin-right}}}}'
+                    "help": '\\rowgrp{\\row{\\str{14}}{\\str{\xA0 divided by \xA0}}{\\str{22}}{\\str{\xA0 equals \xA0}}{\\str{0.636...}}}{\\row{\\str{0.636...}}{\\str{ rounded to the hundredths place  }}{\\str{\xA0 equals \xA0}}{\\str{0.64}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.64}}}{help-answer-text help-answer-margin-right}}}}'
 
                 }
             }]
@@ -67,7 +67,7 @@ angular.module('mathSkills').value('data15_1', {
                 answer: '\\input{0.58}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{14}}{\\str{\xA0 divided by \xA0}}{\\str{24}}{\\str{\xA0 equals \xA0}}{\\str{0.583...}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.58}}}{help-answer-text help-answer-margin-right}}}}'
+                    "help": '\\rowgrp{\\row{\\str{14}}{\\str{\xA0 divided by \xA0}}{\\str{24}}{\\str{\xA0 equals \xA0}}{\\str{0.583...}}}{\\row{\\str{0.583...}}{\\str{ rounded to the hundredths place  }}{\\str{\xA0 equals \xA0}}{\\str{0.58}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.58}}}{help-answer-text help-answer-margin-right}}}}'
                 }
             }]
         }]
@@ -93,7 +93,7 @@ angular.module('mathSkills').value('data15_1', {
                 answer: '\\input{0.67}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{10}}{\\str{\xA0 divided by \xA0}}{\\str{15}}{\\str{\xA0 equals \xA0}}{\\str{0.666...}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.67}}}{help-answer-text help-answer-margin-right}}}}'
+                    "help": '\\rowgrp{\\row{\\str{10}}{\\str{\xA0 divided by \xA0}}{\\str{15}}{\\str{\xA0 equals \xA0}}{\\str{0.666...}}}{\\row{\\str{0.666...}}{\\str{ rounded to the hundredths place  }}{\\str{\xA0 equals \xA0}}{\\str{0.67}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.67}}}{help-answer-text help-answer-margin-right}}}}'
                 }
             }]
         }]
@@ -106,7 +106,7 @@ angular.module('mathSkills').value('data15_1', {
                 answer: '\\input{0.57}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{12}}{\\str{\xA0 divided by \xA0}}{\\str{21}}{\\str{\xA0 equals \xA0}}{\\str{0.571...}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.57}}}{help-answer-text help-answer-margin-right}}}}'
+                    "help": '\\rowgrp{\\row{\\str{12}}{\\str{\xA0 divided by \xA0}}{\\str{21}}{\\str{\xA0 equals \xA0}}{\\str{0.571...}}}{\\row{\\str{0.571...}}{\\str{ rounded to the hundredths place  }}{\\str{\xA0 equals \xA0}}{\\str{0.57}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.57}}}{help-answer-text help-answer-margin-right}}}}'
                 }
             }]
         }]
@@ -119,7 +119,7 @@ angular.module('mathSkills').value('data15_1', {
                 answer: '\\input{0.54}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{28}}{\\str{\xA0 divided by \xA0}}{\\str{52}}{\\str{\xA0 equals \xA0}}{\\str{0.538...}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.54}}}{help-answer-text help-answer-margin-right}}}}'
+                    "help": '\\rowgrp{\\row{\\str{28}}{\\str{\xA0 divided by \xA0}}{\\str{52}}{\\str{\xA0 equals \xA0}}{\\str{0.538...}}}{\\row{\\str{0.538...}}{\\str{ rounded to the hundredths place  }}{\\str{\xA0 equals \xA0}}{\\str{0.54}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.54}}}{help-answer-text help-answer-margin-right}}}}'
                 }
             }]
         }]
@@ -132,7 +132,7 @@ angular.module('mathSkills').value('data15_1', {
                 answer: '\\input{0.67}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{6}}{\\str{\xA0 divided by \xA0}}{\\str{9}}{\\str{\xA0 equals \xA0}}{\\str{0.666...}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.67}}}{help-answer-text help-answer-margin-right}}}}'
+                    "help": '\\rowgrp{\\row{\\str{6}}{\\str{\xA0 divided by \xA0}}{\\str{9}}{\\str{\xA0 equals \xA0}}{\\str{0.666...}}}{\\row{\\str{0.666...}}{\\str{ rounded to the hundredths place  }}{\\str{\xA0 equals \xA0}}{\\str{0.67}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  0.67}}}{help-answer-text help-answer-margin-right}}}}'
                 }
             }]
         }]
