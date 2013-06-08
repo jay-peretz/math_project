@@ -16,6 +16,18 @@ angular.module('mathSkills')
                             data.label = $scope.label;
                         }
                     });
+
+                    $scope.$watch('expected', function () {
+                        if ($scope.expected && $scope.uncompiled === undefined) {
+                            if ($scope.expected.indexOf('$$') !== -1) {
+                                $scope.uncompiled = $scope.expected;
+                                $scope.expected = problemData.compile($scope.expected);
+                                $scope.$on('recompile', function () {
+                                    $scope.expected = problemData.compile($scope.uncompiled);
+                                });
+                            }
+                        }
+                    });
                 },
                 restrict: 'E',
                 scope: {

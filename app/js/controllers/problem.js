@@ -14,6 +14,7 @@ angular.module('mathSkills')
                 $routeParams.problemSet,
                 $routeParams.problemNumber
             );
+            problemData.setObject($scope.problem.data);
             $scope.mainAnswer = $scope.problem.children[0];
             $scope.workbook = $scope.problem.children[1];
 
