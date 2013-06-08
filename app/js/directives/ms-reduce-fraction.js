@@ -69,13 +69,25 @@ angular.module('mathSkills')
 				$scope.controllerId = Math.random().toString();
 
                 $scope.$watch('expected', function() {
-                    if ($scope.expected) {
-                        $scope.args = parser.extractTag(parser.extractTag($scope.expected).args[0]).args.map(function (tag) {
-                            return parser.extractTag(tag).args[0];
-                        });
-                        $scope.instructions = "\\row{\\str{Can \xA0}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
-                        $scope.answerexp = simplified($scope.args[0], $scope.args[1]) ? no : yes;
-                        $scope.answerlbl = "simplified";
+                    if ($scope.expected) {	
+						$scope.mixedArg = "";
+						if (parser.extractTag(parser.extractTag($scope.expected).args[0]).tag === "mixed") {
+							$scope.mixedArg = parser.extractTag(parser.extractTag(parser.extractTag($scope.expected).args[0]).args[0]).args[0];							
+							$scope.args = parser.extractTag(parser.extractTag(parser.extractTag($scope.expected).args[0]).args[1]).args.map(function (tag) {
+								return parser.extractTag(tag).args[0];
+							});
+							$scope.instructions = "\\row{\\str{Can \xA0 "+$scope.mixedArg+"}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
+							$scope.answerexp = simplified($scope.args[0], $scope.args[1]) ? no : yes;
+							$scope.answerlbl = "simplified";
+							
+						} else {
+							$scope.args = parser.extractTag(parser.extractTag($scope.expected).args[0]).args.map(function (tag) {
+								return parser.extractTag(tag).args[0];
+							});
+							$scope.instructions = "\\row{\\str{Can \xA0 "+$scope.mixedArg+"}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
+							$scope.answerexp = simplified($scope.args[0], $scope.args[1]) ? no : yes;
+							$scope.answerlbl = "simplified";
+						}
                     }
                 });
 
@@ -118,7 +130,7 @@ angular.module('mathSkills')
 								break;
 							case "reduce":
 								if (data.result === "correct" && data.answer.indexOf('str') === -1) {
-									 $scope.instructions = "\\row{\\str{Can \xA0}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
+									 $scope.instructions = "\\row{\\str{Can \xA0"+$scope.mixedArg+"}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
 									$scope.answerexp = simplified(reduceFraction(false).numerator, reduceFraction(false).denominator) ? no : yes;
 									$scope.answerlbl = "simplified";                                
 								} else {

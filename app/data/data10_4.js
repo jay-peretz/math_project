@@ -84,7 +84,7 @@ angular.module('mathSkills').service('data10_4', function () {
 						}
 					}, {
 						problem: '\\row{\\str{Reduce \xA0}}{\\mixed{\\str{$wholeanswer}}{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$denanswer1}}}}{\\str{\xA0 to its lowest terms }}',
-						answer: '\\reducefrac{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$denanswer1}}}',
+						answer: '\\reducefrac{mixed{\\str{4}}{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$denanswer1}}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": false
