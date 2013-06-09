@@ -89,14 +89,6 @@ angular.module('mathSkills').service('data10_4', function () {
 							"checkAnswer": true,
 							"help": false
 						}
-					},{
-						problem: '\\str{The mixed number difference in lowest terms is:}',
-						answer: '\\css{\\rowgrp{grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}{grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}{grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\str{$numanswer2}}{\\str{$denanswer2}}}}}}{centerTableText3}',
-						controls: {
-							"checkAnswer": true,
-							"help": false,
-							"workbook": true
-						}
 					}]
 				}]
 			},
@@ -124,7 +116,7 @@ angular.module('mathSkills').service('data10_4', function () {
 						},
 					}, {
 						problem: '\\str{Use the LCD to convert the fractions: }',
-						answer: '\\rowgrp{\\grp{\\sign{\xA0 \xA0 \xA0 }}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\str{$denanswer}}}}}{\\grp{\\str{\xA0}}}{\\grp{\\sign{\xA0 \xA0 + }}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\str{$denanswer}}}}}',
+						answer: '\\rowgrp{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\str{$denanswer}}}}}{\\grp{\\str{\xA0}}}{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\str{$denanswer}}}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": false
@@ -146,91 +138,6 @@ angular.module('mathSkills').service('data10_4', function () {
 					}, {
 						problem: '\\str{Subtract the fractions:}',
 						answer: '\\css{\\rowgrp{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\str{$numnew3}}{\\str{$denanswer}}}}}{\\grp{\\sign{\xA0 \xA0 - }}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$denanswer}}}}}{\\grp{\\sign{\xA0 \xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}}{centerTableText3}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						}
-					}]
-				}]
-            },
-			fourth: {
-                title: 'Subtracting Mixed Numbers',
-				children: [{
-					title: 'Main Answer',
-					children: [{
-						problem: '\\str{\xA0}',
-						answer: '\\css{\\rowgrp{grp{\\sign{\xA0 \xA0}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{grp{\\sign{\xA0 \xA0}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{grp{\\sign{-}}{\\frac{\\str{$num3}}{\\str{$den3}}}}{grp{\\sign{\xA0 \xA0}}{\\frac{\\input{$numanswer2}}{\\input{$denanswer2}}}}}{centerTableText3}',
-						controls: {
-							"checkAnswer": true,
-							"help": false,
-							"workbook": true
-						}
-					}]
-				}, {
-					title: 'Workbook',
-					children: [{
-						problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}',
-						answer: '\\css{\\rowgrp{\\grp{\\frac{\\str{$num1}}{\\str{$den1}}}{\\str{\xA0 and \xA0}}{\\frac{\\str{$num2}}{\\str{$den2}}}{\\str{\xA0 and \xA0}}{\\frac{\\str{$num3}}{\\str{$den3}}}}{\\grp{\\str{\xA0}}{\\input{$denanswer1}}{\\str{\xA0}}}}{centerTableText6}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						},
-					}, {
-						problem: '\\str{Use the LCD to convert the fractions: }',
-						answer: '\\rowgrp{\\grp{\\sign{\xA0 \xA0 \xA0 }}{\\frac{\\str{$num1}}{\\str{$den1}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\frac{\\input{$numnew1}}{\\str{$denanswer1}}}}{\\grp{\\str{\xA0}}}{\\grp{\\sign{\xA0 \xA0 \xA0 }}{\\frac{\\str{$num2}}{\\str{$den2}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\frac{\\input{$numnew2}}{\\str{$denanswer1}}}}{\\grp{\\str{\xA0}}}{\\grp{\\sign{\xA0 \xA0 + }}{\\frac{\\str{$num3}}{\\str{$den3}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\frac{\\input{$numnew3}}{\\str{$denanswer1}}}}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						}
-					}, {
-						problem: '\\str{Subtract the fractions:}',
-						answer: '\\css{\\rowgrp{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\frac{\\str{$numnew1}}{\\str{$denanswer1}}}}{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\frac{\\str{$numnew2}}{\\str{$denanswer1}}}}{\\grp{\\sign{\xA0 \xA0 + }}{\\frac{\\str{$numnew3}}{\\str{$denanswer1}}}}{\\grp{\\sign{\xA0 \xA0 \xA0}}{\\frac{\\input{$numanswer1}}{\\input{$denanswer1}}}}}{centerTableText3}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						}
-					}, {
-						problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$denanswer1}}}{\\str{\xA0 to its lowest terms }}',
-						answer: '\\reducefrac{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$denanswer1}}}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						}
-					}]
-				}]
-            },
-			fifth: {
-                title: 'Subtracting Mixed Numbers',
-				children: [{
-					title: 'Main Answer',
-					children: [{
-						problem: '\\str{\xA0}',
-						answer: '\\css{\\rowgrp{grp{\\sign{\xA0 \xA0}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{grp{\\sign{\xA0 \xA0}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{grp{\\sign{-}}{\\frac{\\str{$num3}}{\\str{$den3}}}}{grp{\\sign{\xA0 \xA0}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}{centerTableText3}',
-						controls: {
-							"checkAnswer": true,
-							"help": false,
-							"workbook": true
-						}
-					}]
-				}, {
-					title: 'Workbook',
-					children: [{
-						problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}',
-						answer: '\\css{\\rowgrp{\\grp{\\frac{\\str{$num1}}{\\str{$den1}}}{\\str{\xA0 and \xA0}}{\\frac{\\str{$num2}}{\\str{$den2}}}{\\str{\xA0 and \xA0}}{\\frac{\\str{$num3}}{\\str{$den3}}}}{\\grp{\\str{\xA0}}{\\input{$denanswer}}{\\str{\xA0}}}}{centerTableText6}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						},
-					}, {
-						problem: '\\str{Use the LCD to convert the fractions: }',
-						answer: '\\rowgrp{\\grp{\\sign{\xA0 \xA0 \xA0 }}{\\frac{\\str{$num1}}{\\str{$den1}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\frac{\\input{$numnew1}}{\\str{$denanswer}}}}{\\grp{\\str{\xA0}}}{\\grp{\\sign{\xA0 \xA0 \xA0 }}{\\frac{\\str{$num2}}{\\str{$den2}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\frac{\\input{$numnew2}}{\\str{$denanswer}}}}{\\grp{\\str{\xA0}}}{\\grp{\\sign{\xA0 \xA0 + }}{\\frac{\\str{$num3}}{\\str{$den3}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\frac{\\input{$numnew3}}{\\str{$denanswer}}}}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						}
-					}, {
-						problem: '\\str{Subtract the fractions:}',
-						answer: '\\css{\\rowgrp{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\frac{\\str{$numnew1}}{\\str{$denanswer}}}}{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\frac{\\str{$numnew2}}{\\str{$denanswer}}}}{\\grp{\\sign{\xA0 \xA0 + }}{\\frac{\\str{$numnew3}}{\\str{$denanswer}}}}{\\grp{\\sign{\xA0 \xA0 \xA0}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}{centerTableText3}',
 						controls: {
 							"checkAnswer": true,
 							"help": false

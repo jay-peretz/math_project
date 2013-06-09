@@ -76,18 +76,15 @@ angular.module('mathSkills')
 							$scope.args = parser.extractTag(parser.extractTag(parser.extractTag($scope.expected).args[0]).args[1]).args.map(function (tag) {
 								return parser.extractTag(tag).args[0];
 							});
-							$scope.instructions = "\\row{\\str{Can \xA0 "+$scope.mixedArg+"}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
-							$scope.answerexp = simplified($scope.args[0], $scope.args[1]) ? no : yes;
-							$scope.answerlbl = "simplified";
-							
+						// case below is fraction, not mixed	
 						} else {
 							$scope.args = parser.extractTag(parser.extractTag($scope.expected).args[0]).args.map(function (tag) {
 								return parser.extractTag(tag).args[0];
 							});
-							$scope.instructions = "\\row{\\str{Can \xA0 "+$scope.mixedArg+"}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
-							$scope.answerexp = simplified($scope.args[0], $scope.args[1]) ? no : yes;
-							$scope.answerlbl = "simplified";
 						}
+						$scope.instructions = "\\row{\\str{Can \xA0 "+$scope.mixedArg+"}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
+						$scope.answerexp = simplified($scope.args[0], $scope.args[1]) ? no : yes;
+						$scope.answerlbl = "simplified";
                     }
                 });
 
