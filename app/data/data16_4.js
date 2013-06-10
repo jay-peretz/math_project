@@ -72,7 +72,7 @@ angular.module('mathSkills').service('data16_4', function () {
                 ld: 3, rd: 12, lbld: 'elm trees',
                 lblarr: '[\\"oak trees\\",\\"elm trees\\",\\"parks\\"]',
                 previousCorrect: true,
-                flip: [[1], ["ln", "ld"], ["rn", "rd"], ["lbln", "lbld"]],
+                flip: [[1,2], ["ln", "ld"], ["rn", "rd"], ["lbln", "lbld"]],
             },{ 
                 problem: 'In a park, there are five oak trees to every three elm trees.', 
                 question: 'If there are thirty elm trees in a park, how many oak trees are there?', 

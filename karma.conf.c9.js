@@ -17,6 +17,7 @@ files = [
   'app/js/services/mathSkills.services.js',
   'app/js/*.js',
   'app/js/**/*.js',
+  'app/data/*.js',
   'test/unit/*.js',
   'test/unit/**/*.js',
   'app/partials/**/*.html'

@@ -236,10 +236,11 @@ describe('<ms-input>', function () {
     });
 
     describe('when it has multiple answers', function () {
-        beforeEach(inject(function ($compile, $rootScope) {
-            var template = angular.element('<ms-input expected=\\input{["1","2","3"]}></ms-input>');
+        beforeEach(inject(function ($compile, $rootScope, problemData) {
+            var template = angular.element('<ms-input expected=\\input{[1,2,3]}></ms-input>');
             element = $compile(template)($rootScope);
             $rootScope.$digest();
+            problemData.resetIndex();
         }));
 
         describe('when the answer is a possible answer', function () {
@@ -261,8 +262,8 @@ describe('<ms-input>', function () {
                 $rootScope.$digest();
             }));
 
-            it('should give incorrect feedback if it is not correct', inject(function (panelGroupData, $rootScope, $timeout) {
-                panelGroupData.index(1);
+            it('should give incorrect feedback if it is not correct', inject(function (problemData, $rootScope, $timeout) {
+                problemData.index(1);
                 element.find('input').val('3');
                 expect(element.find('input').val()).toBe('3');
 
@@ -312,8 +313,8 @@ describe('<ms-input>', function () {
                 
             }));
 
-            it('should fill in the correct possiblle answer if there is an answer index', inject(function (panelGroupData, $rootScope, $timeout) {
-                panelGroupData.index(2);
+            it('should fill in the correct possiblle answer if there is an answer index', inject(function (problemData, $rootScope, $timeout) {
+                problemData.index(2);
                 $rootScope.$broadcast("checkHelp");
                 $rootScope.$digest();
                 $timeout.flush();

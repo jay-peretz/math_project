@@ -255,11 +255,12 @@ describe('<ms-select>', function () {
     });
 
     describe('when it has multiple possible answers', function() {
-        beforeEach(inject(function ($rootScope, $compile) {
+        beforeEach(inject(function ($rootScope, $compile, problemData) {
             var template = angular.element('<ms-select expected=\'\\select{[\"oak trees\", \"elm trees\"]}{[\"oak trees\", \"elm trees\", \"parks\"]}\' label=test></ms-select>');
             elScope = $rootScope.$new();
             element = $compile(template)(elScope);
             $rootScope.$digest();
+            problemData.resetIndex();
         }));
 
         describe('when responding to checkAnswer', function () {
@@ -294,10 +295,10 @@ describe('<ms-select>', function () {
                 $timeout.flush();
             }));
             
-            it('should give incorrect feedback if the answer does not match the already chosen index', inject(function ($rootScope, $timeout, panelGroupData) {
+            it('should give incorrect feedback if the answer does not match the already chosen index', inject(function ($rootScope, $timeout, problemData) {
                 jQuery(element).find('select').val(0);
                 expect(jQuery(element).find('select option:selected').text()).toBe('oak trees');
-                panelGroupData.index(1);
+                problemData.index(1);
                 jQuery(element).find('select').trigger('change');
                 expect(element.find('select').val()).toBe('0');
     
@@ -320,8 +321,8 @@ describe('<ms-select>', function () {
                 expect(element.find('select').val()).toBe('0');
             }));
 
-            it('should fill in the correct possible answer if there is an answer index', inject(function (panelGroupData, $rootScope, $timeout) {
-                panelGroupData.index(1);
+            it('should fill in the correct possible answer if there is an answer index', inject(function (problemData, $rootScope, $timeout) {
+                problemData.index(1);
                 $rootScope.$broadcast("checkHelp");
                 $rootScope.$digest();
                 $timeout.flush();

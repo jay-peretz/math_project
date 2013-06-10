@@ -10,9 +10,7 @@ angular.module('mathSkills.services')
             
             // Store answer events.
             $rootScope.$on('answer', function (e, data) {  //console.log('problem answer', data);
-                if (privateProblemData === undefined) {
-                    privateProblemData = {};
-                }
+               
                 privateProblemData.previousCorrect = data.result === 'correct' ? true : false;
                 $rootScope.$broadcast('recompile');
             });
@@ -56,13 +54,13 @@ angular.module('mathSkills.services')
                  
                 flip: function () { 
                     if(privateProblemData.flip){
-                        if (privateProblemData.flip[0].indexOf(privateProblemData.index) >= 0){
+                        if (privateProblemData.flip[0].indexOf(privateProblemData.index) !== -1){
                             for (var ii = 1; ii < privateProblemData.flip.length; ii++ ){
                                 var work = privateProblemData[privateProblemData.flip[ii][0]];
                                 privateProblemData[privateProblemData.flip[ii][0]] = privateProblemData[privateProblemData.flip[ii][1]];
                                 privateProblemData[privateProblemData.flip[ii][1]] = work;
-                                $rootScope.$broadcast('recompile');
                             }
+                            $rootScope.$broadcast('recompile');
                         }
                     }    
                 },
@@ -95,6 +93,9 @@ angular.module('mathSkills.services')
 
                     return deferred.promise;
                 },
+                resetIndex: function () {
+                    return delete privateProblemData.index;
+                }
             };
 
             return problemData;
