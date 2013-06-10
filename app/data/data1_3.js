@@ -8,7 +8,7 @@ angular.module('mathSkills').value('data1_3', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\butgrp{\\row{\\str{80 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 91}}',
+                problem: '\\butgrp{\\row{\\str{80 \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 91}}}',
                 answer: '',
                 controls: {
                     "checkAnswer": false,
@@ -21,7 +21,7 @@ angular.module('mathSkills').value('data1_3', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{25}{33}{20}{35}}}',
+                problem: '\\col{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{25}{33}{20}{35}}}',
                 answer: '',
                 controls: {
                     "checkAnswer": false,
@@ -60,7 +60,7 @@ angular.module('mathSkills').value('data1_3', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{56}{48}{45}{60}}}',
+                problem: '\\col{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{56}{48}{45}{60}}}',
                 answer: '',
                 controls: {
                     "checkAnswer": false,
@@ -99,7 +99,7 @@ angular.module('mathSkills').value('data1_3', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{86}{77}{72}{88}}}',
+                problem: '\\col{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{86}{77}{72}{88}}}',
                 answer: '',
                 controls: {
                     "checkAnswer": false,
@@ -125,7 +125,7 @@ angular.module('mathSkills').value('data1_3', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{83}{84}{72}{88}}}',
+                problem: '\\col{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{83}{84}{72}{88}}}',
                 answer: '',
                 controls: {
                     "checkAnswer": false,
@@ -151,7 +151,7 @@ angular.module('mathSkills').value('data1_3', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{15}{18}{10}{25}}}',
+                problem: '\\col{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{15}{18}{10}{25}}}',
                 answer: '',
                 controls: {
                     "checkAnswer": false,
@@ -164,7 +164,7 @@ angular.module('mathSkills').value('data1_3', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{84}{78}{72}{88}}}',
+                problem: '\\col{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{84}{78}{72}{88}}}',
                 answer: '',
                 controls: {
                     "checkAnswer": false,
@@ -191,7 +191,7 @@ angular.module('mathSkills').value('data1_3', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{18}{25}{15}{30}}}',
+                problem: '\\col{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{18}{25}{15}{30}}}',
                 answer: '',
                 controls: {
                     "checkAnswer": false,
@@ -217,7 +217,7 @@ angular.module('mathSkills').value('data1_3', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{86}{93}{85}{98}}}',
+                problem: '\\col{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{F}}{\\str{\xA0 or \xA0}}{\\but{<}{T}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{86}{93}{85}{98}}}',
                 answer: '',
                 controls: {
                     "checkAnswer": false,
@@ -243,7 +243,7 @@ angular.module('mathSkills').value('data1_3', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\rowgrp{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{52}{48}{45}{60}}}',
+                problem: '\\col{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{T}}{\\str{\xA0 or \xA0}}{\\but{<}{F}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{52}{48}{45}{60}}}',
                 answer: '',
                 controls: {
                     "checkAnswer": false,
