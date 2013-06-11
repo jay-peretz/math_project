@@ -14,30 +14,30 @@ angular.module('mathSkills')
             return {
                 controller: function ($scope, $element, $filter) {
                     $scope.controllerId = Math.random().toString();
+					var stringNumber,
+						stringNumberCommas,
+						templateArray = [];
                     
 					var templateCompose = function (number) {
-						var templateChar = "";
-						if (number === ",") {
-							templateChar += "<span class='comma-size'>"+number+"</span>";
-						} else {
-							templateChar += "<span>"+number+"</span>";
+						var templateString = "<span>";
+						for (var ii = 0, len = number.length; ii < len; ii += 1) {
+							if (number.substr(ii,1) !== ",") {
+								templateString += number.substr(ii,1);
+							} else {
+								templateString += "</span><span class='comma-size'>,</span><span>";
+							}
 						}
-						return templateChar;
+						templateString += "</span>"
+						return templateString;
 					}
 					
                     // Extract the value and sent size event.
                     $scope.$watch('expected', function () {
                         if($scope.expected) {
-                            $scope.string = $scope.expected.slice(14, $scope.expected.length - 1); 
-							if (isNaN($scope.string) === false && $scope.string !== "\xA0") {
-								$scope.string = Number($scope.string);
-							}
-							$scope.stringCommas = $filter('commas')($scope.string);
-							console.log("$scope.stringCommas is: "+$scope.stringCommas);
-							$scope.templateArray = $scope.stringCommas.split("").map(templateCompose);
-							$scope.templateString = $scope.templateArray.join("");
-							console.log("$scope.templateString is: "+$scope.templateString);
-                            // directiveUtils.size($scope, [$scope.string], 10, 5);    
+                            stringNumber = $scope.expected.slice(14, $scope.expected.length - 1); 
+							stringNumberCommas = $filter('commas')(stringNumber);
+							$scope.templateString = templateCompose(stringNumberCommas);
+                            // directiveUtils.size($scope, [stringNumber], 10, 5);    
                         }
                     });
                      
