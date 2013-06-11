@@ -14,10 +14,10 @@
 }
 
 /* add paddin and set width on input box (16.4 proportion-application)*/
-.proportion-application .answerx{
-    padding: 0 0 0 20px;
+.proportion-application {
+    padding: 0 0 10px 20px;
 }
-.proportion-application input{
+.proportion-application input {
     width: 40px;
     text-align: center;
 }
