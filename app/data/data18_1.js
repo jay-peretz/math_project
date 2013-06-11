@@ -54,11 +54,11 @@ angular.module('mathSkills').service('data18_1', function () {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                       	problem: '\\rowgrp{\\row{\\str{Express the fractional precent as a decimal percent:}}}{\\row{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}{\\str{%}}}',
+                       	problem: '\\rowgrp{\\row{\\str{Express the fractional precent as a decimal percent:}}}{\\row{\\mixed{\\str{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}{\\str{%}}}',
 						answer: '\\row{\\input{$answerDecimal}}{\\str{%}}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\row{\\css{\\str{Divide the numerator of the fraction by the denominator.}}{help-answer-text-tight}}}{\\row{\\frac{\\str{$fractionNum}}{\\str{$fractionDen}}}{\\str{% \xA0 }}{\\str{\xA0 means \xA0 $fractionNum }}{\\css{\\str{\xF7}}{bigger}}{\\str{\xA0 $fractionDen}}{\\str{ \xA0 percent}}}{\\row{\\css{\\str{\xA0 Answer: \xA0 $answerDecimal %}}{help-answer-text}}}'
+							"help": '\\rowgrp{\\row{\\css{\\str{Divide the numerator of the fraction by the denominator.}}{help-answer-text-tight}}}{\\row{\\mixed{\\str{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}{\\str{%}}}{\\row{\\str{the fraction \xA0}}{\\frac{\\str{$fractionNum}}{\\str{$fractionDen}}}{\\str{\xA0 means \xA0 $fractionNum }}{\\css{\\str{\xF7}}{bigger}}{\\str{\xA0 $fractionDen}}}{\\row{\\css{\\str{\xA0 Answer: \xA0 $answerDecimal %}}{help-answer-text}}}'
 						}
                     }]
                 }]
@@ -78,8 +78,8 @@ angular.module('mathSkills').service('data18_1', function () {
 			{ decimalPercent: '1.375', answerWhole: 1, answerNum: 3, answerDen: 8, helpWhole: 1, helpNum: 375, helpDen: 1000, template: 'third' },
 			{ decimalPercent: '2.6', answerWhole: 2, answerNum: 3, answerDen: 5, helpWhole: 2, helpNum: 6, helpDen: 10, template: 'third' },
 			{ decimalPercent: '3.875', answerWhole: 3, answerNum: 7, answerDen: 8, helpWhole: 3, helpNum: 875, helpDen: 1000, template: 'third' },
-			{ fractionWhole: '0', fractionNum: '5', fractionDen: '8', answerDecimal: '0.625', template: 'fourth' },
-			{ fractionWhole: '0', fractionNum: '1', fractionDen: '2', answerDecimal: '0.50', template: 'fourth' },
+			{ fractionWhole: '\xA0', fractionNum: '5', fractionDen: '8', answerDecimal: '0.625', template: 'fourth' },
+			{ fractionWhole: '2', fractionNum: '1', fractionDen: '2', answerDecimal: '2.50', template: 'fourth' },
         ],
         interpolate = function (obj, data) {
             var string = JSON.stringify(obj);
