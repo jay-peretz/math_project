@@ -8,9 +8,14 @@ angular.module('mathSkills')
             return function (givenWhole) {
 					var needsCommas = String(givenWhole),
 						needsCommasLength = needsCommas.length,
+						convertString = Number(givenWhole),
 						buildCommas = [],
 						thisManyCommas,
 						numberWithCommas = '';
+	
+					if (!isNaN(convertString) && typeof givenWhole === "string") {
+						givenWhole = convertString;
+					}
 					
 					if (typeof givenWhole === "number") {
 						// check for decimal point in the number- if so return the number, else add commas- either way return string

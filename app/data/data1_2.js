@@ -32,7 +32,7 @@ angular.module('mathSkills').service('data1_2', function () {
             { words: 'seven thousand, seven hundred nineteen', number: '7,719', template: 'main' },
             { words: 'seventy-three thousand, one hundred seventy-eight', number: '73,178', template: 'main' },
             { words: 'one hundred twenty-six', number: '126', template: 'main' },
-            { words: 'seven thousand, seven hundred forty-eight', number: '7,748', template: 'main' }
+            { words: 'seven thousand, seven hundred forty-eight', number: '7748', template: 'main' }
         ],
         interpolate = function (obj, data) {
             var string = JSON.stringify(obj);
