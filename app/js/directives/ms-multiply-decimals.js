@@ -238,9 +238,6 @@ angular.module('mathSkills')
 							removeLeadingZeros(productArray[ii]);
 						}		
 						
-						$scope.helpTextDecimals = "Add the number of decimal places in the multiplicand to the number of decimal places in the multiplier to obtain the number of decimal places in the answer.";
-						$scope.answerObject = answerObject;
-						
 						$scope.firstArray = [];
 						$scope.secondArray = [];
 						$scope.thirdArray = [];
