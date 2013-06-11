@@ -16,7 +16,7 @@ angular.module('mathSkills').service('data1_5', function () {
 						answer: '\\input{$answer}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\row{\\str{Find the difference of the whole numbers:}}}{\\row{\\str{\xA0}}}{\\row{\\subtractwholes{math}{complete}{$number1}{$number2}}{\\css{\\row{\\str{Answer: \xA0}}{\\commasnumber{$answer}}}{help-answer-text}}}'
+							"help": '\\rowgrp{\\row{\\subtractwholes{math}{complete}{$number1}{$number2}}{\\css{\\row{\\str{Answer: \xA0}}{\\commasnumber{$answer}}}{help-answer-text}}}'
 						}
                     }]
                 }]
