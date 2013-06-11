@@ -16,7 +16,7 @@ angular.module('mathSkills').service('data1_2', function () {
                         answer: '\\input{$number}',
                         controls: {
                             "checkAnswer": true,
-                            "help": '\\str{$words in number notation is $number}'
+                            "help": '\\rowgrp{\\row{\\str{$words}}}{row{\\str{\xA0}}}{\\css{\\row{\\str{Answer: \xA0}}{\\commasnumber{$number}}}{label_like}}'
                         }
                     }]
                 }]
