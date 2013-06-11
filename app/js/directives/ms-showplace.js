@@ -135,44 +135,12 @@ angular.module('mathSkills')
 						}
 					}
 					
-					/*for (var ii = 0, len = $scope.chartPlaceArray.length; ii < len; ii += 1) {
-							console.log("$scope.chartPlaceArray["+ii+"] is: "+$scope.chartPlaceArray[ii]);
+					// enlarge the size of the commas by adding class "comma-size" to TD's with commas 
+					$scope.getClassBorder = function(index) {
+						if ($scope.numbArray[index] === ",") {
+							return "comma-size";
+						} 
 					}
-					
-					$scope.getClass2 = function(index) {
-						$scope.displayRow = index;	
-					}
-					
-					$scope.getClass3 = function(index) {
-						var displayRow = $scope.displayRow,
-							displayColumn = index,
-							returnClass = "";
-					
-						//console.log("($scope.chartPlaceArray[row][displayColumn] ==  $scope.verticalTD) is: "+($scope.chartPlaceArray[row][displayColumn] == $scope.verticalTD)+" typeof $scope.chartPlaceArray[row][displayColumn] is: "+typeof $scope.chartPlaceArray[row][displayColumn]+" typeof $scope.verticalTD is: "+typeof $scope.verticalTD);
-						switch (true)
-							{
-							case ($scope.chartPlaceArray[displayRow][displayColumn] == $scope.verticalTD):
-								returnClass = "textRed";
-								break;	
-							case ($scope.chartPlaceArray[displayRow][displayColumn] == $scope.turnTD):
-									returnClass = "border-left border-bottom";
-									break;	
-							case ($scope.chartPlaceArray[displayRow][displayColumn] == $scope.horizontalTD):
-									returnClass = "textGreen";
-									break;
-							//default: return "textRed ";
-							}
-						console.log("$scope.chartPlaceArray[displayRow][displayColumn] is: "+$scope.chartPlaceArray[displayRow][displayColumn]+" returnClass is: "+returnClass);
-						return returnClass;
-					}
-					
-					$scope.getClass4 = function getClass4(index) {
-						  		console.log
-							  if ($scope.displayRow==6 && index == 3) {
-							  	return "textRed ";
-							  }
-						  
-					}*/
 					
 					// even the number of elements in the arrays with the number in $scope.chartPlaceArray[ii]
 					$scope.numbArray.push(" ");

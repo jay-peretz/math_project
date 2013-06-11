@@ -115,6 +115,13 @@ angular.module('mathSkills')
 						}
 					}
 					
+					// enlarge the size of the decimal by adding class "comma-size" to TD's with commas 
+					$scope.getClassBorder = function(index) {
+						if ($scope.numbarray[index] === ".") {
+							return "decimal-size";
+						} 
+					}
+					
 					// even the number of elements in the arrays with the number in $scope.chartPlaceArray[ii]
 					$scope.numbarray.push(" ");
 					$scope.randomPlaceArray.push(" ");
