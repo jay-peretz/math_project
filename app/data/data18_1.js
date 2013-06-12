@@ -16,7 +16,13 @@ angular.module('mathSkills').service('data18_1', function () {
 						answer: '\\mixed{\\input{$answerWhole}}{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}{\\row{\\mixed{\\str{$helpWhole}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}{help-answer-text-tight}}'
+							"help": '\\rowgrp'
+							+'{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}'
+							+'{\\row{\\mixed{\\str{$helpWhole}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}'
+							+'{\\sign{\xA0 \xA0 = \xA0 \xA0}}'
+							+'{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}'
+							+'{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
+							+'{css{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}{help-answer-text-tight}}'
                 		}
                     }]
                 }]
@@ -30,7 +36,11 @@ angular.module('mathSkills').service('data18_1', function () {
 						answer: '\\input{$answerDecimal}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\row{\\css{\\str{Divide the numerator of the fraction by the denominator.}}{help-answer-text-tight}}}{\\row{\\frac{\\str{$fractionNum}}{\\str{$fractionDen}}}{\\str{\xA0 means \xA0 $fractionNum }}{\\css{\\str{\xF7}}{bigger}}{\\str{\xA0 $fractionDen}}{\\css{\\str{\xA0 Answer: \xA0 $answerDecimal}}{help-answer-text}}}'
+							"help": '\\rowgrp'
+							+'{\\row{\\css{\\str{Divide the numerator of the fraction by the denominator.}}{help-answer-text-tight}}}'
+							+'{\\row{\\frac{\\str{$fractionNum}}{\\str{$fractionDen}}}{\\str{\xA0 means \xA0 $fractionNum }}'
+							+'{\\css{\\str{\xF7}}{bigger}}{\\str{\xA0 $fractionDen}}'
+							+'{\\css{\\str{\xA0 Answer: \xA0 $answerDecimal}}{help-answer-text}}}'
 						}
                     }]
                 }]
@@ -44,7 +54,12 @@ angular.module('mathSkills').service('data18_1', function () {
 						answer: '\\row{\\mixed{input{$answerWhole}}{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}}{\\str{%}}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}{\\row{\\str{$decimalPercent %}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$helpWhole}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
+							"help": '\\rowgrp'
+							+'{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}'
+							+'{\\row{\\str{$decimalPercent %}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}'
+							+'{\\mixed{\\str{$helpWhole}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}'
+							+'{\\sign{\xA0 \xA0 = \xA0 \xA0}}'
+							+'{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
 						}
                     }]
                 }]
@@ -58,7 +73,12 @@ angular.module('mathSkills').service('data18_1', function () {
 						answer: '\\row{\\input{$answerDecimal}}{\\str{%}}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\row{\\css{\\str{Divide the numerator of the fraction by the denominator.}}{help-answer-text-tight}}}{\\row{\\mixed{\\str{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}{\\str{%}}}{\\row{\\str{the fraction \xA0}}{\\frac{\\str{$fractionNum}}{\\str{$fractionDen}}}{\\str{\xA0 means \xA0 $fractionNum }}{\\css{\\str{\xF7}}{bigger}}{\\str{\xA0 $fractionDen}}}{\\row{\\css{\\str{\xA0 Answer: \xA0 $answerDecimal %}}{help-answer-text}}}'
+							"help": '\\rowgrp'
+							+'{\\row{\\css{\\str{Divide the numerator of the fraction by the denominator.}}{help-answer-text-tight}}}'
+							+'{\\row{\\mixed{\\str{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}{\\str{%}}}'
+							+'{\\row{\\str{the fraction \xA0}}{\\frac{\\str{$fractionNum}}{\\str{$fractionDen}}}'
+							+'{\\str{\xA0 means \xA0 $fractionNum }}{\\css{\\str{\xF7}}{bigger}}{\\str{\xA0 $fractionDen}}}'
+							+'{\\row{\\css{\\str{\xA0 Answer: \xA0 $answerDecimal %}}{help-answer-text}}}'
 						}
                     }]
                 }]
