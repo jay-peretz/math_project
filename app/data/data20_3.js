@@ -61,9 +61,9 @@ angular.module('mathSkills').service('data20_3', function () {
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\html{},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems. We substitute the given values to get:}]}{$$previousCorrect}'+
+                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems.}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\grp{\\frac{\\str{$$answer}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\html{X}}{\\sign{=}}{\\html{$$ln &#149; $$rd &#247; $$ld}}}{proportion-application}]}{$$previousCorrect}'+
+                            '\\choose{[\\grp{\\frac{\\str{$$answer}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\html{X}}{\\sign{=}}{\\html{$$ld &#149; $$rn &#247; $$rd}}}{proportion-application}]}{$$previousCorrect}'+
                         '}{'+
                             '\\choose{[\\html{},\\ins{The answer is}]}{$$previousCorrect}'+
                         '}{'+
@@ -84,8 +84,8 @@ angular.module('mathSkills').service('data20_3', function () {
                 answer: '35', template: 'main', symbol: '',
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: 100, drd: 'Base (Whole Quantity)',
-                ln: 70, rn: 'x', 
-                ld: 100, rd: 50, 
+                ln: 'x', rn: 70, 
+                ld: 50, rd: 100, 
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
