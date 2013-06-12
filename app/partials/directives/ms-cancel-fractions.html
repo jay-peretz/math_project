@@ -1,0 +1,69 @@
+<style>
+    ms-cancel-fractions button.cancelling {
+        background: orange;
+    }
+    ms-cancel-fractions .cancel {
+        text-decoration: line-through;
+    }
+    ms-cancel-fractions ms-input input {
+        width: 40px;
+    }
+</style>
+
+<div class="alert alert-block alert-info">{{instructions}}</div>
+<div ng-switch on=curStep>
+    <div ng-switch-when='cancelling'>
+        <table>
+            <tr>
+                <td ng-repeat="frac in fracs">
+                    <table>
+                        <tr>
+                            <td>
+                                <table class=fraction>
+                                    <tr><td>
+                                        <span ng-switch on="cancelling.num == $index">
+                                            <span ng-switch-when=true>
+                                                <ms-input expected label=num></ms-input>
+                                                <div class=cancel>{{frac[0]}}</div>
+                                            </span>
+                                            <span ng-switch-when=false>
+                                                <button
+                                                    ng-class="{ cancelling: cancelling.num == $index }"
+                                                    class=btn
+                                                    ng-click=cancelClick($index,'num')
+                                                >{{frac[0]}}</button>
+                                            </span>
+                                        </span>
+                                    </td></tr>
+                                    <tr><td><hr></td></tr>
+                                    <tr><td>
+                                        <span ng-switch on="cancelling.den == $index">
+                                            <span ng-switch-when=true>
+                                                <div class=cancel>{{frac[1]}}</div>
+                                                <ms-input expected label=den></ms-input>
+                                            </span>
+                                            <span ng-switch-when=false>
+                                                <button
+                                                    ng-class="{ cancelling: cancelling.den == $index }"
+                                                    class=btn
+                                                    ng-click=cancelClick($index,'den')
+                                                >{{frac[1]}}</button>
+                                            </span>
+                                        </span>
+                                    </td></tr>
+                                </table>
+                            </td>
+                            <td>
+                                <ms-expression expected="\\sign{&times;}" ng-hide=$parent.$last></ms-expression>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div ng-switch-when='question'>
+        <ms-expression expected={{display()}}></ms-expression>
+        <ms-expression expected={{question()}} label=question></ms-expression>
+    </div>
+</div>

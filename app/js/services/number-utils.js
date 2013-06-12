@@ -32,11 +32,14 @@ angular.module('mathSkills.services')
                      * tag with inputs expecting the product of the fractions.
                      *
                      * @param [String] fracTags An array of two or more \frac tags.
+                     * @param String   wrapTag  The tag used to wrap the numerator
+                     *                          and denominator in the return string.
                      *
                      * @return String A new \frac tag with \input numerator and
                      *   denominator.  Its \inputs expect the product of fracTags.
                      */
-                    multiply: function (fracTags) {
+                    multiply: function (fracTags, wrapTag) {
+                        wrapTag = wrapTag || 'input';
                         return fracTags.map(function (tag) {
                                 return parser.extractTag(tag).args.map(function (tag) {
                                     return +parser.extractTag(tag).args[0];
@@ -46,7 +49,7 @@ angular.module('mathSkills.services')
                                 total[1] *= cur[1];
                                 return total;
                             }, [1, 1]).reduce(function (tagString, piece) {
-                                return tagString + '{\\input{' + piece + '}}';
+                                return tagString + '{\\' + wrapTag + '{' + piece + '}}';
                             }, '\\frac');
                     },
                     /**
@@ -75,6 +78,20 @@ angular.module('mathSkills.services')
                         }
 
                         return '\\frac{\\str{' + [num, den].join('}}{\\str{') + '}}';
+                    },
+                    /**
+                     * toFrac :: [Numbers] -> String
+                     *
+                     * Turns a fraction tuple (a two-length array) into a \frac tag.
+                     *
+                     * @param [Number] pieces    The fraction tuple
+                     * @param Number   pieces[0] Numerator
+                     * @param Number   pieces[1] Denominator
+                     *
+                     * @return String The \frac tag string.
+                     */
+                    toFrac: function (pieces) {
+                        return '\\frac{\\str{' + pieces.join('}}{\\str{') + '}}';
                     }
                 },
                 divisibleBy: function (num, divisors) {
