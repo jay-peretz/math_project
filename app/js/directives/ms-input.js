@@ -139,7 +139,12 @@ angular.module('mathSkills')
                     $scope.$watch('expected', function () {
                         if($scope.expected) {
                             var arr = [];
-                            arr.push($scope.expected.slice(7, $scope.expected.length - 1));
+                            var parsedExpected = parser.extractTag($scope.expected).args[0];
+                            if (parsedExpected[0] === '[') {
+                                arr = parsedExpected[0];
+                            } else {
+                                arr.push(parsedExpected[0]);
+                            }   
                             directiveUtils.resize($scope, arr, 'input', 10, 10);
                         }
                     });
