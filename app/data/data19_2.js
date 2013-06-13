@@ -27,11 +27,9 @@ angular.module('mathSkills').service('data19_2', function () {
 					}, {
 						problem: '\\rowgrp'
 						+'{$$fractionDecimalProblem}'
-						+'{\\row{str{\xA0 Answer:}}{$$fractionDecimalAnswer}{\\str{%}}}'
+						+'{\\row{str{\xA0 Answer:}}{$$fractionDecimalAnswer}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\str{Now change the decimal to a percentage:}}' 
-						+'{\\str{\xA0}}'
-						+'{\\str{$answerDecimal}}',
+						+'{\\str{Now change the decimal to a percentage:}}',
 						answer: '\\grp{\\input{$answerPercent}}{\\str{%}}',
 						controls: {
 							"checkAnswer": true,
