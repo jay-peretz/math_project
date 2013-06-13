@@ -4,7 +4,7 @@
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
         parserProvider.register('cut', {
-            directiveTemplate: '<ms-cut-set expected={{expected}} label=lable></ms-cut-set>'
+            directiveTemplate: '<ms-cut expected={{expected}} label=lable></ms-cut>'
         });
     }])
     .directive('msCut', [
@@ -19,7 +19,7 @@ angular.module('mathSkills')
                     $scope.$watch('expected', function () {
                         if ($scope.expected){
                             $scope.myargs = parser.extractTag($scope.expected).args;
-                            var x = $filter('replace');
+                            var x = $filter('replace'); 
                             problemData.setData(x($scope.myargs[0], 'input', 'str'), $scope.myargs[1]);
                         }
                     });

@@ -35,7 +35,7 @@ angular.module('mathSkills.services')
                 setData: function (data, key) {
                     privateProblemData[key] = data;
                     $rootScope.$broadcast('recompile');
-                    //console.log("set data-key", privateData[key]);
+                    //console.log("set data-key", privateProblemData[key]);
                 },
                 
                 getData: function (key) {

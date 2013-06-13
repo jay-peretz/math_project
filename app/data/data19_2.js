@@ -12,10 +12,10 @@ angular.module('mathSkills').service('data19_2', function () {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\cut{\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}}{fractionDecimalProblem}',
+						problem: '\\cut{\\rowgrp{\\grp{\\str{Change the fraction to decimal:}}}{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}}{fractionDecimalProblem}',
 						answer: '\\cut{\\input{$answerDecimal}}{fractionDecimalAnswer}',	
-						problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}',
-						answer: '\\input{$answerDecimal}',
+						//problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}',
+						//answer: '\\input{$answerDecimal}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -28,9 +28,9 @@ angular.module('mathSkills').service('data19_2', function () {
 						
 					}, {
 						problem: '\\rowgrp'
-						+'{\\row{\\str{$$fractionDecimalProblem}}}'
-						+'{\\row{\\str{$$fractionDecimalAnswer}}}'
-						+'{\\row{\\str{Change the decimal to a percentage:}}}'
+						+'{$$fractionDecimalProblem}'
+						+'{$$fractionDecimalAnswer}'
+						+'{\\row{\\str{Change the decimal to a percentage:}}}' // dont need a row
 						+'{\\row{\\str{\xA0}}}'
 						+'{\\row{\\str{$answerDecimal}}}',
 						answer: '\\grp{\\input{$answerPercent}}{\\str{%}}',
