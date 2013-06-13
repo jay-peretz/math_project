@@ -1,6 +1,10 @@
 
 
 /* center the text in <tr> tags in help panel (6.3 Equivalent Fractions & 9.1 Add and Subtract Like Fractions)*/
+body {
+	font-family: 'Muli', sans-serif;
+	font-size:110%
+}
 .center-tr-txt{
     text-align: center;
 }
@@ -62,4 +66,13 @@
 }
 .problemwrapper {
 	margin-top:30px;
+}
+.clskls372 .navbar-inverse .navbar-inner {
+	background-image:none;
+	background-color:darkblue;
+}
+ul.nav-list {
+	columns: 2;
+   -webkit-columns: 2; /* Safari and Chrome */
+   -moz-columns: 2; /* Firefox */
 }
