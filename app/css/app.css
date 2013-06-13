@@ -69,7 +69,15 @@ ms-panel .helpPanel > div {
 }
 
 ms-panel > div {
-    padding-top: 10px;
+    padding-top: 0;
+}
+
+.nav{
+    margin-bottom: 12px;
+}
+
+ms-controls{
+    padding-top:30px;
 }
 
 @-webkit-keyframes fadein {
