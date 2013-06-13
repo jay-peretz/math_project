@@ -12,8 +12,8 @@ angular.module('mathSkills').service('data19_2', function () {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						/*problem: '\\cut{\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}}{fractionDecimalProblem}',
-						answer: '\\cut{\\input{$answerDecimal}}{fractionDecimalAnswer}',*/	
+						problem: '\\cut{\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}}{fractionDecimalProblem}',
+						answer: '\\cut{\\input{$answerDecimal}}{fractionDecimalAnswer}',	
 						problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}',
 						answer: '\\input{$answerDecimal}',
 						controls: {
@@ -28,8 +28,8 @@ angular.module('mathSkills').service('data19_2', function () {
 						
 					}, {
 						problem: '\\rowgrp'
-						//+'{$$fractionDecimalProblem}'
-						//+'{$$fractionDecimalAnswer}'
+						+'{\\row{\\str{$$fractionDecimalProblem}}}'
+						+'{\\row{\\str{$$fractionDecimalAnswer}}}'
 						+'{\\row{\\str{Change the decimal to a percentage:}}}'
 						+'{\\row{\\str{\xA0}}}'
 						+'{\\row{\\str{$answerDecimal}}}',
