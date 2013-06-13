@@ -21,9 +21,3 @@ div .fraction .control-group {
 .fraction tr:nth-child(3) td {
 	padding:4px;
 }
-.help-answer-text-tight {
-	display:block;	
-	color: #069;
-	font-size: 15px;
-	font-weight: normal;
-}

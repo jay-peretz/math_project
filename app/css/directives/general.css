@@ -13,6 +13,32 @@
 	font-size:125%;
 }
 
+.help-answer-text {
+	display:block;	
+	margin-left:50px;
+	color: #069;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.help-answer-text-tight {
+	display:block;	
+	color: #069;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.help-text-margin-width {
+	margin-top:60px;
+	width:6em;
+}
+
+.label_like {
+	color: #069;
+	font-size: 15px;
+	font-weight: normal;
+}
+
 /* add paddin and set width on input box (16.4 proportion-application)*/
 .proportion-application {
     padding: 0 0 10px 20px;

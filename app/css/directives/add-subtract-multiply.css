@@ -74,18 +74,6 @@
 .collapseTable {
 	border-collapse:collapse;
 }
-.help-answer-text {
-	display:block;	
-	margin-left:50px;
-	color: #069;
-	font-size: 15px;
-	font-weight: normal;
-}
-.label_like {
-	color: #069;
-	font-size: 15px;
-	font-weight: normal;
-}
 .large-font-size {
 	font-size:110%;
 }

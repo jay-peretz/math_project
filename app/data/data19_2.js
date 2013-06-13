@@ -1,207 +1,72 @@
 /*global angular */
 
-angular.module('mathSkills').value('data19_2', {
-    title: '19.2 Change a Fraction to a Decimal, then to a  Percent',
-    path: '19.2-change-a-fraction-to-a-decimal-then-to-a-percent',
-    children: [{
-        title: 'Change a Fraction to a Decimal, then to a  Percent',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{9}}{\\str{10}}}',
-                answer: '\\input{0.9}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{9}}{\\str{10}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
+angular.module('mathSkills').service('data19_2', function () {
+    var ret = {
+			title: '19.2 Decimal & Fraction Form of Percents',
+			path: '19.2-decimal-fraction-form-percents',
+            children: []
+        },
+        template = {
+			main: {
+                title: 'Decimal & Fraction Form of Percents',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						/*problem: '\\cut{\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}}{fractionDecimalProblem}',
+						answer: '\\cut{\\input{$answerDecimal}}{fractionDecimalAnswer}',*/	
+						problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}',
+						answer: '\\input{$answerDecimal}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\row{\\css{\\str{Divide the numerator of the fraction by the denominator.}}{help-answer-text-tight}}}'
+							+'{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}'
+							+'{\\row{\\str{the fraction \xA0}}{\\frac{\\str{$fractionNum}}{\\str{$fractionDen}}}'
+							+'{\\str{\xA0 means \xA0 $fractionNum }}{\\css{\\str{\xF7}}{bigger}}{\\str{\xA0 $fractionDen}}}'
+							+'{\\row{\\css{\\str{\xA0 Answer: \xA0 $answerDecimal}}{help-answer-text}}}'
+						}
+						
+					}, {
+						problem: '\\rowgrp'
+						//+'{$$fractionDecimalProblem}'
+						//+'{$$fractionDecimalAnswer}'
+						+'{\\row{\\str{Change the decimal to a percentage:}}}'
+						+'{\\row{\\str{\xA0}}}'
+						+'{\\row{\\str{$answerDecimal}}}',
+						answer: '\\grp{\\input{$answerPercent}}{\\str{%}}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp{\\row{\\percentarrows{$answerDecimal}{100}{decimal}{percent}}{\\row{\\html{&nbsp;}}}{\\row{\\css{\\str{Answer: $answerPercent %}}{help-answer-text help-text-margin-width}}}'
+						}
+					}]
+                }]
+            }
+        },
+        data = [
+            { fractionWhole: '&nbsp;', fractionNum: '9', fractionDen: '10', answerDecimal: '0.9', answerPercent: '90', template: 'main' },
+			{ fractionWhole: '&nbsp;', fractionNum: '67', fractionDen: '100', answerDecimal: '0.67', answerPercent: '67', template: 'main' },
+			{ fractionWhole: '&nbsp;', fractionNum: '5', fractionDen: '10', answerDecimal: '0.5', answerPercent: '50', template: 'main' },
+			{ fractionWhole: '&nbsp;', fractionNum: '29', fractionDen: '50', answerDecimal: '0.58', answerPercent: '58', template: 'main' },
+			{ fractionWhole: '&nbsp;', fractionNum: '38', fractionDen: '20', answerDecimal: '1.9', answerPercent: '190', template: 'main' },
+			{ fractionWhole: '&nbsp;', fractionNum: '79', fractionDen: '160', answerDecimal: '0.49375', answerPercent: '49.375', template: 'main' },
+			{ fractionWhole: '&nbsp;', fractionNum: '71', fractionDen: '160', answerDecimal: '0.44375', answerPercent: '44.375', template: 'main' },
+			{ fractionWhole: '&nbsp;', fractionNum: '771', fractionDen: '800', answerDecimal: '0.96375', answerPercent: '96.375', template: 'main' },
+			{ fractionWhole: '&nbsp;', fractionNum: '2', fractionDen: '125', answerDecimal: '0.016', answerPercent: '1.6', template: 'main' },
+			{ fractionWhole: '&nbsp;', fractionNum: '189', fractionDen: '200', answerDecimal: '0.945', answerPercent: '94.5', template: 'main' },
+        ],
+        interpolate = function (obj, data) {
+            var string = JSON.stringify(obj);
+            for (var symbol in data) {
+                if (data.hasOwnProperty(symbol)) {
+                    string = string.replace(new RegExp('\\$' + symbol, 'g'), data[symbol]);
                 }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.9}}}',
-                answer: '\\row{\\input{90}}{\\str{%}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\percentarrows{0.9}{100}{decimal}{percent}}{\\css{\\str{Answer:  90%}}{help-answer-text help-answer-margin-right}}}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Change a Fraction to a Decimal, then to a  Percent',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{67}}{\\str{100}}}',
-                answer: '\\input{0.67}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{67}}{\\str{100}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.67}}}',
-                answer: '\\row{\\input{67}}{\\str{%}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\percentarrows{0.67}{100}{decimal}{percent}}{\\css{\\str{Answer:  67%}}{help-answer-text help-answer-margin-right}}}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Change a Fraction to a Decimal, then to a  Percent',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{5}}{\\str{10}}}',
-                answer: '\\input{0.5}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{5}}{\\str{10}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.5}}}',
-                answer: '\\row{\\input{50}}{\\str{%}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\percentarrows{0.5}{100}{decimal}{percent}}{\\css{\\str{Answer:  50%}}{help-answer-text help-answer-margin-right}}}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Change a Fraction to a Decimal, then to a  Percent',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{29}}{\\str{50}}}',
-                answer: '\\input{0.58}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{29}}{\\str{50}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.58}}}',
-                answer: '\\row{\\input{58}}{\\str{%}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\percentarrows{0.58}{100}{decimal}{percent}}{\\css{\\str{Answer:  58%}}{help-answer-text help-answer-margin-right}}}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Change a Fraction to a Decimal, then to a  Percent',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{38}}{\\str{20}}}',
-                answer: '\\input{1.9}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{38}}{\\str{20}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{1.9}}}',
-                answer: '\\row{\\input{190}}{\\str{%}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\percentarrows{1.9}{100}{decimal}{percent}}{\\css{\\str{Answer:  190%}}{help-answer-text help-answer-margin-right}}}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Change a Fraction to a Decimal, then to a  Percent',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{79}}{\\str{160}}}',
-                answer: '\\input{0.49375}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{79}}{\\str{160}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.49375}}}',
-                answer: '\\row{\\input{49.375}}{\\str{%}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\percentarrows{0.49375}{100}{decimal}{percent}}{\\css{\\str{Answer:  49.375%}}{help-answer-text help-answer-margin-right}}}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Change a Fraction to a Decimal, then to a  Percent',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{71}}{\\str{160}}}',
-                answer: '\\input{0.44375}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{71}}{\\str{160}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.44375}}}',
-                answer: '\\row{\\input{44.375}}{\\str{%}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\percentarrows{0.44375}{100}{decimal}{percent}}{\\css{\\str{Answer:  44.375%}}{help-answer-text help-answer-margin-right}}}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Change a Fraction to a Decimal, then to a  Percent',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{771}}{\\str{800}}}',
-                answer: '\\input{0.96375}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{771}}{\\str{800}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.96375}}}',
-                answer: '\\row{\\input{96.375}}{\\str{%}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\percentarrows{0.96375}{100}{decimal}{percent}}{\\css{\\str{Answer:  96.375%}}{help-answer-text help-answer-margin-right}}}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Change a Fraction to a Decimal, then to a  Percent',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{2}}{\\str{125}}}',
-                answer: '\\input{0.016}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{2}}{\\str{125}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.016}}}',
-                answer: '\\row{\\input{1.6}}{\\str{%}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\percentarrows{0.016}{100}{decimal}{percent}}{\\css{\\str{Answer:  1.6%}}{help-answer-text help-answer-margin-right}}}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Change a Fraction to a Decimal, then to a  Percent',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Change the fraction to decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{189}}{\\str{200}}}',
-                answer: '\\input{0.945}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\percentsdecimalfrac{\\frac{\\str{189}}{\\str{200}}}{percentAsFraction}{decimalNotPercent}}{help-answer-text-tight}}}'
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Change the decimal to a percentage:}}}{\\row{\\str{\xA0}}}{\\row{\\str{0.945}}}',
-                answer: '\\row{\\input{94.5}}{\\str{%}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\percentarrows{0.945}{100}{decimal}{percent}}{\\css{\\str{Answer:  94.5%}}{help-answer-text help-answer-margin-right}}}'
-                }
-            }]
-        }]
-    }]
+            }
+            return JSON.parse(string);
+        };
+
+    ret.children = data.map(function (problem) {
+        return interpolate(template[problem.template], problem);
+    });
+
+    return ret;
 });
