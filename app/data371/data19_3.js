@@ -114,7 +114,7 @@ angular.module('mathSkills').service('data19_3', function () {
 						+'{\\grp{str{\xA0 Answer:}}{$$fractionMixedPercentAnswer}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\str{Change the percent into its equivalent fraction (reduced to lowest terms):}}}',
-						answer: '\\grp{\\mixed{\\input{$answerSecondWhole}}{\\frac{\\input{$answerSecondNum}}{\\input{$answerSecondDen}}}}',
+						answer: '\\grp{\\frac{\\input{$answerSecondNum}}{\\input{$answerSecondDen}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -160,7 +160,7 @@ angular.module('mathSkills').service('data19_3', function () {
 						+'{\\grp{str{\xA0 Answer:}}{$$fractionMixedPercentAnswer}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\str{Change the percent into its equivalent fraction (reduced to lowest terms):}}}',
-						answer: '\\grp{\\mixed{\\input{$answerSecondWhole}}{\\frac{\\input{$answerSecondNum}}{\\input{$answerSecondDen}}}}',
+						answer: '\\grp{\\frac{\\input{$answerSecondNum}}{\\input{$answerSecondDen}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -181,10 +181,10 @@ angular.module('mathSkills').service('data19_3', function () {
             { problemWhole: '1', problemNum: '1', problemDen: '4', answerNum: '1', answerDen: '80', helpNum: '5', helpDen: '400', template: 'second' },
 			{ problemWhole: '1', problemNum: '5', problemDen: '6', answerNum: '11', answerDen: '600', template: 'third' },
 			{ problemWhole: '&nbsp;', problemNum: '4', problemDen: '5', answerNum: '1', answerDen: '125', helpNum: '4', helpDen: '500', template: 'second' },
-			{ fractionWhole: '&nbsp;', fractionNum: '6', fractionDen: '7', answerFractionWhole: '85', answerFractionNum: '5', answerFractionDen: '7', template: 'second' },
-			{ fractionWhole: '&nbsp;', fractionNum: '3', fractionDen: '11', answerFractionWhole: '27', answerFractionNum: '3', answerFractionDen: '11', template: 'second' },
+			{  problemDecimal: '5.2', fractionWhole: '5', fractionNum: '2', fractionDen: '10', answerFractionWhole: '5', answerFractionNum: '1', answerFractionDen: '5', helpWhole: '&nbsp;', helpNum: '26', helpDen: '500', answerSecondWhole: '&nbsp;', answerSecondNum: '13', answerSecondDen: '250', template: 'fourth' },
+			{  problemDecimal: '2.3', answerFractionWhole: '2', answerFractionNum: '3', answerFractionDen: '10', answerSecondWhole: '&nbsp;', answerSecondNum: '23', answerSecondDen: '1000', template: 'fifth' },
 			{  problemDecimal: '8.8', fractionWhole: '8', fractionNum: '8', fractionDen: '10', answerFractionWhole: '8', answerFractionNum: '4', answerFractionDen: '5', helpWhole: '&nbsp;', helpNum: '44', helpDen: '500', answerSecondWhole: '&nbsp;', answerSecondNum: '11', answerSecondDen: '125', template: 'fourth' },
-			{  problemDecimal: '2.3', answerFractionWhole: '2', answerFractionNum: '3', answerFractionDen: '10', answerSecondWhole: '&nbsp;', answerSecondNum: '23', answerSecondDen: '1000', template: 'fifth' }
+			{  problemDecimal: '3.7', answerFractionWhole: '3', answerFractionNum: '7', answerFractionDen: '10', answerSecondWhole: '&nbsp;', answerSecondNum: '37', answerSecondDen: '1000', template: 'fifth' }
         ],
         interpolate = function (obj, data) {
             var string = JSON.stringify(obj);
