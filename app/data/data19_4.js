@@ -1,9 +1,9 @@
 /*global angular */
 
-angular.module('mathSkills').service('data19_3', function () {
+angular.module('mathSkills').service('data19_4', function () {
     var ret = {
-			title: '19.3 Change a Percent to a Fraction (Directly)',
-			path: '19.3-change-a-percent-to-a-fraction-directly',
+			title: '19.4 Change a Percent to a Decimal, then to a Fraction',
+			path: '19.4-change-a-percent-to-a-decimal-then-to-a-fraction',
             children: []
         },
         template = {
@@ -12,23 +12,44 @@ angular.module('mathSkills').service('data19_3', function () {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\rowgrp'
-						+'{\\grp{\\str{Change the percent into a fraction (reduced to lowest terms):}}}'
+						problem: '\\cut'
+						+'{\\rowgrp'
+						+'{\\grp{\\str{Change this percent into a decimal:}}}'
 						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}}',
-						answer: '\\grp{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',	
+						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}}}'
+						+'{percentDecimalProblem}',
+						answer: '\\cut'
+						+'{\\grp{\\input{$decimal}}}'
+						+'{percentDecimalAnswer}',		
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
 							+'{\\row{\\str{$decimalPercent}}{\\str{%}}'
 							+'{\\sign{\xA0 = \xA0}}'							
-							+'{\\frac{\\str{$helpNum}}{\\str{$helpDen}}}'
-							+'{\\sign{\xA0 = \xA0}}'							
-							+'{\\frac{\\str{$answerNum}}{\\str{$answerDen}}}}'
+							+'{\\str{$decimal}}}'
 							+'{\\row{\\html{&nbsp;}}}'
 							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{\\css{\\frac{\\str{$answerNum}}{\\str{$answerDen}}}{help-answer-text-tight}}'
-
+							+'{\\css{\\str{$decimal}}{help-answer-text-tight}}}'
+						}
+						
+					}, {
+						problem: '\\rowgrp'
+						+'{$$percentDecimalProblem}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{str{\xA0 Answer:}}{$$percentDecimalAnswer}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\str{Change the decimal into a fraction:}}}',
+						answer: '\\grp{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\row{\\str{$decimal}}'
+							+'{\\sign{ \xA0 = \xA0 }}'
+							+'{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}'
+							+'{\\sign{ \xA0 = \xA0 }}'
+							+'{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
+							+'{css{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}{help-answer-text-tight}}}'
 						}
 					}]
                 }]
@@ -175,11 +196,11 @@ angular.module('mathSkills').service('data19_3', function () {
             }
         },
         data = [
-            { decimalPercent: '38', answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', template: 'main' },
-            { decimalPercent: '44', answerNum: '11', answerDen: '25', helpNum: '44', helpDen: '100', template: 'main' },			
-            { decimalPercent: '35', answerNum: '7', answerDen: '25', helpNum: '35', helpDen: '100', template: 'main' },
-            { problemWhole: '1', problemNum: '1', problemDen: '4', answerNum: '1', answerDen: '80', helpNum: '5', helpDen: '400', template: 'second' },
-			{ problemWhole: '1', problemNum: '5', problemDen: '6', answerNum: '11', answerDen: '600', template: 'third' },
+            { decimalPercent: '38', decimal: .38, answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', template: 'main' },
+            { decimalPercent: '38', decimal: .38, answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', template: 'main' },
+            { decimalPercent: '38', decimal: .38, answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', template: 'main' },
+            { decimalPercent: '38', decimal: .38, answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', template: 'main' },
+            { decimalPercent: '38', decimal: .38, answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', template: 'main' },
 			{ problemWhole: '&nbsp;', problemNum: '4', problemDen: '5', answerNum: '1', answerDen: '125', helpNum: '4', helpDen: '500', template: 'second' },
 			{ fractionWhole: '&nbsp;', fractionNum: '6', fractionDen: '7', answerFractionWhole: '85', answerFractionNum: '5', answerFractionDen: '7', template: 'second' },
 			{ fractionWhole: '&nbsp;', fractionNum: '3', fractionDen: '11', answerFractionWhole: '27', answerFractionNum: '3', answerFractionDen: '11', template: 'second' },
