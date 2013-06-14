@@ -38,13 +38,6 @@ angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtil
                             "checkAnswer": true,
                             "help": true
                         }
-                    }, {
-                        problem: '\\str{Reduce the fraction to its lowest terms.}',
-                        answer: '\\reducefrac{\\frac{\\str{$$mfn}}{\\str{$$mfd}}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true
-                        }
                     }]
                 }]
             },
@@ -75,13 +68,6 @@ angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtil
                     }, {
                         problem: '\\str{Multiply the fractions together.}',
                         answer: '\\multiplyfracs{\\frac{\\str{$$n1}}{\\str{$$d1}}}{\\frac{\\str{$$n2}}{\\str{$$d2}}}{\\frac{\\str{$$n3}}{\\str{$$d3}}}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true
-                        }
-                    }, {
-                        problem: '\\str{Reduce the fraction to its lowest terms.}',
-                        answer: '\\reducefrac{\\frac{\\str{$$mfn}}{\\str{$$mfd}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
