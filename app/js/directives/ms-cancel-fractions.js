@@ -7,7 +7,7 @@ angular.module('mathSkills')
             directiveTemplate: '<ms-cancel-fractions expected={{expected}}></ms-cancel-fractions>'
         });
     }])
-    .directive('msCancelFractions', ['numberUtils', 'parser', function (numberUtils, parser) {
+    .directive('msCancelFractions', ['numberUtils', 'parser', 'problemData', function (numberUtils, parser, problemData) {
         return {
             controller: ['$scope', function ($scope) {
                 // Generates ms-expresion expected tag string for question display.
@@ -49,6 +49,14 @@ angular.module('mathSkills')
                         } else if (data.result === 'incorrect') {
                             e.stopPropagation();
                         } else {
+                            problemData.setData($scope.fracs[0][0], 'n1');
+                            problemData.setData($scope.fracs[0][1], 'd1');
+                            problemData.setData($scope.fracs[1][0], 'n2');
+                            problemData.setData($scope.fracs[1][1], 'd2');
+                            if ($scope.fracs.length === 3) {
+                                problemData.setData($scope.fracs[2][0], 'n3');
+                                problemData.setData($scope.fracs[2][1], 'd3');
+                            }
                             data.answer = data.expected = $scope.display();
                         }
                     } else {

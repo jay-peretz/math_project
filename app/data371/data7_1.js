@@ -1,317 +1,107 @@
 /*global angular */
 
-angular.module('mathSkills').value('data7_1', {
-    title: '7.1 Multiplying Fractions',
-    path: '7.1-multiplying-fractions',
-    children: [{
-        title: 'Multiplying Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{1}}{\\str{2}}}{\\sign{&times;}}{\\frac{\\str{2}}{\\str{3}}}',
-                answer: '\\frac{\\input{1}}{\\input{3}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Multiply the fractions together.}',
-                answer: '\\multiplyfracs{\\frac{\\str{1}}{\\str{2}}}{\\frac{\\str{2}}{\\str{3}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }, {
-                problem: '\\str{Reduce the fraction to its lowest terms.}',
-                answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{2}}{\\str{6}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Multiplying Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{1}}{\\str{4}}}{\\sign{&times;}}{\\frac{\\str{2}}{\\str{6}}}',
-                answer: '\\frac{\\input{1}}{\\input{12}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Multiply the fractions together.}',
-                answer: '\\multiplyfracs{\\frac{\\str{1}}{\\str{4}}}{\\frac{\\str{2}}{\\str{6}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }, {
-                problem: '\\str{Reduce the fraction to its lowest terms.}',
-                answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{2}}{\\str{24}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Multiplying Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{6}}{\\str{8}}}{\\sign{&times;}}{\\frac{\\str{10}}{\\str{9}}}',
-                answer: '\\frac{\\input{5}}{\\input{6}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Multiply the fractions together.}',
-                answer: '\\multiplyfracs{\\frac{\\str{6}}{\\str{8}}}{\\frac{\\str{10}}{\\str{9}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }, {
-                problem: '\\str{Reduce the fraction to its lowest terms.}',
-                answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{60}}{\\str{72}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Multiplying Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{3}}{\\str{6}}}{\\sign{&times;}}{\\frac{\\str{6}}{\\str{2}}}',
-                answer: '\\frac{\\input{3}}{\\input{2}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Multiply the fractions together.}',
-                answer: '\\multiplyfracs{\\frac{\\str{3}}{\\str{6}}}{\\frac{\\str{6}}{\\str{2}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }, {
-                problem: '\\str{Reduce the fraction to its lowest terms.}',
-                answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{18}}{\\str{12}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Multiplying Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{42}}{\\str{8}}}{\\sign{&times;}}{\\frac{\\str{12}}{\\str{14}}}',
-                answer: '\\frac{\\input{9}}{\\input{2}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Multiply the fractions together.}',
-                answer: '\\multiplyfracs{\\frac{\\str{42}}{\\str{8}}}{\\frac{\\str{12}}{\\str{14}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }, {
-                problem: '\\str{Reduce the fraction to its lowest terms.}',
-                answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{504}}{\\str{112}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Multiplying Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{15}}{\\str{6}}}{\\sign{&times;}}{\\frac{\\str{20}}{\\str{35}}}',
-                answer: '\\frac{\\input{10}}{\\input{7}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Multiply the fractions together.}',
-                answer: '\\multiplyfracs{\\frac{\\str{15}}{\\str{6}}}{\\frac{\\str{20}}{\\str{35}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }, {
-                problem: '\\str{Reduce the fraction to its lowest terms.}',
-                answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{300}}{\\str{210}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Multiplying Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{63}}{\\str{72}}}{\\sign{&times;}}{\\frac{\\str{64}}{\\str{99}}}',
-                answer: '\\frac{\\input{56}}{\\input{99}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Multiply the fractions together.}',
-                answer: '\\multiplyfracs{\\frac{\\str{63}}{\\str{72}}}{\\frac{\\str{64}}{\\str{99}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }, {
-                problem: '\\str{Reduce the fraction to its lowest terms.}',
-                answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{4096}}{\\str{7128}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Multiplying Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{3}}{\\str{5}}}{\\sign{&times;}}{\\frac{\\str{10}}{\\str{18}}}{\\sign{&times;}}{\\frac{\\str{15}}{\\str{20}}}',
-                answer: '\\frac{\\input{1}}{\\input{4}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Multiply the fractions together.}',
-                answer: '\\multiplyfracs{\\frac{\\str{3}}{\\str{5}}}{\\frac{\\str{10}}{\\str{18}}}{\\frac{\\str{15}}{\\str{20}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }, {
-                problem: '\\str{Reduce the fraction to its lowest terms.}',
-                answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{450}}{\\str{1800}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Multiplying Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{12}}{\\str{24}}}{\\sign{&times;}}{\\frac{\\str{36}}{\\str{6}}}{\\sign{&times;}}{\\frac{\\str{18}}{\\str{32}}}',
-                answer: '\\frac{\\input{27}}{\\input{16}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Multiply the fractions together.}',
-                answer: '\\multiplyfracs{\\frac{\\str{12}}{\\str{24}}}{\\frac{\\str{36}}{\\str{6}}}{\\frac{\\str{18}}{\\str{32}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }, {
-                problem: '\\str{Reduce the fraction to its lowest terms.}',
-                answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{7776}}{\\str{4608}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Multiplying Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{65}}{\\str{77}}}{\\sign{&times;}}{\\frac{\\str{55}}{\\str{104}}}{\\sign{&times;}}{\\frac{\\str{84}}{\\str{132}}}',
-                answer: '\\frac{\\input{25}}{\\input{88}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Multiply the fractions together.}',
-                answer: '\\multiplyfracs{\\frac{\\str{65}}{\\str{77}}}{\\frac{\\str{55}}{\\str{104}}}{\\frac{\\str{84}}{\\str{132}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }, {
-                problem: '\\str{Reduce the fraction to its lowest terms.}',
-                answer: '\\prev{feedbackData.getPrevious()}{\\reducefrac{\\frac{\\str{300300}}{\\str{1057056}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }]
-});
+angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtils) {
+    var desc = {
+            title: '7.1 Multiplying Fractions',
+            path: '7.1-multiplying-fractions',
+            children: []
+        },
+        template = {
+            two: {
+                title: 'Multiplying Fractions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}',
+                        answer: '\\frac{\\input{$na}}{\\input{$da}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\col'+
+                                '{\\str{Reduce the fractions by canceling.}}' +
+                                '{\\row{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}}',
+                        answer: '\\cancelfracs{[$n1,$d1]}{[$n2,$d2]}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\str{Multiply the fractions together.}',
+                        answer: '\\multiplyfracs{\\frac{\\str{$$n1}}{\\str{$$d1}}}{\\frac{\\str{$$n2}}{\\str{$$d2}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\str{Reduce the fraction to its lowest terms.}',
+                        answer: '\\reducefrac{\\frac{\\str{$$mfn}}{\\str{$$mfd}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            },
+            three: {
+                title: 'Multiplying Fractions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\sign{&times;}}{\\frac{\\str{$n3}}{\\str{$d3}}}',
+                        answer: '\\frac{\\input{$na}}{\\input{$da}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\col'+
+                                '{\\str{Reduce the fractions by canceling.}}' +
+                                '{\\row{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\sign{&times;}}{\\frac{\\str{$n3}}{\\str{$d3}}}}',
+                        answer: '\\cancelfracs{[$n1,$d1]}{[$n2,$d2]}{[$n3,$d3]}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\str{Multiply the fractions together.}',
+                        answer: '\\multiplyfracs{\\frac{\\str{$$n1}}{\\str{$$d1}}}{\\frac{\\str{$$n2}}{\\str{$$d2}}}{\\frac{\\str{$$n3}}{\\str{$$d3}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\str{Reduce the fraction to its lowest terms.}',
+                        answer: '\\reducefrac{\\frac{\\str{$$mfn}}{\\str{$$mfd}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            }
+        },
+        data = [
+            { n1: 1, d1: 2, n2: 2, d2: 3, na: 1, da: 3, template: 'two' },
+            { n1: 1, d1: 4, n2: 2, d2: 6, na: 1, da: 12, template: 'two' },
+            { n1: 6, d1: 8, n2: 10, d2: 9, na: 5, da: 6, template: 'two' },
+            { n1: 3, d1: 6, n2: 6, d2: 2, na: 3, da: 2, template: 'two' },
+            { n1: 42, d1: 8, n2: 12, d2: 14, na: 9, da: 2, template: 'two' },
+            { n1: 15, d1: 6, n2: 20, d2: 35, na: 10, da: 7, template: 'two' },
+            { n1: 63, d1: 72, n2: 64, d2: 99, na: 56, da: 99, template: 'two' },
+            { n1: 3, d1: 5, n2: 10, d2: 18, n3: 15, d3: 20, na: 1, da: 4, template: 'three' },
+            { n1: 12, d1: 24, n2: 36, d2: 6, n3: 18, d3: 32, na: 27, da: 16, template: 'three' },
+            { n1: 65, d1: 77, n2: 55, d2: 104, n3: 84, d3: 132, na: 25, da: 88, template: 'three' }
+        ];
+    
+    return dataUtils.build(desc, template, data);
+}]);

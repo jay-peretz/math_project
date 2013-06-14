@@ -48,7 +48,7 @@ angular.module('mathSkills.services')
                             expectedString = expectedString.replace(new RegExp('\\$\\$' + symbol, 'g'), privateProblemData[symbol]);
                         }
                     }
-                    //console.log("compile string", expectedString);
+                    // console.log("compile string", expectedString);
                     return expectedString; 
                 },
                  
