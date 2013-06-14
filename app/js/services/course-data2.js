@@ -3,10 +3,10 @@
 
 angular.module('mathSkills.services')
     .service('courseData', [
-        'data_a_1', 'data_b_1','data_c_1','data_c_2','data_d_1',
+        'data_a_1', 'data_b_1','data_c_1','data_c_2','data_d_1','data_e_1','data_e_2','data_e_3','data_e_4',
 		'data_j_1', 'data_o_1_1', 'data_s_1', 'data_w_1',
         function (
-            data_a_1, data_b_1, data_c_1, data_c_2, data_d_1,
+            data_a_1, data_b_1, data_c_1, data_c_2, data_d_1, data_e_1, data_e_2, data_e_3, data_e_4,
 			data_j_1, data_o_1_1, data_s_1, data_w_1
         ) {
             var course = {
@@ -15,7 +15,7 @@ angular.module('mathSkills.services')
                     title: '1 Review of Arithmetic',
                     path: 'review-arithmetic',
                     children: [
-                        data_a_1,  data_b_1, data_c_1, data_c_2, data_d_1, 
+                        data_a_1,  data_b_1, data_c_1, data_c_2, data_d_1, data_e_1, data_e_2, data_e_3, data_e_4
                     ]
                 }, {
                     title: '2 Signed Numbers',
