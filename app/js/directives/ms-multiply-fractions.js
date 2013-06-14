@@ -27,8 +27,7 @@ angular.module('mathSkills')
                     if (data.label === 'problem') {
                         e.stopPropagation();
                     } else if (data.result === 'correct') {
-                        var args = parser.extractTag(data.answer).args;
-                        console.log(args);
+                        var args = parser.extractTag(parser.extractTag(data.answer).args[2]).args;
                         problemData.setData(parser.extractTag(args[0]).args[0], 'mfn');
                         problemData.setData(parser.extractTag(args[1]).args[0], 'mfd');
                     }
