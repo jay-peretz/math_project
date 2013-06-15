@@ -36,13 +36,11 @@ angular.module('mathSkills').service('data19_1', function () {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\cut'
-						+'{\\rowgrp'
+						problem: '\\rowgrp'
 						+'{\\grp{\\str{Change the fraction to a mixed number percentage:}}}'
 						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}}'
-						+'{fractionMixedPercentProblem}',
-						answer: '\\cut{\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}{\\str{%}}}}}{fractionMixedPercentAnswer}',		
+						+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}',
+						answer: '\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}{\\str{%}}}}',		
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -61,14 +59,11 @@ angular.module('mathSkills').service('data19_1', function () {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\cut'
-						+'{\\rowgrp'
+						problem: '\\rowgrp'
 						+'{\\grp{\\str{Change the fraction to a mixed number percentage:}}}'
 						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}}'
-						+'{fractionMixedPercentProblem}',
-						answer: '\\cut'
-						+'{\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}'
+						+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}',
+						answer: '\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}'
 						+'{\\str{%}}}'
 						+'{fractionMixedPercentAnswer}',		
 						controls: {
@@ -82,17 +77,14 @@ angular.module('mathSkills').service('data19_1', function () {
 						}
 						
 					}, {
-						/*problem: '\\rowgrp'
-						+'{$$fractionMixedPercentProblem}'
-						+'{\\grp{str{\xA0 Answer:}}{$$fractionMixedPercentAnswer}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\str{Change the mixed number percentage to a decimal percentage (round the decimal to the tenths place):}}}',
-						answer: '\\grp{\\input{$percentDecimal}}{\\str{%}}',*/
-						
-						problem: '$$fractionMixedPercentProblem',
+						problem: '\\rowgrp'
+						+'{\\grp{\\str{Change the fraction to a mixed number percentage:}}}'
+						+'{\\grp{\\html{&nbsp;}}}'
+						+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}',
 						answer: '\\css{\\rowgrp'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{str{\xA0 Answer:}}{$$fractionMixedPercentAnswer}}'
+						+'{\\grp{\\html{&nbsp;}}'
+						+'{\\mixed{\\str{$answerFractionWhole}}{\\frac{\\str{$answerFractionNum}}{\\str{$answerFractionDen}}}}'
+						+'{\\str{%}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\html{&nbsp;}}'
 						+'{css{\\str{Change the mixed number percentage to a decimal percentage (round the decimal to the tenths place):}}{alert alert-info}}'

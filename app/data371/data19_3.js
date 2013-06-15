@@ -86,16 +86,12 @@ angular.module('mathSkills').service('data19_3', function () {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\cut'
-						+'{\\rowgrp'
+						problem: '\\rowgrp'
 						+'{\\grp{\\str{Write the percent as a percent in mixed number form:}}}'
 						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\str{$problemDecimal}}{\\str{%}}}}'
-						+'{decimalMixedPercentProblem}',
-						answer: '\\cut'
-						+'{\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}'
-						+'{\\str{%}}}'
-						+'{fractionMixedPercentAnswer}',		
+						+'{\\grp{\\str{$problemDecimal}}{\\str{%}}}',
+						answer: '\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}'
+						+'{\\str{%}}}',		
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -109,10 +105,13 @@ angular.module('mathSkills').service('data19_3', function () {
 						}
 						
 					}, {						
-						problem: '$$decimalMixedPercentProblem',
+						problem: '\\rowgrp'
+						+'{\\grp{\\str{Write the percent as a percent in mixed number form:}}}'
+						+'{\\grp{\\html{&nbsp;}}}'
+						+'{\\grp{\\str{$problemDecimal}}{\\str{%}}}',
 						answer: '\\css{\\rowgrp'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{str{\xA0 Answer:}}{$$fractionMixedPercentAnswer}}'
+						+'{\\grp{str{\xA0 Answer:}}{\\mixed{\\str{$answerFractionWhole}}{\\frac{\\str{$answerFractionNum}}{\\str{$answerFractionDen}}}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\html{&nbsp;}}'
 						+'{css{\\str{Change the percent into its equivalent fraction (reduced to lowest terms):}}{alert alert-info}}'
@@ -137,16 +136,12 @@ angular.module('mathSkills').service('data19_3', function () {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\cut'
-						+'{\\rowgrp'
+						problem: '\\rowgrp'
 						+'{\\grp{\\str{Write the percent as a percent in mixed number form:}}}'
 						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\str{$problemDecimal}}{\\str{%}}}}'
-						+'{decimalMixedPercentProblem}',
-						answer: '\\cut'
-						+'{\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}'
-						+'{\\str{%}}}'
-						+'{fractionMixedPercentAnswer}',		
+						+'{\\grp{\\str{$problemDecimal}}{\\str{%}}}',
+						answer: '\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}'
+						+'{\\str{%}}}',		
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -158,10 +153,14 @@ angular.module('mathSkills').service('data19_3', function () {
 						}
 						
 					}, {
-						problem: '$$decimalMixedPercentProblem',
+						problem: '\\rowgrp'
+						+'{\\grp{\\str{Write the percent as a percent in mixed number form:}}}'
+						+'{\\grp{\\html{&nbsp;}}}'
+						+'{\\grp{\\str{$problemDecimal}}{\\str{%}}}',
 						answer: '\\css{\\rowgrp'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{str{\xA0 Answer:}}{$$fractionMixedPercentAnswer}}'
+						+'{\\grp{str{\xA0 Answer:}}{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}'
+						+'{\\str{%}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\html{&nbsp;}}'
 						+'{css{\\str{Change the percent into its equivalent fraction (reduced to lowest terms):}}{alert alert-info}}'
