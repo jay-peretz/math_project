@@ -12,15 +12,11 @@ angular.module('mathSkills').service('data19_4', function () {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\cut'
-						+'{\\rowgrp'
+						problem: '\\rowgrp'
 						+'{\\grp{\\str{Change this percent into a decimal:}}}'
 						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}}}'
-						+'{percentDecimalProblem}',
-						answer: '\\cut'
-						+'{\\grp{\\input{$decimal}}}'
-						+'{percentDecimalAnswer}',		
+						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}}',
+						answer: '\\input{$decimal}',		
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -31,15 +27,19 @@ angular.module('mathSkills').service('data19_4', function () {
 							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
 							+'{\\css{\\str{$decimal}}{help-answer-text-tight}}}'
 						}
-						
 					}, {
 						problem: '\\rowgrp'
-						+'{$$percentDecimalProblem}'
+						+'{\\grp{\\str{Change this percent into a decimal:}}}'
+						+'{\\grp{\\html{&nbsp;}}}'
+						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}}',
+						answer: '\\css{\\rowgrp'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{str{\xA0 Answer:}}{$$percentDecimalAnswer}}'
+						+'{\\grp{str{\xA0 Answer: }}{\\str{$decimal}}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\str{Change the decimal into a fraction:}}}',
-						answer: '\\grp{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',
+						+'{\\html{&nbsp;}}'
+						+'{css{\\str{Change the decimal into a fraction:}}{alert alert-info}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}}}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -60,136 +60,73 @@ angular.module('mathSkills').service('data19_4', function () {
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-						+'{\\grp{\\str{Change the percent into a fraction (reduced to lowest terms)}}}'
+						+'{\\grp{\\str{Convert the percent in mixed number form into a percent in decimal form:}}}'
 						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}}}',
-						answer: '\\grp{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',			
+						+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}}',
+						answer: '\\grp{\\input{$decimalPercent}}{\\str{%}}',			
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
 							+'{\\row{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}'
 							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\frac{\\str{$helpNum}}{\\str{$helpDen}}}'
-							+'{\\sign{\xA0 = \xA0}}'	
-							+'{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\str{$decimalPercent}}{\\str{%}}}'
+							+'{\\html{&nbsp;}}'
 							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{css{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
+							+'{css{\\str{$decimalPercent}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
 						}
-						
-					}]
-                }]
-            },
-			third: {
-                title: 'Change a Percent to a Fraction (Directly)',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-						+'{\\grp{\\str{Change the percent into a fraction (reduced to lowest terms)}}}'
-						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}}}',
-						answer: '\\grp{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',			
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\row{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}'
-							+'{\\sign{ \xA0 = \xA0 }}'	
-							+'{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}'
-							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{css{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
-						}
-						
-					}]
-                }]
-            },
-			fourth: {
-                title: 'Change a Percent to a Fraction (Directly)',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\cut'
-						+'{\\rowgrp'
-						+'{\\grp{\\str{Write the percent as a percent in mixed number form:}}}'
-						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\str{$problemDecimal}}{\\str{%}}}}'
-						+'{decimalMixedPercentProblem}',
-						answer: '\\cut'
-						+'{\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}'
-						+'{\\str{%}}}'
-						+'{fractionMixedPercentAnswer}',		
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\row{\\str{$problemDecimal}}{\\str{%}}'
-							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}{\\str{%}}'
-							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{\\str{%}}}'
-							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{css{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
-						}
-						
 					}, {
 						problem: '\\rowgrp'
-						+'{$$decimalMixedPercentProblem}'
-						+'{\\grp{str{\xA0 Answer:}}{$$fractionMixedPercentAnswer}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\str{Change the percent into its equivalent fraction (reduced to lowest terms):}}}',
-						answer: '\\grp{\\mixed{\\input{$answerSecondWhole}}{\\frac{\\input{$answerSecondNum}}{\\input{$answerSecondDen}}}}',
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\row{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{\\str{%}}'
-							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\mixed{\\html{$helpWhole}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}'
-							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\mixed{\\html{$answerSecondWhole}}{\\frac{\\fracstr{$answerSecondNum}}{\\fracstr{$answerSecondDen}}}}}'
-							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{css{\\mixed{\\html{$answerSecondWhole}}{\\frac{\\fracstr{$answerSecondNum}}{\\fracstr{$answerSecondDen}}}}{help-answer-text-tight}}}'
-						}
-					}]
-                }]
-            },
-			fifth: {
-                title: 'Change a Percent to a Fraction (Directly)',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\cut'
-						+'{\\rowgrp'
-						+'{\\grp{\\str{Write the percent as a percent in mixed number form:}}}'
+						+'{\\grp{\\str{Convert the percent in mixed number form into a percent in decimal form:}}}'
 						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\str{$problemDecimal}}{\\str{%}}}}'
-						+'{decimalMixedPercentProblem}',
-						answer: '\\cut'
-						+'{\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}'
-						+'{\\str{%}}}'
-						+'{fractionMixedPercentAnswer}',		
+						+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}}',
+						answer: '\\css{\\rowgrp'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{str{\xA0 Answer: }}{\\str{$decimalPercent}}{\\str{%}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
+						+'{css{\\str{Convert the percent in decimal form into a decimal:}}{alert alert-info}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\input{$decimal}}}}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\row{\\str{$problemDecimal}}{\\str{%}}'
+							+'{\\row{\\str{$decimalPercent}}{\\str{%}}'
 							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{\\str{%}}}'
+							+'{\\str{$decimal}}}'
+							+'{\\html{&nbsp;}}'
 							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{css{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
+							+'{css{\\str{$decimal}}{help-answer-text-tight}}'
 						}
-						
 					}, {
 						problem: '\\rowgrp'
-						+'{$$decimalMixedPercentProblem}'
-						+'{\\grp{str{\xA0 Answer:}}{$$fractionMixedPercentAnswer}}'
+						+'{\\grp{\\str{Convert the percent in mixed number form into a percent in decimal form:}}}'
+						+'{\\grp{\\html{&nbsp;}}}'
+						+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}}',
+						answer: '\\css{\\rowgrp'
 						+'{\\html{&nbsp;}}'
-						+'{\\str{Change the percent into its equivalent fraction (reduced to lowest terms):}}}',
-						answer: '\\grp{\\mixed{\\input{$answerSecondWhole}}{\\frac{\\input{$answerSecondNum}}{\\input{$answerSecondDen}}}}',
+						+'{\\grp{str{\xA0 Answer: }}{\\str{$decimalPercent}}{\\str{%}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\str{Convert the percent in decimal form into a decimal:}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{str{\xA0 Answer: }}{\\str{$decimal}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
+						+'{css{\\str{Convert the decimal to a fraction:}}{alert alert-info}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}}}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\row{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{\\str{%}}'
+							+'{\\row{\\str{$decimal}}'
 							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\mixed{\\html{$answerSecondWhole}}{\\frac{\\fracstr{$answerSecondNum}}{\\fracstr{$answerSecondDen}}}}}'
+							+'{\\grp{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}'
+							+'{\\sign{ \xA0 = \xA0 }}'
+							+'{\\grp{\\frac{\\str{$answerNum}}{\\str{$answerDen}}}}}'
+							+'{\\html{&nbsp;}}'
 							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{css{\\mixed{\\html{$answerSecondWhole}}{\\frac{\\fracstr{$answerSecondNum}}{\\fracstr{$answerSecondDen}}}}{help-answer-text-tight}}}'
+							+'{css{\\frac{\\str{$answerNum}}{\\str{$answerDen}}}{help-answer-text-tight}}'
 						}
 					}]
                 }]
@@ -201,11 +138,11 @@ angular.module('mathSkills').service('data19_4', function () {
             { decimalPercent: '38', decimal: .38, answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', template: 'main' },
             { decimalPercent: '38', decimal: .38, answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', template: 'main' },
             { decimalPercent: '38', decimal: .38, answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', template: 'main' },
-			{ problemWhole: '&nbsp;', problemNum: '4', problemDen: '5', answerNum: '1', answerDen: '125', helpNum: '4', helpDen: '500', template: 'second' },
-			{ fractionWhole: '&nbsp;', fractionNum: '6', fractionDen: '7', answerFractionWhole: '85', answerFractionNum: '5', answerFractionDen: '7', template: 'second' },
-			{ fractionWhole: '&nbsp;', fractionNum: '3', fractionDen: '11', answerFractionWhole: '27', answerFractionNum: '3', answerFractionDen: '11', template: 'second' },
-			{  problemDecimal: '8.8', fractionWhole: '8', fractionNum: '8', fractionDen: '10', answerFractionWhole: '8', answerFractionNum: '4', answerFractionDen: '5', helpWhole: '&nbsp;', helpNum: '44', helpDen: '500', answerSecondWhole: '&nbsp;', answerSecondNum: '11', answerSecondDen: '125', template: 'fourth' },
-			{  problemDecimal: '2.3', answerFractionWhole: '2', answerFractionNum: '3', answerFractionDen: '10', answerSecondWhole: '&nbsp;', answerSecondNum: '23', answerSecondDen: '1000', template: 'fifth' }
+			{ problemWhole: '1', problemNum: '4', problemDen: '5', decimalPercent: '1.8', decimal: '0.018',  answerNum: '9', answerDen: '500', helpNum: '18', helpDen: '1000', template: 'second' },
+			{ problemWhole: '2', problemNum: '1', problemDen: '4', decimalPercent: '2.25', decimal: '0.0225',  answerNum: '9', answerDen: '400', helpNum: '225', helpDen: '10000', template: 'second' },
+			{ problemWhole: '&nbsp;', problemNum: '7', problemDen: '8', decimalPercent: '0.875', decimal: '0.00875',  answerNum: '7', answerDen: '800', helpNum: '875', helpDen: '100000', template: 'second' },
+			{ problemWhole: '&nbsp;', problemNum: '2', problemDen: '5', decimalPercent: '0.4', decimal: '0.004',  answerNum: '1', answerDen: '250', helpNum: '4', helpDen: '1000', template: 'second' },
+			{ problemWhole: '&nbsp;', problemNum: '3', problemDen: '4', decimalPercent: '0.75', decimal: '0.0075',  answerNum: '3', answerDen: '400', helpNum: '75', helpDen: '10000', template: 'second' }
         ],
         interpolate = function (obj, data) {
             var string = JSON.stringify(obj);

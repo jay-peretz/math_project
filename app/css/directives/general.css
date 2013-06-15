@@ -3,7 +3,7 @@
 /* center the text in <tr> tags in help panel (6.3 Equivalent Fractions & 9.1 Add and Subtract Like Fractions)*/
 body {
 	font-family: 'Muli', sans-serif;
-	font-size:110%
+	font-size:100%
 }
 .center-tr-txt{
     text-align: center;
