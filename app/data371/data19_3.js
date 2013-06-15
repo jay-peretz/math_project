@@ -108,13 +108,16 @@ angular.module('mathSkills').service('data19_3', function () {
 							+'{css{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
 						}
 						
-					}, {
-						problem: '\\rowgrp'
-						+'{$$decimalMixedPercentProblem}'
+					}, {						
+						problem: '$$decimalMixedPercentProblem',
+						answer: '\\css{\\rowgrp'
+						+'{\\html{&nbsp;}}'
 						+'{\\grp{str{\xA0 Answer:}}{$$fractionMixedPercentAnswer}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\str{Change the percent into its equivalent fraction (reduced to lowest terms):}}}',
-						answer: '\\grp{\\frac{\\input{$answerSecondNum}}{\\input{$answerSecondDen}}}',
+						+'{\\html{&nbsp;}}'
+						+'{css{\\str{Change the percent into its equivalent fraction (reduced to lowest terms):}}{alert alert-info}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\frac{\\input{$answerSecondNum}}{\\input{$answerSecondDen}}}}}{well}',						
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -155,12 +158,15 @@ angular.module('mathSkills').service('data19_3', function () {
 						}
 						
 					}, {
-						problem: '\\rowgrp'
-						+'{$$decimalMixedPercentProblem}'
+						problem: '$$decimalMixedPercentProblem',
+						answer: '\\css{\\rowgrp'
+						+'{\\html{&nbsp;}}'
 						+'{\\grp{str{\xA0 Answer:}}{$$fractionMixedPercentAnswer}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\str{Change the percent into its equivalent fraction (reduced to lowest terms):}}}',
-						answer: '\\grp{\\frac{\\input{$answerSecondNum}}{\\input{$answerSecondDen}}}',
+						+'{\\html{&nbsp;}}'
+						+'{css{\\str{Change the percent into its equivalent fraction (reduced to lowest terms):}}{alert alert-info}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\frac{\\input{$answerSecondNum}}{\\input{$answerSecondDen}}}}}{well}',							
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'

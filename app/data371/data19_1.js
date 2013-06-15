@@ -82,12 +82,23 @@ angular.module('mathSkills').service('data19_1', function () {
 						}
 						
 					}, {
-						problem: '\\rowgrp'
+						/*problem: '\\rowgrp'
 						+'{$$fractionMixedPercentProblem}'
 						+'{\\grp{str{\xA0 Answer:}}{$$fractionMixedPercentAnswer}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\str{Change the mixed number percentage to a decimal percentage (round the decimal to the tenths place):}}}',
-						answer: '\\grp{\\input{$percentDecimal}}{\\str{%}}',
+						answer: '\\grp{\\input{$percentDecimal}}{\\str{%}}',*/
+						
+						problem: '$$fractionMixedPercentProblem',
+						answer: '\\css{\\rowgrp'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{str{\xA0 Answer:}}{$$fractionMixedPercentAnswer}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
+						+'{css{\\str{Change the mixed number percentage to a decimal percentage (round the decimal to the tenths place):}}{alert alert-info}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\input{$percentDecimal}}{\\str{%}}}}{well}',
+						
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
