@@ -32,7 +32,7 @@ angular.module('mathSkills').service('data20_3', function () {
                             '{\\frac{\\input{[\"$$ln\",\"$$rn\"]}}{\\input{[\"$$ld\",\"$$rd\"]}}}'+
                             '{\\sign{=}}'+
                             '{\\frac{\\input{[\"$$rn\",\"$$ln\"]}}{\\input{[\"$$rd\",\"$$ld\"]}}}'+
-                        '}}',
+                        '}}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -51,7 +51,7 @@ angular.module('mathSkills').service('data20_3', function () {
                             '\\ins{Now solve the problem.}'+
                         '}{'+
                             '\\css{\\grp{\\html{X}}{\\sign{=}}{\\input{$$answer}}}{proportion-application}'+
-                        '}}',
+                        '}}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -68,7 +68,7 @@ angular.module('mathSkills').service('data20_3', function () {
                             '\\choose{[\\html{},\\ins{The answer is}]}{$$previousCorrect}'+
                         '}{'+
                             '\\choose{[\\html{},\\css{\\grp{\\html{$$answer}}{\\html{$$symbol}}}{proportion-application}]}{$$previousCorrect}'+
-                        '}}',
+                        '}}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true

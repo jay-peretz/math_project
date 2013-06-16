@@ -25,21 +25,21 @@ angular.module('mathSkills').service('data16_4', function () {
                     title: 'Workbook',
                     children: [{
                         problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
-                        answer: '\\wb{\\rowgrp{\\ins{Identify the two items (labels) that are in relationship with each other:}}{\\frac{\\select{[\"$lbln\",\"$lbld\"]}{$lblarr}}{\\select{[\"$lbld\",\"$lbln\"]}{$lblarr}}}}',
+                        answer: '\\wb{\\rowgrp{\\ins{Identify the two items (labels) that are in relationship with each other:}}{\\frac{\\select{[\"$lbln\",\"$lbld\"]}{$lblarr}}{\\select{[\"$lbld\",\"$lbln\"]}{$lblarr}}}}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
-                        answer: '\\wb{\\rowgrp{\\choose{[\\ins{Good! Now what number of $$lbln and what number of $$lbld are provided in the given relationship?},\\ins{No, the given relationship is between $$lbln and $$lbld. Now what number of $$lbln and what number of $$lbld are provided in the given relationship?}]}{$$previousCorrect}}{\\frac{\\grp{\\input{$$ln}}{\\str{ $$lbln}}}{\\grp{\\input{$$ld}}{\\str{ $$lbld}}}}}',
+                        answer: '\\wb{\\rowgrp{\\choose{[\\ins{Good! Now what number of $$lbln and what number of $$lbld are provided in the given relationship?},\\ins{No, the given relationship is between $$lbln and $$lbld. Now what number of $$lbln and what number of $$lbld are provided in the given relationship?}]}{$$previousCorrect}}{\\frac{\\grp{\\input{$$ln}}{\\str{ $$lbln}}}{\\grp{\\input{$$ld}}{\\str{ $$lbld}}}}}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
-                        answer: '\\wb{\\rowgrp{\\choose{[\\ins{Yes, now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).},\\ins{We are told that there are $$ln $$lbln to every $$ld $$lbld. The given relationship is:}]}{$$previousCorrect}}{\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\input{$$rn}}{\\select{$$lbln}{$$lblarr}}}{\\grp{\\input{x}}{\\select{$$lbld}{$$lblarr}}}}}{\\choose{[\\ins{}{q},\\ins{Now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).}]}{$$previousCorrect}}}',
+                        answer: '\\wb{\\rowgrp{\\choose{[\\ins{Yes, now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).},\\ins{We are told that there are $$ln $$lbln to every $$ld $$lbld. The given relationship is:}]}{$$previousCorrect}}{\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\input{$$rn}}{\\select{$$lbln}{$$lblarr}}}{\\grp{\\input{x}}{\\select{$$lbld}{$$lblarr}}}}}{\\choose{[\\ins{}{q},\\ins{Now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).}]}{$$previousCorrect}}}{well}',
                     
                         controls: {
                             "checkAnswer": true,
@@ -47,14 +47,14 @@ angular.module('mathSkills').service('data16_4', function () {
                         }
                     }, {
                         problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
-                        answer: '\\wb{\\rowgrp{\\choose{[\\ins{Great! You now have a proportion. Solve the proportion problem.},\\ins{The second relationship is an \\"unknown number\\" (shown here as \\"X\\") of $$lbld to every $$rn $$lbln. You now have a proportion:}]}{$$previousCorrect}}{\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{x}}{\\str{$$lbld}}}}}{\\ins{Now solve the proportion problem.}}{\\css{\\row{\\html{X\xA0 = \xA0}}{\\input{$$rd}}}{answerx}}}{proportion-application}',
+                        answer: '\\wb{\\rowgrp{\\choose{[\\ins{Great! You now have a proportion. Solve the proportion problem.},\\ins{The second relationship is an \\"unknown number\\" (shown here as \\"X\\") of $$lbld to every $$rn $$lbln. You now have a proportion:}]}{$$previousCorrect}}{\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{x}}{\\str{$$lbld}}}}}{\\ins{Now solve the proportion problem.}}{\\css{\\row{\\html{X\xA0 = \xA0}}{\\input{$$rd}}}{proportion-application}}}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
-                        answer: '\\wb{\\rowgrp{\\choose{[\\ins{Congratulations!},\\ins{The correct solution is:}]}{$$previousCorrect}}{\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{$answer}}{\\str{$$lbld}}}}}}',
+                        answer: '\\wb{\\rowgrp{\\choose{[\\ins{Congratulations!},\\ins{The correct solution is:}]}{$$previousCorrect}}{\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{$answer}}{\\str{$$lbld}}}}}}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
