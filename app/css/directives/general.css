@@ -2,7 +2,7 @@
 
 /* center the text in <tr> tags in help panel (6.3 Equivalent Fractions & 9.1 Add and Subtract Like Fractions)*/
 body {
-	font-family: 'Muli', sans-serif;
+	font-family: sans-serif;
 	font-size:100%
 }
 .center-tr-txt{
@@ -21,14 +21,14 @@ body {
 	display:block;	
 	margin-left:50px;
 	color: #069;
-	font-size: 15px;
+	font-size: 105%;
 	font-weight: normal;
 }
 
 .help-answer-text-tight {
 	display:block;	
 	color: #069;
-	font-size: 15px;
+	font-size: 105%;
 	font-weight: normal;
 }
 
@@ -39,7 +39,7 @@ body {
 
 .label_like {
 	color: #069;
-	font-size: 15px;
+	font-size: 105%;
 	font-weight: normal;
 }
 

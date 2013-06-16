@@ -19,6 +19,7 @@ angular.module('mathSkills')
 				$scope.numberArray = [];
 				$scope.randomplacearray = [];
 				$scope.decimalAnswerArray = [];
+				$scope.givenNumberArray = [];
 				$scope.numbStringCommas = "";
 								
 				var tagParameters = [],
@@ -79,6 +80,24 @@ angular.module('mathSkills')
 					return zerosNumberArray;
 				}
 				
+				var getNumberStringCommas = function(givenWhole) {
+					var needsCommas = givenWhole,
+						buildCommas = [],
+						thisManyCommas = Math.floor((needsCommas.length-1)/3),
+						numberWithCommas = '';
+				
+					for (var i=0; i<thisManyCommas+1; i+=1){
+							if (i<thisManyCommas){
+								buildCommas[i] =  needsCommas.substr(needsCommas.length-(3*(i+1)), 3);
+							} else {
+								buildCommas[i] =  needsCommas.substr(0, needsCommas.length-(3*i));
+							}					
+					}
+					numberWithCommas = buildCommas.reverse();
+					numberWithCommas = numberWithCommas.join();
+					return numberWithCommas;				
+				}
+				
 			 // Extract the value/s for parameters- second parameter is array elements from right for round place, counting decimal
 				$scope.$watch('expected', function () {
 					if ($scope.expected) {
@@ -95,6 +114,7 @@ angular.module('mathSkills')
 						problemDecimalPlaces = decimalDigits(tagParameters[0]);
 
 						if (problemDecimalIndex >= 0) {
+							$scope.givenNumberArray = tagParmsZeroArray.slice();
 							roundedIntegerNumber = getRounded(Number(tagParameters[0].replace(".", "")), tagParameters[1] - 1);
 							roundedDecimalArray = roundedIntegerNumber.toString().split("");
 							// if the leading character of the given number was zero or decimal point, add lead "0" to rounded
@@ -114,18 +134,20 @@ angular.module('mathSkills')
 							// get the placename from decimalsPlaceArray
 							numberPlaceWords = decimalsPlaceArray[Number(tagParameters[1]) + (5 - problemDecimalPlaces)];
 						} else {
+							$scope.givenNumberArray = getNumberStringCommas(tagParameters[0]).split("");
 							roundedIntegerNumber = getRounded(Number(tagParameters[0]), tagParameters[1]);
+							roundedIntegerNumber = getNumberStringCommas(roundedIntegerNumber.toString());
 							roundedDecimalArray = roundedIntegerNumber.toString().split("");
 							$scope.decimalAnswerArray = roundedDecimalArray.slice();
 							// get the placename from wholesPlaceArray
 							numberPlaceWords = wholesPlaceArray[tagParameters[1]];
 						}
 
-						$scope.givenNumberArray = tagParmsZeroArray.slice();
 						$scope.numberArray = roundedDecimalArray.slice();
+						console.log("$scope.numberArray is: "+$scope.numberArray);
 
 						// check for numberdigitsplace value > the number of places in numberdigits
-						if ( parseInt(tagParameters[1], 10) > $scope.numberArray.toString().length) {
+						if ( parseInt(tagParameters[1], 10) > tagParameters[0].length) {
 							console.log("place value greater than value of given number");
 						}
 						
@@ -135,7 +157,7 @@ angular.module('mathSkills')
 								if (jj == tagParameters[0].length - tagParameters[1]) {
 									$scope.randomplacearray[ii] = "^";
 									problemDigit = tagParmsZeroArray[ii];
-									if ($scope.numberArray[ii + 1] != '.') {
+									if (($scope.numberArray[ii] != ',')&&($scope.numberArray[ii] != '.')) {
 										problemDigitRight = tagParmsZeroArray[ii + 1];
 									} else {
 										problemDigitRight = tagParmsZeroArray[ii + 2];
@@ -149,7 +171,7 @@ angular.module('mathSkills')
 							}
 						}
 						
-						
+						console.log("$scope.decimalAnswerArray is: "+$scope.decimalAnswerArray+" $scope.randomplacearray is: "+$scope.randomplacearray);
 						
 						switch (true) {
 				
