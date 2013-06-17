@@ -17,7 +17,7 @@ angular.module('mathSkills.services')
         'data13_1', 'data13_2',
         'data14_1', 'data14_2',
         'data15_1', 'data15_2',
-        'data16_4',
+        'data16_1', 'data16_4',
         'data18_1', 'data18_2', 'data18_3',
         'data19_1', 'data19_2', 'data19_3', 'data19_4',
         'data20_2', 'data20_3',
@@ -36,9 +36,9 @@ angular.module('mathSkills.services')
             data13_1, data13_2,
             data14_1, data14_2,
             data15_1, data15_2,
-            data16_4,
+            data16_1, data16_4,
             data18_1, data18_2, data18_3,
-            data19_1, data19_2, data19_3,
+            data19_1, data19_2, data19_3, data19_4,
             data20_2, data20_3
         ) {
             var course = {
@@ -76,14 +76,14 @@ angular.module('mathSkills.services')
                     title: '4 Ratios & Proportions',
                     path: 'ratios-proportions',
                     children: [
-                        data16_4
+                        data16_1, data16_4
                     ]
                 }, {
                     title: '5 Percents',
                     path: 'percents',
                     children: [
                         data18_1, data18_2, data18_3,
-                        data19_1, data19_2, data19_3,
+                        data19_1, data19_2, data19_3, data19_4,
                         data20_2, data20_3
                     ]
                 }]
