@@ -52,7 +52,7 @@ title: '2A.2 Charts and Bar Graphs',
 				title: 'Main Answer',
 				children: [{
 					problem: '\\col{\\row{\\str{Answer the following questions by using the chart below.}}}{\\row{\\str{Question 1:  How much more money does Nathan spend on gas than Anne?}}}{\\row{\\str{\xA0}}}{\\row{\\chart{Utility Bill for Gas and Electricity}{5}{5}{["Student","Therms of Gas Used","Cost of Gas","Kilowatt Hours of Electricity Used","Cost of Electricity","Anne","18","$26","188","$41","Travis","10","$14","183","$40","Nathan","20","$28","261","$56","Sondra","12","$17","251","$54"]}}}',
-					answer: '\\row{\\str{$}}{\\input{2}}',
+					answer: '\\css{\\row{\\str{$}}{\\input{2}}}{buttonsright chart-buttons-margin}}',
 					controls: {
 						"checkAnswer": true,
 						"help": '\\str{Nathan spends $2 more than Anne on gas}'
@@ -66,7 +66,7 @@ title: '2A.2 Charts and Bar Graphs',
 				title: 'Main Answer',
 				children: [{
 					problem: '\\col{\\row{\\str{Answer the following questions by using the chart below.}}}{\\row{\\str{Question 2:    How much more money does Nathan spend on electricity than on gas?}}}{\\row{\\str{\xA0}}}{\\row{\\chart{Utility Bill for Gas and Electricity}{5}{5}{["Student","Therms of Gas Used","Cost of Gas","Kilowatt Hours of Electricity Used","Cost of Electricity","Anne","18","$26","188","$41","Travis","10","$14","183","$40","Nathan","20","$28","261","$56","Sondra","12","$17","251","$54"]}}}',
-					answer: '\\col{\\row{\\str{\xA0}}}{\\row{\\str{$}}{\\input{28}}}',
+					answer: '\\css{\\col{\\row{\\str{$}}{\\input{28}}}}{buttonsright chart-buttons-margin}}',
 					controls: {
 						"checkAnswer": true,
 						"help": '\\col{\\row{\\str{Nathan spends $28 more on electricity than he spends on gas}}}{\\row{\\str{$56 - $28 = $28 }}}'
@@ -80,7 +80,7 @@ title: '2A.2 Charts and Bar Graphs',
 				title: 'Main Answer',
 				children: [{
 					problem: '\\col{\\row{\\str{Answer the following questions by using the chart below.}}}{\\row{\\str{Question 3:    How much more money does Nathan spend on the total utility bill (the cost of both gas and electricity) than Anne?}}}{\\row{\\str{\xA0}}}{\\row{\\chart{Utility Bill for Gas and Electricity}{5}{5}{["Student","Therms of Gas Used","Cost of Gas","Kilowatt Hours of Electricity Used","Cost of Electricity","Anne","18","$26","188","$41","Travis","10","$14","183","$40","Nathan","20","$28","261","$56","Sondra","12","$17","251","$54"]}}}',
-					answer: '\\col{\\row{\\str{\xA0}}}{\\row{\\str{$}}{\\input{17}}}',
+					answer: '\\css{\\col{\\row{\\str{$}}{\\input{17}}}}{buttonsright chart-buttons-margin}}',
 					controls: {
 						"checkAnswer": true,
 						"help": '\\str{Nathan spends a total of $84, $17 more than Anne.}'
