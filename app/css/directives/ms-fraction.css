@@ -19,5 +19,8 @@ div .fraction .control-group {
 	vertical-align:top;
 }
 .fraction tr:nth-child(3) td {
-	padding:4px;
+	padding-top:4px;
+}
+.fraction tr table {
+    margin:0 auto;
 }

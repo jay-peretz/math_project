@@ -165,6 +165,6 @@ angular.module('mathSkills')
                 });
 	
 			},
-			template: '<div class="control-group {{class}}"><label><span>{{label}}</span><select style="width:{{width}};" ng-model="answer" ng-options="value for value in optionsarray"> <option value="">-- choose --</option></select></label></div>'
+			template: '<div class="control-group {{class}}"><label><span>{{label}}</span><select style="width:{{width}}; margin:0;" ng-model="answer" ng-options="value for value in optionsarray"> <option value="">-- choose --</option></select></label></div>'
 		};
 	}]);
