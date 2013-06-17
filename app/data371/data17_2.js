@@ -1,19 +1,19 @@
 /*global angular */
 
-angular.module('mathSkills').service('data16_4', function () {
+angular.module('mathSkills').service('data17_2', function () {
     var ret = {
-            title: '16.4 Proportion Application Problems',
-            path: '16.4-proportion-application-problems',
+            title: '17.2 Solving Unit Rates Using Proportions',
+            path: '17.2-solving-unit-rates-using-proportions',
             children: []
         },
         template = {
             main: {
                 
-                title: 'Proportion Application Problems',
+                title: 'Solving Unit Rates Using Proportions',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$question}',
                         answer: '\\input{$answer}',
                         controls: {
                             "checkAnswer": true,
@@ -24,18 +24,18 @@ angular.module('mathSkills').service('data16_4', function () {
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$question}',
                         answer: '\\wb{\\rowgrp{'+
                             '\\ins{Identify the two items (labels) that are in relationship with each other:}'+
                         '}{'+
-                            '\\frac{\\select{[\"$lbln\",\"$lbld\"]}{$lblarr}}{\\select{[\"$lbld\",\"$lbln\"]}{$lblarr}}'+
+                            '\\frac{\\select{$lbln}{$lblarr}}{\\select{$lbld}{$lblarr}}'+
                         '}}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$question}',
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\ins{Good! Now what number of $$lbln and what number of $$lbld are provided in the given relationship?},\\ins{No, the given relationship is between $$lbln and $$lbld. Now what number of $$lbln and what number of $$lbld are provided in the given relationship?}]}{$$previousCorrect}'+
                         '}{'+
@@ -46,11 +46,11 @@ angular.module('mathSkills').service('data16_4', function () {
                             "help": true
                         }
                     }, {
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$question}',
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\ins{Yes, now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).},\\ins{We are told that there are $$ln $$lbln to every $$ld $$lbld. The given relationship is:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\input{$$rn}}{\\select{$$lbln}{$$lblarr}}}{\\grp{\\input{x}}{\\select{$$lbld}{$$lblarr}}}}'+
+                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\input{$$rn}}{\\select{$$lbln}{$$lblarr}}}{\\grp{\\input{$$ld}}{\\select{$$lbld}{$$lblarr}}}}'+
                         '}{'+
                             '\\choose{[\\ins{}{q},\\ins{Now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).}]}{$$previousCorrect}'+
                         '}}{well}',
@@ -60,26 +60,34 @@ angular.module('mathSkills').service('data16_4', function () {
                             "help": true
                         }
                     }, {
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$question}',
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\ins{Great! You now have a proportion. Solve the proportion problem.},\\ins{The second relationship is an \\"unknown number\\" (shown here as \\"X\\") of $$lbld to every $$rn $$lbln. You now have a proportion:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{x}}{\\str{$$lbld}}}}'+
+                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{$$rd}}{\\str{$$lbld}}}}'+
                         '}{'+
                             '\\ins{Now solve the proportion problem.}'+
                         '}{'+
-                            '\\css{\\row{\\html{X\xA0 = \xA0}}{\\input{$$rd}}}{proportion-application}'+
+                            '\\css{\\row{\\html{X\xA0 = \xA0}}{\\set{\\input{$$answer}}{$$key}}}{proportion-application}'+
                         '}}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$question}',
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\ins{Congratulations!},\\ins{The correct solution is:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{$answer}}{\\str{$$lbld}}}}'+
+                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{$rd}}{\\str{$$lbld}}}}'+
+                        '}{'+
+                            '\\ins{Now fill in the boxes below with the complete unit rate answer.}'+
+                        '}{'+
+                            '\\grp'+
+                                '{\\str{Answer:}}'+
+                                '{\\input{$$answer}}'+
+                                '{\\select{$lbln}{$lblarr}}'+
+                                '{\\select{$lbld}{$lblarr}}'+
                         '}}{well}',
                         controls: {
                             "checkAnswer": true,
@@ -89,26 +97,27 @@ angular.module('mathSkills').service('data16_4', function () {
                 }]
             }
         },
-        data = [
-            { 
-                problem: 'In a park, there are five oak trees to every three elm trees.',
-                question: 'If there are 20 Oak trees, how many elm trees are there?', 
-                answer: 12, template: 'main',
-                ln: 5, rn: 20, lbln: 'oak trees',
-                ld: 3, rd: 12, lbld: 'elm trees',
-                lblarr: '[\\"oak trees\\",\\"elm trees\\",\\"parks\\"]',
+        data = 
+        [
+            {
+                question: 'In seven days Mandy earned $154 baby sitting. How much did she earn per day?', 
+                answer: 22, template: 'main', key: 'rn',
+                ln: 154, rn: 'x', lbln: 'dollars',
+                ld: 7, rd: 1, lbld: 'days',
+                lblarr: '[\\"dollars\\",\\"days\\",\\"earned\\"]',
                 previousCorrect: true,
-                flip: [[1], ["ln", "ld"], ["rn", "rd"], ["lbln", "lbld"]],
-            },{ 
-                problem: 'In a park, there are five oak trees to every three elm trees.', 
-                question: 'If there are thirty elm trees in a park, how many oak trees are there?', 
-                answer: 50, template: 'main',
-                ln: 3, rn: 30, lbln: 'elm trees',
-                ld: 5, rd: 50, lbld: 'oak trees',
-                lblarr: '[\\"days\\",\\"oak trees\\",\\"elm trees\\",\\"trees\\"]',
-                previousCorrect: true,
-                flip: [[1], ["ln", "ld"], ["rn", "rd"], ["lbln", "lbld"]],
-            }
+                //flip: [[1], ["ln", "ld"], ["rn", "rd"], ["lbln", "lbld"]],
+            },
+            // { 
+            //     problem: 'In a park, there are five oak trees to every three elm trees.', 
+            //     question: 'If there are thirty elm trees in a park, how many oak trees are there?', 
+            //     answer: 50, template: 'main',
+            //     ln: 3, rn: 30, lbln: 'elm trees',
+            //     ld: 5, rd: 50, lbld: 'oak trees',
+            //     lblarr: '[\\"days\\",\\"oak trees\\",\\"elm trees\\",\\"trees\\"]',
+            //     previousCorrect: true,
+            //     flip: [[1], ["ln", "ld"], ["rn", "rd"], ["lbln", "lbld"]],
+            // }
         ],
         interpolate = function (obj, data) {
             var string = JSON.stringify(obj);

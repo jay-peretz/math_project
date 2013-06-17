@@ -17,10 +17,17 @@ angular.module('mathSkills.services')
         'data13_1', 'data13_2',
         'data14_1', 'data14_2',
         'data15_1', 'data15_2',
+<<<<<<< HEAD
         'data16_1', 'data16_4',
+=======
+        'data16_4',
+        'data17_2',
+>>>>>>> first 2 problems 21.1, 21.2, 21.3, 21.4, 22.3, and 17.2
         'data18_1', 'data18_2', 'data18_3',
         'data19_1', 'data19_2', 'data19_3', 'data19_4',
         'data20_2', 'data20_3',
+        'data21_1', 'data21_2', 'data21_3', 'data21_4',
+        'data22_3', 'data22_4',
         function (
             data1_1, data1_2, data1_3, data1_4, data1_5,
             data2_1, data2A_1, data2A_2,
@@ -37,9 +44,12 @@ angular.module('mathSkills.services')
             data14_1, data14_2,
             data15_1, data15_2,
             data16_1, data16_4,
+            data17_2,
             data18_1, data18_2, data18_3,
             data19_1, data19_2, data19_3, data19_4,
-            data20_2, data20_3
+            data20_2, data20_3,
+            data21_1, data21_2, data21_3, data21_4,
+            data22_3, data22_4
         ) {
             var course = {
                 title: 'GENERAL ARITHMETIC',
@@ -77,6 +87,7 @@ angular.module('mathSkills.services')
                     path: 'ratios-proportions',
                     children: [
                         data16_1, data16_4
+                        data17_2
                     ]
                 }, {
                     title: '5 Percents',
@@ -85,6 +96,8 @@ angular.module('mathSkills.services')
                         data18_1, data18_2, data18_3,
                         data19_1, data19_2, data19_3, data19_4,
                         data20_2, data20_3
+                        data21_1, data21_2, data21_3, data21_4,
+                        data22_3, data22_4
                     ]
                 }]
             };

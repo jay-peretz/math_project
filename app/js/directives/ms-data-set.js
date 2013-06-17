@@ -23,9 +23,9 @@ angular.module('mathSkills')
 
                     $scope.$on('answer', function (e, data) {
                         var val = parser.extractTag(data.answer).args[0]; //console.log('set answer', val);
-                        //if (data.result === "correct"){
+                        if (data.result === "correct"){
                             problemData.setData(val, $scope.myargs[1]);
-                        //}
+                        }
                     });
                 },
                 restrict: 'E',

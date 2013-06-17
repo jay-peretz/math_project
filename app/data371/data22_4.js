@@ -1,19 +1,19 @@
 /*global angular */
 
-angular.module('mathSkills').service('data20_3', function () {
+angular.module('mathSkills').service('data22_4', function () {
     var ret = {
-            title: '20.3 Percent Proportion Applications',
-            path: '20.3-percent-proportion-applications',
+            title: '22.4 Solve Percent Problems (proportion method)',
+            path: '22.4-solve-percent-problems',
             children: []
         },
         template = {
             main: {
                 
-                title: 'Percent Proportion Applications',
+                title: 'Solving Percent Proportions problems',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$problem}',
                         answer: '\\input{$answer}',
                         controls: {
                             "checkAnswer": true,
@@ -24,7 +24,7 @@ angular.module('mathSkills').service('data20_3', function () {
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$problem}',
                         answer: '\\wb{\\rowgrp{'+
                             '\\ins{Set up a percent proportion to solve the problem (use "X" for an unknown value).}'+
                         '}{'+
@@ -38,7 +38,7 @@ angular.module('mathSkills').service('data20_3', function () {
                             "help": true
                         }
                     }, {
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$problem}',
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\html{},\\ins{The standard percent proportion is set up as follows:}]}{$$previousCorrect}'+
                         '}{'+
@@ -57,11 +57,11 @@ angular.module('mathSkills').service('data20_3', function () {
                             "help": true
                         }
                     }, {
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$problem}',
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\html{},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems.}]}{$$previousCorrect}'+
+                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems. We substitute the given values to get:}]}{$$previousCorrect}'+
                         '}{'+
                             '\\choose{[\\grp{\\frac{\\str{$$answer}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\html{X}}{\\sign{=}}{\\html{$$ld &#149; $$rn &#247; $$rd}}}{proportion-application}]}{$$previousCorrect}'+
                         '}{'+
@@ -79,13 +79,12 @@ angular.module('mathSkills').service('data20_3', function () {
         },
         data = [
             { 
-                problem: 'May received a grade of 70% on her first math exam.',
-                question: 'If there were 50 questions on the exam, how many questions did she answer correctly?',
-                answer: '35', template: 'main', symbol: '',
+                problem: '1.47 is what percent of 21?',
+                answer: '7', template: 'main', symbol: '%',
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: 100, drd: 'Base (Whole Quantity)',
-                ln: 'x', rn: 70, 
-                ld: 50, rd: 100, 
+                ln: 'x', rn: 1.47, 
+                ld: 100, rd: 21, 
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },

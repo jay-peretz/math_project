@@ -1,19 +1,19 @@
 /*global angular */
 
-angular.module('mathSkills').service('data20_3', function () {
+angular.module('mathSkills').service('data22_3', function () {
     var ret = {
-            title: '20.3 Percent Proportion Applications',
-            path: '20.3-percent-proportion-applications',
+            title: '22.3 Increases & Decreases',
+            path: '22.3-increases-and-decreases',
             children: []
         },
         template = {
             main: {
                 
-                title: 'Percent Proportion Applications',
+                title: 'Increases & Decreases',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$problem}',
                         answer: '\\input{$answer}',
                         controls: {
                             "checkAnswer": true,
@@ -24,7 +24,7 @@ angular.module('mathSkills').service('data20_3', function () {
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$problem}',
                         answer: '\\wb{\\rowgrp{'+
                             '\\ins{Set up a percent proportion to solve the problem (use "X" for an unknown value).}'+
                         '}{'+
@@ -38,7 +38,7 @@ angular.module('mathSkills').service('data20_3', function () {
                             "help": true
                         }
                     }, {
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$problem}',
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\html{},\\ins{The standard percent proportion is set up as follows:}]}{$$previousCorrect}'+
                         '}{'+
@@ -50,24 +50,24 @@ angular.module('mathSkills').service('data20_3', function () {
                         '}{'+
                             '\\ins{Now solve the problem.}'+
                         '}{'+
-                            '\\css{\\grp{\\html{X}}{\\sign{=}}{\\input{$$answer}}}{proportion-application}'+
+                            '\\css{\\grp{\\html{X}}{\\sign{=}}{\\set{\\input{$$answer}}{$$key}}}{proportion-application}'+
                         '}}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$problem}',
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\html{},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems.}]}{$$previousCorrect}'+
+                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems. We substitute the given values to get:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\grp{\\frac{\\str{$$answer}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\html{X}}{\\sign{=}}{\\html{$$ld &#149; $$rn &#247; $$rd}}}{proportion-application}]}{$$previousCorrect}'+
+                            '\\choose{[\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\html{X}}{\\sign{=}}{\\html{$solution}}}{proportion-application}]}{$$previousCorrect}'+
                         '}{'+
                             '\\choose{[\\html{},\\ins{The answer is}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\html{},\\css{\\grp{\\html{$$answer}}{\\html{$$symbol}}}{proportion-application}]}{$$previousCorrect}'+
+                            '\\choose{[\\html{},\\css{\\grp{\\html{$$pre_symbol}}{\\html{$$answer}}{\\html{$$post_symbol}}}{proportion-application}]}{$$previousCorrect}'+
                         '}}{well}',
                         controls: {
                             "checkAnswer": true,
@@ -79,25 +79,28 @@ angular.module('mathSkills').service('data20_3', function () {
         },
         data = [
             { 
-                problem: 'May received a grade of 70% on her first math exam.',
-                question: 'If there were 50 questions on the exam, how many questions did she answer correctly?',
-                answer: '35', template: 'main', symbol: '',
+                problem: 'Last year the bird population on a small island in the Pacific Ocean was 240. This year the population increased 5%. How many more birds are on the island this year than last year?',
+                answer: '12', template: 'main', pre_symbol: '', post_symbol: '', 
+                key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: 100, drd: 'Base (Whole Quantity)',
-                ln: 'x', rn: 70, 
-                ld: 50, rd: 100, 
+                ln: 5, rn: 'x', 
+                ld: 100, rd: 240, 
+                solution: '$$ln &#149; $$rd &#247; $$ld',
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
             { 
-                problem: '1.47 is what percent of 21?',
-                answer: '7 %', template: 'main',  symbol: '%',
+                problem: 'The bird population on a small island in the Pacific Ocean grew by 12 birds this year. This was a 5% increase in bird population. What was the bird population last year?',
+                answer: '240', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: 100, drd: 'Base (Whole Quantity)',
-                ln: 'x', rn: 1.47, 
-                ld: 100, rd: 21, 
+                ln: 5, rn: 12, 
+                ld: 100, rd: 'x', 
+                solution: '$$ld &#149; $$rn &#247; $$ln',
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             }
         ],
         interpolate = function (obj, data) {
