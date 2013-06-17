@@ -10,7 +10,7 @@ title: '2A.2 Charts and Bar Graphs',
 				title: 'Main Answer',
 				children: [{
 					problem: '\\col{\\row{\\str{Answer the following questions by using the chart below.}}}{\\row{\\str{\xA0}}}{\\row{\\str{Question 1:   Which two athletes had the best times to finish Race #1?}}}{\\row{\\str{\xA0}}}{\\row{\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}}}',
-					answer: '\\butgrp{\\col{\\row{\\but{A}{T}}{\\str{\xA0 \xA0 C and D}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 A and B}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 B and C}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 D and E}}}}}',
+					answer: '\\css{\\butgrp{\\col{\\row{\\but{A}{T}}{\\str{\xA0 \xA0 C and D}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 A and B}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 B and C}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 D and E}}}}}{buttonsright chart-buttons-margin}}',
 					controls: {
 						"checkAnswer": true,
 						"help": '\\str{A: Runners C & D ran fastest in Race #1}'
@@ -24,7 +24,7 @@ title: '2A.2 Charts and Bar Graphs',
 				title: 'Main Answer',
 				children: [{
 					problem:'\\col{\\row{\\str{Answer the following questions by using the chart to below.}}}{\\row{\\str{\xA0}}}{\\row{\\str{Question 2:   Which athlete took the least amount of time to finish Race #2?}}}{\\row{\\str{\xA0}}}{\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}}' ,
-					answer: '\\butgrp{\\col{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 runner D}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 runner C}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 runner E}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 runner A}}}}}',
+					answer: '\\css{\\butgrp{\\col{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 runner D}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 runner C}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 runner E}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 runner A}}}}}{buttonsright chart-buttons-margin}}',
 					controls: {
 						"checkAnswer": true,
 						"help": '\\str{C: Runner E ran Race # 2 in the shortest amount of time}'
@@ -38,7 +38,7 @@ title: '2A.2 Charts and Bar Graphs',
 				title: 'Main Answer',
 				children: [{
 					problem: '\\col{\\row{\\str{Answer the following questions by using the chart to below.}}}{\\row{\\str{\xA0}}}{\\row{\\str{Question 3:   How many of the runners had a time of 25 seconds or better in at least one race?}}}{\\row{\\str{\xA0}}}{\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}}',
-					answer: '\\butgrp{\\col{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 2 runners}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 0 runners}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 1 runner}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 3 runners}}}}}',
+					answer: '\\css{\\butgrp{\\col{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 2 runners}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 0 runners}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 1 runner}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 3 runners}}}}}{buttonsright chart-buttons-margin}}',
 					controls: {
 						"checkAnswer": true,
 						"help": '\\str{D: 3 runners ran at least one race under 25 seconds}'
@@ -94,7 +94,7 @@ title: '2A.2 Charts and Bar Graphs',
 				title: 'Main Answer',
 				children: [{
 					problem: '\\col{\\row{\\str{Answer the following questions by using the chart below.}}}{\\row{\\str{\xA0}}}{\\row{\\str{Question 1:  For the four students, which student spent the most for Phone and Gas?}}}{\\row{\\chart{}{5}{5}{["Student","Phone","Internet","Cable TV","Gas","Sam","41","16","40","69","Jerry","64","60","59","65","Maribel","94","67","67","99","Yvonne","41","69","34","113"]}}}',
-					answer: '\\butgrp{\\col{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Sam}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Jerry}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 Maribel}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 Yvonne}}}}',
+					answer: '\\css{\\butgrp{\\col{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Sam}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Jerry}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 Maribel}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 Yvonne}}}}}{buttonsright chart-buttons-margin}}',
 					controls: {
 						"checkAnswer": true,
 						"help": '\\str{Maribel spent the most on Phone and Gas expenses.}'
@@ -109,7 +109,7 @@ title: '2A.2 Charts and Bar Graphs',
 				title: 'Main Answer',
 				  children: [{
 					problem: '\\butgrp{\\col{\\row{\\str{Answer the following questions by using the chart below.}}}{\\row{\\str{\xA0}}}{\\row{\\str{Question 2:  Which service given in these four choices is the most expensive for the four students all together?}}}{\\row{\\chart{}{5}{5}{["Student","Phone","Internet","Cable TV","Gas","Sam","41","16","40","69","Jerry","64","60","59","65","Maribel","94","67","67","99","Yvonne","41","69","34","113"]}}}}',
-					answer: '\\butgrp{\\col{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Phone}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Internet}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 Cable TV}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 Gas}}}}}',
+					answer: '\\css{\\butgrp{\\col{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Phone}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Internet}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 Cable TV}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 Gas}}}}}{buttonsright chart-buttons-margin}}',
 					controls: {
 						"checkAnswer": true,
 						"help": '\\str{The four students together spent the most on Gas.}'
@@ -123,7 +123,7 @@ title: '2A.2 Charts and Bar Graphs',
 			   title: 'Main Answer',
 			   children: [{
 					problem: '\\col{\\row{\\str{Answer the following questions by using the chart below.}}}{\\row{\\str{\xA0}}}{\\row{\\str{Question 3:  Which service given in these four choices is the least expensive for the four students all together?}}}{\\row{\\str{\xA0}}}{\\row{\\chart{}{5}{5}{["Student","Phone","Internet","Cable TV","Gas","Sam","41","16","40","69","Jerry","64","60","59","65","Maribel","94","67","67","99","Yvonne","41","69","34","113"]}}}',
-					answer: '\\butgrp{\\col{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Phone}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Internet}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 Cable TV}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 Gas}}}}',
+					answer: '\\css{\\butgrp{\\col{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 Phone}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 Internet}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 Cable TV}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 Gas}}}}}{buttonsright chart-buttons-margin}}',
 					controls: {
 						"checkAnswer": true,
 						"help": '\\str{The lowest expense for the four students together is Cable TV.}'
