@@ -259,7 +259,8 @@ angular.module('mathSkills.services')
 
                     $scope.$watch('expected', function () {
                         if($scope.expected) {
-                            $scope.$emit('size', {size: getSize(arr, pix, pad)}, $scope.controllerId, type);
+                            var mysize = type === 'select' && getSize(arr, pix, pad) < 110 ? 110 :getSize(arr, pix, pad);
+                            $scope.$emit('size', {size: mysize}, $scope.controllerId, type);
                         }
                     });
 
