@@ -1,137 +1,56 @@
 /*global angular */
 
-angular.module('mathSkills').value('data2A_1', {
-    title: '2A.1 Translating Words to Math',
-    path: '2A.1-translating-words-to-math',
-    children: [{
-        title: 'Translating Words to Math',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\butgrp{\\col{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\\str{\xA0}}}{\\row{\\str{74 is greater than 26}}}{\\row{\\str{\xA0}}}{\\row{\\but{A}{T}}{\\str{\xA0 \xA0 74 > 26}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 26 < 74}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 74 - 26}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 74 + 26}}}}}',
-                answer: 'A',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{A: 74 > 26}'
+angular.module('mathSkills').service('data2A_1', function () {
+    var ret = {
+			title: '2A.1 Translating Words to Math',
+			path: '2A.1-translating-words-to-math',
+            children: []
+        },
+        template = {
+			main: {
+                title: 'Translating Words to Math',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+						problem: '\\col{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\\str{\xA0}}}{\\row{\\str{$problemStatement}}}',
+						answer: '\\butgrp{\\col{\\row{\\str{\xA0}}}{\\row{\\but{A}{$buttonValueA}}{\\grp{\\str{\xA0 \xA0 $buttonLabelA}}}}{\\row{\\but{B}{$buttonValueB}}{\\grp{\\str{\xA0 \xA0 $buttonLabelB}}}}{\\row{\\but{C}{$buttonValueC}}{\\grp{\\str{\xA0 \xA0 $buttonLabelC}}}}{\\row{\\but{D}{$buttonValueD}}{\\grp{\\str{\xA0 \xA0 $buttonLabelD}}}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp{\\row{\\str{\xA0}}}{\\row{\\str{$answerLabel}}}{\\row{\\html{&nbsp;}}}{\\row{\\css{\\str{Answer: \xA0 }}{help-answer-text}}{\\css{\\str{ $buttonLetter \xA0 }}{help-answer-text-tight}}}{\\row{\\html{&nbsp;}}}'
+						}
+					}]
+                }]
+            }
+        },
+        data = [
+			{ problemStatement: '74 is greater than 26', buttonValueA: 'T', buttonLabelA: '74 > 26', buttonValueB: 'F', buttonLabelB: '26 < 74', buttonValueC: 'F', buttonLabelC: '74 - 26', buttonValueD: 'F', buttonLabelD: '74 + 26', answerLabel: '74 > 26', buttonLetter: 'A', template: 'main' },
+			{ problemStatement: '9 is less than 23', buttonValueA: 'F', buttonLabelA: '9 - 23', buttonValueB: 'T', buttonLabelB: '9 < 23', buttonValueC: 'F', buttonLabelC: '9 + 23', buttonValueD: 'F', buttonLabelD: '23 > 9', answerLabel: '9 < 23', buttonLetter: 'B',  template: 'main' },
+			{ problemStatement: '5 is more than 1', buttonValueA: 'F', buttonLabelA: '1 < 5', buttonValueB: 'T', buttonLabelB: '5 > 1', buttonValueC: 'F', buttonLabelC: '1 + 5', buttonValueD: 'F', buttonLabelD: '5 - 1', answerLabel: '5 > 1', buttonLetter: 'B', template: 'main' },			
+			{ problemStatement: '82 is how much less than 98?', buttonValueA: 'F', buttonLabelA: '82 + 98', buttonValueB: 'F', buttonLabelB: '98 > 82', buttonValueC: 'T', buttonLabelC: '98 - 82', buttonValueD: 'F', buttonLabelD: '82 < 98', answerLabel: '98 - 82', buttonLetter: 'C',  template: 'main' },			
+			{ problemStatement: '91 is more than 66', buttonValueA: 'F', buttonLabelA: '66 + 91', buttonValueB: 'F', buttonLabelB: '66 < 91', buttonValueC: 'F', buttonLabelC: '91 - 66', buttonValueD: 'T', buttonLabelD: '91 > 66', answerLabel: '91 > 66', buttonLetter: 'D', template: 'main' },
+			{ problemStatement: '13 is how much more than 12?', buttonValueA: 'F', buttonLabelA: '13 > 12', buttonValueB: 'F', buttonLabelB: '12 < 13', buttonValueC: 'F', buttonLabelC: '12 + 13', buttonValueD: 'T', buttonLabelD: '13 - 12', answerLabel: '13 - 12', buttonLetter: 'D',  template: 'main' },
+			{ problemStatement: '28 is more than 16', buttonValueA: 'F', buttonLabelA: '16 < 28', buttonValueB: 'T', buttonLabelB: '28 > 16', buttonValueC: 'F', buttonLabelC: '16 + 28', buttonValueD: 'F', buttonLabelD: '28 - 16', answerLabel: '28 > 16', buttonLetter: 'B', template: 'main' },
+			{ problemStatement: '45 is greater than 1', buttonValueA: 'T', buttonLabelA: '45 > 1', buttonValueB: 'F', buttonLabelB: '1 < 45', buttonValueC: 'F', buttonLabelC: '45 - 1', buttonValueD: 'F', buttonLabelD: '1 + 45', answerLabel: '45 > 1', buttonLetter: 'A',  template: 'main' },			
+			{ problemStatement: '28 is how much less than 47?', buttonValueA: 'F', buttonLabelA: '28 < 47', buttonValueB: 'F', buttonLabelB: '47 > 28', buttonValueC: 'F', buttonLabelC: '28 + 47', buttonValueD: 'T', buttonLabelD: '47 - 28', answerLabel: '47 - 28', buttonLetter: 'D', template: 'main' },			
+			{ problemStatement: '6 is less than 73', buttonValueA: 'F', buttonLabelA: '6 + 73', buttonValueB: 'F', buttonLabelB: '73 > 6', buttonValueC: 'T', buttonLabelC: '6 < 73', buttonValueD: 'F', buttonLabelD: '73 - 6', answerLabel: '6 < 73', buttonLetter: 'C',  template: 'main' }
+        ],
+        interpolate = function (obj, data) {
+            var string = JSON.stringify(obj);
+            for (var symbol in data) {
+                if (data.hasOwnProperty(symbol)) {
+                    string = string.replace(new RegExp('(\\$)?\\$' + symbol, 'g'), function ($0, $1) { return $1?$0 : data[symbol]; }); //console.log(string); 
                 }
-            }]
-        }]
-    }, {
-        title: 'Translating Words to Math',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\butgrp{\\col{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\\str{\xA0}}}{\\row{\\str{9 is less than 23}}}{\\row{\\str{\xA0}}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 9 - 23}}}{\\row{\\but{B}{T}}{\\str{\xA0 \xA0 9 < 23}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 9 + 23}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 23 > 9}}}}}',
-                answer: 'B',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{B: 9 < 23}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Translating Words to Math',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\butgrp{\\col{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\\str{\xA0}}}{\\row{\\str{5 is more than 1}}}{\\row{\\str{\xA0}}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 1 < 5}}}{\\row{\\but{B}{T}}{\\str{\xA0 \xA0 5 > 1}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 1 + 5}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 5 - 1}}}}}',
-                answer: 'B',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{B: 5 > 1}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Translating Words to Math',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\butgrp{\\col{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\\str{\xA0}}}{\\row{\\str{82 is how much less than 98?}}}{\\row{\\str{\xA0}}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 82 + 98}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 98 > 82}}}{\\row{\\but{C}{T}}{\\str{\xA0 \xA0 98 - 82}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 82 < 98}}}}}',
-                answer: 'C',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{C: 98 - 82}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Translating Words to Math',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\butgrp{\\col{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\\str{\xA0}}}{\\row{\\str{91 is more than 66}}}{\\row{\\str{\xA0}}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 66 + 91}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 66 < 91}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 91 - 66}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 91 > 66}}}}}',
-                answer: 'D',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{D: 91 > 66}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Translating Words to Math',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\butgrp{\\col{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\\str{\xA0}}}{\\row{\\str{13 is how much more than 12?}}}{\\row{\\str{\xA0}}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 13 > 12}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 12 < 13}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 12 + 13}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 13 - 12}}}}}',
-                answer: 'D',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{D: 13 - 12}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Translating Words to Math',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\butgrp{\\col{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\\str{\xA0}}}{\\row{\\str{28 is more than 16}}}{\\row{\\str{\xA0}}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 16 < 28}}}{\\row{\\but{B}{T}}{\\str{\xA0 \xA0 28 > 16}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 16 + 28}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 28 - 16}}}}}',
-                answer: 'B',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{B: 28 > 16}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Translating Words to Math',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\butgrp{\\col{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\\str{\xA0}}}{\\row{\\str{45 is greater than 1}}}{\\row{\\str{\xA0}}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 1 < 45}}}{\\row{\\but{B}{T}}{\\str{\xA0 \xA0 45 > 1}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 45 - 1}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 1 + 45}}}}}',
-                answer: 'B',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{B: 45 > 1}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Translating Words to Math',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\butgrp{\\col{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\\str{\xA0}}}{\\row{\\str{28 is how much less than 47?}}}{\\row{\\str{\xA0}}}{\\row{\\but{A}{T}}{\\str{\xA0 \xA0 47 - 28}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 28 < 47}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 47 > 28}}}{\\row{\\but{D}{F}}{\\str{\xA0 \xA0 28 + 47}}}}}',
-                answer: 'A',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{A: 47 - 28}'
-                }
-            }]
-        }]
-    }, {
-        title: 'Translating Words to Math',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\butgrp{\\col{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\\str{\xA0}}}{\\row{\\str{6 is less than 73}}}{\\row{\\str{\xA0}}}{\\row{\\but{A}{F}}{\\str{\xA0 \xA0 6 + 73}}}{\\row{\\but{B}{F}}{\\str{\xA0 \xA0 73 > 6}}}{\\row{\\but{C}{F}}{\\str{\xA0 \xA0 73 - 6}}}{\\row{\\but{D}{T}}{\\str{\xA0 \xA0 6 < 73}}}}}',
-                answer: 'D',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\str{D: 6 < 73}'
-                }
-            }]
-        }]
-    }, ]
+            }
+            var ret = JSON.parse(string);
+            ret.data = angular.copy(data);
+            return ret;
+        };
+
+    ret.children = data.map(function (problem) {
+        return interpolate(template[problem.template], problem);
+    });
+    
+    return ret;
 });
+
+
