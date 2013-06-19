@@ -13,7 +13,7 @@
         <tr ng-hide=complete>
             <td class=divisor ng-switch on=factorStep>
                 <span ng-switch-when=true>
-                    <ms-input label=divisor></ms-input>
+                    <ms-input expected="{{remainingFactors() | wrap:'input'}}" label=divisor></ms-input>
                 </span>
                 <span ng-switch-when=false>&nbsp;</span>
             </td>

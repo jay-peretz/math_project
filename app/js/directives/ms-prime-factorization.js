@@ -52,6 +52,10 @@ angular.module('mathSkills')
                             }
                         });
 
+                        $scope.remainingFactors = function () {
+                            return JSON.stringify($scope.primeFactors);
+                        };
+
                         $scope.$on('checkAnswer', function (e, data) {
                             // If we're still factoring, turn checkAnswer events into reportAnswer events.
                             if (!$scope.complete) {
