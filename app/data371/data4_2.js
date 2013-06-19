@@ -12,7 +12,8 @@ angular.module('mathSkills').value('data4_2', {
                 answer: '\\input{18}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\str{7 * 2 + 4 = 18}'
+                    "help": false,
+                    "workbook": true
                 }
             }]
         }, {
@@ -35,7 +36,8 @@ angular.module('mathSkills').value('data4_2', {
                 answer: '\\input{1}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\str{15 - 10 = 5 / 5 = 1}'
+                    "help": false,
+                    "workbook": true
                 }
             }]
         }, {
@@ -58,7 +60,8 @@ angular.module('mathSkills').value('data4_2', {
                 answer: '\\input{11}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\str{4 / 2 = 2 + 9 = 11}'
+                    "help": false,
+                    "workbook": true
                 }
             }]
         }, {
@@ -81,7 +84,8 @@ angular.module('mathSkills').value('data4_2', {
                 answer: '\\input{4}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\str{6 / 3 = 2.   6 - 2 = 4}'
+                    "help": false,
+                    "workbook": true
                 }
             }]
         }, {
@@ -104,7 +108,8 @@ angular.module('mathSkills').value('data4_2', {
                 answer: '\\input{12}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\str{15 / 3 = 5.   7 + 5 = 12}'
+                    "help": false,
+                    "workbook": true
                 }
             }]
         }, {
@@ -127,7 +132,8 @@ angular.module('mathSkills').value('data4_2', {
                 answer: '\\input{1}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\str{3 * 3 = 9 / 3 = 3.  3 / 3 = 1}'
+                    "help": false,
+                    "workbook": true
                 }
             }]
         }, {
@@ -150,7 +156,8 @@ angular.module('mathSkills').value('data4_2', {
                 answer: '\\input{9}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\str{7 - 4 = 3 * 2 = 6.   15 - 6 = 9}'
+                    "help": false,
+                    "workbook": true
                 }
             }]
         }, {
@@ -173,7 +180,8 @@ angular.module('mathSkills').value('data4_2', {
                 answer: '\\input{11}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\str{11}'
+                    "help": false,
+                    "workbook": true
                 }
             }]
         }, {
@@ -196,7 +204,8 @@ angular.module('mathSkills').value('data4_2', {
                 answer: '\\input{17}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\str{17}'
+                    "help": false,
+                    "workbook": true
                 }
             }]
         }, {
@@ -219,7 +228,8 @@ angular.module('mathSkills').value('data4_2', {
                 answer: '\\input{16}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\str{16}'
+                    "help": false,
+                    "workbook": true
                 }
             }]
         }, {
