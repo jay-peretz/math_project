@@ -1,10 +1,10 @@
 /*global angular */
 
-angular.module('mathSkills').service('data_e_1', function () {
-    var ret = {
-              title: 'E.1 Multiplication of Fractions',
-              path: 'E.1-multiplication-of-fractions',
-              children: []
+angular.module('mathSkills').service('data_e_1', ['dataUtils', function (dataUtils) {
+    var desc = {
+            title: 'E.1 Multiplication of Fractions',
+            path: 'E.1-multiplication-of-fractions',
+            children: []
         },
         template = {
             main: {
@@ -83,22 +83,6 @@ angular.module('mathSkills').service('data_e_1', function () {
 			{n1:1,d1:4,n2:1,d2:8,na:1,da:32,template:'reduced'},
 			{n1:3,d1:4,n2:3,d2:6,na:9,da:24,nr:3,dr:8,template:'main'},
 			{n1:3,d1:5,n2:1,d2:2,na:3,da:10,template:'reduced'}			
-        ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('(\\$)?\\$' + symbol, 'g'), function ($0, $1) { return $1?$0 : data[symbol]; }); //console.log(string); 
-                }
-            }
-            var ret = JSON.parse(string);
-            ret.data = angular.copy(data);
-            return ret;
-        };
-
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
-    
-    return ret;
-});
+        ];
+    return dataUtils.build(desc, template, data);
+}]);
