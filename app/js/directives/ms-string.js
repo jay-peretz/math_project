@@ -64,7 +64,7 @@ angular.module('mathSkills')
                     expected: '@', 
                     label: '@'
                 },
-                template: '<span>{{string | commas}}</span>'
+                template: '<span>{{string | commas | changeSigns}}</span>'
             };
         }
     ]);
