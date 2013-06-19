@@ -10,7 +10,7 @@ angular.module('mathSkills').service('data16_2', function () {
         },
         template = {
 			main: {
-                title: 'Validate ProportionsS',
+                title: 'Validate Proportions',
 				children: [{
 					title: 'Main Answer',
 					children: [{
