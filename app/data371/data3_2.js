@@ -56,7 +56,7 @@ angular.module('mathSkills').value('data3_2', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\html{Solve: x/y.<br><br>Set up the division problem by placing the<br>dividend and the divisor in the proper places.}',
+                problem: '\\col{\\str{Solve: x / y.}}{\\html{&nbsp;}}{\\str{Set up the division problem by placing the dividend and the divisor in the proper places.}',
                 answer: '\\css{\\divwholes{\\input{y}}{\\input{x}}}{divwhole}',
                 controls: {
                     "checkAnswer": true,
