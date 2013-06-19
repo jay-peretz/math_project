@@ -14,7 +14,7 @@
         display: inline-block;
     }
 </style>
-<div class="alert alert-info">{{instructions}}</div>
+<div class="alert alert-info">{{instructions | changeSigns}}</div>
 <table>
     <tr ng-repeat="row in finished">
         <td ng-repeat="item in row">
