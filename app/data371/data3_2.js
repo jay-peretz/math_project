@@ -166,7 +166,7 @@ angular.module('mathSkills').value('data3_2', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\html{Solve: 8306/7.<br><br>Solve the problem.}',
+                problem: '\\col{\\str{Solve: 8306 / 7}}{\\html{<br>Solve the problem.}}',
                 answer: '\\css{\\grp{\\input{1186}}{\\str{quotient}}{\\input{4}}{\\str{remainder}}}{divwhole}',
                 controls: {
                     "checkAnswer": true,
@@ -204,7 +204,7 @@ angular.module('mathSkills').value('data3_2', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\html{Solve: 3027/3.<br><br>Solve the problem.}',
+                problem: '\\col{\\str{Solve: 3027 / 3.}}{\\html{<br>Solve the problem.}}',
                 answer: '\\css{\\grp{\\input{1009}}{\\str{quotient}}{\\input{0}}{\\str{remainder}}}{divwhole}',
                 controls: {
                     "checkAnswer": true,
@@ -308,7 +308,7 @@ angular.module('mathSkills').value('data3_2', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\html{Solve: 8293/52.<br><br>Solve the problem.}',
+                problem: '\\col{\\str{Solve: 8293 / 52.}}{\\html{<br>Solve the problem.}}',
                 answer: '\\css{\\grp{\\input{159}}{\\str{quotient}}{\\input{25}}{\\str{remainder}}}{divwhole}',
                 controls: {
                     "checkAnswer": true,
@@ -350,7 +350,7 @@ angular.module('mathSkills').value('data3_2', {
         children: [{
             title: 'Main Answer',
             children: [{
-                problem: '\\html{Solve: 82292/905.<br><br>Solve the problem.}',
+                problem: '\\col{\\str{Solve: 82292 / 905.}}{\\html{<br>Solve the problem.}}',
                 answer: '\\css{\\grp{\\input{90}}{\\str{quotient}}{\\input{842}}{\\str{remainder}}}{divwhole}',
                 controls: {
                     "checkAnswer": true,
