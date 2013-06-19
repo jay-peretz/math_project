@@ -7,7 +7,7 @@ angular.module('mathSkills')
             directiveTemplate: '<ms-reduce-fraction expected={{expected}}></ms-reduce-fraction>'
         });
     }])
-    .directive('msReduceFraction', ['parser', 'panelGroupData', function (parser, panelGroupData) {
+    .directive('msReduceFraction', ['parser', 'panelGroupData', '$timeout', function (parser, panelGroupData, $timeout) {
         return {
             controller: ['$scope', function ($scope) {
                 var yes = '\\butgrp{\\row{\\but{Yes}{T}}{\\but{No}{F}}}',
@@ -64,7 +64,12 @@ angular.module('mathSkills')
 					},
 					currentFraction = function(skipFirstFactor){
 						return '\\frac{\\str{'+reduceFraction(skipFirstFactor||false).numerator+'}}{\\str{'+reduceFraction(skipFirstFactor||false).denominator+'}}';
-					};
+					},
+                    focus = function () {
+                        $timeout(function () {
+                            $scope.$$childTail.$broadcast('checkFocus');
+                        }, 0);
+                    };
 					
 				$scope.controllerId = Math.random().toString();
 
@@ -88,18 +93,22 @@ angular.module('mathSkills')
                     }
                 });
 
+                $scope.$on('checkFocus', function (e) {
+                    e.preventDefault();
+                    $scope.$$childTail.$broadcast('checkFocus');
+                });
+
                 $scope.$on('answer', function(e, data) {
 					if (data.controllerId !== $scope.controllerId) {
-                        console.log(data);
 						e.stopPropagation();
 						switch (data.label) {
 							case "simplified":
 								if (data.result === "correct") {
-									console.log(" data is: ",data);
 									if (parser.extractTag(data.expected).args[0] !== 'No') {
 										$scope.instructions = "\\row{\\str{What is a common factor of the numerator and denominator of \xA0}}{"+currentFraction()+"}{\\str{\xA0 ?}}";
 										$scope.answerexp = '\\input{["' + commonFactors(reduceFraction(false).numerator, reduceFraction(false).denominator).join('","') + '"]}';
 										$scope.answerlbl = "factor";
+                                        focus();
 									} else {
 										var eventData = {
 											result: "correct",
@@ -119,17 +128,19 @@ angular.module('mathSkills')
 									panelGroupData.resetIndex();
 									factorsUsed.push(parser.extractTag(data.answer).args[0]);
 									$scope.instructions = "\\row{\\str{Factor a "+factorsUsed[factorsUsed.length - 1]+" out of \xA0}}{"+currentFraction(true)+"}{\\str{\xA0 :}}";
-									$scope.answerexp = '\\row{\\frac{\\str{'+reduceFraction(true).numerator+' \xF7 '+factorsUsed[factorsUsed.length - 1]+'}}{\\str{'+reduceFraction(true).denominator+' \xF7 '+factorsUsed[factorsUsed.length - 1]+'}}}{\\str{\xA0 = \xA0}}{\\frac{\\input{'+reduceFraction(false).numerator+'}}{\\input{'+reduceFraction(false).denominator+'}}}';
+									$scope.answerexp = '\\grp{\\frac{\\str{'+reduceFraction(true).numerator+' \xF7 '+factorsUsed[factorsUsed.length - 1]+'}}{\\str{'+reduceFraction(true).denominator+' \xF7 '+factorsUsed[factorsUsed.length - 1]+'}}}{\\str{\xA0 = \xA0}}{\\frac{\\input{'+reduceFraction(false).numerator+'}}{\\input{'+reduceFraction(false).denominator+'}}}';
 									$scope.answerlbl = "reduce";
+                                    focus();
 								} else {
 									$scope.$broadcast('checkFocus');
 								}
 								break;
 							case "reduce":
-								if (data.result === "correct" && data.answer.indexOf('str') === -1) {
-									 $scope.instructions = "\\row{\\str{Can \xA0"+$scope.mixedArg+"}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
+								if (data.result === "correct") {
+									$scope.instructions = "\\row{\\str{Can \xA0"+$scope.mixedArg+"}}{"+currentFraction()+"}{\\str{ \xA0 be simplified?}}";
 									$scope.answerexp = simplified(reduceFraction(false).numerator, reduceFraction(false).denominator) ? no : yes;
-									$scope.answerlbl = "simplified";                                
+									$scope.answerlbl = "simplified";
+                                    focus();
 								} else {
 									$scope.$broadcast('checkFocus');
 								}
