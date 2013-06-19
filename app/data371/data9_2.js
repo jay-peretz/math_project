@@ -23,7 +23,7 @@ angular.module('mathSkills').value('data9_2', {
                 answer: '\\findlcm{2}{4}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": true
                 }
             }]
         }]
@@ -47,7 +47,7 @@ angular.module('mathSkills').value('data9_2', {
                 answer: '\\findlcm{6}{2}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": true
                 }
             }]
         }]
@@ -71,7 +71,7 @@ angular.module('mathSkills').value('data9_2', {
                 answer: '\\findlcm{4}{8}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": true
                 }
             }]
         }]
@@ -95,7 +95,7 @@ angular.module('mathSkills').value('data9_2', {
                 answer: '\\findlcm{6}{9}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": true
                 }
             }]
         }]
@@ -119,7 +119,7 @@ angular.module('mathSkills').value('data9_2', {
                 answer: '\\findlcm{12}{18}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": true
                 }
             }]
         }]
@@ -143,7 +143,7 @@ angular.module('mathSkills').value('data9_2', {
                 answer: '\\findlcm{10}{15}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": true
                 }
             }]
         }]
@@ -167,7 +167,7 @@ angular.module('mathSkills').value('data9_2', {
                 answer: '\\findlcm{4}{8}{6}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": true
                 }
             }]
         }]
@@ -191,7 +191,7 @@ angular.module('mathSkills').value('data9_2', {
                 answer: '\\findlcm{6}{15}{5}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": true
                 }
             }]
         }]
@@ -215,7 +215,7 @@ angular.module('mathSkills').value('data9_2', {
                 answer: '\\findlcm{24}{6}{18}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": true
                 }
             }]
         }]
@@ -239,7 +239,7 @@ angular.module('mathSkills').value('data9_2', {
                 answer: '\\findlcm{15}{18}{9}',
                 controls: {
                     "checkAnswer": true,
-                    "help": false
+                    "help": true
                 }
             }]
         }]
