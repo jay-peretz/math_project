@@ -288,6 +288,30 @@ angular.module('mathSkills').value('data3_2', {
                     "workbook": true
                 }
             }]
+        }, {
+            title: 'Workbook',
+            children: [{
+                problem: '\\str{Place the dividend and divisor in the proper places for the problem "9381 divided by 3"}',
+                answer: '\\css{\\divwholes{\\input{3}}{\\input{9381}}}{divwhole}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }, {
+                problem: '\\str{Click on the right-most digit of the number you would like to divide into.}',
+                answer: '\\css{\\divwholes{\\str{3}}{\\butgrp{\\row{\\but{9}{T}}{\\but{3}{F}}{\\but{8}{F}}{\\but{1}{F}}}}}{divwhole}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }, {
+                problem: '\\str{Divide 9381 by 3}',
+                answer: '\\longdiv{9381}{3}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }]
         }]
     }, {
         title: 'Divide Whole Numbers',
@@ -300,6 +324,30 @@ angular.module('mathSkills').value('data3_2', {
                     "checkAnswer": true,
                     "help": false,
                     "workbook": true
+                }
+            }]
+        }, {
+            title: 'Workbook',
+            children: [{
+                problem: '\\str{Place the dividend and divisor in the proper places for the problem "18300 divided by 23"}',
+                answer: '\\css{\\divwholes{\\input{23}}{\\input{18300}}}{divwhole}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }, {
+                problem: '\\str{Click on the right-most digit of the number you would like to divide into.}',
+                answer: '\\css{\\divwholes{\\str{23}}{\\butgrp{\\row{\\but{1}{F}}{\\but{8}{F}}{\\but{3}{T}}{\\but{0}{F}}{\\but{0}{F}}}}}{divwhole}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }, {
+                problem: '\\str{Divide 18300 by 23}',
+                answer: '\\longdiv{18300}{23}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
                 }
             }]
         }]
@@ -316,6 +364,30 @@ angular.module('mathSkills').value('data3_2', {
                     "workbook": true
                 }
             }]
+        }, {
+            title: 'Workbook',
+            children: [{
+                problem: '\\str{Place the dividend and divisor in the proper places for the problem "8293 divided by 52"}',
+                answer: '\\css{\\divwholes{\\input{52}}{\\input{8293}}}{divwhole}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }, {
+                problem: '\\str{Click on the right-most digit of the number you would like to divide into.}',
+                answer: '\\css{\\divwholes{\\str{52}}{\\butgrp{\\row{\\but{8}{F}}{\\but{2}{T}}{\\but{9}{F}}{\\but{3}{F}}}}}{divwhole}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }, {
+                problem: '\\str{Divide 8293 by 52}',
+                answer: '\\longdiv{8293}{52}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }]
         }]
     }, {
         title: 'Divide Whole Numbers',
@@ -328,6 +400,30 @@ angular.module('mathSkills').value('data3_2', {
                     "checkAnswer": true,
                     "help": false,
                     "workbook": true
+                }
+            }]
+        }, {
+            title: 'Workbook',
+            children: [{
+                problem: '\\str{Place the dividend and divisor in the proper places for the problem "2110 divided by 69"}',
+                answer: '\\css{\\divwholes{\\input{69}}{\\input{2110}}}{divwhole}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }, {
+                problem: '\\str{Click on the right-most digit of the number you would like to divide into.}',
+                answer: '\\css{\\divwholes{\\str{69}}{\\butgrp{\\row{\\but{2}{F}}{\\but{1}{F}}{\\but{1}{T}}{\\but{0}{F}}}}}{divwhole}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }, {
+                problem: '\\str{Divide 2110 by 69}',
+                answer: '\\longdiv{2110}{69}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
                 }
             }]
         }]
@@ -344,6 +440,30 @@ angular.module('mathSkills').value('data3_2', {
                     "workbook": true
                 }
             }]
+        }, {
+            title: 'Workbook',
+            children: [{
+                problem: '\\str{Place the dividend and divisor in the proper places for the problem "63052 divided by 72"}',
+                answer: '\\css{\\divwholes{\\input{72}}{\\input{63052}}}{divwhole}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }, {
+                problem: '\\str{Click on the right-most digit of the number you would like to divide into.}',
+                answer: '\\css{\\divwholes{\\str{72}}{\\butgrp{\\row{\\but{6}{F}}{\\but{3}{F}}{\\but{0}{T}}{\\but{5}{F}}{\\but{2}{F}}}}}{divwhole}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }, {
+                problem: '\\str{Divide 63052 by 72}',
+                answer: '\\longdiv{63052}{72}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }]
         }]
     }, {
         title: 'Divide Whole Numbers',
@@ -358,6 +478,30 @@ angular.module('mathSkills').value('data3_2', {
                     "workbook": true
                 }
             }]
+        }, {
+            title: 'Workbook',
+            children: [{
+                problem: '\\str{Place the dividend and divisor in the proper places for the problem "82292 divided by 905"}',
+                answer: '\\css{\\divwholes{\\input{905}}{\\input{82292}}}{divwhole}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }, {
+                problem: '\\str{Click on the right-most digit of the number you would like to divide into.}',
+                answer: '\\css{\\divwholes{\\str{905}}{\\butgrp{\\row{\\but{8}{F}}{\\but{2}{F}}{\\but{2}{F}}{\\but{9}{T}}{\\but{2}{F}}}}}{divwhole}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }, {
+                problem: '\\str{Divide 82292 by 905}',
+                answer: '\\longdiv{82292}{905}',
+                controls: {
+                    "checkAnswer": true,
+                    "help": true
+                }
+            }]
         }]
-    }, ]
+    }]
 });
