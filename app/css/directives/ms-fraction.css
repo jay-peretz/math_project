@@ -9,8 +9,7 @@ div .fraction .control-group {
 	margin:0;
 }
 .fraction hr {
-	color:#000;
-	background:#000;
+	border-color: transparent transparent #515151 transparent;
 	height:1px;
 	padding:0px;
 	margin:0px;
