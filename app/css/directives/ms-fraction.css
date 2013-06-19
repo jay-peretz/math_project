@@ -24,3 +24,11 @@ div .fraction .control-group {
 .fraction tr table {
     margin:0 auto;
 }
+.mixed-no-fraction {
+	height: 3em;	
+}
+.mixed-no-fraction-span {
+	display:block;
+	height:1em;
+	padding-top:1em;
+}
