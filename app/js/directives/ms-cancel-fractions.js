@@ -14,13 +14,21 @@ angular.module('mathSkills')
                 $scope.display = function () {
                     return '\\row{' + $scope.fracs.map(numberUtils.frac.toFrac).join('}{\\sign{&times;}}{') + '}';
                 };
+
                 // Generates ms-expression expected tag string for question buttons.
                 $scope.question = function () {
-                    var multiplied = numberUtils.frac.multiply($scope.fracs.map(numberUtils.frac.toFrac), 'str'),
-                        simplified = multiplied === numberUtils.frac.simplify(multiplied);
+                    var simplified = $scope.isSimplified();
 
                     return '\\butgrp{\\row{\\but{Yes}{' + (simplified === true ? 'F' : 'T') + '}}{\\but{No}{' + (simplified === false ? 'F' : 'T') + '}}}';
                 };
+
+                // Determines whether the fractions have been fully cancelled.
+                $scope.isSimplified = function () {
+                    var multiplied = numberUtils.frac.multiply($scope.fracs.map(numberUtils.frac.toFrac), 'str');
+
+                    return multiplied === numberUtils.frac.simplify(multiplied);
+                };
+
                 $scope.curStep = 'cancelling';
                 $scope.cancelling = { num: null, den: null };
                 $scope.cancelled = [null, null];
@@ -37,6 +45,13 @@ angular.module('mathSkills')
                 $scope.$watch('expected', function () {
                     if ($scope.expected) {
                         $scope.fracs = parser.extractTag($scope.expected).args.map(JSON.parse);
+
+                        // If the fractions are already simplified.
+                        if ($scope.isSimplified()) {
+                            // Display the question step.
+                            $scope.curStep = 'question';
+                            $scope.instructions = 'Can you cancel?';
+                        }
                     }
                 });
 
