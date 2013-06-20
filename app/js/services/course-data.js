@@ -21,7 +21,7 @@ angular.module('mathSkills.services')
         'data17_2',
         'data18_1', 'data18_2', 'data18_3',
         'data19_1', 'data19_2', 'data19_3', 'data19_4',
-        'data20_2', 'data20_3',
+        'data20_1', 'data20_2', 'data20_3',
         'data21_1', 'data21_2', 'data21_3', 'data21_4',
         'data22_3', 'data22_4',
         function (
@@ -43,7 +43,7 @@ angular.module('mathSkills.services')
             data17_2,
             data18_1, data18_2, data18_3,
             data19_1, data19_2, data19_3, data19_4,
-            data20_2, data20_3,
+            data20_1, data20_2, data20_3,
             data21_1, data21_2, data21_3, data21_4,
             data22_3, data22_4
         ) {
@@ -91,7 +91,7 @@ angular.module('mathSkills.services')
                     children: [
                         data18_1, data18_2, data18_3,
                         data19_1, data19_2, data19_3, data19_4,
-                        data20_2, data20_3,
+                        data20_1, data20_2, data20_3,
                         data21_1, data21_2, data21_3, data21_4,
                         data22_3, data22_4
                     ]
