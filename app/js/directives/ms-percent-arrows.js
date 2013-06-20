@@ -70,7 +70,9 @@ angular.module('mathSkills')
 					if ($scope.expected) {
 						tagParameters = parser.extractTag($scope.expected).args;
 					}
-					
+					// tagParameters 0 & 1 are starting number and multiplier to move the decimal point, respectively
+					// tagParameters 2 & 3 become part of the explanatory text, unless
+					// tagParameter 2 === "skiptext", then no explanatory text appears
 						
 						problemObjects[0] = Number(tagParameters[0]);
 						problemObjects[1] = Number(tagParameters[1]);
@@ -189,7 +191,11 @@ angular.module('mathSkills')
 							$scope.decimalDisplacement = Math.abs(Math.round(Math.log(problemObjects[1])/Math.log(10)));
 						}
 						
-						$scope.addDecimalText = 'The '+tagParameters[2]+' '+problemObjects[0]+' is converted to a '+tagParameters[3]+' by displacing the decimal point '+$scope.decimalDisplacement+' place(s) to the '+$scope.pointLeftOrRight+' and filling in any "open" place holders with zeros:'
+						if (tagParameters[2] !== "skiptext") {
+							$scope.addDecimalText = 'The '+tagParameters[2]+' '+problemObjects[0]+' is converted to a '+tagParameters[3]+' by displacing the decimal point '+$scope.decimalDisplacement+' place(s) to the '+$scope.pointLeftOrRight+' and filling in any "open" place holders with zeros:'
+						} else {
+							$scope.addDecimalText = "";
+						}
 						
 						$scope.emptyArray = [];
 						$scope.emptyArray[0] = [];
