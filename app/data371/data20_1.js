@@ -12,11 +12,26 @@ angular.module('mathSkills').service('data20_1', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                         problem: '\\rowgrp{\\row{\\str{Change this percent to a decimal:}}}{\\row{\\str{\xA0}}}{\\row{\\str{$startNumber}}{\\str{%}}',
-						answer: '\\row{\\input{$answer}}',
+                         problem: '\\str{What is $problemPercent% of $problemNumber?}',
+						answer: '\\input{$answer}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\row{\\percentarrows{$startNumber}{0.01}{percent}{decimal}}{\\css{\\str{Answer:  $answer}}{help-answer-text help-answer-margin-right}}}'
+							"help": '\\rowgrp'
+							+'{\\row{\\str{The percent expression is $problemPercent%}}{\\sign{&sdot;}}{\\str{$problemNumber}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\str{Change the percent value into its equivalent decimal by dividing by 100:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\row{\\str{$problemPercent}}{\\sign{&divide;}}{\\str{100}}{\\sign{ = }}{\\str{ $problemEquivalent}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\str{or by shifting the decimal point:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\percentarrows{$problemPercent}{0.01}{skiptext}}'
+							+'{\\str{Multiply the "base" value with the decimal:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\row{\\str{$problemEquivalent}}{\\sign{&sdot;}}{\\str{$problemNumber}}{\\sign{ = }}{\\str{$answer}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\str{Answer:  $answer}}{help-answer-text help-answer-margin-right}}'
+							+'{\\html{&nbsp;}}'
 						}
                     }]
                 }]
@@ -26,27 +41,56 @@ angular.module('mathSkills').service('data20_1', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                         problem: '\\rowgrp{\\row{\\str{Change this fraction percent to a decimal percent:}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\html{$problemWhole}}{\\frac{\\str{$problemNum}}{\\str{$problemDen}}}}{\\str{%}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round the decimal percent to the hundredths place.}}}',
-                answer: '\\row{\\input{$answer}}{\\str{%}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\mixed{\\html{$problemWhole}}{\\frac{\\str{$problemNum}}{\\str{$problemDen}}}}{\\str{%}}{\\sign{ = }}{\\str{$answer%}}{\\css{\\str{Answer:  $answer%}}{help-answer-text help-answer-margin-right}}}'
-                }
+                         problem: '\\rowgrp'
+						 +'{\\row{\\mixed{\\html{$problemWhole}}{\\frac{\\str{$problemNumerator}}{\\str{$problemDenominator}}}}'
+						 +'{\\str{%}}'
+						 +'{\\wholepart{\xA0 of $problemNumber}}}'
+						 +'{\\row{\\html{&nbsp;}}'
+						 +'{\\str{is equal to what amount?}}}',
+						answer: '\\input{$answer}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\str{The percent expression is: }}'
+							+'{\\html{&nbsp;}}'
+							+'{\\row'
+							+'{\\mixed{\\html{$problemWhole}}{\\frac{\\str{$problemNumerator}}{\\str{$problemDenominator}}}}'
+							+'{\\str{%}}{\\sign{&sdot;}}{\\str{$problemNumber}}{\\sign{ = }}}'  
+							+'{\\html{&nbsp;}}'
+							+'{\\str{First... change the percent value in fractional form into the decimal form:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\row{\\mixed{\\html{$problemWhole}}{\\frac{\\str{$problemNumerator}}{\\str{$problemDenominator}}}}'
+							+'{\\sign{ = }}{\\str{$fractionAsDecimal}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\str{Then... you may either divide by 100 to obtain the "base" value:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\row{\\str{$fractionAsDecimal}}{\\sign{&divide;}}{\\str{100}}{\\sign{ = }}{\\str{ $fractionAsPercent}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\str{or... simply move the decimal point 2 places to the left:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\percentarrows{$fractionAsDecimal}{0.01}{skiptext}}'
+							+'{\\str{Multiply the "base" value with the decimal:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\row{\\str{$fractionAsPercent}}{\\sign{&sdot;}}{\\str{$problemNumber}}{\\sign{ = }}{\\str{$answer}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\str{Answer:  $answer}}{help-answer-text help-answer-margin-right}}'
+							+'{\\html{&nbsp;}}'
+						}
                     }]
                 }]
             }
-        },
+        },	
         data = [
-            { startNumber: '9', answer: '0.09', template: 'main'  },
-			{ startNumber: '327', answer: '3.27', template: 'main'  },
-			{ startNumber: '85', answer: '0.85', template: 'main'  },
-			{ startNumber: '55.6', answer: '0.556', template: 'main'  },
-			{ startNumber: '67.85', answer: '0.6785', template: 'main'  },
-			{ problemWhole: '&nbsp;', problemNum: '5', problemDen: '7',  answer: '0.71', template: 'fraction'  },
-			{ problemWhole: '&nbsp;', problemNum: '4', problemDen: '5',  answer: '0.8', template: 'fraction'  },
-			{ problemWhole: '&nbsp;', problemNum: '2', problemDen: '3',  answer: '0.67', template: 'fraction'  },
-			{ problemWhole: '1', problemNum: '1', problemDen: '4',  answer: '1.25', template: 'fraction'  },
-			{ problemWhole: '1', problemNum: '1', problemDen: '12',  answer: '1.08', template: 'fraction'  },
+            { problemPercent: '1', problemNumber: '113', problemEquivalent: '0.01', answer: '1.13', template: 'main'  },
+            { problemPercent: '54', problemNumber: '31', problemEquivalent: '0.54', answer: '16.74', template: 'main'  },
+            { problemPercent: '223', problemNumber: '157', problemEquivalent: '2.23', answer: '350.11', template: 'main'  },
+            { problemPercent: '6.06', problemNumber: '44', problemEquivalent: '0.0606', answer: '2.67', template: 'main'  },
+            { problemPercent: '86.4', problemNumber: '260', problemEquivalent: '0.864', answer: '224.64', template: 'main'  },
+			{ problemWhole: '&nbsp;', problemNumerator: '1', problemDenominator: '10', problemNumber: '140', fractionAsDecimal: '0.1', fractionAsPercent: '0.001',  answer: '0.14', template: 'fraction'  },
+			{ problemWhole: '&nbsp;', problemNumerator: '5', problemDenominator: '8', problemNumber: '120', fractionAsDecimal: '0.625', fractionAsPercent: '0.00625',  answer: '0.75', template: 'fraction'  },
+			{ problemWhole: '3', problemNumerator: '1', problemDenominator: '10', problemNumber: '50', fractionAsDecimal: '3.1', fractionAsPercent: '0.031',  answer: '1.55', template: 'fraction'  },
+			{ problemWhole: '8', problemNumerator: '3', problemDenominator: '4', problemNumber: '60', fractionAsDecimal: '8.75', fractionAsPercent: '0.0875',  answer: '5.25', template: 'fraction'  },
+			{ problemWhole: '2', problemNumerator: '1', problemDenominator: '2', problemNumber: '60', fractionAsDecimal: '2.5', fractionAsPercent: '0.025',  answer: '1.5', template: 'fraction'  }
         ];
 
 

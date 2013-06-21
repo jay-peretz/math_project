@@ -24,6 +24,7 @@ angular.module('mathSkills')
 
 				var tagParameters = [],
 					problemObjects = [],
+					multiplierArray = [],
 					answerObject = 0,
 				 	allNumbersArray = new Array(2),
 					numberDisplayArray = [],
@@ -112,6 +113,7 @@ angular.module('mathSkills')
 						} else {
 							multiplierPlacesLeft = problemObjects[1].toString().length;
 						}
+						multiplierArray = tagParameters[0].split("");
 						
 						// get the maximum number of digits right and left of the multiplicand decimal place
 						
@@ -130,10 +132,17 @@ angular.module('mathSkills')
 							numberDisplayArray[ii] = $filter('decimal-to-display-array')(problemObjects[ii], answerPlacesLeft, answerPlacesRight);
 						}
 						answerDisplayArray = $filter('decimal-to-display-array')(answerObject, answerPlacesLeft, answerPlacesRight, 1);
-						// account for case where decimal has zero in the tens place
-						if (typeof problemObjects[0].toString().charAt(problemObjects[0].toString().indexOf('.') + 1) !== "undefined" && problemObjects[0].toString().charAt(problemObjects[0].toString().indexOf('.') + 1) == 0) {
-							answerDisplayArray.unshift("0");
-							answerPlacesLeft = answerPlacesLeft + 1;
+						// account for case like: 10 x .01 
+						// digits right of decimal in mutliplier >= digits left of decimal in multiplicand 
+						// && one or more zeros immediately to the left of decimal in multiplicand
+						// for example need answer for display in 10 x .01 as .10 not .1 to show decimal moved 2 places						
+						if (multiplierPlacesRight >= multiplicandPlacesLeft) {
+							for (var ii = 0, len = multiplicandPlacesLeft - multiplierPlacesRight + 1; ii < len; ii += 1) {
+								if (multiplierArray[multiplicandPlacesLeft - ii - 1] === "0") {
+									answerDisplayArray.push("0");
+									answerPlacesRight = answerPlacesRight + 1;
+								}
+							}
 						}
 
 						$scope.decimalPointerArray = [];
