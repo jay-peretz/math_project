@@ -144,12 +144,6 @@ angular.module('mathSkills')
 						}
 
 						$scope.numberArray = roundedDecimalArray.slice();
-						console.log("$scope.numberArray is: "+$scope.numberArray);
-
-						// check for numberdigitsplace value > the number of places in numberdigits
-						if ( parseInt(tagParameters[1], 10) > tagParameters[0].length) {
-							console.log("place value greater than value of given number");
-						}
 						
 						//build an array the same length as $scope.numberArray with blank spaces and a carat for the indicated digit
 						for (var ii = 0, jj = 1, len1 = $scope.numberArray.length; ii < len1; ii++){
@@ -170,8 +164,6 @@ angular.module('mathSkills')
 								$scope.randomplacearray[ii] = " ";
 							}
 						}
-						
-						console.log("$scope.decimalAnswerArray is: "+$scope.decimalAnswerArray+" $scope.randomplacearray is: "+$scope.randomplacearray);
 						
 						switch (true) {
 				

@@ -24,11 +24,10 @@ angular.module('mathSkills')
 
 				var tagParameters = [],
 					problemObjects = [],
-					multiplierArray = [],
+					multiplicandArray = [],
 					answerObject = 0,
-				 	allNumbersArray = new Array(2),
-					numberDisplayArray = [],
 					answerDisplayArray = [],
+					answerDisplayRight = "",
 					answerArray = [],
 					multiplicandDigits = 0,
 					multiplierDigits = 0,
@@ -85,6 +84,8 @@ angular.module('mathSkills')
 						multiplicandDigits = problemObjects[0].toString().length;
 						multiplierDigits = problemObjects[1].toString().length;
 						
+						multiplicandArray = tagParameters[0].split("");
+						
 						// get the maximum number of digits
 						maxAnswerDigits = answerString.length;
 						
@@ -113,7 +114,6 @@ angular.module('mathSkills')
 						} else {
 							multiplierPlacesLeft = problemObjects[1].toString().length;
 						}
-						multiplierArray = tagParameters[0].split("");
 						
 						// get the maximum number of digits right and left of the multiplicand decimal place
 						
@@ -124,33 +124,19 @@ angular.module('mathSkills')
 							multiplicandPlacesLeft = problemObjects[0].toString().length;
 						}
 						
-						numberDisplayArray = new Array(problemObjects.length);
+
 						answerDisplayArray = [];
 		
-						// set up display arrays with correct number of places left and right
-						for (var ii = 0; ii < problemObjects.length; ii++) {
-							numberDisplayArray[ii] = $filter('decimal-to-display-array')(problemObjects[ii], answerPlacesLeft, answerPlacesRight);
-						}
-						answerDisplayArray = $filter('decimal-to-display-array')(answerObject, answerPlacesLeft, answerPlacesRight, 1);
-						// account for case like: 10 x .01 
-						// digits right of decimal in mutliplier >= digits left of decimal in multiplicand 
-						// && one or more zeros immediately to the left of decimal in multiplicand
-						// for example need answer for display in 10 x .01 as .10 not .1 to show decimal moved 2 places						
-						if (multiplierPlacesRight >= multiplicandPlacesLeft) {
-							for (var ii = 0, len = multiplicandPlacesLeft - multiplierPlacesRight + 1; ii < len; ii += 1) {
-								if (multiplierArray[multiplicandPlacesLeft - ii - 1] === "0") {
-									answerDisplayArray.push("0");
-									answerPlacesRight = answerPlacesRight + 1;
-								}
-							}
-						}
+						answerDisplayArray = $filter('decimal-to-display-array')(answerObject, answerPlacesLeft, (multiplicandPlacesRight + multiplierPlacesRight), 1);
+						
+						// revise the number of places to the right in the answer to account for 
+						answerDisplayRight = decimalDigits(answerDisplayArray.join(""));
 
 						$scope.decimalPointerArray = [];
 						$scope.borderBelowArray = [];
-						
+
 						//build an array with blank spaces and a carat for the indicated digit
 						//build an array with blank spaces and "\xe2" (half circle below) to indicate shift of decimal
-			
 						for (var ii = 0, lengthAnswerArray = answerDisplayArray.length; ii<lengthAnswerArray; ii++){
 								if (answerDisplayArray[ii] == '.') {
 									$scope.decimalPointerArray[ii] = "^";
@@ -170,8 +156,8 @@ angular.module('mathSkills')
 											break;
 											
 										case ((ii > answerPlacesLeft)
-											   && (answerPlacesRight > multiplicandPlacesRight)
-											   && (ii < (answerPlacesLeft + 1 + (answerPlacesRight - multiplicandPlacesRight)))):
+											   && (answerDisplayRight > multiplicandPlacesRight)
+											   && (ii < (answerPlacesLeft + 1 + (answerDisplayRight - multiplicandPlacesRight)))):
 											// \u25e1 is Unicode UTF-16 for half-moon
 											//$scope.decimalPointerArray[ii] = '\u25e1';  
 											$scope.borderBelowArray[ii] = 'arrowLeft';
@@ -184,7 +170,7 @@ angular.module('mathSkills')
 						
 						// for whole number results, display decimal to the right of the ones place
 						
-						if (answerPlacesRight == 0) {
+						if (answerDisplayRight == 0) {
 							answerDisplayArray.push(".");
 							// use this to add a carat under the decimal point if desired
 							$scope.decimalPointerArray.push("^");
@@ -192,7 +178,7 @@ angular.module('mathSkills')
 						}
 						
 						// get the number of places shifted and whether the shift is left or right
-						if (multiplicandPlacesRight < answerPlacesRight) {
+						if (multiplicandPlacesRight < answerDisplayRight) {
 							$scope.pointLeftOrRight = "left";
 							$scope.decimalDisplacement = Math.abs(Math.round(Math.log(problemObjects[1])/Math.log(10)));
 						} else {

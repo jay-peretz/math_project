@@ -6,12 +6,13 @@ angular.module('mathSkills')
         function () {
 			// withZeros = 1 fills in zeros to the right of the last digit, to the right of the decimal
             return function (decimal, maxPlacesLeft, maxPlacesRight, withZeros) {
+				
 				function getDecimalPlaces (givenDecimal) {
 					var givenDecimalString = "" + givenDecimal,
 						givenDecimalStringLength = givenDecimalString.length,
 						decimalPlaces = 0;
 						
-					if (givenDecimalString.indexOf(".")>0) {
+					if (givenDecimalString.indexOf(".")>0 && givenDecimalString.indexOf(".") !== givenDecimalStringLength - 1) {
 						decimalPlaces = (givenDecimalStringLength-1) - givenDecimalString.indexOf(".");
 					} else {
 						decimalPlaces = 0;
@@ -28,7 +29,6 @@ angular.module('mathSkills')
 					displayArray = [],
 					decimalString,
 					digitsRight,
-					rightWithDecimal,
 					decimalLength,
 					decimalWithFix,
 					digitsLeft = 0,
@@ -41,32 +41,43 @@ angular.module('mathSkills')
 				
 				decimalString = decimal.toString();
 				digitsRight = getDecimalPlaces(decimal);
-				rightWithDecimal = digitsRight + 1;
 				decimalLength = decimalString.length;
 				
 				if (digitsRight > 0) {
 					digitsLeft = decimalLength - (digitsRight + 1);
 				} else {
-					digitsLeft = decimalLength;
-					totalNumberPlaces = maxPlacesLeft;
-				}	
-				
-				for (var ii = 0, jj = 0; ii < totalNumberPlaces; ii++) {
-					if (ii < (maxPlacesLeft - digitsLeft)) {
-						// blank is "\xA0"
-						displayArray[ii] = "\xA0";
-					} else if ((ii >= (maxPlacesLeft - digitsLeft))&&(ii <= (maxPlacesLeft + digitsRight))) {
-						displayArray[ii] = decimalString.charAt(jj);
-						jj++;
-					} else if (ii > (maxPlacesLeft + digitsRight)) {
-						if (addZeros == 1) {
-							displayArray[ii] = "0";	
-						} else {
-							displayArray[ii] = "\xA0";
-						}
+					if (decimalString.indexOf(".")>0) {
+						digitsLeft = decimalLength - 1;
+					} else {
+						digitsLeft = decimalLength;
 					}
 				}
-			
+				
+				if (digitsRight === 0 && maxPlacesRight > 0 && decimalString.indexOf(".")===-1) {
+					decimalString = decimalString + ".";
+					decimalLength = decimalLength + 1;
+				}
+				
+				for (var ii = 0, jj = 0; ii < totalNumberPlaces; ii++) {
+					switch (true) {
+						case (ii < (maxPlacesLeft - digitsLeft)):					
+							// blank is "\xA0"
+							displayArray[ii] = "\xA0";
+							break;
+						case ((ii >= (maxPlacesLeft - digitsLeft))&&(ii <= (maxPlacesLeft + digitsRight))):
+							displayArray[ii] = decimalString.charAt(jj);
+							jj++;
+							break;
+						case (ii > (maxPlacesLeft + digitsRight)):
+							if (addZeros == 1) {
+								displayArray[ii] = "0";	
+							} else {
+								displayArray[ii] = "\xA0";
+							}
+							break;
+					}
+				}
+
 				return displayArray;
             };
         }
