@@ -13,11 +13,13 @@ files = [
   'app/lib/angular/angular.js',
   'test/lib/angular/angular-mocks.js',
   'test/lib/flot-modified-for-karma/jquery.flot.modified-for-karma-by-MF-130427.js',
+  'app/js/mathSkills.js',
   'app/js/services/mathSkills.services.js',
   'app/js/*.js',
   'app/js/**/*.js',
-  'app/data/*.js',
-  'test/unit/*.js',
+  'app/data371/*.js',
+  'app/data372/*.js',
+  //'test/unit/*.js',
   'test/unit/**/*.js',
   'app/partials/**/*.html'
 ];
