@@ -33,8 +33,11 @@ angular.module('mathSkills')
                         };
 
                         $scope.$on('answer', function (e, data) {
-                            // Show the feedback label.
-                            $scope.feedback.show = true;
+                            
+                            if(data.noFeedback !== true){
+                                // Show the feedback label.
+                                $scope.feedback.show = true;
+                            }
 
                             // Set the feedback label content.
                             if (data.result === 'correct') {
