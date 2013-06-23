@@ -1,13 +1,9 @@
 'use strict';
+/*global angular jQuery*/
 	
 angular.module('mathSkills') 
 	.config(['parserProvider', function (parserProvider) {
         parserProvider.register('select', {
-            argTemplates: [{
-                name: 'answercorrect'
-            },{
-                name: 'optionsarray'
-            }],
             directiveTemplate: '<ms-select expected={{expected}} label={{label}}></ms-select>'
         });
     }])
@@ -15,49 +11,47 @@ angular.module('mathSkills')
 	'parser',
     'directiveUtils',
     'problemData',
-	function (parser, directiveUtils, problemData) {
-		return {
-			restrict: 'E',
-			scope: {
-				expected: '@',
-				label: '@'
-			},
-			controller: function ($scope, $element) {
-				$scope.answer = '';
-                $scope.controllerId = Math.random().toString();
-				$scope.answercorrect = "";
-				$scope.optionsarray = [];
-				
-			 // Extract the value/s for $scope.answercorrect & $scope.optionsarray
-				$scope.$watch('expected', function () {
-					if ($scope.expected) {
-						parser.parse($scope.expected, { scope: $scope });
-					}
-				});
-				$scope.$watch('optionsarray', function () {
-					if (typeof $scope.optionsarray === "string") {
-                        $scope.optionsarray = $scope.optionsarray.replace(new RegExp('\\\\', 'g'),'');
-                        //console.log('select arr no json', $scope.optionsarray);
-						$scope.optionsarray = JSON.parse($scope.optionsarray);
-                        //console.log('select arr json-ed', $scope.optionsarray);
-					}
-				});
-				$scope.$watch('answercorrect', function () {
-					if (typeof $scope.answercorrect === "string" && $scope.answercorrect !== "") {
-						$scope.answercorrect = JSON.parse($scope.answercorrect);
-					}
-				});
-				
-				
+    function (parser, directiveUtils, problemData) {
+        return {
+            restrict: 'E',
+            scope: {
+                expected: '@',
+                label: '@'
+            },
+            controller: function ($scope, $element) {
 
-				$scope.$on('checkAnswer', function () {
+                $scope.controllerId = Math.random().toString();
+                
+                // Extract the args array.
+                $scope.$watch('expected', function () { 
+                    if ($scope.expected){ 
+                        $scope.answercorrect = parser.extractTag($scope.expected).args[0]; 
+                        $scope.optionsarray = parser.extractTag($scope.expected).args[1]; 
+                        
+                        //turn answer string-arrays into array
+                        if (typeof $scope.answercorrect === "string" && $scope.answercorrect[0] === "[") {
+                            $scope.answercorrect = JSON.parse($scope.answercorrect);
+                        }
+                            //console.log('args0 answer', $scope.myargs[0], '= ', $scope.answercorrect);
+
+                        //turn options string-arrays into array
+                        if (typeof $scope.optionsarray === "string" && $scope.optionsarray[0] === "[") {
+                            //strip-out escape char.
+                            $scope.optionsarray = $scope.optionsarray.replace(new RegExp('\\\\', 'g'),'');
+                            $scope.optionsarray = JSON.parse($scope.optionsarray);
+                        }
+                            //console.log('args1 arr', $scope.myargs[1], '= ', $scope.optionsarray);
+                    }
+                });
+
+                $scope.$on('checkAnswer', function () {
                     
                     var data = {
-    					expected: '\\select{'+$scope.answercorrect+'}{['+$scope.optionsarray.join(',')+']}',
-						answer: '\\select{'+$scope.answer+'}{['+$scope.optionsarray.join(',')+']}',
+                        expected: '\\select{'+$scope.answercorrect+'}{['+$scope.optionsarray.join(',')+']}',
+                        answer: '\\select{'+$scope.answer+'}{['+$scope.optionsarray.join(',')+']}',
                         label: $scope.label
-					};
-                    
+                    };
+
                     if (Array.isArray($scope.answercorrect)){
                         data.answer = '\\select{"'+$scope.answer+'"}{["'+$scope.optionsarray.join('","')+'"]}';
                         var answerIndex = $scope.answercorrect.indexOf($scope.answer);
@@ -84,18 +78,18 @@ angular.module('mathSkills')
                             });
                         }
                     }else {
-                     
-        				if ($scope.answercorrect === $scope.answer) {
-        					data.result = 'correct';
-        					$scope.class = 'success';
-        				} else {
-        					data.result = 'incorrect';
-        					$scope.class = 'error';
-        					$scope.answer = '';
-        				}
-        				$scope.$emit('answer', data);
+
+                        if ($scope.answercorrect === $scope.answer) {
+                            data.result = 'correct';
+                            $scope.class = 'success';
+                        } else {
+                            data.result = 'incorrect';
+                            $scope.class = 'error';
+                            $scope.answer = '';
+                        }
+                        $scope.$emit('answer', data);
                     }
-				});
+                });
 
                  $scope.$on('checkFocus', function (e) {
                     // If this event has not been marked as ignored.
@@ -163,8 +157,8 @@ angular.module('mathSkills')
                         $scope.$apply($scope.$emit('triggerCheckFocus'));
                     }
                 });
-	
-			},
-			template: '<div class="control-group {{class}}"><label><span>{{label}}</span><select style="width:{{width}}; margin:0;" ng-model="answer" ng-options="value for value in optionsarray"> <option value="">-- choose --</option></select></label></div>'
-		};
-	}]);
+
+            },
+            template: '<div class="control-group {{class}}"><label><span>{{label}}</span><select style="width:{{width}}; margin:0;" ng-model="answer" ng-options="value for value in optionsarray"> <option value="">-- choose --</option></select></label></div>'
+        };
+    }]);
