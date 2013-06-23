@@ -13,27 +13,46 @@ angular.module('mathSkills')
         function (parser, $compile) {
             return {
                 controller: function ($scope, $element) {
-                    var  twoAndOut = 0;
+                    var count = 0,
+                        twoNout = function (data) {
+                            if (data.result === 'incorrect') {
+                                count += 1;
+                                
+                                if (count > 1){
+                                    count = 0;
+                                    $scope.$emit('panelDone');
+                                }else{
+                                    data.noRecompile = true;
+                                }
+                            }else{
+                                return false;
+                            }    
+                            
+                        };
                     
                     // Extract the args array.
                     $scope.$watch('expected', function () {
                         if ($scope.expected){
                             $scope.myargs = parser.extractTag($scope.expected).args;
-                            $scope.myclass = $scope.myargs.length > 1 ? $scope.myargs[1]: "wbclass";
+                            $scope.myclass = $scope.myargs.length > 1 ? $scope.myargs[1]: "wbclass"; 
+                            $scope.step = $scope.myargs.length > 2 ? $scope.myargs[2]: "defalt";
                         }
                     });
 
                     $scope.$on('answer', function (e, data) {
-                        data.noHelpPrompt = true;
-                        if (data.result === 'incorrect') {
-                            twoAndOut += 1;
-                            if (twoAndOut > 1){
-                                twoAndOut = 0;
-                                $scope.$emit('panelDone');
-                            }
+                         
+                        switch($scope.step){
+                            case 'defalt':
+                                data.noHelpPrompt = true;
+                                twoNout(data);
+                            break;
+                            case 'end':
+                                data.noHelpPrompt = true;
+                                if (twoNout(data) === false) {
+                                    $scope.$emit('panelGroupDone');
+                                }
+                            break;
                         }
-                        //data.expected = $scope.expected;
-                        //data.answer = '\\wb{' + data.answer +'}{' + $scope.myargs[1] + '}';
                     });
                 },
                 restrict: 'E',
