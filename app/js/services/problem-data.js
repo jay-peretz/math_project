@@ -6,13 +6,18 @@ angular.module('mathSkills.services')
     .run([
         '$rootScope',
         '$routeParams',
-        function ($rootScope, $routeParams) {
+        '$timeout',
+        function ($rootScope, $routeParams, $timeout) {
             
             // Store answer events.
             $rootScope.$on('answer', function (e, data) {  //console.log('problem answer', data);
                
                 privateProblemData.previousCorrect = data.result === 'correct' ? true : false;
-                $rootScope.$broadcast('recompile');
+                if (data.noRecompile !== true){
+                    $timeout(function () {
+                        $rootScope.$broadcast('recompile');
+                    }, 1000);
+                }
             });
         }
     ])
