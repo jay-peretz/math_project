@@ -13,23 +13,8 @@ angular.module('mathSkills')
         function (parser, $compile) {
             return {
                 controller: function ($scope, $element) {
-                    var count = 0,
-                        twoNout = function (data) {
-                            if (data.result === 'incorrect') {
-                                count += 1;
-                                
-                                if (count > 1){
-                                    count = 0;
-                                    $scope.$emit('panelDone');
-                                }else{
-                                    data.noRecompile = true;
-                                }
-                            }else{
-                                return false;
-                            }    
-                            
-                        };
-                    
+                    var count = 0;
+                        
                     // Extract the args array.
                     $scope.$watch('expected', function () {
                         if ($scope.expected){
@@ -39,16 +24,34 @@ angular.module('mathSkills')
                         }
                     });
 
-                    $scope.$on('answer', function (e, data) {
+                    $scope.$on('answer', function (e, data) { 
                          
                         switch($scope.step){
                             case 'defalt':
                                 data.noHelpPrompt = true;
-                                twoNout(data);
+                                if (data.result === 'incorrect') {
+                                    count += 1;
+                                    
+                                    if (count > 1){
+                                        count = 0;
+                                        $scope.$emit('panelDone');
+                                    }else{
+                                        data.noRecompile = true;
+                                    }
+                                }
                             break;
                             case 'end':
                                 data.noHelpPrompt = true;
-                                if (twoNout(data) === false) {
+                                if (data.result === 'incorrect') {
+                                    count += 1;
+                                    
+                                    if (count > 1){
+                                        count = 0;
+                                        $scope.$emit('panelDone');
+                                    }else{
+                                        data.noRecompile = true;
+                                    }
+                                }else{
                                     $scope.$emit('panelGroupDone');
                                 }
                             break;

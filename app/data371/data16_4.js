@@ -50,7 +50,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\ins{Yes, now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).},\\ins{We are told that there are $$ln $$lbln to every $$ld $$lbld. The given relationship is:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\input{$$rn}}{\\select{$$lbln}{$$lblarr}}}{\\grp{\\input{x}}{\\select{$$lbld}{$$lblarr}}}}'+
+                            '\\css{\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\input{$$rn}}{\\select{$$lbln}{$$lblarr}}}{\\grp{\\input{x}}{\\select{$$lbld}{$$lblarr}}}}}{bottom-marg}'+
                         '}{'+
                             '\\choose{[\\ins{}{q},\\ins{Now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).}]}{$$previousCorrect}'+
                         '}}{well}',
@@ -64,11 +64,11 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\ins{Great! You now have a proportion. Solve the proportion problem.},\\ins{The second relationship is an \\"unknown number\\" (shown here as \\"X\\") of $$lbld to every $$rn $$lbln. You now have a proportion:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{x}}{\\str{$$lbld}}}}'+
+                            '\\css{\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{$$rd}}{\\str{$$lbld}}}}}{bottom-marg}'+
                         '}{'+
                             '\\ins{Now solve the proportion problem.}'+
                         '}{'+
-                            '\\css{\\row{\\html{X\xA0 = \xA0}}{\\input{$$rd}}}{proportion-application}'+
+                            '\\css{\\grp{\\html{X\xA0 = \xA0}}{\\input{$$answer}}}{proportion-application}'+
                         '}}{well}',
                         controls: {
                             "checkAnswer": true,
@@ -77,9 +77,11 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\ins{Congratulations!},\\ins{The correct solution is:}]}{$$previousCorrect}'+
+                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{$answer}}{\\str{$$lbld}}}}'+
+                            '\\css{\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{$$rd}}{\\str{$$lbld}}}}}{bottom-marg}'+
+                        '}{'+
+                            '\\css{\\grp{\\html{X\xA0 = \xA0}}{\\str{$$answer}}}{proportion-application}'+
                         '}}{well}',
                         controls: {
                             "checkAnswer": true,
@@ -95,7 +97,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 question: 'If there are 20 Oak trees, how many elm trees are there?', 
                 answer: 12, template: 'main',
                 ln: 5, rn: 20, lbln: 'oak trees',
-                ld: 3, rd: 12, lbld: 'elm trees',
+                ld: 3, rd: 'x', lbld: 'elm trees',
                 lblarr: '[\\"oak trees\\",\\"elm trees\\",\\"parks\\"]',
                 previousCorrect: true,
                 flip: [[1], ["ln", "ld"], ["rn", "rd"], ["lbln", "lbld"]],

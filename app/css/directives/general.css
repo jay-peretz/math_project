@@ -52,6 +52,9 @@ body {
     text-align: center;
 }
 
+.bottom-marg{
+    margin-bottom: 20px;
+}
 /* problem text highlight-class (blue) */
 .blue-text{
     color: #0088cc;
