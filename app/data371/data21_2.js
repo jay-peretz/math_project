@@ -151,7 +151,37 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
 				 helpSecond: "$4,991 + 25% of the amount over $36,250",
 				 helpThird: "$4,991 + (.25)($57,547 - $36,250)",
 				 helpfourth: "$4,991 + (.25)($21,297)<br><br>",
-				 helpfifth: "$4,991 + $5,324<br><br>",
+				 helpfifth: "$4,991 + $5,324.25<br><br>",
+				 template: 'incomeTax'
+            },
+			{ 
+                problem: 'Kevin earned a total of $16,236 in 2012.  His taxable income, however, was $14,118. Calculate his income tax for 2012 (round to the nearest dollar)',
+				 answer: '1,760', 
+				 helpFirst: "Kevin's taxable income puts him in the second bracket.  He pays:", 
+				 helpSecond: "$893 + 15% of the amount over $8,925",
+				 helpThird: "$893 + (.15)($14,118 - $8,925)",
+				 helpfourth: "$893 + (.15)($5193)<br><br>",
+				 helpfifth: "$893 + $778.95<br><br>",
+				 template: 'incomeTax'
+            },
+			{ 
+                problem: 'How much income tax did Susan pay in 2012 if her taxable income was $233,819? (round to the nearest dollar)',
+				 answer: '61,291', 
+				 helpFirst: "Susan's taxable income puts her in the fifth bracket.  She pays:", 
+				 helpSecond: "$44,603 + 33% of the amount over $183,250",
+				 helpThird: "$44,603 + (.33)($233,819 - $183,250)",
+				 helpfourth: "$44,603 + (.33)($50,569)<br><br>",
+				 helpfifth: "$44,603 + $16,687.77<br><br>",
+				 template: 'incomeTax'
+            },
+			{ 
+                problem: "Dana earned a total of $15,425,378 in 2012.  Taxable income for Dana, however, was $8,424,169. Calculate Dana's income tax for 2012 (round to the nearest dollar)",
+				 answer: '3,294,388', 
+				 helpFirst: "Dana's taxable income puts Dana in the fifth bracket.  Dana pays:", 
+				 helpSecond: "$116,164 + 39.6% of the amount over $398,350",
+				 helpThird: "$116,164 + (.396)($8,424,169 - $398,350)",
+				 helpfourth: "$116,164 + (.396)($8,025,819)<br><br>",
+				 helpfifth: "$116,164 + $3,178,224.32<br><br>",
 				 template: 'incomeTax'
             }
         ];
