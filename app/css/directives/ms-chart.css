@@ -1,5 +1,33 @@
 /* required for control-data.js css tag */
 
+.border-top-2px-black {
+	  	border-top:2px solid black;
+}
 .chart-buttons-margin {
 	margin-right: 80px;
 }
+.chartTable {
+		border:1px solid black; 
+		width:100px;
+		height:30px;
+}
+.collapseTable {
+		border-collapse:collapse;
+		font-size:75%;
+}
+.fontWeightBold {
+	  	font-weight:bold;
+}
+table.td_padding td {
+		padding-left:4px;
+		padding-right:4px;
+}
+.text_align_center {
+	  	text-align:center;
+}
+.tr_height {
+	  	height:1.7em;
+}
+.tr_height_plus {
+	  	height:2em;
+} 

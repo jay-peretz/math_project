@@ -1,9 +1,9 @@
 /*global angular */
 
-angular.module('mathSkills').service('data21_2', function () {
-    var ret = {
-            title: '21.2 Social Security Tax',
-            path: '21.2-social-security-tax',
+angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUtils) {
+    var desc = {
+            title: '21.2 Social Security and Income Tax',
+            path: '21.2-social-security-and-income-tax',
             children: []
         },
         template = {
@@ -75,6 +75,36 @@ angular.module('mathSkills').service('data21_2', function () {
                         }
                     }]
                 }]
+            },
+			incomeTax: {
+                title: 'Solving Social Security and Income Tax Problems',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+						problem: '\\col'
+						+'{\\str{$problem}}'
+						+'{\\str{\xA0}}'
+						+'{\\str{\xA0}}'
+						+'{\\chart{2012 Income Tax Rate Schedule for Single Person}{7}{2}{["If you have a taxable income:","Amount of Income Tax","between $0 and $8,925, then you pay:","10% <span class=bigger>&sdot;</span>(amount of taxable income)","between $8,925 and $36,250, then you pay:","$893 + <br> 15% <span class=bigger>&sdot;</span>(amount of taxable income over $8,925)","between $36,250 and $87,850, then you pay:","$4,991 + <br> 25% <span class=bigger>&sdot;</span>(amount of taxable income over $36,250)", "between $87,850 and $183,250, then you pay:","$17,891 + <br>28% <span class=bigger>&sdot;</span>(amount of taxable income over $87,850)", "between $183,250 and $398,350, then you pay:","$44,603 +<br> 33% <span class=bigger>&sdot;</span>(amount of taxable income over $183,250)", "over $398,350, then you pay:","$116,164 +<br> 39.6% <span class=bigger>&sdot;</span>(amount of taxable income over $398,350)"]}',
+						answer: '\\grp{\\html{$}}{\\input{$answer}}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\html{&nbsp;}}'
+							+'{\\html{$helpFirst}}'	
+							+'{\\html{&nbsp;}}'
+							+'{\\html{$helpSecond}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\html{$helpThird}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\html{$helpfourth}}'
+							+'{\\html{$helpfifth}}'
+							+'{\\row{\\css{\\str{Answer: \xA0 }}{help-answer-text}}'
+							+'{\\css{\\row{\\str{$}}{\\str{$answer \xA0 }}}{help-answer-text-tight}}'
+							+'{\\html{&nbsp;}}'
+						}
+					}]
+                }]
             }
         },
         data = [
@@ -103,23 +133,29 @@ angular.module('mathSkills').service('data21_2', function () {
                 solution: '$$ld &#149; $$rn &#247; $$ln',
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+            },
+            { 
+                problem: 'How much income tax did Julie pay in 2012 if her taxable income was $6,983? (round to the nearest dollar)',
+				 answer: '698', 
+				 helpFirst: "Julie's taxable income puts her in the first bracket.  She pays:", 
+				 helpSecond: "10% of $6,983",
+				 helpThird: "(.10)($6,983)",
+				 helpfourth: "",
+				 helpfifth: "",
+				 template: 'incomeTax'
+            },
+            { 
+                problem: 'How much income tax did Mark pay in 2012 if his taxable income was $57,547? (round to the nearest dollar)',
+				 answer: '10,315', 
+				 helpFirst: "Mark's taxable income puts him in the third bracket.  He pays:", 
+				 helpSecond: "$4,991 + 25% of the amount over $36,250",
+				 helpThird: "$4,991 + (.25)($57,547 - $36,250)",
+				 helpfourth: "$4,991 + (.25)($21,297)<br><br>",
+				 helpfifth: "$4,991 + $5,324<br><br>",
+				 template: 'incomeTax'
             }
-        ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('(\\$)?\\$' + symbol, 'g'), function ($0, $1) { return $1?$0 : data[symbol]; }); //console.log(string); 
-                }
-            }
-            var ret = JSON.parse(string);
-            ret.data = angular.copy(data);
-            return ret;
-        };
-
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
-    
-    return ret;
-});
+        ];
+		
+    return dataUtils.build(desc, template, data);
+	
+}]);
