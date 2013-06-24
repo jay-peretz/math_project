@@ -23,6 +23,12 @@ angular.module('mathSkills')
                 controller: function ($scope, $element) {
                     $scope.answer = '';
                     $scope.controllerId = Math.random().toString();
+                    
+                    $scope.$watch('expected', function () {
+                        if ($scope.expected){
+                            $scope.myargs = parser.extractTag($scope.expected).args;
+                        }
+                    });
 
                     $scope.$watch('expected', function () {
                         if($scope.expected) {
@@ -43,7 +49,6 @@ angular.module('mathSkills')
 
                     $scope.$on('checkAnswer', function (e) {
                         if (e.defaultPrevented !== true) {
-                            var parsedExpected = parser.extractTag($scope.expected).args[0];
                             var answer = '\\input{' + $scope.answer + '}',
                                 data = {
                                     expected: $scope.expected,
@@ -51,8 +56,8 @@ angular.module('mathSkills')
                                     label: $scope.label
                                 };
 
-                            if (parsedExpected[0] === '[') {
-                                var possibleAnswers = JSON.parse(parsedExpected).map(String);
+                            if ($scope.myargs[0][0] === '[') {
+                                var possibleAnswers = JSON.parse($scope.myargs[0]).map(String);
                                 var answerIndex = possibleAnswers.indexOf($scope.answer);
                                 if (answerIndex !== -1) {
                                     var correctAnswerIndex = problemData.index(answerIndex);
@@ -166,6 +171,18 @@ angular.module('mathSkills')
                             $scope.$apply($scope.$emit('triggerCheckFocus'));
                         }
                     });
+                    
+                    jQuery($element).on('keyup', 'input', function (event) {
+                        var data = {};
+                        //if ($scope.myargs.length > 1){
+                            console.log('val', $element.find('input').val());
+                            //if ($element.find('input').val() === $scope.myargs[1]){
+                                data.val = $element.find('input').val();
+                                $scope.$emit('livedata', data);
+                            //}
+                        //}
+                    });
+                    
                 },
                 template: '<div class="control-group {{class}}"><label><span>{{label}}</span><input style="width:{{width}};" ng-model=answer ms-strip-commas ms-add-zero></label></div>'
             };

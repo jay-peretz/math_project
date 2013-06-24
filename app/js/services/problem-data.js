@@ -58,14 +58,14 @@ angular.module('mathSkills.services')
                 },
                  
                 flip: function () { 
-                    if(privateProblemData.flip){
-                        if (privateProblemData.flip[0].indexOf(privateProblemData.index) !== -1){
+                    if(privateProblemData.flip){ console.log('ya flip');
+                        if (privateProblemData.flip[0].indexOf(privateProblemData.index) !== -1){ console.log('ya flip index'); 
                             for (var ii = 1; ii < privateProblemData.flip.length; ii++ ){
                                 var work = privateProblemData[privateProblemData.flip[ii][0]];
-                                privateProblemData[privateProblemData.flip[ii][0]] = privateProblemData[privateProblemData.flip[ii][1]];
-                                privateProblemData[privateProblemData.flip[ii][1]] = work;
+                                privateProblemData[privateProblemData.flip[ii][0]] = privateProblemData[privateProblemData.flip[ii][1]]; console.log(ii, '-0', privateProblemData[privateProblemData.flip[ii][0]]); 
+                                privateProblemData[privateProblemData.flip[ii][1]] = work; console.log(ii, '-1', privateProblemData[privateProblemData.flip[ii][1]]); 
                             }
-                            $rootScope.$broadcast('recompile');
+                            $rootScope.$broadcast('recompile'); console.log('ya recompiled');
                         }
                     }    
                 },
@@ -78,9 +78,9 @@ angular.module('mathSkills.services')
                  * @param {Number} ii The index value to validate.
                  * @return {Boolean} Whether the passed in index is correct.
                  */
-                index: function (ii) {
+                index: function (ii) { console.log('in index');
                     if (privateProblemData.index === undefined) {
-                        privateProblemData.index = ii;
+                        privateProblemData.index = ii; console.log('in is!!!', privateProblemData.index);
                         this.flip();
                     }
                     return privateProblemData.index;
