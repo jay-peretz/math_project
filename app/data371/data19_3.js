@@ -111,8 +111,7 @@ angular.module('mathSkills').service('data19_3', function () {
 						+'{\\grp{\\str{$problemDecimal}}{\\str{%}}}',
 						answer: '\\css{\\rowgrp'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{str{\xA0 Answer:}}{\\mixed{\\str{$answerFractionWhole}}{\\frac{\\str{$answerFractionNum}}{\\str{$answerFractionDen}}}}}'
-						+'{\\html{&nbsp;}}'
+						+'{\\grp{str{\xA0 Answer:}}{\\mixed{\\str{$answerFractionWhole}}{\\frac{\\str{$answerFractionNum}}{\\str{$answerFractionDen}}}}{\\str{%}}}'
 						+'{\\html{&nbsp;}}'
 						+'{css{\\str{Change the percent into its equivalent fraction (reduced to lowest terms):}}{alert alert-info}}'
 						+'{\\html{&nbsp;}}'
@@ -159,7 +158,7 @@ angular.module('mathSkills').service('data19_3', function () {
 						+'{\\grp{\\str{$problemDecimal}}{\\str{%}}}',
 						answer: '\\css{\\rowgrp'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{str{\xA0 Answer:}}{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}'
+						+'{\\grp{str{\xA0 Answer:}}{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\str{$answerFractionNum}}{\\str{$answerFractionDen}}}}'
 						+'{\\str{%}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\html{&nbsp;}}'

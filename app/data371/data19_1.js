@@ -1,4 +1,4 @@
-
+ 
 /*global angular */
 
 angular.module('mathSkills').service('data19_1', function () {
@@ -64,8 +64,7 @@ angular.module('mathSkills').service('data19_1', function () {
 						+'{\\grp{\\html{&nbsp;}}}'
 						+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}',
 						answer: '\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}'
-						+'{\\str{%}}}'
-						+'{fractionMixedPercentAnswer}',		
+						+'{\\str{%}}}',		
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
