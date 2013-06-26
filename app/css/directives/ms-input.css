@@ -6,3 +6,7 @@ ms-input label span {
 input {
 	text-align:center;
 }
+
+.width200px input{
+	width: 200px;
+}
