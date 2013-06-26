@@ -12,9 +12,9 @@ angular.module('mathSkills')
             controller: ['$scope', function ($scope) {
                 var makeFracPlusRecord = function (frac, i) {
                     var str = '\\frac{';
-                    str += $scope.cancelRecord[i].num.length > 0 ? '\\col{\\str{' + frac[0] +  '}}{\\css{' + $scope.getCancelledRecord(i, 'num') + '}{cancel}}' : '\\str{' + frac[0] +  '}';
+                    str += $scope.cancelRecord[i].num.length > 0 ? '\\row{\\str{' + frac[0] + '}}{\\css{' + $scope.getCancelledRecord(i, 'num') + '}{cancel}}' : '\\str{' + frac[0] +  '}';
                     str += '}{';
-                    str += $scope.cancelRecord[i].den.length > 0 ? '\\col{\\css{' + $scope.getCancelledRecord(i, 'den') + '}{cancel}}{\\str{' + frac[1] +  '}}' : '\\str{' + frac[1] +  '}';
+                    str += $scope.cancelRecord[i].den.length > 0 ? '\\row{\\str{' + frac[1] + '}}{\\css{' + $scope.getCancelledRecord(i, 'den') + '}{cancel}}' : '\\str{' + frac[1] +  '}';
                     return str + '}';
                 };
                 // Generates ms-expresion expected tag string for question display.
@@ -47,9 +47,9 @@ angular.module('mathSkills')
 
                 $scope.getCancelledRecord = function (i, piece) {
                     if (piece === 'num') {
-                        return '\\col{\\str{' + angular.copy($scope.cancelRecord[i][piece]).reverse().join('}}{\\str{') + '}}';
+                        return '\\row{\\str{' + angular.copy($scope.cancelRecord[i][piece]).reverse().join('}}{\\str{') + '}}';
                     } else {
-                        return '\\col{\\str{' + $scope.cancelRecord[i][piece].join('}}{\\str{') + '}}';
+                        return '\\row{\\str{' + angular.copy($scope.cancelRecord[i][piece]).reverse().join('}}{\\str{') + '}}';
                     }
                 };
 
@@ -82,14 +82,25 @@ angular.module('mathSkills')
                 });
 
                 $scope.$on('answer', function (e, data) {
+                    // Handle "Can you cancel (again)?" step.
                     if (data.label === 'question') {
-                        if (data.result === 'correct' && parser.extractTag(data.answer).args[0] === 'Yes') {
+                        // If the user answered incorrectly.
+                        if (data.result === 'incorrect') {
+                            // Just stop the event.
                             e.stopPropagation();
+
+                        // If we can cancel again.
+                        } else if (data.result === 'correct' && parser.extractTag(data.answer).args[0] === 'Yes') {
+                            // Stop the event.
+                            e.stopPropagation();
+
+                            // Change the current step.
                             $scope.curStep = 'cancelling';
                             $scope.instructions = 'Click on 2 values (1 numerator and 1 denominator) that have a common factor other than one.';
-                        } else if (data.result === 'incorrect') {
-                            e.stopPropagation();
+
+                        // If we are done cancelling.
                         } else {
+                            // Store the cancelled fractions in problemData.
                             problemData.setData($scope.fracs[0][0], 'n1');
                             problemData.setData($scope.fracs[0][1], 'd1');
                             problemData.setData($scope.fracs[1][0], 'n2');
@@ -98,28 +109,47 @@ angular.module('mathSkills')
                                 problemData.setData($scope.fracs[2][0], 'n3');
                                 problemData.setData($scope.fracs[2][1], 'd3');
                             }
+
+                            // Update the answer and expected properties of the answer event data object.
                             data.answer = data.expected = $scope.display();
                         }
+                    // Handle cancelled step.
                     } else {
+                        // Stop the event.
                         e.stopPropagation();
 
+                        // Save the cancelled piece (numerator or denominator) answer.
                         switch (data.label) {
                             case 'num' : $scope.cancelled[0] = +parser.extractTag(data.answer).args[0]; break;
                             case 'den' : $scope.cancelled[1] = +parser.extractTag(data.answer).args[0]; break;
                         }
-    
+
+                        // Process the answer if we have received both the cancelled pieces.
                         if ($scope.cancelled.every(function (val) { return val !== null; })) {
+                            // Construct a two piece array with the numerator and denominators (one of each) that are selected for cancellation.
                             var cancelling = [$scope.fracs[$scope.cancelling.num][0], $scope.fracs[$scope.cancelling.den][1]];
-    
+
+                            // If the cancelled answer pieces correctly cancel the selected numerator and denominator.
                             if (numberUtils.frac.equiv([numberUtils.frac.toFrac(cancelling), numberUtils.frac.toFrac($scope.cancelled)])) {
+                                // Store the cancelled values.
                                 $scope.cancelRecord[$scope.cancelling.num].num.push($scope.fracs[$scope.cancelling.num][0]);
                                 $scope.cancelRecord[$scope.cancelling.den].den.push($scope.fracs[$scope.cancelling.den][1]);
+
+                                // Update the fractions.
                                 $scope.fracs[$scope.cancelling.num][0] = $scope.cancelled[0];
                                 $scope.fracs[$scope.cancelling.den][1] = $scope.cancelled[1];
+
+                                // Reset state variables.
                                 $scope.cancelling = { num: null, den: null };
+                                $scope.cancelled = [null, null];
+
+                                // Change the current step.
                                 $scope.curStep = 'question';
                                 $scope.instructions = 'Can you cancel again?';
+
+                            // If the cancelled answers do NOT correctly cancel the selected numerator and denominator.
                             } else {
+                                // Clear the answers.
                                 $scope.cancelled = [null, null];
                             }
                         }
