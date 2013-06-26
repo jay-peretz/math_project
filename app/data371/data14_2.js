@@ -64,7 +64,7 @@ angular.module('mathSkills').value('data14_2', {
                 answer: '\\input{0.082}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\multiplydecpowten{82}{0.001}}{\\css{\\str{Answer:  .082}}{help-answer-text help-answer-margin-right}}}'
+                    "help": '\\rowgrp{\\row{\\multiplydecpowten{82}{0.001}}{\\css{\\str{Answer:  0.082}}{help-answer-text help-answer-margin-right}}}'
                 }
             }]
         }]
@@ -77,7 +77,7 @@ angular.module('mathSkills').value('data14_2', {
                 answer: '\\input{0.0001}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\multiplydecpowten{0.1}{0.001}}{\\css{\\str{Answer:  .0001}}{help-answer-text help-answer-margin-right}}}'
+                    "help": '\\rowgrp{\\row{\\multiplydecpowten{0.1}{0.001}}{\\css{\\str{Answer:  0.0001}}{help-answer-text help-answer-margin-right}}}'
                 }
             }]
         }]
@@ -90,7 +90,7 @@ angular.module('mathSkills').value('data14_2', {
                 answer: '\\input{0.0385}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\multiplydecpowten{38.5}{0.001}}{\\css{\\str{Answer:  .0385}}{help-answer-text help-answer-margin-right}}}'
+                    "help": '\\rowgrp{\\row{\\multiplydecpowten{38.5}{0.001}}{\\css{\\str{Answer:  0.0385}}{help-answer-text help-answer-margin-right}}}'
                 }
             }]
         }]
@@ -129,7 +129,7 @@ angular.module('mathSkills').value('data14_2', {
                 answer: '\\input{0.076}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\multiplydecpowten{7.6}{0.01}}{\\css{\\str{Answer:  .076}}{help-answer-text help-answer-margin-right}}}'
+                    "help": '\\rowgrp{\\row{\\multiplydecpowten{7.6}{0.01}}{\\css{\\str{Answer:  0.076}}{help-answer-text help-answer-margin-right}}}'
                 }
             }]
         }]
