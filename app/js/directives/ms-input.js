@@ -145,8 +145,10 @@ angular.module('mathSkills')
                                 arr = parsedExpected[0];
                             } else {
                                 arr.push(parsedExpected[0]);
-                            }   
-                            directiveUtils.resize($scope, arr, 'input', 10, 10);
+                            }
+                            if (arr[0] !== undefined){
+                                directiveUtils.resize($scope, arr, 'input', 10, 10);
+                            }
                         }
                     });
 

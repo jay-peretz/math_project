@@ -11,15 +11,21 @@ angular.module('mathSkills')
                 name: 'denominator',
                 template: '<tr><td><ms-event-label expected={{denominator}} label=denominator></td></tr></table></ms-event-label>'
             }],
-            directiveTemplate: '<ms-fraction expected={{expected}} label={{label}}></ms-fraction>'
+            directiveTemplate: '<ms-fraction ng-hide="empty(denominator)" expected={{expected}} label={{label}}></ms-fraction>'
         });
     }])
     .directive('msFraction', [
         'directiveUtils',
         '$timeout',
-        function (directiveUtils, $timeout) {
+        'parser',
+        function (directiveUtils, $timeout, parser) {
             return {
                 controller: function ($scope, $element) {
+                    
+                    $scope.empty = function (den) {
+                        return Boolean($scope.myargs = parser.extractTag(den).args[0].length === 0);
+                    }
+                    
                     $scope.tag = 'frac';
                     $scope.children = ['numerator', 'denominator'];
 
