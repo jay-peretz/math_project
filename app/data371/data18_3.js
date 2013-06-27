@@ -30,7 +30,7 @@ angular.module('mathSkills').service('data18_3', ['dataUtils', function (dataUti
                 answer: '\\row{\\input{$finalAnswer}}{\\str{%}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": "\\rowgrp{\\row{\\str{The fractional percent of}}{\\mixed{\\html{$problemWhole}}{\\frac{\\str{$problemNum}}{\\str{$problemDen}}}}{\\str{%}}}{\\row{\\str{equals the decimal percent of \xA0}}{\\str{$answer%}}}{\\html{&nbsp;}}{\\css{\\str{Answer$rounded:  \xA0 $finalAnswer%}}{help-answer-text help-answer-margin-right}}"
+                    "help": "\\rowgrp{\\row{\\str{The fractional percent of \xA0}}{\\mixed{\\html{$problemWhole}}{\\frac{\\str{$problemNum}}{\\str{$problemDen}}}}{\\str{%}}}{\\row{\\str{equals the decimal percent of \xA0}}{\\str{$answer%}}}{\\html{&nbsp;}}{\\css{\\str{Answer$rounded:  \xA0 $finalAnswer%}}{help-answer-text help-answer-margin-right}}"
                 }
                     }]
                 }]
