@@ -24,10 +24,10 @@ angular.module('mathSkills')
 
 				var tagParameters = [],
 					problemObjects = [],
-					multiplicandArray = [],
 					answerObject = 0,
+				 	allNumbersArray = new Array(2),
+					numberDisplayArray = [],
 					answerDisplayArray = [],
-					answerDisplayRight = "",
 					answerArray = [],
 					multiplicandDigits = 0,
 					multiplierDigits = 0,
@@ -38,7 +38,8 @@ angular.module('mathSkills')
 					multiplierPlacesLeft = 0,
 					multiplierPlacesRight = 0,
 					multiplicandPlacesLeft = 0,
-					multiplicandPlacesRight = 0;
+					multiplicandPlacesRight = 0,
+					addText = "";
 					
 					
 		$scope.getClassBorder = function(index) {				
@@ -70,24 +71,24 @@ angular.module('mathSkills')
 					if ($scope.expected) {
 						tagParameters = parser.extractTag($scope.expected).args;
 					}
-					// tagParameters 0 & 1 are starting number and multiplier to move the decimal point, respectively
-					// tagParameters 2 & 3 become part of the explanatory text, unless
-					// tagParameter 2 === "skiptext", then no explanatory text appears
+					
 						
 						problemObjects[0] = Number(tagParameters[0]);
 						problemObjects[1] = Number(tagParameters[1]);
+						//  if multiplicand < multiplier exchange the numbers
+						/*if (problemObjects[0]<problemObjects[1]) {
+							problemObjects.reverse();
+						}*/
 						
 						answerObject = $filter('multiply-decimals')(problemObjects);
 						answerString = answerObject.toString();
-					
+						
 						// get the number of digits in the multiplicand and multiplier
 						multiplicandDigits = problemObjects[0].toString().length;
 						multiplierDigits = problemObjects[1].toString().length;
 						
-						multiplicandArray = tagParameters[0].split("");
-						
 						// get the maximum number of digits
-						maxAnswerDigits = answerString.length;
+						maxAnswerDigits = answerObject.toString().length;
 						
 						var decimalDigits = function (num) {
 							if (num.toString().indexOf('.') > 0) {
@@ -100,10 +101,10 @@ angular.module('mathSkills')
 						// get the maximum number of digits right and left of the answer decimal place
 						
 						answerPlacesRight = decimalDigits(answerObject);
-						if (answerString.indexOf('.') > 0) {
-							answerPlacesLeft = answerString.length - (answerPlacesRight + 1);
+						if (answerObject.toString().indexOf('.') > 0) {
+							answerPlacesLeft = answerObject.toString().length - (answerPlacesRight + 1);
 						} else {
-							answerPlacesLeft = answerString.length;
+							answerPlacesLeft = answerObject.toString().length;
 						}
 						
 						// get the maximum number of digits right and left of the multiplier decimal place
@@ -124,19 +125,23 @@ angular.module('mathSkills')
 							multiplicandPlacesLeft = problemObjects[0].toString().length;
 						}
 						
-
+						numberDisplayArray = new Array(problemObjects.length);
 						answerDisplayArray = [];
 		
-						answerDisplayArray = $filter('decimal-to-display-array')(answerObject, answerPlacesLeft, (multiplicandPlacesRight + multiplierPlacesRight), 1);
+						// set up display arrays with correct number of places left and right
+						for (var ii = 0; ii < problemObjects.length; ii++) {
+							numberDisplayArray[ii] = $filter('decimal-to-display-array')(problemObjects[ii], answerPlacesLeft, answerPlacesRight);
+						}
+						answerDisplayArray = $filter('decimal-to-display-array')(answerObject, answerPlacesLeft, answerPlacesRight, 1);
 						
-						// revise the number of places to the right in the answer to account for 
-						answerDisplayRight = decimalDigits(answerDisplayArray.join(""));
 
+		
 						$scope.decimalPointerArray = [];
 						$scope.borderBelowArray = [];
-
+						
 						//build an array with blank spaces and a carat for the indicated digit
 						//build an array with blank spaces and "\xe2" (half circle below) to indicate shift of decimal
+			
 						for (var ii = 0, lengthAnswerArray = answerDisplayArray.length; ii<lengthAnswerArray; ii++){
 								if (answerDisplayArray[ii] == '.') {
 									$scope.decimalPointerArray[ii] = "^";
@@ -156,8 +161,8 @@ angular.module('mathSkills')
 											break;
 											
 										case ((ii > answerPlacesLeft)
-											   && (answerDisplayRight > multiplicandPlacesRight)
-											   && (ii < (answerPlacesLeft + 1 + (answerDisplayRight - multiplicandPlacesRight)))):
+											   && (answerPlacesRight > multiplicandPlacesRight)
+											   && (ii < (answerPlacesLeft + 1 + (answerPlacesRight - multiplicandPlacesRight)))):
 											// \u25e1 is Unicode UTF-16 for half-moon
 											//$scope.decimalPointerArray[ii] = '\u25e1';  
 											$scope.borderBelowArray[ii] = 'arrowLeft';
@@ -170,7 +175,7 @@ angular.module('mathSkills')
 						
 						// for whole number results, display decimal to the right of the ones place
 						
-						if (answerDisplayRight == 0) {
+						if (answerPlacesRight == 0) {
 							answerDisplayArray.push(".");
 							// use this to add a carat under the decimal point if desired
 							$scope.decimalPointerArray.push("^");
@@ -178,7 +183,7 @@ angular.module('mathSkills')
 						}
 						
 						// get the number of places shifted and whether the shift is left or right
-						if (multiplicandPlacesRight < answerDisplayRight) {
+						if (multiplicandPlacesRight < answerPlacesRight) {
 							$scope.pointLeftOrRight = "left";
 							$scope.decimalDisplacement = Math.abs(Math.round(Math.log(problemObjects[1])/Math.log(10)));
 						} else {
@@ -186,8 +191,17 @@ angular.module('mathSkills')
 							$scope.decimalDisplacement = Math.abs(Math.round(Math.log(problemObjects[1])/Math.log(10)));
 						}
 						
+						if (tagParameters[1] === "100") {
+							addText = "multiplying by 100";
+						} 
+						
+						if (tagParameters[1] === ".01" || tagParameters[1] === "0.01") {
+							addText = "dividing by 100";
+						} 
+						
+												
 						if (tagParameters[2] !== "skiptext") {
-							$scope.addDecimalText = 'The '+tagParameters[2]+' '+problemObjects[0]+' is converted to a '+tagParameters[3]+' by displacing the decimal point '+$scope.decimalDisplacement+' place(s) to the '+$scope.pointLeftOrRight+' and filling in any "open" place holders with zeros:'
+							$scope.addDecimalText = 'The '+tagParameters[2]+' '+problemObjects[0]+' is converted to a '+tagParameters[3]+' by '+addText+'. This displaces the decimal point '+$scope.decimalDisplacement+' place(s) to the '+$scope.pointLeftOrRight+'.';
 						} else {
 							$scope.addDecimalText = "";
 						}
