@@ -5,7 +5,7 @@
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
         parserProvider.register('input', {
-            directiveTemplate: '<ms-input expected={{expected}} label={{label}}></ms-input>'
+            directiveTemplate: '<ms-input  ng-hide="empty(expected)" expected={{expected}} label={{label}}></ms-input>'
         });
     }])
     .directive('msInput', [
@@ -23,6 +23,12 @@ angular.module('mathSkills')
                 controller: function ($scope, $element) {
                     $scope.answer = '';
                     $scope.controllerId = Math.random().toString();
+
+                    $scope.empty = function (den) {
+                        if (den){
+                            return Boolean($scope.myargs = parser.extractTag(den).args[0].length === 0);
+                        }
+                    }
 
                     $scope.$on('checkAnswer', function (e) {
                         if (e.defaultPrevented !== true) {
