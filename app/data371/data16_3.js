@@ -15,7 +15,7 @@ angular.module('mathSkills').service('data16_3',['dataUtils', function (dataUtil
 					title: 'Main Answer',
 					children: [{
 						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{X}}{\\str{$problemDen1}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{$problemNum2}}{\\str{$problemDen2}}}}',
-						answer: '\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}',
+						answer: '\\grp{\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -48,7 +48,7 @@ angular.module('mathSkills').service('data16_3',['dataUtils', function (dataUtil
 					title: 'Main Answer',
 					children: [{
 						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{$problemNum1}}{\\str{X}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{$problemNum2}}{\\str{$problemDen2}}}}',
-						answer: '\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}',
+						answer: '\\grp{\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -81,7 +81,7 @@ angular.module('mathSkills').service('data16_3',['dataUtils', function (dataUtil
 					title: 'Main Answer',
 					children: [{
 						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{$problemNum1}}{\\str{$problemDen1}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{X}}{\\str{$problemDen2}}}}',
-						answer: '\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}',
+						answer: '\\grp{\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -114,7 +114,7 @@ angular.module('mathSkills').service('data16_3',['dataUtils', function (dataUtil
 					title: 'Main Answer',
 					children: [{
 						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{$problemNum1}}{\\str{$problemDen1}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{$problemNum2}}{\\str{X}}}}',
-						answer: '\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}',
+						answer: '\\grp{\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -146,7 +146,7 @@ angular.module('mathSkills').service('data16_3',['dataUtils', function (dataUtil
                     title: 'Main Answer',
                     children: [{
 						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\grp{\\str{X}}{\\str{$label1}}}{\\grp{\\str{$problemDen1}}{\\str{$label2}}}}{\\sign{\xA0 = \xA0}}{\\frac{\\grp{\\str{$problemNum2}}{\\str{$label3}}}{\\grp{\\str{$problemDen2}}{\\str{$label4}}}}}',
-						answer: '\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}',
+						answer: '\\grp{\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -179,7 +179,7 @@ angular.module('mathSkills').service('data16_3',['dataUtils', function (dataUtil
                     title: 'Main Answer',
                     children: [{
 						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\grp{\\str{$problemNum1}}{\\str{$label1}}}{\\grp{\\str{X}}{\\str{$label2}}}}{\\sign{\xA0 = \xA0}}{\\frac{\\grp{\\str{$problemNum2}}{\\str{$label3}}}{\\grp{\\str{$problemDen2}}{\\str{$label4}}}}}',
-						answer: '\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}',
+						answer: '\\grp{\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -212,7 +212,7 @@ angular.module('mathSkills').service('data16_3',['dataUtils', function (dataUtil
                     title: 'Main Answer',
                     children: [{
 						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\grp{\\str{$problemNum1}}{\\str{$label1}}}{\\grp{\\str{$problemDen1}}{\\str{$label2}}}}{\\sign{\xA0 = \xA0}}{\\frac{\\grp{\\str{X}}{\\str{$label3}}}{\\grp{\\str{$problemDen2}}{\\str{$label4}}}}}',
-						answer: '\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}',
+						answer: '\\grp{\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -245,7 +245,7 @@ angular.module('mathSkills').service('data16_3',['dataUtils', function (dataUtil
                     title: 'Main Answer',
                     children: [{
 						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\grp{\\str{$problemNum1}}{\\str{$label1}}}{\\grp{\\str{$problemDen1}}{\\str{$label2}}}}{\\sign{\xA0 = \xA0}}{\\frac{\\grp{\\str{$problemNum2}}{\\str{$label3}}}{\\grp{\\str{X}}{\\str{$label4}}}}}',
-						answer: '\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}',
+						answer: '\\grp{\\row{\\css{\\input{$answer}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -278,7 +278,7 @@ angular.module('mathSkills').service('data16_3',['dataUtils', function (dataUtil
                     title: 'Main Answer',
                     children: [{
 						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\grp{\\html{&nbsp;}}{\\wholepart{X}}{\\str{$label1}}{\\html{&nbsp;}}}{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum2}}{\\str{$problemDen2}}}{\\str{$label2}}{\\html{&nbsp;}}}}{\\sign{\xA0 = \xA0}}{\\frac{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum3}}{\\str{$problemDen3}}}{\\str{$label3}}{\\html{&nbsp;}}}{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum4}}{\\str{$problemDen4}}}{\\str{$label4}}{\\html{&nbsp;}}}}}',
-						answer: '\\row{\\css{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}',
+						answer: '\\grp{\\row{\\css{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -321,7 +321,7 @@ angular.module('mathSkills').service('data16_3',['dataUtils', function (dataUtil
                     title: 'Main Answer',
                     children: [{
 						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum1}}{\\str{$problemDen1}}}{\\str{$label1}}{\\html{&nbsp;}}}{\\grp{\\html{&nbsp;}}{\\wholepart{X}}{\\str{$label2}}{\\html{&nbsp;}}}}{\\sign{\xA0 = \xA0}}{\\frac{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum3}}{\\str{$problemDen3}}}{\\str{$label3}}{\\html{&nbsp;}}}{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum4}}{\\str{$problemDen4}}}{\\str{$label4}}{\\html{&nbsp;}}}}}',
-						answer: '\\row{\\css{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}',
+						answer: '\\grp{\\row{\\css{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -364,7 +364,7 @@ angular.module('mathSkills').service('data16_3',['dataUtils', function (dataUtil
                     title: 'Main Answer',
                     children: [{
 						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum1}}{\\str{$problemDen1}}}{\\str{$label1}}{\\html{&nbsp;}}}{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum2}}{\\str{$problemDen2}}}{\\str{$label2}}{\\html{&nbsp;}}}}{\\sign{\xA0 = \xA0}}{\\frac{\\grp{\\html{&nbsp;}}{\\wholepart{X}}{\\str{$label3}}{\\html{&nbsp;}}}{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum4}}{\\str{$problemDen4}}}{\\str{$label4}}{\\html{&nbsp;}}}}}',
-						answer: '\\row{\\css{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}',
+						answer: '\\grp{\\row{\\css{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -401,7 +401,7 @@ angular.module('mathSkills').service('data16_3',['dataUtils', function (dataUtil
                     title: 'Main Answer',
                     children: [{
 						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum1}}{\\str{$problemDen1}}}{\\str{$label1}}{\\html{&nbsp;}}}{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum2}}{\\str{$problemDen2}}}{\\str{$label2}}{\\html{&nbsp;}}}}{\\sign{\xA0 = \xA0}}{\\frac{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum3}}{\\str{$problemDen3}}}{\\str{$label3}}{\\html{&nbsp;}}}{\\grp{\\html{&nbsp;}}{\\wholepart{X}}{\\str{$label4}}{\\html{&nbsp;}}}}}',
-						answer: '\\row{\\css{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}',
+						answer: '\\grp{\\row{\\css{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}{margin-left-small}}{\\html{&nbsp; $labelAnswer}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
