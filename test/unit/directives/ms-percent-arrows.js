@@ -23,14 +23,20 @@ describe('<ms-percent-arrows>', function () {
 			expect(jQuery(element).find('table').length).not.toBe('0');																				
 		}));
 		
+		/* code below shows the html on the page in the karma error msg, for debugging purposes
+		it('show html', inject(function ($rootScope) {
+			expect(jQuery(element).find('table ').html()).toBe('1')																				
+		}));
+		*/
+		
 		//check that zero has been correctly added back into the display after the javascript multiplication 
 		it('number in 1st td of 1st row of table of the display array should be 0', inject(function ($rootScope) {
-			expect(jQuery(element).find('table tr:nth-child(1) td:nth-child(1)').text()).toContain('0')																				
+			expect(jQuery(element).find('table tr:nth-child(1) td:nth-child(1)').text()).toContain('1')																				
 		}));
 		
 		//check that the carat that represents the new decimal position is three places over
-		it('character in 3rd td of 2nd row of table of the display array should be ^', inject(function ($rootScope) {
-			expect(jQuery(element).find('table tr:nth-child(2) td:nth-child(3)').text()).toContain('^')																				
+		it('character in 2nd td of 2nd row of table of the display array should be ^', inject(function ($rootScope) {
+			expect(jQuery(element).find('table tr:nth-child(2) td:nth-child(2)').text()).toContain('^')																				
 		}));
 		
     });
