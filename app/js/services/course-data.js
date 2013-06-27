@@ -18,7 +18,7 @@ angular.module('mathSkills.services')
         'data14_1', 'data14_2',
         'data15_1', 'data15_2',
         'data16_1', 'data16_2', 'data16_3', 'data16_4',
-        'data17_2', 'data17_3',
+        'data17_1', 'data17_2',
         'data18_1', 'data18_2', 'data18_3',
         'data19_1', 'data19_2', 'data19_3', 'data19_4',
         'data20_1', 'data20_2', 'data20_3',
@@ -40,7 +40,7 @@ angular.module('mathSkills.services')
             data14_1, data14_2,
             data15_1, data15_2,
             data16_1, data16_2, data16_3, data16_4,
-            data17_2, data17_3,
+            data17_1, data17_2,
             data18_1, data18_2, data18_3,
             data19_1, data19_2, data19_3, data19_4,
             data20_1, data20_2, data20_3,
@@ -83,7 +83,7 @@ angular.module('mathSkills.services')
                     path: 'ratios-proportions',
                     children: [
                         data16_1, data16_2, data16_3, data16_4,
-                        data17_2, data17_3
+                        data17_1, data17_2
                     ]
                 }, {
                     title: '5 Percents',
