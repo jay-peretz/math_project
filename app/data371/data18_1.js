@@ -1,7 +1,7 @@
 /*global angular */
 
-angular.module('mathSkills').service('data18_1', function () {
-    var ret = {
+angular.module('mathSkills').service('data18_1', ['dataUtils', function (dataUtils) {
+    var desc = {
 			title: '18.1 Decimal & Fraction Form of Percents',
 			path: '18.1-decimal-fraction-form-percents',
             children: []
@@ -57,10 +57,11 @@ angular.module('mathSkills').service('data18_1', function () {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
 							+'{\\row{\\str{Write the decimal place value as the denominator of the fraction.}}}'
-							+'{\\row{\\str{$decimalPercent %}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}'
-							+'{\\mixed{\\str{$helpWhole}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}'
+							+'{\\row{\\str{$decimalPercent}}{\\str{%}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}'
+							+'{\\mixed{\\str{$helpWhole}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}{\\str{%}}'
 							+'{\\sign{\xA0 \xA0 = \xA0 \xA0}}'
-							+'{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}}{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
+							+'{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}{\\str{%}}}'
+							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
 						}
                     }]
                 }]
@@ -101,21 +102,8 @@ angular.module('mathSkills').service('data18_1', function () {
 			{ decimalPercent: '3.875', answerWhole: 3, answerNum: 7, answerDen: 8, helpWhole: 3, helpNum: 875, helpDen: 1000, template: 'third' },
 			{ fractionWhole: '&nbsp;', fractionNum: '5', fractionDen: '8', answerDecimal: '0.625', template: 'fourth' },
 			{ fractionWhole: '2', fractionNum: '1', fractionDen: '2', answerDecimal: '2.5', template: 'fourth' },
-        ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('\\$' + symbol, 'g'), data[symbol]);
-                }
-            }
-            return JSON.parse(string);
-        };
-
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
-
-    return ret;
-});
-
+        ];
+		
+    return dataUtils.build(desc, template, data);
+	
+}]);
