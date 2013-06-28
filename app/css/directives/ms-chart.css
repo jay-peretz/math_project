@@ -8,8 +8,9 @@
 }
 .chartTable {
 		border:1px solid black; 
-		width:100px;
-		height:30px;
+		/*width:100px;
+		height:30px;*/
+		padding:.5em;
 }
 .collapseTable {
 		border-collapse:collapse;
