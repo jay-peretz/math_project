@@ -121,11 +121,18 @@ angular.module('mathSkills.services')
                         // If this event has not been marked as ignored.
                         if (e.defaultPrevented === false) {
                             e.preventDefault();
-                            $scope.notFocused = 0;
-
-                            if ($scope.$$childHead) {
-                                $scope.$$childHead.$broadcast('checkFocus');
-                            }
+                            // if $scope.display is (true) set to hide ms-fraction respond to checkFocus
+                            if($scope.display){ 
+                                $scope.$emit('notFocused', {
+                                    controllerId: $scope.controllerId
+                                });
+                            }else{
+                                $scope.notFocused = 0;
+    
+                                if ($scope.$$childHead) {
+                                    $scope.$$childHead.$broadcast('checkFocus');
+                                }
+                            }    
                         }
                     });
 
@@ -190,13 +197,19 @@ angular.module('mathSkills.services')
                         if (e.defaultPrevented === false) {
                             // Mark it as ignored.
                             e.preventDefault();
-
-                            // Reset our child response counter.
-                            $scope.notHelped = 0;
-
-                            // Send the event to our first child.
-                            if ($scope.$$childHead) {
-                                $scope.$$childHead.$broadcast('checkHelp');
+                            // if $scope.display is (true) set to hide ms-fraction respond to checkHelp
+                            if($scope.display){  
+                                $scope.$emit('notHelped', {
+                                    controllerId: $scope.controllerId
+                                });
+                            }else{
+                                // Reset our child response counter.
+                                $scope.notHelped = 0;
+    
+                                // Send the event to our first child.
+                                if ($scope.$$childHead) {
+                                    $scope.$$childHead.$broadcast('checkHelp');
+                                }
                             }
                         }
                     });

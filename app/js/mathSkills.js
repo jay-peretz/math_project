@@ -4,7 +4,8 @@
 angular.module('mathSkills', ['mathSkills.services']).
     config([
         '$routeProvider',
-        function ($routeProvider) {
+        '$rootScopeProvider',
+        function ($routeProvider, $rootScopeProvider) {
             $routeProvider
                 .when('/', {
                     templateUrl: 'partials/controllers/home.html',
@@ -27,5 +28,7 @@ angular.module('mathSkills', ['mathSkills.services']).
                     controller: 'feedback'
                 })
                 .otherwise({redirectTo: '/'});
+                
+                $rootScopeProvider.digestTtl(15);
         }
     ]);
