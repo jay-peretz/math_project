@@ -45,11 +45,11 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                                 '{\\grp'+  // left num.
                                     '{\\input{$$lnw}}'+
                                     '{\\frac{\\input{$$lnn}}{\\input{$$lnd}}}'+
-                                    '{\\html{ $$lbln}}'+
+                                    '{\\str{ $$lbln}}'+
                                 '}{\\grp'+  // left den.
                                     '{\\input{$$ldw}}'+
                                     '{\\frac{\\input{$$ldn}}{\\input{$$ldd}}}'+
-                                    '{\\html{ $$lbld}}'+
+                                    '{\\str{ $$lbld}}'+
                                 '}'+
                         '}}{well}',
                         controls: {
@@ -59,27 +59,27 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                     }, {  //step 3
                         problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\ins{Yes, now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).},\\ins{We are told that there are $$ln $$lbln to every $$ld $$lbld. The given relationship is:}]}{$$previousCorrect}'+
+                            '\\choose{[\\ins{Yes, now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).},\\ins{We are told that there are $ln $$lbln to every $ld $$lbld. The given relationship is:}]}{$$previousCorrect}'+
                         '}{'+
                             '\\css{\\grp'+
                                 '{\\frac{\\grp'+
                                     '{\\html{$$lnw}}'+
-                                    '{\\frac{\\html{$$lnn}}{\\html{$$lnd}}}'+
-                                    '{\\html{ $$lbln}}'+
+                                    '{\\frac{\\str{$$lnn}}{\\str{$$lnd}}}'+
+                                    '{\\str{ $$lbln}}'+
                                 '}{\\grp'+
                                     '{\\html{$$ldw}}'+
-                                    '{\\frac{\\html{$$ldn}}{\\html{$$ldd}}}'+
-                                    '{\\html{ $$lbld}}'+
+                                    '{\\frac{\\str{$$ldn}}{\\str{$$ldd}}}'+
+                                    '{\\str{ $$lbld}}'+
                                 '}}'+
-                                '{\\html{=}}'+
+                                '{\\str{=}}'+
                                 '{\\frac{\\grp'+
                                     '{\\input{$$rnw}}'+
                                     '{\\frac{\\input{$$rnn}}{\\input{$$rnd}}}'+
-                                    '{\\select{[\"$lbln\",\"$lbld\"]}{$lblarr}}'+
+                                    '{\\select{$$lbln}{$lblarr}}'+
                                 '}{\\grp'+
                                     '{\\input{$$rdw}}'+
                                     '{\\frac{\\input{$$rdn}}{\\input{$$rdd}}}'+
-                                    '{\\select{[\"$lbld\",\"$lbln\"]}{$lblarr}}'+
+                                    '{\\select{$$lbld}{$lblarr}}'+
                                 '}'+
                             '}}{bottom-marg}'+
                         '}{'+
@@ -93,7 +93,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                     }, {  //step 4
                         problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\ins{Great! You now have a proportion. Solve the proportion problem.},\\ins{The second relationship is an \\"unknown number\\" (shown here as \\"X\\") of $$lbld to every $$rn $$lbln. You now have a proportion:}]}{$$previousCorrect}'+
+                            '\\choose{[\\ins{Great! You now have a proportion. Solve the proportion problem.},\\ins{The second relationship is an \\"unknown number\\" (shown here as \\"X\\") of $$lbld to every $rn $$lbln. You now have a proportion:}]}{$$previousCorrect}'+
                         '}{'+
                             '\\css{\\grp'+
                                 '{\\frac{\\grp'+
@@ -177,6 +177,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '12', nanswer: '',danswer: '', template: 'main',
                 lnw: '5', lnn: '', lnd: '', rnw: '20', rnn: '', rnd: '', lbln: 'oak trees',
                 ldw: '3', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'elm trees',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"oak trees\\",\\"elm trees\\",\\"parks\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -186,6 +187,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '50', nanswer: '',danswer: '', template: 'main',
                 lnw: '3', lnn: '', lnd: '', rnw: '30', rnn: '', rnd: '', lbln: 'elm trees',
                 ldw: '5', ldn: '', ldd: '', rdw: '50', rdn: '', rdd: '', lbld: 'oak trees',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"days\\",\\"oak trees\\",\\"elm trees\\",\\"trees\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -195,6 +197,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '8', nanswer: '',danswer: '', template: 'main',
                 lnw: '40', lnn: '', lnd: '', rnw: '64', rnn: '', rnd: '', lbln: 'oak trees',
                 ldw: '5', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'days',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"days\\",\\"oak trees\\",\\"elm trees\\",\\"trees\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -204,6 +207,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '3', nanswer: '',danswer: '', template: 'main',
                 lnw: '30', lnn: '', lnd: '', rnw: '18', rnn: '', rnd: '', lbln: 'elm trees',
                 ldw: '5', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'days',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"days\\",\\"oak trees\\",\\"elm trees\\",\\"trees\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -213,6 +217,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '45', nanswer: '',danswer: '', template: 'main',
                 lnw: '40', lnn: '', lnd: '', rnw: '60', rnn: '', rnd: '', lbln: 'oak trees',
                 ldw: '30', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'elm trees',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"days\\",\\"oak trees\\",\\"elm trees\\",\\"trees\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -222,6 +227,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '80', nanswer: '',danswer: '', template: 'main',
                 lnw: '70', lnn: '', lnd: '', rnw: '140', rnn: '', rnd: '', lbln: 'trees',
                 ldw: '40', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'oak trees',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"days\\",\\"oak trees\\",\\"elm trees\\",\\"trees\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -231,6 +237,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '16', nanswer: '',danswer: '', template: 'main',
                 lnw: '15', lnn: '', lnd: '', rnw: '20', rnn: '', rnd: '', lbln: 'fish',
                 ldw: '12', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'steak',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"steak\\",\\"fish\\",\\"customers\\",\\"pasta\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -240,6 +247,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '10', nanswer: '',danswer: '', template: 'main',
                 lnw: '12', lnn: '', lnd: '', rnw: '8', rnn: '', rnd: '', lbln: 'steak',
                 ldw: '15', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'fish',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"steak\\",\\"fish\\",\\"customers\\",\\"pasta\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -249,6 +257,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '11.25', nanswer: '',danswer: '', template: 'main',
                 lnw: '8', lnn: '', lnd: '', rnw: '6', rnn: '', rnd: '', lbln: 'pasta',
                 ldw: '15', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'fish',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"steak\\",\\"fish\\",\\"customers\\",\\"pasta\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -258,6 +267,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '16', nanswer: '',danswer: '', template: 'main',
                 lnw: '60', lnn: '', lnd: '', rnw: '80', rnn: '', rnd: '', lbln: 'customers',
                 ldw: '12', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'steak',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"steak\\",\\"fish\\",\\"customers\\",\\"pasta\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -267,6 +277,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '20', nanswer: '',danswer: '', template: 'main',
                 lnw: '60', lnn: '', lnd: '', rnw: '80', rnn: '', rnd: '', lbln: 'customers',
                 ldw: '15', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'fish',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"steak\\",\\"fish\\",\\"customers\\",\\"pasta\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -276,6 +287,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '5', nanswer: '1',danswer: '4', template: 'main',
                 lnw: '5', lnn: '', lnd: '', rnw: '7', rnn: '1', rnd: '2', lbln: 'pages',
                 ldw: '3', ldn: '1', ldd: '2', rdw: 'x', rdn: '', rdd: '', lbld: 'hours',
+                ln: '$$lnw', ld: '$$ldw $$ldn/$$ldd', rn: '$$rnw $$rnn/$$rnd',
                 lblarr: '[\\"pages\\",\\"rate\\",\\"hours\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -285,6 +297,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '10', nanswer: '',danswer: '', template: 'main',
                 lnw: '3', lnn: '1', lnd: '2', rnw: '7', rnn: '', rnd: '', lbln: 'hours',
                 ldw: '5', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'pages',
+                ln: '$$lnw $$lnn/$$lnd', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"pages\\",\\"rate\\",\\"hours\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -294,6 +307,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '5.76', nanswer: '',danswer: '', template: 'main',
                 lnw: '5', lnn: '', lnd: '', rnw: '8', rnn: '', rnd: '', lbln: 'pens',
                 ldw: '3.60', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'cost',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"pens\\",\\"rate\\",\\"cost\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -303,6 +317,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '8.64', nanswer: '',danswer: '', template: 'main',
                 lnw: '5', lnn: '', lnd: '', rnw: '12', rnn: '', rnd: '', lbln: 'pens',
                 ldw: '3.60', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'cost',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"pens\\",\\"rate\\",\\"cost\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -312,6 +327,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '11', nanswer: '',danswer: '', template: 'main',
                 lnw: '3.60', lnn: '', lnd: '', rnw: '7.92', rnn: '', rnd: '', lbln: 'cost',
                 ldw: '5', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'pens',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"pens\\",\\"rate\\",\\"cost\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -321,6 +337,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '80', nanswer: '',danswer: '', template: 'main',
                 lnw: '15', lnn: '', lnd: '', rnw: '120', rnn: '', rnd: '', lbln: 'peach',
                 ldw: '10', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'plum',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"plum\\",\\"apple\\",\\"peach\\",\\"orange\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -330,6 +347,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '51', nanswer: '',danswer: '', template: 'main',
                 lnw: '10', lnn: '', lnd: '', rnw: '34', rnn: '', rnd: '', lbln: 'plum',
                 ldw: '15', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'peach',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"plum\\",\\"apple\\",\\"peach\\",\\"orange\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -339,6 +357,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '50', nanswer: '',danswer: '', template: 'main',
                 lnw: '6', lnn: '', lnd: '', rnw: '20', rnn: '', rnd: '', lbln: 'orange',
                 ldw: '15', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'peach',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"plum\\",\\"apple\\",\\"peach\\",\\"orange\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -348,6 +367,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '27', nanswer: '',danswer: '', template: 'main',
                 lnw: '10', lnn: '', lnd: '', rnw: '45', rnn: '', rnd: '', lbln: 'plum',
                 ldw: '6', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'orange',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"plum\\",\\"apple\\",\\"peach\\",\\"orange\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -357,6 +377,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '45', nanswer: '',danswer: '', template: 'main',
                 lnw: '10', lnn: '', lnd: '', rnw: '25', rnn: '', rnd: '', lbln: 'pants',
                 ldw: '18', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'shirts',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"pants\\",\\"shirts\\",\\"jackets\\",\\"hours\\",\\"shorts\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -366,6 +387,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '15', nanswer: '',danswer: '', template: 'main',
                 lnw: '6', lnn: '', lnd: '', rnw: '9', rnn: '', rnd: '', lbln: 'jackets',
                 ldw: '10', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'pants',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"pants\\",\\"shirts\\",\\"jackets\\",\\"hours\\",\\"shorts\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -375,6 +397,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '4', nanswer: '',danswer: '', template: 'main',
                 lnw: '18', lnn: '', lnd: '', rnw: '12', rnn: '', rnd: '', lbln: 'shirts',
                 ldw: '6', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'jackets',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"pants\\",\\"shirts\\",\\"jackets\\",\\"hours\\",\\"shorts\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -384,6 +407,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '30', nanswer: '',danswer: '', template: 'main',
                 lnw: '3', lnn: '', lnd: '', rnw: '5', rnn: '', rnd: '', lbln: 'hours',
                 ldw: '18', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'shirts',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"pants\\",\\"shirts\\",\\"jackets\\",\\"hours\\",\\"shorts\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -393,6 +417,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '9', nanswer: '',danswer: '', template: 'main',
                 lnw: '3', lnn: '', lnd: '', rnw: '4', rnn: '1', rnd: '2', lbln: 'hours',
                 ldw: '6', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'jackets',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw $$rnn/$$rnd',
                 lblarr: '[\\"pants\\",\\"shirts\\",\\"jackets\\",\\"hours\\",\\"shorts\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -402,6 +427,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '4', nanswer: '',danswer: '', template: 'main',
                 lnw: '3', lnn: '', lnd: '', rnw: '1', rnn: '1', rnd: '5', lbln: 'hours',
                 ldw: '10', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'pants',
+                ln: '$$lnw', ld: '$$ldw', rn: '$$rnw $$rnn/$$rnd',
                 lblarr: '[\\"pants\\",\\"shirts\\",\\"jackets\\",\\"hours\\",\\"shorts\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -411,6 +437,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '', nanswer: '1',danswer: '4', template: 'main',
                 lnw: '6', lnn: '', lnd: '', rnw: '2', rnn: '', rnd: '', lbln: 'candy bars',
                 ldw: '', ldn: '3', ldd: '4', rdw: 'x', rdn: '', rdd: '', lbld: 'chocolate',
+                ln: '$$lnw', ld: '$$ldn/$$ldd', rn: '$$rnw',
                 lblarr: '[\\"candy bars\\",\\"almonds\\",\\"chocolate\\",\\"marshmallows\\",\\"recipe\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -420,6 +447,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '', nanswer: '1',danswer: '6', template: 'main',
                 lnw: '6', lnn: '', lnd: '', rnw: '2', rnn: '', rnd: '', lbln: 'candy bars',
                 ldw: '', ldn: '1', ldd: '2', rdw: 'x', rdn: '', rdd: '', lbld: 'almonds',
+                ln: '$$lnw', ld: '$$ldn/$$ldd', rn: '$$rnw',
                 lblarr: '[\\"candy bars\\",\\"almonds\\",\\"chocolate\\",\\"marshmallows\\",\\"recipe\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -429,6 +457,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '', nanswer: '1',danswer: '2', template: 'main',
                 lnw: '6', lnn: '', lnd: '', rnw: '24', rnn: '', rnd: '', lbln: 'candy bars',
                 ldw: '', ldn: '1', ldd: '8', rdw: 'x', rdn: '', rdd: '', lbld: 'marshmallows',
+                ln: '$$lnw', ld: '$$ldn/$$ldd', rn: '$$rnw',
                 lblarr: '[\\"candy bars\\",\\"almonds\\",\\"chocolate\\",\\"marshmallows\\",\\"recipe\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -438,6 +467,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '', nanswer: '1',danswer: '8', template: 'main',
                 lnw: '', lnn: '3', lnd: '4', rnw: '', rnn: '3', rnd: '16', lbln: 'chocolate',
                 ldw: '', ldn: '1', ldd: '2', rdw: 'x', rdn: '', rdd: '', lbld: 'almonds',
+                ln: '$$lnn/$$lnd', ld: '$$ldn/$$ldd', rn: '$$rnn/$$rnd',
                 lblarr: '[\\"candy bars\\",\\"almonds\\",\\"chocolate\\",\\"marshmallows\\",\\"recipe\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -447,6 +477,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '24', nanswer: '',danswer: '', template: 'main',
                 lnw: '', lnn: '1', lnd: '8', rnw: '6', rnn: '', rnd: '', lbln: 'marshmallows',
                 ldw: '', ldn: '1', ldd: '2', rdw: 'x', rdn: '', rdd: '', lbld: 'almonds',
+                ln: '$$lnn/$$lnd', ld: '$$ldn/$$ldd', rn: '$$rnw',
                 lblarr: '[\\"candy bars\\",\\"almonds\\",\\"chocolate\\",\\"marshmallows\\",\\"recipe\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -456,6 +487,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '6', nanswer: '',danswer: '', template: 'main',
                 lnw: '', lnn: '1', lnd: '2', rnw: '4', rnn: '', rnd: '', lbln: 'almonds',
                 ldw: '', ldn: '3', ldd: '4', rdw: 'x', rdn: '', rdd: '', lbld: 'chocolate',
+                ln: '$$lnn/$$lnd', ld: '$$ldn/$$ldd', rn: '$$rnw',
                 lblarr: '[\\"candy bars\\",\\"almonds\\",\\"chocolate\\",\\"marshmallows\\",\\"recipe\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -465,6 +497,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '1', nanswer: '',danswer: '', template: 'main',
                 lnw: '6', lnn: '', lnd: '', rnw: '8', rnn: '', rnd: '', lbln: 'candy bars',
                 ldw: '', ldn: '3', ldd: '4', rdw: 'x', rdn: '', rdd: '', lbld: 'chocolate',
+                ln: '$$lnw', ld: '$$ldn/$$ldd', rn: '$$rnw',
                 lblarr: '[\\"candy bars\\",\\"almonds\\",\\"chocolate\\",\\"marshmallows\\",\\"recipe\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
@@ -474,6 +507,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 answer: '', nanswer: '5',danswer: '12', template: 'main',
                 lnw: '6', lnn: '', lnd: '', rnw: '20', rnn: '', rnd: '', lbln: 'candy bars',
                 ldw: '', ldn: '1', ldd: '8', rdw: 'x', rdn: '', rdd: '', lbld: 'marshmallows',
+                ln: '$$lnw', ld: '$$ldn/$$ldd', rn: '$$rnw',
                 lblarr: '[\\"candy bars\\",\\"almonds\\",\\"chocolate\\",\\"marshmallows\\",\\"recipe\\"]',
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
