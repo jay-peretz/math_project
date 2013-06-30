@@ -21,11 +21,14 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
                             "workbook": true
                         }
                     }]
-                }/*, {
+                }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\rowgrp{\\row{\\str{Change the mixed numbers into improper fractions.}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}{\\sign{&times;}}{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
-                        answer: '\\grp{\\frac{\\input{$un1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$un2}}{\\input{$d2}}}',
+                        problem: '\\rowgrp{\\row{\\str{3}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}'
+						+'{\\sign{&equals;}}{\\str{?}}{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\str{What is the first equivalence fraction to multiply by?}}',
+                        answer: '\\grp{\\frac{\\str{3 gal}}{\\str{1}}}{\\sign{&times;}}{\\frac{\\select{$firstNumAnswer}{$firstNumSelect}}{\\select{$firstDenAnswer}{$firstDenSelect}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -54,11 +57,11 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
                             "help": '\\rowgrp{\\row{\\str{Divide the numerator by the denominator, then make the quotient the mixed number whole and the remainder the mixed number numerator. \xA0}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\fracstr{$$mfn}}{\\fracstr{$$mfd}}}{\\row{\\str{\xA0 = \xA0}}}{\\row{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{\\row{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{label_like}}}}'
                         }
                     }]
-                }*/]
+                }]
             }
         },
         data = [
-            { m1: 1, n1: 1, d1: 3, un1: 4, m2: 1, n2: 2, d2: 3, un2: 5, ma: 2, na: 2, da: 9, template: 'two' }
+            { firstNumSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]', firstDenSelect: '[\\"1 tbs\\", \\"1 oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]', firstNumAnswer: '4 qt', firstDenAnswer: '1 gal', template: 'two' }
         ];
 
     return dataUtils.build(desc, template, data);
