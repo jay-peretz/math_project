@@ -59,15 +59,15 @@ angular.module('mathSkills').service('data21_4', function () {
                     }, {
                         problem: '\\html{$problem}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\css{\\choose{[\\html{},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}}{bottom-marg}'+
+                            '\\css{\\choose{[\\ins{}{q},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}}{bottom-marg}'+
                         '}{'+
                             '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems. We substitute the given values to get:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\html{X}}{\\sign{=}}{\\html{$solution}}}{proportion-application}]}{$$previousCorrect}'+
+                            '\\choose{[\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\str{X}}{\\sign{=}}{\\str{$solution}}}{proportion-application}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\html{},\\ins{The answer is}]}{$$previousCorrect}'+
+                            '\\choose{[\\ins{}{q},\\ins{The answer is}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\html{},\\css{\\grp{\\html{$$pre_symbol}}{\\html{$$answer}}{\\html{$$post_symbol}}}{proportion-application}]}{$$previousCorrect}'+
+                            '\\choose{[\\ins{}{q},\\css{\\grp{\\str{$$pre_symbol}}{\\str{$$answer}}{\\str{$$post_symbol}}}{proportion-application}]}{$$previousCorrect}'+
                         '}}{well}',
                         controls: {
                             "checkAnswer": true,
