@@ -5,7 +5,7 @@
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
         parserProvider.register('input', {
-            directiveTemplate: '<ms-input  ng-hide="empty(expected)" expected={{expected}} label={{label}}></ms-input>'
+            directiveTemplate: '<ms-input expected={{expected}} label={{label}}></ms-input>'
         });
     }])
     .directive('msInput', [
@@ -24,11 +24,21 @@ angular.module('mathSkills')
                     $scope.answer = '';
                     $scope.controllerId = Math.random().toString();
 
-                    $scope.empty = function (den) {
-                        if (den){
-                            return Boolean($scope.myargs = parser.extractTag(den).args[0].length === 0);
+                    $scope.$watch('expected', function () {
+                        if($scope.expected) {
+                            $scope.display = parser.extractTag($scope.expected).args[0].length === 0;
+                            var arr = [];
+                            var parsedExpected = parser.extractTag($scope.expected).args[0];
+                            if (parsedExpected[0] === '[') {
+                                arr = parsedExpected[0];
+                            } else {
+                                arr.push(parsedExpected[0]);
+                            }
+                            if (arr[0] !== undefined){
+                                directiveUtils.resize($scope, arr, 'input', 10, 10);
+                            }
                         }
-                    }
+                    });
 
                     $scope.$on('checkAnswer', function (e) {
                         if (e.defaultPrevented !== true) {
@@ -101,7 +111,7 @@ angular.module('mathSkills')
                         // If this event has not been marked as ignored.
                         if (e.defaultPrevented === false) {
                             // Check if we can receive focus.
-                            if ($scope.answer === '') {
+                            if ($scope.answer === '' && $scope.display !== true) {
                                 $timeout(function () {
                                     // If we have no answer yet, focus on ourselves and fire a focused event.
                                     $element.find('input').focus();
@@ -120,7 +130,7 @@ angular.module('mathSkills')
                         // If this event has not been marked as ignored.
                         if (e.defaultPrevented === false) {
                             // Check if we can set our answer to expected.
-                            if ($scope.answer === '') {
+                            if ($scope.answer === '' && $scope.display !== true) {
                                 var parsedExpected = parser.extractTag($scope.expected).args[0];
                                 if (parsedExpected[0] === '[') {
                                     var possibleAnswers = JSON.parse(parsedExpected);
@@ -142,21 +152,6 @@ angular.module('mathSkills')
                             }
                         }
                     });
-                    
-                    $scope.$watch('expected', function () {
-                        if($scope.expected) {
-                            var arr = [];
-                            var parsedExpected = parser.extractTag($scope.expected).args[0];
-                            if (parsedExpected[0] === '[') {
-                                arr = parsedExpected[0];
-                            } else {
-                                arr.push(parsedExpected[0]);
-                            }
-                            if (arr[0] !== undefined){
-                                directiveUtils.resize($scope, arr, 'input', 10, 10);
-                            }
-                        }
-                    });
 
                     jQuery($element).on('keyup', 'input', function (event) {
                         if (event.keyCode === 13 || event.keyCode === 10) {
@@ -171,7 +166,7 @@ angular.module('mathSkills')
                         }
                     });
                 },
-                template: '<div class="control-group {{class}}"><label><span>{{label}}</span><input style="width:{{width}};" ng-model=answer ms-strip-commas ms-add-zero></label></div>'
+                template: '<div class="control-group {{class}}"><label><span>{{label}}</span><input ng-hide="display" style="width:{{width}};" ng-model=answer ms-strip-commas ms-add-zero></label></div>'
             };
         }
     ]);
