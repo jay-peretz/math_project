@@ -131,7 +131,7 @@ angular.module('mathSkills').service('data19_2', function () {
 			{ fractionWhole: '&nbsp;', fractionNum: '79', fractionDen: '160', answerDecimal: '0.49375', answerPercent: '49.375', fractionPercentWhole: '49', fractionPercentNum: '3', fractionPercentDen: '8', helpWhole: '49', helpNum: '375', helpDen: '1000', template: 'second' },
 			{ fractionWhole: '&nbsp;', fractionNum: '11', fractionDen: '16', answerDecimal: '0.6875', answerPercent: '68.75', fractionPercentWhole: '68', fractionPercentNum: '3', fractionPercentDen: '4', helpWhole: '68', helpNum: '75', helpDen: '100', template: 'second' },
 			{ fractionWhole: '&nbsp;', fractionNum: '771', fractionDen: '800', answerDecimal: '0.96375', answerPercent: '96.375', fractionPercentWhole: '96', fractionPercentNum: '3', fractionPercentDen: '8', helpWhole: '96', helpNum: '375', helpDen: '1000', template: 'second' },
-			{ fractionWhole: '&nbsp;', fractionNum: '2', fractionDen: '125', answerDecimal: '0.016', answerPercent: '1.6', fractionPercentWhole: '1', fractionPercentNum: '3', fractionPercentDen: '5', helpWhole: '1', helpNum: '16', helpDen: '1000', template: 'second' },
+			{ fractionWhole: '&nbsp;', fractionNum: '2', fractionDen: '125', answerDecimal: '0.016', answerPercent: '1.6', fractionPercentWhole: '1', fractionPercentNum: '3', fractionPercentDen: '5', helpWhole: '1', helpNum: '6', helpDen: '10', template: 'second' },
 			{ fractionWhole: '&nbsp;', fractionNum: '189', fractionDen: '200', answerDecimal: '0.945', answerPercent: '94.5', fractionPercentWhole: '94', fractionPercentNum: '1', fractionPercentDen: '2', helpWhole: '94', helpNum: '5', helpDen: '10', template: 'second' }
         ],
         interpolate = function (obj, data) {
