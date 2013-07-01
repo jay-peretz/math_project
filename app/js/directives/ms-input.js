@@ -29,10 +29,11 @@ angular.module('mathSkills')
                             $scope.display = parser.extractTag($scope.expected).args[0].length === 0;
                             var arr = [];
                             var parsedExpected = parser.extractTag($scope.expected).args[0];
+                            
                             if (parsedExpected[0] === '[') {
-                                arr = parsedExpected[0];
+                                arr = JSON.parse(parsedExpected);
                             } else {
-                                arr.push(parsedExpected[0]);
+                                arr.push(parsedExpected);
                             }
                             if (arr[0] !== undefined){
                                 directiveUtils.resize($scope, arr, 'input', 10, 10);
