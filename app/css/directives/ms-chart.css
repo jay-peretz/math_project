@@ -14,7 +14,7 @@
 }
 .collapseTable {
 		border-collapse:collapse;
-		font-size:75%;
+		/*font-size:75%; please create a separate class if you need border-collapse with font-size: 75%  thnx, MF*/
 }
 .fontWeightBold {
 	  	font-weight:bold;
