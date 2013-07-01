@@ -23,7 +23,7 @@ angular.module('mathSkills').value('data6_4', {
                 answer: '\\reducefrac{\\frac{\\fracstr{3}}{\\fracstr{6}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\row{\\frac{\\str{3}}{\\str{6}}}{\\str{\xA0 can be reduced to }}{\\frac{\\str{1}}{\\str{2}}}'
+                    "help": true
                 }
             }]
         }]
@@ -47,7 +47,7 @@ angular.module('mathSkills').value('data6_4', {
                 answer: '\\reducefrac{\\frac{\\fracstr{9}}{\\fracstr{15}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\row{\\frac{\\str{9}}{\\str{15}}}{\\str{\xA0 can be reduced to }}{\\frac{\\str{3}}{\\str{5}}}'
+                    "help": true
                 }
             }]
         }]
@@ -71,7 +71,7 @@ angular.module('mathSkills').value('data6_4', {
                 answer: '\\reducefrac{\\frac{\\fracstr{24}}{\\fracstr{28}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\row{\\frac{\\str{24}}{\\str{28}}}{\\str{\xA0 can be reduced to }}{\\frac{\\str{6}}{\\str{7}}}'
+                    "help": true
                 }
             }]
         }]
@@ -95,7 +95,7 @@ angular.module('mathSkills').value('data6_4', {
                 answer: '\\reducefrac{\\frac{\\fracstr{8}}{\\fracstr{12}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\row{\\frac{\\str{8}}{\\str{12}}}{\\str{\xA0 can be reduced to }}{\\frac{\\str{2}}{\\str{3}}}'
+                    "help": true
                 }
             }]
         }]
@@ -119,7 +119,7 @@ angular.module('mathSkills').value('data6_4', {
                 answer: '\\reducefrac{\\frac{\\fracstr{4}}{\\fracstr{13}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\row{\\frac{\\str{4}}{\\str{13}}}{\\str{\xA0 cannot be reduced. }}'
+                    "help": true
                 }
             }]
         }]
@@ -143,7 +143,7 @@ angular.module('mathSkills').value('data6_4', {
                 answer: '\\reducefrac{\\frac{\\fracstr{7}}{\\fracstr{14}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\row{\\frac{\\str{7}}{\\str{14}}}{\\str{\xA0 can be reduced to }}{\\frac{\\str{1}}{\\str{2}}}'
+                    "help": true
                 }
             }]
         }]
@@ -167,7 +167,7 @@ angular.module('mathSkills').value('data6_4', {
                 answer: '\\reducefrac{\\frac{\\fracstr{10}}{\\fracstr{12}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\row{\\frac{\\str{10}}{\\str{12}}}{\\str{\xA0 can be reduced to }}{\\frac{\\str{5}}{\\str{6}}}'
+                    "help": true
                 }
             }]
         }]
@@ -191,7 +191,7 @@ angular.module('mathSkills').value('data6_4', {
                 answer: '\\reducefrac{\\frac{\\fracstr{21}}{\\fracstr{35}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\row{\\frac{\\str{21}}{\\str{35}}}{\\str{\xA0 can be reduced to }}{\\frac{\\str{3}}{\\str{5}}}'
+                    "help": true
                 }
             }]
         }]
@@ -215,7 +215,7 @@ angular.module('mathSkills').value('data6_4', {
                 answer: '\\reducefrac{\\frac{\\fracstr{6}}{\\fracstr{8}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\row{\\frac{\\str{6}}{\\str{8}}}{\\str{\xA0 can be reduced to }}{\\frac{\\str{2}}{\\str{3}}}'
+                    "help": true
                 }
             }]
         }]
@@ -239,7 +239,7 @@ angular.module('mathSkills').value('data6_4', {
                 answer: '\\reducefrac{\\frac{\\fracstr{12}}{\\fracstr{48}}}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\row{\\frac{\\str{12}}{\\str{48}}}{\\str{\xA0 can be reduced to }}{\\frac{\\str{1}}{\\str{4}}}'
+                    "help": true
                 }
             }]
         }]

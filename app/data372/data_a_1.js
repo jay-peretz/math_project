@@ -25,9 +25,9 @@ angular.module('mathSkills').service('data_a_1', ['dataUtils', function (dataUti
 		       }
         },
         data = [
-		{instructions: 'Seven plus four, then multiply by three.',  buttonValueA: 'F', buttonLabelA: '\\\\str{7 + (4 • 3)}', buttonValueB: 'T', buttonLabelB: '\\\\str{(7 + 4) • 3}', buttonValueC: 'F', buttonLabelC: '\\\\str{7 + 4 • 3}', buttonValueD: 'T', buttonLabelD: '\\\\str{(7 + 4) (3)}',  template: 'expressions' },
-		{instructions: 'Start with seven, then add the product of four and three.',  buttonValueA: 'T', buttonLabelA: '\\\\str{7 + (4 • 3)}', buttonValueB: 'F', buttonLabelB: '\\\\str{(7 + 4) • 3}', buttonValueC: 'F', buttonLabelC: '\\\\str{7 + 4 • 3}', buttonValueD: 'F', buttonLabelD: '\\\\str{(7 + 4) (3)}',  template: 'expressions' },
-		{instructions: 'Start with 20, then subtract the quotient of fourteen and two.',  buttonValueA: 'T', buttonLabelA: '\\\\grp{\\\\str{20 - }}{\\\\frac{\\\\str{14}}{\\\\str{2}}}', buttonValueB: 'F', buttonLabelB: '\\\\str{(7 + 4) • 3}', buttonValueC: 'F', buttonLabelC: '\\\\str{7 + 4 • 3}', buttonValueD: 'F', buttonLabelD: '\\\\str{(7 + 4) (3)}',  template: 'expressions' }
+		{instructions: 'Seven plus four, then multiply by three.',  buttonValueA: 'F', buttonLabelA: '\\\\str{7 + (4 * 3)}', buttonValueB: 'T', buttonLabelB: '\\\\str{(7 + 4) * 3}', buttonValueC: 'F', buttonLabelC: '\\\\str{7 + 4 * 3}', buttonValueD: 'T', buttonLabelD: '\\\\str{(7 + 4) (3)}',  template: 'expressions' },
+		{instructions: 'Start with seven, then add the product of four and three.',  buttonValueA: 'T', buttonLabelA: '\\\\str{7 + (4 • 3)}', buttonValueB: 'F', buttonLabelB: '\\\\str{(7 + 4) • 3}', buttonValueC: 'F', buttonLabelC: '\\\\str{7 + 4 * 3}', buttonValueD: 'F', buttonLabelD: '\\\\str{(7 + 4) (3)}',  template: 'expressions' },
+		{instructions: 'Start with 20, then subtract the quotient of fourteen and two.',  buttonValueA: 'T', buttonLabelA: '\\\\str{20 - 14 / 2}', buttonValueB: 'F', buttonLabelB: '\\\\str{20 - 14 * 2}', buttonValueC: 'T', buttonLabelC: '\\\\grp{\\\\str{20 - }}{\\\\frac{\\\\str{14}}{\\\\str{2}}}', buttonValueD: 'F', buttonLabelD: '\\\\str{20 - (14 / 2)}',  template: 'expressions' }
 		];
     return dataUtils.build(desc, template, data);
 }]);
