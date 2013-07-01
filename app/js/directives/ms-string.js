@@ -18,10 +18,13 @@ angular.module('mathSkills')
                     // Extract the value and sent size event.
                     $scope.$watch('expected', function () {
                         if($scope.expected) {
-                            $scope.string = $scope.expected.slice(5, $scope.expected.length - 1); 
-							if (isNaN($scope.string) === false && $scope.string !== "\xA0") {
-								$scope.string = Number($scope.string);
-							}
+                            //$scope.display = parser.extractTag($scope.expected).args[0].length === 0;
+                            $scope.string = parser.extractTag($scope.expected).args[0];
+                            
+							// if (isNaN($scope.string) === false && $scope.string !== "\xA0") {
+							// 	$scope.string = Number($scope.string);
+							// }
+                            
                             // directiveUtils.size($scope, [$scope.string], 10, 5);    
                         }
                     });
@@ -64,7 +67,7 @@ angular.module('mathSkills')
                     expected: '@', 
                     label: '@'
                 },
-                template: '<span>{{string | commas | changeSigns}}</span>'
+                template: '<span ng-hide="display" >{{string | commas | changeSigns}}</span>'
             };
         }
     ]);
