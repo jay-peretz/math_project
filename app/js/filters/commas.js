@@ -13,7 +13,8 @@ angular.module('mathSkills')
 						thisManyCommas,
 						numberWithCommas = '';
 	
-					if (!isNaN(convertString) && typeof givenWhole === "string") {
+					// check "Number(givenWhole).toString().length === givenWhole.length" weeds out "80 \xA0" strings
+					if (!isNaN(convertString) && typeof givenWhole === "string" && Number(givenWhole).toString().length === givenWhole.length) {
 						givenWhole = convertString;
 					}
 					
