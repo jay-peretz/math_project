@@ -4,7 +4,7 @@
 angular.module('mathSkills') 
     .config(['parserProvider', function (parserProvider) {
         parserProvider.register('html', {
-            directiveTemplate: '<ms-html expected={{expected}} label=html></ms-html>'
+            directiveTemplate: '<ms-html expected={{expected}} label={{label}}></ms-html>'
         });
     }])
     .directive('msHtml', [
@@ -18,7 +18,7 @@ angular.module('mathSkills')
                      // Extract the value and sent size event.
                     $scope.$watch('expected', function () {
                         if($scope.expected) {
-                            $scope.string = $scope.expected.slice(6, $scope.expected.length - 1); 
+                            $scope.string = parser.extractTag($scope.expected).args[0];
                             // directiveUtils.size($scope, [$scope.string], 10, 5);    
                         }
                     });
