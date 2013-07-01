@@ -9,7 +9,7 @@ angular.module('mathSkills').value('data5_2', {
             title: 'Main Answer',
             children: [{
                 problem: '\\html{Select the given divisors of 95 .}',
-                answer: '\\css{\\grp{\\chk{1}{T}}{\\chk{2}{F}}{\\chk{3}{F}}{\\chk{5}{T}}{\\chk{7}{F}}{\\chk{10}{F}}}{factors}',
+                answer: '\\css{\\grp{\\chk{\\str{1}}{T}}{\\chk{\\str{2}}{F}}{\\chk{\\str{3}}{F}}{\\chk{\\str{5}}{T}}{\\chk{\\str{7}}{F}}{\\chk{\\str{10}}{F}}}{factors}',
                 controls: {
                     "checkAnswer": true,
                     "help": '\\str{1 & 5}'
@@ -22,7 +22,7 @@ angular.module('mathSkills').value('data5_2', {
             title: 'Main Answer',
             children: [{
                 problem: '\\html{Select the given divisors of 136 .}',
-                answer: '\\css{\\grp{\\chk{1}{T}}{\\chk{2}{T}}{\\chk{3}{F}}{\\chk{5}{F}}{\\chk{7}{F}}{\\chk{10}{F}}}{factors}',
+                answer: '\\css{\\grp{\\chk{\\str{1}}{T}}{\\chk{\\str{2}}{T}}{\\chk{\\str{3}}{F}}{\\chk{\\str{5}}{F}}{\\chk{\\str{7}}{F}}{\\chk{\\str{10}}{F}}}{factors}',
                 controls: {
                     "checkAnswer": true,
                     "help": true
@@ -35,7 +35,7 @@ angular.module('mathSkills').value('data5_2', {
             title: 'Main Answer',
             children: [{
                 problem: '\\html{Select the given divisors of 190 .}',
-                answer: '\\css{\\grp{\\chk{1}{T}}{\\chk{2}{T}}{\\chk{3}{F}}{\\chk{5}{T}}{\\chk{7}{F}}{\\chk{10}{T}}}{factors}',
+                answer: '\\css{\\grp{\\chk{\\str{1}}{T}}{\\chk{\\str{2}}{T}}{\\chk{\\str{3}}{F}}{\\chk{\\str{5}}{T}}{\\chk{\\str{7}}{F}}{\\chk{\\str{10}}{T}}}{factors}',
                 controls: {
                     "checkAnswer": true,
                     "help": true
@@ -48,7 +48,7 @@ angular.module('mathSkills').value('data5_2', {
             title: 'Main Answer',
             children: [{
                 problem: '\\html{Select the given divisors of 160 .}',
-                answer: '\\css{\\grp{\\chk{1}{T}}{\\chk{2}{T}}{\\chk{3}{F}}{\\chk{5}{T}}{\\chk{7}{F}}{\\chk{10}{T}}}{factors}',
+				answer: '\\css{\\grp{\\chk{\\str{1}}{T}}{\\chk{\\str{2}}{T}}{\\chk{\\str{3}}{F}}{\\chk{\\str{5}}{T}}{\\chk{\\str{7}}{F}}{\\chk{\\str{10}}{T}}}{factors}',
                 controls: {
                     "checkAnswer": true,
                     "help": true
@@ -74,7 +74,7 @@ angular.module('mathSkills').value('data5_2', {
             title: 'Main Answer',
             children: [{
                 problem: '\\html{Select the given divisors of 59 .}',
-                answer: '\\css{\\grp{\\chk{1}{T}}{\\chk{2}{F}}{\\chk{3}{F}}{\\chk{5}{F}}{\\chk{7}{F}}{\\chk{10}{F}}}{factors}',
+				answer: '\\css{\\grp{\\chk{\\str{1}}{T}}{\\chk{\\str{2}}{F}}{\\chk{\\str{3}}{F}}{\\chk{\\str{5}}{F}}{\\chk{\\str{7}}{F}}{\\chk{\\str{10}}{F}}}{factors}',
                 controls: {
                     "checkAnswer": true,
                     "help": true
@@ -87,7 +87,7 @@ angular.module('mathSkills').value('data5_2', {
             title: 'Main Answer',
             children: [{
                 problem: '\\html{Select the given divisors of 48 .}',
-                answer: '\\css{\\grp{\\chk{1}{T}}{\\chk{2}{T}}{\\chk{3}{T}}{\\chk{5}{F}}{\\chk{7}{F}}{\\chk{10}{F}}}{factors}',
+				answer: '\\css{\\grp{\\chk{\\str{1}}{T}}{\\chk{\\str{2}}{T}}{\\chk{\\str{3}}{T}}{\\chk{\\str{5}}{F}}{\\chk{\\str{7}}{F}}{\\chk{\\str{10}}{F}}}{factors}',
                 controls: {
                     "checkAnswer": true,
                     "help": true
@@ -100,7 +100,7 @@ angular.module('mathSkills').value('data5_2', {
             title: 'Main Answer',
             children: [{
                 problem: '\\html{Select the given divisors of 145 .}',
-                answer: '\\css{\\grp{\\chk{1}{T}}{\\chk{2}{F}}{\\chk{3}{F}}{\\chk{5}{T}}{\\chk{7}{F}}{\\chk{10}{F}}}{factors}',
+				answer: '\\css{\\grp{\\chk{\\str{1}}{T}}{\\chk{\\str{2}}{F}}{\\chk{\\str{3}}{F}}{\\chk{\\str{5}}{T}}{\\chk{\\str{7}}{F}}{\\chk{\\str{10}}{F}}}{factors}',
                 controls: {
                     "checkAnswer": true,
                     "help": true
@@ -113,7 +113,7 @@ angular.module('mathSkills').value('data5_2', {
             title: 'Main Answer',
             children: [{
                 problem: '\\html{Select the given divisors of 60 .}',
-                answer: '\\css{\\grp{\\chk{1}{T}}{\\chk{2}{T}}{\\chk{3}{T}}{\\chk{5}{T}}{\\chk{7}{F}}{\\chk{10}{T}}}{factors}',
+				answer: '\\css{\\grp{\\chk{\\str{1}}{T}}{\\chk{\\str{2}}{T}}{\\chk{\\str{3}}{T}}{\\chk{\\str{5}}{T}}{\\chk{\\str{7}}{F}}{\\chk{\\str{10}}{T}}}{factors}',
                 controls: {
                     "checkAnswer": true,
                     "help": true
@@ -126,7 +126,7 @@ angular.module('mathSkills').value('data5_2', {
             title: 'Main Answer',
             children: [{
                 problem: '\\html{Select the given divisors of 94 .}',
-                answer: '\\css{\\grp{\\chk{1}{T}}{\\chk{2}{T}}{\\chk{3}{F}}{\\chk{5}{F}}{\\chk{7}{F}}{\\chk{10}{F}}}{factors}',
+				answer: '\\css{\\grp{\\chk{\\str{1}}{T}}{\\chk{\\str{2}}{T}}{\\chk{\\str{3}}{F}}{\\chk{\\str{5}}{F}}{\\chk{\\str{7}}{F}}{\\chk{\\str{10}}{F}}}{factors}',
                 controls: {
                     "checkAnswer": true,
                     "help": true
