@@ -21,7 +21,7 @@ angular.module('mathSkills')
                     $scope.$watch('expected', function () {
                         if($scope.expected) {
                             imagePath = $scope.expected.slice(7, $scope.expected.length - 1); 
-							$scope.image = '<img src="lib/math_project_images/'+imagePath+'">';
+							$scope.image = '<img src="img/math_project_images/'+imagePath+'">';
                         }
                     });
                      
