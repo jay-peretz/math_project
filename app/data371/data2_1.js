@@ -1,24 +1,4 @@
 /*global angular */
-/*
-
-  
-        title: 'Rounding Whole Numbers',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Round this whole number to the}}}{\\row{\\str{hundreds place: }}}{\\row{\\str{49952}}}',
-                answer: '\\input{50000}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\placevalue{49952}{2}{showanswer}'
-                }
-            }]
-        }]
-    }]
-});
-*/
-
-/*global angular */
 
 angular.module('mathSkills').service('data2_1', ['dataUtils', function (dataUtils) {
     var desc = {

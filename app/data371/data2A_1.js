@@ -1,7 +1,7 @@
 /*global angular */
 
-angular.module('mathSkills').service('data2A_1', function () {
-    var ret = {
+angular.module('mathSkills').service('data2A_1', ['dataUtils', function (dataUtils) {
+    var desc = {
 			title: '2A.1 Translating Words to Math',
 			path: '2A.1-translating-words-to-math',
             children: []
@@ -33,24 +33,11 @@ angular.module('mathSkills').service('data2A_1', function () {
 			{ problemStatement: '45 is greater than 1', buttonValueA: 'T', buttonLabelA: '45 > 1', buttonValueB: 'F', buttonLabelB: '1 < 45', buttonValueC: 'F', buttonLabelC: '45 - 1', buttonValueD: 'F', buttonLabelD: '1 + 45', answerLabel: '45 > 1', buttonLetter: 'A',  template: 'main' },			
 			{ problemStatement: '28 is how much less than 47?', buttonValueA: 'F', buttonLabelA: '28 < 47', buttonValueB: 'F', buttonLabelB: '47 > 28', buttonValueC: 'F', buttonLabelC: '28 + 47', buttonValueD: 'T', buttonLabelD: '47 - 28', answerLabel: '47 - 28', buttonLetter: 'D', template: 'main' },			
 			{ problemStatement: '6 is less than 73', buttonValueA: 'F', buttonLabelA: '6 + 73', buttonValueB: 'F', buttonLabelB: '73 > 6', buttonValueC: 'T', buttonLabelC: '6 < 73', buttonValueD: 'F', buttonLabelD: '73 - 6', answerLabel: '6 < 73', buttonLetter: 'C',  template: 'main' }
-        ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('(\\$)?\\$' + symbol, 'g'), function ($0, $1) { return $1?$0 : data[symbol]; }); //console.log(string); 
-                }
-            }
-            var ret = JSON.parse(string);
-            ret.data = angular.copy(data);
-            return ret;
-        };
+        ];
 
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
-    
-    return ret;
-});
+	return dataUtils.build(desc, template, data);
+}]);
+
+
 
 
