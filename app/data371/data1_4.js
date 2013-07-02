@@ -1,7 +1,7 @@
  /*global angular */
 
-angular.module('mathSkills').service('data1_4', function () {
-    var ret = {
+angular.module('mathSkills').service('data1_4', ['dataUtils', function (dataUtils) {
+    var desc = {
 			title: '1.4 Add Whole Numbers',
 			path: '1.4-add-whole-numbers',
             children: []
@@ -33,20 +33,8 @@ angular.module('mathSkills').service('data1_4', function () {
             { number1: '[1700,2233,4945]', mathorenglish1: 'english', answer: '8878', template: 'main' },
             { number1: '[301,815]', mathorenglish1: 'math', answer: '1116', template: 'main' },
             { number1: '[832,6223,2705,146]', mathorenglish1: 'english', answer: '9906', template: 'main' }
-        ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('\\$' + symbol, 'g'), data[symbol]);
-                }
-            }
-            return JSON.parse(string);
-        };
+        ];
 
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
+	return dataUtils.build(desc, template, data);
+}]);
 
-    return ret;
-});

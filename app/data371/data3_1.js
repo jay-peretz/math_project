@@ -1,10 +1,10 @@
  /*global angular */
 
-angular.module('mathSkills').service('data3_1', function () {
-    var ret = {
-		title: '3.1 Multiply Whole Numbers',
-		path: '3.1-multiply-whole-numbers',
-		children: []
+angular.module('mathSkills').service('data3_1', ['dataUtils', function (dataUtils) {
+    var desc = {
+			title: '3.1 Multiply Whole Numbers',
+			path: '3.1-multiply-whole-numbers',
+            children: []
         },
         template = {
 			main: {
@@ -33,21 +33,9 @@ angular.module('mathSkills').service('data3_1', function () {
             { number1: '34', number2: '29', mathorenglish1: 'english', answer: '986', template: 'main' },
             { number1: '645', number2: '90', mathorenglish1: 'math', answer: '58050', template: 'main' },
             { number1: '300', number2: '356', mathorenglish1: 'math', answer: '106800', template: 'main' },
-        ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('\\$' + symbol, 'g'), data[symbol]);
-                }
-            }
-            return JSON.parse(string);
-        };
+       ];
 
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
+	return dataUtils.build(desc, template, data);
+}]);
 
-    return ret;
-});
 
