@@ -1,23 +1,4 @@
 /*global angular */
-/*
-
-    }, { //----10
-        title: 'Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\str{Solve for the missing number.}}{\\row{\\frac{\\str{19}}{\\str{38}}}{\\sign{=}}{\\frac{\\str{X}}{\\str{152}}}',
-                answer: '\\row{\\str{X \xA0= \xA0}}{\\input{76}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\css{\\rowgrp{\\html{19 · 152\xA0 = \xA038 · X<br><br>}}{\\html{ 2888 \xA0 = \xA038 · X<br><br>}}{\\html{ 2888 \xA0 \xF7 \xA038\xA0 = \xA0X<br><br>}}{\\html{\xA0 76\xA0 = \xA0X}}}{center-tr-txt}'
-                }
-            }]
-        }]
-    }, ]
-});*/
-
-/*global angular */
 
 angular.module('mathSkills').service('data6_3', ['dataUtils', function (dataUtils) {
     var desc = {

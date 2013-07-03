@@ -1,247 +1,51 @@
 /*global angular */
 
-angular.module('mathSkills').value('data6_4', {
-    title: '6.4 Reduce Fractions',
-    path: '6.4-reduce-fractions',
-    children: [{
-        title: 'Reduce Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{3}}{\\str{6}}}{\\str{\xA0 to its lowest terms}}',
-                answer: '\\frac{\\input{1}}{\\input{2}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{3}}{\\fracstr{6}}}{\\str{\xA0 to its lowest terms }}',
-                answer: '\\reducefrac{\\frac{\\fracstr{3}}{\\fracstr{6}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Reduce Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{9}}{\\str{15}}}{\\str{\xA0 to its lowest terms}}',
-                answer: '\\frac{\\input{3}}{\\input{5}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{9}}{\\fracstr{15}}}{\\str{\xA0 to its lowest terms }}',
-                answer: '\\reducefrac{\\frac{\\fracstr{9}}{\\fracstr{15}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Reduce Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{24}}{\\str{28}}}{\\str{\xA0 to its lowest terms}}',
-                answer: '\\frac{\\input{6}}{\\input{7}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{24}}{\\fracstr{28}}}{\\str{\xA0 to its lowest terms }}',
-                answer: '\\reducefrac{\\frac{\\fracstr{24}}{\\fracstr{28}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Reduce Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{8}}{\\str{12}}}{\\str{\xA0 to its lowest terms}}',
-                answer: '\\frac{\\input{2}}{\\input{3}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{8}}{\\fracstr{12}}}{\\str{\xA0 to its lowest terms }}',
-                answer: '\\reducefrac{\\frac{\\fracstr{8}}{\\fracstr{12}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Reduce Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{4}}{\\str{13}}}{\\str{\xA0 to its lowest terms}}',
-                answer: '\\frac{\\input{4}}{\\input{13}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{4}}{\\fracstr{13}}}{\\str{\xA0 to its lowest terms }}',
-                answer: '\\reducefrac{\\frac{\\fracstr{4}}{\\fracstr{13}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Reduce Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{7}}{\\str{14}}}{\\str{\xA0 to its lowest terms}}',
-                answer: '\\frac{\\input{1}}{\\input{2}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{7}}{\\fracstr{14}}}{\\str{\xA0 to its lowest terms }}',
-                answer: '\\reducefrac{\\frac{\\fracstr{7}}{\\fracstr{14}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Reduce Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{10}}{\\str{12}}}{\\str{\xA0 to its lowest terms}}',
-                answer: '\\frac{\\input{5}}{\\input{6}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{10}}{\\fracstr{12}}}{\\str{\xA0 to its lowest terms }}',
-                answer: '\\reducefrac{\\frac{\\fracstr{10}}{\\fracstr{12}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Reduce Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{21}}{\\str{35}}}{\\str{\xA0 to its lowest terms}}',
-                answer: '\\frac{\\input{3}}{\\input{5}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{21}}{\\fracstr{35}}}{\\str{\xA0 to its lowest terms }}',
-                answer: '\\reducefrac{\\frac{\\fracstr{21}}{\\fracstr{35}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Reduce Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{6}}{\\str{8}}}{\\str{\xA0 to its lowest terms}}',
-                answer: '\\frac{\\input{3}}{\\input{4}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{6}}{\\fracstr{8}}}{\\str{\xA0 to its lowest terms }}',
-                answer: '\\reducefrac{\\frac{\\fracstr{6}}{\\fracstr{8}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Reduce Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{12}}{\\str{48}}}{\\str{\xA0 to its lowest terms}}',
-                answer: '\\frac{\\input{1}}{\\input{4}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{12}}{\\fracstr{48}}}{\\str{\xA0 to its lowest terms }}',
-                answer: '\\reducefrac{\\frac{\\fracstr{12}}{\\fracstr{48}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }]
-});
+angular.module('mathSkills').service('data6_4', ['dataUtils', function (dataUtils) {
+    var desc = {
+			title: '6.4 Reduce Fractions',
+			path: '6.4-reduce-fractions',
+            children: []
+        },
+        template = {
+            main: {
+                title: 'Converting Units of Volume',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{$probNum}}{\\str{$probDen}}}{\\str{\xA0 to its lowest terms}}',
+						answer: '\\frac{\\input{$answerNum}}{\\input{$answerDen}}',
+						controls: {
+							"checkAnswer": true,
+							"help": false,
+							"workbook": true
+						}
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{$probNum}}{\\fracstr{$probDen}}}{\\str{\xA0 to its lowest terms }}',
+						answer: '\\reducefrac{\\frac{\\fracstr{$probNum}}{\\fracstr{$probDen}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": false
+						}
+                    }]
+                }]
+            }
+        },
+        data = [
+            { probNum: '3', probDen: '6', answerNum: '1', answerDen: '2', template: 'main' },
+			{ probNum: '9', probDen: '15', answerNum: '3', answerDen: '5', template: 'main' },
+			{ probNum: '24', probDen: '28', answerNum: '6', answerDen: '7', template: 'main' },
+			{ probNum: '8', probDen: '12', answerNum: '2', answerDen: '3', template: 'main' },
+			{ probNum: '4', probDen: '13', answerNum: '4', answerDen: '13', template: 'main' },
+			{ probNum: '7', probDen: '14', answerNum: '1', answerDen: '2', template: 'main' },
+			{ probNum: '10', probDen: '12', answerNum: '5', answerDen: '6', template: 'main' },
+			{ probNum: '21', probDen: '35', answerNum: '3', answerDen: '5', template: 'main' },
+			{ probNum: '6', probDen: '8', answerNum: '3', answerDen: '4', template: 'main' },
+			{ probNum: '12', probDen: '48', answerNum: '1', answerDen: '4', template: 'main' }
+        ];
+
+    return dataUtils.build(desc, template, data);
+}]);
+
