@@ -1,125 +1,6 @@
 /*global angular */
+/*
 
-angular.module('mathSkills').value('data6_3', {
-    title: '6.3 Equivalent Fractions',
-    path: '6.3-equivalent-fractions  ',
-    children: [{ //----1
-        title: 'Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{4}}{\\str{6}}}{\\sign{=}}{\\frac{\\str{8}}{\\str{12}}}',
-                answer: '\\butgrp{\\row{\\but{Yes}{T}}{\\but{No}{F}}}',
-                controls: {
-                    "checkAnswer": false,
-                    "help": '\\css{\\rowgrp{\\html{4 · 12\xA0 = \xA08 · 6<br><br>}}{\\html{\xA0 48\xA0 = \xA048}}}{center-tr-txt}'
-                }
-            }]
-        }]
-    }, { //----2
-        title: 'Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{14}}{\\str{16}}}{\\sign{=}}{\\frac{\\str{20}}{\\str{35}}}',
-                answer: '\\butgrp{\\row{\\but{Yes}{F}}{\\but{No}{T}}}',
-                controls: {
-                    "checkAnswer": false,
-                    "help": '\\css{\\rowgrp{\\html{14 · 35\xA0 \u2260 \xA020 · 16<br><br>}}{\\html{490\xA0 \u2260 \xA0320}}}{center-tr-txt}'
-                }
-            }]
-        }]
-    }, { //----3
-        title: 'Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{14}}{\\str{16}}}{\\sign{=}}{\\frac{\\str{16}}{\\str{36}}}',
-                answer: '\\butgrp{\\row{\\but{Yes}{F}}{\\but{No}{T}}}',
-                controls: {
-                    "checkAnswer": false,
-                    "help": '\\css{\\rowgrp{\\html{14 · 36\xA0 \u2260 \xA016 · 16<br><br>}}{\\html{504\xA0 \u2260 \xA0256}}}{center-tr-txt}'
-                }
-            }]
-        }]
-    }, { //----4
-        title: 'Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{6}}{\\str{9}}}{\\sign{=}}{\\frac{\\str{10}}{\\str{15}}}',
-                answer: '\\butgrp{\\row{\\but{Yes}{T}}{\\but{No}{F}}}',
-                controls: {
-                    "checkAnswer": false,
-                    "help": '\\css{\\rowgrp{\\html{6 · 15\xA0 = \xA010 · 9<br><br>}}{\\html{90\xA0 = \xA090}}}{center-tr-txt}'
-                }
-            }]
-        }]
-    }, { //----5
-        title: 'Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{15}}{\\str{18}}}{\\sign{=}}{\\frac{\\str{8}}{\\str{20}}}',
-                answer: '\\butgrp{\\row{\\but{Yes}{F}}{\\but{No}{T}}}',
-                controls: {
-                    "checkAnswer": false,
-                    "help": '\\css{\\rowgrp{\\html{15 · 20\xA0 \u2260 \xA08 · 18<br><br>}}{\\html{\xA0 300\xA0 \u2260 \xA0144}}}{center-tr-txt}'
-                }
-            }]
-        }]
-    }, { //----6
-        title: 'Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\str{Solve for the missing number.}}{\\row{\\frac{\\str{3}}{\\str{6}}}{\\sign{=}}{\\frac{\\str{15}}{\\str{X}}}',
-                answer: '\\row{\\str{X \xA0= \xA0}}{\\input{30}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\css{\\rowgrp{\\html{3 · X\xA0 = \xA06 · 15<br><br>}}{\\html{3 · X\xA0 = \xA0 90<br><br>}}{\\html{X\xA0 = \xA0 90 \xA0 \xF7 \xA03<br><br>}}{\\html{X\xA0 = \xA030}}}{center-tr-txt}'
-                }
-            }]
-        }]
-    }, { //----7
-        title: 'Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\str{Solve for the missing number.}}{\\row{\\frac{\\str{76}}{\\str{X}}}{\\sign{=}}{\\frac{\\str{19}}{\\str{21}}}',
-                answer: '\\row{\\str{X \xA0= \xA0}}{\\input{84}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\css{\\rowgrp{\\html{76 · 21\xA0 = \xA0X · 19<br><br>}}{\\html{ 1596 \xA0  = \xA0X · 19<br><br>}}{\\html{ 1596 \xA0 \xF7 \xA019 = X<br><br>}}{\\html{84\xA0 = \xA0X}}}{center-tr-txt}'
-                }
-            }]
-        }]
-    }, { //----8
-        title: 'Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\str{Solve for the missing number.}}{\\row{\\frac{\\str{27}}{\\str{26}}}{\\sign{=}}{\\frac{\\str{X}}{\\str{104}}}',
-                answer: '\\row{\\str{X \xA0= \xA0}}{\\input{108}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\css{\\rowgrp{\\html{\xA0 27 · 104\xA0 = \xA026 · X<br><br>}}{\\html{\xA0 2808 \xA0 = \xA026 · X<br><br>}}{\\html{ 2808  \xA0 \xF7 \xA026 =\xA0X<br><br>}}{\\html{\xA0 108\xA0 = \xA0X}}}{center-tr-txt}'
-                }
-            }]
-        }]
-    }, { //----9
-        title: 'Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\str{Solve for the missing number.}}{\\row{\\frac{\\str{25}}{\\str{45}}}{\\sign{=}}{\\frac{\\str{75}}{\\str{X}}}',
-                answer: '\\row{\\str{X \xA0= \xA0}}{\\input{135}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\css{\\rowgrp{\\html{25 · X\xA0 = \xA045 · 75<br><br>}}{\\html{25 · X\xA0 = \xA0 3375 <br><br>}}{\\html{X\xA0 = \xA0 3375 \xA0 \xF7 \xA025<br><br>}}{\\html{X\xA0 = \xA0135}}}{center-tr-txt}'
-                }
-            }]
-        }]
     }, { //----10
         title: 'Equivalent Fractions',
         children: [{
@@ -134,4 +15,180 @@ angular.module('mathSkills').value('data6_3', {
             }]
         }]
     }, ]
-});
+});*/
+
+/*global angular */
+
+angular.module('mathSkills').service('data6_3', ['dataUtils', function (dataUtils) {
+    var desc = {
+			title: '6.3 Equivalent Fractions',
+			path: '6.3-equivalent-fractions  ',
+            children: []
+        },
+	        template = {
+            first: {
+                title: 'Equivalent Fractions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{$leftNum}}{\\str{$leftDen}}}{\\sign{=}}{\\frac{\\str{$rightNum}}{\\str{$rightDen}}}',
+               			answer: '\\butgrp{\\row{\\but{Yes}{$firstButton}}{\\but{No}{$secondButton}}}',
+						controls: {
+							"checkAnswer": false,
+							"help": '\\css{\\rowgrp{\\html{$leftNum <span class=bigger>·</span> $rightDen \xA0 <span class=bigger>$equalOrNot</span> \xA0 $leftDen <span class=bigger>·</span> $rightNum<br><br>}}{\\html{\xA0 $productLeft \xA0 <span class=bigger>$equalOrNot</span> \xA0 $productRight}}}{center-tr-txt}'
+						}
+                    }]
+                }]
+           },
+			unknownLeftNum: {
+                title: 'Comparing Whole Numbers',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{X}}{\\str{$problemDen1}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{$problemNum2}}{\\str{$problemDen2}}}}',
+						answer: '\\css{\\input{$answer}}{margin-left-small}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\row{\\str{\xA0}}}'
+							+'{\\row{\\str{X}}{\\sign{&sdot;}}{\\str{$problemDen2}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{$problemDen1}}{\\sign{&sdot;}}{\\str{$problemNum2}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\row{\\str{X}}{\\sign{&sdot;}}{\\str{$problemDen2}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{$helpProduct}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\row{\\str{X}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{$helpProduct}}{\\sign{&divide;}}{\\str{$problemDen2}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\row{\\str{X}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{$answer}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\css{\\row{\\str{Answer: \xA0 }}{\\str{ $answer }}}{help-answer-text}}'
+							+'{\\row{\\html{&nbsp;}}}'
+						}	
+					}]
+                }]
+            },
+			unknownLeftDen: {
+                title: 'Comparing Whole Numbers',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{$problemNum1}}{\\str{X}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{$problemNum2}}{\\str{$problemDen2}}}}',
+						answer: '\\css{\\input{$answer}}{margin-left-small}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\row{\\str{\xA0}}}'
+							+'{\\row{\\str{$problemNum1}}{\\sign{&sdot;}}{\\str{$problemDen2}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{X}}{\\sign{&sdot;}}{\\str{$problemNum2}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\row{\\str{$helpProduct}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{X}}{\\sign{&sdot;}}{\\str{$problemNum2}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\row{\\str{$helpProduct}}{\\sign{&divide;}}{\\str{$problemNum2}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{X}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\row{\\str{$answer}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{X}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\css{\\row{\\str{Answer: \xA0 }}{\\str{ $answer }}}{help-answer-text}}'
+							+'{\\row{\\html{&nbsp;}}}'
+						}
+					}]
+                }]
+            },
+			unknownRightNum: {
+                title: 'Comparing Whole Numbers',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{$problemNum1}}{\\str{$problemDen1}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{X}}{\\str{$problemDen2}}}}',
+						answer: '\\css{\\input{$answer}}{margin-left-small}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\row{\\str{\xA0}}}'
+							+'{\\row{\\str{$problemNum1}}{\\sign{&sdot;}}{\\str{$problemDen2}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{$problemDen1}}{\\sign{&sdot;}}{\\str{X}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\row{\\str{$helpProduct}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{$problemDen1}}{\\sign{&sdot;}}{\\str{X}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\row{\\str{$helpProduct}}{\\sign{&divide;}}{\\str{$problemDen1}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{X}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\row{\\str{$answer}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{X}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\css{\\row{\\str{Answer: \xA0 }}{\\str{ $answer }}}{help-answer-text}}'
+							+'{\\row{\\html{&nbsp;}}}'
+						}
+					}]
+                }]
+            },
+			unknownRightDen: {
+                title: 'Comparing Whole Numbers',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{$problemNum1}}{\\str{$problemDen1}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{$problemNum2}}{\\str{X}}}}',
+						answer: '\\css{\\input{$answer}}{margin-left-small}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\row{\\str{\xA0}}}'
+							+'{\\row{\\str{$problemNum1}}{\\sign{&sdot;}}{\\str{X}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{$problemDen1}}{\\sign{&sdot;}}{\\str{$problemNum2}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\row{\\str{$problemNum1}}{\\sign{&sdot;}}{\\str{X}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{$helpProduct}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\row{\\str{X}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{$helpProduct}}{\\sign{&divide;}}{\\str{$problemNum1}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\row{\\str{X}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\str{$answer}}}'
+							+'{\\row{\\html{&nbsp;}}}'
+							+'{\\css{\\row{\\str{Answer: \xA0 }}{\\str{ $answer }}}{help-answer-text}}'
+							+'{\\row{\\html{&nbsp;}}}'
+						}
+					}]
+                }]
+            }
+        },
+        data = [
+            { leftNum: '4', leftDen: '6', rightNum: '8', rightDen: '12', firstButton: 'T', secondButton: 'F', equalOrNot: '=', productLeft:'48',  productRight:'48', template: 'first' },
+            { leftNum: '14', leftDen: '16', rightNum: '20', rightDen: '35', firstButton: 'F', secondButton: 'T', equalOrNot: '\u2260', productLeft:'490', productRight:'320', template: 'first' },
+            { leftNum: '14', leftDen: '16', rightNum: '16', rightDen: '36', firstButton: 'F', secondButton: 'T', equalOrNot: '\u2260', productLeft:'504', productRight:'256', template: 'first' },
+            { leftNum: '6', leftDen: '9', rightNum: '10', rightDen: '15', firstButton: 'T', secondButton: 'F', equalOrNot: '=', productLeft:'90',  productRight:'90', template: 'first' },
+            { leftNum: '16', leftDen: '18', rightNum: '8', rightDen: '20', firstButton: 'F', secondButton: 'T', equalOrNot: '\u2260', productLeft:'320', productRight:'144', template: 'first' },
+			{ problemText: 'Solve for the missing number.', problemNum1: '3', problemDen1: '6', problemNum2: '15', answer: '30', helpProduct:'90', template: 'unknownRightDen' },
+			{ problemText: 'Solve for the missing number.', problemNum1: '76', problemNum2: '19',  problemDen2: '21',answer: '84', helpProduct:'1596', template: 'unknownLeftDen' },
+			{ problemText: 'Solve for the missing number.', problemNum1: '27', problemDen1: '26', problemDen2: '104', answer: '108', helpProduct:'2808', template: 'unknownRightNum' },
+			{ problemText: 'Solve for the missing number.', problemDen1: '45', problemNum2: '75', problemDen2: '25', answer: '135', helpProduct:'3375', template: 'unknownLeftNum' },
+			{ problemText: 'Solve for the missing number.', problemNum1: '19', problemDen1: '38 ', problemDen2: '152', answer: '76', helpProduct:'2888', template: 'unknownRightNum' }	
+        ];
+
+	return dataUtils.build(desc, template, data);
+}]);
+
+
+
+
