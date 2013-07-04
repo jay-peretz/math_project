@@ -12,11 +12,20 @@ angular.module('mathSkills').service('data6_3', ['dataUtils', function (dataUtil
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\rowgrp{\\str{Are these fractions equivalent?}}{\\row{\\frac{\\str{$leftNum}}{\\str{$leftDen}}}{\\sign{=}}{\\frac{\\str{$rightNum}}{\\str{$rightDen}}}',
-               			answer: '\\butgrp{\\row{\\but{Yes}{$firstButton}}{\\but{No}{$secondButton}}}',
+						problem: '\\rowgrp'
+						+'{\\str{Are these fractions equivalent?}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\row{\\frac{\\str{$leftNum}}{\\str{$leftDen}}}'
+						+'{\\sign{=}}'
+						+'{\\frac{\\str{$rightNum}}{\\str{$rightDen}}}',
+               			//answer: '\\butgrp{\\row{\\but{Yes}{$firstButton}}{\\but{No}{$secondButton}}}',
+						answer: '\\butgrp{\\col{\\row{\\str{\xA0}}}{\\row{\\but{Yes}{$firstButton}}{\\grp{\\str{}}}{\\but{No}{$secondButton}}}}',
 						controls: {
 							"checkAnswer": false,
-							"help": '\\css{\\rowgrp{\\html{$leftNum <span class=bigger>·</span> $rightDen \xA0 <span class=bigger>$equalOrNot</span> \xA0 $leftDen <span class=bigger>·</span> $rightNum<br><br>}}{\\html{\xA0 $productLeft \xA0 <span class=bigger>$equalOrNot</span> \xA0 $productRight}}}{center-tr-txt}'
+							"help": '\\rowgrp'
+							+'{\\row{\\str{$leftNum}}{\\sign{&sdot;}}{\\str{$rightDen}}{\\sign{$equalOrNot}}{\\str{$leftDen}}{\\sign{&sdot;}}{\\str{$rightNum}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\row{\\str{$productLeft}}{\\sign{$equalOrNot}}{\\str{$productRight}}}'
 						}
                     }]
                 }]
@@ -26,7 +35,12 @@ angular.module('mathSkills').service('data6_3', ['dataUtils', function (dataUtil
 				children: [{
 					title: 'Main Answer',
 					children: [{
-						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{X}}{\\str{$problemDen1}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{$problemNum2}}{\\str{$problemDen2}}}}',
+						problem: '\\col'
+						+'{\\row{\\str{$problemText}}}'
+						+'{\\row{\\str{\xA0}}}'
+						+'{\\row{\\frac{\\str{X}}{\\str{$problemDen1}}}'
+						+'{\\sign{\xA0 = \xA0}}'
+						+'{\\frac{\\str{$problemNum2}}{\\str{$problemDen2}}}}',
 						answer: '\\css{\\input{$answer}}{margin-left-small}',
 						controls: {
 							"checkAnswer": true,
@@ -59,7 +73,12 @@ angular.module('mathSkills').service('data6_3', ['dataUtils', function (dataUtil
 				children: [{
 					title: 'Main Answer',
 					children: [{
-						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{$problemNum1}}{\\str{X}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{$problemNum2}}{\\str{$problemDen2}}}}',
+						problem: '\\col'
+						+'{\\row{\\str{$problemText}}}'
+						+'{\\row{\\str{\xA0}}}'
+						+'{\\row{\\frac{\\str{$problemNum1}}{\\str{X}}}'
+						+'{\\sign{\xA0 = \xA0}}'
+						+'{\\frac{\\str{$problemNum2}}{\\str{$problemDen2}}}}',
 						answer: '\\css{\\input{$answer}}{margin-left-small}',
 						controls: {
 							"checkAnswer": true,
@@ -92,7 +111,12 @@ angular.module('mathSkills').service('data6_3', ['dataUtils', function (dataUtil
 				children: [{
 					title: 'Main Answer',
 					children: [{
-						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{$problemNum1}}{\\str{$problemDen1}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{X}}{\\str{$problemDen2}}}}',
+						problem: '\\col'
+						+'{\\row{\\str{$problemText}}}'
+						+'{\\row{\\str{\xA0}}}'
+						+'{\\row{\\frac{\\str{$problemNum1}}{\\str{$problemDen1}}}'
+						+'{\\sign{\xA0 = \xA0}}'
+						+'{\\frac{\\str{X}}{\\str{$problemDen2}}}}',
 						answer: '\\css{\\input{$answer}}{margin-left-small}',
 						controls: {
 							"checkAnswer": true,
@@ -125,7 +149,12 @@ angular.module('mathSkills').service('data6_3', ['dataUtils', function (dataUtil
 				children: [{
 					title: 'Main Answer',
 					children: [{
-						problem: '\\col{\\row{\\str{$problemText}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{$problemNum1}}{\\str{$problemDen1}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{$problemNum2}}{\\str{X}}}}',
+						problem: '\\col'
+						+'{\\row{\\str{$problemText}}}'
+						+'{\\row{\\str{\xA0}}}'
+						+'{\\row{\\frac{\\str{$problemNum1}}{\\str{$problemDen1}}}'
+						+'{\\sign{\xA0 = \xA0}}'
+						+'{\\frac{\\str{$problemNum2}}{\\str{X}}}}',
 						answer: '\\css{\\input{$answer}}{margin-left-small}',
 						controls: {
 							"checkAnswer": true,
