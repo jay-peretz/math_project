@@ -47,6 +47,10 @@ angular.module('mathSkills.services')
                     return privateProblemData[key];
                 },
                 
+                checkData: function (key, opt) {
+                    return privateProblemData.hasOwnProperty(key) ? privateProblemData[key] : false;
+                },
+                
                 compile: function (expectedString){
                     for (var symbol in privateProblemData) {
                         if (privateProblemData.hasOwnProperty(symbol)) {

@@ -22,6 +22,7 @@ angular.module('mathSkills')
                     });
 
                     $scope.$on('livedata', function (e, data) {
+                        
                         switch($scope.myargs[1]){
                             case 'defalt':
                                 

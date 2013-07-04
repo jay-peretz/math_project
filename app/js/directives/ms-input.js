@@ -25,21 +25,33 @@ angular.module('mathSkills')
                     $scope.controllerId = Math.random().toString();
                     
                     $scope.$watch('expected', function () {
-                        if ($scope.expected){
-                            $scope.myargs = parser.extractTag($scope.expected).args;
-                        }
-                    });
-
-                    $scope.$watch('expected', function () {
                         if($scope.expected) {
                             $scope.display = parser.extractTag($scope.expected).args[0].length === 0;
                             var arr = [];
-                            var parsedExpected = parser.extractTag($scope.expected).args[0];
+                            $scope.myargs = parser.extractTag($scope.expected).args;
                             
-                            if (parsedExpected[0] === '[') {
-                                arr = JSON.parse(parsedExpected);
+                            // check if we have second arg.
+                            if ($scope.myargs.length > 1){
+                                //preprocess arg 2 string "[key1:value1,key2:value2...]" into object
+                                if ($scope.myargs[1][0] === '[') { //if object of objects
+                                    $scope.myargs[1] = $scope.myargs[1]
+                                    .replace(new RegExp('\\[', 'g'),'{"')
+                                    .replace(new RegExp(':', 'g'),'":"')
+                                    .replace(new RegExp(',', 'g'),'","')
+                                    .replace(new RegExp(']', 'g'),'"}'); 
+                                    $scope.myargs[1] = JSON.parse($scope.myargs[1]);
+                                } else { // just key value- build object
+                                    $scope.myargs[1] = {"key": $scope.myargs[1]};
+                                } 
+console.log('yes key', problemData.checkData($scope.myargs[1].key));
+                                //check problemData for $$ value.
+                                var data = problemData.checkData($scope.myargs[1].key);
+                            }
+                            //handle width with multiple answers 
+                            if ($scope.myargs[0][0] === '[') {
+                                arr = JSON.parse($scope.myargs[0]);
                             } else {
-                                arr.push(parsedExpected);
+                                arr.push($scope.myargs[0]);
                             }
                             if (arr[0] !== undefined){
                                 directiveUtils.resize($scope, arr, 'input', 10, 10);

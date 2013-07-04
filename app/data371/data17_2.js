@@ -14,7 +14,7 @@ angular.module('mathSkills').service('data17_2', function () {
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{$question}',
-                        answer: '\\input{$answer}',
+                        answer: '\\input{$answer}{[key:flag,data:value]',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
