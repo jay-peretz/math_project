@@ -21,6 +21,20 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 					}]
                 }]
             },
+			 imageproblem: {
+                title: 'The Meaning of Fractions',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+					problem: '\\rowgrp{\\html{$instructions}}{\\image{$imagefile}}',
+						answer: '\\rowgrp{\\row{$response}}',		
+						controls: {
+							"checkAnswer": true,
+							"help": '$help'
+						}
+					}]
+                }]
+            },
 			trueorfalse : {
 				title: 'The Meaning of Fractions',
 				children: [{
@@ -37,7 +51,20 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 			}
         },
         data = [
-		
+		//prob 1
+			{instructions: '<p>What fractional part of this figure is shaded?</p>',
+			 imagefile: 'B.1/b-1-1.png',
+			response : '\\\\grp{\\\\frac{\\\\input{3}}{\\\\input{10}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a part of a whole problem:}}}{\\\\row{\\\\frac{\\\\str{3}}{\\\\str{10}}}}', 
+	    	template: 'imageproblem'
+			},
+			//prob 2
+			{instructions: '<p>What fractional part of this figure is not shaded?</p>',
+			 imagefile: 'B.1/b-1-2.png',
+			response : '\\\\grp{\\\\frac{\\\\input{3}}{\\\\input{5}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a part of a whole problem:}}}{\\\\row{\\\\frac{\\\\str{3}}{\\\\str{5}}}}', 
+	    	template: 'imageproblem'
+			},
 		// prob 3
 			{instructions: '<p>Marcus paid a $32 cable bill, a $42 phone bill, and a $47 utility bill.</p><p>  What fractional part of these bills was spent on paying for phone service?</p> ',
 			response : '\\\\grp{\\\\frac{\\\\input{42}}{\\\\input{121}}}',  
@@ -114,6 +141,48 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 			 buttonFalseValue: 'T',
 			help: '\\\\rowgrp{\\\\row{\\\\str{The proportions are not equal because the cross-products are not equal:}}}{\\\\row{\\\\str{2.3 * 7 = 16.1}}}{\\\\row{\\\\str{and}}}{\\\\row{\\\\str{ 2 * 8.3 = 16.6}}}', 
 	    	template: 'trueorfalse'
+			},
+			//prob 22
+			{instructions: '<p>When 50 adults were surveyed, 21 agreed with the governor\'s education plan, 15 disagreed, 7 had mixed feelings, and 7 didn\'t know what the governor\'s plan was.</p><p>What fraction of the adults surveyed agreed with the governor\'s plan?  </p>',
+			response : '\\\\grp{\\\\frac{\\\\input{21}}{\\\\input{50}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The concept of the problem is part of the whole:}}}{\\\\row{\\\\frac{\\\\str{21}}{\\\\str{50}}}}', 
+	    	template: 'wordproblem'
+			},
+			//prob 23
+			{instructions: '<p>When 50 adults were surveyed, 21 agreed with the governor\'s education plan, 15 disagreed, 7 had mixed feelings, and 7 didn\'t know what the governor\'s plan was.</p><p>Out of those who knew what the governor\'s plan was, what fraction disagreed or had mixed feelings?</p>',
+			response : '\\\\grp{\\\\frac{\\\\input{22}}{\\\\input{43}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The problem is a part of the whole where:}}}{\\\\row{\\\\frac{\\\\str{disagreed + mixed feelings}}{\\\\str{all - didn\'t understand}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{15 + 7}}{\\\\str{50 - 7}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{22}}{\\\\str{43}}}', 
+	    	template: 'wordproblem'
+			},
+			//prob 24
+			{instructions: '<p>When 50 adults were surveyed, 21 agreed with the governor\'s education plan, 15 disagreed, 7 had mixed feelings, and 7 didn\'t know what the governor\'s plan was.</p><p>What is the ratio of those who agreed with the governor\'s plan to all others surveyed?</p>',
+			response : '\\\\grp{\\\\frac{\\\\input{21}}{\\\\input{29}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a ratio:}}}{\\\\row{\\\\frac{\\\\str{agreed}}{\\\\str{all - agreed}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{21}}{\\\\str{50 - 21}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{21}}{\\\\str{29}}}', 
+	    	template: 'wordproblem'
+			},
+			//prob 25
+			{instructions: '<p>When 50 adults were surveyed, 21 agreed with the governor\'s education plan, 15 disagreed, 7 had mixed feelings, and 7 didn\'t know what the governor\'s plan was.</p><p>What is the ratio of those who agreed or had mixed feelings toward the governor\'s plan to those who disagreed with it?</p>',
+			response : '\\\\grp{\\\\frac{\\\\input{28}}{\\\\input{15}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a ratio:}}}{\\\\row{\\\\frac{\\\\str{agreed or mixed feelings}}{\\\\str{disagreed}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{21 + 7}}{\\\\str{15}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{28}}{\\\\str{15}}}', 
+	    	template: 'wordproblem'
+			},
+			//prob 26
+			{instructions: '<p>When 50 adults were surveyed, 21 agreed with the governor\'s education plan, 15 disagreed, 7 had mixed feelings, and 7 didn\'t know what the governor\'s plan was.</p><p>If the responses to this survey were accurate for the entire town of Pasos (4,000 adults), how many adults in Pasos did not know what the governor\'s plan was (set up as a proportion, then solve)?</p>',
+			response : '\\\\input{560}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a proportion problem:}}}{\\\\row{\\\\frac{\\\\str{7 didn\'t know}}{\\\\str{50 adults}}}{\\\\str{ = }}{\\\\frac{\\\\str{x didn\'t know}}{\\\\str{4000 adults}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\str{(7 * 4000) / 50}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\str{560 adults}}', 
+	    	template: 'wordproblem'
+			},
+			//prob 29
+			{instructions: '<p>3 pizzas (each sliced into 10 pieces) were delivered. 8 pieces of the first pizza were eaten; 9 pieces of the second pizza were eaten; and 6 pieces of the third pizza were eaten.</p><p>What fraction of the pieces of pizza remain?</p>',
+			response : '\\\\grp{\\\\frac{\\\\input{7}}{\\\\input{30}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a part of the whole problem:}}}{\\\\row{\\\\frac{\\\\str{remaining slices}}{\\\\str{all slices}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{30 - (8 + 9 + 6)}}{\\\\str{30}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{7}}{\\\\str{30}}}', 
+	    	template: 'wordproblem'
+			},
+			//prob 30
+			{instructions: '<p>3 pizzas (each sliced into 10 pieces) were delivered. 8 pieces of the first pizza were eaten; 9 pieces of the second pizza were eaten; and 6 pieces of the third pizza were eaten.</p><p>Write a ratio of the pieces eaten to those uneaten.</p>',
+			response : '\\\\grp{\\\\frac{\\\\input{23}}{\\\\input{7}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a ratio:}}}{\\\\row{\\\\frac{\\\\str{slices eaten}}{\\\\str{slices uneaten}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{(8 + 9 + 6)}}{\\\\str{30 - (8 + 9 + 6)}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{23}}{\\\\str{7}}}', 
+	    	template: 'wordproblem'
 			}
 		];
     return dataUtils.build(desc, template, data);
