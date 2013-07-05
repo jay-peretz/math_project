@@ -49,6 +49,18 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
                         '\\\\row{\\\\mixed{\\\\str{1}}{\\\\frac{\\\\str{1}}{\\\\str{8}}}' +
                     '}',
                 template: 'main'
+            },
+			{
+                prob: '\\\\row{\\\\frac{\\\\str{3}}{\\\\str{8}}}{\\\\sign{+}}{\\\\frac{\\\\str{6}}{\\\\str{8}}}{\\\\sign{-}}{\\\\frac{\\\\str{5}}{\\\\str{8}}}',
+                ans: '\\\\frac{\\\\input{1}}{\\\\input{2}}',
+                wb: '\\\\ordopssimple{' +
+                        '\\\\row{\\\\frac{\\\\str{3}}{\\\\str{8}}}{\\\\but{+}{T}}{\\\\frac{\\\\str{6}}{\\\\str{8}}}{\\\\but{-}{F}}{\\\\frac{\\\\str{5}}{\\\\str{8}}},' +
+                        '\\\\frac{\\\\input{9}}{\\\\input{8}},' +
+                        '\\\\row{\\\\frac{\\\\str{9}}{\\\\str{8}}}{\\\\but{-}{T}}{\\\\frac{\\\\str{5}}{\\\\str{8}}},' +
+                        '\\\\frac{\\\\input{1}}{\\\\input{2}},' +
+						'\\\\row{\\\\frac{\\\\str{1}}{\\\\str{2}}}' +
+                    '}',
+                template: 'main'
             }
         ];
 
