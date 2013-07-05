@@ -49,3 +49,16 @@
     text-align: center;
     font-size: 1em;
 }
+
+.divisorstyle {
+    border-right: 2px solid black;
+    padding: 14px 10px 11px 5px;
+    border-radius: 0 15px 15px 0;
+}
+
+.dividendstyle {
+    border-top: 2px solid black;
+    padding: 6px 10px 4px 22px;
+    position: relative;
+    left: -14px;
+}
