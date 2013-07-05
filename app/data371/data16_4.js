@@ -124,7 +124,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                                 '{\\input{$$answer}}'+
                                 '{\\frac{\\input{$$nanswer}}{\\input{$$danswer}}}'+
                             '}{proportion-application}'+
-                        '}}{well}',
+                        '}}{well}{end}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
