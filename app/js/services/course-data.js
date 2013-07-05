@@ -13,6 +13,7 @@ angular.module('mathSkills.services')
         'data8_1', 'data8_2', 'data8_3', 'data8_4',
         'data9_1', 'data9_2', 'data9_3', 'data9_4',
         'data10_1', 'data10_2', 'data10_3', 'data10_4',
+        'data11_1',
         'data12_1', 'data12_2', 'data12_3',
         'data13_1', 'data13_2',
         'data14_1', 'data14_2',
@@ -36,6 +37,7 @@ angular.module('mathSkills.services')
             data8_1, data8_2, data8_3, data8_4,
             data9_1, data9_2, data9_3, data9_4,
             data10_1, data10_2, data10_3, data10_4,
+            data11_1,
             data12_1, data12_2, data12_3,
             data13_1, data13_2,
             data14_1, data14_2,
@@ -69,7 +71,8 @@ angular.module('mathSkills.services')
                         data7_1, data7_2, data7_3,
                         data8_1, data8_2, data8_3, data8_4,
                         data9_1, data9_2, data9_3, data9_4,
-                        data10_1, data10_2, data10_3, data10_4
+                        data10_1, data10_2, data10_3, data10_4,
+                        data11_1
                     ]
                 }, {
                     title: '3 Decimals',
