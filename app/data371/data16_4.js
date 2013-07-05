@@ -233,7 +233,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
             },{  // 7
                 problem: 'Out of 60 dinner customers, a restaurant receives 12 orders for steak, 15 orders for fish, and 8 orders for pasta.', 
-                question: 'If the restaurant received 20 orders for fish one night, how many orders for staek did it receive?', 
+                question: 'If the restaurant received 20 orders for fish one night, how many orders for steak did it receive?', 
                 answer: '16', nanswer: '',danswer: '', template: 'main',
                 lnw: '15', lnn: '', lnd: '', rnw: '20', rnn: '', rnd: '', lbln: 'fish',
                 ldw: '12', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'steak',
@@ -263,7 +263,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
             },{  // 10
                 problem: 'Out of 60 dinner customers, a restaurant receives 12 orders for steak, 15 orders for fish, and 8 orders for pasta.', 
-                question: 'If there were 80 customers, how many orders of staek were there?', 
+                question: 'If there were 80 customers, how many orders of steak were there?', 
                 answer: '16', nanswer: '',danswer: '', template: 'main',
                 lnw: '60', lnn: '', lnd: '', rnw: '80', rnn: '', rnd: '', lbln: 'customers',
                 ldw: '12', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'steak',
