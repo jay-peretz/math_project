@@ -223,7 +223,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
             },{  // 6
                 problem: 'A company could plant 40 oak trees and 30 elm trees in five days.', 
-                question: 'The company continued to plant oak and elm trees at this same rate. If 75 trees were finally planted, how many oak trees were planted?', 
+                question: 'The company continued to plant oak and elm trees at this same rate. If 105 trees were finally planted, how many oak trees were planted?', 
                 answer: '60', nanswer: '',danswer: '', template: 'main',
                 lnw: '70', lnn: '', lnd: '', rnw: '105', rnn: '', rnd: '', lbln: 'trees',
                 ldw: '40', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'oak trees',
@@ -254,9 +254,9 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
             },{  // 9
                 problem: 'Out of 60 dinner customers, a restaurant receives 12 orders for steak, 15 orders for fish, and 8 orders for pasta.', 
                 question: 'If the restaurant received 6 orders for pasta one night, how many orders for fish did it receive?', 
-                answer: '11.25', nanswer: '',danswer: '', template: 'main',
+                answer: '9', nanswer: '',danswer: '', template: 'main',
                 lnw: '8', lnn: '', lnd: '', rnw: '6', rnn: '', rnd: '', lbln: 'pasta',
-                ldw: '15', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'fish',
+                ldw: '12', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'steak',
                 ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"steak\\",\\"fish\\",\\"customers\\",\\"pasta\\"]',
                 previousCorrect: true,
