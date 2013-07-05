@@ -224,8 +224,8 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
             },{  // 6
                 problem: 'A company could plant 40 oak trees and 30 elm trees in five days.', 
                 question: 'The company continued to plant oak and elm trees at this same rate. If 75 trees were finally planted, how many oak trees were planted?', 
-                answer: '80', nanswer: '',danswer: '', template: 'main',
-                lnw: '70', lnn: '', lnd: '', rnw: '140', rnn: '', rnd: '', lbln: 'trees',
+                answer: '60', nanswer: '',danswer: '', template: 'main',
+                lnw: '70', lnn: '', lnd: '', rnw: '105', rnn: '', rnd: '', lbln: 'trees',
                 ldw: '40', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'oak trees',
                 ln: '$$lnw', ld: '$$ldw', rn: '$$rnw',
                 lblarr: '[\\"days\\",\\"oak trees\\",\\"elm trees\\",\\"trees\\"]',
