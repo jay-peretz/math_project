@@ -1,6 +1,7 @@
 'use strict';
 /*global angular */
-var privateProblemData = {};
+var privateProblemData = {},
+    e = {};
     
 angular.module('mathSkills.services')
     .run([
@@ -19,6 +20,7 @@ angular.module('mathSkills.services')
                     }, 1000);
                 }
             });
+            
         }
     ])
     /**
@@ -34,6 +36,7 @@ angular.module('mathSkills.services')
                 
                 setObject: function (data) {
                     privateProblemData = data;
+                    e = {};
                     //console.log("set data-data", privateData);
                 },
                 
@@ -47,8 +50,8 @@ angular.module('mathSkills.services')
                     return privateProblemData[key];
                 },
                 
-                checkData: function (key, opt) {
-                    return privateProblemData.hasOwnProperty(key) ? privateProblemData[key] : false;
+                checkData: function (key, opt) { //console.log('key', key);
+                    return key in privateProblemData ? privateProblemData[key] : false;
                 },
                 
                 compile: function (expectedString){
@@ -104,6 +107,71 @@ angular.module('mathSkills.services')
                 },
                 resetIndex: function () {
                     return delete privateProblemData.index;
+                },
+                
+                /***************************************************************
+                * live data/event utils.                                           
+                ***************************************************************/
+                
+                init: function ($scope){
+                    $scope.$on('answer', function (e, data) {  //console.log('problem answer', data); console.log('report answer', data.expected);
+                        if ("func" in data) {
+                            data.event = 'answer';
+                            problemData.mainfunc(data.func, data, $scope);
+                        }
+                    });
+                },
+                
+                dataEvent: function (data, $scope) {
+                    problemData.setEventData(data, data.key);
+                    problemData.mainfunc(data.func, data, $scope);
+                },
+                
+                mainfunc: function (func, data, $scope){
+                    this[func].apply(this, Array.prototype.slice.call(arguments, 1));
+                },
+      
+                process: function (dataObj, addObj) {
+                    return problemData.joinObj(dataObj, problemData.preProcess(addObj));
+                },
+                
+                preProcess: function (obj){
+                    obj = obj
+                        .replace(new RegExp('\\[', 'g'),'{"')
+                        .replace(new RegExp(':', 'g'),'":"')
+                        .replace(new RegExp(',', 'g'),'","')
+                        .replace(new RegExp(']', 'g'),'"}'); 
+                    obj = JSON.parse(obj);
+                    return obj;
+                },
+
+                joinObj: function (dataObj, addObj) {
+                    for (var prop in addObj) {
+                        if (addObj.hasOwnProperty(prop)) {
+                            dataObj[prop] = addObj[prop];
+                        }
+                    } 
+                    return dataObj;
+                },
+
+                setEventData: function (data, key) {
+                    e[key] = data;
+                },
+                
+                getEventData: function (key) {
+                    return e[key];
+                },
+
+                /***************************************************************
+                * custom event handler functions
+                ***************************************************************/
+                //func: function (data, $scope){ console.log("data", data); //console.log("$scope", $scope);}
+                
+                func: function (data, $scope){ //console.log("data", data); console.log("$scope", $scope);
+                    if (data.correct){
+                        problemData.index("5");
+                    }
+                    
                 }
             };
 

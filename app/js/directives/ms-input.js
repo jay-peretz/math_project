@@ -26,28 +26,12 @@ angular.module('mathSkills')
                     
                     $scope.$watch('expected', function () {
                         if($scope.expected) {
-                            $scope.display = parser.extractTag($scope.expected).args[0].length === 0;
+                            
                             var arr = [];
                             $scope.myargs = parser.extractTag($scope.expected).args;
-                            
-                            // check if we have second arg.
-                            if ($scope.myargs.length > 1){
-                                //preprocess arg 2 string "[key1:value1,key2:value2...]" into object
-                                if ($scope.myargs[1][0] === '[') { //if object of objects
-                                    $scope.myargs[1] = $scope.myargs[1]
-                                    .replace(new RegExp('\\[', 'g'),'{"')
-                                    .replace(new RegExp(':', 'g'),'":"')
-                                    .replace(new RegExp(',', 'g'),'","')
-                                    .replace(new RegExp(']', 'g'),'"}'); 
-                                    $scope.myargs[1] = JSON.parse($scope.myargs[1]);
-                                } else { // just key value- build object
-                                    $scope.myargs[1] = {"key": $scope.myargs[1]};
-                                } 
-console.log('yes key', problemData.checkData($scope.myargs[1].key));
-                                //check problemData for $$ value.
-                                var data = problemData.checkData($scope.myargs[1].key);
-                            }
-                            //handle width with multiple answers 
+                            $scope.display = $scope.myargs[0].length === 0;
+
+                            //handle width/with multiple answers 
                             if ($scope.myargs[0][0] === '[') {
                                 arr = JSON.parse($scope.myargs[0]);
                             } else {
@@ -56,6 +40,18 @@ console.log('yes key', problemData.checkData($scope.myargs[1].key));
                             if (arr[0] !== undefined){
                                 directiveUtils.resize($scope, arr, 'input', 10, 10);
                             }
+                            
+                            // ****start live data/event stuff****
+                            
+                            // check if we have second arg.
+                            if ($scope.myargs.length > 1){
+                                // if there is data- put it in input value 
+                                if (problemData.checkData($scope.myargs[1]) !== false) {
+                                    $scope.answer = problemData.getData($scope.myargs[1]);   
+                                }
+                                if ($scope.myargs.length > 2){ 
+                                }
+                            }
                         }
                     });
 
@@ -63,11 +59,15 @@ console.log('yes key', problemData.checkData($scope.myargs[1].key));
                         if (e.defaultPrevented !== true) {
                             var answer = '\\input{' + $scope.answer + '}',
                                 data = {
-                                    expected: $scope.expected,
+                                    expected: '\\input{' + $scope.myargs[0] + '}',
                                     answer: answer,
                                     label: $scope.label
-                                };
-
+                                }; 
+                                if ($scope.myargs.length > 2){
+                                    data.func = $scope.myargs[2];
+                                    data = $scope.myargs.length > 3 ? problemData.process(data, $scope.myargs[3]) : data;
+                                }
+                                    
                             if ($scope.myargs[0][0] === '[') {
                                 var possibleAnswers = JSON.parse($scope.myargs[0]).map(String);
                                 var answerIndex = possibleAnswers.indexOf($scope.answer);
@@ -94,7 +94,7 @@ console.log('yes key', problemData.checkData($scope.myargs[1].key));
                                     });
                                 }
                             } else {
-                                if ($scope.expected === answer) {
+                                if (data.expected === answer) {
                                     data.result = 'correct';
                                     $scope.class = 'success';
                                 } else {
@@ -149,19 +149,19 @@ console.log('yes key', problemData.checkData($scope.myargs[1].key));
                         if (e.defaultPrevented === false) {
                             // Check if we can set our answer to expected.
                             if ($scope.answer === '' && $scope.display !== true) {
-                                var parsedExpected = parser.extractTag($scope.expected).args[0];
-                                if (parsedExpected[0] === '[') {
-                                    var possibleAnswers = JSON.parse(parsedExpected);
+                                if ($scope.myargs[0][0] === '[') {
+                                    var possibleAnswers = JSON.parse($scope.myargs[0]);
                                     problemData.getIndex().then(function (index) {
                                         $scope.answer = possibleAnswers[index];
                                     });
                                 } else {
                                     // Strip out the tag part of $scope.expected and extract the value.
-                                    $scope.answer = $scope.expected.slice(7, $scope.expected.length - 1);
+                                    $scope.answer = $scope.myargs[0];
                                 }
                                 $scope.class = '';
                                 $element.find('input').focus();
                                 $scope.$emit('helped');
+                                handleEvent();
                             } else {
                                 // If we have an answer already, fire a notHelped event.
                                 $scope.$emit('notHelped', {
@@ -183,18 +183,36 @@ console.log('yes key', problemData.checkData($scope.myargs[1].key));
                             $scope.$apply($scope.$emit('triggerCheckFocus'));
                         }
                     });
-                    
+
+                    /***************************************************************
+                    * start of live data/events
+                    ***************************************************************/
+
+                    // call event handler-func on keyup
                     jQuery($element).on('keyup', 'input', function (event) {
-                        var data = {};
-                        //if ($scope.myargs.length > 1){
-                            console.log('val', $element.find('input').val());
-                            //if ($element.find('input').val() === $scope.myargs[1]){
-                                data.val = $element.find('input').val();
-                                $scope.$emit('livedata', data);
-                            //}
-                        //}
+                        $scope.$apply(handleEvent());
                     });
-                    
+
+                    // add init- "answer event listner"
+                    problemData.init($scope);
+
+                    // handler- helped and change event for input
+                    function handleEvent(){
+                        if ($scope.myargs.length > 2){
+
+                            var data = {
+                                key: $scope.myargs[1],
+                                func: $scope.myargs[2],
+                                expected: $scope.myargs[0],
+                                answer: $scope.answer,
+                                label: $scope.label,
+                                correct: $scope.answer === $scope.myargs[0]
+                            };
+                            data = $scope.myargs.length > 3 ? problemData.process(data, $scope.myargs[3]) : data;
+                            problemData.dataEvent(data, $scope);
+                        }
+                    }
+
                 },
                 template: '<div class="control-group {{class}}"><label><span>{{label}}</span><input style="width:{{width}};" ng-model=answer ms-strip-commas ms-add-zero></label></div>'
             };

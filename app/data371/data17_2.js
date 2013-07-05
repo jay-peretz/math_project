@@ -50,7 +50,7 @@ angular.module('mathSkills').service('data17_2', function () {
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\ins{Yes, now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).},\\ins{We are told that there are $$ln $$lbln to every $$ld $$lbld. The given relationship is:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\input{$$rn}}{\\select{$$lbln}{$$lblarr}}}{\\grp{\\data{\\input{$$ld}}{flip}{1}{5}}{\\select{$$lbld}{$$lblarr}}}}'+
+                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\input{$$rn}}{\\select{$$lbln}{$$lblarr}}}{\\grp{\\input{$$rd}{val}{func}{[test1:justin,test2:mer]}}{\\select{$$lbld}{$$lblarr}}}}'+
                         '}{'+
                             '\\choose{[\\ins{}{q},\\ins{Now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).}]}{$$previousCorrect}'+
                         '}}{well}',
@@ -102,11 +102,11 @@ angular.module('mathSkills').service('data17_2', function () {
             {
                 question: 'In seven days Mandy earned $154 baby sitting. How much did she earn per day?', 
                 answer: 22, template: 'main', key: 'rn',
-                ln: 154, rn: 'x', lbln: 'dollars',
-                ld: 7, rd: 1, lbld: 'days', lbld2: 'day',
+                ln: 154, rn: 'x', lbln: 'dollars', lbln2: 'dollar ',
+                ld: 7, rd: 1, lbld: 'days', lbld2: 'day ',
                 lblarr: '[\\"dollars\\",\\"days\\",\\"earned\\"]',
-                lblarr2: '[\\"dollar\\",\\"day\\",\\"earned\\"]',
-                flip:[["5"], ["lblarr", "lblarr2"], ["lbld", "lbld2"]],
+                lblarr2: '[\\"dollar \\",\\"day \\",\\"earned \\"]',
+                flip:[["5"], ["lblarr", "lblarr2"], ["lbld", "lbld2"], ["lbln", "lbln2"]],
                 previousCorrect: true,
                 //flip: [[1], ["ln", "ld"], ["rn", "rd"], ["lbln", "lbld"]],
             },
