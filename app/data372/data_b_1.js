@@ -223,10 +223,18 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 	    	template: 'wordproblem'
 			},
 			//prob 27
-			{instructions: '<p>3 pizzas (each sliced into 10 pieces) were delivered. 8 pieces of the first pizza were eaten; 9 pieces of the second pizza were eaten; and 6 pieces of the third pizza were eaten.</p><p>What fraction of the pieces of pizza remain?</p>',
-			response : '\\\\grp{\\\\frac{\\\\input{7}}{\\\\input{30}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a part of the whole problem:}}}{\\\\row{\\\\frac{\\\\str{remaining slices}}{\\\\str{all slices}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{30 - (8 + 9 + 6)}}{\\\\str{30}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{7}}{\\\\str{30}}}', 
-	    	template: 'wordproblem'
+			{instructions: '<p>Each section below represents an acre of land. The shaded sections are farmland while the unshaded areas are wild countryside on the outskirts of a city.</p>',
+			imagefile: 'B.1/b-1-27.png',
+			response : '\\\\rowgrp{\\\\row{\\\\str{What fraction of the acreage is farmland?}}}{\\\\row{\\\\grp{\\\\frac{\\\\input{3}}{\\\\input{8}}}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a part of the whole problem:}}}{\\\\row{\\\\frac{\\\\str{farmland}}{\\\\str{all acreage}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{3}}{\\\\str{8}}}}', 
+	    	template: 'imageproblem'
+			},
+			//prob 28
+			{instructions: '<p>Each section below represents an acre of land. The shaded sections are farmland while the unshaded areas are wild countryside on the outskirts of a city.</p>',
+			imagefile: 'B.1/b-1-27.png',
+			response : '\\\\rowgrp{\\\\row{\\\\str{What is the ratio of wild countryside acres to that of farmland acreage?}}}{\\\\row{\\\\grp{\\\\frac{\\\\input{5}}{\\\\input{3}}}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a ratio problem:}}}{\\\\row{\\\\frac{\\\\str{wild acreage}}{\\\\str{farmland acreage}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{5}}{\\\\str{3}}}}', 
+	    	template: 'imageproblem'
 			},
 			//prob 29
 			{instructions: '<p>3 pizzas (each sliced into 10 pieces) were delivered. 8 pieces of the first pizza were eaten; 9 pieces of the second pizza were eaten; and 6 pieces of the third pizza were eaten.</p><p>What fraction of the pieces of pizza remain?</p>',
