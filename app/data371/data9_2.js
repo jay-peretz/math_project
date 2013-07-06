@@ -1,201 +1,6 @@
-/*global angular */
+/*
+ 
 
-angular.module('mathSkills').value('data9_2', {
-    title: '9.2 Find the LCM',
-    path: '9.2-find-the-lcm',
-    children: [{
-        title: 'Find the LCM',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Find the LCM of }}{\\frac{\\str{1}}{\\str{2}}}{\\str{ and }}{\\frac{\\str{2}}{\\str{4}}}',
-                answer: '\\input{4}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Find the LCM of 2 and 4.}',
-                answer: '\\findlcm{2}{4}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Find the LCM',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Find the LCM of }}{\\frac{\\str{4}}{\\str{6}}}{\\str{ and }}{\\frac{\\str{1}}{\\str{2}}}',
-                answer: '\\input{6}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Find the LCM of 6 and 2.}',
-                answer: '\\findlcm{6}{2}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Find the LCM',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Find the LCM of }}{\\frac{\\str{1}}{\\str{4}}}{\\str{ and }}{\\frac{\\str{3}}{\\str{8}}}',
-                answer: '\\input{8}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Find the LCM of 4 and 8.}',
-                answer: '\\findlcm{4}{8}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Find the LCM',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Find the LCM of }}{\\frac{\\str{5}}{\\str{6}}}{\\str{ and }}{\\frac{\\str{5}}{\\str{9}}}',
-                answer: '\\input{18}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Find the LCM of 6 and 9.}',
-                answer: '\\findlcm{6}{9}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Find the LCM',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Find the LCM of }}{\\frac{\\str{5}}{\\str{12}}}{\\str{ and }}{\\frac{\\str{5}}{\\str{18}}}',
-                answer: '\\input{36}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Find the LCM of 12 and 18.}',
-                answer: '\\findlcm{12}{18}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Find the LCM',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Find the LCM of }}{\\frac{\\str{5}}{\\str{10}}}{\\str{ and }}{\\frac{\\str{9}}{\\str{15}}}',
-                answer: '\\input{30}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Find the LCM of 10 and 15.}',
-                answer: '\\findlcm{10}{15}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Find the LCM',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Find the LCM of }}{\\frac{\\str{3}}{\\str{4}}}{\\str{ , }}{\\frac{\\str{7}}{\\str{8}}}{\\str{ and }}{\\frac{\\str{5}}{\\str{6}}',
-                answer: '\\input{24}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Find the LCM of 4, 8, and 6.}',
-                answer: '\\findlcm{4}{8}{6}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
-        title: 'Find the LCM',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Find the LCM of }}{\\frac{\\str{8}}{\\str{6}}}{\\str{ , }}{\\frac{\\str{7}}{\\str{15}}}{\\str{ and }}{\\frac{\\str{3}}{\\str{5}}',
-                answer: '\\input{30}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\str{Find the LCM of 6, 15, and 5.}',
-                answer: '\\findlcm{6}{15}{5}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": true
-                }
-            }]
-        }]
-    }, {
         title: 'Find the LCM',
         children: [{
             title: 'Main Answer',
@@ -244,4 +49,83 @@ angular.module('mathSkills').value('data9_2', {
             }]
         }]
     }]
-});
+});*/
+
+/*global angular */
+
+angular.module('mathSkills').service('data9_2', ['dataUtils', function (dataUtils) {
+    var desc = {
+			title: '9.2 Find the LCM',
+   			path: '9.2-find-the-lcm',
+            children: []
+        },
+	        template = {
+            twoFractions: {
+                title: '9.2 Find the LCM',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						 problem: '\\row{\\str{Find the LCM of \xA0}}{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}{\\str{\xA0 and \xA0}}{\\frac{\\str{$secondNum}}{\\str{$secondDen}}}',
+						answer: '\\input{$answer}',
+						controls: {
+							"checkAnswer": true,
+							"help": false,
+							"workbook": true
+						}
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\str{Find the LCM of $firstDen and $secondDen.}',
+						answer: '\\findlcm{$firstDen}{$secondDen}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						}
+                    }]
+               }]
+			},
+			threeFractions: {
+                title: '9.2 Find the LCM',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						 problem: '\\row{\\str{Find the LCM of \xA0}}{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}{\\str{, \xA0}}{\\frac{\\str{$secondNum}}{\\str{$secondDen}}}{\\str{\xA0 and \xA0}}{\\frac{\\str{$thirdNum}}{\\str{$thirdDen}}}',
+						answer: '\\input{$answer}',
+						controls: {
+							"checkAnswer": true,
+							"help": false,
+							"workbook": true
+						}
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\str{Find the LCM of $firstDen, $secondDen and $thirdDen.}',
+						answer: '\\findlcm{$firstDen}{$secondDen}{$thirdDen}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						}
+                    }]
+               }]
+			}
+        },
+        data = [
+            { firstNum: '1', firstDen: '2', secondNum: '2', secondDen: '4', answer: '4', template: 'twoFractions' },
+			{ firstNum: '1', firstDen: '2', secondNum: '2', secondDen: '3', answer: '6', template: 'twoFractions' },
+			{ firstNum: '1', firstDen: '4', secondNum: '3', secondDen: '8', answer: '8', template: 'twoFractions' },
+			{ firstNum: '5', firstDen: '6', secondNum: '5', secondDen: '9', answer: '18', template: 'twoFractions' },
+			{ firstNum: '2', firstDen: '3', secondNum: '1', secondDen: '10', answer: '30', template: 'twoFractions' },
+			{ firstNum: '3', firstDen: '4', secondNum: '1', secondDen: '6', answer: '12', template: 'twoFractions' },
+			{ firstNum: '3', firstDen: '4', secondNum: '7', secondDen: '8', thirdNum: '5', thirdDen: '6', answer: '24', template: 'threeFractions' },
+			{ firstNum: '1', firstDen: '4', secondNum: '1', secondDen: '6', thirdNum: '2', thirdDen: '3', answer: '12', template: 'threeFractions' },
+			{ firstNum: '1', firstDen: '6', secondNum: '7', secondDen: '10', thirdNum: '3', thirdDen: '5', answer: '30', template: 'threeFractions' },
+			{ firstNum: '1', firstDen: '4', secondNum: '2', secondDen: '5', thirdNum: '5', thirdDen: '7', answer: '140', template: 'threeFractions' },
+        ];
+
+    return dataUtils.build(desc, template, data);
+}]);
+
+
+
