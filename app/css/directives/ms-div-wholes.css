@@ -62,3 +62,7 @@
     position: relative;
     left: -14px;
 }
+/* tableCollapseStyle class allows border-radius us in ms-long-division.html*/
+.table-collapse-separate {
+	border-collapse:separate;
+}
