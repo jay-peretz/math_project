@@ -153,7 +153,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             
             { //3a
-                problem: 'Brian sells $14,000 worth of jewelry one week. If he earns a 3% commission on his total sales, how much commission did he earn?',
+                problem: 'Brian sells $14,000 worth of jewelry one week. If he earns a 2.5% commission on his total sales, how much commission did he earn?',
                 answer: '350', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
