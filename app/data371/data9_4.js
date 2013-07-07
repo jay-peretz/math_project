@@ -1,327 +1,92 @@
 /*global angular */
 
-angular.module('mathSkills').value('data9_4', {
-    title: '9.4 Build Equivalent Fractions',
-    path: '9.4-build-equivalent-fractions',
-    children: [{
-        title: 'Build Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{1}}{\\str{4}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{3}}{\\str{5}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
-                answer: '\\row{\\frac{\\input{5}}{\\input{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{12}}{\\input{20}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}{\\row{\\input{20}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\row{\\str{20 is the LCD of 4 and 5.}}}'
-                },
-            }, {
-                problem: '\\row{\\str{Use the LCD to convert the fractions: }}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}{\\row{\\frac{\\input{5}}{\\fracstr{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{12}}{\\fracstr{20}}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}{\\row{\\str{converts to}}}{\\row{\\frac{\\fracstr{5}}{\\fracstr{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{12}}{\\fracstr{20}}}}'
-                }
-            }]
-        }]
-    }, {
-		// problem 2
-        title: 'Build Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{3}}{\\str{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{5}}{\\str{6}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
-                answer: '\\row{\\frac{\\input{9}}{\\input{24}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{20}}{\\input{24}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{3}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}{\\row{\\input{24}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\row{\\str{24 is the LCD of 8 and 6.}}}'
-                },
-            }, {
-                problem: '\\row{\\str{Use the LCD to convert the fractions: }}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{3}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}{\\row{\\frac{\\input{9}}{\\fracstr{24}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{20}}{\\fracstr{24}}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\frac{\\fracstr{3}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}{\\row{\\str{converts to}}}{\\row{\\frac{\\fracstr{9}}{\\fracstr{24}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{20}}{\\fracstr{24}}}}'
-                }
-            }]
-        }]
-    }, {
-		//problem 3
-        title: 'Build Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{4}}{\\str{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{5}}{\\str{4}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
-                answer: '\\row{\\frac{\\input{16}}{\\input{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{25}}{\\input{20}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{4}}{\\fracstr{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{4}}}}{\\row{\\input{20}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\row{\\str{20 is the LCD of 4 and 5.}}}'
-                },
-            }, {
-                problem: '\\row{\\str{Use the LCD to convert the fractions: }}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{4}}{\\fracstr{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{4}}}}{\\row{\\frac{\\input{16}}{\\fracstr{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{25}}{\\fracstr{20}}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\frac{\\fracstr{4}}{\\fracstr{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{4}}}}{\\row{\\str{converts to}}}{\\row{\\frac{\\fracstr{16}}{\\fracstr{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{25}}{\\fracstr{20}}}}'
-                }
-            }]
-        }]
-    }, {
-		//problem 4
-        title: 'Build Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{2}}{\\str{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{5}}{\\str{6}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
-                answer: '\\row{\\frac{\\input{4}}{\\input{6}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{5}}{\\input{6}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}{\\row{\\input{6}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\row{\\str{6 is the LCD of 3 and 6.}}}'
-                },
-            }, {
-                problem: '\\row{\\str{Use the LCD to convert the fractions: }}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}{\\row{\\frac{\\input{4}}{\\fracstr{6}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{5}}{\\fracstr{6}}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}{\\row{\\str{converts to}}}{\\row{\\frac{\\fracstr{4}}{\\fracstr{6}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}'
-                }
-            }]
-        }]
-    }, {
-		//problem 5
-        title: 'Build Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{5}}{\\str{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{6}}{\\str{5}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
-                answer: '\\row{\\frac{\\input{25}}{\\input{40}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{48}}{\\input{40}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{5}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{6}}{\\fracstr{5}}}}{\\row{\\input{40}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\row{\\str{40 is the LCD of 8 and 5.}}}'
-                },
-            }, {
-                problem: '\\row{\\str{Use the LCD to convert the fractions: }}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{5}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{6}}{\\fracstr{5}}}}{\\row{\\frac{\\input{25}}{\\fracstr{40}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{48}}{\\fracstr{40}}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\frac{\\fracstr{3}}{\\fracstr{8}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{6}}{\\fracstr{5}}}}{\\row{\\str{converts to}}}{\\row{\\frac{\\fracstr{25}}{\\fracstr{40}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{48}}{\\fracstr{40}}}}'
-                }
-            }]
-        }]
-    }, {
-		
-		// problem 6
-        title: 'Build Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{1}}{\\str{10}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{3}}{\\str{4}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
-                answer: '\\row{\\frac{\\input{2}}{\\input{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{15}}{\\input{20}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{1}}{\\fracstr{10}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{4}}}}{\\row{\\input{20}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\row{\\str{20 is the LCD of 10 and 4.}}}'
-                },
-            }, {
-                problem: '\\row{\\str{Use the LCD to convert the fractions: }}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{1}}{\\fracstr{10}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{4}}}}{\\row{\\frac{\\input{2}}{\\fracstr{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{15}}{\\fracstr{20}}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\frac{\\fracstr{1}}{\\fracstr{10}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{4}}}}{\\row{\\str{converts to}}}{\\row{\\frac{\\fracstr{2}}{\\fracstr{20}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{15}}{\\fracstr{20}}}}'
-                }
-            }]
-        }]
-    }, {
-		// problem 7
-        title: 'Build Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{10}}{\\str{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{7}}{\\str{5}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
-                answer: '\\row{\\frac{\\input{50}}{\\input{15}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{21}}{\\input{15}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{10}}{\\fracstr{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{5}}}}{\\row{\\input{15}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\row{\\str{15 is the LCD of 3 and 5.}}}'
-                },
-            }, {
-                problem: '\\row{\\str{Use the LCD to convert the fractions: }}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{10}}{\\fracstr{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{5}}}}{\\row{\\frac{\\input{50}}{\\fracstr{15}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{21}}{\\fracstr{15}}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\frac{\\fracstr{10}}{\\fracstr{3}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{5}}}}{\\row{\\str{converts to}}}{\\row{\\frac{\\fracstr{50}}{\\fracstr{15}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{21}}{\\fracstr{15}}}}'
-                }
-            }]
-        }]
-    }, {
-		// problem 8
-        title: 'Build Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{9}}{\\str{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{7}}{\\str{2}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
-                answer: '\\row{\\frac{\\input{18}}{\\input{10}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{35}}{\\input{10}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{9}}{\\fracstr{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{2}}}}{\\row{\\input{10}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\row{\\str{10 is the LCD of 5 and 2.}}}'
-                },
-            }, {
-                problem: '\\row{\\str{Use the LCD to convert the fractions: }}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{9}}{\\fracstr{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{2}}}}{\\row{\\frac{\\input{18}}{\\fracstr{10}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{35}}{\\fracstr{10}}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\frac{\\fracstr{9}}{\\fracstr{5}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{2}}}}{\\row{\\str{converts to}}}{\\row{\\frac{\\fracstr{18}}{\\fracstr{10}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{35}}{\\fracstr{10}}}}'
-                }
-            }]
-        }]
-    }, {
-		// problem 9
-        title: 'Build Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{3}}{\\str{7}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{7}}{\\str{8}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
-                answer: '\\row{\\frac{\\input{24}}{\\input{56}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{49}}{\\input{56}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{3}}{\\fracstr{7}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{8}}}}{\\row{\\input{56}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\row{\\str{56 is the LCD of 7 and 8.}}}'
-                },
-            }, {
-                problem: '\\row{\\str{Use the LCD to convert the fractions: }}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{3}}{\\fracstr{7}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{8}}}}{\\row{\\frac{\\input{24}}{\\fracstr{56}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{49}}{\\fracstr{56}}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\frac{\\fracstr{3}}{\\fracstr{7}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{7}}{\\fracstr{8}}}}{\\row{\\str{converts to}}}{\\row{\\frac{\\fracstr{24}}{\\fracstr{56}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{49}}{\\fracstr{56}}}}'
-                }
-            }]
-        }]
-    }, {
-		// problem 10
-        title: 'Build Equivalent Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Start with the fractions:}}}{\\row{\\frac{\\str{15}}{\\str{6}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\str{3}}{\\str{10}}}}{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
-                answer: '\\row{\\frac{\\input{75}}{\\input{30}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{9}}{\\input{30}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{What is the lowest common denominator (LCD) of the fractions?}}}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{15}}{\\fracstr{6}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{10}}}}{\\row{\\input{30}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\row{\\str{30 is the LCD of 6 and 10.}}}'
-                },
-            }, {
-                problem: '\\row{\\str{Use the LCD to convert the fractions: }}',
-                answer: '\\rowgrp{\\row{\\frac{\\fracstr{15}}{\\fracstr{6}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{10}}}}{\\row{\\frac{\\input{75}}{\\fracstr{30}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\input{9}}{\\fracstr{30}}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\frac{\\fracstr{15}}{\\fracstr{6}}}{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}{\\frac{\\fracstr{3}}{\\fracstr{10}}}}{\\row{\\str{converts to}}}{\\row{\\frac{\\fracstr{75}}{\\fracstr{30}}}{\\html{<span> &nbsp; and &nbsp; </span>}}{\\frac{\\fracstr{9}}{\\fracstr{30}}}}'
-                }
-            }]
-        }]
-    }]
-});
+angular.module('mathSkills').service('data9_4', ['dataUtils', function (dataUtils) {
+    var desc = {
+			title: '9.4 Build Equivalent Fractions',
+			path: '9.4-build-equivalent-fractions',
+            children: []
+        },
+	        template = {
+            main: {
+                title: 'Build Equivalent Fractions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+						+'{\\row{\\str{Start with the fractions:}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\row{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}'
+						+'{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}'
+						+'{\\frac{\\str{$secondNum}}{\\str{$secondDen}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\row{\\str{Build equivalent fractions that have the same denominator.}}}',
+						answer: '\\grp'
+						+'{\\frac{\\input{$firstAnswerNum}}{\\input{$answerDen}}}'
+						+'{\\str{\xA0 and \xA0}}'
+						+'{\\frac{\\input{$secondAnswerNum}}{\\input{$answerDen}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": false,
+							"workbook": true
+						}
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+						problem: '\\rowgrp'
+						+'{\\str{What is the lowest common denominator (LCD) of the fractions:}}',
+						answer: '\\rowgrp'
+						+'{\\row{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+						+'{\\str{\xA0 and \xA0}}'
+						+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\input{$answerDen}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\str{The LCD of $firstDen and $secondDen is $answerDen.}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\str{\xA0 Answer: \xA0 $answerDen}}{help-answer-text}}'
+						},
+                    }, {
+						problem: '\\str{Use the LCD to convert the fractions: }',
+						answer: '\\rowgrp'
+						+'{\\row{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+						+'{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}'
+						+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+						+'{\\html{<span> &nbsp; and &nbsp; </span>}}'
+						+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\row{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+							+'{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}'
+							+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\str{\xA0 Answer: \xA0}}{help-answer-text}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\row{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+							+'{\\html{<span> &nbsp; and &nbsp; </span>}}'
+							+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}{help-answer-text}'
+						}
+                    }]
+                }]
+            }
+        },
+        data = [
+            { firstNum: '1', firstDen: '4', secondNum: '3', secondDen: '5', firstAnswerNum: '5', secondAnswerNum: '12', answerDen: '20', template: 'main' },
+			{ firstNum: '3', firstDen: '8', secondNum: '5', secondDen: '6', firstAnswerNum: '9', secondAnswerNum: '20', answerDen: '24', template: 'main' },
+			{ firstNum: '4', firstDen: '5', secondNum: '5', secondDen: '4', firstAnswerNum: '16', secondAnswerNum: '25', answerDen: '20', template: 'main' },
+			{ firstNum: '2', firstDen: '3', secondNum: '5', secondDen: '6', firstAnswerNum: '4', secondAnswerNum: '5', answerDen: '6', template: 'main' },
+			{ firstNum: '5', firstDen: '8', secondNum: '6', secondDen: '5', firstAnswerNum: '25', secondAnswerNum: '48', answerDen: '40', template: 'main' },
+			{ firstNum: '1', firstDen: '10', secondNum: '3', secondDen: '4', firstAnswerNum: '2', secondAnswerNum: '15', answerDen: '20', template: 'main' },
+			{ firstNum: '10', firstDen: '3', secondNum: '7', secondDen: '5', firstAnswerNum: '50', secondAnswerNum: '21', answerDen: '15', template: 'main' },
+			{ firstNum: '9', firstDen: '5', secondNum: '7', secondDen: '2', firstAnswerNum: '18', secondAnswerNum: '35', answerDen: '10', template: 'main' },
+			{ firstNum: '3', firstDen: '7', secondNum: '7', secondDen: '8', firstAnswerNum: '24', secondAnswerNum: '49', answerDen: '56', template: 'main' },
+			{ firstNum: '15', firstDen: '6', secondNum: '3', secondDen: '10', firstAnswerNum: '75', secondAnswerNum: '9', answerDen: '30', template: 'main' },
+        ];
+
+    return dataUtils.build(desc, template, data);
+}]);
