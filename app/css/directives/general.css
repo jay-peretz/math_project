@@ -25,11 +25,19 @@ body {
 	font-weight: normal;
 }
 
+.help-answer-text .fraction hr {
+	border-color: transparent transparent #069 transparent;
+}
+
 .help-answer-text-tight {
 	display:block;	
 	color: #069;
 	font-size: 105%;
 	font-weight: normal;
+}
+
+.help-answer-text-tight .fraction hr {
+	border-color: transparent transparent #069 transparent;
 }
 
 .help-text-margin-width {
