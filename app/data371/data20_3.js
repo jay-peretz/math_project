@@ -51,7 +51,7 @@ angular.module('mathSkills').service('data20_3', function () {
                             '\\ins{Now solve the problem.}'+
                         '}{'+
                             '\\css{\\grp{\\html{X}}{\\sign{=}}{\\input{$$answer}}}{proportion-application}'+
-                        '}}{well}',
+                        '}}{well}{end}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
