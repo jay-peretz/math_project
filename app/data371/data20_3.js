@@ -13,7 +13,7 @@ angular.module('mathSkills').service('data20_3', function () {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
+                        problem: '\\html{$problem<br><br>$question<br><br><span class=blue-text>$round</span>}',
                         answer: '\\input{$answer}',
                         controls: {
                             "checkAnswer": true,
@@ -42,11 +42,11 @@ angular.module('mathSkills').service('data20_3', function () {
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\html{},\\ins{The standard percent proportion is set up as follows:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\html{},\\grp{\\frac{\\str{$$dln}}{\\str{$$dld}}}{\\sign{=}}{\\frac{\\str{$$drn}}{\\str{$$drd}}}]}{$$previousCorrect}'+
+                            '\\css{\\choose{[\\html{},\\grp{\\frac{\\str{$$dln}}{\\str{$$dld}}}{\\sign{=}}{\\frac{\\str{$$drn}}{\\str{$$drd}}}]}{$$previousCorrect}}{bottom-marg}'+
                         '}{'+
                             '\\choose{[\\ins{Yes!},\\ins{We substitute the given values to get:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}'+
+                            '\\css{\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}}{bottom-marg}'+
                         '}{'+
                             '\\ins{Now solve the problem.}'+
                         '}{'+
@@ -59,15 +59,15 @@ angular.module('mathSkills').service('data20_3', function () {
                     }, {
                         problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\html{},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}'+
+                            '\\css{\\choose{[\\html{},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}}{bottom-marg}'+
                         '}{'+
                             '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems.}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\grp{\\frac{\\str{$$answer}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\html{X}}{\\sign{=}}{\\html{$$ld &#149; $$rn &#247; $$rd}}}{proportion-application}]}{$$previousCorrect}'+
+                            '\\choose{[\\grp{\\frac{\\str{$$answer}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\html{X}}{\\sign{=}}{\\html{$solution}}}{proportion-application}]}{$$previousCorrect}'+
                         '}{'+
                             '\\choose{[\\html{},\\ins{The answer is}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\html{},\\css{\\grp{\\html{$$answer}}{\\html{$$symbol}}}{proportion-application}]}{$$previousCorrect}'+
+                            '\\choose{[\\html{},\\css{\\grp{\\html{$$answer}}{\\html{$$post_symbol}}}{proportion-application}]}{$$previousCorrect}'+
                         '}}{well}',
                         controls: {
                             "checkAnswer": true,
@@ -81,11 +81,13 @@ angular.module('mathSkills').service('data20_3', function () {
             { 
                 problem: 'May received a grade of 70% on her first math exam.',
                 question: 'If there were 50 questions on the exam, how many questions did she answer correctly?',
-                answer: '35', template: 'main', symbol: '',
+                round: '',
+                answer: '35', template: 'main', post_symbol: '',
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: 100, drd: 'Base (Whole Quantity)',
                 ln: 'x', rn: 70, 
                 ld: 50, rd: 100, 
+                solution: '$$ld &#149; $$rn &#247; $$rd',
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
