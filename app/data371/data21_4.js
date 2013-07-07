@@ -13,7 +13,7 @@ angular.module('mathSkills').service('data21_4', function () {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\html{$problem}',
+                        problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
                         answer: '\\input{$answer}',
                         controls: {
                             "checkAnswer": true,
@@ -59,15 +59,15 @@ angular.module('mathSkills').service('data21_4', function () {
                     }, {
                         problem: '\\html{$problem}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\css{\\choose{[\\ins{}{q},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}}{bottom-marg}'+
+                            '\\css{\\choose{[\\html{},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}}{bottom-marg}'+
                         '}{'+
                             '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems. We substitute the given values to get:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\str{X}}{\\sign{=}}{\\str{$solution}}}{proportion-application}]}{$$previousCorrect}'+
+                            '\\choose{[\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\html{X}}{\\sign{=}}{\\html{$solution}}}{proportion-application}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\ins{}{q},\\ins{The answer is}]}{$$previousCorrect}'+
+                            '\\choose{[\\html{},\\ins{The answer is}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\choose{[\\ins{}{q},\\css{\\grp{\\str{$$pre_symbol}}{\\str{$$answer}}{\\str{$$post_symbol}}}{proportion-application}]}{$$previousCorrect}'+
+                            '\\choose{[\\html{},\\css{\\grp{\\html{$$pre_symbol}}{\\html{$$answer}}{\\html{$$post_symbol}}}{proportion-application}]}{$$previousCorrect}'+
                         '}}{well}',
                         controls: {
                             "checkAnswer": true,
@@ -78,8 +78,9 @@ angular.module('mathSkills').service('data21_4', function () {
             }
         },
         data = [
-            {  //1a
+            {  //1a -1
                 problem: 'A refrigerator normally sells for $950. The appliance dealer put it on sale at a 14% discount. What is the amount of the discount?',
+                round: '',
                 answer: '133', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -90,8 +91,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //1b
+            {  //1b -2
                 problem: 'A refrigerator was discounted 14%. The amount of the discount was $133. What was the original sales price of the refrigerator before the discount?',
+                round: '',
                 answer: '950', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -102,8 +104,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //1c 
+            {  //1c -3
                 problem: 'A refrigerator that regularly sells for $950 was discounted $133. What was the percent discount?',
+                round: '',
                 answer: '14', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -114,8 +117,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //1d 
+            {  //1d -4
                 problem: 'A refrigerator that regularly sells for $950 was now on sale for $817. What was the percent discount?',
+                round: '',
                 answer: '14', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -127,8 +131,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
             
-            {  //2a
+            {  //2a -5
                 problem: 'A textbook normally sells for $34.99. The appliance dealer put it on sale at a 36% discount. What is the amount of the discount?',
+                round: 'Round answer to the nearest cent.',
                 answer: '12.60', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -139,9 +144,10 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //2b
+            {  //2b -6
                 problem: 'A textbook was discounted 36%. The amount of the discount was $12.60. What was the original sales price of the refrigerator before the discount?',
-                answer: '34.99', template: 'main', pre_symbol: '$', post_symbol: '', 
+                round: 'Round answer to the nearest cent.',
+                answer: '35', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -151,8 +157,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //2c 
+            {  //2c -7
                 problem: 'A textbook that regularly sells for $34.99 was discounted $12.60. What was the percent discount?',
+                round: 'Round answer to the nearest whole percent.',
                 answer: '36', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -163,8 +170,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //2d 
+            {  //2d -8
                 problem: 'A textbook that regularly sells for $34.99 is now on sale for $22.39. What was the percent discount?',
+                round: 'Round answer to the nearest whole percent.',
                 answer: '36', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -176,8 +184,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
             
-            {  //3a
+            {  //3a -9
                 problem: 'A used car was originally priced at $6,400. The dealer put it on sale at a 5.2% discount. What is the amount of the discount?',
+                round: '',
                 answer: '332.80', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -188,8 +197,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //3b
+            {  //3b -10
                 problem: 'A used car was discounted 5.2%. The amount of the discount was $332.80. What was the original price of the car before the discount?',
+                round: '',
                 answer: '6400', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -200,8 +210,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //3c 
+            {  //3c -11
                 problem: 'A used car that was originally priced at $6,400 was discounted $332.80. What was the percent discount?',
+                round: '',
                 answer: '5.2', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -212,8 +223,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //3d 
+            {  //3d -12
                 problem: 'A used car that was originally priced at $6,400 is now on sale for $6,067.20. What was the percent discount?',
+                round: '',
                 answer: '5.2', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -225,8 +237,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
             
-            {  //4a
+            {  //4a -13
                 problem: 'A tuxedo rental was regularly priced at $85. The dealer put it on sale at a 20% discount. What is the amount of the discount?',
+                round: '',
                 answer: '17', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -237,8 +250,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //4b
+            {  //4b -14
                 problem: 'A tuxedo rental was discounted 20%. The amount of the discount was $17. What was the original price of the car before the discount?',
+                round: '',
                 answer: '85', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -249,8 +263,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //4c 
+            {  //4c -15
                 problem: 'A tuxedo rental was regularly priced at $85 was discounted $17. What was the percent discount?',
+                round: '',
                 answer: '20', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -261,8 +276,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //4d 
+            {  //4d -16
                 problem: 'A tuxedo rental that was regularly priced at $85 is now on sale for $68. What was the percent discount?',
+                round: '',
                 answer: '20', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -274,8 +290,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
             
-            {  //5a
+            {  //5a -17
                 problem: 'A department store was selling all its clothing at a 15% discount. Mika bought clothing that normally would have cost $69.75. What is the amount of the discount?',
+                round: 'Round answer to the nearest cent.',
                 answer: '10.46', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -286,9 +303,10 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //5b
+            {  //5b -18
                 problem: 'A department store was selling all its clothing at a 15% discount. Mika was discounted $10.46 on the clothing she purchased. What would the price of the clothing have been without the discount?',
-                answer: '69.75', template: 'main', pre_symbol: '$', post_symbol: '', 
+                round: 'Round answer to the nearest cent.',
+                answer: '69.73', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -298,8 +316,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //5c 
+            {  //5c -19
                 problem: 'Mika bought clothing that normally would have cost $69.75, but was discounted $10.46. What was the percent discount?',
+                round: 'Round answer to the nearest whole percent.',
                 answer: '15', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -310,8 +329,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //5d 
+            {  //5d -20
                 problem: 'Mika bought clothing that normally would have cost $69.75, but was now on sale for $59.29. What was the percent discount?',
+                round: 'Round answer to the nearest whole percent.',
                 answer: '15', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -323,8 +343,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
             
-            {  //6a
+            {  //6a -21
                 problem: 'Concert tickets that cost $62.50 were put on sale at a 35% discount. What is the amount of the discount?',
+                round: 'Round answer to the nearest cent.',
                 answer: '21.88', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -335,9 +356,10 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //6b
+            {  //6b -22
                 problem: 'Concert tickets were discounted 35%. The amount of the discount was $21.88. What was the original price of the tickets before the discount?',
-                answer: '62.50', template: 'main', pre_symbol: '$', post_symbol: '', 
+                round: 'Round answer to the nearest cent.',
+                answer: '62.51', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -347,8 +369,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //6c 
+            {  //6c -23
                 problem: 'Concert tickets that were priced at $62.50 were discounted $21.88. What was the percent discount?',
+                round: 'Round answer to the nearest whole percent.',
                 answer: '35', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -359,8 +382,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //6d 
+            {  //6d -24
                 problem: 'Concert tickets that were selling for $62.50 were now costing only $40.62. What was the percent discount?',
+                round: 'Round answer to the nearest whole percent.',
                 answer: '35', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -372,8 +396,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
             
-            {  //7a
+            {  //7a -25
                 problem: 'A sports store was selling all its merchandise at a 25% discount. Gunter bought equipment that normally would have cost $126.58. How much money did he save because of the discount?',
+                round: 'Round answer to the nearest cent.',
                 answer: '31.65', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -384,9 +409,10 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //7b
+            {  //7b -26
                 problem: 'A sports store was selling all its merchandise at a 25% discount. Gunter was discounted $31.65 on the clothing he purchased. What would the price of the equipment have been without the discount?',
-                answer: '126.58', template: 'main', pre_symbol: '$', post_symbol: '', 
+                round: 'Round answer to the nearest cent.',
+                answer: '126.60', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -396,8 +422,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //7c 
+            {  //7c -27
                 problem: 'Gunter bought equipment that normally would have cost $126.58, but was discounted $31.65. What was the percent discount?',
+                round: 'Round answer to the nearest whole percent.',
                 answer: '25', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -408,8 +435,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //7d 
+            {  //7d -28
                 problem: 'Gunter bought equipment that normally would have cost $126.58, but was now on sale for $94.93. What was the percent discount?',
+                round: 'Round answer to the nearest whole percent.',
                 answer: '25', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -421,8 +449,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
             
-            {  //8a
+            {  //8a -29
                 problem: 'A student bus pass is regularly priced at $49. For one week only the county now offered to sell the bus passes at a 18% discount. What is the amount of the discount?',
+                round: '',
                 answer: '8.82', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -433,8 +462,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //8b
+            {  //8b 30
                 problem: 'A student bus pass is discounted 18%. The amount of the discount is $8.82. What was the original price of the car before the discount?',
+                round: '',
                 answer: '49', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -445,8 +475,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //8c 
+            {  //8c -31
                 problem: 'A student bus pass is regularly priced at $49, but was now discounted $8.82. What was the percent discount?',
+                round: '',
                 answer: '18', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -457,8 +488,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //8d 
+            {  //8d -32
                 problem: 'A student bus pass that is regularly priced at $49 is now on sale for $40.18. What is the percent discount?',
+                round: '',
                 answer: '18', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -470,8 +502,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
             
-            {  //9a
+            {  //9a -33
                 problem: 'Concert tickets that cost $55 were put on sale at a 28% discount. What is the amount of the discount?',
+                round: '',
                 answer: '15.40', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -482,8 +515,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //9b
+            {  //9b -34
                 problem: 'Concert tickets were discounted 28%. The amount of the discount was $15.40. What was the original price of the tickets before the discount?',
+                round: '',
                 answer: '55', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -494,8 +528,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //9c 
+            {  //9c -35
                 problem: 'Concert tickets that were priced at $55 were discounted $15.40. What was the percent discount?',
+                round: '',
                 answer: '28', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -506,8 +541,9 @@ angular.module('mathSkills').service('data21_4', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            {  //9d 
+            {  //9d -36
                 problem: 'Concert tickets that were selling for $55 were now costing only $39.60. What was the percent discount?',
+                round: '',
                 answer: '28', template: 'main', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
