@@ -5,7 +5,7 @@
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
         parserProvider.register('input', {
-            directiveTemplate: '<ms-input expected={{expected}} label={{label}}></ms-input>'
+            directiveTemplate: '<ms-input ng-hide="display" expected={{expected}} label={{label}}></ms-input>'
         });
     }])
     .directive('msInput', [
@@ -167,7 +167,7 @@ angular.module('mathSkills')
                         }
                     });
                 },
-                template: '<div class="control-group {{class}}"><label><span>{{label}}</span><input ng-hide="display" style="width:{{width}};" ng-model=answer ms-strip-commas ms-add-zero></label></div>'
+                template: '<div class="control-group {{class}}"><label><span>{{label}}</span><input style="width:{{width}};" ng-model=answer ms-strip-commas ms-add-zero></label></div>'
             };
         }
     ]);
