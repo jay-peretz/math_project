@@ -61,7 +61,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 							"help": true
 						}
 					}, {
-						problem: '\\str{Rewrite the answer as a proper mixed number: }',
+						problem: '\\str{Rewrite the answer as a mixed number with a proper fraction: }',
 						answer: '\\rowgrp{\\grp{\\mixed{\\str{$wholeanswer1}}{\\frac{\\str{$numanswer1}}{\\str{$denanswer}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\input{$wholeanswer2}}{\\frac{\\input{$numanswer2}}{\\input{$denanswer}}}}}',
 						controls: {
 							"checkAnswer": true,
@@ -259,7 +259,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 							"help": false
 						}
 					}, {
-						problem: '\\str{Rewrite the answer as a proper mixed number: }',
+						problem: '\\str{Rewrite the answer as a mixed number with a proper fraction: }',
 						answer: '\\rowgrp{\\grp{\\mixed{\\str{$wholeanswer1}}{\\frac{\\str{$numanswer2}}{\\str{$denanswer2}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\input{$wholeanswer2}}{\\frac{\\input{$numanswer3}}{\\input{$denanswer2}}}}}',
 						controls: {
 							"checkAnswer": true,
@@ -470,7 +470,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 							"help": false
 						}
 					}, {
-						problem: '\\str{Rewrite the answer as a proper mixed number: }',
+						problem: '\\str{Rewrite the answer as a mixed number with a proper fraction: }',
 						answer: '\\rowgrp{\\grp{\\mixed{\\str{$wholeanswer1}}{\\frac{\\str{$numanswer2}}{\\str{$denanswer2}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\input{$wholeanswer2}}{\\frac{\\input{$numanswer3}}{\\input{$denanswer2}}}}}',
 						controls: {
 							"checkAnswer": true,
