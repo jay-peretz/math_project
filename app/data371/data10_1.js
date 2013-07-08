@@ -203,7 +203,7 @@ angular.module('mathSkills').service('data10_1', ['dataUtils', function (dataUti
 			{ firstNum: '3', firstDen: '8', secondNum: '1', secondDen: '3', firstAnswerNum: '9', secondAnswerNum: '8', sumNum: '17', answerDen: '24', template: 'twoFractions' },
 			{ firstNum: '9', firstDen: '8', secondNum: '5', secondDen: '6', firstAnswerNum: '27', secondAnswerNum: '20', sumNum: '47', answerDen: '24', template: 'twoFractions' },
 			{ firstNum: '1', firstDen: '2', secondNum: '1', secondDen: '4', thirdNum: '1', thirdDen: '6', firstAnswerNum: '6', secondAnswerNum: '3', thirdAnswerNum: '2', sumNum: '11', answerDen: '12', template: 'threeFractions' },
-			{ firstNum: '3', firstDen: '10', secondNum: '1', secondDen: '4', thirdNum: '4', thirdDen: '5', firstAnswerNum: '6', secondAnswerNum: '5', thirdAnswerNum: '16', sumNum: '27', answerDen: '20', template: 'threeFractions' },
+			{ firstNum: '3', firstDen: '10', secondNum: '1', secondDen: '\xA04\xA0', thirdNum: '4', thirdDen: '\xA05\xA0', firstAnswerNum: '6', secondAnswerNum: '5', thirdAnswerNum: '16', sumNum: '27', answerDen: '20', template: 'threeFractions' },
 			{ firstNum: '5', firstDen: '4', secondNum: '7', secondDen: '3', thirdNum: '7', thirdDen: '6', firstAnswerNum: '15', secondAnswerNum: '28', thirdAnswerNum: '14', sumNum: '57', answerDen: '12', template: 'threeFractions' }
 			
         ];
