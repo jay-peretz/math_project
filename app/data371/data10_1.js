@@ -54,7 +54,8 @@ angular.module('mathSkills').service('data10_1', ['dataUtils', function (dataUti
 							+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp'
+							"help": true
+							/*"help": '\\rowgrp'
 							+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 							+'{\\sign{=}}'
 							+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
@@ -68,7 +69,7 @@ angular.module('mathSkills').service('data10_1', ['dataUtils', function (dataUti
 							+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
-							+'{help-answer-text}}'
+							+'{help-answer-text}}'*/
 						}
                     }, {
 						problem: '\\str{Add the fractions: }',
@@ -80,13 +81,14 @@ angular.module('mathSkills').service('data10_1', ['dataUtils', function (dataUti
 							+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\frac{\\input{$sumNum}}{\\input{$answerDen}}}}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp'
+							"help": true
+							/*"help": '\\rowgrp'
 							+'{\\row{\\html{\xA0}}{\\sign{\xA0}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\css{row{\\sign{+}}{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\css'
-							+'{\\row{\\html{\xA0}}{\\sign{\xA0}}{\\frac{\\fracstr{$sumNum}}{\\fracstr{$answerDen}}}}{help-answer-text-tight}'
+							+'{\\row{\\html{\xA0}}{\\sign{\xA0}}{\\frac{\\fracstr{$sumNum}}{\\fracstr{$answerDen}}}}{help-answer-text-tight}'*/
 						}
                     }]
                 }]
@@ -146,7 +148,8 @@ angular.module('mathSkills').service('data10_1', ['dataUtils', function (dataUti
 							+'{\\frac{\\input{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp'
+							"help": true
+							/*"help": '\\rowgrp'
 							+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 							+'{\\sign{=}}'
 							+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
@@ -166,7 +169,7 @@ angular.module('mathSkills').service('data10_1', ['dataUtils', function (dataUti
 							+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}'
-							+'{help-answer-text}}'
+							+'{help-answer-text}}'*/
 						}
                     }, {
 						problem: '\\str{Add the fractions: }',
@@ -180,7 +183,8 @@ angular.module('mathSkills').service('data10_1', ['dataUtils', function (dataUti
 							+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\frac{\\input{$sumNum}}{\\input{$answerDen}}}}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp'
+							"help": true
+							/*"help": '\\rowgrp'
 							+'{\\row{\\html{\xA0}}{\\sign{\xA0}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\row{\\html{\xA0}}{\\sign{\xA0}}{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
@@ -188,7 +192,7 @@ angular.module('mathSkills').service('data10_1', ['dataUtils', function (dataUti
 							+'{\\css{row{\\sign{+}}{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\css'
-							+'{\\row{\\html{\xA0}}{\\sign{\xA0}}{\\frac{\\fracstr{$sumNum}}{\\fracstr{$answerDen}}}}{help-answer-text-tight}'
+							+'{\\row{\\html{\xA0}}{\\sign{\xA0}}{\\frac{\\fracstr{$sumNum}}{\\fracstr{$answerDen}}}}{help-answer-text-tight}'*/
 						}
                     }]
                 }]

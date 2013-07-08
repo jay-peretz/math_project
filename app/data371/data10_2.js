@@ -1,387 +1,217 @@
 /*global angular */
 
-angular.module('mathSkills').value('data10_2', {
-    title: '10.2 Subtracting Unlike Fractions',
-    path: '10.2-subtracting-unlike-fractions',
-    children: [{
-        title: 'Subtracting Unlike Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\frac{\\str{4}}{\\str{5}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{3}}{\\str{4}}}{\\sign{\xA0 \xA0 = \xA0}}',
-                answer: '\\row{\\frac{\\input{1}}{\\input{20}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}{\\row{\\frac{\\fracstr{4}}{\\fracstr{5}}}{\\row{\\sign{\xA0 + \xA0}}}{\\frac{\\fracstr{3}}{\\fracstr{4}}}}',
-                answer: '\\input{20}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                },
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{4}}{\\fracstr{5}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{3}}{\\fracstr{4}}}}',
-                answer: '\\grp{\\frac{\\input{16}}{\\fracstr{20}}}{\\sign{\xA0 - \xA0}}{\\frac{\\input{15}}{\\fracstr{20}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Subtract the fractions: }}}{\\row{\\frac{\\fracstr{16}}{\\fracstr{20}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{15}}{\\fracstr{20}}}}',
-                answer: '\\row{\\frac{\\input{1}}{\\input{20}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }]
-        }]
-    }, {
-        title: 'Subtracting Unlike Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\frac{\\str{3}}{\\str{2}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{3}}{\\str{5}}}{\\sign{\xA0 \xA0 = \xA0}}',
-                answer: '\\row{\\frac{\\input{9}}{\\input{10}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}{\\row{\\frac{\\fracstr{3}}{\\fracstr{2}}}{\\row{\\str{\xA0 and \xA0}}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}',
-                answer: '\\input{10}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                },
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{3}}{\\fracstr{2}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}',
-                answer: '\\grp{\\frac{\\input{15}}{\\fracstr{10}}}{\\sign{\xA0 - \xA0}}{\\frac{\\input{6}}{\\fracstr{10}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Subtract the fractions: }}}{\\row{\\frac{\\fracstr{15}}{\\fracstr{10}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{6}}{\\fracstr{10}}}}',
-                answer: '\\row{\\frac{\\input{9}}{\\input{10}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }]
-        }]
-    }, {
-        title: 'Subtracting Unlike Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\frac{\\str{5}}{\\str{6}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{1}}{\\str{8}}}{\\sign{\xA0 \xA0 = \xA0}}',
-                answer: '\\row{\\frac{\\input{17}}{\\input{24}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}{\\row{\\frac{\\fracstr{5}}{\\fracstr{6}}}{\\row{\\str{\xA0 and \xA0}}}{\\frac{\\fracstr{1}}{\\fracstr{8}}}}',
-                answer: '\\input{24}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                },
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{5}}{\\fracstr{6}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{1}}{\\fracstr{8}}}}',
-                answer: '\\grp{\\frac{\\input{20}}{\\fracstr{24}}}{\\sign{\xA0 - \xA0}}{\\frac{\\input{3}}{\\fracstr{24}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Subtract the fractions: }}}{\\row{\\frac{\\fracstr{20}}{\\fracstr{24}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{3}}{\\fracstr{24}}}}',
-                answer: '\\row{\\frac{\\input{17}}{\\input{24}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }]
-        }]
-    }, {
-        title: 'Subtracting Unlike Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\frac{\\str{5}}{\\str{8}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{1}}{\\str{2}}}{\\sign{\xA0 \xA0 = \xA0}}',
-                answer: '\\row{\\frac{\\input{1}}{\\input{8}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}{\\row{\\frac{\\fracstr{5}}{\\fracstr{8}}}{\\row{\\str{\xA0 and \xA0}}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}',
-                answer: '\\input{8}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                },
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{5}}{\\fracstr{8}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}',
-                answer: '\\grp{\\frac{\\input{5}}{\\fracstr{8}}}{\\sign{\xA0 - \xA0}}{\\frac{\\input{4}}{\\fracstr{8}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Subtract the fractions: }}}{\\row{\\frac{\\fracstr{5}}{\\fracstr{8}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{4}}{\\fracstr{8}}}}',
-                answer: '\\row{\\frac{\\input{1}}{\\input{8}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }]
-        }]
-    }, {
-        title: 'Subtracting Unlike Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\frac{\\str{7}}{\\str{16}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{1}}{\\str{8}}}{\\sign{\xA0 \xA0 = \xA0}}',
-                answer: '\\row{\\frac{\\input{5}}{\\input{16}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}{\\row{\\frac{\\fracstr{7}}{\\fracstr{16}}}{\\row{\\str{\xA0 and \xA0}}}{\\frac{\\fracstr{1}}{\\fracstr{8}}}}',
-                answer: '\\input{16}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                },
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{7}}{\\fracstr{16}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{1}}{\\fracstr{8}}}}',
-                answer: '\\grp{\\frac{\\input{7}}{\\fracstr{16}}}{\\sign{\xA0 - \xA0}}{\\frac{\\input{2}}{\\fracstr{16}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Subtract the fractions: }}}{\\row{\\frac{\\fracstr{7}}{\\fracstr{16}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{2}}{\\fracstr{16}}}}',
-                answer: '\\row{\\frac{\\input{5}}{\\input{16}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }]
-        }]
-    }, {
-        title: 'Subtracting Unlike Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\frac{\\str{5}}{\\str{4}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{3}}{\\str{22}}}{\\sign{\xA0 \xA0 = \xA0}}',
-                answer: '\\row{\\frac{\\input{49}}{\\input{44}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}{\\row{\\frac{\\fracstr{5}}{\\fracstr{4}}}{\\row{\\str{\xA0 and \xA0}}}{\\frac{\\fracstr{3}}{\\fracstr{22}}}}',
-                answer: '\\input{44}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                },
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{5}}{\\fracstr{4}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{3}}{\\fracstr{22}}}}',
-                answer: '\\grp{\\frac{\\input{55}}{\\fracstr{44}}}{\\sign{\xA0 - \xA0}}{\\frac{\\input{6}}{\\fracstr{44}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Subtract the fractions: }}}{\\row{\\frac{\\fracstr{55}}{\\fracstr{44}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{6}}{\\fracstr{44}}}}',
-                answer: '\\row{\\frac{\\input{49}}{\\input{44}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }]
-        }]
-    }, {
-        title: 'Subtracting Unlike Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\frac{\\str{11}}{\\str{8}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{5}}{\\str{6}}}{\\sign{\xA0 \xA0 = \xA0}}',
-                answer: '\\row{\\frac{\\input{13}}{\\input{24}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}{\\row{\\frac{\\fracstr{11}}{\\fracstr{8}}}{\\row{\\str{\xA0 and \xA0}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}',
-                answer: '\\input{24}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                },
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\fracstr{11}}{\\fracstr{8}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}}',
-                answer: '\\grp{\\frac{\\input{33}}{\\fracstr{24}}}{\\sign{\xA0 - \xA0}}{\\frac{\\input{20}}{\\fracstr{24}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Subtract the fractions: }}}{\\row{\\frac{\\fracstr{33}}{\\fracstr{24}}}{\\row{\\sign{\xA0 - \xA0}}}{\\frac{\\fracstr{20}}{\\fracstr{24}}}}',
-                answer: '\\row{\\frac{\\input{13}}{\\input{24}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }]
-        }]
-    }, {
-        title: 'Subtracting Unlike Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\frac{\\str{11}}{\\str{12}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{1}}{\\str{3}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{1}}{\\str{6}}}{\\sign{\xA0 \xA0 = \xA0}}',
-                answer: '\\row{\\frac{\\input{5}}{\\input{12}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}{\\row{\\frac{\\fracstr{11}}{\\fracstr{12}}}{\\row{\\str{, \xA0}}}{\\row{\\frac{\\fracstr{1}}{\\fracstr{3}}}{\\row{\\str{,\xA0 and \xA0}}}{\\frac{\\fracstr{1}}{\\fracstr{6}}}}',
-                answer: '\\input{12}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                },
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\str{11}}{\\str{12}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{1}}{\\str{3}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{1}}{\\str{6}}}{\\sign{\xA0 \xA0 = \xA0}}}}',
-                answer: '\\grp{\\frac{\\input{11}}{\\fracstr{12}}}{\\str{, \xA0}}{\\frac{\\input{4}}{\\fracstr{12}}}{\\str{\xA0 and \xA0}}{\\frac{\\input{2}}{\\fracstr{12}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Subtract the fractions: }}}{\\row{\\frac{\\str{11}}{\\str{12}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{4}}{\\str{12}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{2}}{\\str{12}}}{\\sign{\xA0 \xA0 = \xA0}}}}',
-                answer: '\\row{\\frac{\\input{5}}{\\input{12}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }]
-        }]
-    }, {
-        title: 'Subtracting Unlike Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\frac{\\str{13}}{\\str{10}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{1}}{\\str{4}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{3}}{\\str{5}}}{\\sign{\xA0 \xA0 = \xA0}}',
-                answer: '\\row{\\frac{\\input{9}}{\\input{20}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}{\\row{\\frac{\\fracstr{13}}{\\fracstr{10}}}{\\row{\\str{, \xA0}}}{\\row{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\row{\\str{,\xA0 and \xA0}}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}}',
-                answer: '\\input{20}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                },
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\str{13}}{\\str{10}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{1}}{\\str{4}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{3}}{\\str{5}}}{\\sign{\xA0 \xA0 = \xA0}}}}',
-                answer: '\\grp{\\frac{\\input{26}}{\\fracstr{20}}}{\\str{, \xA0}}{\\frac{\\input{5}}{\\fracstr{20}}}{\\str{\xA0 and \xA0}}{\\frac{\\input{12}}{\\fracstr{20}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Subtract the fractions: }}}{\\row{\\frac{\\str{26}}{\\str{20}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{5}}{\\str{20}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{12}}{\\str{20}}}{\\sign{\xA0 \xA0 = \xA0}}}}',
-                answer: '\\row{\\frac{\\input{9}}{\\input{20}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }]
-        }]
-    }, {
-        title: 'Subtracting Unlike Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\frac{\\str{7}}{\\str{3}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{5}}{\\str{4}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{1}}{\\str{5}}}{\\sign{\xA0 \xA0 = \xA0}}',
-                answer: '\\row{\\frac{\\input{53}}{\\input{60}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}{\\row{\\frac{\\fracstr{7}}{\\fracstr{3}}}{\\row{\\str{, \xA0}}}{\\row{\\frac{\\fracstr{5}}{\\fracstr{4}}}{\\row{\\str{,\xA0 and \xA0}}}{\\frac{\\fracstr{1}}{\\fracstr{5}}}}',
-                answer: '\\input{60}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                },
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Use the LCD to convert the fractions: }}}{\\row{\\frac{\\str{7}}{\\str{3}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{5}}{\\str{4}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{1}}{\\str{5}}}{\\sign{\xA0 \xA0 = \xA0}}}}',
-                answer: '\\grp{\\frac{\\input{140}}{\\fracstr{60}}}{\\str{, \xA0}}{\\frac{\\input{75}}{\\fracstr{60}}}{\\str{\xA0 and \xA0}}{\\frac{\\input{12}}{\\fracstr{60}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }, {
-                problem: '\\rowgrp{\\row{\\str{Subtract the fractions: }}}{\\row{\\frac{\\str{140}}{\\str{60}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{75}}{\\str{60}}}{\\sign{\xA0 - \xA0}}{\\frac{\\str{12}}{\\str{60}}}{\\sign{\xA0 \xA0 = \xA0}}}}',
-                answer: '\\row{\\frac{\\input{53}}{\\input{60}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false
-                }
-            }]
-        }]
-    }]
-});
+angular.module('mathSkills').service('data10_2', ['dataUtils', function (dataUtils) {
+    var desc = {
+			title: '10.2 Subtracting Unlike Fractions',
+			path: '10.2-subtracting-unlike-fractions',
+            children: []
+        },
+	        template = {
+            twoFractions: {
+                title: 'Subtracting Unlike Fractions',
+                children: [{
+                    title: 'twoFractions Answer',
+                    children: [{
+						problem: '\\html{&nbsp;}',
+						answer: '\\rowgrp'
+							+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}{border-bottom-with-padding}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": false,
+							"workbook": true
+						}
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+						problem: '\\rowgrp'
+						+'{\\str{Determine the lowest common denominator (LCD) of the fractions:}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\row{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+						+'{\\str{\xA0 and \xA0}}'
+						+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}',
+						answer: '\\input{$answerDen}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\str{The LCD of $firstDen and $secondDen is $answerDen.}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\str{\xA0 Answer: \xA0 $answerDen}}{help-answer-text}}'
+						},
+                    }, {
+						problem: '\\str{Use the LCD to convert the fractions: }',
+						answer: '\\rowgrp'						
+							+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+							/*"help": '\\rowgrp'
+							+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\rowgrp{\\str{Answer:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{help-answer-text}}'*/
+						}
+                    }, {
+						problem: '\\str{Subtract the fractions: }',
+						answer: '\\rowgrp'
+							+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+							/*"help": '\\rowgrp'
+							+'{\\row{\\html{\xA0}}{\\sign{\xA0}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{row{\\sign{&minus;}}{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css'
+							+'{\\row{\\html{\xA0}}{\\sign{\xA0}}{\\frac{\\fracstr{$differenceNum}}{\\fracstr{$answerDen}}}}{help-answer-text-tight}'*/
+						}
+                    }]
+                }]
+            },
+			threeFractions: {
+                title: 'Subtracting Unlike Fractions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\html{&nbsp;}',
+						answer: '\\rowgrp'
+							+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}}{border-bottom-with-padding}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": false,
+							"workbook": true
+						}
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+						problem: '\\rowgrp'
+						+'{\\str{Determine the lowest common denominator (LCD) of the fractions:}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\row{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+						+'{\\str{\xA0 , \xA0}}'
+						+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+						+'{\\str{\xA0 and \xA0}}'
+						+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}}',
+						answer: '\\input{$answerDen}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\str{The LCD of $firstDen, $secondDen, and $thirdDen is $answerDen.}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\str{\xA0 Answer: \xA0 $answerDen}}{help-answer-text}}'
+						},
+                    }, {
+						problem: '\\str{Use the LCD to convert the fractions: }',
+						answer: '\\rowgrp'						
+							+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\input{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+							/*"help": '\\rowgrp'
+							+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\rowgrp{\\str{Answer:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{help-answer-text}}'*/
+						}
+                    }, {
+						problem: '\\str{Subtract the fractions: }',
+						answer: '\\rowgrp'
+							+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+							/*"help": '\\rowgrp'
+							+'{\\row{\\html{\xA0}}{\\sign{\xA0}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\row{\\html{\xA0}}{\\sign{\xA0}}{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{row{\\sign{+}}{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css'
+							+'{\\row{\\html{\xA0}}{\\sign{\xA0}}{\\frac{\\fracstr{$sumNum}}{\\fracstr{$answerDen}}}}{help-answer-text-tight}'*/
+						}
+                    }]
+                }]
+            }
+        },
+        data = [
+            { firstNum: '4', firstDen: '5', secondNum: '3', secondDen: '4', firstAnswerNum: '16', secondAnswerNum: '15', differenceNum: '1', answerDen: '20', template: 'twoFractions' },
+            { firstNum: '3', firstDen: '2', secondNum: '3', secondDen: '5', firstAnswerNum: '15', secondAnswerNum: '6', differenceNum: '9', answerDen: '10', template: 'twoFractions' },
+			{ firstNum: '5', firstDen: '6', secondNum: '1', secondDen: '8', firstAnswerNum: '20', secondAnswerNum: '3', differenceNum: '17', answerDen: '24', template: 'twoFractions' },
+			{ firstNum: '5', firstDen: '8', secondNum: '1', secondDen: '2', firstAnswerNum: '5', secondAnswerNum: '4', differenceNum: '1', answerDen: '8', template: 'twoFractions' },
+			{ firstNum: '4', firstDen: '3', secondNum: '8', secondDen: '7', firstAnswerNum: '28', secondAnswerNum: '24', differenceNum: '4', answerDen: '21', template: 'twoFractions' },
+			{ firstNum: '7', firstDen: '16', secondNum: '1', secondDen: '4', firstAnswerNum: '7', secondAnswerNum: '4', differenceNum: '3', answerDen: '16', template: 'twoFractions' },
+			{ firstNum: '7', firstDen: '8', secondNum: '1', secondDen: '3', firstAnswerNum: '21', secondAnswerNum: '16', differenceNum: '5', answerDen: '24', template: 'twoFractions' },
+			{ firstNum: '11', firstDen: '12', secondNum: '1', secondDen: '\xA03\xA0', thirdNum: '1', thirdDen: '\xA06\xA0', firstAnswerNum: '11', secondAnswerNum: '4', thirdAnswerNum: '2', differenceNum: '5', answerDen: '12', template: 'threeFractions' },
+			{ firstNum: '13', firstDen: '10', secondNum: '1', secondDen: '\xA04\xA0', thirdNum: '3', thirdDen: '\xA05\xA0', firstAnswerNum: '26', secondAnswerNum: '5', thirdAnswerNum: '12', differenceNum: '9', answerDen: '20', template: 'threeFractions' },
+			{ firstNum: '7', firstDen: '3', secondNum: '5', secondDen: '4', thirdNum: '1', thirdDen: '6', firstAnswerNum: '28', secondAnswerNum: '15', thirdAnswerNum: '2', differenceNum: '11', answerDen: '12', template: 'threeFractions' }
+			
+        ];
+
+    return dataUtils.build(desc, template, data);
+}]);
+
