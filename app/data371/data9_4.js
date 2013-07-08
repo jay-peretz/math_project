@@ -50,26 +50,31 @@ angular.module('mathSkills').service('data9_4', ['dataUtils', function (dataUtil
 						},
                     }, {
 						problem: '\\str{Use the LCD to convert the fractions: }',
-						answer: '\\rowgrp'
-						+'{\\row{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-						+'{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}'
-						+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
-						+'{\\html{<span> &nbsp; and &nbsp; </span>}}'
-						+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}}',
+						answer: '\\rowgrp'						
+							+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\row{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-							+'{\\row{\\html{<span> &nbsp; and &nbsp; </span>}}}'
-							+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'
+							+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{\xA0 Answer: \xA0}}{help-answer-text}}'
+							+'{\\grp{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\css{\\row{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
-							+'{\\html{<span> &nbsp; and &nbsp; </span>}}'
-							+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}{help-answer-text}'
+							+'{\\css{\\rowgrp{\\str{Answer:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
+							+'{help-answer-text}}'
 						}
                     }]
                 }]
