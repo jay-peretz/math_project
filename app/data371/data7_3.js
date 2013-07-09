@@ -23,16 +23,20 @@ angular.module('mathSkills').service('data7_3', ['dataUtils', function (dataUtil
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\rowgrp{\\row{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&divide;}}{\\frac{\\str{$n2}}{\\str{$d2}}}}{\\row{\\str{Rewrite the problem as the product of the fractions.}}}',
+                        problem: '\\rowgrp'
+						+'{\\str{Rewrite the problem as the product of fractions:}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\row{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&divide;}}{\\frac{\\str{$n2}}{\\str{$d2}}}}',
                         answer: '\\grp{\\frac{\\input{$n1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$d2}}{\\input{$n2}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\col'+
-                                '{\\str{Reduce the fractions by canceling.}}' +
-                                '{\\row{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$d2}}{\\str{$n2}}}}',
+                        problem: '\\col'
+                                +'{\\str{Reduce the fractions by canceling.}}'
+								+'{\\html{&nbsp;}}'
+                                +'{\\row{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$d2}}{\\str{$n2}}}}',
                         answer: '\\cancelfracs{[$n1,$d1]}{[$d2,$n2]}',
                         controls: {
                             "checkAnswer": true,
@@ -64,7 +68,10 @@ angular.module('mathSkills').service('data7_3', ['dataUtils', function (dataUtil
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\rowgrp{\\row{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&divide;}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\sign{&divide;}}{\\frac{\\str{$n3}}{\\str{$d3}}}}{\\row{\\str{Rewrite the problem as the product of the fractions.}}}',
+                        problem: '\\rowgrp'
+						+'{\\str{Rewrite the problem as the product of fractions:}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\row{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&divide;}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\sign{&divide;}}{\\frac{\\str{$n3}}{\\str{$d3}}}}',
                         answer: '\\grp{\\frac{\\input{$n1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$d2}}{\\input{$n2}}}{\\sign{&times;}}{\\frac{\\input{$d3}}{\\input{$n3}}}',
                         controls: {
                             "checkAnswer": true,
@@ -73,6 +80,7 @@ angular.module('mathSkills').service('data7_3', ['dataUtils', function (dataUtil
                     }, {
                         problem: '\\col'+
                                 '{\\str{Reduce the fractions by canceling.}}' +
+								'{\\html{&nbsp;}}'+
                                 '{\\row{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$d2}}{\\str{$n2}}}{\\sign{&times;}}{\\frac{\\str{$d3}}{\\str{$n3}}}}',
                         answer: '\\cancelfracs{[$n1,$d1]}{[$d2,$n2]}{[$d3,$n3]}',
                         controls: {

@@ -12,7 +12,7 @@ angular.module('mathSkills').service('data8_4', ['dataUtils', function (dataUtil
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\row{\\str{Solve}}{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}{\\sign{&divide;}}{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+                        problem: '\\row{\\str{Solve: \xA0}}{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}{\\sign{&divide;}}{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                         answer: '\\frac{\\input{$na}}{\\input{$da}}',
                         controls: {
                             "checkAnswer": true,
@@ -30,7 +30,7 @@ angular.module('mathSkills').service('data8_4', ['dataUtils', function (dataUtil
                             "help": true
                         }
                     }, {
-                        problem: '\\rowgrp{\\row{\\str{Rewrite the problem as the product of the fractions.}}}{\\row{\\frac{\\str{$un1}}{\\str{$d1}}}{\\sign{&divide;}}{\\frac{\\str{$un2}}{\\str{$d2}}}}',
+                        problem: '\\rowgrp{\\row{\\str{Rewrite the problem as the product of the fractions.}}}{\\html{&nbsp;}}{\\row{\\frac{\\str{$un1}}{\\str{$d1}}}{\\sign{&divide;}}{\\frac{\\str{$un2}}{\\str{$d2}}}}',
                         answer: '\\grp{\\frac{\\input{$un1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$d2}}{\\input{$un2}}}',
                         controls: {
                             "checkAnswer": true,
@@ -39,6 +39,7 @@ angular.module('mathSkills').service('data8_4', ['dataUtils', function (dataUtil
                     }, {
                         problem: '\\col'+
                                 '{\\str{Reduce the fractions by canceling.}}' +
+								'{\\html{&nbsp;}}'+
                                 '{\\row{\\frac{\\str{$un1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$d2}}{\\str{$un2}}}}',
                         answer: '\\cancelfracs{[$un1,$d1]}{[$d2,$un2]}',
                         controls: {
@@ -60,7 +61,7 @@ angular.module('mathSkills').service('data8_4', ['dataUtils', function (dataUtil
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\row{\\str{Solve}}{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}{\\sign{&divide;}}{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+                        problem: '\\row{\\str{Solve: \xA0 \xA0}}{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}{\\sign{&divide;}}{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                         answer: '\\mixed{\\input{$ma}}{\\frac{\\input{$na}}{\\input{$da}}}',
                         controls: {
                             "checkAnswer": true,
@@ -78,7 +79,7 @@ angular.module('mathSkills').service('data8_4', ['dataUtils', function (dataUtil
                             "help": true
                         }
                     }, {
-                        problem: '\\rowgrp{\\row{\\str{Rewrite the problem as the product of the fractions.}}}{\\row{\\frac{\\str{$un1}}{\\str{$d1}}}{\\sign{&divide;}}{\\frac{\\str{$un2}}{\\str{$d2}}}}',
+                        problem: '\\rowgrp{\\row{\\str{Rewrite the problem as the product of the fractions.}}}{\\html{&nbsp;}}{\\row{\\frac{\\str{$un1}}{\\str{$d1}}}{\\sign{&divide;}}{\\frac{\\str{$un2}}{\\str{$d2}}}}',
                         answer: '\\grp{\\frac{\\input{$un1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$d2}}{\\input{$un2}}}',
                         controls: {
                             "checkAnswer": true,
@@ -87,6 +88,7 @@ angular.module('mathSkills').service('data8_4', ['dataUtils', function (dataUtil
                     }, {
                         problem: '\\col'+
                                 '{\\str{Reduce the fractions by canceling.}}' +
+								'{\\html{&nbsp;}}'+
                                 '{\\row{\\frac{\\str{$un1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$d2}}{\\str{$un2}}}}',
                         answer: '\\cancelfracs{[$un1,$d1]}{[$d2,$un2]}',
                         controls: {

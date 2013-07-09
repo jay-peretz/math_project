@@ -32,6 +32,7 @@ angular.module('mathSkills').service('data8_3', ['dataUtils', function (dataUtil
                     }, {
                         problem: '\\col'+
                                 '{\\str{Reduce the fractions by canceling.}}' +
+                                '{\\html{&nbsp;}}'+
                                 '{\\row{\\frac{\\str{$un1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$un2}}{\\str{$d2}}}}',
                         answer: '\\cancelfracs{[$un1,$d1]}{[$un2,$d2]}',
                         controls: {
@@ -73,6 +74,7 @@ angular.module('mathSkills').service('data8_3', ['dataUtils', function (dataUtil
                     }, {
                         problem: '\\col'+
                                 '{\\str{Reduce the fractions by canceling.}}' +
+                                '{\\html{&nbsp;}}'+
                                 '{\\row{\\frac{\\str{$un1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$un2}}{\\str{$d2}}}}',
                         answer: '\\cancelfracs{[$un1,$d1]}{[$un2,$d2]}',
                         controls: {
