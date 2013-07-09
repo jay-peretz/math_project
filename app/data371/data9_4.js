@@ -34,13 +34,12 @@ angular.module('mathSkills').service('data9_4', ['dataUtils', function (dataUtil
                     title: 'Workbook',
                     children: [{
 						problem: '\\rowgrp'
-						+'{\\str{What is the lowest common denominator (LCD) of the fractions:}}',
-						answer: '\\rowgrp'
+						+'{\\str{Find the lowest common denominator (LCD) of the fractions:}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\row{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 						+'{\\str{\xA0 and \xA0}}'
-						+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\input{$answerDen}}}',
+						+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}',
+						answer: '\\input{$answerDen}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -60,7 +59,8 @@ angular.module('mathSkills').service('data9_4', ['dataUtils', function (dataUtil
 							+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp'
+							"help": true
+							/*"help": '\\rowgrp'
 							+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 							+'{\\sign{=}}'
 							+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
@@ -74,7 +74,7 @@ angular.module('mathSkills').service('data9_4', ['dataUtils', function (dataUtil
 							+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
-							+'{help-answer-text}}'
+							+'{help-answer-text}}'*/
 						}
                     }]
                 }]
@@ -86,8 +86,8 @@ angular.module('mathSkills').service('data9_4', ['dataUtils', function (dataUtil
 			{ firstNum: '4', firstDen: '5', secondNum: '5', secondDen: '4', firstAnswerNum: '16', secondAnswerNum: '25', answerDen: '20', template: 'main' },
 			{ firstNum: '2', firstDen: '3', secondNum: '5', secondDen: '6', firstAnswerNum: '4', secondAnswerNum: '5', answerDen: '6', template: 'main' },
 			{ firstNum: '5', firstDen: '8', secondNum: '6', secondDen: '5', firstAnswerNum: '25', secondAnswerNum: '48', answerDen: '40', template: 'main' },
-			{ firstNum: '1', firstDen: '10', secondNum: '3', secondDen: '4', firstAnswerNum: '2', secondAnswerNum: '15', answerDen: '20', template: 'main' },
-			{ firstNum: '10', firstDen: '3', secondNum: '7', secondDen: '5', firstAnswerNum: '50', secondAnswerNum: '21', answerDen: '15', template: 'main' },
+			{ firstNum: '1', firstDen: '10', secondNum: '3', secondDen: '\xA04\xA0', firstAnswerNum: '2', secondAnswerNum: '15', answerDen: '20', template: 'main' },
+			{ firstNum: '10', firstDen: '3', secondNum: '\xA07\xA0', secondDen: '5', firstAnswerNum: '50', secondAnswerNum: '21', answerDen: '15', template: 'main' },
 			{ firstNum: '9', firstDen: '5', secondNum: '7', secondDen: '2', firstAnswerNum: '18', secondAnswerNum: '35', answerDen: '10', template: 'main' },
 			{ firstNum: '3', firstDen: '7', secondNum: '7', secondDen: '8', firstAnswerNum: '24', secondAnswerNum: '49', answerDen: '56', template: 'main' },
 			{ firstNum: '15', firstDen: '6', secondNum: '3', secondDen: '10', firstAnswerNum: '75', secondAnswerNum: '9', answerDen: '30', template: 'main' },
