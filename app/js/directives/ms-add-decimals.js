@@ -169,9 +169,9 @@ angular.module('mathSkills')
 							} else {
 								for (var ii = 0, len = addendnumbers.length; ii < len; ii += 1) {
 									if (ii != len - 1) { 
-										$scope.inenglish += addendnumbers[ii]+", ";
+										$scope.inenglish += addendnumbers[ii]+", \xA0";
 									} else {
-										$scope.inenglish += "and "+addendnumbers[ii];
+										$scope.inenglish += " and \xA0"+addendnumbers[ii];
 									}
 								}
 							}
