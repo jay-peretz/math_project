@@ -1,0 +1,38 @@
+ms-equivalent {
+    margin-bottom: 20px;
+}
+ms-equivalent tr td,
+ms-equivalent .fraction {
+    text-align:center;
+} 
+ms-equivalent .control-group,
+ms-equivalent label {
+    margin: 0;
+    padding: 0;
+}
+ms-equivalent tr hr {
+    border-color: transparent transparent #515151 transparent;
+	height:1px;
+	padding: 0;
+	margin: 0;
+}
+ms-equivalent tr:nth-child(1) td:nth-child(1),
+ms-equivalent tr:nth-child(1) td:nth-child(3),
+ms-equivalent tr:nth-child(3) td:nth-child(1),
+ms-equivalent tr:nth-child(3) td:nth-child(3) {
+    padding: 0 4px;
+}
+
+ms-equivalent ms-fraction > table {
+    margin: 0;
+}
+
+ms-equivalent .fraction tr:nth-child(1) td {
+    padding-bottom: 1px;
+}
+ms-equivalent .fraction tr:nth-child(3) td {
+	padding-top: 3px;
+}
+ms-equivalent tr table {
+    margin:0 auto;
+}
