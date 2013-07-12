@@ -69,7 +69,7 @@ describe('<ms-add-decimals>', function () {
                 $rootScope.$digest();
             }));
     
-            it('it should display three numbers in text.', inject(function ($rootScope) {
+            xit('it should display three numbers in text.', inject(function ($rootScope) {
                 expect(jQuery(element).find('span').text()).toContain('301.1, 815.2, and 419.3');																		
             }));
         });
