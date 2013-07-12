@@ -1,10 +1,10 @@
  /*global angular */
-
-angular.module('mathSkills').service('data14_1', function () {
-    var ret = {
-		title: '14.1 Multiply Decimal Numbers',
-		path: '14.1-multiply-decimal-numbers',
-		children: []
+ 
+angular.module('mathSkills').service('data14_1', ['dataUtils', function (dataUtils) {
+    var desc = {
+			title: '14.1 Multiply Decimal Numbers',
+			path: '14.1-multiply-decimal-numbers',
+            children: []
         },
         template = {
 			main: {
@@ -16,7 +16,7 @@ angular.module('mathSkills').service('data14_1', function () {
 						answer: '\\input{$answer}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\row{\\css{\\str{Add the number of decimal places in the multiplicand to the number of decimal places in the multiplier to obtain the number of decimal places in the answer:}}{label_like}}}{\\row{\\multiplydecimals{math}{complete}{$number1}{$number2}}{\\css{\\row{\\str{Answer: \xA0}}{\\commasnumber{$answer}}}{help-answer-text}}}'
+							"help": '\\rowgrp{\\row{\\str{Add the number of decimal places in the multiplicand to the number of decimal places in the multiplier to obtain the number of decimal places in the answer:}}}{\\row{\\multiplydecimals{math}{complete}{$number1}{$number2}}{\\css{\\row{\\str{Answer: \xA0}}{\\commasnumber{$answer}}}{help-answer-text}}}'
 						}
                     }]
                 }]
@@ -33,22 +33,7 @@ angular.module('mathSkills').service('data14_1', function () {
             { number1: '8.68', number2: '39.8', mathorenglish1: 'english', answer: '345.464', template: 'main' },
             { number1: '5.4', number2: '3.18', mathorenglish1: 'english', answer: '17.172', template: 'main' },
             { number1: '1.39', number2: '3.82', mathorenglish1: 'math', answer: '5.3098', template: 'main' },
-        ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('\\$' + symbol, 'g'), data[symbol]);
-                }
-            }
-            return JSON.parse(string);
-        };
+       ];
 
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
-
-    return ret;
-});
-
-
+    return dataUtils.build(desc, template, data);
+}]);
