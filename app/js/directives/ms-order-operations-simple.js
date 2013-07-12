@@ -18,11 +18,11 @@ angular.module('mathSkills')
                         var newArgs = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
                             if (parsed.tag === 'but' && parsed.args[1] === 'T') {
-                                tagString = '\\rowgrp{\\str{' + parsed.args[0] + '}}{\\html{&#9660;}}{' + $scope.answers[$scope.cur] + '}';
+                                tagString = '\\col{\\sign{' + parsed.args[0] + '}}{\\html{&#9660;}}{' + $scope.answers[$scope.cur] + '}';
                             }
                             return tagString;
                         });
-                        $scope.rows[$scope.cur] = '\\grp{' + newArgs.join('}{') + '}';
+                        $scope.rows[$scope.cur] = '\\row{' + newArgs.join('}{') + '}';
                     };
                 $scope.cur = 0;
                 $scope.mode = 'row';
@@ -52,7 +52,7 @@ angular.module('mathSkills')
                             e.stopPropagation();
                             break;
                         case 'answer':
-                            if (data.result === 'correct' && data.expected === parser.replace($scope.answers[$scope.cur], 'input', 'str')) {
+                            if (data.result === 'correct' && data.expected === $scope.answers[$scope.cur]) {
                                 if ($scope.rows.length === $scope.cur + 2) {
                                     $scope.instructions = 'Great Job!  You have fully solved the problem.';
                                     $timeout(function () {

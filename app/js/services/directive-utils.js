@@ -44,7 +44,7 @@ angular.module('mathSkills.services')
                         if (data.controllerId !== $scope.controllerId) {
                             // Stop this event from going up the scope chain.
                             e.stopPropagation();
-console.log(data.answer,'   ', data);
+
                             // Set the incorrect flag if appropriate.
                             if (data.result === 'incorrect') {
                                 $scope.result = 'incorrect';

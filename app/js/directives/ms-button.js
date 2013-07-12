@@ -24,8 +24,10 @@ angular.module('mathSkills')
                     // handle check answer event for parent scope "always correct".
                     $scope.$on ('checkAnswer', function (e) {
                         if (e.defaultPrevented === false){
-                            var data = {};
-                            data.result = 'correct';
+                            var data = {
+                                result: 'correct',
+                                answer: '\\btn{' + $scope.args[0] + '}{' + $scope.args[1] + '}'
+                            };
                             $scope.$emit('answer', data);
                         }
                     });
