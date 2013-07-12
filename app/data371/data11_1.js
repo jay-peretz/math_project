@@ -63,10 +63,10 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
                 template: 'main'
             },
 			{
-				prob: '\\\\row{\\\\frac{\\\\str{8}}{\\\\str{6}}}{\\\\sign{-}}{\\\\frac{\\\\str{3}}{\\\\str{3}}}{\\\\sign{/}}{\\\\frac{\\\\str{6}}{\\\\str{5}}}',
+				prob: '\\\\row{\\\\frac{\\\\str{8}}{\\\\str{6}}}{\\\\sign{-}}{\\\\frac{\\\\str{3}}{\\\\str{3}}}{\\\\sign{&divide;}}{\\\\frac{\\\\str{6}}{\\\\str{5}}}',
 				ans: '\\\\frac{\\\\input{1}}{\\\\input{2}}',
 				wb: '\\\\ordopssimple{' +
-						'\\\\row{\\\\frac{\\\\str{8}}{\\\\str{6}}}{\\\\but{-}{F}}{\\\\frac{\\\\str{3}}{\\\\str{3}}}{\\\\but{/}{T}}{\\\\frac{\\\\str{6}}{\\\\str{5}}},' +
+						'\\\\row{\\\\frac{\\\\str{8}}{\\\\str{6}}}{\\\\but{-}{F}}{\\\\frac{\\\\str{3}}{\\\\str{3}}}{\\\\but{÷}{T}}{\\\\frac{\\\\str{6}}{\\\\str{5}}},' +
 						'\\\\frac{\\\\input{5}}{\\\\input{6}},' +
 						'\\\\row{\\\\frac{\\\\str{8}}{\\\\str{6}}}{\\\\but{-}{T}}{\\\\frac{\\\\str{5}}{\\\\str{6}}},' +
 						'\\\\frac{\\\\input{1}}{\\\\input{2}},' +
