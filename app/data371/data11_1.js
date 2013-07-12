@@ -61,7 +61,31 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
 						'\\\\row{\\\\frac{\\\\str{1}}{\\\\str{2}}}' +
                     '}',
                 template: 'main'
-            }
+            },
+			{
+				prob: '\\\\row{\\\\frac{\\\\str{8}}{\\\\str{6}}}{\\\\sign{-}}{\\\\frac{\\\\str{3}}{\\\\str{3}}}{\\\\sign{/}}{\\\\frac{\\\\str{6}}{\\\\str{5}}}',
+				ans: '\\\\frac{\\\\input{1}}{\\\\input{2}}',
+				wb: '\\\\ordopssimple{' +
+						'\\\\row{\\\\frac{\\\\str{8}}{\\\\str{6}}}{\\\\but{-}{F}}{\\\\frac{\\\\str{3}}{\\\\str{3}}}{\\\\but{/}{T}}{\\\\frac{\\\\str{6}}{\\\\str{5}}},' +
+						'\\\\frac{\\\\input{5}}{\\\\input{6}},' +
+						'\\\\row{\\\\frac{\\\\str{8}}{\\\\str{6}}}{\\\\but{-}{T}}{\\\\frac{\\\\str{5}}{\\\\str{6}}},' +
+						'\\\\frac{\\\\input{1}}{\\\\input{2}},' +
+						'\\\\row{\\\\frac{\\\\str{1}}{\\\\str{2}}}' +
+						'}',
+				template: 'main'
+			},
+			{
+				prob : '\\\\row{\\\\sign{(}}{\\\\frac{\\\\str{9}}{\\\\str{5}}}{\\\\sign{-}}{\\\\frac{\\\\str{1}}{\\\\str{4}}}{\\\\sign{)}}{\\\\sign{/}}{\\\\frac{\\\\str{5}}{\\\\str{6}}}',
+				ans: '\\\\mixed{\\\\input{1}}{\\\\frac{\\\\input{43}}{\\\\input{50}}}' ,
+				wb : '\\\\ordopssimple{' +
+						'\\\\row{\\\\sign{(}}{\\\\frac{\\\\str{9}}{\\\\str{5}}}{\\\\but{-}{T}}{\\\\frac{\\\\str{1}}{\\\\str{4}}}{\\\\sign{)}}{\\\\but{/}{F}}{\\\\frac{\\\\str{5}}{\\\\str{6}}},' +
+						'\\\\frac{\\\\input{31}}{\\\\input{20}},' +
+						'\\\\row{\\\\frac{\\\\str{31}}{\\\\str{20}}}{\\\\but{/}{T}}{\\\\frac{\\\\str{5}}{\\\\str{6}}},' +
+						'\\\\mixed{\\\\input{1}}{\\\\frac{\\\\input{43}}{\\\\input{50}}},' +
+						'\\\\row{\\\\mixed{\\\\str{1}}{\\\\frac{\\\\str{43}}{\\\\str{50}}}}' +
+						'}',
+				template: 'main'
+			}
         ];
 
     return dataUtils.build(desc, template, data);
