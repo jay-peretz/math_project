@@ -26,7 +26,7 @@ angular.module('mathSkills')
                 $scope.question = function () {
                     var simplified = $scope.isSimplified();
 
-                    return '\\rowgrp{\\html{&nbsp;}}{\\butgrp{\\row{\\but{Yes}{' + (simplified === true ? 'F' : 'T') + '}}{\\but{No}{' + (simplified === false ? 'F' : 'T') + '}}}}';
+                    return '\\butgrp{\\row{\\but{Yes}{' + (simplified === true ? 'F' : 'T') + '}}{\\but{No}{' + (simplified === false ? 'F' : 'T') + '}}}';
                 };
 
                 // Determines whether the fractions have been fully cancelled.
