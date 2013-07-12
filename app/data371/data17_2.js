@@ -48,9 +48,14 @@ angular.module('mathSkills').service('data17_2', function () {
                     }, {
                         problem: '\\html{$question}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\ins{Yes, now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).},\\ins{We are told that there are $$ln $$lbln to every $$ld $$lbld. The given relationship is:}]}{$$previousCorrect}'+
+                            '\\choose{[\\ins{Yes, now make this first relationship between $lbln and $lbld equal to a second relationship (use \\"X\\" for an unknown value).},\\ins{We are told that there are $ln $lbln to every $ld $lbld. The given relationship is:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\input{$$rn}}{\\select{$$lbln}{$$lblarr}}}{\\grp{\\input{$$rd}{val}{func}{[test1:justin,test2:mer]}}{\\select{$$lbld}{$$lblarr}}}}'+
+                            '\\equiv'+
+                            '{\\grp{\\str{$ln}}{\\str{ $lbln}}}'+
+                            '{\\grp{\\str{$ld}}{\\str{ $lbld}}}'+
+                            '{\\str{=}}'+
+                            '{\\grp{\\input{$rn}{rNum}}{\\select{$lbln}{$lblarr}}}'+
+                            '{\\grp{\\input{$rd}{rden}{func}{[test1:justin,test2:mer]}}{\\select{$lbld}{$$lblarr}}}'+
                         '}{'+
                             '\\choose{[\\ins{}{q},\\ins{Now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).}]}{$$previousCorrect}'+
                         '}}{well}',
@@ -64,7 +69,12 @@ angular.module('mathSkills').service('data17_2', function () {
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\ins{Great! You now have a proportion. Solve the proportion problem.},\\ins{The second relationship is an \\"unknown number\\" (shown here as \\"X\\") of $$lbld to every $$rn $$lbln. You now have a proportion:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{$$rd}}{\\str{$$lbld}}}}'+
+                            '\\equiv'+
+                                '{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}'+
+                                '{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}'+
+                                '{\\str{=}}'+
+                                '{\\grp{\\str{$$rn}}{\\str{$$lbln}}}'+
+                                '{\\grp{\\str{$$rd}}{\\str{$$lbld}}}'+
                         '}{'+
                             '\\ins{Now solve the proportion problem.}'+
                         '}{'+
@@ -79,7 +89,12 @@ angular.module('mathSkills').service('data17_2', function () {
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\ins{Congratulations!},\\ins{The correct solution is:}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\grp{\\frac{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}}{\\str{=}}{\\frac{\\grp{\\str{$$rn}}{\\str{$$lbln}}}{\\grp{\\str{$rd}}{\\str{$$lbld}}}}'+
+                            '\\equiv'+
+                                '{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}'+
+                                '{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}'+
+                                '{\\str{=}}'+
+                                '{\\grp{\\str{$$rn}}{\\str{$$lbln}}}'+
+                                '{\\grp{\\str{$$rd}}{\\str{$$lbld}}}'+
                         '}{'+
                             '\\ins{Now fill in the boxes below with the complete unit rate answer.}'+
                         '}{'+
@@ -105,7 +120,7 @@ angular.module('mathSkills').service('data17_2', function () {
                 ln: 154, rn: 'x', lbln: 'dollars', lbln2: 'dollar ',
                 ld: 7, rd: 1, lbld: 'days', lbld2: 'day ',
                 lblarr: '[\\"dollars\\",\\"days\\",\\"earned\\"]',
-                lblarr2: '[\\"dollar \\",\\"day \\",\\"earned \\"]',
+                lblarr2: '[\\" dollar \\",\\" day \\",\\" earned \\"]',
                 flip:[["5"], ["lblarr", "lblarr2"], ["lbld", "lbld2"], ["lbln", "lbln2"]],
                 previousCorrect: true,
                 //flip: [[1], ["ln", "ld"], ["rn", "rd"], ["lbln", "lbld"]],

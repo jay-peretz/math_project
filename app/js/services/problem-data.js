@@ -1,5 +1,6 @@
 'use strict';
-/*global angular */
+/*global angular, jQuery */
+
 var privateProblemData = {},
     e = {};
     
@@ -113,26 +114,52 @@ angular.module('mathSkills.services')
                 * live data/event utils.                                           
                 ***************************************************************/
                 
-                init: function ($scope){
-                    $scope.$on('answer', function (e, data) {  //console.log('problem answer', data); console.log('report answer', data.expected);
-                        if ("func" in data) {
-                            data.event = 'answer';
-                            problemData.mainfunc(data.func, data, $scope);
-                        }
-                    });
+                init: function ($element, $scope, values){
+                    // check if we have second arg.
+if ($scope.myargs.length > 1){  
+    // if there is data- put it in input value 
+    if (problemData.checkData($scope.myargs[1]) !== false) {
+        $scope.answer = problemData.getData($scope.myargs[1]);   
+    }
+                        
+                        $scope.values = values;
+                    
+                        $scope.$on('answer', function (e, data) {  //console.log('problem answer', data); console.log('report answer', data.expected);
+                            if ("func" in $scope.data) {
+                                data.event = 'answer';
+                                problemData.handleEvent($scope);
+                            }
+                        });
+                        
+                        $scope.$on('updateVal', function (e, data) {  //console.log('problem answer', data); console.log('report answer', data.expected);
+                            $scope[values[0]] = '8'; //problemData.getData($scope.myargs[1]); 
+                        });
+                        
+                        jQuery($element).on('keyup', 'input', function (event) {
+                            $scope.$apply(problemData.handleEvent($scope));
+                        });
+                    }
                 },
-                
-                dataEvent: function (data, $scope) {
-                    problemData.setEventData(data, data.key);
-                    problemData.mainfunc(data.func, data, $scope);
+
+                handleEvent: function ($scope){ console.log('log out  ', $scope.data);
+                        if ($scope.data.key) {
+                           this.setData($scope.answer, $scope.data.key); 
+                        } 
+                        if ($scope.data.func) {
+                            $scope.data.result = this.checkAnswer($scope) ? true : false; 
+                            $scope.data = $scope.data.arr ? this.process($scope.data, $scope.data.arr) : $scope.data;
+                            delete $scope.data.arr;
+                            this.setEventData($scope.data, $scope.data.key); // store data obj by key in "e" obj.
+                            this.mainfunc($scope.data.func, $scope.data, $scope); // call custom handler
+                        }   console.log('ya', $scope.data);
                 },
-                
-                mainfunc: function (func, data, $scope){
-                    this[func].apply(this, Array.prototype.slice.call(arguments, 1));
+
+                mainfunc: function (func, data, $scope){ 
+                    if (func !== false) {this[func].apply(this, Array.prototype.slice.call(arguments, 1))} //console.log('func.......  ran ', func);
                 },
       
-                process: function (dataObj, addObj) {
-                    return problemData.joinObj(dataObj, problemData.preProcess(addObj));
+                process: function (dataObj, addObj) { 
+                    return this.joinObj(dataObj, this.preProcess(addObj));
                 },
                 
                 preProcess: function (obj){
@@ -154,6 +181,20 @@ angular.module('mathSkills.services')
                     return dataObj;
                 },
 
+                checkAnswer: function ($scope) {
+                    if ($scope.data.expected && $scope.data.expected[0] === '[') {
+                        var possibleAnswers = JSON.parse($scope.data.expected);
+                        this.getIndex().then(function (index) {
+                            $scope.data.expected = possibleAnswers[index];
+                        });
+                    }
+                    return $scope.data.expt === $scope[$scope.values[0]];
+                },
+
+                updateVal: function () {
+                    $rootScope.$broadcast('updateVal');
+                },
+                
                 setEventData: function (data, key) {
                     e[key] = data;
                 },
@@ -167,9 +208,10 @@ angular.module('mathSkills.services')
                 ***************************************************************/
                 //func: function (data, $scope){ console.log("data", data); //console.log("$scope", $scope);}
                 
-                func: function (data, $scope){ //console.log("data", data); console.log("$scope", $scope);
-                    if (data.correct){
-                        problemData.index("5");
+                func: function (data, $scope){ //console.log("data ",data.func, data); console.log("$scope", $scope);
+                    if (data.result){
+                        //problemData.index("5");
+                        this.updateVal(); //console.log('func....... is running ');
                     }
                     
                 }

@@ -1,4 +1,4 @@
-ms-equivalent {
+ms-equivalent table{
     margin-bottom: 20px;
 }
 ms-equivalent tr td,
@@ -20,6 +20,10 @@ ms-equivalent tr:nth-child(1) td:nth-child(1),
 ms-equivalent tr:nth-child(1) td:nth-child(3),
 ms-equivalent tr:nth-child(3) td:nth-child(1),
 ms-equivalent tr:nth-child(3) td:nth-child(3) {
+    padding: 0 4px;
+}
+
+ms-equivalent tr:nth-child(2) td:nth-child(2) {
     padding: 0 4px;
 }
 
