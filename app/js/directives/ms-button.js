@@ -89,7 +89,7 @@ angular.module('mathSkills')
                     expected: '@',
                     label: '@'
                 },
-                template: '<button class="btn btn-{{class}}" type=button>{{args[0]}}</button>'
+                template: '<button class="btn btn-{{class}}" type=button>{{args[0] | changeSigns}}</button>'
             };
         }
     ]);
