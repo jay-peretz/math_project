@@ -53,6 +53,11 @@ angular.module('mathSkills')
                             $scope.helpPanelWell = 'well';
                             $scope.helpExpression = data.expression;
                         });
+						
+						$scope.panelStyleWide = false;
+						$scope.$on('setPanelWide', function () {
+							$scope.panelStyleWide = true;	
+						});
 
                         $scope.$on('triggerCheckFocus', function () {
                             triggerAnswerAreaEvent('checkFocus');

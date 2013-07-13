@@ -1,15 +1,17 @@
 <div>
     <div class=row-fluid>
-        <ms-expression expected={{problem}} class="span4 problemwrapper"></ms-expression>
+        <span ng-show="panelStyleWide"><ms-expression expected={{problem}} class="problemwrapper" ></ms-expression></span>
+        <span ng-hide="panelStyleWide"><ms-expression expected={{problem}} class="span4 problemwrapper" ></span>
         <div class="span8 row-fluid {{helpPanelWell}}">
            <span ng-hide=showHelpPanel>
-                <div class="span8 row-fluid">
+					<div class="row-fluid" ng-class="{span8: !(panelStyleWide)}">
                 	<div class="row-fluid feedbackwrapper">
                         <ms-feedback></ms-feedback>
                     </div>
                     <ms-expression expected={{answer}} class=row-fluid></ms-expression>              
                 </div>
-                <ms-controls data={{controls}} class=span4></ms-controls>
+                <span ng-show=panelStyleWide><ms-controls data={{controls}} class=span4  style="margin-top:20px;"></ms-controls></span>
+                <span ng-hide=panelStyleWide><ms-controls data={{controls}} class=span4></ms-controls></span>
             </span>
             <span ng-show=showHelpPanel class="{{helpPanelClass}}">
                 <div>
