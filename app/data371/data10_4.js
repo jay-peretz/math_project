@@ -15,11 +15,11 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 						problem: '\\str{\xA0}',
 						answer: '\\css'
 						+'{\\rowgrp'
-						+'{grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
-						+'{html{&nbsp;}}'
-						+'{\\css{grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}{border-bottom-with-padding}}'
-						+'{html{&nbsp;}}'
-						+'{grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}{border-bottom-with-padding}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}}'
 						+'{centerTableText3}',
 						controls: {
 							"checkAnswer": true,
@@ -32,8 +32,10 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 					children: [{
 						problem: '\\rowgrp'
 						+'{\\str{Find the lowest common denominator (LCD) of the fractions:}}'
-						+'{html{&nbsp;}}'
-						+'{grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{\\str{\xA0 and \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}',
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\html{<span style="font-size:420%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\sign{-}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}}',
 						answer: '\\input{$denanswer}',
 						controls: {
 							"checkAnswer": true,
@@ -46,7 +48,7 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 						problem: '\\str{Use the LCD to convert the fractions: }',
 						answer: '\\rowgrp'
 						+'{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\str{$denanswer}}}}}'
-						+'{html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\str{$denanswer}}}}}',
 						controls: {
 							"checkAnswer": true,
@@ -57,9 +59,9 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 						answer: '\\css'
 						+'{\\rowgrp'
 						+'{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$denanswer}}}}}'
-						+'{html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\css{\\grp{\\sign{\xA0 \xA0 - }}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$denanswer}}}}}{border-bottom-with-padding}}'
-						+'{html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\sign{\xA0 \xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}}{centerTableText3}',
 						controls: {
 							"checkAnswer": true,
@@ -76,11 +78,11 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 						problem: '\\str{\xA0}',
 						answer: '\\css'
 						+'{\\rowgrp'
-						+'{grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
-						+'{html{&nbsp;}}'
-						+'{\\css{grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}{border-bottom-with-padding}}'
-						+'{html{&nbsp;}}'
-						+'{grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$denanswer2}}}}}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}{border-bottom-with-padding}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$denanswer2}}}}}}'
 						+'{centerTableText3}',
 						controls: {
 							"checkAnswer": true,
@@ -93,8 +95,10 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 					children: [{
 						problem: '\\rowgrp'
 						+'{\\str{Find the lowest common denominator (LCD) of the fractions:}}'
-						+'{html{&nbsp;}}'
-						+'{grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{\\str{\xA0 and \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}',
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\html{<span style="font-size:420%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\sign{-}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}}',
 						answer: '\\input{$denanswer1}',
 						controls: {
 							"checkAnswer": true,
@@ -107,7 +111,7 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 						problem: '\\str{Use the LCD to convert the fractions: }',
 						answer: '\\rowgrp'
 						+'{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\str{$denanswer1}}}}}'
-						+'{html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\str{$denanswer1}}}}}',
 						controls: {
 							"checkAnswer": true,
@@ -118,9 +122,9 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 						answer: '\\css'
 						+'{\\rowgrp'
 						+'{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$denanswer1}}}}}'
-						+'{html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\css{\\grp{\\sign{\xA0 \xA0 - }}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$denanswer1}}}}}{border-bottom-with-padding}}'
-						+'{html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\sign{\xA0 \xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer1}}{\\input{$denanswer1}}}}}}{centerTableText3}',
 						controls: {
 							"checkAnswer": true,
@@ -144,11 +148,11 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 						problem: '\\str{\xA0}',
 						answer: '\\css'
 						+'{\\rowgrp'
-						+'{grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
-						+'{html{&nbsp;}}'
-						+'{\\css{grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}{border-bottom-with-padding}}'
-						+'{html{&nbsp;}}'
-						+'{grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}{border-bottom-with-padding}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}}'
 						+'{centerTableText3}',
 						controls: {
 							"checkAnswer": true,
@@ -161,8 +165,10 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 					children: [{
 						problem: '\\rowgrp'
 						+'{\\str{Find the lowest common denominator (LCD) of the fractions:}}'
-						+'{html{&nbsp;}}'
-						+'{grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{\\str{\xA0 and \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}',
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\html{<span style="font-size:420%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\sign{-}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}}',
 						answer: '\\input{$dennew1}',
 						controls: {
 							"checkAnswer": true,
@@ -185,10 +191,10 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 						problem: '\\str{Do you need to borrow one?}',
 						answer: '\\css'
 						+'{\\rowgrp'
-						+'{grp{\\sign{\xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}}'
-						+'{html{&nbsp;}}'
-						+'{\\css{grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}'
-						+'{html{&nbsp;}}'
+						+'{\\grp{\\sign{\xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\butgrp{\\row{\\but{YES}{T}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\but{NO}{F}}}}}'
 						+'{centerTableText3}',
 						controls: {
@@ -207,9 +213,9 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 						answer: '\\css'
 						+'{\\rowgrp'
 						+'{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\str{$numnew3}}{\\str{$dennew1}}}}}'
-						+'{html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\css{\\grp{\\sign{\xA0 \xA0 - }}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}'
-						+'{html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\sign{\xA0 \xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$dennew1}}}}}}'
 						+'{centerTableText3}',
 						controls: {
@@ -227,11 +233,11 @@ fourth: {
 						problem: '\\str{\xA0}',
 						answer: '\\css'
 						+'{\\rowgrp'
-						+'{grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
-						+'{html{&nbsp;}}'
-						+'{\\css{grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}{border-bottom-with-padding}}'
-						+'{html{&nbsp;}}'
-						+'{grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}{border-bottom-with-padding}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}}'
 						+'{centerTableText3}',
 						controls: {
 							"checkAnswer": true,
@@ -244,8 +250,10 @@ fourth: {
 					children: [{
 						problem: '\\rowgrp'
 						+'{\\str{Find the lowest common denominator (LCD) of the fractions:}}'
-						+'{html{&nbsp;}}'
-						+'{grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{\\str{\xA0 and \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}',
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\html{<span style="font-size:420%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\sign{-}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}}',
 						answer: '\\input{$dennew1}',
 						controls: {
 							"checkAnswer": true,
@@ -268,10 +276,10 @@ fourth: {
 						problem: '\\str{Do you need to borrow one?}',
 						answer: '\\css'
 						+'{\\rowgrp'
-						+'{grp{\\sign{\xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}}'
-						+'{html{&nbsp;}}'
-						+'{\\css{grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}'
-						+'{html{&nbsp;}}'
+						+'{\\grp{\\sign{\xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\butgrp{\\row{\\but{YES}{T}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\but{NO}{F}}}}}'
 						+'{centerTableText3}',
 						controls: {
@@ -290,9 +298,9 @@ fourth: {
 						answer: '\\css'
 						+'{\\rowgrp'
 						+'{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\str{$numnew3}}{\\str{$dennew1}}}}}'
-						+'{html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\css{\\grp{\\sign{\xA0 \xA0 - }}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}'
-						+'{html{&nbsp;}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\sign{\xA0 \xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numnew4}}{\\input{$dennew1}}}}}}'
 						+'{centerTableText3}',
 						controls: {
@@ -309,71 +317,6 @@ fourth: {
 					}]
 				}]
             },
-			/*fourthOld: {
-                title: 'Subtracting Mixed Numbers',
-				children: [{
-					title: 'Main Answer',
-					children: [{
-						problem: '\\str{\xA0}',
-						answer: '\\css'
-						+'{\\rowgrp'
-						+'{grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
-						+'{grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}'
-						+'{grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}}'
-						+'{centerTableText3}',
-						controls: {
-							"checkAnswer": true,
-							"help": false,
-							"workbook": true
-						}
-					}]
-				}, {
-					title: 'Workbook',
-					children: [{
-						problem: '\\rowgrp{\\row{\\str{Find the lowest common denominator (LCD) of the fractions:}}}',
-						answer: '\\css{\\rowgrp{grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}{grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}{\\grp{\\str{\xA0}}{\\input{$dennew1}}}}{centerTableText6}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						},
-					}, {
-						problem: '\\str{Use the LCD to convert the fractions: }',
-						answer: '\\rowgrp{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\str{$dennew1}}}}}{\\grp{\\str{\xA0}}}{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\str{$dennew1}}}}}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						}
-					}, {
-						problem: '\\str{Do you need to borrow one?}',
-						answer: '\\css{\\rowgrp{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}}{\\grp{\\sign{\xA0 \xA0 - }}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{\\grp{\\sign{\xA0 \xA0 \xA0}}{\\butgrp{\\row{\\but{YES}{T}}{\\but{NO}{F}}}}}}{centerTableText3}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						}
-					}, {
-						problem: '\\str{Rewrite the fractional part of the minuend, borrowing one from the whole number: }',
-						answer: '\\rowgrp{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\input{$numnew3}}{\\str{$dennew1}}}}}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						}
-					}, {
-						problem: '\\str{Subtract the fractions:}',
-						answer: '\\css{\\rowgrp{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\str{$numnew3}}{\\str{$dennew1}}}}}{\\grp{\\sign{\xA0 \xA0 - }}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{\\grp{\\sign{\xA0 \xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numnew4}}{\\input{$dennew1}}}}}}{centerTableText3}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						}
-					}, {
-						problem: '\\row{\\str{Reduce \xA0}}{\\mixed{\\str{$wholeanswer}}{\\frac{\\fracstr{$numnew4}}{\\fracstr{$dennew1}}}}{\\str{\xA0 to its lowest terms }}',
-						answer: '\\reducefrac{mixed{\\str{$wholeanswer}}{\\frac{\\fracstr{$numnew4}}{\\fracstr{$dennew1}}}}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						}
-					}]
-				}]
-            }*/
         },
         data = [
             { whole1: 2, num1: 4, den1: 5, whole2: 1, num2: 3, den2: 4, wholeanswer: 1, numanswer: 1, denanswer: 20, numnew1: 16, numnew2: 15, template: 'main' },
