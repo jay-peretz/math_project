@@ -41,7 +41,7 @@ angular.module('mathSkills')
                                 }
                                 data.clicked = true;
                             }else{
-                                data.clicked = false;
+                                data.result = 'correct';
                                 $scope.class = '';
                             }
                             data.controllerId = $scope.controllerId;
