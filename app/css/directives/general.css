@@ -51,6 +51,21 @@ body {
 	font-weight: normal;
 }
 
+/* add paddin and set width on input and select box (wb step-5 17.2 Unit Rates)*/
+.Unit-Rates {
+    padding: 0 0 10px 20px;
+}
+.Unit-Rates .bigger {
+    font-size: 2em;
+}
+.Unit-Rates input {
+    width: 40px;
+    text-align: center;
+}
+.Unit-Rates select {
+    width: 110px;
+}
+
 /* add paddin and set width on input box (16.4 proportion-application)*/
 .proportion-application {
     padding: 0 0 10px 20px;

@@ -37,9 +37,9 @@ angular.module('mathSkills').service('data17_2', function () {
                     }, {
                         problem: '\\html{$question}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\ins{Good! Now what number of $$lbln and what number of $$lbld are provided in the given relationship?},\\ins{No, the given relationship is between $$lbln and $$lbld. Now what number of $$lbln and what number of $$lbld are provided in the given relationship?}]}{$$previousCorrect}'+
+                            '\\choose{[\\ins{Good! Now what number of $$lbln and what number of $$lbld are provided in the given relationship?},\\ins{No, the given relationship is between $lbln and $lbld. Now what number of $lbln and what number of $lbld are provided in the given relationship?}]}{$$previousCorrect}'+
                         '}{'+
-                            '\\frac{\\grp{\\input{$$ln}}{\\str{ $$lbln}}}{\\grp{\\input{$$ld}}{\\str{ $$lbld}}}'+
+                            '\\frac{\\grp{\\input{$ln}}{\\str{$lbln}}}{\\grp{\\input{$ld}}{\\str{$lbld}}}'+
                         '}}{well}',
                         controls: {
                             "checkAnswer": true,
@@ -51,11 +51,11 @@ angular.module('mathSkills').service('data17_2', function () {
                             '\\choose{[\\ins{Yes, now make this first relationship between $lbln and $lbld equal to a second relationship (use \\"X\\" for an unknown value).},\\ins{We are told that there are $ln $lbln to every $ld $lbld. The given relationship is:}]}{$$previousCorrect}'+
                         '}{'+
                             '\\equiv'+
-                            '{\\grp{\\str{$ln}}{\\str{ $lbln}}}'+
-                            '{\\grp{\\str{$ld}}{\\str{ $lbld}}}'+
+                            '{\\grp{\\str{$ln}}{\\str{$lbln}}}'+
+                            '{\\grp{\\str{$ld}}{\\str{$lbld}}}'+
                             '{\\str{=}}'+
-                            '{\\grp{\\input{$rn}{rNum}}{\\select{$lbln}{$lblarr}}}'+
-                            '{\\grp{\\input{$rd}{rden}{func}{[test1:justin,test2:mer]}}{\\select{$lbld}{$$lblarr}}}'+
+                            '{\\grp{\\input{$rn}}{\\select{$lbln}{$lblarr}}}'+
+                            '{\\grp{\\input{$rd}{rden}{func}}{\\select{$lbld}{$$lblarr}{selRDen}}}'+
                         '}{'+
                             '\\choose{[\\ins{}{q},\\ins{Now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).}]}{$$previousCorrect}'+
                         '}}{well}',
@@ -67,18 +67,20 @@ angular.module('mathSkills').service('data17_2', function () {
                     }, {
                         problem: '\\html{$question}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\ins{Great! You now have a proportion. Solve the proportion problem.},\\ins{The second relationship is an \\"unknown number\\" (shown here as \\"X\\") of $$lbld to every $$rn $$lbln. You now have a proportion:}]}{$$previousCorrect}'+
+                            '\\choose{['+
+                                '\\ins{Great! You now have a proportion. Solve the proportion problem.},'+
+                                '\\ins{The second relationship is an \\"unknown number\\" (shown here as \\"x\\") of $$lbln to every $$rd $$lbld. You now have a proportion:}]}{$$previousCorrect}'+
                         '}{'+
                             '\\equiv'+
-                                '{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}'+
-                                '{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}'+
+                                '{\\grp{\\str{$ln}}{\\str{$lbln}}}'+
+                                '{\\grp{\\str{$ld}}{\\str{$lbld}}}'+
                                 '{\\str{=}}'+
-                                '{\\grp{\\str{$$rn}}{\\str{$$lbln}}}'+
-                                '{\\grp{\\str{$$rd}}{\\str{$$lbld}}}'+
+                                '{\\grp{\\str{$rn}}{\\str{$lbln}}}'+
+                                '{\\grp{\\str{$rd}}{\\str{$$lbld}}}'+
                         '}{'+
                             '\\ins{Now solve the proportion problem.}'+
                         '}{'+
-                            '\\css{\\row{\\html{X\xA0 = \xA0}}{\\set{\\input{$$answer}}{$$key}}}{proportion-application}'+
+                            '\\css{\\grp{\\str{X}}{\\str{=}}{\\input{$$answer}}}{proportion-application}'+
                         '}}{well}',
                         controls: {
                             "checkAnswer": true,
@@ -90,19 +92,21 @@ angular.module('mathSkills').service('data17_2', function () {
                             '\\choose{[\\ins{Congratulations!},\\ins{The correct solution is:}]}{$$previousCorrect}'+
                         '}{'+
                             '\\equiv'+
-                                '{\\grp{\\str{$$ln}}{\\str{ $$lbln}}}'+
-                                '{\\grp{\\str{$$ld}}{\\str{ $$lbld}}}'+
+                                '{\\grp{\\str{$ln}}{\\str{$lbln}}}'+
+                                '{\\grp{\\str{$ld}}{\\str{$lbld}}}'+
                                 '{\\str{=}}'+
-                                '{\\grp{\\str{$$rn}}{\\str{$$lbln}}}'+
-                                '{\\grp{\\str{$$rd}}{\\str{$$lbld}}}'+
+                                '{\\grp{\\str{$rn}}{\\str{$lbln}}}'+
+                                '{\\grp{\\str{$rd}}{\\str{$$lbld}}}'+
                         '}{'+
                             '\\ins{Now fill in the boxes below with the complete unit rate answer.}'+
                         '}{'+
-                            '\\grp'+
+                            '\\css{\\grp'+
                                 '{\\str{Answer:}}'+
                                 '{\\input{$$answer}}'+
                                 '{\\select{$lbln}{$lblarr}}'+
-                                '{\\select{$lbld}{$lblarr}}'+
+                                '{\\html{<span class="bigger">/</span>}}'+
+                                '{\\select{$xlbld}{$xlblarr}}'+
+                            '}{Unit-Rates}'+
                         '}}{well}',
                         controls: {
                             "checkAnswer": true,
@@ -116,14 +120,12 @@ angular.module('mathSkills').service('data17_2', function () {
         [
             {
                 question: 'In seven days Mandy earned $154 baby sitting. How much did she earn per day?', 
-                answer: 22, template: 'main', key: 'rn',
-                ln: 154, rn: 'x', lbln: 'dollars', lbln2: 'dollar ',
-                ld: 7, rd: 1, lbld: 'days', lbld2: 'day ',
+                answer: 22, template: 'main',
+                ln: 154, rn: 'x', lbln: 'dollars',
+                ld: 7, rd: 1, lbld: 'days', xlbld: 'day',
                 lblarr: '[\\"dollars\\",\\"days\\",\\"earned\\"]',
-                lblarr2: '[\\" dollar \\",\\" day \\",\\" earned \\"]',
-                flip:[["5"], ["lblarr", "lblarr2"], ["lbld", "lbld2"], ["lbln", "lbln2"]],
+                xlblarr: '[\\"dollar\\",\\"day\\",\\"earned\\"]',
                 previousCorrect: true,
-                //flip: [[1], ["ln", "ld"], ["rn", "rd"], ["lbln", "lbld"]],
             },
             // { 
             //     problem: 'In a park, there are five oak trees to every three elm trees.', 

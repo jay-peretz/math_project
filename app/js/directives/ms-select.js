@@ -21,13 +21,15 @@ angular.module('mathSkills')
             controller: function ($scope, $element) {
 
                 $scope.controllerId = Math.random().toString();
-                
+
                 // Extract the args array.
                 $scope.$watch('expected', function () { 
                     if ($scope.expected){ 
-                        $scope.answercorrect = parser.extractTag($scope.expected).args[0]; 
-                        $scope.optionsarray = parser.extractTag($scope.expected).args[1]; 
-                        
+                        $scope.answer = '';
+                        $scope.myargs = parser.extractTag($scope.expected).args;
+                        $scope.answercorrect = $scope.myargs[0]; 
+                        $scope.optionsarray = $scope.myargs[1]; 
+
                         //turn answer string-arrays into array
                         if (typeof $scope.answercorrect === "string" && $scope.answercorrect[0] === "[") {
                             $scope.answercorrect = JSON.parse($scope.answercorrect);
@@ -39,8 +41,16 @@ angular.module('mathSkills')
                             //strip-out escape char.
                             $scope.optionsarray = $scope.optionsarray.replace(new RegExp('\\\\', 'g'),'');
                             $scope.optionsarray = JSON.parse($scope.optionsarray);
-                        }
-                            //console.log('args1 arr', $scope.myargs[1], '= ', $scope.optionsarray);
+                        }  //console.log('args1 arr', $scope.myargs[1], '= ', $scope.optionsarray);
+
+                        // ****start live data/event stuff****
+                        $scope.data = {
+                            expt: ($scope.myargs.length >= 0 ? $scope.myargs[0] : false),
+                            key: ($scope.myargs.length > 2 ? $scope.myargs[2] : false),
+                            func: ($scope.myargs.length > 3 ? $scope.myargs[3] : false),
+                            arr: ($scope.myargs.length > 4 ? $scope.myargs[4] : false),
+                        };
+                        problemData.init($element, $scope, ['answer', 'answercorrect', 'optionsarray']); // may need to be outside watch?
                     }
                 });
 

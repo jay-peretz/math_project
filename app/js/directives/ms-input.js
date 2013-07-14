@@ -42,13 +42,13 @@ angular.module('mathSkills')
                             }
 
                             // ****start live data/event stuff****
-                            problemData.init($element, $scope, ['answer']); // may need to be outside watch?
                             $scope.data = {
                                 expt: ($scope.myargs.length >= 0 ? $scope.myargs[0] : false),
                                 key: ($scope.myargs.length > 1 ? $scope.myargs[1] : false),
                                 func: ($scope.myargs.length > 2 ? $scope.myargs[2] : false),
                                 arr: ($scope.myargs.length > 3 ? $scope.myargs[3] : false),
                             };
+                            problemData.init($element, $scope, ['answer']); // may need to be outside watch?
                         }
                     });
 
@@ -154,7 +154,6 @@ angular.module('mathSkills')
                                 $scope.class = '';
                                 $element.find('input').focus();
                                 $scope.$emit('helped');
-                                problemData.handleEvent($scope);
                             } else {
                                 // If we have an answer already, fire a notHelped event.
                                 $scope.$emit('notHelped', {
