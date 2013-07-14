@@ -81,6 +81,9 @@
 .large-font-size {
 	font-size:110%;
 }
+.line_through {
+	text-decoration: line-through;
+}
 .help-answer-margin-right {
 	margin-right: 50px;
 }
