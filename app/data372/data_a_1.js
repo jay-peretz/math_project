@@ -13,10 +13,10 @@ angular.module('mathSkills').service('data_a_1', ['dataUtils', function (dataUti
 					title: 'Main Answer',
 					children: [{
 					problem: '\\rowgrp{\\str{$instructions}}',
-						answer: '\\rowgrp{\\str{Check ALL the correct answers.}}{\\str{\xA0}}{\\row{\\chk{$buttonLabelA}{$buttonValueA}}}{\\row{\\chk{$buttonLabelB}{$buttonValueB}}}{\\row{\\chk{$buttonLabelC}{$buttonValueC}}}{\\row{\\chk{$buttonLabelD}{$buttonValueD}}',		
+						answer: '\\rowgrp{\\str{Check ALL the correct answers.}}{\\grp{\\chkbtn{}{$buttonValueA}{marg}}{$buttonLabelA}}{\\grp{\\chkbtn{}{$buttonValueB}{marg}}{$buttonLabelB}}{\\grp{\\chkbtn{}{$buttonValueC}{marg}}{$buttonLabelC}}{\\grp{\\chkbtn{}{$buttonValueD}{marg}}{$buttonLabelD}}',		
 						controls: {
 							"checkAnswer": true,
-							"help": '$help'
+							"help": true
 						}
 					}]
                 }]
