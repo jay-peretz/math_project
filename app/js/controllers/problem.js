@@ -30,7 +30,7 @@ angular.module('mathSkills')
                 if (+$routeParams.problemNumber + 1 <= numberOfProblems) {
                     newPath += '/' + (+$routeParams.problemNumber + 1);
                 } else {
-                    newPath += '/all/feedback';
+                    newPath = $location.path().split('/').slice(0, -2).join('/'); //+= '/all/feedback';
                 }
 
                 // Change the path after a short delay.
