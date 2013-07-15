@@ -35,7 +35,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 							+'{\\html{<span>The equivalence denominator must match the measure to be converted, so the equivalence denominator is 1 gallon;</span><br><span>4 quarts equals 1 gallon, so the equivalence numerator is 4 quarts:</span>}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\row{\\frac{\\str{3 gal}}{\\str{1}}}{\\sign{&times;}}{\\frac{\\str{4 qt}}{\\str{1 gal}}}}',
-							"panelwide": true
+							
                         }
                     }, {
                         problem: '\\rowgrp{\\row{\\str{$initialAmount}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}'
@@ -51,7 +51,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 							+'{\\html{<span>The equivalence denominator must match the measure to be converted, so the equivalence denominator is 1 quart;</span><br><span>2 pints equals 1 quart, so the equivalence numerator is 2 pints:</span>}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\row{\\frac{\\str{3 gal}}{\\str{1}}}{\\sign{&times;}}{\\frac{\\str{4 qt}}{\\str{1 gal}}}{\\sign{&times;}}{\\frac{\\str{2 pt}}{\\str{1 qt}}}',
-							"panelwide": true
+							
                         }
                     }, {
                         problem: '\\rowgrp{\\row{\\str{$initialAmount}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}'
@@ -69,7 +69,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 							+'{\\html{<span>The equivalence denominator must match the measure to be converted, so the equivalence denominator is 1 pint;</span><br><span>2 cups equals 1 pint, so the equivalence numerator is 2 cups:</span>}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\row{\\frac{\\str{3 gal}}{\\str{1}}}{\\sign{&times;}}{\\frac{\\str{4 qt}}{\\str{1 gal}}}{\\sign{&times;}}{\\frac{\\str{2 pt}}{\\str{1 qt}}}{\\sign{&times;}}{\\frac{\\str{2 c}}{\\str{1 pt}}}}',
-							"panelwide": true
+							
                         }
                     }, {
                         problem: '\\rowgrp{\\row{\\str{$initialAmount}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}'
@@ -88,7 +88,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
                             "help": '\\rowgrp'
 							+'{\\html{&nbsp;}}'
 							+'{\\row{\\frac{\\html{3 <span class=line_through>gal</span>}}{\\str{1}}}{\\sign{&times;}}{\\frac{\\html{4 <span class=line_through>qt</span>}}{\\html{1 <span class=line_through>gal</span>}}}{\\sign{&times;}}{\\frac{\\html{2 <span class=line_through>pt</span>}}{\\html{1 <span class=line_through>qt</span>}}}{\\sign{&times;}}{\\frac{\\str{2 c}}{\\html{1 <span class=line_through>pt</span>}}}{\\sign{&equals;}}{\\str{$fourthAnswer}}{\\str{c}}}',
-							"panelwide": true
+							
                         }
                     }]
                 }]

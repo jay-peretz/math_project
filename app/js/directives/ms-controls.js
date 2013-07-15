@@ -34,12 +34,7 @@ angular.module('mathSkills')
                                         });
                                     };
                                 }
-								
-								$scope.hasPanelWide = $scope.data.panelwide;
-								if ($scope.hasPanelWide === true) {
-									$scope.$emit('setPanelWide');
-								}
-
+							
                                 // Setup the hasWorkbook variable which shows/hides the workbook button.
                                 $scope.hasWorkbook = $scope.data.workbook;
 
