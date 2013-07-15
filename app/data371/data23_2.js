@@ -28,7 +28,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 						+'{\\sign{&equals;}}{\\str{?}}{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\str{What is the first equivalence fraction to multiply by?}}',
-                        answer: '\\grp{\\frac{\\str{3 gal}}{\\str{1}}}{\\sign{&times;}}{\\frac{\\select{$firstNumAnswer}{$firstNumSelect}}{\\select{$firstDenAnswer}{$firstDenSelect}}}',
+                        answer: '\\pan{12}{11}{\\grp{\\frac{\\str{3 gal}}{\\str{1}}}{\\sign{&times;}}{\\frac{\\select{$firstNumAnswer}{$firstNumSelect}}{\\select{$firstDenAnswer}{$firstDenSelect}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
@@ -44,7 +44,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 						+'{\\sign{&equals;}}{\\str{?}}{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\str{What is the second equivalence fraction to multiply by?}}',
-                        answer: '\\grp{\\frac{\\str{3 gal}}{\\str{1}}}{\\sign{&times;}}{\\frac{\\str{4 qt}}{\\str{1 gal}}}{\\sign{&times;}}{\\frac{\\select{$secondNumAnswer}{$firstNumSelect}}{\\select{$secondDenAnswer}{$firstDenSelect}}}',
+                        answer: '\\pan{12}{11}{\\grp{\\frac{\\str{3 gal}}{\\str{1}}}{\\sign{&times;}}{\\frac{\\str{4 qt}}{\\str{1 gal}}}{\\sign{&times;}}{\\frac{\\select{$secondNumAnswer}{$firstNumSelect}}{\\select{$secondDenAnswer}{$firstDenSelect}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
@@ -62,7 +62,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 						+'{\\sign{&equals;}}{\\str{?}}{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\str{What is the third equivalence fraction to multiply by?}}',
-                        answer: '\\grp{\\frac{\\str{3 gal}}{\\str{1}}}{\\sign{&times;}}{\\frac{\\str{4 qt}}{\\str{1 gal}}}{\\sign{&times;}}{\\frac{\\str{2 pt}}{\\str{1 qt}}}{\\sign{&times;}}{\\frac{\\select{$thirdNumAnswer}{$firstNumSelect}}{\\select{$thirdDenAnswer}{$firstDenSelect}}}',
+                        answer: '\\pan{12}{11}{\\grp{\\frac{\\str{3 gal}}{\\str{1}}}{\\sign{&times;}}{\\frac{\\str{4 qt}}{\\str{1 gal}}}{\\sign{&times;}}{\\frac{\\str{2 pt}}{\\str{1 qt}}}{\\sign{&times;}}{\\frac{\\select{$thirdNumAnswer}{$firstNumSelect}}{\\select{$thirdDenAnswer}{$firstDenSelect}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
@@ -82,7 +82,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 						+'{\\sign{&equals;}}{\\str{?}}{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\str{Multiply equivalence fractions to obtain a result:}}',
-                        answer: '\\grp{\\frac{\\str{3 gal}}{\\str{1}}}{\\sign{&times;}}{\\frac{\\str{4 qt}}{\\str{1 gal}}}{\\sign{&times;}}{\\frac{\\str{2 pt}}{\\str{1 qt}}}{\\sign{&times;}}{\\frac{\\str{2 c}}{\\str{1 pt}}}{\\sign{&equals;}}{\\input{$fourthAnswer}}{\\str{c}}',
+                        answer: '\\pan{12}{11}{\\grp{\\frac{\\str{3 gal}}{\\str{1}}}{\\sign{&times;}}{\\frac{\\str{4 qt}}{\\str{1 gal}}}{\\sign{&times;}}{\\frac{\\str{2 pt}}{\\str{1 qt}}}{\\sign{&times;}}{\\frac{\\str{2 c}}{\\str{1 pt}}}{\\sign{&equals;}}{\\input{$fourthAnswer}}{\\str{c}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'

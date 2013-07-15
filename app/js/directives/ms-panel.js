@@ -12,6 +12,7 @@ angular.module('mathSkills')
                         $scope.showHelpPanel = false;
                         $scope.probSpan = '4';
                         $scope.answSpan = '8';
+						$scope.topMarginHelpBox = false;
 
                         var triggerAnswerAreaEvent = function (event) {
                             if ($scope.$$childHead && $scope.$$childHead.$$nextSibling) {
@@ -37,6 +38,9 @@ angular.module('mathSkills')
                         $scope.$on('panelsize', function (e, problem, answer) {
                             $scope.probSpan = problem;
                             $scope.answSpan = answer; 
+							if ($scope.probSpan === "12" && $scope.answSpan === "11") {
+								$scope.topMarginHelpBox = true;
+							}
                         });
 
                         $scope.$on('triggerCheckAnswer', function () {
