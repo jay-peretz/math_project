@@ -10,6 +10,9 @@ angular.module('mathSkills')
                     '$timeout',
                     function ($scope, $timeout) {
                         $scope.showHelpPanel = false;
+                        $scope.probSpan = '4';
+                        $scope.answSpan = '8';
+
                         var triggerAnswerAreaEvent = function (event) {
                             if ($scope.$$childHead && $scope.$$childHead.$$nextSibling) {
                                 $scope.$$childHead.$$nextSibling.$broadcast(event);
@@ -29,6 +32,11 @@ angular.module('mathSkills')
                             // Otherwise $broadcast checkFocus.
                                 triggerAnswerAreaEvent('checkFocus');
                             }
+                        });
+
+                        $scope.$on('panelsize', function (e, problem, answer) {
+                            $scope.probSpan = problem;
+                            $scope.answSpan = answer; 
                         });
 
                         $scope.$on('triggerCheckAnswer', function () {
