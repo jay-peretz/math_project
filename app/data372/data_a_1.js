@@ -1,3 +1,5 @@
+/*global angular */
+
 angular.module('mathSkills').service('data_a_1', ['dataUtils', function (dataUtils) {
     var desc = {
             title: 'A.1 Setting Up Expressions',
