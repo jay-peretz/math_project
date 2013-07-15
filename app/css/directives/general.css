@@ -108,3 +108,6 @@ ul.nav-list {
    -webkit-columns: 2; /* Safari and Chrome */
    -moz-columns: 2; /* Firefox */
 }
+ul.nav-list li {
+	margin-bottom:5px;
+}
