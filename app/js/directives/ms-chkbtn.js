@@ -88,7 +88,7 @@ angular.module('mathSkills')
 
                             if ($scope.args[1] === "T") {
                                 $scope.class = 'success';
-                                $scope.clicked = true; console.log('it', $scope.args[0]);
+                                $scope.clicked = true;
                                 if ($scope.args[0] === unchekChar){
                                     $scope.args[0] = checkChar ; 
                                 }
@@ -138,7 +138,7 @@ angular.module('mathSkills')
                                 '.marg{'+
                                     'margin-bottom: 4px;'+
                                 '}'+
-                                '.icon-ok{'+
+                                '.btn .icon-ok{'+
                                     'position: relative;'+
                                     'left: -7px;'+
                                 '}'+
