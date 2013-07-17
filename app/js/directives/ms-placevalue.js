@@ -151,7 +151,7 @@ angular.module('mathSkills')
 								if (jj == tagParameters[0].length - tagParameters[1]) {
 									$scope.randomplacearray[ii] = "^";
 									problemDigit = $scope.givenNumberArray[ii];
-									if (($scope.numberArray[ii] != ',')&&($scope.numberArray[ii] != '.')) {
+									if (($scope.numberArray[ii + 1] != ',')&&($scope.numberArray[ii + 1] != '.')) {
 										problemDigitRight = $scope.givenNumberArray[ii + 1];
 									} else {
 										problemDigitRight = $scope.givenNumberArray[ii + 2];
@@ -164,7 +164,7 @@ angular.module('mathSkills')
 								$scope.randomplacearray[ii] = " ";
 							}
 						}
-						
+
 						switch (true) {
 				
 							case (problemDigitRight < 5):
