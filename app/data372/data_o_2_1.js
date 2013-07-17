@@ -15,19 +15,40 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
             children: []
         },
         template = {
-			main: {
+			two: {
                 title: 'Multiply with the Same Base',
 				children: [{
 					title: 'Main Answer',
 					children: [{
-					problem: '\\rowgrp{\\row{\\str{$instructions}}}{\\row{\\str{}}}{\\row{\\exp{\\str{$base1}}{\\str{$exp1}}}{\\sign{&times;}}{\\exp{\\str{$base2}}{\\str{$exp2}}}}',
+					problem: '\\rowgrp{\\row{\\str{$instructions}}}{\\row{\\str{}}}{\\row{\\exp{$base1}{$exp1}}{\\sign{&times;}}{\\exp{$base2}{$exp2}}}',
+						answer: '\\exp{$baseans}{$expans}',		
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp' +
+							'{\\row{\\exp{$base1}{$exp1}}{\\sign{&times;}}{\\exp{$base2}{$exp2}}{\\sign{=}}}' +
+							'{\\row{\\str{\xA0}}}' +
+							'{\\row{\\exp{$base1}{$expequation}}{\\sign{=}}}' +
+							'{\\row{\\str{\xA0}}}' +
+							'{\\row{\\str{Ans: \xA0}}{\\exp{\\str{$baseans}}{\\str{$expans}}}}'
+						}
+					}]
+                }]
+            },
+			three: {
+                title: 'Multiply with the Same Base',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+					problem: '\\rowgrp{\\row{\\str{$instructions}}}{\\row{\\str{\xA0}}}{\\row{\\exp{$base1}{$exp1}}{\\sign{&times;}}{\\exp{$base2}{$exp2}}{\\sign{&times;}}{\\exp{$base3}{$exp3}}}',
 						answer: '\\exp{\\input{$baseans}}{\\input{$expans}}',		
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp' +
-							'{\\row{\\exp{\\str{$base1}}{\\str{$exp1}}}{\\sign{&times;}}{\\exp{\\str{$base2}}{\\str{$exp2}}}{\\sign{=}}}' +
-							'{\\row{\\exp{\\str{$base1}}{\\str{$expequation}}}{\\sign{=}}}' +
-							'{\\row{\\str{Ans:}}{\\exp{\\str{$baseans}}{\\str{$expans}}}}'
+							'{\\row{\\exp{$base1}{$exp1}}{\\sign{&times;}}{\\exp{$base2}{$exp2}}{\\sign{&times;}}{\\exp{$base3}{$exp3}}{\\sign{=}}}' +
+							'{\\row{\\str{\xA0}}}' +
+							'{\\row{\\exp{$base1}{$expequation}}{\\sign{=}}}' +
+							'{\\row{\\str{\xA0}}}' +
+							'{\\row{\\str{Ans: \xA0}}{\\exp{\\str{$baseans}}{\\str{$expans}}}}'
 						}
 					}]
                 }]
@@ -35,14 +56,34 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		},
 		data = [
 		{instructions: 'Determine the simplified result of multiplying the following exponential values',
-		 base1: '3',
-		 exp1: '-5',
-		 base2: '3',
-		 exp2: '2',
-		 baseans: '3',
-		 expans: '-3',
-		 expequation: '-5 + 2',
-		 template: 'main' }
+		 base1: '\\\\str{3}',
+		 exp1: '\\\\str{-5}',
+		 base2: '\\\\str{3}',
+		 exp2: '\\\\str{3}',
+		 baseans: '\\\\input{3}',
+		 expans: '\\\\input{2}',
+		 expequation: '\\\\str{-5 + 3}',
+		 template: 'two' },
+		{instructions: 'Determine the simplified result of multiplying the following exponential values',
+		 base1: '\\\\str{-5}',
+		 exp1: '\\\\str{-3}',
+		 base2: '\\\\str{-5}',
+		 exp2: '\\\\str{-3}',
+		 base3: '\\\\str{-5}',
+		 exp3: '\\\\str{-5}',
+		 baseans: '-5',
+		 expans: '-11',
+		 expequation: '\\\\str{-3 + (-3) + (-5)}',
+		 template: 'three' },
+		{instructions: 'Determine the simplified result of multiplying the following exponential values',
+		 base1: '\\\\frac{\\\\str{3}}{\\\\str{5}}',
+		 exp1: '\\\\str{-5}',
+		 base2: '\\\\frac{\\\\str{3}}{\\\\str{5}}',
+		 exp2: '\\\\str{3}',
+		 baseans: '\\\\frac{\\\\input{3}}{\\\\input{5}}',
+		 expans: '\\\\input{2}',
+		 expequation: '\\\\str{-5 + 3}',
+		 template: 'two' }
 		];
 		
 		return dataUtils.build(desc, template, data);
