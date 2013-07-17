@@ -16,8 +16,8 @@ angular.module('mathSkills')
                     $scope.controllerId = Math.random().toString();
                     $scope.clicked = false;
                     $scope.addclass = '';
-                    var checkChar = '&#x2611;',
-                        unchekChar = '&#x2610;';
+                    var checkChar = '<i class="icon-ok">',
+                        unchekChar = '';
                         
                     // Extract the args array.
                     $scope.$watch('expected', function () {
@@ -47,6 +47,9 @@ angular.module('mathSkills')
                                     data.result = 'incorrect';
                                     $scope.class = 'danger';
                                     $scope.clicked = false;
+                                    if ($scope.args[0] === checkChar){
+                                        $scope.args[0] = unchekChar; 
+                                    }
                                     $timeout(function () {
                                         $scope.class = '';
                                     }, 1000);
@@ -127,12 +130,17 @@ angular.module('mathSkills')
                 },
                 template:   '<style>'+
                                 '.smbut{'+
-                                'font-size: 1.8em;'+
-                                'width: 33px;'+
-                                'padding: 5px 0px 4px 0px;'+
+                                    'font-size: 1.8em;'+
+                                    'width: 29px;'+
+                                    'height: 29px;'+
+                                    'border:2px solid black;'+
                                 '}'+
                                 '.marg{'+
-                                'margin-bottom: 4px;'+
+                                    'margin-bottom: 4px;'+
+                                '}'+
+                                '.icon-ok{'+
+                                    'position: relative;'+
+                                    'left: -7px;'+
                                 '}'+
                             '</style>'+
                             '<button class="btn btn-{{class}} {{addclass}} {{opclass}}" type=button ng-bind-html-unsafe="args[0] | changeSigns"></button>'
