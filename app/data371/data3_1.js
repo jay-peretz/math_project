@@ -25,8 +25,8 @@ angular.module('mathSkills').service('data3_1', ['dataUtils', function (dataUtil
         data = [
             { number1: '839', number2: '3', mathorenglish1: 'math', answer: '2517', template: 'main' },
             { number1: '596', number2: '6', mathorenglish1: 'english', answer: '3576', template: 'main' },
-            { number1: '832', number2: '86', mathorenglish1: 'math', answer: '746', template: 'main' },
-            { number1: '518', number2: '68', mathorenglish1: 'math', answer: '450', template: 'main' },
+            { number1: '832', number2: '86', mathorenglish1: 'math', answer: '71552', template: 'main' },
+            { number1: '518', number2: '68', mathorenglish1: 'math', answer: '35224', template: 'main' },
             { number1: '6453', number2: '4', mathorenglish1: 'english', answer: '25812', template: 'main' },
             { number1: '4049', number2: '7', mathorenglish1: 'math', answer: '28343', template: 'main' },
             { number1: '97', number2: '74', mathorenglish1: 'english', answer: '7178', template: 'main' },
