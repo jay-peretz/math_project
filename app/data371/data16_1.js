@@ -1,9 +1,7 @@
-
-
 /*global angular */
 
-angular.module('mathSkills').service('data16_1', function () {
-    var ret = {
+angular.module('mathSkills').service('data16_1', ['dataUtils', function (dataUtils) {
+    var desc = {
 			title: '16.1 Writing a Ratio of Two Numbers',
 			path: '16.1-writing-a-ratio-of-two-numbers',
             children: []
@@ -49,23 +47,7 @@ angular.module('mathSkills').service('data16_1', function () {
 			{ problem1: '4', problem2: '12', labelNum1: '1', labelDen1: '3', labelNum2: '1', labelDen2: '4', labelNum3: '2', labelDen3: '6', labelNum4: '1', labelDen4: '2',  buttonValueA: 'T', buttonValueB: 'F', buttonValueC: 'F', buttonValueD: 'F', buttonLetter: 'A', answerNum: '1', answerDen: '3', template: 'second' },
 			{ problemNum: '4', problemDen: '7', button1a: '6', button1b: '8', button2a: '7', button2b: '16', button3a: '9', button3b: '10', button4a: '4', button4b: '7',  buttonValueA: 'F', buttonValueB: 'F', buttonValueC: 'F', buttonValueD: 'T', buttonLetter: 'D', answerFirst: '4', answerSecond: '7', template: 'main' },
 			{ problem1: '6', problem2: '10', labelNum1: '3', labelDen1: '5', labelNum2: '5', labelDen2: '6', labelNum3: '2', labelDen3: '5', labelNum4: '3', labelDen4: '4',  buttonValueA: 'T', buttonValueB: 'F', buttonValueC: 'F', buttonValueD: 'F', buttonLetter: 'A', answerNum: '3', answerDen: '5', template: 'second' },
-        ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('(\\$)?\\$' + symbol, 'g'), function ($0, $1) { return $1?$0 : data[symbol]; }); //console.log(string); 
-                }
-            }
-            var ret = JSON.parse(string);
-            ret.data = angular.copy(data);
-            return ret;
-        };
+        ];
 
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
-    
-    return ret;
-});
-
+	return dataUtils.build(desc, template, data);
+}]);

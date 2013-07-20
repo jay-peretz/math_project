@@ -1,8 +1,8 @@
 /*global angular */
 
-angular.module('mathSkills').service('data17_2', function () {
-    var ret = {
-            title: '17.2 Solving Unit Rates Using Proportions',
+angular.module('mathSkills').service('data17_2', ['dataUtils', function (dataUtils) {
+    var desc = {
+			title: '17.2 Solving Unit Rates Using Proportions',
             path: '17.2-solving-unit-rates-using-proportions',
             children: []
         },
@@ -137,22 +137,7 @@ angular.module('mathSkills').service('data17_2', function () {
             //     previousCorrect: true,
             //     flip: [[1], ["ln", "ld"], ["rn", "rd"], ["lbln", "lbld"]],
             // }
-        ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('(\\$)?\\$' + symbol, 'g'), function ($0, $1) { return $1?$0 : data[symbol]; }); //console.log(string); 
-                }
-            }
-            var ret = JSON.parse(string);
-            ret.data = angular.copy(data);
-            return ret;
-        };
+        ];
 
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
-    
-    return ret;
-});
+	return dataUtils.build(desc, template, data);
+}]);

@@ -1,9 +1,7 @@
-
-
 /*global angular */
 
-angular.module('mathSkills').service('data16_2', function () {
-    var ret = {
+angular.module('mathSkills').service('data16_2', ['dataUtils', function (dataUtils) {
+    var desc = {
 			title: '16.2 Validate Proportions',
 			path: '16.2-validate-proportions',
             children: []
@@ -125,23 +123,7 @@ angular.module('mathSkills').service('data16_2', function () {
 			{ problemNum1: '8.5', problemDen1: '25.5', problemNum2: '14.8', problemDen2: '22.2', label1: 'tsp', label2: 'cups', label3: 'tsp', label4: 'cups', buttonTrueValue: 'F', buttonFalseValue: 'T', helpNum1: '8.5', helpDen1: '25.5', helpNum2: '14.8', helpDen2: '22.2', productLeft: '188.7', equalOrNot: '\u2260',  productRight: '377.4', answerFirst: 'False', template: 'second' },
 			{ problemNum1: '1', problemDen1: '12', problemNum2: '2', problemDen2: '9', problemNum3: '1', problemDen3: '2', problemNum4: '2', problemDen4: '3', buttonTrueValue: 'F', buttonFalseValue: 'T', productNumLeft: '1', productDenLeft: '18', equalOrNot: '\u2260',  productNumRight: '2', productDenRight: '18', answerFirst: 'False', template: 'third' },
 			{ problemNum1: '1', problemDen1: '2', problemNum2: '2', problemDen2: '3', problemNum3: '5', problemDen3: '12', problemNum4: '5', problemDen4: '9', label1: 'apple', label2: 'orange',  label3: 'apple', label4: 'orange',buttonTrueValue: 'T', buttonFalseValue: 'F', productNumLeft: '5', productDenLeft: '18', equalOrNot: '=',  productNumRight: '5', productDenRight: '18', answerFirst: 'True', test1: 'test1', test2: 'test2', template: 'fourth' },
-        ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('(\\$)?\\$' + symbol, 'g'), function ($0, $1) { return $1?$0 : data[symbol]; }); //console.log(string); 
-                }
-            }
-            var ret = JSON.parse(string);
-            ret.data = angular.copy(data);
-            return ret;
-        };
+        ];
 
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
-    
-    return ret;
-});
-
+	return dataUtils.build(desc, template, data);
+}]);
