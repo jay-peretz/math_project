@@ -55,55 +55,55 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 			{instructions: '<p>What fractional part of this figure is shaded?</p>',
 			 imagefile: 'B.1/b-1-1.png',
 			response : '\\\\grp{\\\\frac{\\\\input{3}}{\\\\input{10}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a part of a whole problem:}}}{\\\\row{\\\\frac{\\\\str{3}}{\\\\str{10}}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a PART OF A WHOLE problem:}}}{\\\\row{\\\\css{\\\\frac{\\\\str{3}}{\\\\str{10}}}{help-answer-text}}}', 
 	    	template: 'imageproblem'
 			},
 		 //prob 2
 			{instructions: '<p>What fractional part of this figure is not shaded?</p>',
 			 imagefile: 'B.1/b-1-2.png',
 			response : '\\\\grp{\\\\frac{\\\\input{3}}{\\\\input{5}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a part of a whole problem:}}}{\\\\row{\\\\frac{\\\\str{3}}{\\\\str{5}}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a PART OF A WHOLE problem:}}}{\\\\row{\\\\css{\\\\frac{\\\\str{3}}{\\\\str{5}}}{help-answer-text}}}', 
 	    	template: 'imageproblem'
 			},
 		// prob 3
 			{instructions: '<p>Marcus paid a $32 cable bill, a $42 phone bill, and a $47 utility bill.</p><p>  What fractional part of these bills was spent on paying for phone service?</p> ',
 			response : '\\\\grp{\\\\frac{\\\\input{42}}{\\\\input{121}}}',  
-			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{phone bill}}{\\\\str{cable bill + phone bill + utility bill}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{42}}{\\\\str{32 + 42 + 47}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{42}}{\\\\str{121}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{phone bill}}{\\\\str{cable bill + phone bill + utility bill}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{42}}{\\\\str{32 + 42 + 47}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\css{\\\\frac{\\\\str{42}}{\\\\str{121}}}{help-answer-text}}}', 
 	    	template: 'wordproblem' },
 			//prob 4
 			{instructions: '<p>Sandra had 5 quarters, 3 dimes, and 6 pennies.</p><p>  What fraction of her coins were in quarters?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{5}}{\\\\input{14}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{quarters}}{\\\\str{quarters + dimes + pennies}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{5}}{\\\\str{5 + 3 + 6}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{5}}{\\\\str{14}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{quarters}}{\\\\str{quarters + dimes + pennies}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{5}}{\\\\str{5 + 3 + 6}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\css{\\\\frac{\\\\str{5}}{\\\\str{14}}}{help-answer-text}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 5
 			{instructions: '<p>Sandra had 5 quarters, 3 dimes, and 6 pennies.</p><p>  What fraction of her coins were in dimes and pennies?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{9}}{\\\\input{14}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{dimes + pennies}}{\\\\str{quarters + dimes + pennies}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{3 + 6}}{\\\\str{5 + 3 + 6}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{9}}{\\\\str{14}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{dimes + pennies}}{\\\\str{quarters + dimes + pennies}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{3 + 6}}{\\\\str{5 + 3 + 6}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\css{\\\\frac{\\\\str{9}}{\\\\str{14}}}{help-answer-text}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 6
 			{instructions: '<p>Sandra had 5 quarters, 3 dimes, and 6 pennies.</p><p>  What fraction of her total coin money was in dimes?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{30}}{\\\\input{161}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{(# of dimes * 10)}}{\\\\str{(# of quarters * 25) + (# of dimes * 10) + (# of pennies * 1)}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{(3 * 10)}}{\\\\str{(5 * 25) + (3 * 10) + (6 * 1)}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{30}}{\\\\str{161}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{(# of dimes * 10)}}{\\\\str{(# of quarters * 25) + (# of dimes * 10) + (# of pennies * 1)}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{(3 * 10)}}{\\\\str{(5 * 25) + (3 * 10) + (6 * 1)}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\css{\\\\frac{\\\\str{30}}{\\\\str{161}}}{help-answer-text}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 7
 			{instructions: '<p>A child had a set of building blocks that consisted of 10 red blocks, 5 green blocks, and 7 white blocks. All of these blocks were put into a bag.</p><p>If a block was randomly chosen, what is the probability of choosing a red block?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{[5,10]}}{\\\\input{[11,22]}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{red blocks}}{\\\\str{red blocks + green blocks + white blocks}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{10}}{\\\\str{10 + 5 + 7}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{10}}{\\\\str{22}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{5}}{\\\\str{11}}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{red blocks}}{\\\\str{red blocks + green blocks + white blocks}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{10}}{\\\\str{10 + 5 + 7}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{10}}{\\\\str{22}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\css{\\\\frac{\\\\str{5}}{\\\\str{11}}}{help-answer-text}}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 8
 			{instructions: '<p>A child had a set of building blocks that consisted of 10 red blocks, 5 green blocks, and 7 white blocks. All of these blocks were put into a bag.</p><p>If a block was randomly chosen, what is the probability of choosing a red or white block?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{17}}{\\\\input{22}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{red blocks + white blocks}}{\\\\str{red blocks + green blocks + white blocks}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{10 + 7}}{\\\\str{10 + 5 + 7}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{17}}{\\\\str{22}}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{red blocks + white blocks}}{\\\\str{red blocks + green blocks + white blocks}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{10 + 7}}{\\\\str{10 + 5 + 7}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\css{\\\\frac{\\\\str{17}}{\\\\str{22}}}{help-answer-text}}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 9
 			{instructions: '<p>In a bag with 30 pieces of candy, 10 pieces have walnuts and 7 pieces have almonds.</p><p> What is the probability of picking a piece of candy that has neither walnuts nor almonds?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{13}}{\\\\input{30}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{all pieces - (walnut + almonds)}}{\\\\str{all pieces}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{30 - (10 + 7)}}{\\\\str{30}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{13}}{\\\\str{30}}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{all pieces - (walnut + almonds)}}{\\\\str{all pieces}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{30 - (10 + 7)}}{\\\\str{30}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\css{\\\\frac{\\\\str{13}}{\\\\str{30}}}{help-answer-text}}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 10
@@ -112,7 +112,7 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 		   //   problem: 
 			 buttonTrueValue: 'T', 
 			 buttonFalseValue: 'F',
-			help: '\\\\rowgrp{\\\\row{\\\\str{The fractions are equal because the cross-products are equal:}}}{\\\\row{\\\\str{3 * 16 = 48}}}{\\\\row{\\\\str{and}}}{\\\\row{\\\\str{ 4 * 12 = 48}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\css{\\\\str{True}}{help-answer-text}}}{\\\\row{\\\\str{The fractions are equal because the cross-products are equal:}}}{\\\\row{\\\\str{3 * 16 = 48}}}{\\\\row{\\\\str{and}}}{\\\\row{\\\\str{ 4 * 12 = 48}}}', 
 	    	template: 'trueorfalse'
 			},
 			//prob 11
@@ -121,33 +121,33 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 		   //   problem: 
 			 buttonTrueValue: 'T', 
 			 buttonFalseValue: 'F',
-			help: '\\\\rowgrp{\\\\row{\\\\str{The fractions are equal because the cross-products are equal:}}}{\\\\row{\\\\str{0.25 * 4.8 = 1.2}}}{\\\\row{\\\\str{and}}}{\\\\row{\\\\str{ 0.3 * 4 = 1.2}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\css{\\\\str{True}}{help-answer-text}}}{\\\\row{\\\\str{The fractions are equal because the cross-products are equal:}}}{\\\\row{\\\\str{0.25 * 4.8 = 1.2}}}{\\\\row{\\\\str{and}}}{\\\\row{\\\\str{ 0.3 * 4 = 1.2}}}', 
 	    	template: 'trueorfalse'
 			},
 		 //prob 12
 			{instructions: '<p>Write a ratio of shaded parts to unshaded parts in the figure below.</p>',
 			 imagefile: 'B.1/b-1-12.png',
 			response : '\\\\grp{\\\\frac{\\\\input{3}}{\\\\input{4}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{3 parts are shaded. 4 parts are unshaded.}}}{\\\\row{\\\\str{The ratio is:}}}{\\\\row{\\\\frac{\\\\str{3 parts shaded}}{\\\\str{4 parts unshaded}}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{3 parts are shaded. 4 parts are unshaded.}}}{\\\\row{\\\\str{The ratio is:}}}{\\\\row{\\\\frac{\\\\str{3 parts shaded}}{\\\\str{4 parts unshaded}}}}{\\\\row{\\\\css{\\\\frac{\\\\str{3}}{\\\\str{4}}}{help-answer-text}}}', 
 	    	template: 'imageproblem'
 			},
 		 //prob 13
 			{instructions: '<p>Write a ratio of unshaded to shaded parts in the figure below.</p>',
 			 imagefile: 'B.1/b-1-13.png',
 			response : '\\\\grp{\\\\frac{\\\\input{3}}{\\\\input{5}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{3 parts are unshaded. 5 parts are shaded.}}}{\\\\row{\\\\str{The ratio is:}}}{\\\\row{\\\\frac{\\\\str{3 parts unshaded}}{\\\\str{5 parts shaded}}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{3 parts are unshaded. 5 parts are shaded.}}}{\\\\row{\\\\str{The ratio is:}}}{\\\\row{\\\\frac{\\\\str{3 parts unshaded}}{\\\\str{5 parts shaded}}}}{\\\\row{\\\\css{\\\\frac{\\\\str{3}}{\\\\str{5}}}{help-answer-text}}}', 
 	    	template: 'imageproblem'
 			},
 			//prob 14
 			{instructions: '<p>When 12 children were offered ice cream or cake for dessert, 5 kids chose cake and 7 chose ice cream. </p><p>Write a ratio of kids that chose ice cream to those who chose cake.</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{7}}{\\\\input{5}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a ratio:}}}{\\\\row{\\\\frac{\\\\str{ 7 kids chose cake}}{\\\\str{5 kids who ice cream}}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a ratio:}}}{\\\\row{\\\\frac{\\\\str{ 7 kids chose cake}}{\\\\str{5 kids who ice cream}}}}{\\\\row{\\\\css{\\\\frac{\\\\str{7}}{\\\\str{5}}}{help-answer-text}}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 15
 			{instructions: '<p>If a soccer team attempted 11 shots on the goal and scored on 3 of them, what is the ratio of shots made to those missed?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{3}}{\\\\input{8}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a ratio:}}}{\\\\row{\\\\frac{\\\\str{# of shots made}}{\\\\str{# of shots missed}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{(3)}}{\\\\str{11-3)}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{3}}{\\\\str{8}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a ratio:}}}{\\\\row{\\\\frac{\\\\str{# of shots made}}{\\\\str{# of shots missed}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{(3)}}{\\\\str{11-3)}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\css{\\\\frac{\\\\str{3}}{\\\\str{8}}}{help-answer-text}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 16

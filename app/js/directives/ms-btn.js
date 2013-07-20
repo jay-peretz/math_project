@@ -19,6 +19,7 @@ angular.module('mathSkills')
                     $scope.$watch('expected', function () {
                         if ($scope.expected){
                             $scope.args = parser.extractTag($scope.expected).args;
+                            $scope.opclass = $scope.args.length > 2 ? $scope.args[2] : '';
                         }
                     });
                      
@@ -95,7 +96,12 @@ angular.module('mathSkills')
                     expected: '@',
                     label: '@'
                 },
-                template: '<button class="btn btn-{{class}}" type=button>{{args[0] | changeSigns}}</button>'
+                template:   '<style>'+
+                                '.marg{'+
+                                    'margin-bottom: 4px;'+
+                                '}'+
+                            '</style>'+
+                            '<button class="btn btn-{{class}} {{opclass}}" type=button>{{args[0] | changeSigns}}</button>'
             };
         }
     ]);

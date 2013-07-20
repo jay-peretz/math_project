@@ -2,7 +2,7 @@
 
 angular.module('mathSkills').service('data7_4', ['dataUtils', function (dataUtils) {
     var desc = {
-            title: '7.4 Fraction Appplication Problems',
+            title: '7.4 Fraction Application Problems',
             path: '7.4-fraction-application-problems',
             children: []
         },

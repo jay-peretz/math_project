@@ -111,3 +111,6 @@ ul.nav-list {
 ul.nav-list li {
 	margin-bottom:5px;
 }
+button.btn {
+	font-size:75%;
+}
