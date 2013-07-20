@@ -13,8 +13,8 @@ angular.module('mathSkills').service('data1_3', ['dataUtils', function (dataUtil
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\butgrp{\\row{\\str{$firstNumber \xA0}}{\\but{>}{$firstButton}}{\\str{\xA0 or \xA0}}{\\but{<}{$secondButton}}{\\str{\xA0 $secondNumber}}}',
-						answer: '',
+						problem: '',
+						answer: '\\pan{2}{9}{\\butgrp{\\grp{\\str{$firstNumber \xA0}}{\\but{>}{$firstButton}}{\\str{\xA0 or \xA0}}{\\but{<}{$secondButton}}{\\str{\xA0 $secondNumber}}}}',
 						controls: {
 							"checkAnswer": false,
 							"help": '\\str{$firstNumber is $statement $secondNumber}'
@@ -27,8 +27,8 @@ angular.module('mathSkills').service('data1_3', ['dataUtils', function (dataUtil
 				children: [{
 					title: 'Main Answer',
 					children: [{
-						problem: '\\col{\\butgrp{\\row{\\str{X \xA0}}{\\but{>}{$firstButton}}{\\str{\xA0 or \xA0}}{\\but{<}{$secondButton}}{\\str{\xA0 Y}}}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{$firstNumber}{$secondNumber}{$startGraph}{$endGraph}}}',
-						answer: '',
+						problem: '',
+						answer: '\\pan{2}{9}{\\col{\\butgrp{\\grp{\\str{X \xA0}}{\\but{>}{$firstButton}}{\\str{\xA0 or \xA0}}{\\but{<}{$secondButton}}{\\str{\xA0 Y}}}}{\\html{&nbsp;}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{$firstNumber}{$secondNumber}{$startGraph}{$endGraph}}}}',
 						controls: {
 							"checkAnswer": false,
 							"help": '\\str{X or $firstNumber is $statement Y or $secondNumber}'
