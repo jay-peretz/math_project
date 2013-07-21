@@ -56,7 +56,14 @@ body {
 .margin_top_small {
 	margin-top:20px;
 }
-
+/*zero out padding and margin...used in ms-group*/
+.zero td{
+    margin: 0;
+    padding: 0 2px;
+}
+.center-tbl table{
+    margin: 0 auto;
+}
 /* add paddin and set width on input and select box (wb step-5 17.2 Unit Rates)*/
 .Unit-Rates {
     padding: 0 0 10px 20px;

@@ -124,14 +124,14 @@ angular.module('mathSkills').service('data17_2', ['dataUtils', function (dataUti
                                 '}{'+
                                     '\\ins{Now fill in the boxes below with the complete unit rate answer.}'+
                                 '}{'+
-                                    '\\css{\\grp'+
+                                    '\\size{\\grp'+
                                         '{\\str{Answer:}}'+
                                         '{\\input{$$answer}}'+
                                         '{\\frac{\\input{$Nanswer}}{\\input{$Danswer}}}'+
                                         '{\\select{$lbln}{$lblarr}}'+
                                         '{\\html{<span class="bigger">/</span>}}'+
                                         '{\\select{$xlbld}{$xlblarr}}'+
-                                    '}{Unit-Rates}'+
+                                    '}{zero center-tbl}'+
                                 '}}{well}',
                         controls: {
                             "checkAnswer": true,
