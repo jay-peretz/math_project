@@ -256,7 +256,7 @@ angular.module('mathSkills.services')
 
                 func: function (data, $scope){ //console.log("functions data ", data); // console.log("functions $scope on enter- ", $scope);
                     var index = e.selRDen.optionsarray.indexOf(e.selRDen.answer);
-                    if (data.result){
+                    if (data.result && data.expt === '1'){
                         e.selRDen.optionsarray = JSON.parse(this.stripEscape(this.getData('xlblarr')));
                         e.selRDen.answercorrect = this.getData('xlbld');
                         e.selRDen.answer = e.selRDen.answer !== "" ? e.selRDen.optionsarray[index] : e.selRDen.answer ;
