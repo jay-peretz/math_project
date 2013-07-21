@@ -90,7 +90,8 @@ angular.module('mathSkills').service('data17_2', ['dataUtils', function (dataUti
                                         '{\\grp{\\str{$ld}}{\\frac{\\str{$Nld}}{\\str{$Dld}}}{\\str{$lbld}}}'+
                                         '{\\str{=}}'+
                                         '{\\grp{\\str{$rn}}{\\frac{\\str{$Nrn}}{\\str{$Drn}}}{\\str{$lbln}}}'+
-                                        '{\\grp{\\str{$rd}}{\\frac{\\str{$Nrd}}{\\str{$Drd}}}{\\str{$$lbld}}}'+
+                                        '{\\grp{\\str{$rd}}{\\frac{\\str{$Nrd}}{\\str{$Drd}}}{\\str{$$lbld}}'+
+                                    '}'+
                                 '}{'+
                                     '\\ins{Now solve the proportion problem.}'+
                                 '}{'+
@@ -131,7 +132,7 @@ angular.module('mathSkills').service('data17_2', ['dataUtils', function (dataUti
                                         '{\\select{$lbln}{$lblarr}}'+
                                         '{\\html{<span class="bigger">/</span>}}'+
                                         '{\\select{$xlbld}{$xlblarr}}'+
-                                    '}{zero center-tbl}'+
+                                    '}{zero pad-left}'+
                                 '}}{well}',
                         controls: {
                             "checkAnswer": true,
