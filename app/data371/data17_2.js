@@ -373,19 +373,6 @@ angular.module('mathSkills').service('data17_2', ['dataUtils', function (dataUti
                 xlblarr: '[\\"minute\\",\\"runner\\",\\"mile\\"]',
                 previousCorrect: true,
             }
-        ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('(\\$)?\\$' + symbol, 'g'), function ($0, $1) { return $1?$0 : data[symbol]; }); //console.log(string); 
-                }
-            }
-            var ret = JSON.parse(string);
-            ret.data = angular.copy(data);
-            return ret;
-        };
->>>>>>> 17.2 whole problem set
-
+        ];
 	return dataUtils.build(desc, template, data);
 }]);
