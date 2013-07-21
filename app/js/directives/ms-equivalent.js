@@ -18,8 +18,8 @@ angular.module('mathSkills')
                         
                         $scope.$watch('expected', function () {
                             if ($scope.expected) {
-                                
                                 $scope.args = parser.extractTag($scope.expected).args;
+                                $scope.opclass = $scope.args.length > 5 ? $scope.args[5] : '';
                             }
                         });
 
@@ -38,7 +38,7 @@ angular.module('mathSkills')
                     label: '@'
                 },
                 restrict: 'E',
-                template:   '<table>'+
+                template:   '<table class={{opclass}}>'+
                                 '<tr>'+
                                     '<td><ms-expression expected={{args[0]}} label=leftNum></ms-event-label></td>'+
                                     '<td></td>'+
