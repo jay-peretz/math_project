@@ -12,12 +12,22 @@ angular.module('mathSkills').service('data2A_1', ['dataUtils', function (dataUti
 				children: [{
 					title: 'Main Answer',
 					children: [{
-						problem: '\\col{\\row{\\str{Translate the following words into a math expression or an inequality statement:}}}{\\row{\\str{\xA0}}}{\\row{\\str{$problemStatement}}}',
-						answer: '\\butgrp{\\col{\\row{\\str{\xA0}}}{\\row{\\but{A}{$buttonValueA}}{\\grp{\\str{\xA0 \xA0 $buttonLabelA}}}}{\\row{\\but{B}{$buttonValueB}}{\\grp{\\str{\xA0 \xA0 $buttonLabelB}}}}{\\row{\\but{C}{$buttonValueC}}{\\grp{\\str{\xA0 \xA0 $buttonLabelC}}}}{\\row{\\but{D}{$buttonValueD}}{\\grp{\\str{\xA0 \xA0 $buttonLabelD}}}}}',
+						problem: '\\html{'+
+                                        'Translate the following words into a math expression or an inequality statement:'+
+                                        '<br><br><span class=blue-text>$problemStatement</span>'+
+                                    '}',
+						answer: '\\rowgrp'+
+                                    '{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\str{\xA0$buttonLabelA}}}'+
+                                    '{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\str{\xA0$buttonLabelB}}}'+
+                                    '{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\str{\xA0$buttonLabelC}}}'+
+                                    '{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\str{\xA0$buttonLabelD}}}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\row{\\str{\xA0}}}{\\row{\\str{$answerLabel}}}{\\row{\\html{&nbsp;}}}{\\row{\\css{\\str{Answer: \xA0 }}{help-answer-text}}{\\css{\\str{ $buttonLetter \xA0 }}{help-answer-text-tight}}}{\\row{\\html{&nbsp;}}}'
-						}
+						    "help": '\\html{'+
+                                        '<span class=blue-text>Answer:</span>'+
+                                        '<br><br>$answerLabel'+
+                                    '}'
+                        }
 					}]
                 }]
             }
