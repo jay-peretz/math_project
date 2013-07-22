@@ -26,6 +26,7 @@ angular.module('mathSkills')
                     directiveUtils.compileExpected($scope, $element);
                     directiveUtils.routeHelp($scope);
                     directiveUtils.routeFocus($scope);
+                    directiveUtils.size($scope);
                 },
                 restrict: 'E',
                 scope: {
