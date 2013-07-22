@@ -7,6 +7,28 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
             children: []
         },
         template = {
+            main: {
+                title: 'Charts and Bar Graphs',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem:'\\pan{$spanQ}{$spanA}{'+
+                                    '$chart'+
+                                '}', 
+                        answer: '\\css{'+
+                                    '\\rowgrp'+
+                                        '{\\ins{$question}}'+
+                                        '{$answerIn}'+
+                                '}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'+
+                                        '{\\ins{$question}}'+
+                                        '{\\html{<span class=>Answer:</span><br><br>$answertxt}}'
+						}
+					}]
+				}]    
+            },
 			first: {
 					title: 'Charts and Bar Graphs',
 					children: [{
@@ -268,7 +290,18 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
         },
 		// data not abstracted- one problem set only for charts and graphs at this time, per Matt
 	        data = [
-            { template: 'first' },
+                {
+                    chart: dataUtils.pre('\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}'), 
+                    question: 'Question 1:<br><br>Which two athletes had the best times to finish Race #1?', template: 'main',
+                    answertxt: 'Runners C & D ran fastest in Race #1',
+                    answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
+                    button1: dataUtils.pre('\\grp{\\btn{A}{T}{marg}}{\\str{\xA0 \xA0 C and D}}'),
+                    button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 A and B}}'),
+                    button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 B and C}}'),
+                    button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 D and E}}'),
+                    spanQ:'5', spanA:'7'  
+                },
+            //{ template: 'first' },
 			{ template: 'second' },
 			{ template: 'third' },
 			{ template: 'fourth' },
@@ -286,8 +319,6 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
 			{ template: 'sixteenth' },
 			{ template: 'seventeenth' },
 			{ template: 'eighteenth' },
-			
         ];
-
 	return dataUtils.build(desc, template, data);
 }]);
