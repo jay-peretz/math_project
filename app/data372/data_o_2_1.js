@@ -40,7 +40,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 					title: 'Main Answer',
 					children: [{
 					problem: '\\rowgrp{\\row{\\str{$instructions}}}{\\row{\\str{\xA0}}}{\\row{\\exp{$base1}{$exp1}}{\\sign{&times;}}{\\exp{$base2}{$exp2}}{\\sign{&times;}}{\\exp{$base3}{$exp3}}}',
-						answer: '\\exp{\\input{$baseans}}{\\input{$expans}}',		
+						answer: '\\exp{$baseans}{$expans}',		
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp' +
@@ -48,7 +48,26 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 							'{\\row{\\str{\xA0}}}' +
 							'{\\row{\\exp{$base1}{$expequation}}{\\sign{=}}}' +
 							'{\\row{\\str{\xA0}}}' +
-							'{\\row{\\str{Ans: \xA0}}{\\exp{\\str{$baseans}}{\\str{$expans}}}}'
+							'{\\row{\\str{Ans: \xA0}}{\\exp{$helpbase}{$helpexp}}}'
+						}
+					}]
+                }]
+            },
+			threediff: {
+                title: 'Multiply with the Same Base',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+					problem: '\\rowgrp{\\row{\\str{$instructions}}}{\\row{\\str{\xA0}}}{\\row{\\exp{$base1}{$exp1}}{\\sign{&times;}}{\\exp{$base2}{$exp2}}{\\sign{&times;}}{\\exp{$base3}{$exp3}}}',
+						answer: '\\grp{\\exp{$baseans1}{$expans1}}{\\sign{&times;}}{\\exp{$baseans2}{$expans2}}',		
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp' +
+							'{\\row{\\exp{$base1}{$exp1}}{\\sign{&times;}}{\\exp{$base2}{$exp2}}{\\sign{&times;}}{\\exp{$base3}{$exp3}}{\\sign{=}}}' +
+							'{\\row{\\str{\xA0}}}' +
+							'{\\row{\\exp{$base1}{$expequation}}{\\sign{&times;}}{\\exp{$base3}{$exp3}}{\\sign{=}}}' +
+							'{\\row{\\str{\xA0}}}' +
+							'{\\row{\\str{Ans: \xA0}}{\\exp{$helpbase}{$helpexp}}{\\sign{&times;}}{\\exp{$base3}{$exp3}}}'
 						}
 					}]
                 }]
@@ -73,8 +92,10 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		 exp2: '\\\\str{-3}',
 		 base3: '\\\\str{-5}',
 		 exp3: '\\\\str{-5}',
-		 baseans: '-5',
-		 expans: '-11',
+		 baseans: '\\\\input{-5}',
+		 expans: '\\\\input{-11}',
+		 helpbase:'\\\\str{-5}' ,
+		 helpexp: '\\\\str{-11}',
 		 expequation: '\\\\str{-3 + (-3) + (-5)}',
 		 template: 'three' },
 		{instructions: 'Determine the simplified result of multiplying the following exponential values',
@@ -87,7 +108,35 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		 basehelp: '\\\\frac{\\\\str{3}}{\\\\str{5}}',
 		 exphelp: '\\\\str{2}',
 		 expequation: '\\\\str{-5 + 3}',
-		 template: 'two' }
+		 template: 'two' },
+		{instructions: 'Determine the simplified result of multiplying the following exponential values',
+		 base1: '\\\\frac{\\\\str{3}}{\\\\str{4}}',
+		 exp1: '\\\\str{2}',
+		 base2: '\\\\frac{\\\\str{3}}{\\\\str{4}}',
+		 exp2: '\\\\str{-4}',
+		 base3: '\\\\frac{\\\\str{3}}{\\\\str{4}}',
+		 exp3: '\\\\str{ }',
+		 baseans: '\\\\frac{\\\\input{3}}{\\\\input{4}}',
+		 expans: '\\\\input{-1}',
+		 helpbase:'\\\\frac{\\\\str{3}}{\\\\str{4}}' ,
+		 helpexp: '\\\\str{-1}',
+		 expequation: '\\\\str{2 + (-4) + (0)}',
+		 template: 'three' },
+		{instructions: 'Determine the simplified result of multiplying the following exponential values',
+		 base1: '\\\\str{2}',
+		 exp1: '\\\\str{-1}',
+		 base2: '\\\\str{2}',
+		 exp2: '\\\\str{3}',
+		 base3: '\\\\str{3}',
+		 exp3: '\\\\str{-1}',
+		 baseans1: '\\\\input{2}',
+		 expans1: '\\\\input{2}',
+		 baseans2: '\\\\input{3}',
+		 expans2: '\\\\input{-1}',
+		 helpbase:'\\\\str{2}' ,
+		 helpexp: '\\\\str{2}',
+		 expequation: '\\\\str{-1 + (+3)}',
+		 template: 'threediff' }
 		];
 		
 		return dataUtils.build(desc, template, data);
