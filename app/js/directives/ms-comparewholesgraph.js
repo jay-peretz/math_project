@@ -1,4 +1,5 @@
 'use strict';
+/*global angular */
 	
 angular.module('mathSkills') 
 	.config(['parserProvider', function (parserProvider) {
@@ -25,13 +26,14 @@ angular.module('mathSkills')
 				label: '@'
 			},
 			controller: function ($scope, $element) {
+                $scope.controllerId = Math.random().toString();
 				$scope.answer = '';
 				$scope.numberLineArray = [];
                 $scope.controllerId = Math.random().toString();
 				var numberFirst = [],
 					numberSecond = [],
-					graphminimum = [],
-					graphmaximum = [],
+					//graphminimum = [], -unused
+					//graphmaximum = [], -unused
 					minimumGraph = [],
 					maximumGraph = [],
 					numberLineArray = [],
@@ -92,6 +94,39 @@ angular.module('mathSkills')
 						$scope.numberLineArray = numberLineArray.slice();	
 					}
 				});
+                
+                // handle check answer event for parent scope "always correct".
+                    $scope.$on('checkAnswer', function () {
+                        $scope.$emit('answer', {
+                            result: 'correct',
+                            expected: $scope.expected,
+                            answer: $scope.expected,
+                            label: $scope.label
+                        });
+                    });
+    
+                    $scope.$on('checkFocus', function (e) {
+                        // If this event has not been marked as ignored.
+                        if (e.defaultPrevented === false) {
+                            // handle check focus event for parent scope.
+                            // comparewholesgraph cannot have focus/tab, fire a notFocused event.
+                            $scope.$emit('notFocused', {
+                                controllerId: $scope.controllerId
+                            });
+                        }
+                    });
+    
+                    $scope.$on('checkHelp', function (e) {
+                        // If this event has not been marked as ignored.
+                        if (e.defaultPrevented === false) {
+                            // handle check help event for parent scope.
+                            // comparewholesgraph does not use help, fire a notHelped event.
+                            $scope.$emit('notHelped', {
+                                controllerId: $scope.controllerId
+                            }); 
+                        }
+                    });
+                    
 			},
 			templateUrl: 'partials/directives/ms-comparewholesgraph.html'
 		};
