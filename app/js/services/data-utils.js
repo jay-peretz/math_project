@@ -20,5 +20,12 @@ angular.module('mathSkills.services').value('dataUtils', {
         });
 
         return desc;
+    },
+    pre: function (string) {
+        string = string
+            .replace(new RegExp('\\\\', 'g'),'\\\\')
+            .replace(new RegExp('"', 'g'),'\\"'); 
+        //console.log(string);
+        return string;
     }
 });
