@@ -14,10 +14,17 @@ angular.module('mathSkills').service('data1_3', ['dataUtils', function (dataUtil
                     title: 'Main Answer',
                     children: [{
 						problem: '',
-						answer: '\\pan{2}{10}{\\butgrp{\\grp{\\str{$firstNumber \xA0}}{\\but{>}{$firstButton}}{\\str{\xA0 or \xA0}}{\\but{<}{$secondButton}}{\\str{\xA0 $secondNumber}}}}',
+						answer: '\\pan{2}{10}{'+
+                                    '\\grp'+
+                                        '{\\str{$firstNumber \xA0}}'+
+                                        '{\\btn{>}{$firstButton}}'+
+                                        '{\\str{\xA0 or \xA0}}'+
+                                        '{\\btn{<}{$secondButton}}'+
+                                        '{\\str{\xA0 $secondNumber}}'+
+                                '}',
 						controls: {
 							"checkAnswer": false,
-							"help": '\\str{$firstNumber is $statement $secondNumber}'
+							"help": true //'\\str{$firstNumber is $statement $secondNumber}'
 						}
                     }]
                 }]
@@ -28,10 +35,23 @@ angular.module('mathSkills').service('data1_3', ['dataUtils', function (dataUtil
 					title: 'Main Answer',
 					children: [{
 						problem: '',
-						answer: '\\pan{2}{10}{\\col{\\butgrp{\\grp{\\str{X \xA0}}{\\but{>}{$firstButton}}{\\str{\xA0 or \xA0}}{\\but{<}{$secondButton}}{\\str{\xA0 Y}}}}{\\html{&nbsp;}}{\\row{\\str{\xA0}}}{\\row{\\comparewholesgraph{$firstNumber}{$secondNumber}{$startGraph}{$endGraph}}}}',
+						answer: '\\pan{2}{10}{'+
+                                    '\\rowgrp{'+
+                                        '\\grp'+
+                                            '{\\str{X \xA0}}'+
+                                            '{\\btn{>}{$firstButton}}'+
+                                            '{\\str{\xA0 or \xA0}}'+
+                                            '{\\btn{<}{$secondButton}}'+
+                                            '{\\str{\xA0 Y}}'+
+                                    '}{'+
+                                        '\\rowgrp'+
+                                            '{\\html{<br><br>}}'+
+                                            '{\\comparewholesgraph{$firstNumber}{$secondNumber}{$startGraph}{$endGraph}}'+
+                                    '}'+
+                                '}',
 						controls: {
 							"checkAnswer": false,
-							"help": '\\str{X or $firstNumber is $statement Y or $secondNumber}'
+							"help": true //'\\str{X or $firstNumber is $statement Y or $secondNumber}'
 						}
 					}]
                 }]

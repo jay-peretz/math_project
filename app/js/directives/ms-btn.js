@@ -56,7 +56,7 @@ angular.module('mathSkills')
                         if (e.defaultPrevented === false) {
                             // handle check focus event for parent scope.
                             // set focus on button element, fire a focused event.
-                            $element.find('.btn').focus();  console.log('ran check focus', $scope.args[0]);
+                            $element.find('.btn').focus();
                             $scope.$emit('focused', {
                                 controllerId: $scope.controllerId
                             });
