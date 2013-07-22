@@ -12,8 +12,13 @@ angular.module('mathSkills').service('data_a_1', ['dataUtils', function (dataUti
 				children: [{
 					title: 'Main Answer',
 					children: [{
-					problem: '\\rowgrp{\\str{$instructions}}',
-						answer: '\\rowgrp{\\str{Check ALL the correct answers.}}{\\grp{\\chkbtn{}{$buttonValueA}{marg}}{$buttonLabelA}}{\\grp{\\chkbtn{}{$buttonValueB}{marg}}{$buttonLabelB}}{\\grp{\\chkbtn{}{$buttonValueC}{marg}}{$buttonLabelC}}{\\grp{\\chkbtn{}{$buttonValueD}{marg}}{$buttonLabelD}}',		
+						problem: '\\str{$instructions}',
+						answer: '\\rowgrp'+
+									'{\\str{Check ALL the correct answers.}}' +
+									'{\\grp{\\chkbtn{}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+									'{\\grp{\\chkbtn{}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+									'{\\grp{\\chkbtn{}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+									'{\\grp{\\chkbtn{}{$buttonValueD}{marg}}{$buttonLabelD}}',		
 						controls: {
 							"checkAnswer": true,
 							"help": true
@@ -25,18 +30,27 @@ angular.module('mathSkills').service('data_a_1', ['dataUtils', function (dataUti
 				children: [{
 					title: 'Main Answer',
 					children: [{
-					problem: '\\rowgrp{\\str{$instructions}}',
+					problem: '\\str{$instructions}',
 						answer: '\\grp{$answer}',
 						controls: {
 							"checkAnswer": true,
-							"help": '$help'
+							"help": '\\rowgrp$help'
 						}
 					}]
                 }]
 		       }
         },
         data = [
-		{instructions: 'Seven plus four, then multiply by three.',  buttonValueA: 'F', buttonLabelA: '\\\\str{7 + (4 * 3)}', buttonValueB: 'T', buttonLabelB: '\\\\str{(7 + 4) * 3}', buttonValueC: 'T', buttonLabelC: '\\\\str{7 + 4 * 3}', buttonValueD: 'T', buttonLabelD: '\\\\str{(7 + 4) (3)}',help: '\\\\rowgrp{\\\\row{\\\\str{The expression can be expressed as either:}}}{\\\\row{\\\\str{(7 + 4) * 3}}}{\\\\row{\\\\str{or}}}{\\\\row{\\\\str{(7 + 4) (3)}}}',  template: 'expressions' },
+		{instructions: 'Seven plus four, then multiply by three.',  
+		 buttonValueA: 'F', 
+		 buttonLabelA: '\\\\str{7 + (4 * 3)}', 
+		 buttonValueB: 'T', 
+		 buttonLabelB: '\\\\str{(7 + 4) * 3}', 
+		 buttonValueC: 'T', 
+		 buttonLabelC: '\\\\str{7 + 4 * 3}', 
+		 buttonValueD: 'T', 
+		 buttonLabelD: '\\\\str{(7 + 4) (3)}',  
+		 template: 'expressions' },
 		{instructions: 'Start with seven, then add the product of four and three.',  
 		buttonValueA: 'T', buttonLabelA: '\\\\str{7 + (4 * 3)}', 
 		buttonValueB: 'F', buttonLabelB: '\\\\str{(7 + 4) • 3}', 
@@ -151,15 +165,15 @@ angular.module('mathSkills').service('data_a_1', ['dataUtils', function (dataUti
 		 template: 'expressions' },
 		 {instructions: 'When playing the video game Survival, Sergei started with 50 points. He first earned 40 points for escaping bandits. He then had his total points tripled for finding a spring in the desert. However, when he ate a poisonous plant, he became sick for two days. He had to surrender 35 points for each day he was ill. At this point in the game, how many points did Sergei have?',
 		 answer: '\\\\input{235}',
-		 help: '\\\\rowgrp{\\\\row{\\\\str{The expression can be expressed as:}}}{\\\\row{\\\\str{[(50 + 40) * 3] - 35}}}{\\\\row{\\\\str{or}}}{\\\\row{\\\\str{235}}}',
+		 help: '{\\\\row{\\\\str{The expression can be expressed as:}}}{\\\\row{\\\\str{[(50 + 40) * 3] - 35}}}{\\\\row{\\\\str{or}}}{\\\\row{\\\\str{235}}}',
 		 template:'expressions2'},
 		 {instructions: 'Five hundred tickets were sold to a movie opening. Fifty people did not show. For those who did attend the opening, they were seated evenly in three separate sections in the theater. How many people sat in each section?',
 		 answer: '\\\\input{150}',
-		 help: '\\\\rowgrp{\\\\row{\\\\str{The expression can be expressed as:}}}{\\\\row{\\\\str{(500 - 50) / 3}}}{\\\\row{\\\\str{or}}}{\\\\row{\\\\str{150}}}',
+		 help: '{\\\\row{\\\\str{The expression can be expressed as:}}}{\\\\row{\\\\str{(500 - 50) / 3}}}{\\\\row{\\\\str{or}}}{\\\\row{\\\\str{150}}}',
 		 template:'expressions2'},
 		 {instructions: 'It cost $2,500 for the community theater group to put on a play for three nights. Tickets cost $8 to see the play. 130 tickets were sold for the first night, 100 tickets the second night, and 170 tickets the third night. How much money did the theater group make?',
 		 answer: '\\\\input{700}',
-		 help: '\\\\rowgrp{\\\\row{\\\\str{The expression can be expressed as:}}}{\\\\row{\\\\str{[(130 + 100 + 170) * 8] - 2500}}}{\\\\row{\\\\str{or}}}{\\\\row{\\\\str{700}}}',
+		 help: '{\\\\row{\\\\str{The expression can be expressed as:}}}{\\\\row{\\\\str{[(130 + 100 + 170) * 8] - 2500}}}{\\\\row{\\\\str{or}}}{\\\\row{\\\\str{700}}}',
 		 template:'expressions2'}
 		];
     return dataUtils.build(desc, template, data);

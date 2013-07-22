@@ -29,7 +29,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 							'{\\row{\\str{\xA0}}}' +
 							'{\\row{\\exp{$base1}{$expequation}}{\\sign{=}}}' +
 							'{\\row{\\str{\xA0}}}' +
-							'{\\row{\\str{Ans: \xA0}}{\\exp{\\str{$baseans}}{\\str{$expans}}}}'
+							'{\\row{\\str{Ans: \xA0}}{\\exp{$basehelp}{$exphelp}}}'
 						}
 					}]
                 }]
@@ -62,6 +62,8 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		 exp2: '\\\\str{3}',
 		 baseans: '\\\\input{3}',
 		 expans: '\\\\input{2}',
+		 basehelp: '\\\\str{3}',
+		 exphelp: '\\\\str{2}',
 		 expequation: '\\\\str{-5 + 3}',
 		 template: 'two' },
 		{instructions: 'Determine the simplified result of multiplying the following exponential values',
@@ -82,6 +84,8 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		 exp2: '\\\\str{3}',
 		 baseans: '\\\\frac{\\\\input{3}}{\\\\input{5}}',
 		 expans: '\\\\input{2}',
+		 basehelp: '\\\\frac{\\\\str{3}}{\\\\str{5}}',
+		 exphelp: '\\\\str{2}',
 		 expequation: '\\\\str{-5 + 3}',
 		 template: 'two' }
 		];

@@ -202,7 +202,7 @@ angular.module('mathSkills.services')
                         }
                     });
 
-                    $scope.$on('notHelped', function (e, data) {
+                    $scope.$on('notHelped', function (e, data) {					
                         // If we did not fire this event.
                         if (data.controllerId !== $scope.controllerId) {
                             // Stop the event from going up the scope chain.
