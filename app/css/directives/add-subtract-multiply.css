@@ -64,6 +64,14 @@
 	font-size:.7em;
 	padding-left:4px;
 }
+.brace90 {
+	margin-left:.9em;
+	transform: rotate(90deg) scale(1,4);
+	  -webkit-transform: rotate(90deg) scale(1,4);
+	  -moz-transform: rotate(90deg) scale(1,4);
+	  -ms-transform: rotate(90deg) scale(1,4);
+	  -o-transform: rotate(90deg) scale(1,4);
+}
 .carry {
 	font-size:small;
 }
