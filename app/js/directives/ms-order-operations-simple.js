@@ -18,7 +18,7 @@ angular.module('mathSkills')
                         var newArgs = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
                             if (parsed.tag === 'but' && parsed.args[1] === 'T') {
-                                tagString = '\\col{\\sign{' + parsed.args[0] + '}}{\\html{&#9660;}}{' + $scope.answers[$scope.cur] + '}';
+                                tagString = '\\col{\\sign{' + parsed.args[0] + '}}{css{\\html{&#123;}}{brace90}}{' + $scope.answers[$scope.cur] + '}';
                             }
                             return tagString;
                         });
