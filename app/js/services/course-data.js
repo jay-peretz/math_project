@@ -17,7 +17,7 @@ angular.module('mathSkills.services')
         'data12_1', 'data12_2', 'data12_3',
         'data13_1', 'data13_2',
         'data14_1', 'data14_2',
-        'data15_1', 'data15_2',
+        'data15_1', 'data15_2', 'data15_3',
         'data16_1', 'data16_2', 'data16_3', 'data16_4',
         'data17_1', 'data17_2',
         'data18_1', 'data18_2', 'data18_3',
@@ -41,7 +41,7 @@ angular.module('mathSkills.services')
             data12_1, data12_2, data12_3,
             data13_1, data13_2,
             data14_1, data14_2,
-            data15_1, data15_2,
+            data15_1, data15_2, data15_3,
             data16_1, data16_2, data16_3, data16_4,
             data17_1, data17_2,
             data18_1, data18_2, data18_3,
@@ -81,7 +81,7 @@ angular.module('mathSkills.services')
                         data12_1, data12_2, data12_3,
                         data13_1, data13_2,
                         data14_1, data14_2,
-                        data15_1, data15_2
+                        data15_1, data15_2, data15_3
                     ]
                 }, {
                     title: '4 Ratios & Proportions',
