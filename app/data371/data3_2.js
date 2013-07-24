@@ -62,7 +62,7 @@ angular.module('mathSkills').service('data3_2', ['dataUtils', function (dataUtil
 						}
 					}, {
 						problem: '\\str{Click on the right-most digit of the number you would like to divide into.}',
-						answer: '\\row{\\css{\\str{$divisor}}{divisorstyle}}{\\css{\\butgrp{\\row{\\but{$firstDigit}{$firstButton}}{\\but{$secondDigit}{$secondButton}}{\\but{$thirdDigit}{$thirdButton}}{\\but{$fourthDigit}{$fourthButton}}}}{dividendstyle}}',
+						answer: '\\grp{\\css{\\str{$divisor}}{divisorstyle}}{\\css{\\btngrp{\\btn{$firstDigit}{$firstButton}}{\\btn{$secondDigit}{$secondButton}}{\\btn{$thirdDigit}{$thirdButton}}{\\btn{$fourthDigit}{$fourthButton}}}{dividendstyle}}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
@@ -104,7 +104,7 @@ angular.module('mathSkills').service('data3_2', ['dataUtils', function (dataUtil
 						}
 					}, {
 						problem: '\\str{Click on the right-most digit of the number you would like to divide into.}',
-						answer: '\\row{\\css{\\str{$divisor}}{divisorstyle}}{\\css{\\butgrp{\\row{\\but{$firstDigit}{$firstButton}}{\\but{$secondDigit}{$secondButton}}{\\but{$thirdDigit}{$thirdButton}}{\\but{$fourthDigit}{$fourthButton}}{\\but{$fifthDigit}{$fifthButton}}}}{dividendstyle}}',
+						answer: '\\grp{\\css{\\str{$divisor}}{divisorstyle}}{\\css{\\btngrp{\\btn{$firstDigit}{$firstButton}}{\\btn{$secondDigit}{$secondButton}}{\\btn{$thirdDigit}{$thirdButton}}{\\btn{$fourthDigit}{$fourthButton}}{\\btn{$fifthDigit}{$fifthButton}}}{dividendstyle}}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
