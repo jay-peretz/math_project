@@ -203,7 +203,10 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 						}
 					}, {
 						problem: '\\str{Rewrite the fractional part of the minuend, borrowing one from the whole number: }',
-						answer: '\\rowgrp{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\input{$numnew3}}{\\str{$dennew1}}}}}',
+						answer: '\\rowgrp'
+						+'{\\grp{\\sign{&nbsp;&nbsp;}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}{\\sign{\xA0 = \xA0}}{\\sign{&nbsp;&nbsp;}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\input{$numnew3}}{\\str{$dennew1}}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}{\\sign{\xA0 = \xA0}}{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
@@ -288,7 +291,10 @@ fourth: {
 						}
 					}, {
 						problem: '\\str{Rewrite the fractional part of the minuend, borrowing one from the whole number: }',
-						answer: '\\rowgrp{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\input{$numnew3}}{\\str{$dennew1}}}}}',
+						answer: '\\rowgrp'
+						+'{\\grp{\\sign{&nbsp;&nbsp;}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}{\\sign{\xA0 = \xA0}}{\\sign{&nbsp;&nbsp;}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\input{$numnew3}}{\\str{$dennew1}}}}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}{\\sign{\xA0 = \xA0}}{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
