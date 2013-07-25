@@ -188,7 +188,7 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 							"help": true
 						}
 					}, {
-						problem: '\\str{Do you need to borrow one?}',
+						problem: '\\str{Do you need to borrow one whole?}',
 						answer: '\\css'
 						+'{\\rowgrp'
 						+'{\\grp{\\sign{\xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}}'
@@ -273,7 +273,7 @@ fourth: {
 							"help": true
 						}
 					}, {
-						problem: '\\str{Do you need to borrow one?}',
+						problem: '\\str{Do you need to borrow one whole?}',
 						answer: '\\css'
 						+'{\\rowgrp'
 						+'{\\grp{\\sign{\xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}}'
