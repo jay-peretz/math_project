@@ -320,8 +320,8 @@ fourth: {
         },
         data = [
             { whole1: 2, num1: 4, den1: 5, whole2: 1, num2: 3, den2: 4, wholeanswer: 1, numanswer: 1, denanswer: 20, numnew1: 16, numnew2: 15, template: 'main' },
-			{ whole1: 3, num1: 7, den1: 6, whole2: 2, num2: 8, den2: 9, wholeanswer: 1, numanswer: 5, denanswer: 18, numnew1: 21, numnew2: 16, template: 'main' },
-			{ whole1: 5, num1: 4, den1: 3, whole2: 3, num2: 3, den2: 5, wholeanswer: 2, numanswer: 11, denanswer: 15, numnew1: 20, numnew2: 9, template: 'main' },
+			{ whole1: 3, num1: 8, den1: 9, whole2: 2, num2: 5, den2: 6, wholeanswer: 1, numanswer: 1, denanswer: 18, numnew1: 16, numnew2: 15, template: 'main' },
+			{ whole1: 5, num1: 2, den1: 3, whole2: 3, num2: 3, den2: 5, wholeanswer: 2, numanswer: 1, denanswer: 15, numnew1: 10, numnew2: 9, template: 'main' },
 			{ whole1: 6, num1: 9, den1: 10, whole2: 2, num2: 5, den2: '\xA06\xA0', wholeanswer: 4, numanswer1: 2, denanswer1: 30, numnew1: 27, numnew2: 25, numanswer2: 1, denanswer2: 15, template: 'second' },
 			{ whole1: 5, num1: 3, den1: 8, whole2: 2, num2: 3, den2: 5, wholeanswer: 2, numanswer: 31, denanswer: 40, numnew1: 15,  dennew1: 40, numnew2: 24, wholeReduced: 4, numnew3: 55, template: 'third' },
 			{ whole1: 3, num1: 5, den1: 12, whole2: 1, num2: 3, den2: '\xA04\xA0', wholeanswer: 1, numanswer: 2, denanswer: 3, numnew1: 5,   dennew1: 12, numnew2: 9, wholeReduced: 2, numnew3: 17, numnew4: 8, template: 'fourth' },
