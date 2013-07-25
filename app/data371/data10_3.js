@@ -204,7 +204,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 						answer: '\\css{\\rowgrp'
 						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den3}}}}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\css{\\grp{\\sign{+}}{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}}{border-bottom-with-padding}}'
 						+'{\\html{&nbsp;}}'
@@ -224,7 +224,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den3}}}}}'
+						+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\sign{+}}{\\css{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}{border-bottom-with-padding}}}',
 						answer: '\\input{$denanswer1}',
@@ -287,7 +287,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 						answer: '\\css{\\rowgrp'
 						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den3}}}}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\css{\\grp{\\sign{+}}{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}}{border-bottom-with-padding}}'
 						+'{\\html{&nbsp;}}'
@@ -307,7 +307,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den3}}}}}'
+						+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\sign{+}}{\\css{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}{border-bottom-with-padding}}}',
 						answer: '\\input{$denanswer1}',
@@ -356,7 +356,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 						answer: '\\css{\\rowgrp'
 						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den3}}}}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\css{\\grp{\\sign{+}}{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}}{border-bottom-with-padding}}'
 						+'{\\html{&nbsp;}}'
@@ -376,7 +376,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den3}}}}}'
+						+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\sign{+}}{\\css{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}{border-bottom-with-padding}}}',
 						answer: '\\input{$denanswer1}',
@@ -432,7 +432,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 						answer: '\\css{\\rowgrp'
 						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den3}}}}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\css{\\grp{\\sign{+}}{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}}{border-bottom-with-padding}}'
 						+'{\\html{&nbsp;}}'
@@ -452,7 +452,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den3}}}}}'
+						+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\sign{+}}{\\css{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}{border-bottom-with-padding}}}',
 						answer: '\\input{$denanswer1}',
