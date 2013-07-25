@@ -39,7 +39,8 @@ angular.module('mathSkills')
 					multiplierPlacesRight = 0,
 					multiplicandPlacesLeft = 0,
 					multiplicandPlacesRight = 0,
-					addText = "";
+					addText = "",
+					percentSignOrEmpty;
 					
 					
 		$scope.getClassBorder = function(index) {				
@@ -197,11 +198,17 @@ angular.module('mathSkills')
 						
 						if (tagParameters[1] === ".01" || tagParameters[1] === "0.01") {
 							addText = "dividing by 100";
-						} 
+						}
+						
+						if (tagParameters[2] === "percent") {
+							percentSignOrEmpty = "%"
+						} else {
+							percentSignOrEmpty = ""
+						}
 						
 												
 						if (tagParameters[2] !== "skiptext") {
-							$scope.addDecimalText = 'The '+tagParameters[2]+' '+problemObjects[0]+' is converted to a '+tagParameters[3]+' by '+addText+'. This displaces the decimal point '+$scope.decimalDisplacement+' place(s) to the '+$scope.pointLeftOrRight+'.';
+							$scope.addDecimalText = 'The '+tagParameters[2]+' '+problemObjects[0]+percentSignOrEmpty+' is converted to a '+tagParameters[3]+' by '+addText+'. This displaces the decimal point '+$scope.decimalDisplacement+' place(s) to the '+$scope.pointLeftOrRight+'.';
 						} else {
 							$scope.addDecimalText = "";
 						}
