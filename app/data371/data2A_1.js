@@ -23,10 +23,7 @@ angular.module('mathSkills').service('data2A_1', ['dataUtils', function (dataUti
                                     '{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\str{\xA0$buttonLabelD}}}',
 						controls: {
 							"checkAnswer": true,
-						    "help": '\\html{'+
-                                        '<span class=blue-text>Answer:</span>'+
-                                        '<br><br>$answerLabel'+
-                                    '}'
+						    "help": true
                         }
 					}]
                 }]
