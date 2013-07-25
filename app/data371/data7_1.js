@@ -12,7 +12,11 @@ angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtil
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}',
+                        problem: '\\grp'
+						+'{\\html{Solve &nbsp;}}'
+						+'{\\frac{\\str{$n1}}{\\str{$d1}}}'
+						+'{\\sign{&times;}}'
+						+'{\\frac{\\str{$n2}}{\\str{$d2}}}',
                         answer: '\\frac{\\input{$na}}{\\input{$da}}',
                         controls: {
                             "checkAnswer": true,
@@ -23,9 +27,10 @@ angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtil
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\col'+
-                                '{\\str{Reduce the fractions by canceling.}}' +
-                                '{\\row{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}}',
+                        problem: '\\rowgrp'+
+                                '{\\str{Reduce the fractions by canceling.}}' 
+								+'{\\html{&nbsp;}}'
+                                +'{\\grp{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}}',
                         answer: '\\cancelfracs{[$n1,$d1]}{[$n2,$d2]}',
                         controls: {
                             "checkAnswer": true,
@@ -46,7 +51,10 @@ angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtil
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\sign{&times;}}{\\frac{\\str{$n3}}{\\str{$d3}}}',
+                        problem: '\\rowgrp'
+						+'{\\html{Solve:}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\sign{&times;}}{\\frac{\\str{$n3}}{\\str{$d3}}}}',
                         answer: '\\frac{\\input{$na}}{\\input{$da}}',
                         controls: {
                             "checkAnswer": true,
@@ -57,9 +65,10 @@ angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtil
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\col'+
-                                '{\\str{Reduce the fractions by canceling.}}' +
-                                '{\\row{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\sign{&times;}}{\\frac{\\str{$n3}}{\\str{$d3}}}}',
+                        problem: '\\rowgrp'
+                                +'{\\str{Reduce the fractions by canceling.}}' 
+								+'{\\html{&nbsp;}}'
+                                +'{\\grp{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\sign{&times;}}{\\frac{\\str{$n3}}{\\str{$d3}}}}',
                         answer: '\\cancelfracs{[$n1,$d1]}{[$n2,$d2]}{[$n3,$d3]}',
                         controls: {
                             "checkAnswer": true,
