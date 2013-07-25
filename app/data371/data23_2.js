@@ -38,7 +38,8 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 							
                         }
                     }, {
-                        problem: '\\rowgrp{\\row{\\str{$initialAmount}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}'
+                        problem: '\\rowgrp{\\grp'
+						+'{\\frac{\\grp{\\str{$initialAmount}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\str{1}}}}'
 						+'{\\sign{&times;}}'
 						+'{\\frac{\\grp{\\str{4}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}}{\\grp{\\str{1}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}}}'
 						+'{\\sign{&equals;}}{\\str{?}}{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}}'
@@ -54,7 +55,8 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 							
                         }
                     }, {
-                        problem: '\\rowgrp{\\row{\\str{$initialAmount}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}'
+                        problem: '\\rowgrp{\\grp'
+						+'{\\frac{\\grp{\\str{$initialAmount}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\str{1}}}}'
 						+'{\\sign{&times;}}'
 						+'{\\frac{\\grp{\\str{4}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}}{\\grp{\\str{1}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}}}'
 						+'{\\sign{&times;}}'
@@ -72,7 +74,8 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 							
                         }
                     }, {
-                        problem: '\\rowgrp{\\row{\\str{$initialAmount}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}'
+                        problem: '\\rowgrp{\\grp'
+						+'{\\frac{\\grp{\\str{$initialAmount}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\str{1}}}}'
 						+'{\\sign{&times;}}'
 						+'{\\frac{\\grp{\\str{4}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}}{\\grp{\\str{1}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}}}'
 						+'{\\sign{&times;}}'
