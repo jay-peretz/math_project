@@ -1,7 +1,7 @@
  /*global angular */
 
-angular.module('mathSkills').service('data19_2', function () {
-    var ret = {
+angular.module('mathSkills').service('data19_2', ['dataUtils', function (dataUtils) {
+    var desc = {
 			title: '19.2 Decimal & Fraction Form of Percents',
 			path: '19.2-decimal-fraction-form-percents',
             children: []
@@ -136,22 +136,8 @@ angular.module('mathSkills').service('data19_2', function () {
 			{ fractionWhole: '&nbsp;', fractionNum: '771', fractionDen: '800', answerDecimal: '0.96375', answerPercent: '96.375', fractionPercentWhole: '96', fractionPercentNum: '3', fractionPercentDen: '8', helpWhole: '96', helpNum: '375', helpDen: '1000', template: 'second' },
 			{ fractionWhole: '&nbsp;', fractionNum: '2', fractionDen: '125', answerDecimal: '0.016', answerPercent: '1.6', fractionPercentWhole: '1', fractionPercentNum: '3', fractionPercentDen: '5', helpWhole: '1', helpNum: '6', helpDen: '10', template: 'second' },
 			{ fractionWhole: '&nbsp;', fractionNum: '189', fractionDen: '200', answerDecimal: '0.945', answerPercent: '94.5', fractionPercentWhole: '94', fractionPercentNum: '1', fractionPercentDen: '2', helpWhole: '94', helpNum: '5', helpDen: '10', template: 'second' }
-        ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('(\\$)?\\$' + symbol, 'g'), function ($0, $1) { return $1?$0 : data[symbol]; }); //console.log(string); 
-                }
-            }
-            var ret = JSON.parse(string);
-            ret.data = angular.copy(data);
-            return ret;
-        };
+        ];
 
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
-    
-    return ret;
-});
+
+    return dataUtils.build(desc, template, data);
+}]);
