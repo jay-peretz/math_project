@@ -56,8 +56,8 @@ angular.module('mathSkills')
                         if (e.defaultPrevented !== true) {
                             
                             var data = {
-                                expected: '\\input{' + $scope.myargs[0] + '}',
-                                answer: '\\input{' + $scope.answer + '}',
+                                expected: '\\inputcash{' + $scope.myargs[0] + '}',
+                                answer: '\\inputcash{' + $scope.answer + '}',
                                 label: $scope.label
                             };
                             
@@ -72,7 +72,7 @@ angular.module('mathSkills')
                                         $scope.class = 'success';
                                     } else {
                                         data.result = 'incorrect';
-                                        data.expected = '\\input{' + possibleAnswers[correctAnswerIndex] + '}';
+                                        data.expected = '\\inputcash{' + possibleAnswers[correctAnswerIndex] + '}';
                                         $scope.class = 'error';
                                         $scope.answer = "";
                                     }
@@ -80,7 +80,7 @@ angular.module('mathSkills')
                                 } else {
                                     problemData.getIndex().then(function (index){
                                         data.result = 'incorrect';
-                                        data.expected = '\\input{' + possibleAnswers[index] + '}';
+                                        data.expected = '\\inputcash{' + possibleAnswers[index] + '}';
                                         $scope.class = 'error';
                                         $scope.answer = "";
                                         $scope.$emit('answer', data);
@@ -101,7 +101,7 @@ angular.module('mathSkills')
                     });
 
                     $scope.$on('reportAnswer', function () {
-                        var answer = '\\input{' + $scope.answer + '}',
+                        var answer = '\\inputcash{' + $scope.answer + '}',
                             data = {
                                 answer: answer,
                                 label: $scope.label

@@ -7,14 +7,83 @@ angular.module('mathSkills').service('data21_1', function () {
             children: []
         },
         template = {
-            main: {
+            amount: {
                 
                 title: 'Sales Tax',
                 children: [{
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{$problem}',
-                        answer: '\\input{$answer}',
+                        answer: '\\grp{\\str{$}}{\\css{\\inputcash{$answer}}{width120px}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\html{$problem}',
+                        answer: '\\wb{\\rowgrp{'+
+                            '\\ins{Set up a percent proportion to solve the problem (use "X" for an unknown value).}'+
+                        '}{'+
+                            '\\grp'+
+                            '{\\frac{\\input{[\"$$ln\",\"$$rn\"]}}{\\input{[\"$$ld\",\"$$rd\"]}}}'+
+                            '{\\sign{=}}'+
+                            '{\\frac{\\input{[\"$$rn\",\"$$ln\"]}}{\\input{[\"$$rd\",\"$$ld\"]}}}'+
+                        '}}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\html{$problem}',
+                        answer: '\\wb{\\rowgrp{'+
+                            '\\choose{[\\ins{}{q},\\ins{The standard percent proportion is set up as follows:}]}{$$previousCorrect}'+
+                        '}{'+
+                            '\\css{\\choose{[\\ins{}{q},\\grp{\\frac{\\str{$$dln}}{\\str{$$dld}}}{\\sign{=}}{\\frac{\\str{$$drn}}{\\str{$$drd}}}]}{$$previousCorrect}}{bottom-marg}'+
+                        '}{'+
+                            '\\choose{[\\ins{Yes!},\\ins{We substitute the given values to get:}]}{$$previousCorrect}'+
+                        '}{'+
+                            '\\css{\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}}{bottom-marg}'+
+                        '}{'+
+                            '\\ins{Now solve the problem.}'+
+                        '}{'+
+                            '\\css{\\grp{\\str{X}}{\\sign{=}}{\\set{\\input{$$answer}}{$$key}}}{proportion-application}'+
+                        '}}{well}{end}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\html{$problem}',
+                        answer: '\\wb{\\rowgrp{'+
+                            '\\css{\\choose{[\\ins{}{q},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}}{bottom-marg}'+
+                        '}{'+
+                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems. We substitute the given values to get:}]}{$$previousCorrect}'+
+                        '}{'+
+                            '\\css{\\choose{[\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\str{X}}{\\sign{=}}{\\html{$solution}}}{proportion-application}]}{$$previousCorrect}}{bottom-marg}'+
+                        '}{'+
+                            '\\choose{[\\ins{}{q},\\ins{The answer is}]}{$$previousCorrect}'+
+                        '}{'+
+                            '\\choose{[\\ins{}{q},\\css{\\grp{\\str{$$pre_symbol}}{\\str{$answer}}{\\str{$$post_symbol}}}{proportion-application}]}{$$previousCorrect}'+
+                        '}}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            },
+			rate: {
+                
+                title: 'Sales Tax',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\html{$problem}',
+                        answer: '\\grp{\\css{\\input{$answer}}{width120px}}{\\str{%}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -80,7 +149,7 @@ angular.module('mathSkills').service('data21_1', function () {
         data = [
             {  //1a
                 problem: 'A TV sells for $420. If the sales tax is 6%, how much sales tax is paid?',
-                answer: '25.20', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '25.20', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -92,7 +161,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //1b 
                 problem: 'You buy a TV, and pay $25.20 in sales tax. If the sales tax rate is 6%, what was the cost of the TV without the sales tax included?',
-                answer: '420', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '420.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -104,7 +173,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //1c 
                 problem: 'You buy a TV for $420, and then pay another $25.20 in sales tax. What was the sales tax rate?',
-                answer: '6', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '6', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -117,7 +186,7 @@ angular.module('mathSkills').service('data21_1', function () {
             
             {  //2a
                 problem: 'A pair of shoes sells for $80. If the sales tax is 6.75%, how much sales tax is paid?',
-                answer: '5.40', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '5.40', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -129,7 +198,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //2b 
                 problem: 'You buy a pairs of shoes, and pay $5.40 in sales tax. If the sales tax rate is 6.75%, what was the cost of the shoes without the sales tax included?',
-                answer: '80', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '80.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -141,7 +210,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //2c 
                 problem: 'You buy a pair of shoes for $80, and then pay another $5.40 in sales tax. What was the sales tax rate?',
-                answer: '6.75', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '6.75', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -154,7 +223,7 @@ angular.module('mathSkills').service('data21_1', function () {
             
             {  //3a
                 problem: 'A baseball mitt sells for $25. If the sales tax is 7%, how much sales tax is paid?',
-                answer: '1.75', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '1.75', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -166,7 +235,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //3b 
                 problem: 'You buy a baseball mitt, and pay $1.75 in sales tax. If the sales tax rate is 7%, what was the cost of the shoes without the sales tax included?',
-                answer: '25', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '25.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -178,7 +247,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //3c 
                 problem: 'You buy a baseball mitt for $25, and then pay another $1.75 in sales tax. What was the sales tax rate?',
-                answer: '7', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '7', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -191,7 +260,7 @@ angular.module('mathSkills').service('data21_1', function () {
             
             {  //4a
                 problem: 'Ana buys three books for $30. If the sales tax is 5.5%, how much sales tax does she pay?',
-                answer: '1.65', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '1.65', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -203,7 +272,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //4b 
                 problem: 'Ana buys three books, and pays $1.65 in sales tax. If the sales tax rate is 5.5%, what was the cost of the books without the sales tax included?',
-                answer: '30', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '30.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -215,7 +284,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //4c 
                 problem: 'Ana buys three books for $30, and then pays another $1.65 in sales tax. What was the sales tax rate?',
-                answer: '5.5', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '5.5', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -228,7 +297,7 @@ angular.module('mathSkills').service('data21_1', function () {
             
             {  //5a
                 problem: 'Alex bought a coat for $120. If the sales tax rate is 6.25%, how much sales tax does he pay?',
-                answer: '7.50', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '7.50', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -240,7 +309,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //5b 
                 problem: 'Alex buys a coat, and pays $7.50 in sales tax. If the sales tax rate is 6.25%, what was the cost of the coat without the sales tax included?',
-                answer: '120', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '120.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -252,7 +321,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //5c 
                 problem: 'Alex bought a coat for $120, and then pays another $7.50 in sales tax. What was the sales tax rate?',
-                answer: '6.25', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '6.25', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -265,7 +334,7 @@ angular.module('mathSkills').service('data21_1', function () {
             
             {  //6a
                 problem: 'Michelle bought a pair of gloves for $18. If the sales tax rate is 8%, how much sales tax does she pay?',
-                answer: '1.44', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '1.44', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -277,7 +346,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //6b 
                 problem: 'Michelle bought a pair of gloves, and pays $1.44 in sales tax. If the sales tax rate is 8%, what was the cost of the coat without the sales tax included?',
-                answer: '18', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '18.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -289,7 +358,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //6c 
                 problem: 'Michelle bought a pair of gloves for $18, and then paid another $1.44 in sales tax. What was the sales tax rate?',
-                answer: '8', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '8', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -302,7 +371,7 @@ angular.module('mathSkills').service('data21_1', function () {
             
             {  //7a
                 problem: 'Miguel bought a car for $14,500. If the sales tax rate is 7.5%, how much sales tax does he pay?',
-                answer: '1087.50', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '1087.50', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -314,7 +383,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //7b 
                 problem: 'Miguel bought a car, and pays $1,087.50 in sales tax. If the sales tax rate is 7.5%, what was the cost of the car without the sales tax included?',
-                answer: '14500', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '14500.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -326,7 +395,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //7c 
                 problem: 'Miguel bought a car for $14,500, and then paid another $1,087.50 in sales tax. What was the sales tax rate?',
-                answer: '7.5', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '7.5', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -339,7 +408,7 @@ angular.module('mathSkills').service('data21_1', function () {
             
             {  //8a
                 problem: 'A pair of shoes sells for $60. If the sales tax is 6.5%, how much sales tax is paid?',
-                answer: '3.90', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '3.90', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -351,7 +420,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //8b 
                 problem: 'You buy a pairs of shoes, and pay $3.90 in sales tax. If the sales tax rate is 6.5%, what was the cost of the shoes without the sales tax included?',
-                answer: '60', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '60.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -363,7 +432,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //8c 
                 problem: 'You buy a pair of shoes for $60, and then pay another $3.90 in sales tax. What was the sales tax rate?',
-                answer: '6.5', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '6.5', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -376,7 +445,7 @@ angular.module('mathSkills').service('data21_1', function () {
             
             {  //9a
                 problem: 'A baseball mitt sells for $40. If the sales tax is 7.25%, how much sales tax is paid?',
-                answer: '2.90', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '2.90', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -388,7 +457,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //9b 
                 problem: 'You buy a baseball mitt, and pay $2.90 in sales tax. If the sales tax rate is 7.25%, what was the cost of the shoes without the sales tax included?',
-                answer: '40', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '40.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -400,7 +469,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //9c 
                 problem: 'You buy a baseball mitt for $40, and then pay another $2.90 in sales tax. What was the sales tax rate?',
-                answer: '7.25', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '7.25', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -413,7 +482,7 @@ angular.module('mathSkills').service('data21_1', function () {
             
             {  //10a
                 problem: 'Ana buys three books for $26. If the sales tax is 6%, how much sales tax does she pay?',
-                answer: '1.56', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '1.56', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -425,7 +494,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //10b 
                 problem: 'Ana buys three books, and pays $1.56 in sales tax. If the sales tax rate is 6%, what was the cost of the books without the sales tax included?',
-                answer: '26', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '26.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -437,7 +506,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //10c 
                 problem: 'Ana buys three books for $26, and then pays another $1.56 in sales tax. What was the sales tax rate?',
-                answer: '6', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '6', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -450,7 +519,7 @@ angular.module('mathSkills').service('data21_1', function () {
             
             {  //11a
                 problem: 'Alex bought a coat for $100. If the sales tax rate is 8.75%, how much sales tax does he pay?',
-                answer: '8.45', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '8.45', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -462,7 +531,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //11b 
                 problem: 'Alex buys a coat, and pays $8.75 in sales tax. If the sales tax rate is 8.75%, what was the cost of the coat without the sales tax included?',
-                answer: '100', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '100.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -474,7 +543,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //11c 
                 problem: 'Alex bought a coat for $100, and then pays another $8.75 in sales tax. What was the sales tax rate?',
-                answer: '8.75', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '8.75', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -487,7 +556,7 @@ angular.module('mathSkills').service('data21_1', function () {
             
             {  //12a
                 problem: 'Michelle bought a pair of gloves for $22. If the sales tax rate is 7%, how much sales tax does she pay?',
-                answer: '1.54', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '1.54', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -499,7 +568,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //12b 
                 problem: 'Michelle bought a pair of gloves, and pays $1.54 in sales tax. If the sales tax rate is 7%, what was the cost of the coat without the sales tax included?',
-                answer: '22', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '22.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -511,7 +580,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //12c 
                 problem: 'Michelle bought a pair of gloves for $22, and then paid another $1.54 in sales tax. What was the sales tax rate?',
-                answer: '7', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '7', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -524,7 +593,7 @@ angular.module('mathSkills').service('data21_1', function () {
             
             {  //13a
                 problem: 'Miguel bought a car for $16,000. If the sales tax rate is 8.5%, how much sales tax does he pay?',
-                answer: '1360', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '1360.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -536,7 +605,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //13b 
                 problem: 'Miguel bought a car, and pays $1,360 in sales tax. If the sales tax rate is 8.5%, what was the cost of the car without the sales tax included?',
-                answer: '16000', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '16000.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -548,7 +617,7 @@ angular.module('mathSkills').service('data21_1', function () {
             },
             {  //13c 
                 problem: 'Miguel bought a car for $16,000, and then paid another $1,360 in sales tax. What was the sales tax rate?',
-                answer: '8.5', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '8.5', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
