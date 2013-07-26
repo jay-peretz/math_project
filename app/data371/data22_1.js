@@ -206,6 +206,63 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 							}
 						}]
 					}]
+				},
+				timeFractionTwoPartShort: {
+					title: 'Solving Simple Interest and Monthly Payment Problems',
+					children: [{
+						title: 'Main Answer',
+						children: [{
+							problem: '\\col'
+							+'{\\str{$problem}}',
+							answer: '\\grp{\\html{$}}{\\css{\\inputcash{$answer1}}{width200px}}',
+							controls: {
+								"checkAnswer": true,
+								"help": '\\rowgrp'
+								+'{\\html{&nbsp;}}'
+								+'{\\html{$helpFirst}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\html{$helpSecond}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\html{$helpThird}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\row{\\html{$helpfourth}}{\\frac{\\str{$timeNumerator}}{\\str{$timeDenominator}}}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\html{$helpfifth}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\html{$helpsixth}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\html{$helpseventh}}'
+								+'{\\html{&nbsp;}}'								
+								+'{\\row{\\css{\\str{Answer: \xA0 }}{help-answer-text}}'
+								+'{\\css{\\row{\\str{$}}{\\html{$helpAnswer1 \xA0 }}}{help-answer-text-tight}}'
+								+'{\\html{&nbsp;}}'
+							}
+						}, {						
+							problem: '\\col'
+							+'{\\str{$problem}}',
+							answer: '\\css{\\rowgrp'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\row{\\str{Answer: \xA0 }}'
+							+'{\\str{$}}{\\html{$helpAnswer1 \xA0 }}}{help-answer-text-tight}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\html{&nbsp;}}'
+							+'{css{\\str{$part2Problem}}{alert alert-info}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\html{$}}{\\css{\\inputcash{$answer2}}{width200px}}}}{well}',						
+							controls: {
+								"checkAnswer": true,
+								"help": '\\rowgrp'
+								+'{\\html{&nbsp;}}'
+								+'{\\html{$helpeleventh}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\html{$helptwelfth}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\row{\\css{\\str{Answer: \xA0 }}{help-answer-text}}'
+								+'{\\css{\\row{\\str{$}}{\\html{$helpAnswer2 \xA0 }}}{help-answer-text-tight}}'
+								+'{\\html{&nbsp;}}'
+							}
+						}]
+					}]
 				}
 		},
         data = [
@@ -239,33 +296,40 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 template: 'timeWhole'
             },
 			{ 
-                problem: 'Bob Jones borrowed $10,200 at a bank where the simple interest rate is 6%.  Assuming he made no down payment on this loan, calculate the total amount he must pay back at the end of one year.  (round all dollar amounts to the nearest cent)',
-				 answer: '10812.00', 
-				 helpAnswer: '10,812.00',
+                problem: 'Bob Jones borrowed $10,200 at a bank where the simple interest rate is 6%.  Assuming he made no down payment on this loan, calculate the total amount he must pay back at the end of two years.  (round all dollar amounts to the nearest cent)',
+				 answer: '11424.00', 
+				 helpAnswer: '11,424.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
 				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
-				 helpfourth: "I <span class=bigger>=</span> $10,200 <span class=bigger>&sdot;</span> 6% <span class=bigger>&sdot;</span> 1",
+				 helpfourth: "I <span class=bigger>=</span> $10,200 <span class=bigger>&sdot;</span> 6% <span class=bigger>&sdot;</span> 2",
 				 helpfifth: "3) Calculate the interest:",
-				 helpsixth: "I <span class=bigger>=</span> $10,200 <span class=bigger>&sdot;</span> 0.6 <span class=bigger>&sdot;</span> 1",
-				 helpseventh: "I <span class=bigger>=</span> $612.00",
+				 helpsixth: "I <span class=bigger>=</span> $10,200 <span class=bigger>&sdot;</span> 0.6 <span class=bigger>&sdot;</span> 2",
+				 helpseventh: "I <span class=bigger>=</span> $1224.00",
 				 helpeighth: "Total Payment = Principal + Interest",
-				 helpninth: "Total Payment = $10,200 + $612 <span class=bigger>=</span> $10,812.00",
+				 helpninth: "Total Payment = $10,200 + $1224 <span class=bigger>=</span> $11,424.00",
 				 helptenth: "",
 				 template: 'timeWhole'
-            },{ 
-                problem: 'Dana Esquivel borrowed $900 from her credit union for a period of 3 months.  If the simple interest rate is 10%, how much interest did she pay at the end of this loan period?  (round all dollar amounts to the nearest cent)',
-				 answer: '22.50',
-				 helpAnswer: '22.50',
+            },
+			{ 
+                problem: 'Dana Esquival invested $15,000 into a new company.  She earned 7% simple interest for 2 years.  How much interest did she earn from her investment?',
+				part2Problem: "How much money did the company pay back to Constanza? (round all dollar amounts to the nearest cent)",
+				 answer1: '2100.00',
+				 helpAnswer1: '2,100.00',
+				 answer2: '17,100.00',
+				 helpAnswer2: '17,100.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
+				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time<br><br>The principal is the investment ($15,000).",
 				 helpThird: "2) Substitute the values into the formula:",
-				 helpfourth: "I <span class=bigger>=</span> $900 <span class=bigger>&sdot;</span> 10% <span class=bigger>&sdot;</span>",
-				 timeNumerator: "3",
+				 helpfourth: "I <span class=bigger>=</span> $15,000 <span class=bigger>&sdot;</span> 7% <span class=bigger>&sdot;</span>",
+				 timeNumerator: "24",
 				 timeDenominator: "12",
 				 helpfifth: "3) Calculate the interest:",
-				 helpsixth: "I <span class=bigger>=</span> $900 <span class=bigger>&sdot;</span> 0.1 <span class=bigger>&sdot;</span> 0.25",
-				 template: 'timeFraction'
+				 helpsixth: "I <span class=bigger>=</span> $15,000 <span class=bigger>&sdot;</span> 0.07 <span class=bigger>&sdot;</span> 2",				 
+				 helpseventh: "I <span class=bigger>=</span> $2,100.00",
+				 helpeleventh: "Total Payment = Principal + Interest",
+				 helptwelfth: "Total Payment = $15,000 + $2,100 <span class=bigger>=</span> $17,100.00",
+				 template: 'timeFractionTwoPartShort'
             },
 			{ 
                 problem: 'Alicia Taylor borrowed $1,600 at a bank where the simple interest rate is 12%.  Assuming she made no down payment on this loan, calculate her pay-off amount at the end of a year. (round all dollar amounts to the nearest cent)',
@@ -290,29 +354,29 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 template: 'timeWholeTwoPart'
             },
 			{ 
-                problem: 'Jayvis Williams borrowed $100,000 at a bank where the simple interest rate is 4%.  Assuming he made no down payment on this loan, calculate his pay-off amount at the end of a year. (round all dollar amounts to the nearest cent)',
+                problem: 'Jayvis Williams borrowed $100,000 at a bank where the simple interest rate is 4%.  Assuming he made no down payment on this loan, calculate his pay-off amount at the end of ten years. (round all dollar amounts to the nearest cent)',
 				part2Problem: "Determine Jayvis's monthly payments. (round all dollar amounts to the nearest cent)",
-				 answer1: '104000.00',
-				 helpAnswer1: '104,000.00',
-				 answer2: '8666.67',
-				 helpAnswer2: '8,666.67',
+				 answer1: '140000.00',
+				 helpAnswer1: '140,000.00',
+				 answer2: '1166.67',
+				 helpAnswer2: '1,166.67',
 				 helpFirst: "1) The Basic Interest Formula:", 
 				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
-				 helpfourth: "I <span class=bigger>=</span> $100,000 <span class=bigger>&sdot;</span> 4% <span class=bigger>&sdot;</span> 1",
+				 helpfourth: "I <span class=bigger>=</span> $100,000 <span class=bigger>&sdot;</span> 4% <span class=bigger>&sdot;</span> 10",
 				 helpfifth: "3) Calculate the interest:",
-				 helpsixth: "I <span class=bigger>=</span> $100,000 <span class=bigger>&sdot;</span> 0.04 <span class=bigger>&sdot;</span> 1",
-				 helpseventh: "I <span class=bigger>=</span> $4,000.00",
+				 helpsixth: "I <span class=bigger>=</span> $100,000 <span class=bigger>&sdot;</span> 0.04 <span class=bigger>&sdot;</span> 10",
+				 helpseventh: "I <span class=bigger>=</span> $40,000.00",
 				 helpeighth: "Total Payment = Principal + Interest",
-				 helpninth: "Total Payment = $100,000 + $4,000 <span class=bigger>=</span> $104,000.00",
+				 helpninth: "Total Payment = $100,000 + $40,000 <span class=bigger>=</span> $140,000.00",
 				 helptenth: "",
 				 helpeleventh: "The Monthly Payment amount is determined by dividing the Total Payment by the Total Months:",
 				 helptwelfth: "Monthly Payment <span class=bigger>=</span> Total Payment <span class=bigger>&divide;</span> Total Months",
-				 helpthirteenth: "Monthly Payment <span class=bigger>=</span> $104,000.00 <span class=bigger>&divide;</span> 12 <span class=bigger>=</span> 8,666.67",
+				 helpthirteenth: "Monthly Payment <span class=bigger>=</span> $140,000.00 <span class=bigger>&divide;</span> (10 <span class=bigger>&sdot;</span> 12)<br><span style='visibility:hidden;'>Monthly Payment </span><span class=bigger>=</span> $140,000.00 <span class=bigger>&divide;</span> 120<br><span style='visibility:hidden;'>Monthly Payment </span><span class=bigger>=</span> 1166.67",
 				 template: 'timeWholeTwoPart'
             },
 			{ 
-                problem: 'Sarah Maple borrowed $3,600 for 6 months at a bank where the yearly interest rate is 15%.  She decides to make monthly payments on this loan after making a down-payment of $720.  Calculate her pay-off amount at the end of six months. (round all dollar amounts to the nearest cent)',
+                problem: 'Sarah Maple borrowed $3,600 for 6 months at a bank where the yearly interest rate is 15%.  She decides to make monthly payments on this loan after making a down-payment of $720.  Calculate the total amount of money she must pay back to the bank in the six months after she makes her down payment (round all dollar amounts to the nearest cent).',
 				part2Problem: "Determine Sarah's monthly payments. (round all dollar amounts to the nearest cent)",
 				 answer1: '3096.00',
 				 helpAnswer1: '3,096.00',
@@ -336,7 +400,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 template: 'timeFractionTwoPart'
             },
 			{ 
-                problem: 'Greg Schwarz borrowed $2,500 for 3 months at a bank where the yearly interest rate is 12%.  He decides to make monthly payments on this loan after making a down-payment of $100.  Calculate his pay-off amount at the end of three months. (round all dollar amounts to the nearest cent)',
+                problem: 'Greg Schwarz borrowed $2,500 for 3 months at a bank where the yearly interest rate is 12%.  He decides to make monthly payments on this loan after making a down-payment of $100.  Calculate the total amount of money he must pay back to the bank in the three months after he makes his down payment (round all dollar amounts to the nearest cent).',
 				part2Problem: "Determine Greg's monthly payments. (round all dollar amounts to the nearest cent)",
 				 answer1: '2472.00',
 				 helpAnswer1: '2,472.00',
@@ -360,41 +424,45 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 template: 'timeFractionTwoPart'
             },
 			{ 
-                problem: 'Contansa Aguilera borrowed $54,200 for 6 months at a bank where the yearly interest rate is 8%.  She decides to make monthly payments on this loan after making a down-payment of $4000.  Calculate her pay-off amount at the end of six months. (round all dollar amounts to the nearest cent)',
-				part2Problem: "Determine Contansa's monthly payments. (round all dollar amounts to the nearest cent)",
-				 answer1: '52208.00',
-				 helpAnswer1: '52,208.00',
-				 answer2: '8701.33',
-				 helpAnswer2: '8,701.33',
+                problem: 'Contansa Aguilera invested $50,000 into a new company.  She earned 8% simple interest for 3 years.  How much interest did she earn from her investment?',
+				part2Problem: "How much money did the company pay back to Constanza? (round all dollar amounts to the nearest cent)",
+				 answer1: '12000.00',
+				 helpAnswer1: '12,000.00',
+				 answer2: '62000.00',
+				 helpAnswer2: '62,000.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time<br><br>The principal is the loan ($54,200) - downpayment ($4000).<br>The principal is only $50,200.",
+				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time<br><br>The principal is the investment ($50,000).",
 				 helpThird: "2) Substitute the values into the formula:",
-				 helpfourth: "I <span class=bigger>=</span> $50,200 <span class=bigger>&sdot;</span> 8% <span class=bigger>&sdot;</span>",
-				 timeNumerator: "6",
+				 helpfourth: "I <span class=bigger>=</span> $50,000 <span class=bigger>&sdot;</span> 8% <span class=bigger>&sdot;</span>",
+				 timeNumerator: "36",
 				 timeDenominator: "12",
 				 helpfifth: "3) Calculate the interest:",
-				 helpsixth: "I <span class=bigger>=</span> $50,200 <span class=bigger>&sdot;</span> 0.08 <span class=bigger>&sdot;</span> 0.5",				 
-				 helpseventh: "I <span class=bigger>=</span> $2,008.00",
+				 helpsixth: "I <span class=bigger>=</span> $50,000 <span class=bigger>&sdot;</span> 0.08 <span class=bigger>&sdot;</span> 3",				 
+				 helpseventh: "I <span class=bigger>=</span> $12,000.00",
+				 helpeleventh: "Total Payment = Principal + Interest",
+				 helptwelfth: "Total Payment = $50,000 + $12,000 <span class=bigger>=</span> $62,000.00",
+				 template: 'timeFractionTwoPartShort'
+            },{ 
+				 problem: 'To start his new business, Yousef needed to purchase $180,000 worth of specialized packaging equipment.  He made a 20% downpayment to the manufacturer for this equipment and borrowed the rest at a 5.5% simple interest rate for 6 years.  How much money did Yousef have to pay back to the manufacturer after he made his downpayment?',
+				part2Problem: "What was Yousef's monthly payment? (round all dollar amounts to the nearest cent)",
+				 answer1: '191520.00',
+				 helpAnswer1: '191,520.00',
+				 answer2: '2660.00',
+				 helpAnswer2: '2,660.00',
+				 helpFirst: "1) The Basic Interest Formula:", 
+				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time<br><br>The principal is the loan ($180,000) - downpayment (20% of $180,000). The principal is only $144,000.",
+				 helpThird: "2) Substitute the values into the formula:",
+				 helpfourth: "I <span class=bigger>=</span> $144,000 <span class=bigger>&sdot;</span> 5.5% <span class=bigger>&sdot;</span> 6",
+				 helpfifth: "3) Calculate the interest:",
+				 helpsixth: "I <span class=bigger>=</span> $144,000 <span class=bigger>&sdot;</span> 0.055 <span class=bigger>&sdot;</span> 6",
+				 helpseventh: "I <span class=bigger>=</span> $47,520.00",
 				 helpeighth: "Total Payment = Principal + Interest",
-				 helpninth: "Total Payment = $50,200 + $2,008 <span class=bigger>=</span> $52,208.00",
+				 helpninth: "Total Payment = $144,000 + $47,520 <span class=bigger>=</span> $191,520.00",
 				 helptenth: "",
 				 helpeleventh: "The Monthly Payment amount is determined by dividing the Total Payment by the Total Months:",
 				 helptwelfth: "Monthly Payment <span class=bigger>=</span> Total Payment <span class=bigger>&divide;</span> Total Months",
-				 helpthirteenth: "Monthly Payment <span class=bigger>=</span> $52,208.00 <span class=bigger>&divide;</span> 6 <span class=bigger>=</span> $8,701.33",
-				 template: 'timeFractionTwoPart'
-            },{ 
-                problem: 'Yousef Ibrahim borrowed $2900 from his credit union for a period of 9 months.  If the simple interest rate is 5%, how much interest did he pay at the end of this loan period?  (round all dollar amounts to the nearest cent)',
-				 answer: '108.75',
-				 helpAnswer: '108.75',
-				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
-				 helpThird: "2) Substitute the values into the formula:",
-				 helpfourth: "I <span class=bigger>=</span> $2900 <span class=bigger>&sdot;</span> 5% <span class=bigger>&sdot;</span>",
-				 timeNumerator: "9",
-				 timeDenominator: "12",
-				 helpfifth: "3) Calculate the interest:",
-				 helpsixth: "I <span class=bigger>=</span> $2900 <span class=bigger>&sdot;</span> 0.05 <span class=bigger>&sdot;</span> 0.75",
-				 template: 'timeFraction'
+				 helpthirteenth: "Monthly Payment <span class=bigger>=</span> $191,520.00 <span class=bigger>&divide;</span> (6 <span class=bigger>&sdot;</span> 12)<br><span style='visibility:hidden;'>Monthly Payment </span><span class=bigger>=</span> $191,520.00 <span class=bigger>&divide;</span> 72 <br><span style='visibility:hidden;'>Monthly Payment </span><span class=bigger>=</span> 2660.00",
+				 template: 'timeWholeTwoPart'
             }
 
         ];
