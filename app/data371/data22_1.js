@@ -313,7 +313,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
             },
 			{ 
                 problem: 'Dana Esquival invested $15,000 into a new company.  She earned 7% simple interest for 2 years.  How much interest did she earn from her investment?',
-				part2Problem: "How much money did the company pay back to Constanza? (round all dollar amounts to the nearest cent)",
+				part2Problem: "How much money did the company pay back to Dana? (round all dollar amounts to the nearest cent)",
 				 answer1: '2100.00',
 				 helpAnswer1: '2,100.00',
 				 answer2: '17,100.00',
