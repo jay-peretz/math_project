@@ -13,19 +13,16 @@ angular.module('mathSkills').service('data19_4', function () {
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-						+'{\\grp{\\str{Change this percent into a decimal:}}}'
-						+'{\\grp{\\html{&nbsp;}}}'
+						+'{\\str{Change this percent into a decimal:}}'
+						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}}',
-						answer: '\\input{$decimal}',		
+						answer: '\\grp{\\input{$decimal}}',		
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\row{\\str{$decimalPercent}}{\\str{%}}'
-							+'{\\sign{\xA0 = \xA0}}'							
-							+'{\\str{$decimal}}}'
-							+'{\\row{\\html{&nbsp;}}}'
-							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{\\css{\\str{$decimal}}{help-answer-text-tight}}}'
+							+'{\\percentarrows{$decimalPercent}{0.01}{percent}{decimal}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\str{Answer:  $decimal}}{help-answer-text}}'
 						}
 					}, {
 						problem: '\\rowgrp'
@@ -34,7 +31,7 @@ angular.module('mathSkills').service('data19_4', function () {
 						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}}',
 						answer: '\\css{\\rowgrp'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{str{\xA0 Answer: }}{\\str{$decimal}}}'
+						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}{\\sign{=}}{\\str{$decimal}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\html{&nbsp;}}'
 						+'{css{\\str{Change the decimal into a fraction:}}{alert alert-info}}'
@@ -43,63 +40,22 @@ angular.module('mathSkills').service('data19_4', function () {
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\row{\\str{$decimal}}'
+							+'{\\str{The decimal $decimal is converted by stating the decimal number out loud.  Use the appropriate place value:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\str{$decimal}}'
 							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}'
-							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}'
-							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{css{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}{help-answer-text-tight}}}'
+							+'{\\str{"$outLoud"}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\str{or: \xA0}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\str{Reduce whenever possible.}}'
+							+'{\\html{&nbsp;}}'
+							+'{css{\\grp{\\str{Answer: \xA0 \xA0}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}{help-answer-text}}'
 						}
 					}]
                 }]
             },
-				second: {
-                title: 'Change a Percent to a Fraction (Directly)',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-						+'{\\grp{\\str{Change this percent into a decimal:}}}'
-						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}}',
-						answer: '\\input{$decimal}',		
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\row{\\str{$decimalPercent}}{\\str{%}}'
-							+'{\\sign{\xA0 = \xA0}}'							
-							+'{\\str{$decimal}}}'
-							+'{\\row{\\html{&nbsp;}}}'
-							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{\\css{\\str{$decimal}}{help-answer-text-tight}}}'
-						}
-					}, {
-						problem: '\\rowgrp'
-						+'{\\grp{\\str{Change this percent into a decimal:}}}'
-						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}}',
-						answer: '\\css{\\rowgrp'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{str{\xA0 Answer: }}{\\str{$decimal}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\html{&nbsp;}}'
-						+'{css{\\str{Change the decimal into a fraction:}}{alert alert-info}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}}}{well}',
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\row{\\str{$decimal}}'
-							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}'
-							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{css{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}{help-answer-text-tight}}}'
-						}
-					}]
-                }]
-            },
-			third: {
+			second: {
                 title: 'Change a Percent to a Fraction (Directly)',
                 children: [{
                     title: 'Main Answer',
@@ -112,7 +68,7 @@ angular.module('mathSkills').service('data19_4', function () {
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\row{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}'
+							+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}'
 							+'{\\sign{ \xA0 = \xA0 }}'
 							+'{\\str{$decimalPercent}}{\\str{%}}}'
 							+'{\\html{&nbsp;}}'
@@ -126,7 +82,7 @@ angular.module('mathSkills').service('data19_4', function () {
 						+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}}',
 						answer: '\\css{\\rowgrp'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{str{\xA0 Answer: }}{\\str{$decimalPercent}}{\\str{%}}}'
+						+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}{\\sign{=}}{\\str{$decimalPercent}}{\\str{%}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\html{&nbsp;}}'
 						+'{css{\\str{Convert the percent in decimal form into a decimal:}}{alert alert-info}}'
@@ -135,12 +91,11 @@ angular.module('mathSkills').service('data19_4', function () {
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\row{\\str{$decimalPercent}}{\\str{%}}'
-							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\str{$decimal}}}'
+							+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}{\\sign{=}}{\\str{$decimalPercent}}{\\str{%}}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{css{\\str{$decimal}}{help-answer-text-tight}}'
+							+'{\\percentarrows{$decimalPercent}{0.01}{percent}{decimal}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\str{Answer:  $decimal}}{help-answer-text}}'
 						}
 					}, {
 						problem: '\\rowgrp'
@@ -149,45 +104,50 @@ angular.module('mathSkills').service('data19_4', function () {
 						+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}}',
 						answer: '\\css{\\rowgrp'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{str{\xA0 Answer: }}{\\str{$decimalPercent}}{\\str{%}}}'
+						+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}{\\sign{=}}{\\str{$decimalPercent}}{\\str{%}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\str{Convert the percent in decimal form into a decimal:}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{str{\xA0 Answer: }}{\\str{$decimal}}}'
+						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}{\\sign{=}}{\\str{$decimal}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\html{&nbsp;}}'
 						+'{css{\\str{Convert the decimal to a fraction:}}{alert alert-info}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}}}{well}',
 						controls: {
-							"checkAnswer": true,
+							"checkAnswer": true,							
 							"help": '\\rowgrp'
-							+'{\\row{\\str{$decimal}}'
-							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\grp{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}'
-							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\grp{\\frac{\\str{$answerNum}}{\\str{$answerDen}}}}}'
+							+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}{\\sign{=}}{\\str{$decimalPercent}}{\\str{%}}{\\sign{=}}{\\str{$decimal}}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{css{\\frac{\\str{$answerNum}}{\\str{$answerDen}}}{help-answer-text-tight}}'
+							+'{\\str{The decimal $decimal is converted by stating the decimal number out loud.  Use the appropriate place value:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\str{$decimal}}'
+							+'{\\sign{ \xA0 = \xA0 }}'
+							+'{\\str{"$outLoud"}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp{\\str{or: \xA0}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\str{Reduce whenever possible.}}'
+							+'{\\html{&nbsp;}}'
+							+'{css{\\grp{\\str{Answer: \xA0 \xA0}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}{help-answer-text}}'
 						}
 					}]
                 }]
             }
         },
         data = [
-            { decimalPercent: '38', decimal: .38, answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', template: 'main' },
-            { decimalPercent: '82', decimal: .82, answerNum: '41', answerDen: '50', helpNum: '82', helpDen: '100', template: 'main' },
-            { decimalPercent: '6.7', decimal: .067, answerNum: '67', answerDen: '1000', template: 'second' },
-            { decimalPercent: '3.5', decimal: .035, answerNum: '7', answerDen: '200', helpNum: '35', helpDen: '1000', template: 'main' },
-            { decimalPercent: '4.73', decimal: .0473, answerNum: '473', answerDen: '10000', template: 'second' },
-			{ problemWhole: '1', problemNum: '4', problemDen: '5', decimalPercent: '1.8', decimal: '0.018',  answerNum: '9', answerDen: '500', helpNum: '18', helpDen: '1000', template: 'third' },
-			{ problemWhole: '2', problemNum: '1', problemDen: '4', decimalPercent: '2.25', decimal: '0.0225',  answerNum: '9', answerDen: '400', helpNum: '225', helpDen: '10000', template: 'third' },
-			{ problemWhole: '&nbsp;', problemNum: '7', problemDen: '8', decimalPercent: '0.875', decimal: '0.00875',  answerNum: '7', answerDen: '800', helpNum: '875', helpDen: '100000', template: 'third' },
-			{ problemWhole: '&nbsp;', problemNum: '2', problemDen: '5', decimalPercent: '0.4', decimal: '0.004',  answerNum: '1', answerDen: '250', helpNum: '4', helpDen: '1000', template: 'third' },
-			{ problemWhole: '&nbsp;', problemNum: '3', problemDen: '4', decimalPercent: '0.75', decimal: '0.0075',  answerNum: '3', answerDen: '400', helpNum: '75', helpDen: '10000', template: 'third' }
+            { decimalPercent: '38', decimal: '.38', answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', outLoud: 'thirty-eight hundredths', template: 'main' },
+            { decimalPercent: '82', decimal: '.82', answerNum: '41', answerDen: '50', helpNum: '82', helpDen: '100', outLoud: 'eighty-two hundredths', template: 'main' },
+            { decimalPercent: '6.7', decimal: '.067', answerNum: '67', answerDen: '1000', helpNum: '67', helpDen: '1000', outLoud: 'sixty-seven thousandths', template: 'main' },
+            { decimalPercent: '3.5', decimal: '.035', answerNum: '7', answerDen: '200', helpNum: '35', helpDen: '1000', outLoud: 'thirty-five thousandths', template: 'main' },
+            { decimalPercent: '4.73', decimal: '.0473', answerNum: '473', answerDen: '10000', helpNum: '473', helpDen: '10000', outLoud: 'four hundred seventy-three ten-thousandths', template: 'main' },
+			{ problemWhole: '1', problemNum: '4', problemDen: '5', decimalPercent: '1.8', decimal: '0.018',  answerNum: '9', answerDen: '500', helpNum: '18', helpDen: '1000', outLoud: 'eighteen thousandths', template: 'second' },
+			{ problemWhole: '2', problemNum: '1', problemDen: '4', decimalPercent: '2.25', decimal: '0.0225',  answerNum: '9', answerDen: '400', helpNum: '225', helpDen: '10000', outLoud: 'two hundred twenty-five ten-thousandths', template: 'second' },
+			{ problemWhole: '&nbsp;', problemNum: '7', problemDen: '8', decimalPercent: '0.875', decimal: '0.00875',  answerNum: '7', answerDen: '800', helpNum: '875', helpDen: '100000', outLoud: 'eight hundred seventy-five hundred-thousandths', template: 'second' },
+			{ problemWhole: '&nbsp;', problemNum: '2', problemDen: '5', decimalPercent: '0.4', decimal: '0.004',  answerNum: '1', answerDen: '250', helpNum: '4', helpDen: '1000', outLoud: 'four thousandths', template: 'second' },
+			{ problemWhole: '&nbsp;', problemNum: '3', problemDen: '4', decimalPercent: '0.75', decimal: '0.0075',  answerNum: '3', answerDen: '400', helpNum: '75', helpDen: '10000', outLoud: 'seventy-five ten-thousandths', template: 'second' }
         ],
         interpolate = function (obj, data) {
             var string = JSON.stringify(obj);
