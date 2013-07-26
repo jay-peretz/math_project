@@ -50,7 +50,7 @@ angular.module('mathSkills').service('data18_3', ['dataUtils', function (dataUti
 						answer: '\\css{\\rowgrp'
 						+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}{\\sign{=}}{\\str{$decimalPercent}}{\\str{%}}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\css{\\str{Now change the decimal percent into a decimal:}}{alert alert-info}}'
+						+'{\\css{\\str{Now change the percent into a decimal:}}{alert alert-info}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\input{$decimalAnswer}}}'						
 						+'}{well}',
