@@ -41,14 +41,19 @@ angular.module('mathSkills').service('data18_3', ['dataUtils', function (dataUti
 						}
                     },
 					{
-                         problem: '\\rowgrp{\\row{\\str{Change this fraction percent to a decimal percent:}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\html{$problemWhole}}{\\frac{\\str{$problemNum}}{\\str{$problemDen}}}}{\\str{%}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round the decimal percent to the hundredths place.}}}',
+                         problem: '\\rowgrp'
+						 +'{\\str{Change this fraction percent to a decimal percent:}}'
+						 +'{\\str{\xA0}}'
+						 +'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\str{$problemNum}}{\\str{$problemDen}}}}{\\str{%}}}'
+						 +'{\\str{\xA0}}'
+						 +'{\\str{Round the decimal percent to the hundredths place.}}',
 						answer: '\\css{\\rowgrp'
-						+'{\\grp{\\str{Answer: $decimalPercent}}{\\str{%}}}'
+						+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}{\\sign{=}}{\\str{$decimalPercent}}{\\str{%}}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\str{Now change the decimal percent into a decimal:}}'
+						+'{\\css{\\str{Now change the decimal percent into a decimal:}}{alert alert-info}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\input{$decimalAnswer}}}'						
-						+'}{well label_like}',
+						+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
