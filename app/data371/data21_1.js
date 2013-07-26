@@ -14,7 +14,7 @@ angular.module('mathSkills').service('data21_1', function () {
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{$problem}',
-                        answer: '\\grp{\\str{$}}{\\css{\\inputcash{$answer}}{width120px}}',
+                        answer: '\\grp{\\str{$}}{\\css{\\inputcash{$answer}}{width200px}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -83,7 +83,7 @@ angular.module('mathSkills').service('data21_1', function () {
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{$problem}',
-                        answer: '\\grp{\\css{\\input{$answer}}{width120px}}{\\str{%}}',
+                        answer: '\\grp{\\css{\\input{$answer}}{width200px}}{\\str{%}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,

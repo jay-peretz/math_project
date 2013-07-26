@@ -7,10 +7,6 @@ input {
 	text-align:center;
 }
 
-.width120px input{
-	width: 120px;
-}
-
 .width200px input{
 	width: 200px;
 }

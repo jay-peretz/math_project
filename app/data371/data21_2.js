@@ -14,7 +14,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{<span class="blue-text">$SStax</span><br><br>$problem}',
-                        answer: '\\input{$answer}',
+						answer: '\\grp{\\str{$}}{\\css{\\inputcash{$answer}}{width200px}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -86,7 +86,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
 						+'{\\str{\xA0}}'
 						+'{\\str{\xA0}}'
 						+'{\\chart{2012 Income Tax Rate Schedule for Single Person}{7}{2}{["If you have a taxable income:","Amount of Income Tax","between $0 and $8,925, then you pay:","10% <span class=bigger>&sdot;</span>(amount of taxable income)","between $8,925 and $36,250, then you pay:","$893 + <br> 15% <span class=bigger>&sdot;</span>(amount of taxable income over $8,925)","between $36,250 and $87,850, then you pay:","$4,991 + <br> 25% <span class=bigger>&sdot;</span>(amount of taxable income over $36,250)", "between $87,850 and $183,250, then you pay:","$17,891 + <br>28% <span class=bigger>&sdot;</span>(amount of taxable income over $87,850)", "between $183,250 and $398,350, then you pay:","$44,603 +<br> 33% <span class=bigger>&sdot;</span>(amount of taxable income over $183,250)", "over $398,350, then you pay:","$116,164 +<br> 39.6% <span class=bigger>&sdot;</span>(amount of taxable income over $398,350)"]}',
-						answer: '\\grp{\\html{$}}{\\input{$answer}}',
+						answer: '\\grp{\\str{$}}{\\css{\\inputcash{$answer}}{width200px}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -136,7 +136,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
             },
             { 
                 problem: 'How much income tax did Julie pay in 2012 if her taxable income was $6,983? (round to the nearest dollar)',
-				 answer: '698', 
+				 answer: '698.00', 
 				 helpFirst: "Julie's taxable income puts her in the first bracket.  She pays:", 
 				 helpSecond: "10% of $6,983",
 				 helpThird: "(.10)($6,983)",
@@ -146,7 +146,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
             },
             { 
                 problem: 'How much income tax did Mark pay in 2012 if his taxable income was $57,547? (round to the nearest dollar)',
-				 answer: '10,315', 
+				 answer: '10,315.00', 
 				 helpFirst: "Mark's taxable income puts him in the third bracket.  He pays:", 
 				 helpSecond: "$4,991 + 25% of the amount over $36,250",
 				 helpThird: "$4,991 + (.25)($57,547 - $36,250)",
@@ -156,7 +156,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
             },
 			{ 
                 problem: 'Kevin earned a total of $16,236 in 2012.  His taxable income, however, was $14,118. Calculate his income tax for 2012 (round to the nearest dollar)',
-				 answer: '1,760', 
+				 answer: '1,760.00', 
 				 helpFirst: "Kevin's taxable income puts him in the second bracket.  He pays:", 
 				 helpSecond: "$893 + 15% of the amount over $8,925",
 				 helpThird: "$893 + (.15)($14,118 - $8,925)",
@@ -166,7 +166,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
             },
 			{ 
                 problem: 'How much income tax did Susan pay in 2012 if her taxable income was $233,819? (round to the nearest dollar)',
-				 answer: '61,291', 
+				 answer: '61,291.00', 
 				 helpFirst: "Susan's taxable income puts her in the fifth bracket.  She pays:", 
 				 helpSecond: "$44,603 + 33% of the amount over $183,250",
 				 helpThird: "$44,603 + (.33)($233,819 - $183,250)",
@@ -176,7 +176,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
             },
 			{ 
                 problem: "Dana earned a total of $15,425,378 in 2012.  Taxable income for Dana, however, was $8,424,169. Calculate Dana's income tax for 2012 (round to the nearest dollar)",
-				 answer: '3,294,388', 
+				 answer: '3,294,388.00', 
 				 helpFirst: "Dana's taxable income puts Dana in the fifth bracket.  Dana pays:", 
 				 helpSecond: "$116,164 + 39.6% of the amount over $398,350",
 				 helpThird: "$116,164 + (.396)($8,424,169 - $398,350)",

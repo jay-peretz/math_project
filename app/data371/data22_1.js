@@ -32,7 +32,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 							+'{\\html{$helpsixth}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\row{\\css{\\str{Answer: \xA0 }}{help-answer-text}}'
-							+'{\\css{\\row{\\str{$}}{\\html{$answer \xA0 }}}{help-answer-text-tight}}'
+							+'{\\css{\\row{\\str{$}}{\\html{$helpAnswer \xA0 }}}{help-answer-text-tight}}'
 							+'{\\html{&nbsp;}}'
 						}
 					}]
@@ -45,7 +45,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 					children: [{
 						problem: '\\col'
 						+'{\\str{$problem}}',
-						answer: '\\grp{\\html{$}}{\\css{\\inputcash($answer)}{width200px}}',
+						answer: '\\grp{\\html{$}}{\\css{\\inputcash{$answer}}{width200px}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -71,7 +71,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 							+'{\\html{$helptenth}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\row{\\css{\\str{Answer: \xA0 }}{help-answer-text}}'
-							+'{\\css{\\row{\\str{$}}{\\html{$answer \xA0 }}}{help-answer-text-tight}}'
+							+'{\\css{\\row{\\str{$}}{\\html{$helpAnswer \xA0 }}}{help-answer-text-tight}}'
 							+'{\\html{&nbsp;}}'
 						}
 					}]
@@ -84,7 +84,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 					children: [{
 						problem: '\\col'
 						+'{\\str{$problem}}',
-						answer: '\\grp{\\html{$}}{\\css{\\inputcash($answer1}}{width200px}}',
+						answer: '\\grp{\\html{$}}{\\css{\\inputcash{$answer1}}{width200px}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -110,7 +110,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 							+'{\\html{$helptenth}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\row{\\css{\\str{Answer: \xA0 }}{help-answer-text}}'
-							+'{\\css{\\row{\\str{$}}{\\html{$answer1 \xA0 }}}{help-answer-text-tight}}'
+							+'{\\css{\\row{\\str{$}}{\\html{$helpAnswer1 \xA0 }}}{help-answer-text-tight}}'
 							+'{\\html{&nbsp;}}'
 						}
 					}, {						
@@ -119,12 +119,12 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 						answer: '\\css{\\rowgrp'
 						+'{\\html{&nbsp;}}'
 						+'{\\css{\\row{\\str{Answer: \xA0 }}'
-						+'{\\str{$}}{\\html{$answer1 \xA0 }}}{help-answer-text-tight}}'
+						+'{\\str{$}}{\\html{$helpAnswer1 \xA0 }}}{help-answer-text-tight}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\html{&nbsp;}}'
 						+'{css{\\str{$part2Problem}}{alert alert-info}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\html{$}}{\\css{\\inputcash($answer2}}{width200px}}}}{well}',						
+						+'{\\grp{\\html{$}}{\\css{\\inputcash{$answer2}}{width200px}}}}{well}',						
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -136,7 +136,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 							+'{\\html{$helpthirteenth}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\row{\\css{\\str{Answer: \xA0 }}{help-answer-text}}'
-							+'{\\css{\\row{\\str{$}}{\\html{$answer2 \xA0 }}}{help-answer-text-tight}}'
+							+'{\\css{\\row{\\str{$}}{\\html{$helpAnswer2 \xA0 }}}{help-answer-text-tight}}'
 							+'{\\html{&nbsp;}}'
 						}
 					}]
@@ -149,7 +149,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 						children: [{
 							problem: '\\col'
 							+'{\\str{$problem}}',
-							answer: '\\grp{\\html{$}}{\\css{\\inputcash($answer1}}{width200px}}',
+							answer: '\\grp{\\html{$}}{\\css{\\inputcash{$answer1}}{width200px}}',
 							controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
@@ -175,7 +175,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 								+'{\\html{$helptenth}}'
 								+'{\\html{&nbsp;}}'								
 								+'{\\row{\\css{\\str{Answer: \xA0 }}{help-answer-text}}'
-								+'{\\css{\\row{\\str{$}}{\\html{$answer1 \xA0 }}}{help-answer-text-tight}}'
+								+'{\\css{\\row{\\str{$}}{\\html{$helpAnswer1 \xA0 }}}{help-answer-text-tight}}'
 								+'{\\html{&nbsp;}}'
 							}
 						}, {						
@@ -184,12 +184,12 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 							answer: '\\css{\\rowgrp'
 							+'{\\html{&nbsp;}}'
 							+'{\\css{\\row{\\str{Answer: \xA0 }}'
-							+'{\\str{$}}{\\html{$answer1 \xA0 }}}{help-answer-text-tight}}'
+							+'{\\str{$}}{\\html{$helpAnswer1 \xA0 }}}{help-answer-text-tight}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\html{&nbsp;}}'
 							+'{css{\\str{$part2Problem}}{alert alert-info}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\html{$}}{\\css{\\inputcash($answer2}}{width200px}}}}{well}',						
+							+'{\\grp{\\html{$}}{\\css{\\inputcash{$answer2}}{width200px}}}}{well}',						
 							controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
@@ -201,7 +201,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 								+'{\\html{$helpthirteenth}}'
 								+'{\\html{&nbsp;}}'
 								+'{\\row{\\css{\\str{Answer: \xA0 }}{help-answer-text}}'
-								+'{\\css{\\row{\\str{$}}{\\html{$answer2 \xA0 }}}{help-answer-text-tight}}'
+								+'{\\css{\\row{\\str{$}}{\\html{$helpAnswer2 \xA0 }}}{help-answer-text-tight}}'
 								+'{\\html{&nbsp;}}'
 							}
 						}]
@@ -211,7 +211,8 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
         data = [
             { 
                 problem: 'Val Daniels borrowed $1,200 from her credit union for a period of 9 months.  If the simple interest rate is 6%, how much interest did she pay at the end of this loan period?  (round all dollar amounts to the nearest cent)',
-				 answer: '54.00', 
+				 answer: '54.00',
+				 helpAnswer: '54.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
 				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
@@ -223,7 +224,8 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 template: 'timeFraction'
             },{ 
                 problem: 'Beth Roberts borrowed $1,400 at a bank where the simple interest rate is 11%.  Assuming she made no down payment on this loan, calculate the total amount she must pay back at the end of one year.  (round all dollar amounts to the nearest cent)',
-				 answer: '1554.00', 
+				 answer: '1554.00',
+				 helpAnswer: '1,554.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
 				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
@@ -239,6 +241,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 			{ 
                 problem: 'Bob Jones borrowed $10,200 at a bank where the simple interest rate is 6%.  Assuming he made no down payment on this loan, calculate the total amount he must pay back at the end of one year.  (round all dollar amounts to the nearest cent)',
 				 answer: '10812.00', 
+				 helpAnswer: '10,812.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
 				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
@@ -252,7 +255,8 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 template: 'timeWhole'
             },{ 
                 problem: 'Dana Esquivel borrowed $900 from her credit union for a period of 3 months.  If the simple interest rate is 10%, how much interest did she pay at the end of this loan period?  (round all dollar amounts to the nearest cent)',
-				 answer: '22.50', 
+				 answer: '22.50',
+				 helpAnswer: '22.50',
 				 helpFirst: "1) The Basic Interest Formula:", 
 				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
@@ -266,8 +270,10 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 			{ 
                 problem: 'Alicia Taylor borrowed $1,600 at a bank where the simple interest rate is 12%.  Assuming she made no down payment on this loan, calculate her pay-off amount at the end of a year. (round all dollar amounts to the nearest cent)',
 				part2Problem: "Determine Alicia's monthly payments. (round all dollar amounts to the nearest cent)",
-				 answer1: '1792.00', 
+				 answer1: '1792.00',
+				 helpAnswer1: '1,792.00',
 				 answer2: '149.33',
+				 helpAnswer2: '149.33',
 				 helpFirst: "1) The Basic Interest Formula:", 
 				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
@@ -286,8 +292,10 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 			{ 
                 problem: 'Jayvis Williams borrowed $100,000 at a bank where the simple interest rate is 4%.  Assuming he made no down payment on this loan, calculate his pay-off amount at the end of a year. (round all dollar amounts to the nearest cent)',
 				part2Problem: "Determine Jayvis's monthly payments. (round all dollar amounts to the nearest cent)",
-				 answer1: '104000.00', 
+				 answer1: '104000.00',
+				 helpAnswer1: '104,000.00',
 				 answer2: '8666.67',
+				 helpAnswer2: '8,666.67',
 				 helpFirst: "1) The Basic Interest Formula:", 
 				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
@@ -306,10 +314,12 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 			{ 
                 problem: 'Sarah Maple borrowed $3,600 for 6 months at a bank where the yearly interest rate is 15%.  She decides to make monthly payments on this loan after making a down-payment of $720.  Calculate her pay-off amount at the end of six months. (round all dollar amounts to the nearest cent)',
 				part2Problem: "Determine Sarah's monthly payments. (round all dollar amounts to the nearest cent)",
-				 answer1: '3096.00', 
+				 answer1: '3096.00',
+				 helpAnswer1: '3,096.00',
 				 answer2: '516.00',
+				 helpAnswer2: '516.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
+				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time<br><br>The principal is the loan ($3,600) - downpayment ($720).<br>The principal is only $2,880.",
 				 helpThird: "2) Substitute the values into the formula:",
 				 helpfourth: "I <span class=bigger>=</span> $2,880 <span class=bigger>&sdot;</span> 15% <span class=bigger>&sdot;</span>",
 				 timeNumerator: "6",
@@ -328,10 +338,12 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 			{ 
                 problem: 'Greg Schwarz borrowed $2,500 for 3 months at a bank where the yearly interest rate is 12%.  He decides to make monthly payments on this loan after making a down-payment of $100.  Calculate his pay-off amount at the end of three months. (round all dollar amounts to the nearest cent)',
 				part2Problem: "Determine Greg's monthly payments. (round all dollar amounts to the nearest cent)",
-				 answer1: '2472.00', 
+				 answer1: '2472.00',
+				 helpAnswer1: '2,472.00',
 				 answer2: '824.00',
+				 helpAnswer2: '824.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
+				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time<br><br>The principal is the loan ($2,500) - downpayment ($100).<br>The principal is only $2,400.",
 				 helpThird: "2) Substitute the values into the formula:",
 				 helpfourth: "I <span class=bigger>=</span> $2,400 <span class=bigger>&sdot;</span> 12% <span class=bigger>&sdot;</span>",
 				 timeNumerator: "3",
@@ -350,10 +362,12 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 			{ 
                 problem: 'Contansa Aguilera borrowed $54,200 for 6 months at a bank where the yearly interest rate is 8%.  She decides to make monthly payments on this loan after making a down-payment of $4000.  Calculate her pay-off amount at the end of six months. (round all dollar amounts to the nearest cent)',
 				part2Problem: "Determine Contansa's monthly payments. (round all dollar amounts to the nearest cent)",
-				 answer1: '52208.00', 
-				 answer2: '8,701.33',
+				 answer1: '52208.00',
+				 helpAnswer1: '52,208.00',
+				 answer2: '8701.33',
+				 helpAnswer2: '8,701.33',
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
+				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time<br><br>The principal is the loan ($54,200) - downpayment ($4000).<br>The principal is only $50,200.",
 				 helpThird: "2) Substitute the values into the formula:",
 				 helpfourth: "I <span class=bigger>=</span> $50,200 <span class=bigger>&sdot;</span> 8% <span class=bigger>&sdot;</span>",
 				 timeNumerator: "6",
@@ -370,7 +384,8 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 template: 'timeFractionTwoPart'
             },{ 
                 problem: 'Yousef Ibrahim borrowed $2900 from his credit union for a period of 9 months.  If the simple interest rate is 5%, how much interest did he pay at the end of this loan period?  (round all dollar amounts to the nearest cent)',
-				 answer: '108.75', 
+				 answer: '108.75',
+				 helpAnswer: '108.75',
 				 helpFirst: "1) The Basic Interest Formula:", 
 				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",

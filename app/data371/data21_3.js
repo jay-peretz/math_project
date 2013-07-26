@@ -7,14 +7,83 @@ angular.module('mathSkills').service('data21_3', function () {
             children: []
         },
         template = {
-            main: {
+            amount: {
                 
                 title: 'Commission',
                 children: [{
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{$problem}',
-                        answer: '\\input{$answer}',
+                        answer: '\\grp{\\str{$}}{\\css{\\inputcash{$answer}}{width200px}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\html{$problem}',
+                        answer: '\\wb{\\rowgrp{'+
+                            '\\ins{Set up a percent proportion to solve the problem (use "X" for an unknown value).}'+
+                        '}{'+
+                            '\\grp'+
+                            '{\\frac{\\input{[\"$$ln\",\"$$rn\"]}}{\\input{[\"$$ld\",\"$$rd\"]}}}'+
+                            '{\\sign{=}}'+
+                            '{\\frac{\\input{[\"$$rn\",\"$$ln\"]}}{\\input{[\"$$rd\",\"$$ld\"]}}}'+
+                        '}}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\html{$problem}',
+                        answer: '\\wb{\\rowgrp{'+
+                            '\\choose{[\\html{},\\ins{The standard percent proportion is set up as follows:}]}{$$previousCorrect}'+
+                        '}{'+
+                            '\\css{\\choose{[\\html{},\\grp{\\frac{\\str{$$dln}}{\\str{$$dld}}}{\\sign{=}}{\\frac{\\str{$$drn}}{\\str{$$drd}}}]}{$$previousCorrect}}{bottom-marg}'+
+                        '}{'+
+                            '\\choose{[\\ins{Yes!},\\ins{We substitute the given values to get:}]}{$$previousCorrect}'+
+                        '}{'+
+                            '\\css{\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}}{bottom-marg}'+
+                        '}{'+
+                            '\\ins{Now solve the problem.}'+
+                        '}{'+
+                            '\\css{\\grp{\\html{X}}{\\sign{=}}{\\set{\\input{$$answer}}{$$key}}}{proportion-application}'+
+                        '}}{well}{end}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\html{$problem}',
+                        answer: '\\wb{\\rowgrp{'+
+                            '\\css{\\choose{[\\ins{}{q},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}}{bottom-marg}'+
+                        '}{'+
+                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems. We substitute the given values to get:}]}{$$previousCorrect}'+
+                        '}{'+
+                            '\\choose{[\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\html{X}}{\\sign{=}}{\\html{$solution}}}{proportion-application}]}{$$previousCorrect}'+
+                        '}{'+
+                            '\\choose{[\\ins{}{q},\\ins{The answer is}]}{$$previousCorrect}'+
+                        '}{'+
+                            '\\choose{[\\ins{}{q},\\css{\\grp{\\str{$$pre_symbol}}{\\str{$$answer}}{\\str{$$post_symbol}}}{proportion-application}]}{$$previousCorrect}'+
+                        '}}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            },
+			rate: {
+                
+                title: 'Commission',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\html{$problem}',
+                        answer: '\\grp{\\css{\\input{$answer}}{width200px}}{\\str{%}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -80,7 +149,7 @@ angular.module('mathSkills').service('data21_3', function () {
         data = [
             { //1a
                 problem: 'Monique sells $4,500 worth of clothing in one week. If she earns a 2% commission on her total sales, how much commission did she earn?',
-                answer: '90', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '90.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -92,7 +161,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //1b
                 problem: 'Monique earns a 2% connission on her total sales. If she earned $90 in commissions last week, what were her total sales?',
-                answer: '4500', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '4500.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -104,7 +173,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //1c
                 problem: 'Monique sold $4,500 worth of clothing last week and earned $90 in commission. What is her commission rate?',
-                answer: '2', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '2', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -117,7 +186,7 @@ angular.module('mathSkills').service('data21_3', function () {
             
             { //2a
                 problem: 'At a sporting goods store, Yani sells $6,200 worth of merchandise one week. If she earns a 3% commission on her total sales, how much commission did she earn?',
-                answer: '186', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '186.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -129,7 +198,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //2b
                 problem: 'Yani earns a 3% commission on her total sales. If she earned $186 in commission last week, what were her total sales?',
-                answer: '6200', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '6200.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -141,7 +210,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //2c
                 problem: 'Yani sold $6,200 at a sporting goods store last week and earned $186 in commission. What is her commission rate?',
-                answer: '3', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '3', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -154,7 +223,7 @@ angular.module('mathSkills').service('data21_3', function () {
             
             { //3a
                 problem: 'Brian sells $14,000 worth of jewelry one week. If he earns a 2.5% commission on his total sales, how much commission did he earn?',
-                answer: '350', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '350.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -166,7 +235,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //3b
                 problem: 'Brian earns a 3% commission on his total sales. If he earned $186 in commission last week, what were his total sales?',
-                answer: '14000', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '14000.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -178,7 +247,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //3c
                 problem: 'At a jewelry store Brian sold $14,000 worth of merchandise last week and earned $350 in commission. What is his commission rate?',
-                answer: '2.5', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '2.5', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -191,7 +260,7 @@ angular.module('mathSkills').service('data21_3', function () {
             
             { //4a
                 problem: 'At a used car dealership Justin sold a car for $4,800. If he earns an 8% commission on his total sales, how much commission did he earn?',
-                answer: '384', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '384.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -203,7 +272,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //4b
                 problem: 'At a used car dealership Justin earns an 8% commission on his total sales. If he earned $384 in commission on a car he sold, for how much did he sell the car?',
-                answer: '4800', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '4800.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -215,7 +284,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //4c
                 problem: 'At a used car dealership Justin sold a car for $4,800 and earned $384 in commission. What was his commission rate?',
-                answer: '8', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '8', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -228,7 +297,7 @@ angular.module('mathSkills').service('data21_3', function () {
             
             { //5a
                 problem: 'At a shoe store Vijay sold $8,850 worth of shoes. If he earns a 5% commission on his total sales, how much commission did he earn?',
-                answer: '442.50', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '442.50', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -240,7 +309,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //5b
                 problem: 'At a shoe store Vijay earns a 5% commission on his total sales. If he earned $442.50 in commission last month, what were his total sales?',
-                answer: '8850', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '8850.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -252,7 +321,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //5c
                 problem: 'At a shoe store Vijay sold $8,850 worth of shoes and earned $442.50 in commission. What was his commission rate?',
-                answer: '5', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '5', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -265,7 +334,7 @@ angular.module('mathSkills').service('data21_3', function () {
             
             { //6a
                 problem: 'At a computer security firm, Rosemary sold $82,460 worth of software. If she earns a 20% commission on her total sales, how much commission did she earn?',
-                answer: '16492', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '16492.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -277,7 +346,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //6b
                 problem: 'Rosemary earns a 20% commission on her total sales of computer security software. If she earned $16,492 in commission last week, what were her total software sales?',
-                answer: '82460', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '82460.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -289,7 +358,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //6c
                 problem: 'At a computer security firm, Rosemary sold $82,460 worth of software last month, and earned $16,492 in commission. What is her commission rate?',
-                answer: '20', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '20', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -302,7 +371,7 @@ angular.module('mathSkills').service('data21_3', function () {
             
             { //7a
                 problem: 'Brian sells $11,300 worth of jewelry one week. If he earns a 4% commission on his total sales, how much commission did he earn?',
-                answer: '452', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '452.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -314,7 +383,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //7b
                 problem: 'Brian earns a 4% commission on his total sales. If he earned $452 in commission last week, what were his total sales?',
-                answer: '11300', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '11300.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -326,7 +395,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //7c
                 problem: 'At a jewelry store Brian sold $11,300 worth of merchandise last week and earned $452 in commission. What is his commission rate?',
-                answer: '4', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '4', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -339,7 +408,7 @@ angular.module('mathSkills').service('data21_3', function () {
             
             { //8a
                 problem: 'At a used car dealership Paula sold a car for $7,500. If she earns a 6% commission on her total sales, how much commission did she earn?',
-                answer: '450', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '450.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -351,7 +420,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //8b
                 problem: 'At a used car dealership Paula earns a 6% commission on her total sales. If she earned $450 in commission on a car she sold, for how much did she sell the car?',
-                answer: '7500', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '7500.00', template: 'amount', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -363,7 +432,7 @@ angular.module('mathSkills').service('data21_3', function () {
             },
             { //8c
                 problem: 'At a used car dealership Paula sold a car for $7,500 and earned $450 in commission. What was her commission rate?',
-                answer: '6', template: 'main', pre_symbol: '', post_symbol: '%', 
+                answer: '6', template: 'rate', pre_symbol: '', post_symbol: '%', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
