@@ -12,13 +12,14 @@ angular.module('mathSkills').service('data16_1', ['dataUtils', function (dataUti
 				children: [{
 					title: 'Main Answer',
 					children: [{
-						problem: '\\col{\\row{\\str{Choose the reduced ratio with the same meaning as: }}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{$problemNum}}{\\str{$problemDen}}}}',
+						problem: '\\rowgrp'+
+                                    '{\\html{Choose the reduced ratio with the same meaning as:<br><br>}}{\\frac{\\str{$problemNum}}{\\str{$problemDen}}}',
 						answer: '\\rowgrp'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\str{\xA0 \xA0 $button1a to $button1b}}}'
-						+'{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\str{\xA0 \xA0 $button2a to $button2b}}}'
-						+'{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\str{\xA0 \xA0 $button3a to $button3b}}}'
-						+'{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\str{\xA0 \xA0 $button4a to $button4b}}}}',
+                                    +'{\\html{&nbsp;}}'
+                                    +'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\str{\xA0 \xA0 $button1a to $button1b}}}'
+                                    +'{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\str{\xA0 \xA0 $button2a to $button2b}}}'
+                                    +'{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\str{\xA0 \xA0 $button3a to $button3b}}}'
+                                    +'{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\str{\xA0 \xA0 $button4a to $button4b}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
@@ -32,13 +33,13 @@ angular.module('mathSkills').service('data16_1', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\col{\\row{\\str{Choose the reduced ratio with the same meaning as: }}}{\\row{\\str{\xA0}}}{\\row{\\str{ $problem1 to $problem2 }}',
+						problem: '\\rowgrp{\\html{Choose the reduced ratio with the same meaning as:<br><br>}}{\\str{ $problem1 to $problem2 }',
 						answer: '\\rowgrp'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\frac{\\str{$labelNum1}}{\\str{$labelDen1}}}}'
-						+'{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\frac{\\str{$labelNum2}}{\\str{$labelDen2}}}}'
-						+'{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\frac{\\str{$labelNum3}}{\\str{$labelDen3}}}}'
-						+'{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\frac{\\str{$labelNum4}}{\\str{$labelDen4}}}}}',
+                                    +'{\\html{&nbsp;}}'
+                                    +'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\frac{\\str{$labelNum1}}{\\str{$labelDen1}}}}'
+                                    +'{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\frac{\\str{$labelNum2}}{\\str{$labelDen2}}}}'
+                                    +'{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\frac{\\str{$labelNum3}}{\\str{$labelDen3}}}}'
+                                    +'{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\frac{\\str{$labelNum4}}{\\str{$labelDen4}}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
