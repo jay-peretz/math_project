@@ -185,7 +185,7 @@ angular.module('mathSkills').service('data20_3', function () {
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //3c -9
-                problem: '3c) In a survey 312 out of 400 people said that they currently recycle paper. What percent of the people said that they are recycling?',
+                problem: 'In a survey 312 out of 400 people said that they currently recycle paper. What percent of the people said that they are recycling?',
                 round: '',
                 xtext:'',
                 answer: '78', template: 'main', post_symbol: '%',
@@ -476,10 +476,7 @@ angular.module('mathSkills').service('data20_3', function () {
                 solution: '$$ld &#149; $$rn &#247; $$rd',
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
-            }
-            
-            
-            
+            } 
         ],
         interpolate = function (obj, data) {
             var string = JSON.stringify(obj);
