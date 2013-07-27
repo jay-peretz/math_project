@@ -22,10 +22,11 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 							+'{\\html{$helpFirst}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\html{$helpSecond}}'
+							+'{\\row{\\html{$helpPrefractionSecond}}{\\frac{\\str{$timeNumerator}}{\\str{$timeDenominator}}}{\\html{$helpPostFractionSecond}}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\html{$helpThird}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\row{\\html{$helpfourth}}{\\frac{\\str{$timeNumerator}}{\\str{$timeDenominator}}}{\\html{$helpclosefourth}}}'
+							+'{\\html{$helpfourth}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\html{$helpfifth}}'
 							+'{\\html{&nbsp;}}'
@@ -35,7 +36,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 							+'{\\html{&nbsp;}}'
 							+'{\\html{$helpeighth}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\row{\\html{$helpninth}}{\\frac{\\str{$time2Numerator}}{\\str{$time2Denominator}}}{\\html{$helpcloseninth}}}'
+							+'{\\html{$helpninth}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\html{$helptenth}}'
 							+'{\\html{&nbsp;}}'
@@ -225,35 +226,34 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
                 problem: 'Val Daniels saved $6,300 with her credit union for a period of one year.  The interest rate is 7% compounded semi-annually.  If she made no additional deposits to her account, what is her balance at the end of the year?  (round all dollar amounts to the nearest cent)',
 				 answer: '6,748.72', 
 				 helpFirst: "The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principle <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
-				 helpThird: "Step 1:  Calculate the interest rate for the 1st half of the year.",
-				 helpfourth: "first interest <span class=bigger>=</span> $6,300 <span class=bigger>&sdot;</span> 7% <span class=bigger>&sdot;</span>",
 				 timeNumerator: "6",
 				 timeDenominator: "12",
+				 helpSecond: "Interest <span class=bigger>=</span> \xA0principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time<br><br>The interest is compounded semiannually.  This means that the interest must be calculated every 6 months, ",
+				 helpPrefractionSecond: 'which is &nbsp;',
+				 helpPostFractionSecond: ' of a year or 0.5 years.',
+				 helpThird: "Step 1:  Calculate the interest rate for the first 6-month (0.5 year) period of the investment.",
+				 helpfourth: "first interest <span class=bigger>=</span> $6,300 <span class=bigger>&sdot;</span> 7% <span class=bigger>&sdot;</span> 0.5 <span class=bigger>=</span> $220.50",
 				 helpclosefourth: " <span class=bigger>=</span> $220.50",
-				 helpfifth: "Step 2:  Next, calculate the 'new' principle by adding the interest of step 1 to the original principle:",
-				 helpsixth: "'new' principle <span class=bigger>=</span> original principle + 1st interest",
-				 helpseventh: "'new' principle <span class=bigger>=</span> $6300 + $220.50 <span class=bigger>=</span> $6520.50",
-				 helpeighth: "Step 3:  Calculate the interest rate for the 2nd half of the year.",
-				 helpninth: "second interest <span class=bigger>=</span> $6,520.50 <span class=bigger>&sdot;</span> 7% <span class=bigger>&sdot;</span>",
-				 time2Numerator: "6",
-				 time2Denominator: "12",
-				 helpcloseninth: " <span class=bigger>=</span> $228.22",
-				 helptenth: "Step 4:  Next, calculate the final principle by adding the 2nd interest of step 3 to the new  principle of step 2:",
-				 helpeleventh: "Final Principle <span class=bigger>=</span> 'New' Principle + 2nd Interest",
-				 helptwelveth: "Final Principle <span class=bigger>=</span> $6,520.50 + $228.22 <span class=bigger>=</span> $6,748.72",
+				 helpfifth: "Step 2:  Next, calculate the 'new' principal by adding the interest earned in step 1 to the original principal:",
+				 helpsixth: "'new' principal <span class=bigger>=</span> original principal + 1st interest",
+				 helpseventh: "'new' principal <span class=bigger>=</span> $6300 + $220.50 <span class=bigger>=</span> $6520.50",
+				 helpeighth: "Step 3:  Calculate the interest rate for the 2nd 6-month (0.5 year) period of the investment.",
+				 helpninth: "second interest <span class=bigger>=</span> $6,520.50 <span class=bigger>&sdot;</span> 7% <span class=bigger>&sdot;</span> 0.5 <span class=bigger>=</span> $228.22",
+				 helptenth: "Step 4:  Next, calculate the final principal by adding the 2nd interest earned in step 3 to the new  principal of step 2:",
+				 helpeleventh: "Final principal <span class=bigger>=</span> 'New' principal + 2nd Interest",
+				 helptwelveth: "Final principal <span class=bigger>=</span> $6,520.50 + $228.22 <span class=bigger>=</span> $6,748.72",
 				 template: "timeFraction"
             }/*,{ 
                 problem: 'Beth Roberts borrowed $1,400 at a bank where the simple interest rate is 11%.  Assuming she made no down payment on this loan, calculate the total amount she must make at the end of one year.  (round all dollar amounts to the nearest cent)',
 				 answer: '1554.00', 
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0Principle <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
+				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
 				 helpfourth: "I <span class=bigger>=</span> $1,400 <span class=bigger>&sdot;</span> 11% <span class=bigger>&sdot;</span> 1",
 				 helpfifth: "3) Calculate the interest:",
 				 helpsixth: "I <span class=bigger>=</span> $1400 <span class=bigger>&sdot;</span> 0.11 <span class=bigger>&sdot;</span> 1",
 				 helpseventh: "I <span class=bigger>=</span> $154.00",
-				 helpeighth: "Total Payment = Principle + Interest",
+				 helpeighth: "Total Payment = principal + Interest",
 				 helpninth: "Total Payment = $1400 + $154 <span class=bigger>=</span> $1,554.00",
 				 helptenth: "",
 				 template: 'timeWhole'
@@ -262,13 +262,13 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
                 problem: 'Bob Jones borrowed $10,200 at a bank where the simple interest rate is 6%.  Assuming he made no down payment on this loan, calculate the total amount he must make at the end of one year.  (round all dollar amounts to the nearest cent)',
 				 answer: '10812.00', 
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0Principle <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
+				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
 				 helpfourth: "I <span class=bigger>=</span> $10,200 <span class=bigger>&sdot;</span> 6% <span class=bigger>&sdot;</span> 1",
 				 helpfifth: "3) Calculate the interest:",
 				 helpsixth: "I <span class=bigger>=</span> $10,200 <span class=bigger>&sdot;</span> 0.6 <span class=bigger>&sdot;</span> 1",
 				 helpseventh: "I <span class=bigger>=</span> $612.00",
-				 helpeighth: "Total Payment = Principle + Interest",
+				 helpeighth: "Total Payment = principal + Interest",
 				 helpninth: "Total Payment = $10,200 + $612 <span class=bigger>=</span> $10,812.00",
 				 helptenth: "",
 				 template: 'timeWhole'
@@ -276,7 +276,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
                 problem: 'Dana Esquivel borrowed $900 from her credit union for a period of 3 months.  If the simple interest rate is 10%, how much interest did she pay at the end of this loan period?  (round all dollar amounts to the nearest cent)',
 				 answer: '22.50', 
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principle <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
+				 helpSecond: "Interest <span class=bigger>=</span> \xA0principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
 				 helpfourth: "I <span class=bigger>=</span> $900 <span class=bigger>&sdot;</span> 10% <span class=bigger>&sdot;</span>",
 				 timeNumerator: "3",
@@ -291,13 +291,13 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 				 answer1: '1792.00', 
 				 answer2: '149.33',
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0Principle <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
+				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
 				 helpfourth: "I <span class=bigger>=</span> $1,600 <span class=bigger>&sdot;</span> 12% <span class=bigger>&sdot;</span> 1",
 				 helpfifth: "3) Calculate the interest:",
 				 helpsixth: "I <span class=bigger>=</span> $1600 <span class=bigger>&sdot;</span> 0.12 <span class=bigger>&sdot;</span> 1",
 				 helpseventh: "I <span class=bigger>=</span> $192.00",
-				 helpeighth: "Total Payment = Principle + Interest",
+				 helpeighth: "Total Payment = principal + Interest",
 				 helpninth: "Total Payment = $1600 + $192 <span class=bigger>=</span> $1,792.00",
 				 helptenth: "",
 				 helpeleventh: "The Monthly Payment amount is determined by dividing the Total Payment by the Total Months:",
@@ -311,13 +311,13 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 				 answer1: '104000.00', 
 				 answer2: '8666.67',
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0Principle <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
+				 helpSecond: "Interest <span class=bigger>\xA0 = \xA0</span> \xA0principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
 				 helpfourth: "I <span class=bigger>=</span> $100,000 <span class=bigger>&sdot;</span> 4% <span class=bigger>&sdot;</span> 1",
 				 helpfifth: "3) Calculate the interest:",
 				 helpsixth: "I <span class=bigger>=</span> $100,000 <span class=bigger>&sdot;</span> 0.04 <span class=bigger>&sdot;</span> 1",
 				 helpseventh: "I <span class=bigger>=</span> $4,000.00",
-				 helpeighth: "Total Payment = Principle + Interest",
+				 helpeighth: "Total Payment = principal + Interest",
 				 helpninth: "Total Payment = $100,000 + $4,000 <span class=bigger>=</span> $104,000.00",
 				 helptenth: "",
 				 helpeleventh: "The Monthly Payment amount is determined by dividing the Total Payment by the Total Months:",
@@ -331,7 +331,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 				 answer1: '3096.00', 
 				 answer2: '516.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principle <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
+				 helpSecond: "Interest <span class=bigger>=</span> \xA0principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
 				 helpfourth: "I <span class=bigger>=</span> $2,880 <span class=bigger>&sdot;</span> 15% <span class=bigger>&sdot;</span>",
 				 timeNumerator: "6",
@@ -339,7 +339,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 				 helpfifth: "3) Calculate the interest:",
 				 helpsixth: "I <span class=bigger>=</span> $2880 <span class=bigger>&sdot;</span> 0.15 <span class=bigger>&sdot;</span> 0.5",				 
 				 helpseventh: "I <span class=bigger>=</span> $216.00",
-				 helpeighth: "Total Payment = Principle + Interest",
+				 helpeighth: "Total Payment = principal + Interest",
 				 helpninth: "Total Payment = $2880 + $216 <span class=bigger>=</span> $3,096.00",
 				 helptenth: "",
 				 helpeleventh: "The Monthly Payment amount is determined by dividing the Total Payment by the Total Months:",
@@ -353,7 +353,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 				 answer1: '2472.00', 
 				 answer2: '824.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principle <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
+				 helpSecond: "Interest <span class=bigger>=</span> \xA0principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
 				 helpfourth: "I <span class=bigger>=</span> $2,400 <span class=bigger>&sdot;</span> 12% <span class=bigger>&sdot;</span>",
 				 timeNumerator: "3",
@@ -361,7 +361,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 				 helpfifth: "3) Calculate the interest:",
 				 helpsixth: "I <span class=bigger>=</span> $2400 <span class=bigger>&sdot;</span> 0.12 <span class=bigger>&sdot;</span> 0.25",				 
 				 helpseventh: "I <span class=bigger>=</span> $72.00",
-				 helpeighth: "Total Payment = Principle + Interest",
+				 helpeighth: "Total Payment = principal + Interest",
 				 helpninth: "Total Payment = $2400 + $72 <span class=bigger>=</span> $2,472.00",
 				 helptenth: "",
 				 helpeleventh: "The Monthly Payment amount is determined by dividing the Total Payment by the Total Months:",
@@ -375,7 +375,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 				 answer1: '52208.00', 
 				 answer2: '8,701.33',
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principle <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
+				 helpSecond: "Interest <span class=bigger>=</span> \xA0principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
 				 helpfourth: "I <span class=bigger>=</span> $50,200 <span class=bigger>&sdot;</span> 8% <span class=bigger>&sdot;</span>",
 				 timeNumerator: "6",
@@ -383,7 +383,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 				 helpfifth: "3) Calculate the interest:",
 				 helpsixth: "I <span class=bigger>=</span> $50,200 <span class=bigger>&sdot;</span> 0.08 <span class=bigger>&sdot;</span> 0.5",				 
 				 helpseventh: "I <span class=bigger>=</span> $2,008.00",
-				 helpeighth: "Total Payment = Principle + Interest",
+				 helpeighth: "Total Payment = principal + Interest",
 				 helpninth: "Total Payment = $50,200 + $2,008 <span class=bigger>=</span> $52,208.00",
 				 helptenth: "",
 				 helpeleventh: "The Monthly Payment amount is determined by dividing the Total Payment by the Total Months:",
@@ -394,7 +394,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
                 problem: 'Yousef Ibrahim borrowed $2900 from his credit union for a period of 9 months.  If the simple interest rate is 5%, how much interest did he pay at the end of this loan period?  (round all dollar amounts to the nearest cent)',
 				 answer: '108.75', 
 				 helpFirst: "1) The Basic Interest Formula:", 
-				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principle <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
+				 helpSecond: "Interest <span class=bigger>=</span> \xA0principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time",
 				 helpThird: "2) Substitute the values into the formula:",
 				 helpfourth: "I <span class=bigger>=</span> $2900 <span class=bigger>&sdot;</span> 5% <span class=bigger>&sdot;</span>",
 				 timeNumerator: "9",
