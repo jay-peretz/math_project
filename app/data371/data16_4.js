@@ -268,7 +268,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
             },{  // 9
                 problem: 'Out of 60 dinner customers, a restaurant receives 12 orders for steak, 15 orders for fish, and 8 orders for pasta.', 
-                question: 'If the restaurant received 6 orders for pasta one night, how many orders for fish did it receive?', 
+                question: 'If the restaurant received 6 orders for pasta one night, how many orders for steak did it receive?', 
                 answer: '9', nanswer: '',danswer: '', template: 'main',
                 lnw: '8', lnn: '', lnd: '', rnw: '6', rnn: '', rnd: '', lbln: 'pasta',
                 ldw: '12', ldn: '', ldd: '', rdw: 'x', rdn: '', rdd: '', lbld: 'steak',
