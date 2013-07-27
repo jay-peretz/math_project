@@ -39,7 +39,10 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                     }, {  //step 2
                         problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\ins{Good! Now what number of $$lbln and what number of $$lbld are provided in the given relationship?},\\ins{No, the given relationship is between $$lbln and $$lbld. Now what number of $$lbln and what number of $$lbld are provided in the given relationship?}]}{$$previousCorrect}'+
+                            '\\choose{['+
+                                '\\ins{Good! Now what number of $$lbln and what number of $$lbld are provided in the given relationship?},'+
+                                '\\ins{No, the given relationship is between $$lbln and $$lbld. Now what number of $$lbln and what number of $$lbld are provided in the given relationship?}]}'+
+                            '{$$previousCorrect}'+
                         '}{'+
                             '\\frac'+
                                 '{\\grp'+  // left num.
@@ -59,10 +62,13 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                     }, {  //step 3
                         problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\ins{Yes, now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).},\\ins{We are told that there are $ln $$lbln to every $ld $$lbld. The given relationship is:}]}{$$previousCorrect}'+
+                            '\\choose{['+
+                                '\\ins{Yes, now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).},'+
+                                '\\ins{We are told that there are $ln $$lbln to every $ld $$lbld. The given relationship is:}]}'+
+                            '{$$previousCorrect}'+
                         '}{'+
-                            '\\css{\\grp'+
-                                '{\\frac{\\grp'+
+                            '\\equiv'+
+                                '{\\grp'+
                                     '{\\html{$$lnw}}'+
                                     '{\\frac{\\str{$$lnn}}{\\str{$$lnd}}}'+
                                     '{\\str{ $$lbln}}'+
@@ -70,9 +76,9 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                                     '{\\html{$$ldw}}'+
                                     '{\\frac{\\str{$$ldn}}{\\str{$$ldd}}}'+
                                     '{\\str{ $$lbld}}'+
-                                '}}'+
-                                '{\\str{=}}'+
-                                '{\\frac{\\grp'+
+                                '}'+
+                                '{sign{=}}'+
+                                '{\\grp'+
                                     '{\\input{$$rnw}}'+
                                     '{\\frac{\\input{$$rnn}}{\\input{$$rnd}}}'+
                                     '{\\select{$$lbln}{$lblarr}}'+
@@ -81,9 +87,12 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                                     '{\\frac{\\input{$$rdn}}{\\input{$$rdd}}}'+
                                     '{\\select{$$lbld}{$lblarr}}'+
                                 '}'+
-                            '}}{bottom-marg}'+
+                            '{bottom-marg}'+
                         '}{'+
-                            '\\choose{[\\ins{}{q},\\ins{Now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).}]}{$$previousCorrect}'+
+                            '\\choose{['+
+                                '\\ins{}{q},'+
+                                '\\ins{Now make this first relationship between $$lbln and $$lbld equal to a second relationship (use \\"X\\" for an unknown value).}]}'+
+                            '{$$previousCorrect}'+
                         '}}{well}',
                     
                         controls: {
@@ -93,10 +102,13 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                     }, {  //step 4
                         problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\ins{Great! You now have a proportion. Solve the proportion problem.},\\ins{The second relationship is an \\"unknown number\\" (shown here as \\"X\\") of $$lbld to every $rn $$lbln. You now have a proportion:}]}{$$previousCorrect}'+
+                            '\\choose{['+
+                                '\\ins{Great! You now have a proportion. Solve the proportion problem.},'+
+                                '\\ins{The second relationship is an \\"unknown number\\" (shown here as \\"X\\") of $$lbld to every $rn $$lbln. You now have a proportion:}]}'+
+                            '{$$previousCorrect}'+
                         '}{'+
-                            '\\css{\\grp'+
-                                '{\\frac{\\grp'+
+                            '\\equiv'+
+                                '{\\grp'+
                                     '{\\html{$$lnw}}'+
                                     '{\\frac{\\html{$$lnn}}{\\html{$$lnd}}}'+
                                     '{\\html{ $$lbln}}'+
@@ -104,9 +116,9 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                                     '{\\html{$$ldw}}'+
                                     '{\\frac{\\html{$$ldn}}{\\html{$$ldd}}}'+
                                     '{\\html{ $$lbld}}'+
-                                '}}'+
-                                '{\\html{=}}'+
-                                '{\\frac{\\grp'+
+                                '}'+
+                                '{sign{=}}'+
+                                '{\\grp'+
                                     '{\\html{$$rnw}}'+
                                     '{\\frac{\\html{$$rnn}}{\\html{$$rnd}}}'+
                                     '{\\html{$$lbln}}'+
@@ -114,8 +126,8 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                                     '{\\html{$$rdw}}'+
                                     '{\\frac{\\html{$$rdn}}{\\html{$$rdd}}}'+
                                     '{\\html{$$lbld}}'+
-                                '}}'+
-                            '}{bottom-marg}'+
+                                '}'+
+                            '{bottom-marg}'+
                         '}{'+
                             '\\ins{Now solve the proportion problem.}'+
                         '}{'+
@@ -132,10 +144,13 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                     }, {  //step 5
                         problem: '\\html{$problem<br><br><span class=blue-text>$question</span>}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is:}]}{$$previousCorrect}'+
+                            '\\choose{['+
+                                '\\ins{Congratulations!},'+
+                                '\\ins{The correct answer is:}]}'+
+                            '{$$previousCorrect}'+
                         '}{'+
-                            '\\css{\\grp'+
-                                '{\\frac{\\grp'+
+                            '\\equiv'+
+                                '{\\grp'+
                                     '{\\html{$$lnw}}'+
                                     '{\\frac{\\html{$$lnn}}{\\html{$$lnd}}}'+
                                     '{\\html{ $$lbln}}'+
@@ -143,9 +158,9 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                                     '{\\html{$$ldw}}'+
                                     '{\\frac{\\html{$$ldn}}{\\html{$$ldd}}}'+
                                     '{\\html{ $$lbld}}'+
-                                '}}'+
-                                '{\\html{=}}'+
-                                '{\\frac{\\grp'+
+                                '}'+
+                                '{sign{=}}'+
+                                '{\\grp'+
                                     '{\\html{$$rnw}}'+
                                     '{\\frac{\\html{$$rnn}}{\\html{$$rnd}}}'+
                                     '{\\html{$$lbln}}'+
@@ -153,8 +168,8 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                                     '{\\html{$$rdw}}'+
                                     '{\\frac{\\html{$$rdn}}{\\html{$$rdd}}}'+
                                     '{\\html{$$lbld}}'+
-                                '}}'+
-                            '}{bottom-marg}'+
+                                '}'+
+                            '{bottom-marg}'+
                         '}{'+
                             '\\css{\\grp'+
                                 '{\\html{X\xA0 = \xA0}}'+
