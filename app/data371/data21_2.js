@@ -9,12 +9,15 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
         template = {
             main: {
                 
-                title: 'Social Security Tax',
+                title: 'Sales Tax',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\html{<span class="blue-text">$SStax</span><br><br>$problem}',
-						answer: '\\grp{\\str{$}}{\\css{\\inputcash{$answer}}{width200px}}',
+                        problem: '\\html{<span class="blue-text">$SStax</span><br><br>$problem<br><br><span class="blue-text">$round</span>}',
+                        answer: '\\grp'+
+                                    '{\\str{$pre_symbol}}'+
+                                    '{\\css{$answerIn}{width200px}}'+
+                                    '{\\str{$post_symbol}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -24,51 +27,115 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\html{<span class="blue-text">$SStax</span><br><br>$problem}',
-                        answer: '\\wb{\\rowgrp{'+
-                            '\\ins{Set up a percent proportion to solve the problem (use "X" for an unknown value).}'+
-                        '}{'+
-                            '\\grp'+
-                            '{\\frac{\\input{[\"$$ln\",\"$$rn\"]}}{\\input{[\"$$ld\",\"$$rd\"]}}}'+
-                            '{\\sign{=}}'+
-                            '{\\frac{\\input{[\"$$rn\",\"$$ln\"]}}{\\input{[\"$$rd\",\"$$ld\"]}}}'+
-                        '}}{well}',
+                        problem: '\\html{<span class="blue-text">$SStax</span><br><br>$problem<br><br>$round}',
+                        answer: '\\wb{'+
+                                    '\\rowgrp{'+
+                                        '\\ins{Set up a percent proportion to solve the problem (use "X" for an unknown value).}'+
+                                    '}{'+
+                                        '\\grp'+
+                                        '{\\frac{\\input{[\"$ln\",\"$rn\"]}}{\\input{[\"$ld\",\"$rd\"]}}}'+
+                                        '{\\sign{=}}'+
+                                        '{\\frac{\\input{[\"$rn\",\"$ln\"]}}{\\input{[\"$rd\",\"$ld\"]}}}'+
+                                    '}'+
+                                '}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\html{<span class="blue-text">$SStax</span><br><br>$problem}',
-                        answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\html{},\\ins{The standard percent proportion is set up as follows:}]}{$$previousCorrect}'+
-                        '}{'+
-                            '\\choose{[\\html{},\\grp{\\frac{\\str{$$dln}}{\\str{$$dld}}}{\\sign{=}}{\\frac{\\str{$$drn}}{\\str{$$drd}}}]}{$$previousCorrect}'+
-                        '}{'+
-                            '\\choose{[\\ins{Yes!},\\ins{We substitute the given values to get:}]}{$$previousCorrect}'+
-                        '}{'+
-                            '\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}'+
-                        '}{'+
-                            '\\ins{Now solve the problem.}'+
-                        '}{'+
-                            '\\css{\\grp{\\html{X}}{\\sign{=}}{\\set{\\input{$$answer}}{$$key}}}{proportion-application}'+
-                        '}}{well}',
+                        problem: '\\html{<span class="blue-text">$SStax</span><br><br>$problem<br><br>$round}',
+                        answer: '\\wb{'+
+                                    '\\rowgrp{'+
+                                        '\\choose{['+
+                                            '\\ins{}{q},'+
+                                            '\\ins{The standard percent proportion is set up as follows:}]}'+
+                                        '{$$previousCorrect}'+
+                                    '}{'+
+                                        '\\css{'+
+                                            '\\choose{['+
+                                                '\\ins{}{q},'+
+                                                '\\grp'+
+                                                    '{\\frac{\\str{$dln}}{\\str{$dld}}}'+
+                                                    '{\\sign{=}}'+
+                                                    '{\\frac{\\str{$drn}}{\\str{$drd}}}'+
+                                            ']}{$$previousCorrect}}'+
+                                        '{bottom-marg}'+
+                                    '}{'+
+                                        '\\choose{['+
+                                            '\\ins{Yes!},'+
+                                            '\\ins{We substitute the given values to get:}]}'+
+                                        '{$$previousCorrect}'+
+                                    '}{'+
+                                        '\\css{'+
+                                            '\\grp'+
+                                                '{\\frac{\\str{$ln}}{\\str{$ld}}}'+
+                                                '{\\sign{=}}'+
+                                                '{\\frac{\\str{$rn}}{\\str{$rd}}}'+
+                                        '}{bottom-marg}'+
+                                    '}{'+
+                                        '\\ins{Now solve the problem.}'+
+                                    '}{'+
+                                        '\\css{'+
+                                            '\\grp'+
+                                                '{\\str{X}}'+
+                                                '{\\sign{=}}'+
+                                                '{\\set{\\input{$$answer}}{$$key}}'+
+                                        '}{proportion-application}'+
+                                    '}'+
+                                '}{well}{end}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\html{<span class="blue-text">$SStax</span><br><br>$problem}',
-                        answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\html{},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}'+
-                        '}{'+
-                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems. We substitute the given values to get:}]}{$$previousCorrect}'+
-                        '}{'+
-                            '\\choose{[\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\html{X}}{\\sign{=}}{\\html{$solution}}}{proportion-application}]}{$$previousCorrect}'+
-                        '}{'+
-                            '\\choose{[\\html{},\\ins{The answer is}]}{$$previousCorrect}'+
-                        '}{'+
-                            '\\choose{[\\html{},\\css{\\grp{\\html{$$pre_symbol}}{\\html{$$answer}}{\\html{$$post_symbol}}}{proportion-application}]}{$$previousCorrect}'+
-                        '}}{well}',
+                        problem: '\\html{<span class="blue-text">$SStax</span><br><br>$problem<br><br>$round}',
+                        answer: '\\wb{'+
+                                    '\\rowgrp{'+
+                                        '\\css{'+
+                                            '\\choose{['+
+                                                '\\ins{}{q},'+
+                                                '\\grp'+
+                                                    '{\\frac{\\str{$$ln}}{\\str{$$ld}}}'+
+                                                    '{\\sign{=}}'+
+                                                    '{\\frac{\\str{$$rn}}{\\str{$$rd}}}'+
+                                            ']}{$$previousCorrect}'+
+                                        '}{bottom-marg}'+
+                                    '}{'+
+                                        '\\choose{['+
+                                            '\\ins{Congratulations!},'+
+                                            '\\ins{The correct answer is found by following the process to solve all proportion problems. We substitute the given values to get:}'+
+                                        ']}{$$previousCorrect}'+
+                                    '}{'+
+                                        '\\css{'+
+                                            '\\choose{['+
+                                                '\\grp'+
+                                                    '{\\frac{\\str{$$ln}}{\\str{$$ld}}}'+
+                                                    '{\\sign{=}}'+
+                                                    '{\\frac{\\str{$$rn}}{\\str{$$rd}}},'+
+                                                '\\css{'+
+                                                    '\\grp'+
+                                                        '{\\str{X}}'+
+                                                        '{\\sign{=}}'+
+                                                        '{$solution}'+
+                                                '}{proportion-application}'+
+                                            ']}{$$previousCorrect}'+
+                                        '}{bottom-marg}'+
+                                    '}{'+
+                                        '\\choose{['+
+                                            '\\ins{}{q},'+
+                                            '\\ins{The answer is}]}'+
+                                        '{$$previousCorrect}'+
+                                    '}{'+
+                                        '\\choose{['+
+                                            '\\ins{}{q},'+
+                                            '\\css{'+
+                                                '\\grp'+
+                                                    '{\\str{$$pre_symbol}}'+
+                                                    '{\\str{$answer}}'+
+                                                    '{\\str{$$post_symbol}}'+
+                                            '}{proportion-application}]}'+
+                                        '{$$previousCorrect}'+
+                                    '}}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -108,32 +175,217 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
             }
         },
         data = [
-            { 
+            { //1
                 problem: 'On total wages of $16,400, how much social security tax did Jacob pay?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
+                round:'',
+                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '1016.80', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
-                dld: 100, drd: 'Base (Whole Quantity)',
-                ln: 6.2, rn: 'x', 
-                ld: 100, rd: 16400, 
-                solution: '$$ln &#149; $$rd &#247; $$ld',
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '6.2', rn: 'x', 
+                ld: '100', rd: '16400', 
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
-            { 
+            { //2
                 problem: 'Jacob paid $1,016.80 in social security taxes this year. What were his total earnings?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
-                answer: '16,400', template: 'main', pre_symbol: '$', post_symbol: '', 
+                round:'',
+                answerIn: dataUtils.pre('\\input{$$answer}'),
+                answer: '16400', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', keyf: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '1016.80', 
                 ld: '100', rd: 'x', 
-                solution: '$$ld &#149; $$rn &#247; $$ln',
+                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
+            { //3
+                problem: 'On total wages of $55,200, how much social security tax did Mary pay?',
+                SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
+                round:'',
+                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
+                answer: '3422.40', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rn', keyf: 'ln', 
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '6.2', rn: 'x', 
+                ld: '100', rd: '55200', 
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+            },
+            { //4
+                problem: 'Mary paid $3,422.40 in social security taxes this year. What were her total earnings?',
+                SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
+                round:'',
+                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
+                answer: '55200', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rd', keyf: 'ld', 
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '6.2', rn: '3422.40', 
+                ld: '100', rd: 'x', 
+                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+            },
+            { //5
+                problem: 'On total wages of $33,030, how much social security tax did Slina pay?',
+                SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
+                round:'',
+                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
+                answer: '2047.86', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rn', keyf: 'ln', 
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '6.2', rn: 'x', 
+                ld: '100', rd: '33030', 
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+            },
+            { //6
+                problem: 'Slina paid $2,047.86 in social security taxes this year. What were her total earnings?',
+                SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
+                round:'',
+                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
+                answer: '33030', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rd', keyf: 'ld', 
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '6.2', rn: '2047.86', 
+                ld: '100', rd: 'x', 
+                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+            },
+            { //7
+                problem: 'On total wages of $10010.48, how much social security tax did Tim pay?',
+                SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
+                round:'Round answer to the nearest cent.',
+                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
+                answer: '620.65', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rn', keyf: 'ln', 
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '6.2', rn: 'x', 
+                ld: '100', rd: '10010.48', 
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+            },
+            { //8
+                problem: 'Tim paid $620.65 in social security taxes this year. What were his total earnings?',
+                SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
+                round:'Round answer to the nearest cent.',
+                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
+                answer: '10010.48', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rd', keyf: 'ld', 
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '6.2', rn: '620.65', 
+                ld: '100', rd: 'x', 
+                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+            },
+            { //9
+                problem: 'On total wages of $1,560,960, how much social security tax did Justin pay?',
+                SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
+                round:'',
+                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
+                answer: '8103.40', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rn', keyf: 'ln', 
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '6.2', rn: 'x', 
+                ld: '100', rd: '130700', 
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+            },
+            { //10
+                problem: 'Justin paid $8103.40 in social security taxes this year. What were his total earnings?',
+                SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
+                round:'',
+                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
+                answer: '130700', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rd', keyf: 'ld', 
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '6.2', rn: '8103.40', 
+                ld: '100', rd: 'x', 
+                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+            },
+            { //11
+                problem: 'On total wages of $70,234.34, how much social security tax did Alison pay?',
+                SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
+                round:'Round answer to the nearest cent.',
+                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
+                answer: '4354.53', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rn', keyf: 'ln', 
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '6.2', rn: 'x', 
+                ld: '100', rd: '70234.34', 
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+            },
+            { //12
+                problem: 'Alison paid $4,354.53 in social security taxes this year. What were her total earnings?',
+                SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
+                round:'Round answer to the nearest cent.',
+                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
+                answer: '70234.35', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rd', keyf: 'ld', 
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '6.2', rn: '4354.53', 
+                ld: '100', rd: 'x', 
+                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+            },
+            { //13
+                problem: 'On total wages of $555,001, how much social security tax did Rosemary pay?',
+                SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
+                round:'Round answer to the nearest cent.',
+                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
+                answer: '34410.06', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rn', keyf: 'ln', 
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '6.2', rn: 'x', 
+                ld: '100', rd: '555001', 
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+            },
+            { //14
+                problem: 'Rosemary paid $8,103.40 in social security taxes this year. What were her total earnings?',
+                SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
+                round:'Round answer to the nearest cent.',
+                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
+                answer: '130700', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rd', keyf: 'ld', 
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '6.2', rn: '8103.40', 
+                ld: '100', rd: 'x', 
+                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+            },
+            
             { 
                 problem: 'How much income tax did Julie pay in 2012 if her taxable income was $6,983? (round to the nearest dollar)',
 				 answer: '698.00', 
