@@ -12,8 +12,7 @@ angular.module('mathSkills').service('data16_1', ['dataUtils', function (dataUti
 				children: [{
 					title: 'Main Answer',
 					children: [{
-						problem: '\\rowgrp'+
-                                    '{\\html{Choose the reduced ratio with the same meaning as:<br><br>}}{\\frac{\\str{$problemNum}}{\\str{$problemDen}}}',
+						problem: '\\html{Choose the reduced ratio with the same meaning as:<br><br><table class=fraction><tr><td class=numerator>$problemNum</td></tr><tr><td><hr></td></tr><tr><td class=denominator>$problemDen</td></tr></table>}',
 						answer: '\\rowgrp'
                                     +'{\\html{&nbsp;}}'
                                     +'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\str{\xA0 \xA0 $button1a to $button1b}}}'
@@ -33,7 +32,7 @@ angular.module('mathSkills').service('data16_1', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\rowgrp{\\html{Choose the reduced ratio with the same meaning as:<br><br>}}{\\str{ $problem1 to $problem2 }',
+						problem: '\\html{Choose the reduced ratio with the same meaning as:<br><br>$problem1 to $problem2}',
 						answer: '\\rowgrp'
                                     +'{\\html{&nbsp;}}'
                                     +'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\frac{\\str{$labelNum1}}{\\str{$labelDen1}}}}'
