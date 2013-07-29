@@ -16,7 +16,7 @@ angular.module('mathSkills').service('data19_2', ['dataUtils', function (dataUti
 						+'{\\grp{\\str{Change the fraction to decimal:}}}'
 						+'{\\row{\\html{&nbsp;}}}'
 						+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}',
-						answer: '\\input{$answerDecimal}',	
+						answer: '\\grp{\\input{$answerDecimal}}',	
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'

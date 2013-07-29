@@ -13,7 +13,7 @@ angular.module('mathSkills').service('data18_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                          problem: '\\rowgrp{\\row{\\str{Change this decimal into a percent:}}}{\\row{\\str{\xA0}}}{\\row{\\str{$startNumber}}}',
-						answer: '\\row{\\input{$answer}}{\\str{%}}',
+						answer: '\\grp{\\input{$answer}}{\\str{%}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp{\\percentarrows{$startNumber}{100}{decimal}{percent}}{\\html{&nbsp;}}{\\css{\\row{\\str{Answer:  $answer}}{\\str{%}}}{help-answer-text help-answer-margin-right}}}'

@@ -13,7 +13,7 @@ angular.module('mathSkills').service('data20_1', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                          problem: '\\str{What is $problemPercent% of $problemNumber?}',
-						answer: '\\input{$answer}',
+						answer: '\\grp{\\input{$answer}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -44,7 +44,7 @@ angular.module('mathSkills').service('data20_1', ['dataUtils', function (dataUti
 						 +'{\\wholepart{\xA0 of $problemNumber}}}'
 						 +'{\\row{\\html{&nbsp;}}'
 						 +'{\\str{is equal to what amount?}}}',
-						answer: '\\input{$answer}',
+						answer: '\\grp{\\input{$answer}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
