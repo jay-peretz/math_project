@@ -19,13 +19,17 @@ angular.module('mathSkills').service('data6_3', ['dataUtils', function (dataUtil
 						+'{\\sign{=}}'
 						+'{\\frac{\\str{$rightNum}}{\\str{$rightDen}}}',
                			//answer: '\\butgrp{\\row{\\but{Yes}{$firstButton}}{\\but{No}{$secondButton}}}',
-						answer: '\\butgrp{\\col{\\row{\\str{\xA0}}}{\\row{\\but{Yes}{$firstButton}}{\\grp{\\str{}}}{\\but{No}{$secondButton}}}}',
+						answer: '\\rowgrp'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{\\btn{Yes}{$firstButton}}{\\html{&nbsp;}}{\\btn{No}{$secondButton}}}',
 						controls: {
 							"checkAnswer": false,
 							"help": '\\rowgrp'
-							+'{\\row{\\str{$leftNum}}{\\sign{&sdot;}}{\\str{$rightDen}}{\\sign{$equalOrNot}}{\\str{$leftDen}}{\\sign{&sdot;}}{\\str{$rightNum}}}'
+							+'{\\grp{\\str{$leftNum}}{\\sign{&sdot;}}{\\str{$rightDen}}{\\sign{$equalOrNot}}{\\str{$leftDen}}{\\sign{&sdot;}}{\\str{$rightNum}}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\row{\\str{$productLeft}}{\\sign{$equalOrNot}}{\\str{$productRight}}}'
+							+'{\\grp{\\str{$productLeft}}{\\sign{$equalOrNot}}{\\str{$productRight}}}'
+							+'{\\html{&nbsp;}}'
+							+'{css{\\html{Answer: &nbsp; $yesOrNo}}{help-answer-text}}'
 						}
                     }]
                 }]
@@ -184,11 +188,11 @@ angular.module('mathSkills').service('data6_3', ['dataUtils', function (dataUtil
             }
         },
         data = [
-            { leftNum: '4', leftDen: '6', rightNum: '8', rightDen: '12', firstButton: 'T', secondButton: 'F', equalOrNot: '=', productLeft:'48',  productRight:'48', template: 'first' },
-            { leftNum: '14', leftDen: '16', rightNum: '20', rightDen: '35', firstButton: 'F', secondButton: 'T', equalOrNot: '\u2260', productLeft:'490', productRight:'320', template: 'first' },
-            { leftNum: '14', leftDen: '16', rightNum: '16', rightDen: '36', firstButton: 'F', secondButton: 'T', equalOrNot: '\u2260', productLeft:'504', productRight:'256', template: 'first' },
-            { leftNum: '6', leftDen: '9', rightNum: '10', rightDen: '15', firstButton: 'T', secondButton: 'F', equalOrNot: '=', productLeft:'90',  productRight:'90', template: 'first' },
-            { leftNum: '16', leftDen: '18', rightNum: '8', rightDen: '20', firstButton: 'F', secondButton: 'T', equalOrNot: '\u2260', productLeft:'320', productRight:'144', template: 'first' },
+            { leftNum: '4', leftDen: '6', rightNum: '8', rightDen: '12', firstButton: 'T', secondButton: 'F', equalOrNot: '=', productLeft:'48',  productRight:'48', yesOrNo: 'Yes', template: 'first' },
+            { leftNum: '14', leftDen: '16', rightNum: '20', rightDen: '35', firstButton: 'F', secondButton: 'T', equalOrNot: '\u2260', productLeft:'490', productRight:'320', yesOrNo: 'No', template: 'first' },
+            { leftNum: '14', leftDen: '16', rightNum: '16', rightDen: '36', firstButton: 'F', secondButton: 'T', equalOrNot: '\u2260', productLeft:'504', productRight:'256', yesOrNo: 'No', template: 'first' },
+            { leftNum: '6', leftDen: '9', rightNum: '10', rightDen: '15', firstButton: 'T', secondButton: 'F', equalOrNot: '=', productLeft:'90',  productRight:'90', yesOrNo: 'Yes', template: 'first' },
+            { leftNum: '16', leftDen: '18', rightNum: '8', rightDen: '20', firstButton: 'F', secondButton: 'T', equalOrNot: '\u2260', productLeft:'320', productRight:'144', yesOrNo: 'No', template: 'first' },
 			{ problemText: 'Solve for the missing number.', problemNum1: '3', problemDen1: '6', problemNum2: '15', answer: '30', helpProduct:'90', template: 'unknownRightDen' },
 			{ problemText: 'Solve for the missing number.', problemNum1: '76', problemNum2: '19',  problemDen2: '21',answer: '84', helpProduct:'1596', template: 'unknownLeftDen' },
 			{ problemText: 'Solve for the missing number.', problemNum1: '27', problemDen1: '26', problemDen2: '104', answer: '108', helpProduct:'2808', template: 'unknownRightNum' },
