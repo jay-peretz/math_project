@@ -72,12 +72,7 @@ angular.module('mathSkills').service('data1_3', ['dataUtils', function (dataUtil
 			{ firstButton: 'F', secondButton: 'T', firstNumber: '15', secondNumber: '18', startGraph: '10', endGraph: '25', statement: 'LESS THAN', template: 'second' },
 			{ firstButton: 'T', secondButton: 'F', firstNumber: '84', secondNumber: '78', startGraph: '72', endGraph: '88', statement: 'MORE THAN', template: 'second' },
 			{ firstNumber: '50', secondNumber: '53', firstButton: 'F', secondButton: 'T', statement: 'LESS THAN', template: 'first' },
-			{ firstButton: 'F', secondButton: 'T', firstNumber: '18', secondNumber: '25', startGraph: '15', endGraph: '30', statement: 'LESS THAN', template: 'second' },
-			{ firstNumber: '54', secondNumber: '60', firstButton: 'F', secondButton: 'T', statement: 'LESS THAN', template: 'first' },
-			{ firstNumber: '86', secondNumber: '93', firstButton: 'F', secondButton: 'T', statement: 'LESS THAN', template: 'first' },
-			{ firstNumber: '95', secondNumber: '87', firstButton: 'T', secondButton: 'F', statement: 'GREATER THAN', template: 'first' },
-			{ firstButton: 'T', secondButton: 'F', firstNumber: '52', secondNumber: '48', startGraph: '45', endGraph: '60', statement: 'GREATER THAN', template: 'second' },
-			{ firstNumber: '26', secondNumber: '16', firstButton: 'T', secondButton: 'F', statement: 'GREATER THAN', template: 'first' },
+			{ firstButton: 'F', secondButton: 'T', firstNumber: '18', secondNumber: '25', startGraph: '15', endGraph: '30', statement: 'LESS THAN', template: 'second' }
         ];
 
 	return dataUtils.build(desc, template, data);
