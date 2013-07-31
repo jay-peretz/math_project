@@ -13,7 +13,7 @@ angular.module('mathSkills').service('data16_2', ['dataUtils', function (dataUti
 					title: 'Main Answer',
 					children: [{
 						problem: '\\col{\\row{\\str{The two ratios are equivalent: true or false?}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{$problemNum1}}{\\str{$problemDen1}}}{\\sign{\xA0 = \xA0}}{\\frac{\\str{$problemNum2}}{\\str{$problemDen2}}}}',
-						answer: '\\css{\\butgrp{\\row{\\but{True}{$buttonTrueValue}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\but{False}{$buttonFalseValue}}}}{margin-left-small}',
+						answer: '\\css{\\grp{\\btn{True}{$buttonTrueValue}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\btn{False}{$buttonFalseValue}}}{margin-left-small}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp{\\row{\\str{\xA0}}}{\\row{\\str{$problemNum1}}{\\sign{&sdot;}}{\\str{$problemDen2}}{\\sign{\xA0 $equalOrNot \xA0}}{\\str{$problemDen1}}{\\sign{&sdot;}}{\\str{$problemNum2}}}{\\row{\\html{&nbsp;}}}{\\row{\\str{$productLeft}}{\\sign{\xA0 $equalOrNot \xA0}}{\\str{$productRight}}}{\\row{\\html{&nbsp;}}}{\\css{\\row{\\str{Answer: \xA0 }}{\\str{ $answerFirst }}}{help-answer-text}}{\\row{\\html{&nbsp;}}}'
@@ -27,7 +27,7 @@ angular.module('mathSkills').service('data16_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\col{\\row{\\str{The two ratios are equivalent: true or false?}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\grp{\\str{$problemNum1}}{\\str{$label1}}}{\\grp{\\str{$problemDen1}}{\\str{$label2}}}}{\\sign{\xA0 = \xA0}}{\\frac{\\grp{\\str{$problemNum2}}{\\str{$label3}}}{\\grp{\\str{$problemDen2}}{\\str{$label4}}}}}',
-						answer: '\\css{\\butgrp{\\row{\\but{True}{$buttonTrueValue}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\but{False}{$buttonFalseValue}}}}{margin-left-small}',
+						answer: '\\css{\\grp{\\btn{True}{$buttonTrueValue}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\btn{False}{$buttonFalseValue}}}{margin-left-small}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp{\\row{\\str{\xA0}}}{\\row{\\str{$helpNum1}}{\\sign{&sdot;}}{\\str{$helpDen2}}{\\sign{\xA0 $equalOrNot \xA0}}{\\str{$helpDen1}}{\\sign{&sdot;}}{\\str{$helpNum2}}}{\\row{\\html{&nbsp;}}}{\\row{\\str{$productLeft}}{\\sign{\xA0 $equalOrNot \xA0}}{\\str{$productRight}}}{\\row{\\html{&nbsp;}}}{\\css{\\row{\\str{Answer: \xA0 }}{\\str{ $answerFirst }}}{help-answer-text}}{\\row{\\html{&nbsp;}}}'
@@ -50,7 +50,7 @@ angular.module('mathSkills').service('data16_2', ['dataUtils', function (dataUti
 						+'{\\html{&nbsp;}}}'
 						+'{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum4}}{\\str{$problemDen4}}}'
 						+'{\\html{&nbsp;}}}}}',
-						answer: '\\css{\\butgrp{\\row{\\but{True}{$buttonTrueValue}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\but{False}{$buttonFalseValue}}}}{margin-left-small}',
+						answer: '\\css{\\grp{\\btn{True}{$buttonTrueValue}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\btn{False}{$buttonFalseValue}}}{margin-left-small}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -88,7 +88,7 @@ angular.module('mathSkills').service('data16_2', ['dataUtils', function (dataUti
 						+'{\\html{&nbsp;}}}'
 						+'{\\grp{\\html{&nbsp;}}{\\frac{\\str{$problemNum4}}{\\str{$problemDen4}}}{\\str{$label4}}'
 						+'{\\html{&nbsp;}}}}}',
-						answer: '\\css{\\butgrp{\\row{\\but{True}{$buttonTrueValue}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\but{False}{$buttonFalseValue}}}}{margin-left-small}',
+						answer: '\\css{\\grp{\\btn{True}{$buttonTrueValue}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\btn{False}{$buttonFalseValue}}}{margin-left-small}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
