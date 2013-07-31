@@ -24,15 +24,15 @@ angular.module('mathSkills').service('data1_2', ['dataUtils', function (dataUtil
         },
         data = [
             { words: 'fifty-eight', number: '58', template: 'main' },
-            { words: 'one hundred, seventy-four', number: '174', template: 'main' },
-            { words: 'three hundred, thirty-six', number: '336', template: 'main' },
+            { words: 'one hundred seventy-four', number: '174', template: 'main' },
+            { words: 'three hundred thirty-six', number: '336', template: 'main' },
             { words: 'three thousand, three hundred eighty-six', number: '3386', template: 'main' },
             { words: 'fifty thousand, nine hundred fifty-seven', number: '50957', template: 'main' },
             { words: 'four hundred one', number: '401', template: 'main' },
-            { words: 'seven thousand, seven hundred nineteen', number: '7719', template: 'main' },
+            { words: 'seven thousand, ninety-two', number: '7092', template: 'main' },
             { words: 'seventy-three thousand, one hundred seventy-eight', number: '73178', template: 'main' },
-            { words: 'one hundred twenty-six', number: '126', template: 'main' },
-            { words: 'seven thousand, seven hundred forty-eight', number: '7748', template: 'main' }
+            { words: 'eight million, thirty-two', number: '8000032', template: 'main' },
+            { words: 'thirty-six million, twenty-five thousand, forty-eight', number: '36025048', template: 'main' }
         ];
 
     return dataUtils.build(ret, template, data);
