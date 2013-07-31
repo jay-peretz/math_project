@@ -26,16 +26,18 @@ angular.module('mathSkills').service('data15_3', ['dataUtils', function (dataUti
             }
         },
         data = [
-            { number: '1000', divisor: '10', answer: 'x', helpAnswer: 'x', decimalPlaces: '4', template: 'main' },
-			{ number: '722', divisor: '10', answer: '7220', helpAnswer: '7,220', template: 'main' },
-			{ number: '0.1', divisor: '1000', answer: '100', helpAnswer: '100', template: 'main' },
-			{ number: '3.36', divisor: '1000', answer: '3360', helpAnswer: '3,360', template: 'main' },
-			{ number: '82', divisor: '0.001', answer: '0.082', helpAnswer: '0.082', template: 'main' },
-			{ number: '0.1', divisor: '0.001', answer: '0.0001', helpAnswer: '0.0001', template: 'main' },
-			{ number: '38.5', divisor: '0.001', answer: '0.0385', helpAnswer: '0.0385', template: 'main' },
-			{ number: '80.62', divisor: '0.00001', answer: '0.0008062', helpAnswer: '0.0008062', template: 'main' },
-			{ number: '988', divisor: '1000', answer: '988000', helpAnswer: '988,000', template: 'main' },
-			{ number: '7.6', divisor: '0.01', answer: '0.076', helpAnswer: '0.076', template: 'main' }       
+            { number: '10', divisor: '1000', answer: '0.01', helpAnswer: '0.01', template: 'main' },
+			{ number: '0.1', divisor: '0.001', answer: '100', helpAnswer: '100', template: 'main' },
+			{ number: '0.001', divisor: '0.1', answer: '0.01', helpAnswer: '0.01', template: 'main' },
+			{ number: '0.01', divisor: '10', answer: '0.001', helpAnswer: '0.001', template: 'main' },
+			{ number: '0.1', divisor: '100', answer: '0.001', helpAnswer: '0.001', template: 'main' },
+			{ number: '10', divisor: '0.01', answer: '1000', helpAnswer: '1,000', template: 'main' },
+			{ number: '10', divisor: '10', answer: '1.0', helpAnswer: '1.0', template: 'main' },
+			{ number: '10', divisor: '100', answer: '0.1', helpAnswer: '0.1', template: 'main' },
+			{ number: '100', divisor: '10', answer: '10.0', helpAnswer: '10', template: 'main' },
+			{ number: '10', divisor: '1000', answer: '0.01', helpAnswer: '0.01', template: 'main' },  
+			{ number: '1000', divisor: '.01', answer: '100000', helpAnswer: '100,000', template: 'main' },
+			{ number: '1000', divisor: '10', answer: '100', helpAnswer: '100', template: 'main' } 
        ];
 
     return dataUtils.build(desc, template, data);
