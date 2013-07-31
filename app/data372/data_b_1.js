@@ -55,14 +55,14 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 			{instructions: '<p>What fractional part of this figure is shaded?</p>',
 			 imagefile: 'B.1/b-1-1.png',
 			response : '\\\\grp{\\\\frac{\\\\input{3}}{\\\\input{10}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a PART OF A WHOLE problem:}}}{\\\\row{\\\\css{\\\\frac{\\\\str{3}}{\\\\str{10}}}{help-answer-text}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a PART OUT OF A WHOLE:}}}{\\\\row{\\\\css{\\\\frac{\\\\str{3}}{\\\\str{10}}}{help-answer-text}}}', 
 	    	template: 'imageproblem'
 			},
 		 //prob 2
 			{instructions: '<p>What fractional part of this figure is not shaded?</p>',
 			 imagefile: 'B.1/b-1-2.png',
 			response : '\\\\grp{\\\\frac{\\\\input{3}}{\\\\input{5}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a PART OF A WHOLE problem:}}}{\\\\row{\\\\css{\\\\frac{\\\\str{3}}{\\\\str{5}}}{help-answer-text}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a PART OUT OF A WHOLE:}}}{\\\\row{\\\\css{\\\\frac{\\\\str{3}}{\\\\str{5}}}{help-answer-text}}}', 
 	    	template: 'imageproblem'
 			},
 		// prob 3
@@ -195,13 +195,13 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 			//prob 22
 			{instructions: '<p>When 50 adults were surveyed, 21 agreed with the governor\'s education plan, 15 disagreed, 7 had mixed feelings, and 7 didn\'t know what the governor\'s plan was.</p><p>What fraction of the adults surveyed agreed with the governor\'s plan?  </p>',
 			response : '\\\\grp{\\\\frac{\\\\input{21}}{\\\\input{50}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{The concept of the problem is part of the whole:}}}{\\\\row{\\\\frac{\\\\str{21}}{\\\\str{50}}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The concept of the problem is part out of the whole:}}}{\\\\row{\\\\frac{\\\\str{21}}{\\\\str{50}}}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 23
 			{instructions: '<p>When 50 adults were surveyed, 21 agreed with the governor\'s education plan, 15 disagreed, 7 had mixed feelings, and 7 didn\'t know what the governor\'s plan was.</p><p>Out of those who knew what the governor\'s plan was, what fraction disagreed or had mixed feelings?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{22}}{\\\\input{43}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{The problem is a part of the whole where:}}}{\\\\row{\\\\frac{\\\\str{disagreed + mixed feelings}}{\\\\str{all - didn\'t understand}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{15 + 7}}{\\\\str{50 - 7}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{22}}{\\\\str{43}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The problem is a part out of the whole where:}}}{\\\\row{\\\\frac{\\\\str{disagreed + mixed feelings}}{\\\\str{all - didn\'t understand}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{15 + 7}}{\\\\str{50 - 7}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{22}}{\\\\str{43}}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 24
@@ -239,7 +239,7 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 			//prob 29
 			{instructions: '<p>3 pizzas (each sliced into 10 pieces) were delivered. 8 pieces of the first pizza were eaten; 9 pieces of the second pizza were eaten; and 6 pieces of the third pizza were eaten.</p><p>What fraction of the pieces of pizza remain?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{7}}{\\\\input{30}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a part of the whole problem:}}}{\\\\row{\\\\frac{\\\\str{remaining slices}}{\\\\str{all slices}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{30 - (8 + 9 + 6)}}{\\\\str{30}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{7}}{\\\\str{30}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a part out of the whole problem:}}}{\\\\row{\\\\frac{\\\\str{remaining slices}}{\\\\str{all slices}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{30 - (8 + 9 + 6)}}{\\\\str{30}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{7}}{\\\\str{30}}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 30
