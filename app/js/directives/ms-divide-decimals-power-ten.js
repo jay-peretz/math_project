@@ -26,6 +26,7 @@ angular.module('mathSkills')
 					answerObject,
 					answerDisplayArray = [],
 					decimalIndex = 0,
+					answerDecimalIndex = 0,
 					dividendDigits = 0,
 					divisorDigits = 0,
 					answerString = "", 
@@ -85,21 +86,23 @@ angular.module('mathSkills')
 							answerPlacesLeft = answerString.length;
 							decimalIndex = 0;
 						}
-						
+						console.log("answerPlacesLeft is: ",answerPlacesLeft," answerPlacesRight is: ",answerPlacesRight," decimalIndex is: ",decimalIndex);
 						// get whether the shift is left or right
 						if (divisor >= 1) {
 							$scope.pointLeftOrRight = "left";
 							answerDisplayArray = $filter('decimal-to-display-array')(answerObject, answerPlacesLeft, Math.max($scope.decimalDisplacement, answerPlacesRight), 1);
-							if (decimalIndex === 0) {
-								answerDisplayArray.splice(answerPlacesLeft, 0, ".");
-							}
 						} else {
 							$scope.pointLeftOrRight = "right";
 							answerDisplayArray = $filter('decimal-to-display-array')(answerObject, Math.max($scope.decimalDisplacement, answerPlacesLeft), answerPlacesRight, 1);
-							if (decimalIndex === 0) {
-								answerDisplayArray.splice($scope.decimalDisplacement, 0, ".");
-							}
 						}
+						console.log(".3 answerDisplayArray is: ",answerDisplayArray," answerDisplayArray.indexOf('.') is: ",answerDisplayArray.indexOf('.'));
+						if (answerDisplayArray.indexOf(".") === -1) {
+							answerDisplayArray.splice(answerPlacesLeft, 0, ".");
+						}
+						
+						answerDecimalIndex = answerDisplayArray.indexOf(".");
+						console.log("2 answerDecimalIndex is: ",answerDecimalIndex);
+						
 						console.log(".5 answerDisplayArray is: ",answerDisplayArray);
 						// add string zeros in place of blanks 
 						for (var ii = 0, len = answerDisplayArray.length; ii < len; ii += 1) { 
@@ -141,20 +144,20 @@ angular.module('mathSkills')
 									// initialize values
 									$scope.decimalPointerArray[ii] = " ";
 									$scope.borderBelowArray[ii] = " ";
-									
+						
 									switch (true) {
 															
 										case ($scope.pointLeftOrRight === "right"
-												&& ii > (answerPlacesLeft - $scope.decimalDisplacement - 1)
-												&& ii < $scope.decimalDisplacement):
+												&& ii > (answerDecimalIndex - $scope.decimalDisplacement - 1)
+												&& ii < answerDecimalIndex):
 											// \u25e1 is Unicode UTF-16 for half-moon	
 											//$scope.decimalPointerArray[ii] = '\u25e1';
 											$scope.borderBelowArray[ii] = 'arrowRight';
 											break;
 											
 										case ($scope.pointLeftOrRight === "left"
-											  && ii > answerDisplayArray.indexOf(".")
-											   && ii < (answerDisplayArray.indexOf(".") + $scope.decimalDisplacement + 1)):
+											  && ii > answerDecimalIndex
+											   && ii < (answerDecimalIndex + $scope.decimalDisplacement + 1)):
 											// \u25e1 is Unicode UTF-16 for half-moon
 											//$scope.decimalPointerArray[ii] = '\u25e1';  
 											$scope.borderBelowArray[ii] = 'arrowLeft';
