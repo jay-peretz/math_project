@@ -21,13 +21,12 @@ angular.module('mathSkills')
 				if (!isNumber(dividend) || !isNumber(divisor) || !divisor) {
 					return null;
 				}
-				console.log("2 digitsRightInExponential is: ",digitsRightInExponential);
+
 				var sign = ((dividend * divisor) != Math.abs(dividend * divisor)) ? "-" : "";
 				dividend = Math.abs(dividend);
 				divisor = Math.abs(divisor);
 				
 				quotientExpression = (dividend / divisor).toExponential(digitsRightInExponential);
-				console.log("quotientExpression is: ",quotientExpression);
 				quotientExpressionString = quotientExpression.toString();
 				quotientExponent = quotientExpression.slice(quotientExpressionString.indexOf("e") + 1);
 				if (quotientExpressionString.indexOf('.') !== -1) {
@@ -38,7 +37,6 @@ angular.module('mathSkills')
 				// add appropriate zeros and decimal point back into quotientDigitsOnly
 				quotientFinal = quotientDigitsOnly;
 				if (quotientExponent > 0) {
-					console.log("quotientFinal.length is: ",quotientFinal.length," quotientFinal.length <= quotientExponent is: ",quotientFinal.length <= quotientExponent);
 					while (quotientFinal.length <= quotientExponent) {
 								quotientFinal = quotientFinal + "0";
 					} 
@@ -48,12 +46,7 @@ angular.module('mathSkills')
 					}
 					quotientFinal = "." + quotientFinal;
 				}					
-				
-				
-			 	//quotientFinal = quotientDigitsOnly*Math.pow(10,quotientExponent);
-				
-				console.log(" quotientExponent is: ",quotientExponent," quotientExpressionString is: ",quotientExpressionString," quotientDigitsOnly is: ",quotientDigitsOnly," quotientFinal is: ",quotientFinal);
-				
+								
 				if (typeof returnWithSign !== "undefined" && returnWithSign === true) {
 					return sign + quotientFinal;
 				} else {
