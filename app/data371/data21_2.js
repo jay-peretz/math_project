@@ -148,11 +148,11 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
 				children: [{
 					title: 'Main Answer',
 					children: [{
-						problem: '\\col'
+						problem: '\\pan{6}{6}{\\col'
 						+'{\\str{$problem}}'
 						+'{\\str{\xA0}}'
 						+'{\\str{\xA0}}'
-						+'{\\chart{2012 Income Tax Rate Schedule for Single Person}{7}{2}{["If you have a taxable income:","Amount of Income Tax","between $0 and $8,925, then you pay:","10% <span class=bigger>&sdot;</span>(amount of taxable income)","between $8,925 and $36,250, then you pay:","$893 + <br> 15% <span class=bigger>&sdot;</span>(amount of taxable income over $8,925)","between $36,250 and $87,850, then you pay:","$4,991 + <br> 25% <span class=bigger>&sdot;</span>(amount of taxable income over $36,250)", "between $87,850 and $183,250, then you pay:","$17,891 + <br>28% <span class=bigger>&sdot;</span>(amount of taxable income over $87,850)", "between $183,250 and $398,350, then you pay:","$44,603 +<br> 33% <span class=bigger>&sdot;</span>(amount of taxable income over $183,250)", "over $398,350, then you pay:","$116,164 +<br> 39.6% <span class=bigger>&sdot;</span>(amount of taxable income over $398,350)"]}',
+						+'{\\chart{2012 Income Tax Rate Schedule for Single Person}{7}{2}{["If you have a taxable income:","Amount of Income Tax","between $0 and $8,925, then you pay:","10% <span class=bigger>&sdot;</span>(amount of taxable income)","between $8,925 and $36,250, then you pay:","$893 + <br> 15% <span class=bigger>&sdot;</span>(amount of taxable income over $8,925)","between $36,250 and $87,850, then you pay:","$4,991 + <br> 25% <span class=bigger>&sdot;</span>(amount of taxable income over $36,250)", "between $87,850 and $183,250, then you pay:","$17,891 + <br>28% <span class=bigger>&sdot;</span>(amount of taxable income over $87,850)", "between $183,250 and $398,350, then you pay:","$44,603 +<br> 33% <span class=bigger>&sdot;</span>(amount of taxable income over $183,250)", "over $398,350, then you pay:","$116,164 +<br> 39.6% <span class=bigger>&sdot;</span>(amount of taxable income over $398,350)"]}}',
 						answer: '\\grp{\\str{$}}{\\css{\\inputcash{$answer}}{width200px}}',
 						controls: {
 							"checkAnswer": true,
