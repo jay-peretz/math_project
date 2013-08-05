@@ -13,31 +13,35 @@ angular.module('mathSkills').service('data15_3', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-						+'{\\str{Determine the quotient of:}}'
-						+'{\\str{\xA0}}'
-						+'{\\html{$number <span class=bigger>&divide;</span> $divisor}',
+						+'{\\html{$firstPartQuestion}}'
+						+'{\\html{\&nbsp;}}'
+						+'{\\html{$secondPartQuestion}',
 						answer: '\\input{$answer}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\row{\\dividedecpowten{$number}{$divisor}{$decimalPlaces}}{\\css{\\str{Answer:  $helpAnswer}}{help-answer-text help-answer-margin-right}}}'
+							"help": '\\rowgrp'
+							+'{\\html{\&nbsp;}}'
+							+'{\\dividedecpowten{$dividend}{$divisor}{$answerDigitsMinusOne}}'
+							+'{\\html{\&nbsp;}}'
+							+'{\\css{\\str{Answer:  $helpAnswer}}{help-answer-text}}'
 						}
                     }]
                 }]
             }
         },
+		// decimal answers must include a zero before the decimal place here- optional in entered answer
+		// integer answers must have no commas in the "answer" variable- commas in the "helpAnswer" variable
         data = [
-            { number: '10', divisor: '1000', answer: '0.01', helpAnswer: '0.01', template: 'main' },
-			{ number: '0.1', divisor: '0.001', answer: '100', helpAnswer: '100', template: 'main' },
-			{ number: '0.001', divisor: '0.1', answer: '0.01', helpAnswer: '0.01', template: 'main' },
-			{ number: '0.01', divisor: '10', answer: '0.001', helpAnswer: '0.001', template: 'main' },
-			{ number: '0.1', divisor: '100', answer: '0.001', helpAnswer: '0.001', template: 'main' },
-			{ number: '10', divisor: '0.01', answer: '1000', helpAnswer: '1,000', template: 'main' },
-			{ number: '10', divisor: '10', answer: '1.0', helpAnswer: '1.0', template: 'main' },
-			{ number: '10', divisor: '100', answer: '0.1', helpAnswer: '0.1', template: 'main' },
-			{ number: '100', divisor: '10', answer: '10.0', helpAnswer: '10', template: 'main' },
-			{ number: '10', divisor: '1000', answer: '0.01', helpAnswer: '0.01', template: 'main' },  
-			{ number: '1000', divisor: '.01', answer: '100000', helpAnswer: '100,000', template: 'main' },
-			{ number: '1000', divisor: '10', answer: '100', helpAnswer: '100', template: 'main' } 
+            { firstPartQuestion: 'Determine the quotient of:', secondPartQuestion: '4 divided by a thousand',dividend: '4', divisor: '1000', answerDigitsMinusOne: '0', answer: '0.004', helpAnswer: '0.004', template: 'main' },
+			{ firstPartQuestion: 'Solve:', secondPartQuestion: '95 <span class=bigger>&divide;</span> 10,000', dividend: '95', divisor: '10000',answerDigitsMinusOne: '3', answer: '0.0095', helpAnswer: '0.0095', template: 'main' },
+			{ firstPartQuestion: 'What is the quotient of:', secondPartQuestion: '49.52 and 100', dividend: '49.52', divisor: '100', answerDigitsMinusOne: '3', answer: '0.4952', helpAnswer: '0.4952', template: 'main' },
+			{ firstPartQuestion: 'Find the result of dividing:', secondPartQuestion: '56.23 by a thousand', dividend: '56.23', divisor: '1000', answerDigitsMinusOne: '4', answer: '0.05623', helpAnswer: '0.05623', template: 'main' },
+			{ firstPartQuestion: 'Determine the quotient of:', secondPartQuestion: '62 divided by one tenth',dividend: '62', divisor: '0.1', answerDigitsMinusOne: '2', answer: '620', helpAnswer: '620', template: 'main' },
+			{ firstPartQuestion: 'Solve:', secondPartQuestion: '5 <span class=bigger>&divide;</span> 0.00001', dividend: '5', divisor: '0.00001', answerDigitsMinusOne: '5', answer: '500000', helpAnswer: '500,000', template: 'main' },
+			{ firstPartQuestion: 'What is the quotient of:', secondPartQuestion: '781.680 and 0.001', dividend: '781.680', divisor: '0.001', answerDigitsMinusOne: '5', answer: '781680', helpAnswer: '781,680', template: 'main' },
+			{ firstPartQuestion: 'Find the result of dividing:', secondPartQuestion: '0.12 by one hundredth', dividend: '0.12', divisor: '0.01', answerDigitsMinusOne: '1', answer: '12', helpAnswer: '12', template: 'main' },
+			{ firstPartQuestion: 'Determine the quotient of:', secondPartQuestion: '6 divided by a hundred',dividend: '6', divisor: '100', answerDigitsMinusOne: '1', answer: '0.06', helpAnswer: '0.06', template: 'main' },
+			{ firstPartQuestion: 'Solve:', secondPartQuestion: '76.460 \xF7 1000', dividend: '76.460', divisor: '1000', answerDigitsMinusOne: '4', answer: '0.07646', helpAnswer: '0.07646', template: 'main' }
        ];
 
     return dataUtils.build(desc, template, data);
