@@ -1,10 +1,10 @@
-'use strict';
+ 'use strict';
 /*global angular */
 
 angular.module('mathSkills')
     .filter('divide-decimals', [
         function () {
-            return function (dividend, divisor, answerDigitsMinusOne, returnWithSign) {
+            return function (dividend, divisor, digitsRightInExponential, returnWithSign) {
 				// isNumber from jQuery 1.7.2
 				var sign,
 					quotientExpression,
@@ -21,12 +21,12 @@ angular.module('mathSkills')
 				if (!isNumber(dividend) || !isNumber(divisor) || !divisor) {
 					return null;
 				}
-				console.log("answerDigitsMinusOne is: ",answerDigitsMinusOne);
+				console.log("2 digitsRightInExponential is: ",digitsRightInExponential);
 				var sign = ((dividend * divisor) != Math.abs(dividend * divisor)) ? "-" : "";
 				dividend = Math.abs(dividend);
 				divisor = Math.abs(divisor);
 				
-				quotientExpression = (dividend / divisor).toExponential(answerDigitsMinusOne);
+				quotientExpression = (dividend / divisor).toExponential(digitsRightInExponential);
 				console.log("quotientExpression is: ",quotientExpression);
 				quotientExpressionString = quotientExpression.toString();
 				quotientExponent = quotientExpression.slice(quotientExpressionString.indexOf("e") + 1);
@@ -38,13 +38,9 @@ angular.module('mathSkills')
 				// add appropriate zeros and decimal point back into quotientDigitsOnly
 				quotientFinal = quotientDigitsOnly;
 				if (quotientExponent > 0) {
-					console.log("quotientFinal.length is: ",quotientFinal.length," quotientFinal.length < quotientExponent is: ",quotientFinal.length < quotientExponent);
-					if (quotientFinal.length < quotientExponent) {
-						for (var ii = 0; ii < quotientExponent; ii += 1) {
-							if (quotientFinal.length < quotientExponent) {
+					console.log("quotientFinal.length is: ",quotientFinal.length," quotientFinal.length <= quotientExponent is: ",quotientFinal.length <= quotientExponent);
+					while (quotientFinal.length <= quotientExponent) {
 								quotientFinal = quotientFinal + "0";
-							} 
-						}
 					} 
 				} else {
 					for (var ii = 0, expAbs = Math.abs(quotientExponent) - 1; ii < expAbs; ii += 1) {

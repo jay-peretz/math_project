@@ -20,7 +20,8 @@ angular.module('mathSkills')
 				var tagParameters = [],
 					dividend,
 					divisor,
-					answerDigitsMinusOne,
+					digitsRightInExponential,
+					digitCountWithoutDecimal,
 					answerObject,
 					answerDisplayArray = [],
 					decimalIndex = 0,
@@ -49,8 +50,10 @@ angular.module('mathSkills')
 				
 				var decimalDigits = function (num) {
 					if (num.toString().indexOf('.') !== -1) {
+						console.log("decimalDigits of: ",num," is ",num.toString().split('.')[1].length);
 						return num.toString().split('.')[1].length;
 					} else {
+						console.log("decimalDigits of: ",num," is 0");
 						return 0;
 					}
 				};
@@ -63,13 +66,27 @@ angular.module('mathSkills')
 					// tagParameters[3] for number sign not implemented yet
 						dividend = Number(tagParameters[0]);
 						divisor = Number(tagParameters[1]);
-						if (typeof Number(tagParameters[2]) !== "undefined") {
-							answerDigitsMinusOne = Number(tagParameters[2]);
-						} 
+						
+						// digitsRightInExponential, override for # of digits right of decimal in exponential						
+						if (tagParameters[2] !== "$digitsRightInExponential" && typeof tagParameters[2] !== "undefined") {
+							digitsRightInExponential = tagParameters[2];
+						} else {												
+							if (divisor > 1) {
+								digitsRightInExponential = tagParameters[0].replace(".","").length - 1;
+							} else {
+								if (dividend > 1) {
+									digitsRightInExponential = decimalDigits(divisor) + decimalDigits(dividend);
+								} else {
+									digitsRightInExponential = decimalDigits(dividend) - 1;
+								}
+							}
+						}
+						
+						console.log("1 digitsRightInExponential is: ",digitsRightInExponential," tagParameters[0].length is: ",tagParameters[0].length);
 						// get the number of places shifted
 						$scope.decimalDisplacement = Math.abs(Math.round(Math.log(divisor)/Math.log(10)));
 						
-						answerObject = $filter('divide-decimals')(dividend, divisor, answerDigitsMinusOne);
+						answerObject = $filter('divide-decimals')(dividend, divisor, digitsRightInExponential);
 						answerString = answerObject.toString();
 						console.log("answerString is: ",answerString)
 						// get the maximum number of digits right and left of the answer decimal place						
@@ -82,7 +99,7 @@ angular.module('mathSkills')
 							answerPlacesLeft = answerString.length;
 							decimalIndex = 0;
 						}
-						console.log("answerObject is: ",answerObject,"Math.max($scope.decimalDisplacement, answerPlacesRight) is: ",Math.max($scope.decimalDisplacement, answerPlacesRight))
+						console.log("answerObject is: ",answerObject,"Math.max($scope.decimalDisplacement, answerPlacesRight) is: ",Math.max($scope.decimalDisplacement, answerPlacesRight)," answerPlacesLeft is: ",answerPlacesLeft)
 						// get whether the shift is left or right
 						if (divisor >= 1) {
 							$scope.pointLeftOrRight = "left";
@@ -91,7 +108,7 @@ angular.module('mathSkills')
 							$scope.pointLeftOrRight = "right";
 							answerDisplayArray = $filter('decimal-to-display-array')(answerObject, Math.max($scope.decimalDisplacement, answerPlacesLeft), answerPlacesRight, 1);
 						}
-						console.log("answerDisplayArray is: ",answerDisplayArray)
+						console.log("$scope.pointLeftOrRight is: ",$scope.pointLeftOrRight," answerDisplayArray is: ",answerDisplayArray, " Math.max($scope.decimalDisplacement, answerPlacesRight) is: ",Math.max($scope.decimalDisplacement, answerPlacesRight))
 						// add decimal point if necessary
 						if (answerDisplayArray.indexOf(".") === -1) {
 							answerDisplayArray.splice(answerPlacesLeft, 0, ".");

@@ -7,7 +7,7 @@ angular.module('mathSkills')
 			// withZeros = 1 fills in zeros to the right of the last digit, to the right of the decimal
             return function (decimal, maxPlacesLeft, maxPlacesRight, withZeros) {
 				
-				function getDecimalPlaces (givenDecimal) {
+				/*function getDecimalPlaces (givenDecimal) {
 					var givenDecimalString = "" + givenDecimal,
 						givenDecimalStringLength = givenDecimalString.length,
 						decimalPlaces = 0;
@@ -18,7 +18,15 @@ angular.module('mathSkills')
 						decimalPlaces = 0;
 					}
 					return decimalPlaces;		
-				};
+				};*/
+				
+				var getDecimalPlaces = function (num) {
+					if (num.toString().indexOf('.') !== -1) {
+                    	return num.toString().split('.')[1].length;
+					} else {
+						return 0;
+					}
+                };
 				
 				if ((typeof maxPlacesLeft === "undefined")||(typeof maxPlacesRight === "undefined")||(maxPlacesLeft + maxPlacesRight > 32)) {
 					maxPlacesLeft = 16;
