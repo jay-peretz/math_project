@@ -16,7 +16,10 @@ angular.module('mathSkills').service('data18_2', ['dataUtils', function (dataUti
 						answer: '\\grp{\\input{$answer}}{\\str{%}}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\percentarrows{$startNumber}{100}{decimal}{percent}}{\\html{&nbsp;}}{\\css{\\row{\\str{Answer:  $answer}}{\\str{%}}}{help-answer-text help-answer-margin-right}}}'
+							"help": '\\rowgrp'
+							+'{\\percentarrows{$startNumber}{100}{decimal}{percent}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\grp{\\str{Answer:  $answer}}{\\str{%}}}{help-answer-text help-answer-margin-right}}'
 						}
                     }]
                 }]

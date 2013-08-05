@@ -257,8 +257,6 @@ angular.module('mathSkills')
 								}
 						}
 						
-						console.log("bottom- displayWithBorrowsFinal[0] is: ", displayWithBorrowsFinal[0]);
-						
 						$scope.firstArray = [];
 						$scope.secondArray = [];
 						$scope.thirdArray = [];
