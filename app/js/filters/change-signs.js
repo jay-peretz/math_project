@@ -5,8 +5,8 @@ angular.module('mathSkills').filter('changeSigns', function () {
         return typeof input === 'string' ?
             input.replace(/[\*\/]/g, function (char) {
                 switch (char) {
-                    case '*': return '⚈';
-					case 'x': return '⚈';
+                    case '*': return '\xB7';
+					case 'x': return '\xB7';
                     case '/': return '÷';
                 }
             }) :
