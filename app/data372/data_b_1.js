@@ -73,25 +73,25 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 			//prob 4
 			{instructions: '<p>Sandra had 5 quarters, 3 dimes, and 6 pennies.</p><p>  What fraction of her coins were in quarters?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{5}}{\\\\input{14}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{quarters}}{\\\\str{quarters + dimes + pennies}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{5}}{\\\\str{5 + 3 + 6}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\css{\\\\frac{\\\\str{5}}{\\\\str{14}}}{help-answer-text}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{quarters}}{\\\\str{quarters + dimes + pennies}}}}{\\\\row{\\\\str{ \xA0}}}{\\\\row{\\\\frac{\\\\str{5}}{\\\\str{5 + 3 + 6}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\css{\\\\str{Ans: }}{help-answer-text}}{\\\\css{\\\\frac{\\\\str{5}}{\\\\str{14}}}{help-answer-text}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 5
 			{instructions: '<p>Sandra had 5 quarters, 3 dimes, and 6 pennies.</p><p>  What fraction of her coins were in dimes and pennies?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{9}}{\\\\input{14}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{dimes + pennies}}{\\\\str{quarters + dimes + pennies}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{3 + 6}}{\\\\str{5 + 3 + 6}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\css{\\\\frac{\\\\str{9}}{\\\\str{14}}}{help-answer-text}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{dimes + pennies}}{\\\\str{quarters + dimes + pennies}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{3 + 6}}{\\\\str{5 + 3 + 6}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\css{\\\\str{Ans: }}{help-answer-text}}{\\\\css{\\\\frac{\\\\str{9}}{\\\\str{14}}}{help-answer-text}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 6
 			{instructions: '<p>Sandra had 5 quarters, 3 dimes, and 6 pennies.</p><p>  What fraction of her total coin money was in dimes?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{30}}{\\\\input{161}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{(# of dimes * 10)}}{\\\\str{(# of quarters * 25) + (# of dimes * 10) + (# of pennies * 1)}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{(3 * 10)}}{\\\\str{(5 * 25) + (3 * 10) + (6 * 1)}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\css{\\\\frac{\\\\str{30}}{\\\\str{161}}}{help-answer-text}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{(# of dimes * 10)}}{\\\\str{(# of quarters * 25) + (# of dimes * 10) + (# of pennies * 1)}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{(3 * 10)}}{\\\\str{(5 * 25) + (3 * 10) + (6 * 1)}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\str{\xA0}}}{\\\\css{\\\\row{\\\\str{Ans: }}{\\\\frac{\\\\str{30}}{\\\\str{161}}}}{help-answer-text}', 
 	    	template: 'wordproblem'
 			},
 			//prob 7
 			{instructions: '<p>A child had a set of building blocks that consisted of 10 red blocks, 5 green blocks, and 7 white blocks. All of these blocks were put into a bag.</p><p>If a block was randomly chosen, what is the probability of choosing a red block?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{[5,10]}}{\\\\input{[11,22]}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{red blocks}}{\\\\str{red blocks + green blocks + white blocks}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{10}}{\\\\str{10 + 5 + 7}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\frac{\\\\str{10}}{\\\\str{22}}}}{\\\\row{\\\\str{ or}}}{\\\\row{\\\\css{\\\\frac{\\\\str{5}}{\\\\str{11}}}{help-answer-text}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\frac{\\\\str{red blocks}}{\\\\str{red blocks + green blocks + white blocks}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{10}}{\\\\str{10 + 5 + 7}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{10}}{\\\\str{22}}}}{\\\\row{\\\\str{\xA0}}}{\\\\css{\\\\row{\\\\str{Ans: }}{\\\\frac{\\\\str{5}}{\\\\str{11}}}}{help-answer-text}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 8
