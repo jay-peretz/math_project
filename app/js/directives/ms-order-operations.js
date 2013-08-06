@@ -12,7 +12,7 @@ angular.module('mathSkills')
             controller: ['$scope', '$element', function ($scope, $element) {
                 var convertSigns = function (symbol) {
                     switch (symbol) {
-                        case '*': return '×';
+                        case '*': return '\xB7';
                         case '/': return '÷';
                         default: return symbol;
                     }
