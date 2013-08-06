@@ -24,11 +24,11 @@ angular.module('mathSkills')
                     $scope.answer = '';
                     $scope.controllerId = Math.random().toString();
                     
-                    $scope.$watch('expected', function () {
-                        if($scope.expected) {
+                    $scope.$watch('expected', function () { 
+                        if($scope.expected) {   
                             
                             var arr = [];
-                            $scope.myargs = parser.extractTag($scope.expected).args;
+                            $scope.myargs = parser.extractTag($scope.expected).args; 
                             $scope.display = $scope.myargs[0].length === 0;
 
                             //handle width/with multiple answers 
@@ -41,7 +41,7 @@ angular.module('mathSkills')
                                 directiveUtils.resize($scope, arr, 'input', 10, 10);
                             }
 
-                            // ****start live data/event stuff****
+                            //****start live data/event stuff****
                             $scope.data = {
                                 expt: ($scope.myargs.length >= 0 ? $scope.myargs[0] : false),
                                 key: ($scope.myargs.length > 1 ? $scope.myargs[1] : false),
@@ -55,14 +55,16 @@ angular.module('mathSkills')
                     $scope.$on('checkAnswer', function (e) {
                         if (e.defaultPrevented !== true) {
                             
-                            var data = {
-                                expected: '\\input{' + $scope.myargs[0] + '}',
+                            var parsedExpected = parser.extractTag($scope.expected).args[0];
+
+                            var data = { 
+                                expected: '\\input{' + parsedExpected + '}',
                                 answer: '\\input{' + $scope.answer + '}',
                                 label: $scope.label
                             };
-                            
-                            if ($scope.myargs[0][0] === '[') {
-                                var possibleAnswers = JSON.parse($scope.myargs[0]).map(String);
+
+                            if (parsedExpected[0] === '[') {
+                                var possibleAnswers = JSON.parse(parsedExpected).map(String);
                                 var answerIndex = possibleAnswers.indexOf($scope.answer);
                                 if (answerIndex !== -1) {
                                     var correctAnswerIndex = problemData.index(answerIndex);
@@ -86,7 +88,7 @@ angular.module('mathSkills')
                                         $scope.$emit('answer', data);
                                     });
                                 }
-                            } else {
+                            } else { 
                                 if (data.expected === data.answer) {
                                     data.result = 'correct';
                                     $scope.class = 'success';
