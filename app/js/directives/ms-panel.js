@@ -48,7 +48,7 @@ angular.module('mathSkills')
                         });
 
                         $scope.$on('triggerCheckHelp', function () {
-                            $scope.$broadcast('checkHelp');
+                            triggerAnswerAreaEvent('checkHelp');
                         });
 
                         $scope.$on('showHelpPanel', function (e, data) {
