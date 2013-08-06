@@ -40,7 +40,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 					title: 'Main Answer',
 					children: [{
 					problem: '\\rowgrp{\\row{\\str{$instructions}}}{\\row{\\str{\xA0}}}{\\row{\\exp{$base1}{$exp1}}{\\sign{&times;}}{\\exp{$base2}{$exp2}}{\\sign{&times;}}{\\exp{$base3}{$exp3}}}',
-						answer: '\\exp{$baseans}{$expans}',		
+						answer: '\\pan{5}{7}{\\exp{$baseans}{$expans}}',		
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp' +
@@ -82,7 +82,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp' +
-							'{\\row{\\exp{$base1}{$exp1}}{\\sign{&times;}}{\\exp{$base2}{$exp2}}{\\sign{&times;}}{\\exp{$base3}{$exp3}}{\\sign{=}}}' +
+							'{\\row{\\exp{$base1}{$exp1}}{\\sign{&times;}}{\\exp{$base2}{$exp2}}{\\sign{&times;}}{\\exp{$base3}{$exp3}}{\\sign{&times;}}{\\exp{$base4}{$exp4}}{\\sign{=}}}' +
 							'{\\row{\\str{\xA0}}}' +
 							'{\\row{\\exp{$base1}{$expequation1}}{\\sign{&times;}}{\\exp{$base3}{$expequation2}}{\\sign{=}}}' +
 							'{\\row{\\str{\xA0}}}' +
@@ -93,6 +93,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
             }
 		},
 		data = [
+		// prob 1
 		{instructions: 'Determine the simplified result of multiplying the following exponential values',
 		 base1: '\\\\str{3}',
 		 exp1: '\\\\str{-5}',
@@ -104,6 +105,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		 exphelp: '\\\\str{-2}',
 		 expequation: '\\\\str{-5 + 3}',
 		 template: 'two' },
+		 // prob 2
 		{instructions: 'Determine the simplified result of multiplying the following exponential values',
 		 base1: '\\\\str{(-5)}',
 		 exp1: '\\\\str{-3}',
@@ -117,6 +119,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		 helpexp: '\\\\str{-11}',
 		 expequation: '\\\\str{-3 + (-3) + (-5)}',
 		 template: 'three' },
+		 // prob 3
 		{instructions: 'Determine the simplified result of multiplying the following exponential values',
 		 base1: '\\\\grp{\\\\sign{(}}{\\\\frac{\\\\str{3}}{\\\\str{5}}}{\\\\sign{)}}',
 		 exp1: '\\\\str{-5}',
@@ -128,19 +131,21 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		 exphelp: '\\\\str{-2}',
 		 expequation: '\\\\str{-5 + 3}',
 		 template: 'two' },
+		 // prob 4
 		{instructions: 'Determine the simplified result of multiplying the following exponential values',
-		 base1: '\\\\grp{\\\\str{(}}{\\\\frac{\\\\str{3}}{\\\\str{4}}}{\\\\str{)}}',
+		 base1: '\\\\grp{\\\\sign{(}}{\\\\frac{\\\\str{3}}{\\\\str{4}}}{\\\\sign{)}}',
 		 exp1: '\\\\str{2}',
-		 base2: '\\\\grp{\\\\str{(}}{\\\\frac{\\\\str{3}}{\\\\str{4}}}{\\\\str{)}}',
+		 base2: '\\\\grp{\\\\sign{(}}{\\\\frac{\\\\str{3}}{\\\\str{4}}}{\\\\sign{)}}',
 		 exp2: '\\\\str{-4}',
-		 base3: '\\\\grp{\\\\str{(}}{\\\\frac{\\\\str{3}}{\\\\str{4}}}{\\\\str{)}}',
+		 base3: '\\\\grp{\\\\sign{(}}{\\\\frac{\\\\str{3}}{\\\\str{4}}}{\\\\sign{)}}',
 		 exp3: '\\\\str{ }',
-		 baseans: '\\\\grp{\\\\str{(}}{\\\\frac{\\\\input{3}}{\\\\input{4}}}{\\\\str{)}}',
+		 baseans: '\\\\grp{\\\\sign{(}}{\\\\frac{\\\\input{3}}{\\\\input{4}}}{\\\\sign{)}}',
 		 expans: '\\\\input{-1}',
-		 helpbase:'\\\\grp{\\\\str{(}}{\\\\frac{\\\\str{3}}{\\\\str{4}}}{\\\\str{)}}' ,
+		 helpbase:'\\\\grp{\\\\sign{(}}{\\\\frac{\\\\str{3}}{\\\\str{4}}}{\\\\sign{)}}' ,
 		 helpexp: '\\\\str{-1}',
 		 expequation: '\\\\str{2 + (-4) + (1)}',
 		 template: 'three' },
+		 // prob 5
 		{instructions: 'Determine the simplified result of multiplying the following exponential values',
 		 base1: '\\\\str{2}',
 		 exp1: '\\\\str{-1}',
@@ -158,7 +163,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		 helpexp2: '\\\\str{-1}',
 		 expequation1: '\\\\str{-1 + (+3)}',
 		 expequation2: '\\\\str{3}',
-		 template: 'threediff' },{instructions: 'Determine the simplified result of multiplying the following exponential values',
+		 template: 'threediff' },
+		 // prob 6
+		 {instructions: 'Determine the simplified result of multiplying the following exponential values',
 		 base1: '\\\\str{2}',
 		 exp1: '\\\\str{4}',
 		 base2: '\\\\str{5}',
@@ -176,6 +183,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		 expequation1: '\\\\str{4}',
 		 expequation2: '\\\\str{(5 + (-2))}',
 		 template: 'threediff' },
+		 // prob 7
 		 {instructions: 'Determine the simplified result of multiplying the following exponential values',
 		 base1: '\\\\str{(-2)}',
 		 exp1: '\\\\str{-2}',
@@ -196,6 +204,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		 expequation1: '\\\\str{(-2)+ 2}',
 		 expequation2: '\\\\str{(-3) + 4}',
 		 template: 'fourdiff' },
+		 // prob 8
 		 {instructions: 'Determine the simplified result of multiplying the following exponential values',
 		 base1: '\\\\str{11}',
 		 exp1: '\\\\str{6}',
@@ -207,6 +216,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		 exphelp: '\\\\str{4}',
 		 expequation: '\\\\str{6 + (-2)}',
 		 template: 'two' }	,
+		 // prob 9
 		{instructions: 'Determine the simplified result of multiplying the following exponential values',
 		 base1: '\\\\str{(-2)}',
 		 exp1: '\\\\str{6}',
@@ -220,6 +230,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		 helpexp: '\\\\str{7}',
 		 expequation: '\\\\str{6 + (-2) + 3}',
 		 template: 'three' },
+		 // prob 10
 		 {instructions: 'Determine the simplified result of multiplying the following exponential values',
 		 base1: '\\\\str{(-5)}',
 		 exp1: '\\\\str{-3}',
