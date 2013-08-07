@@ -8,68 +8,43 @@ angular.module('mathSkills').service('data_d_1', ['dataUtils', function (dataUti
         },
         template = {
             main: {
-        title: 'Reduce Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{$n}}{\\str{$d}}}{\\str{\xA0 to its lowest terms}}',
-                answer: '\\frac{\\input{$rn}}{\\input{$rd}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{$n}}{\\fracstr{$d}}}{\\str{\xA0 to its lowest terms }}',
-                answer: '\\reducefrac{\\frac{\\fracstr{$n}}{\\fracstr{$d}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\row{\\frac{\\str{$n}}{\\str{$d}}}{\\str{\xA0 can be reduced to }}{\\frac{\\str{$rn}}{\\str{$rd}}}'
-                 }
-              }]
-            }]
-          },
-		  reduced: {
-        title: 'Reduce Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{$n}}{\\str{$d}}}{\\str{\xA0 to its lowest terms}}',
-                answer: '\\frac{\\input{$n}}{\\input{$d}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": false,
-                    "workbook": true
-                }
-            }]
-        }, {
-            title: 'Workbook',
-            children: [{
-                problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{$n}}{\\fracstr{$d}}}{\\str{\xA0 to its lowest terms }}',
-                answer: '\\reducefrac{\\frac{\\fracstr{$n}}{\\fracstr{$d}}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\row{\\frac{\\str{$n}}{\\str{13}}}{\\str{\xA0 cannot be reduced. }}'
-                }
-            }]
-        }]
-    }
+                title: 'Converting Units of Volume',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\str{$probNum}}{\\str{$probDen}}}{\\str{\xA0 to its lowest terms}}',
+						answer: '\\frac{\\input{$answerNum}}{\\input{$answerDen}}',
+						controls: {
+							"checkAnswer": true,
+							"help": false,
+							"workbook": true
+						}
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\row{\\str{Reduce \xA0}}{\\frac{\\fracstr{$probNum}}{\\fracstr{$probDen}}}{\\str{\xA0 to its lowest terms }}',
+						answer: '\\reducefrac{\\frac{\\fracstr{$probNum}}{\\fracstr{$probDen}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": false
+						}
+                    }]
+                }]
+            }
         },
         data = [
-			{n:6,d:8,rn:3,rd:4,template:'main'},
-			{n:2,d:4,rn:1,rd:2,template:'main'},
-			{n:12,d:36,rn:1,rd:3,template:'main'},
-			{n:14,d:36,rn:7,rd:18,template:'main'},
-			{n:4,d:32,rn:1,rd:8,template:'main'},
-			{n:2,d:3,template:'reduced'},
-			{n:8,d:12,rn:2,rd:3,template:'main'},
-			{n:3,d:9,rn:1,rd:3,template:'main'},
-			{n:3,d:4,template:'reduced'},
-			{n:20,d:80,rn:1,rd:4,template:'main'}
-			
-       ];
+            { probNum: '6', probDen: '8', answerNum: '3', answerDen: '4', template: 'main' },
+			{ probNum: '2', probDen: '4', answerNum: '1', answerDen: '2', template: 'main' },
+			{ probNum: '12', probDen: '36', answerNum: '1', answerDen: '3', template: 'main' },
+			{ probNum: '14', probDen: '36', answerNum: '7', answerDen: '18', template: 'main' },
+			{ probNum: '4', probDen: '32', answerNum: '1', answerDen: '8', template: 'main' },
+			{ probNum: '2', probDen: '3', template: 'reduced' },
+			{ probNum: '8', probDen: '12', answerNum: '2', answerDen: '3', template: 'main' },
+			{ probNum: '3', probDen: '9', answerNum: '1', answerDen: '3', template: 'main' },
+			{ probNum: '3', probDen: '4', template: 'reduced' },
+			{ probNum: '20', probDen: '80', answerNum: '1', answerDen: '4', template: 'main' }
+        ];
+
     return dataUtils.build(desc, template, data);
 }]);
