@@ -10,8 +10,8 @@ angular.module('mathSkills')
     .directive('msReduceFraction', ['parser', 'panelGroupData', '$timeout', function (parser, panelGroupData, $timeout) {
         return {
             controller: ['$scope', function ($scope) {
-                var yes = '\\butgrp{\\row{\\but{Yes}{T}}{\\but{No}{F}}}',
-                    no = '\\butgrp{\\row{\\but{Yes}{F}}{\\but{No}{T}}}',
+                var yes = '\\grp{\\btn{Yes}{T}}{\\btn{No}{F}}',
+                    no = '\\grp{\\btn{Yes}{F}}{\\btn{No}{T}}',
 					factorsUsed = [],
                     simplify = function(num, den) {
                         var leastPart = num > den ? den : num,
