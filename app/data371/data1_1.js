@@ -16,7 +16,10 @@ angular.module('mathSkills').service('data1_1', ['dataUtils', function (dataUtil
 						answer: '\\select{$placeValue}{["Ones", "Tens", "Hundreds", "Thousands", "Ten Thousands", "Hundred Thousands", "Millions", "Ten Millions", "Hundred Millions", "Billions", "Ten Billions", "Hundred Billions"]}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\row{\\showplace{"$placeValue"}{$problemNumber}}}{\\row{\\str{\xA0}}}{\\row{css{\\str{answer:  $placeValue}}{help-answer-text}}}}'
+							"help": '\\rowgrp'
+							+'{\\showplace{"$placeValue"}{$problemNumber}}'
+							+'{\\str{\xA0}}'
+							+'{css{\\str{answer:  $placeValue}}{help-answer-text}}'
 						}
                     }]
                 }]
