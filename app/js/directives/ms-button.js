@@ -4,7 +4,7 @@
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
         parserProvider.register('but', {
-            directiveTemplate: '<ms-button expected={{expected}} label={{label}}></ms-button>'
+            directiveTemplate: '<ms-button expected={{expected}} label={{label}} class=bigger></ms-button>'
         });
     }])
     .directive('msButton', [
