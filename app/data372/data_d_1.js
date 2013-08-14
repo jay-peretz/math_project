@@ -2,8 +2,8 @@
 
 angular.module('mathSkills').service('data_d_1', ['dataUtils', function (dataUtils) {
     var desc = {
-            title: 'D.1 Reducing Fractions',
-            path: 'D.1-reducing-fractions',
+			title: 'D.1 Reducing Fractions',
+			path: 'D.1-reducing-fractions',
             children: []
         },
         template = {
@@ -37,13 +37,13 @@ angular.module('mathSkills').service('data_d_1', ['dataUtils', function (dataUti
             { probNum: '6', probDen: '8', answerNum: '3', answerDen: '4', template: 'main' },
 			{ probNum: '2', probDen: '4', answerNum: '1', answerDen: '2', template: 'main' },
 			{ probNum: '12', probDen: '36', answerNum: '1', answerDen: '3', template: 'main' },
-			{ probNum: '14', probDen: '36', answerNum: '7', answerDen: '18', template: 'main' },
 			{ probNum: '4', probDen: '32', answerNum: '1', answerDen: '8', template: 'main' },
-			{ probNum: '2', probDen: '3', template: 'reduced' },
+			{ probNum: '2', probDen: '3', answerNum: '2', answerDen: '3', template: 'main' },
 			{ probNum: '8', probDen: '12', answerNum: '2', answerDen: '3', template: 'main' },
 			{ probNum: '3', probDen: '9', answerNum: '1', answerDen: '3', template: 'main' },
-			{ probNum: '3', probDen: '4', template: 'reduced' },
-			{ probNum: '20', probDen: '80', answerNum: '1', answerDen: '4', template: 'main' }
+			{ probNum: '3', probDen: '4', answerNum: '3', answerDen: '4', template: 'main' },
+			{ probNum: '20', probDen: '80', answerNum: '1', answerDen: '4', template: 'main' },
+			{ probNum: '12', probDen: '48', answerNum: '1', answerDen: '4', template: 'main' }
         ];
 
     return dataUtils.build(desc, template, data);
