@@ -11,7 +11,8 @@ angular.module('mathSkills')
 	'parser',
     'directiveUtils',
     'problemData',
-    function (parser, directiveUtils, problemData) {
+    '$timeout',
+    function (parser, directiveUtils, problemData, $timeout) {
         return {
             restrict: 'E',
             scope: {
@@ -60,7 +61,16 @@ angular.module('mathSkills')
                         expected: '\\select{'+$scope.answercorrect+'}{['+$scope.optionsarray.join(',')+']}',
                         answer: '\\select{'+$scope.answer+'}{['+$scope.optionsarray.join(',')+']}',
                         label: $scope.label
-                    };
+                    },
+                                
+                        badAnswer = function () {
+                            data.result = 'incorrect';
+                            $scope.class = 'error';
+                            $timeout(function () {
+                                $scope.answer = "";
+                                $scope.class = '';
+                            }, 900);
+                        };
 
                     if (Array.isArray($scope.answercorrect)){
                         data.answer = '\\select{"'+$scope.answer+'"}{["'+$scope.optionsarray.join('","')+'"]}';
@@ -72,18 +82,14 @@ angular.module('mathSkills')
                                 data.expected = data.answer;
                                 $scope.class = 'success';
                             } else {
-                                data.result = 'incorrect';
                                 data.expected = '\\select{"'+$scope.answercorrect[correctAnswerIndex]+'"}{["'+$scope.optionsarray.join('","')+'"]}';
-                                $scope.class = 'error';
-                                $scope.answer = "";
+                                badAnswer();
                             }
                             $scope.$emit('answer', data);
                         } else {
                             problemData.getIndex().then(function (index){
-                                data.result = 'incorrect';
                                 data.expected = '\\select{"'+$scope.answercorrect[index]+'"}{["'+$scope.optionsarray.join('","')+'"]}';
-                                $scope.class = 'error';
-                                $scope.answer = "";
+                                badAnswer();
                                 $scope.$emit('answer', data);
                             });
                         }
@@ -93,9 +99,7 @@ angular.module('mathSkills')
                             data.result = 'correct';
                             $scope.class = 'success';
                         } else {
-                            data.result = 'incorrect';
-                            $scope.class = 'error';
-                            $scope.answer = '';
+                            badAnswer();
                         }
                         $scope.$emit('answer', data);
                     }
