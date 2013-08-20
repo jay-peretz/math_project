@@ -184,7 +184,11 @@ angular.module('mathSkills')
                                     var gotBoth = function () {
 
                                         if(numAnswer !== '' && denAnswer !== ''){ console.log('got both');
-                                            if (numAnswer.result === 'correct' && denAnswer.result === 'correct') { //console.log('both correct');
+                                            if (numAnswer.result === 'correct' 
+                                                    && denAnswer.result === 'correct' 
+                                                    && parser.extractTag(parser.extractTag(numAnswer.answer).args[0]).args[0].length > 0
+                                                    && parser.extractTag(parser.extractTag(denAnswer.answer).args[parser.extractTag(dataIn.answer).args.length - 1]).args[0].length > 0
+                                                ) { console.log('both correct');
                                                 problemData.getData(num).arr.splice(0, 1);
                                                 problemData.getData(den).arr.splice(0, 1);
                                                 problemData.getData(num).arr.splice(0, 0, parser.extractTag(parser.extractTag(numAnswer.answer).args[0]).args[0]);
