@@ -9,7 +9,8 @@ angular.module('mathSkills')
     }])
     .directive('msBtn', [
         'parser',
-        function (parser) {
+        '$timeout',
+        function (parser, $timeout) {
             return {
                 controller: function ($scope, $element) {
                     $scope.controllerId = Math.random().toString();
@@ -75,6 +76,11 @@ angular.module('mathSkills')
                                 $scope.$emit('notHelped', {
                                     controllerId: $scope.controllerId
                                 });
+                                $timeout(function () {
+                                    $scope.class = '';
+                                    jQuery($element).find('button').trigger('click');
+                                    //$scope.$digest();
+                                }, 900);
                                 
                             } else {
                                 $scope.class = '';
