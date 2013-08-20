@@ -54,7 +54,7 @@ angular.module('mathSkills')
                         directiveUtils.aggregateChildAnswers($scope);
                         directiveUtils.routeFocus($scope);
                         directiveUtils.routeHelp($scope);
-                        directiveUtils.size($scope);
+                        //directiveUtils.size($scope);
                     }
                 ],
                 scope: {

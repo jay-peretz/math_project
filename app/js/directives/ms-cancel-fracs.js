@@ -159,11 +159,11 @@ angular.module('mathSkills')
                                         
                                         problemData.addData('input', 'stage');
                                         $scope.$broadcast('correct', num, den);
-                                        $scope.instructions = 'ins{Enter the result of cancelling the selected numerator and denominator.}';
                                         $timeout(function () {
+                                            $scope.instructions = 'ins{Enter the result of cancelling the selected numerator and denominator.}';
                                             update();
                                             $scope.$apply();
-                                        }, 500);
+                                        }, 200);
 
                                     } else {
                                         $scope.$broadcast('noComm', num, den);
@@ -184,18 +184,18 @@ angular.module('mathSkills')
                                     var gotBoth = function () {
 
                                         if(numAnswer !== '' && denAnswer !== ''){ console.log('got both');
-                                            if (numAnswer.result === 'correct' && denAnswer.result === 'correct') { console.log('both correct');
+                                            if (numAnswer.result === 'correct' && denAnswer.result === 'correct') { //console.log('both correct');
                                                 problemData.getData(num).arr.splice(0, 1);
                                                 problemData.getData(den).arr.splice(0, 1);
                                                 problemData.getData(num).arr.splice(0, 0, parser.extractTag(parser.extractTag(numAnswer.answer).args[0]).args[0]);
                                                 problemData.getData(den).arr.splice(0, 0, parser.extractTag(parser.extractTag(denAnswer.answer).args[parser.extractTag(dataIn.answer).args.length - 1]).args[0]);
                                                 setAll('str');
                                                 problemData.addData('cancellable', 'stage');
-                                                buildButtons();
                                                 numAnswer = '';
                                                 denAnswer = '';
-                                                $scope.instructions = 'ins{Can you cancel again?<br>}';
                                                 $timeout(function () {
+                                                    $scope.instructions = 'ins{Can you cancel again?<br>}';
+                                                    buildButtons();
                                                     update();
                                                 }, 900);
                                             } else { console.log('wrong answer');
@@ -205,11 +205,11 @@ angular.module('mathSkills')
                                         }
                                     };
 
-                                    if(problemData.getData('stage') === 'input' && dataIn.label === num){ console.log('we have num match');
+                                    if(problemData.getData('stage') === 'input' && dataIn.label === num){ //console.log('we have num match');
                                         numAnswer = dataIn;
                                         gotBoth(); 
                                     }
-                                    if(problemData.getData('stage') === 'input' && dataIn.label === den){ console.log('we have den match');
+                                    if(problemData.getData('stage') === 'input' && dataIn.label === den){ //console.log('we have den match');
                                         denAnswer = dataIn;
                                         gotBoth(); 
                                     }
@@ -218,10 +218,9 @@ angular.module('mathSkills')
                                     // console.log('den ', den,'\n');
                                 }
 
-                                if(problemData.getData('stage') === 'cancellable' && dataIn.label === 'buttons' && dataIn.result === 'correct' && dataIn.expected !== "\\str{}"){ console.log('running cancellable');
+                                if(problemData.getData('stage') === 'cancellable' && dataIn.label === 'buttons' && dataIn.result === 'correct' && dataIn.expected !== "\\str{}"){ //console.log('running cancellable');
     
-                                    if(isCancellable($scope.children)){ console.log('running is cancellable');
-                                        $scope.buttons = '\\str{}';
+                                    if(isCancellable($scope.children)){ //console.log('running is cancellable');
                                         setAll('btn');
                                         problemData.addData('btn', 'stage');
                                         problemData.addData(false, 'nLock');
@@ -233,9 +232,10 @@ angular.module('mathSkills')
                                         den = ''; 
                                         problemData.addData(cancellable($scope.children), 'comFac');
                                         $timeout(function () {
+                                            $scope.buttons = '\\str{}';
                                             update();
                                         }, 900);
-                                    } else { console.log('running isNot cancellable');
+                                    } else { //console.log('running isNot cancellable');
                                         $scope.$emit('answer', {
                                             lable: 'cancel',
                                             result: 'correct',
@@ -249,7 +249,7 @@ angular.module('mathSkills')
                         directiveUtils.aggregateChildAnswers($scope);
                         directiveUtils.routeFocus($scope);
                         directiveUtils.routeHelp($scope);
-                        directiveUtils.size($scope);
+                        //directiveUtils.size($scope);
                     }
                 ],
                 scope: {

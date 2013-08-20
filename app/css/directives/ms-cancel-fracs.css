@@ -40,6 +40,10 @@ ms-cancel-element td{
     margin:0;
 }
 
+ms-cancel-element input{
+    width:32px;
+}
+
 ms-cancel-element table{
     margin:0 auto;
     text-align:center;
