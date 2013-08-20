@@ -40,6 +40,10 @@ angular.module('mathSkills')
                                 } else {
                                     data.result = 'incorrect';
                                     $scope.class = 'danger';
+                                    $timeout(function () {
+                                        $scope.answer = "";
+                                        $scope.class = '';
+                                    }, 900);
                                 }
                                 data.clicked = true;
                             }else{
