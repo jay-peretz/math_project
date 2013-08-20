@@ -1,0 +1,61 @@
+ms-cancel-fracs {
+    margin: 0 0px 40px 5px;
+}
+ 
+ms-cancel-element ms-string {
+   text-decoration: line-through; 
+   color:#3357E7;
+}
+
+ms-cancel-element .control-group,
+ms-cancel-element label {
+    margin: 0;
+    padding: 0;
+}
+ 
+/*.animate-enter {*/
+/*    -webkit-transition: 3s linear all;*/
+/*    -moz-transition: 3s linear all;*/
+/*    -o-transition: 3s linear all;*/
+/*	transition: 3s linear all;*/
+/*	opacity: 0;*/
+/*}*/
+ 
+/*.animate-enter.animate-enter-active {*/
+/*	opacity: 1;*/
+/*}*/
+
+.msCancelHr {
+    border-color: transparent transparent #515151 transparent;
+    height:1px;
+    padding: 0 4px;
+	margin: 0;
+}
+.msCancelSign {
+    padding: 0 4px;
+}
+
+ms-cancel-element td{
+    min-width:40px;
+    margin:0;
+}
+
+ms-cancel-element table{
+    margin:0 auto;
+    text-align:center;
+    xmargin: 0 0px 40px 5px;
+}
+
+ms-cancel-fracs .num{
+    vertical-align: bottom;
+}
+
+ms-cancel-fracs .den{
+    vertical-align: top;
+}
+
+
+
+ms-cancel-element tr td{
+    text-align:center;
+} 

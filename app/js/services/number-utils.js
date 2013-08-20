@@ -135,6 +135,44 @@ angular.module('mathSkills.services')
                             }
                             return factors;
                         }, []);
+                },
+ 
+// Justin's cancel fraction metods............................
+
+                getFactors : function (num) {
+                    var arr = [];
+                    for (var i = 2; i <= num; ++i) {
+                        if (num % i === 0) {
+                            arr.push(i.toString());
+                        }
+                    }
+                    return arr;
+                },
+
+                getCommonFactors : function (arr1, arr2) {
+                    var arr = arr1.filter(function (val){
+                        return (arr2.indexOf(val) !== -1);
+                    });
+                    return arr;
+                },
+
+                divFactors : function (num, arr) {
+                    var divArr = arr.map(function (i){
+                        return (num / i).toString();
+                    });
+                    return divArr;
+                },
+
+                getFactoredInput : function (num1, num2) {
+                    var arr = this.getCommonFactors(this.getFactors(num1), this.getFactors(num2));
+                    return [this.divFactors(num1, arr), this.divFactors(num2, arr)];
+                },
+
+                uniqueArr : function (arr) {
+                    var unique=arr.filter(function(itm,i,a){
+                        return i==a.indexOf(itm);
+                    });
+                    return unique;
                 }
             };
 

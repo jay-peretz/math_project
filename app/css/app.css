@@ -1,6 +1,7 @@
 @import 'directives/add-subtract-multiply.css';
 @import 'directives/general.css';
 @import 'directives/ms-button.css';
+@import 'directives/ms-cancel-fracs.css';
 @import 'directives/ms-chart.css';
 @import 'directives/ms-div-wholes.css';
 @import 'directives/ms-equiv.css';
@@ -20,6 +21,7 @@
 @import 'directives/ms-prime-factorization.css';
 @import 'directives/ms-problem-pager.css';
 @import 'directives/ms-breadcrumbs.css';
+
 
 
 /* app css stylesheet */

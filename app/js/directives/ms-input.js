@@ -61,7 +61,16 @@ angular.module('mathSkills')
                                 expected: '\\input{' + parsedExpected + '}',
                                 answer: '\\input{' + $scope.answer + '}',
                                 label: $scope.label
-                            };
+                                },
+                                
+                                badAnswer = function () {
+                                    data.result = 'incorrect';
+                                    $scope.class = 'error';
+                                    $timeout(function () {
+                                        $scope.answer = "";
+                                        $scope.class = '';
+                                    }, 900);
+                                };
 
                             if (parsedExpected[0] === '[') {
                                 var possibleAnswers = JSON.parse(parsedExpected).map(String);
@@ -73,18 +82,14 @@ angular.module('mathSkills')
                                         data.expected = data.answer;
                                         $scope.class = 'success';
                                     } else {
-                                        data.result = 'incorrect';
                                         data.expected = '\\input{' + possibleAnswers[correctAnswerIndex] + '}';
-                                        $scope.class = 'error';
-                                        $scope.answer = "";
+                                        badAnswer();
                                     }
                                     $scope.$emit('answer', data);
                                 } else {
                                     problemData.getIndex().then(function (index){
-                                        data.result = 'incorrect';
                                         data.expected = '\\input{' + possibleAnswers[index] + '}';
-                                        $scope.class = 'error';
-                                        $scope.answer = "";
+                                        badAnswer();
                                         $scope.$emit('answer', data);
                                     });
                                 }
@@ -93,9 +98,7 @@ angular.module('mathSkills')
                                     data.result = 'correct';
                                     $scope.class = 'success';
                                 } else {
-                                    data.result = 'incorrect';
-                                    $scope.class = 'error';
-                                    $scope.answer = '';
+                                    badAnswer();
                                 }
                                 $scope.$emit('answer', data);
                             }
@@ -147,7 +150,7 @@ angular.module('mathSkills')
                                 if ($scope.myargs[0][0] === '[') {
                                     var possibleAnswers = JSON.parse($scope.myargs[0]);
                                     problemData.getIndex().then(function (index) {
-                                        $scope.answer = possibleAnswers[index];
+                                        $scope.answer = possibleAnswers[index].toString();
                                     });
                                 } else {
                                     // Strip out the tag part of $scope.expected and extract the value.

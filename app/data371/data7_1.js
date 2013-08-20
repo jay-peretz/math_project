@@ -15,7 +15,7 @@ angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtil
                         problem: '\\grp'
 						+'{\\html{Solve &nbsp;}}'
 						+'{\\frac{\\str{$n1}}{\\str{$d1}}}'
-						+'{\\sign{&sdot;}}'
+						+'{\\sign{&times;}}'
 						+'{\\frac{\\str{$n2}}{\\str{$d2}}}',
                         answer: '\\frac{\\input{$na}}{\\input{$da}}',
                         controls: {
@@ -27,18 +27,21 @@ angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtil
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\rowgrp'+
-                                '{\\str{Reduce the fractions by canceling.}}' 
-								+'{\\html{&nbsp;}}'
-                                +'{\\grp{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&sdot;}}{\\frac{\\str{$n2}}{\\str{$d2}}}}',
-                        answer: '\\cancelfracs{[$n1,$d1]}{[$n2,$d2]}',
+                        problem: '\\rowgrp{'
+                                    +'\\str{Reduce the fractions by canceling.}' 
+								+'}{'+
+                                    '\\html{&nbsp;}'+
+                                '}{'
+                                +'\\grp{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}'+
+                                '}',
+                        answer: '\\canfrac{[$n1,$d1]}{[$n2,$d2]}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\str{Multiply the fractions together.}',
-                        answer: '\\multiplyfracs{\\frac{\\str{$$n1}}{\\str{$$d1}}}{\\frac{\\str{$$n2}}{\\str{$$d2}}}',
+                        answer: '\\multiplyfracs{\\frac{\\str{$n1}}{\\str{$d1}}}{\\frac{\\str{$n2}}{\\str{$d2}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -54,7 +57,7 @@ angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtil
                         problem: '\\rowgrp'
 						+'{\\html{Solve:}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&sdot;}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\sign{&sdot;}}{\\frac{\\str{$n3}}{\\str{$d3}}}}',
+						+'{\\grp{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\sign{&times;}}{\\frac{\\str{$n3}}{\\str{$d3}}}}',
                         answer: '\\frac{\\input{$na}}{\\input{$da}}',
                         controls: {
                             "checkAnswer": true,
@@ -68,15 +71,15 @@ angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtil
                         problem: '\\rowgrp'
                                 +'{\\str{Reduce the fractions by canceling.}}' 
 								+'{\\html{&nbsp;}}'
-                                +'{\\grp{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&sdot;}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\sign{&sdot;}}{\\frac{\\str{$n3}}{\\str{$d3}}}}',
-                        answer: '\\cancelfracs{[$n1,$d1]}{[$n2,$d2]}{[$n3,$d3]}',
+                                +'{\\grp{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\sign{&times;}}{\\frac{\\str{$n3}}{\\str{$d3}}}}',
+                        answer: '\\canfrac{[$n1,$d1]}{[$n2,$d2]}{[$n3,$d3]}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\str{Multiply the fractions together.}',
-                        answer: '\\multiplyfracs{\\frac{\\str{$$n1}}{\\str{$$d1}}}{\\frac{\\str{$$n2}}{\\str{$$d2}}}{\\frac{\\str{$$n3}}{\\str{$$d3}}}',
+                        answer: '\\multiplyfracs{\\frac{\\str{$n1}}{\\str{$d1}}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\frac{\\str{$n3}}{\\str{$d3}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true

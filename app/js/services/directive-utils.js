@@ -240,6 +240,7 @@ angular.module('mathSkills.services')
                     });
                 },
 
+                //resize
                 size: function ($scope) {
                     $scope.$on('size', function(e, data, id, type) {
 
@@ -260,19 +261,33 @@ angular.module('mathSkills.services')
                     });
 
                     $scope.$watch('expected', function () {
-                        if($scope.expected) {
+                        if($scope.expected) { 
                             var mysize = type === 'select' && getSize(arr, pix, pad) < 110 ? 110 :getSize(arr, pix, pad);
-                            $scope.$emit('size', {size: mysize}, $scope.controllerId, type);
+                            $scope.$emit('size', {size: mysize}, $scope.controllerId, type); 
                         }
                     });
 
                     function getSize(arr, pix, pad) {
                         var size= arr.reduce(function (a, b) {
-                            return a > b.length ? a : b.length;
-                        }, 0);
+                            return a > b.toString().length ? a : b.toString().length; 
+                        }, 1);
                         return (+size * pix) + pad;
                     }
+                },
+ 
+                // stringify  array
+                preProcess : function (arr){
+                    arr = arr.map(function(sub){
+                        sub = sub
+                            .replace(new RegExp('\\[', 'g'),'["')
+                            .replace(new RegExp(',', 'g'),'","')
+                            .replace(new RegExp(']', 'g'),'"]'); 
+                        sub = JSON.parse(sub);
+                        return sub;
+                    });
+                    return arr;
                 }
+                
             };
         }
     ]);
