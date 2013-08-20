@@ -17,6 +17,13 @@
         width: 10px;
         text-align: center;
     }
+	ms-long-division-decimal .digitblank {
+        display: inline-block;
+        margin: 2px;
+        padding: 5px;
+        width: 10px;
+        text-align: center;
+    }
     ms-long-division-decimal .digit.placeholder, ms-long-division-decimal .digit.minus {
         width: 10px;
         background: transparent;
@@ -71,6 +78,12 @@
     ms-long-division-decimal ms-input.wide5 input {
         width: 100px;
     }
+	ms-long-division-decimal .displayInline {
+		display: inline;
+	}
+	ms-long-division-decimal .displayNone {
+		display: none;
+	}
 </style>
 <div class="alert alert-info">{{instructions}}</div>
 <div ng-switch on=complete>
@@ -78,6 +91,18 @@
         <ms-expression expected={{finalAnswer}} label=finalAnswer></ms-expression>
     </span>
 </div>
+<table class=table-collapse-separate>
+	<tr ng-repeat="row in narrowDisplayArray" ng-class="getRow($index)">
+        <td ng-repeat="col in row">
+        	<span ng-bind-html-unsafe="col | stylecharacter"></span>
+        </td>
+        <td ng-class="carryFlag()">
+                <span>
+                    <ms-input expected="{{currentStep.carry | wrap:'input'}}" class=digit></ms-input>
+                </span>
+        </td>
+    </tr>
+</table>
 <table class=table-collapse-separate>
     <tr>
         <td></td>

@@ -77,7 +77,7 @@ angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUti
 	// integer answers must have no commas in the "answer" variable- commas in the "helpAnswer" variable
 	data = [
 		{ firstQuestion: 'How many times does 4 go into 9204.8?<br><br>Set up the division problem by placing the dividend and the divisor in the proper places.', dividend: '9204.8', divisor: '4', answer: '2301.2', template: 'setup' },
-		{ firstQuestion: 'Find the quotient of 6744.2 and 4.2<br>(round the answer to the $$roundTo place):', secondQuestion: 'Place the dividend and divisor in the proper places for the problem "6744.2 divided by 4.2"', dividend: '6744.2', divisor: '4.2', extendedDividend: '6744.200', digitsRightInExponential: "6", roundTo: 'tenths', answer: '1605.8', firstDigit: '6', secondDigit: '7', thirdDigit: '4', fourthDigit: '4', fifthDigit: '2', template: 'division' },
+		{ firstQuestion: 'Find the quotient of 6744.2 and 4.2<br>(round the answer to the $$roundTo place):', secondQuestion: 'Place the dividend and divisor in the proper places for the problem "6744.2 divided by 4.2"', dividend: '6744.2', divisor: '4.2', extendedDividend: '6744.200', digitsRightInExponential: "5", roundTo: 'hundredths', answer: '1605.76', firstDigit: '6', secondDigit: '7', thirdDigit: '4', fourthDigit: '4', fifthDigit: '2', template: 'division' },
    ];
 
     return dataUtils.build(desc, template, data);

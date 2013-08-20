@@ -17,14 +17,18 @@ angular.module('mathSkills')
     .directive('msLongDivisionDecimal', [
         'parser',
         function (parser) {
-            var getDivisionStep = function (dividend, divisor, dividendArr, poppedArr, steps) {
+            var getDivisionStep = function (dividend, divisor, centralArray, dividendArr, poppedArr, steps) {
                 var curDividend = '',
                     dividendPiece,
-                    quotient;
+                    quotient, 
+					returnObject;
                 
                 if (steps.length > 0) {
                     curDividend = steps[steps.length - 1].difference;
                     dividendPiece = dividendArr.shift();
+					if (dividendPiece.toString().slice(-1) === ".") {
+						dividendPiece = dividendArr.shift();
+					}
                     curDividend += dividendPiece;
                     poppedArr.push(dividendPiece);
                 } else {
@@ -37,7 +41,22 @@ angular.module('mathSkills')
                 
                 dividend = +curDividend;
                 quotient = Math.floor(dividend / divisor);
-                return {
+
+				for (var ii = 0, len = centralArray[0].length; ii < len; ii += 1) {
+					switch (true) {
+						case (ii < (poppedArr.length - dividend.toString().length)):
+						  centralArray[steps.length][ii] = "";
+						  break;
+						case (ii > (poppedArr.length - dividend.toString().length) - 1 && ii < poppedArr.length):							
+						  centralArray[steps.length][ii] = dividend.toString().charAt(ii - (poppedArr.length - dividend.toString().length));
+						  break;
+						case (ii > poppedArr.length - 1):
+						  centralArray[steps.length][ii] = "";
+						  break;
+					}
+				}
+	
+				returnObject = {
                     type: 'division',
                     dividend: dividend,
                     divisor: divisor,
@@ -45,13 +64,29 @@ angular.module('mathSkills')
                     offset: steps.length === 0 ? poppedArr.length - 1 : undefined,
                     instructions: 'Divide ' +  dividend + ' by ' + divisor + '.'
                 };
+				return returnObject;
             },
-            getMultiplicationStep = function (dividend, divisor, dividendArr, poppedArr, steps) {
+            getMultiplicationStep = function (dividend, divisor, centralArray, dividendArr, poppedArr, steps) {
                 var multiplicand1 = divisor,
                     multiplicand2 = steps[steps.length - 1].quotient,
-                    product = multiplicand1 * multiplicand2;
-                
-                return {
+                    product = multiplicand1 * multiplicand2,
+					returnObject;
+				
+				for (var ii = 0, len = centralArray[0].length; ii < len; ii += 1) {
+					switch (true) {
+						case (ii < (poppedArr.length - product.toString().length)):
+						  centralArray[steps.length][ii] = "";
+						  break;
+						case (ii > (poppedArr.length - product.toString().length) - 1 && ii < poppedArr.length ):							
+						  centralArray[steps.length][ii] = product.toString().charAt(ii - (poppedArr.length - product.toString().length));
+						  break;
+						case (ii > poppedArr.length - - 1):
+						  centralArray[steps.length][ii] = "";
+						  break;
+					}
+				}
+				
+                returnObject = {
                     type: 'multiplication',
                     multiplicand1: multiplicand1,
                     multiplicand2: multiplicand2,
@@ -59,13 +94,31 @@ angular.module('mathSkills')
                     offset: poppedArr.length - product.toString().length,
                     instructions: 'Multiply ' +  multiplicand1 + ' by ' + multiplicand2 + '.'
                 };
+				
+				return returnObject;
+				
             },
-            getSubtractionStep = function (dividend, divisor, dividendArr, poppedArr, steps) {
+            getSubtractionStep = function (dividend, divisor, centralArray, dividendArr, poppedArr, steps) {
                 var minuend = steps[steps.length - 2].dividend,
                     subtrahend = steps[steps.length - 1].product,
-                    difference = minuend - subtrahend;
-                
-                return {
+                    difference = minuend - subtrahend,
+					returnObject;
+
+				for (var ii = 0, len = centralArray[0].length; ii < len; ii += 1) {
+					switch (true) {
+						case (ii < (poppedArr.length - difference.toString().length)):
+						  centralArray[steps.length][ii] = "";
+						  break;
+						case (ii > (poppedArr.length - difference.toString().length) - 1 && ii < poppedArr.length):							
+						  centralArray[steps.length][ii] = difference.toString().charAt(ii - (poppedArr.length - difference.toString().length));
+						  break;
+						case (ii > (poppedArr.length - difference.toString().length) + difference.toString().length - 1):
+						  centralArray[steps.length][ii] = "";
+						  break;
+					}
+				}
+				
+                returnObject = {
                     type: 'subtraction',
                     minuend: minuend,
                     subtrahend: subtrahend,
@@ -73,22 +126,26 @@ angular.module('mathSkills')
                     offset: poppedArr.length - difference.toString().length,
                     instructions: 'Subtract ' +  subtrahend + ' from ' + minuend + '.'
                 };
+				
+				return returnObject;
             },
-            getLongDivisionSteps = function (dividend, divisor) {
+            getLongDivisionSteps = function (dividend, divisor, centralArray) {
                 var steps = [],
                     dividendArr = dividend.toString().split(''),
                     poppedArr = [];
                 
                 while (dividendArr.length > 0) {
-                    steps.push(getDivisionStep(dividend, divisor, dividendArr, poppedArr, steps));
-                    steps.push(getMultiplicationStep(dividend, divisor, dividendArr, poppedArr, steps));
-                    steps.push(getSubtractionStep(dividend, divisor, dividendArr, poppedArr, steps));
+                    steps.push(getDivisionStep(dividend, divisor, centralArray, dividendArr, poppedArr, steps));
+                    steps.push(getMultiplicationStep(dividend, divisor, centralArray, dividendArr, poppedArr, steps));
+                    steps.push(getSubtractionStep(dividend, divisor, centralArray, dividendArr, poppedArr, steps));
                 }
                 
+				//console.log("JSON.stringify(centralArray) is: ",JSON.stringify(centralArray));
+				
                 if (steps.length > 0) {
                     steps.quotientOffset = steps[0].offset;
                 }
-                
+          		steps.centralArray = centralArray;
                 return steps;
             };
 
@@ -100,6 +157,16 @@ angular.module('mathSkills')
                     function ($scope, $timeout, $filter) {
                         var steps,
 							answer,
+							digitsRightInExpPlusOne,
+							answerPlusOne,
+							remainder,
+							completedArrayCounter = 0,
+							positionFirstDigit,
+							completedArrayMinusLast,
+							lastDigitPosition = 0,
+							numberDigit,
+							completedArrayLength,
+							getRowCurrent,
                             changeStep = function () {
                                 $scope.currentStep = steps.shift();
                                 if ($scope.currentStep !== undefined) {
@@ -108,13 +175,55 @@ angular.module('mathSkills')
                                     $scope.instructions = 'Great Job!  Enter the complete quotient and remainder below.';
                                     $scope.complete = true;
                                 }
+								completedArrayMinusLast = $scope.completedArray.slice();
+								completedArrayMinusLast.pop();
+								// determine the position of the ones digit, last row of completedArrayMinusLast 
+								numberDigit = false;
+								if (typeof completedArrayMinusLast[0] !== "undefined") {
+									completedArrayLength = completedArrayMinusLast[0].length;
+									for (var ii = 0, minusLastLength = completedArrayMinusLast.length; ii < completedArrayLength; ii += 1) {
+										switch (true) {
+											case (completedArrayMinusLast[minusLastLength - 1][ii] === "" && numberDigit === false):
+												if (lastDigitPosition < ii) {
+													lastDigitPosition = ii;
+												}
+												break;
+											case (completedArrayMinusLast[minusLastLength - 1][ii] !== "" && numberDigit === false):
+												if (lastDigitPosition < ii) {
+													lastDigitPosition = ii;
+												}
+												numberDigit = true;
+												break;
+											case (completedArrayMinusLast[minusLastLength - 1][ii] !== "" && numberDigit === true):
+												if (lastDigitPosition < ii) {
+													lastDigitPosition = ii;
+												}
+												break;
+										}
+									}
+								}
+								// $scope.narrowDisplayArray, each element lastDigitPosition + 1 length
+								if (typeof completedArrayMinusLast[0] !== "undefined") {
+									$scope.narrowDisplayArray = [];
+									for (var ii = 0, lenRows = completedArrayMinusLast.length; ii < lenRows; ii += 1) {
+										$scope.narrowDisplayArray[ii] = []
+										for (var jj = 0, lenColumns = lastDigitPosition + 1; jj < lenColumns; jj += 1) {
+											$scope.narrowDisplayArray[ii][jj] =completedArrayMinusLast[ii][jj];
+										}
+									}
+								}
+								
                                 $timeout(function () {
                                     $scope.$broadcast('checkFocus');
                                 }, 0);
                             },
                             addDownArrows = function () {
                                 $scope.completedSteps.slice(0, -1).forEach(function (step) {
-                                    step.value += '↓';
+                                    if (integerDigits($scope.dividend) !== step.value.toString().length + step.offset) {
+                                    	step.value += '↓';
+									} else {
+										step.value += 'x';
+									}
                                 });
                             },
 							decimalDigits = function (num) {
@@ -131,18 +240,19 @@ angular.module('mathSkills')
 									return num.toString().length;
 								}
 							},
+							trim = function(str) {
+									return str.replace(/^\s+|\s+$/g,"");
+							},
 							moveDividendDecimal = function(dividend, divisor) {
 								var newDividend;
 								if (decimalDigits(dividend) >= decimalDigits(divisor)) {
 									newDividend = dividend.slice(0,integerDigits(dividend)) + dividend.substr(integerDigits(dividend) + 1, decimalDigits(divisor))+"."+ dividend.slice(integerDigits(dividend) + decimalDigits(divisor) + 1);
-									console.log("decimalDigits(dividend) >= decimalDigits(divisor), newDividend is: ",newDividend);
 									return newDividend;
 								} else {
 									for (var ii = 0, len = decimalDigits(divisor) - decimalDigits(dividend); ii < len; ii += 1) {
 										dividend = dividend + "0";
 									}
 									newDividend = dividend.slice(0,integerDigits(dividend)) + dividend.substr(integerDigits(dividend) + 1, decimalDigits(divisor))+"."+ dividend.slice(integerDigits(dividend) + decimalDigits(divisor) + 1);
-									console.log("decimalDigits(dividend) < decimalDigits(divisor), newDividend is: ",newDividend);
 									return newDividend;
 								}
 							};
@@ -156,14 +266,27 @@ angular.module('mathSkills')
                         $scope.$watch('divisor', function () {
                             if ($scope.dividend && $scope.divisor) {
 								answer = $filter('divide-decimals')($scope.dividend, $scope.divisor, $scope.digitsRightInExponential);
-								console.log("answer is: ",answer);
+								digitsRightInExpPlusOne = Number($scope.digitsRightInExponential) + 1;
+								answerPlusOne = $filter('divide-decimals')($scope.dividend, $scope.divisor, digitsRightInExpPlusOne);
+								remainder = answerPlusOne.toString().substr(-1);
+								$scope.centralArray = new Array(answer.length * 3);
+								$scope.completedArray = [];
+								for (var ii = 0, len = $scope.centralArray.length; ii < len; ii += 1) {
+									$scope.centralArray[ii] = Array.apply(null, new Array($scope.centralArray.length)).map(function () {return "";});
+								}
 								$scope.dividend = moveDividendDecimal($scope.dividend, $scope.divisor);
 								$scope.divisor = $scope.divisor.replace(".","");
-								console.log("$scope.dividend is: ",$scope.dividend," $scope.divisor is: ",$scope.divisor);
-                                steps = getLongDivisionSteps($scope.dividend, $scope.divisor);
+                                steps = getLongDivisionSteps($scope.dividend, $scope.divisor, $scope.centralArray);
+								$scope.centralArray = steps.centralArray;
+								// remove first step entry, for steps completed display
+								$scope.centralArray.shift();
+								for (var ii = 0, len = $scope.centralArray.length; ii < len; ii += 1) {
+									$scope.centralArray[ii].splice(integerDigits($scope.dividend),0,"");
+								}
+								
                                 $scope.quotientOffset = steps.quotientOffset;
-                                $scope.finalAnswer = '\\grp{\\input{' + Math.floor($scope.dividend / $scope.divisor) +
-                                    '}}{\\str{quotient}}{\\input{' + ($scope.dividend % $scope.divisor) + '}}{\\str{remainder}}';
+                                 $scope.finalAnswer = '\\grp{\\input{' + answer +
+                                    '}}{\\str{quotient}}{\\input{' + remainder + '}}{\\str{remainder}}';
                                 changeStep();
                             }
                         });
@@ -186,10 +309,18 @@ angular.module('mathSkills')
                             e.stopPropagation();
 
                             if (data.result === 'correct') {
+								
                                 switch ($scope.currentStep.type) {
                                     case 'division':
-                                        $scope.quotientDone += $scope.currentStep.quotient;
-                                        changeStep();
+                                        if ($scope.quotientDone.length + 2	=== integerDigits($scope.dividend)) {
+                                        	$scope.quotientDone += $scope.currentStep.quotient + ".";
+										} else {
+											$scope.quotientDone += $scope.currentStep.quotient;
+										}
+                            
+										$scope.completedArray.push($scope.centralArray[completedArrayCounter]);
+										completedArrayCounter += 1;
+										changeStep();
                                         $scope.currentOffset = $scope.currentStep.offset;
                                         break;
                                     case 'multiplication':
@@ -221,18 +352,21 @@ angular.module('mathSkills')
                                             gutterMinus: gutterMinus
                                         });
                                         $scope.currentOffset = $scope.currentStep.offset;
+										$scope.completedArray.push($scope.centralArray[completedArrayCounter]);
+										completedArrayCounter += 1;
                                         changeStep();
                                         break;
                                     case 'subtraction':
                                         // Check if this is the last step.
+										//console.log("1 steps[0] is: ",steps[0]);
                                         if (steps.length === 0) {
                                             difference = +parser.extractTag(data.answer).args[0];
                                         } else {
                                             difference = +parser.extractTag(data.answer).args[0] === 0 ? '0' + steps[0].dividend : steps[0].dividend;
-                                        
-                                            // Get the last digit of the upcoming dividend to determine the carry.
+                                        	
+                                            // Get the last digit of the upcoming dividend to determine the carry.	
                                             var carry = steps[0].dividend.toString().slice(-1);
-                                            
+                                          
                                             // Add a carry step to the beginning of the step array.
                                             steps.unshift({
                                                 type: 'carry',
@@ -242,6 +376,16 @@ angular.module('mathSkills')
                                                 carry: carry,
                                                 instructions: 'Carry down a ' + carry + ' from the dividend.'
                                             });
+											
+											// if carry, remove last element of $scope.completedArray
+											/*if (Number(steps[0].leading + steps[0].carry) < $scope.divisor) {
+												$scope.completedArray.pop();
+											}*/
+											// if carry, set carryFlag = true for display with input
+											if (Number(steps[0].leading + steps[0].carry) < $scope.divisor) {
+												$scope.carryFlag = true;
+											}
+											
                                         }
                                         
                                         $scope.completedSteps.push({
@@ -250,6 +394,8 @@ angular.module('mathSkills')
                                             offset: $scope.currentStep.offset
                                         });
                                         
+										$scope.completedArray.push($scope.centralArray[completedArrayCounter]);
+										completedArrayCounter += 1;
                                         changeStep();
                                         
                                         if (steps.length > 0) {
@@ -297,6 +443,29 @@ angular.module('mathSkills')
                                     return 'wide' + $scope.completedSteps[$scope.completedSteps.length - 1].value.toString().length;
                             }
                         };
+						
+						$scope.getRow = function (rowIndex) {
+							getRowCurrent = rowIndex;
+							return "";
+						}
+						
+						$scope.carryFlag = function () {
+							if (typeof $scope.narrowDisplayArray.length - 1 !== "undefined") {
+								console.log("getRowCurrent is: ",getRowCurrent,"$scope.narrowDisplayArray.length - 1 is:  ",$scope.narrowDisplayArray.length - 1);
+								switch (true) {
+									case (getRowCurrent === $scope.narrowDisplayArray.length - 1):
+										return "displayInline";
+										break;
+									case (getRowCurrent !== $scope.narrowDisplayArray.length - 1):
+										return "displayNone";
+										break;
+									default:
+										return "";
+										break;
+								}
+							}
+						}
+						
                     }
                 ],
                 restrict: 'E',

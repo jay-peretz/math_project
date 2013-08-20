@@ -23,13 +23,19 @@ angular.module('mathSkills')
                             out += '</span>';
                         }
                         
-                        if (character === '↓') {
-                            out += '<span class="digit arrow">' + character + '</span>';
-                        } else if (character === '-') {
-                            out += '<span class="digit minus">' + character + '</span>';
-                        } else {
-                            out += '<span class=digit>' + character + '</span>';
-                        }
+                        switch (true) {
+							case (character === '↓'): 
+								out += '<span class="digit arrow">' + character + '</span>';
+								break;
+							case (character === '-'):
+								out += '<span class="digit minus">' + character + '</span>';
+								break;
+							case (character === 'x'):
+								out += '<span class="digitblank">\xA0</span>';
+								break;
+							default:
+								out += '<span class=digit>' + character + '</span>';
+						}
                     });
                     if (container === true) {
                         out += '</span>';
