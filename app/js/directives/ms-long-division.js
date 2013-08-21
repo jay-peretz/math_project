@@ -101,7 +101,11 @@ angular.module('mathSkills')
                                 if ($scope.currentStep !== undefined) {
                                     $scope.instructions = $scope.currentStep.instructions;
                                 } else {
-                                    $scope.instructions = 'Great Job!  Enter the complete quotient and remainder below.';
+									if ($scope.dividend % $scope.divisor !== 0) {
+                                    	$scope.instructions = 'Great Job!  Enter the complete quotient and remainder below.';
+									} else {
+										$scope.instructions = 'Great Job!  Enter the quotient below.';
+									}
                                     $scope.complete = true;
                                 }
                                 $timeout(function () {
@@ -124,8 +128,13 @@ angular.module('mathSkills')
                             if ($scope.dividend && $scope.divisor) {
                                 steps = getLongDivisionSteps($scope.dividend, $scope.divisor);
                                 $scope.quotientOffset = steps.quotientOffset;
-                                $scope.finalAnswer = '\\grp{\\input{' + Math.floor($scope.dividend / $scope.divisor) +
-                                    '}}{\\str{quotient}}{\\input{' + ($scope.dividend % $scope.divisor) + '}}{\\str{remainder}}';
+								if ($scope.dividend % $scope.divisor !== 0) {
+                                	$scope.finalAnswer = '\\grp{\\input{' + Math.floor($scope.dividend / $scope.divisor) +
+                                    '}}{\\str{quotient}}{\\input{' + ($scope.dividend % $scope.divisor) + '}}{\\str{remainder}}{\\html{<br><br><br>}}';
+								} else {
+									$scope.finalAnswer = '\\grp{\\input{' + Math.floor($scope.dividend / $scope.divisor) +
+                                    '}}{\\str{quotient}}{\\html{<br><br><br>}}';
+								}
                                 changeStep();
                             }
                         });
