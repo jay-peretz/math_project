@@ -2,8 +2,8 @@
 
 angular.module('mathSkills').service('data5_3', ['dataUtils', function (dataUtils) {
     var ret = {
-            title: '5.3 Using Divisibility Tests Using Divisibility Tests',
-            path: '5.3-using-divisibility-tests-using-divisibility-tests',
+            title: '5.3 Identifying Prime and Composite Numbers',
+            path: '5.3-identifying-prime-and-composite-numbers',
             children: []
         },
         template = {

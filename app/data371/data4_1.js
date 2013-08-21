@@ -51,7 +51,7 @@ angular.module('mathSkills').value('data4_1', {
                 answer: '\\input{400}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\html{Solution<br><br>229 310 342 458 661 728<br><br>Sort the numbers in ascending order. Then select the middle number. If there are two middle numbers, take their average. The average of 342 and 458 is 400.}'
+                    "help": '\\css{\\html{Solution<br><br>229 310 <span class=red>342 458</span> 661 728<br><br>Sort the numbers in ascending order. Then select the middle number. If there are two middle numbers, take their average. The average of 342 and 458 is 400.}}{help_4-1}'
                 }
             }]
         }]
@@ -77,7 +77,7 @@ angular.module('mathSkills').value('data4_1', {
                 answer: '\\input{375}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\html{Solution<br><br>118 333 417 690<br><br>Sort the numbers in ascending order. Then select the middle number. If there are two middle numbers, take their average. The average of 333 and 417 is 375.}'
+                    "help": '\\css{\\html{Solution<br><br>118 <span class=red>333 417</span> 690<br><br>Sort the numbers in ascending order. Then select the middle number. If there are two middle numbers, take their average. The average of 333 and 417 is 375.}}{help_4-1}'
                 }
             }]
         }]
@@ -129,7 +129,7 @@ angular.module('mathSkills').value('data4_1', {
                 answer: '\\input{425}',
                 controls: {
                     "checkAnswer": true,
-                    "help": '\\html{Solution<br><br>129 409 416 434 448 550<br><br>Sort the numbers in ascending order. Then select the middle number. If there are two middle numbers, take their average. The average of 416 and 434 is 425.}'
+                    "help": '\\css{\\html{Solution<br><br>129 409 <span class=red>416 434</span> 448 550<br><br>Sort the numbers in ascending order. Then select the middle number. If there are two middle numbers, take their average. The average of 416 and 434 is 425.}}{help_4-1}'
                 }
             }]
         }]
