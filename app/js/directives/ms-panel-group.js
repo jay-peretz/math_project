@@ -10,7 +10,8 @@ angular.module('mathSkills')
                     '$scope',
                     '$timeout',
                     '$rootScope',
-                    function ($scope, $timeout, $rootScope) {
+                    'problemData',
+                    function ($scope, $timeout, $rootScope, problemData) {
                         $scope.currentPanel = 0;
                         $scope.panelScopes = [];
                         $scope.navVisibility = 'visible';
@@ -39,16 +40,19 @@ angular.module('mathSkills')
                         });
                         $scope.updateCurrent = function (ii) {
                             $scope.currentPanel = ii;
+//($scope.currentPanel === $scope.panels.length - 1) ? $scope.$broadcast('answerBtn', 'Check Answer', false) :  $scope.$broadcast('answerBtn', true, false); // set Answer Button Text
+                            $scope.$broadcast('answerBtn', true, false); // set Answer Button Text
                             $scope.panelScopes[$scope.currentPanel].$broadcast('checkFocus');
                         };
 
                         // Listen for panelDone events.
-                        $scope.$on('panelDone', function () {
+                        $scope.$on('panelDone', function () { 
                             // If we have more panels to show, show the next.
                             if ($scope.currentPanel < $scope.panels.length - 1) {
                                 // After a 1 second delay.
                                 $timeout(function () {
                                     $scope.currentPanel += 1;
+//if ($scope.currentPanel === $scope.panels.length - 1) {$scope.$broadcast('answerBtn', 'Next Problem'); } // set Answer Button Text
                                     $scope.panelScopes[$scope.currentPanel].$broadcast('checkFocus');
                                 }, 1000);
                             // Otherwise $emit panelGroupDone
@@ -63,6 +67,12 @@ angular.module('mathSkills')
                             if (e.defaultPrevented === false) {
                                 e.preventDefault();
                                 $scope.panelScopes[$scope.currentPanel].$broadcast('checkFocus');
+                            }
+                        });
+
+                        $scope.$on('triggerCheckHelp', function (e, data) {
+                            if (problemData.getData('answerBtn') === 'noAnswer') {
+                                ($scope.currentPanel === $scope.panels.length - 1) ? $scope.$broadcast('answerBtn', 'noAnswerN', false) :  $scope.$broadcast('answerBtn', 'noAnswerC', false);  // set Answer Button Text
                             }
                         });
                     }

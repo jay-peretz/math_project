@@ -77,6 +77,10 @@ angular.module('mathSkills')
                             }
                         });
 
+                        $scope.$on('answerBtn', function (e, data, flag) {
+                            $scope.$broadcast('setAnswerBtn', data, flag);
+                        });
+
                         $timeout(function () {
                             triggerAnswerAreaEvent('checkFocus');
                         }, 0);

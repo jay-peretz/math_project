@@ -7,15 +7,39 @@ angular.module('mathSkills')
             return {
                 controller: [
                     '$scope',
-                    function ($scope) {
-                        $scope.answerButtonText = 'Check Answer';
+                    'problemData',
+                    function ($scope, problemData) {
+
+                        var anwserbtn = function (data) { //console.log('data', data); 
+                                if (typeof data === 'boolean') { 
+                                    (data === false) ? $scope.hasCheckAnswer = false : ckeckAnswerBtn();
+                                } else { 
+                                    if (data === 'noAnswer'){
+                                        $scope.hasCheckAnswer = false;
+                                    } else {
+                                        if (data === 'noAnswerN' || data === 'noAnswerC'){ //console.log('data running', data); 
+                                            $scope.answerButtonText = (data === 'noAnswerN') ? 'Next Problem': 'Next Step';
+                                            $scope.hasCheckAnswer = true;
+                                            
+                                        } else {
+                                            $scope.answerButtonText = data;
+                                        }
+                                    }
+                                }
+                            },
+                            ckeckAnswerBtn = function () {
+                                (problemData.getData('answerBtn') === undefined) ? $scope.answerButtonText = 'Check Answer' : anwserbtn(problemData.getData('answerBtn'));
+                            };
 
                         $scope.$watch('data', function () {
+//console.log('answerBtn', problemData.getData('answerBtn')); 
+                            ckeckAnswerBtn();
+
                             // If we haven't parsed $scope.data into an object.
                             if (typeof $scope.data === 'string') {
 
                                 // Parse it.
-                                $scope.data = JSON.parse($scope.data);
+                                $scope.data = JSON.parse($scope.data); 
 
                                 // Setup the hasHelp variable which shows/hides the help button.
                                 $scope.hasHelp = $scope.data.help;
@@ -24,7 +48,7 @@ angular.module('mathSkills')
                                 if ($scope.hasHelp === true) {
                                     $scope.help = function () {
                                         // Change 'Check Answer' button text to 'Next Problem'.
-                                        $scope.answerButtonText = 'Next Problem';
+//$scope.answerButtonText = 'Next Problem';
                                         $scope.$emit('triggerCheckHelp');
                                     };
                                 } else {
@@ -61,6 +85,13 @@ angular.module('mathSkills')
                                         $scope.$emit('triggerCheckAnswer');
                                     };
                                 }
+                            }
+                        });
+
+                        $scope.$on('setAnswerBtn', function (e, data, flag) {
+                            anwserbtn(data);
+                            if(flag !== false) {
+                                $scope.$apply();
                             }
                         });
                     }
