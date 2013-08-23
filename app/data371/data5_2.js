@@ -25,11 +25,11 @@ angular.module('mathSkills').service('data5_2', ['dataUtils', function (dataUtil
         data = [
             { number: '95', btn1:'T', btn2:'F', btn3:'F', btn5:'T', btn7:'F', btn0:'F', template: 'main'},
             { number: '136', btn1:'T', btn2:'T', btn3:'F', btn5:'F', btn7:'F', btn0:'F', template: 'main'},
-            { number: '190', btn1:'T', btn2:'T', btn3:'F', btn5:'T', btn7:'F', btn0:'T', template: 'main'},
+            { number: '180', btn1:'T', btn2:'T', btn3:'T', btn5:'T', btn7:'F', btn0:'T', template: 'main'},
             { number: '160', btn1:'T', btn2:'T', btn3:'F', btn5:'T', btn7:'F', btn0:'T', template: 'main'},
             { number: '81', btn1:'T', btn2:'F', btn3:'T', btn5:'F', btn7:'F', btn0:'F', template: 'main'},
             { number: '59', btn1:'T', btn2:'F', btn3:'F', btn5:'F', btn7:'F', btn0:'F', template: 'main'},
-            { number: '48', btn1:'T', btn2:'T', btn3:'T', btn5:'F', btn7:'F', btn0:'F', template: 'main'},
+            { number: '84', btn1:'T', btn2:'T', btn3:'T', btn5:'F', btn7:'T', btn0:'F', template: 'main'},
             { number: '145', btn1:'T', btn2:'F', btn3:'F', btn5:'T', btn7:'F', btn0:'F', template: 'main'},
             { number: '60', btn1:'T', btn2:'T', btn3:'T', btn5:'T', btn7:'F', btn0:'T', template: 'main'},
             { number: '94', btn1:'T', btn2:'T', btn3:'F', btn5:'F', btn7:'F', btn0:'F', template: 'main'}
