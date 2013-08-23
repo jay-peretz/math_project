@@ -176,8 +176,14 @@ angular.module('mathSkills')
                                     $scope.complete = true;
                                 }
 								completedArrayMinusLast = $scope.completedArray.slice();
-								completedArrayMinusLast.pop();
-								// determine the position of the ones digit, last row of completedArrayMinusLast 
+								
+								// remove the pre-carry row from $scope.completedArray
+								if (typeof $scope.currentStep !== "undefined" && $scope.currentStep.type === "division" && $scope.currentStep.quotient === 0) {
+									$scope.completedArray.splice(completedArrayCounter - 2, 1);
+								}
+								completedArrayMinusLast.pop();								
+								
+							 // get position of the ones digit in last row of completedArrayMinusLast 
 								numberDigit = false;
 								if (typeof completedArrayMinusLast[0] !== "undefined") {
 									completedArrayLength = completedArrayMinusLast[0].length;
@@ -377,15 +383,6 @@ angular.module('mathSkills')
                                                 instructions: 'Carry down a ' + carry + ' from the dividend.'
                                             });
 											
-											// if carry, remove last element of $scope.completedArray
-											/*if (Number(steps[0].leading + steps[0].carry) < $scope.divisor) {
-												$scope.completedArray.pop();
-											}*/
-											// if carry, set carryFlag = true for display with input
-											if (Number(steps[0].leading + steps[0].carry) < $scope.divisor) {
-												$scope.carryFlag = true;
-											}
-											
                                         }
                                         
                                         $scope.completedSteps.push({
@@ -403,6 +400,7 @@ angular.module('mathSkills')
                                         }
                                         break;
                                     case 'carry':
+										//console.log("JSON.stringify(steps) is: ",JSON.stringify(steps)," JSON.stringify($scope.completedArray) is: ",JSON.stringify($scope.completedArray));
                                         changeStep();
                                         break;
                                 }
@@ -446,23 +444,16 @@ angular.module('mathSkills')
 						
 						$scope.getRow = function (rowIndex) {
 							getRowCurrent = rowIndex;
-							return "";
-						}
-						
-						$scope.carryFlag = function () {
-							if (typeof $scope.narrowDisplayArray.length - 1 !== "undefined") {
-								console.log("getRowCurrent is: ",getRowCurrent,"$scope.narrowDisplayArray.length - 1 is:  ",$scope.narrowDisplayArray.length - 1);
-								switch (true) {
-									case (getRowCurrent === $scope.narrowDisplayArray.length - 1):
-										return "displayInline";
-										break;
-									case (getRowCurrent !== $scope.narrowDisplayArray.length - 1):
-										return "displayNone";
-										break;
-									default:
-										return "";
-										break;
+							if (typeof $scope.currentStep !== "undefined" && getRowCurrent === $scope.narrowDisplayArray.length - 1 && ($scope.currentStep.type === "carry" || $scope.currentStep.type === "division")) {
+								// turn on extra space for decimal in display prior to input box 
+								if ($scope.narrowDisplayArray[0].length === integerDigits($scope.dividend)) {
+									$scope.showBlankSpace = true;
+								} else {
+									$scope.showBlankSpace = false;
 								}
+								return true;
+							} else {
+								return false;
 							}
 						}
 						

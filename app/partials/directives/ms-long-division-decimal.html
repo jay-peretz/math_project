@@ -78,7 +78,7 @@
     ms-long-division-decimal ms-input.wide5 input {
         width: 100px;
     }
-	ms-long-division-decimal .displayInline {
+	ms-long-division-decimal .redstuff.displayInline {
 		display: inline;
 	}
 	ms-long-division-decimal .displayNone {
@@ -92,13 +92,16 @@
     </span>
 </div>
 <table class=table-collapse-separate>
-	<tr ng-repeat="row in narrowDisplayArray" ng-class="getRow($index)">
+	<tr ng-repeat="row in narrowDisplayArray" ng-switch on="getRow($index)">
         <td ng-repeat="col in row">
         	<span ng-bind-html-unsafe="col | stylecharacter"></span>
         </td>
-        <td ng-class="carryFlag()">
+        <td ng-show="showBlankSpace">
+        	<span class=digitblank>&nbsp;</span>
+        </td>
+        <td ng-switch-when=true>
                 <span>
-                    <ms-input expected="{{currentStep.carry | wrap:'input'}}" class=digit></ms-input>
+                    <ms-input expected="{{currentStep.carry | wrap:'input'}}" class="digit"></ms-input>
                 </span>
         </td>
     </tr>
