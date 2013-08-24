@@ -167,6 +167,8 @@ angular.module('mathSkills')
 							numberDigit,
 							completedArrayLength,
 							getRowCurrent,
+							completedArrayCarryGone = false,
+							productZeroFlag = false,
                             changeStep = function () {
                                 $scope.currentStep = steps.shift();
                                 if ($scope.currentStep !== undefined) {
@@ -175,13 +177,20 @@ angular.module('mathSkills')
                                     $scope.instructions = 'Great Job!  Enter the complete quotient and remainder below.';
                                     $scope.complete = true;
                                 }
+								
 								completedArrayMinusLast = $scope.completedArray.slice();
 								
 								// remove the pre-carry row from $scope.completedArray
 								if (typeof $scope.currentStep !== "undefined" && $scope.currentStep.type === "division" && $scope.currentStep.quotient === 0) {
 									$scope.completedArray.splice(completedArrayCounter - 2, 1);
 								}
-								completedArrayMinusLast.pop();								
+								
+								// carry response to answer removes carry row, then no need to pop 
+								if (completedArrayCarryGone === false) {
+									$scope.test = completedArrayMinusLast.pop();	
+								} else {
+									completedArrayCarryGone = false;
+								}
 								
 							 // get position of the ones digit in last row of completedArrayMinusLast 
 								numberDigit = false;
@@ -331,6 +340,12 @@ angular.module('mathSkills')
                                         break;
                                     case 'multiplication':
                                         product = $scope.currentStep.product.toString();
+										
+										if (product === "0") {
+											productZeroFlag = true;
+										} else {
+											productZeroFlag = false;
+										}
                                         
                                         // Add a minus sign if it will fit in the work area, otherwise
                                         // trip the gutterMinus flag.
@@ -359,12 +374,12 @@ angular.module('mathSkills')
                                         });
                                         $scope.currentOffset = $scope.currentStep.offset;
 										$scope.completedArray.push($scope.centralArray[completedArrayCounter]);
+										
 										completedArrayCounter += 1;
                                         changeStep();
                                         break;
                                     case 'subtraction':
                                         // Check if this is the last step.
-										//console.log("1 steps[0] is: ",steps[0]);
                                         if (steps.length === 0) {
                                             difference = +parser.extractTag(data.answer).args[0];
                                         } else {
@@ -400,7 +415,10 @@ angular.module('mathSkills')
                                         }
                                         break;
                                     case 'carry':
-										//console.log("JSON.stringify(steps) is: ",JSON.stringify(steps)," JSON.stringify($scope.completedArray) is: ",JSON.stringify($scope.completedArray));
+										if (productZeroFlag) {
+											$scope.completedArray.splice(completedArrayCounter - 3, 1);
+										}
+										completedArrayCarryGone = true;
                                         changeStep();
                                         break;
                                 }
@@ -444,7 +462,7 @@ angular.module('mathSkills')
 						
 						$scope.getRow = function (rowIndex) {
 							getRowCurrent = rowIndex;
-							if (typeof $scope.currentStep !== "undefined" && getRowCurrent === $scope.narrowDisplayArray.length - 1 && ($scope.currentStep.type === "carry" || $scope.currentStep.type === "division")) {
+							if (typeof $scope.currentStep !== "undefined" && getRowCurrent === $scope.narrowDisplayArray.length - 1 && $scope.currentStep.type === "carry") {
 								// turn on extra space for decimal in display prior to input box 
 								if ($scope.narrowDisplayArray[0].length === integerDigits($scope.dividend)) {
 									$scope.showBlankSpace = true;
