@@ -80,11 +80,11 @@ angular.module('mathSkills')
                                 $scope.$emit('notHelped', {
                                     controllerId: $scope.controllerId
                                 });
-                                $timeout(function () {
-                                    $scope.class = '';
-                                    jQuery($element).find('button').trigger('click');
+                                //$timeout(function () {
+                                    //$scope.class = '';
+                                    //jQuery($element).find('button').trigger('click');
                                     //$scope.$digest();
-                                }, 900);
+                                //}, 900);
                                 
                             } else {
                                 $scope.class = '';
