@@ -55,6 +55,9 @@ angular.module('mathSkills')
 						  break;
 					}
 				}
+				
+				// add space in front to accommodate "-" on multiplication step
+				centralArray[steps.length].unshift("");
 	
 				returnObject = {
                     type: 'division',
@@ -74,16 +77,27 @@ angular.module('mathSkills')
 				
 				for (var ii = 0, len = centralArray[0].length; ii < len; ii += 1) {
 					switch (true) {
-						case (ii < (poppedArr.length - product.toString().length)):
+						case (ii < (poppedArr.length - product.toString().length - 1)):
 						  centralArray[steps.length][ii] = "";
+						  break;
+						// numbers that have spaces in front, add "-" in front of number
+						case (ii === (poppedArr.length - product.toString().length - 1)):
+						  centralArray[steps.length][ii] = "-";
 						  break;
 						case (ii > (poppedArr.length - product.toString().length) - 1 && ii < poppedArr.length ):							
 						  centralArray[steps.length][ii] = product.toString().charAt(ii - (poppedArr.length - product.toString().length));
 						  break;
-						case (ii > poppedArr.length - - 1):
+						case (ii > poppedArr.length - 1):
 						  centralArray[steps.length][ii] = "";
 						  break;
 					}
+				}
+				
+				// numbers with no blanks in front, add space with "-", else add space with ""
+			    if ((poppedArr.length - product.toString().length - 1) <= 0) {
+				 	centralArray[steps.length].unshift("-");
+			    } else {
+					centralArray[steps.length].unshift("");
 				}
 				
                 returnObject = {
@@ -117,6 +131,9 @@ angular.module('mathSkills')
 						  break;
 					}
 				}
+				
+				// add space in front to accommodate "-" on multiplication step
+				centralArray[steps.length].unshift("");
 				
                 returnObject = {
                     type: 'subtraction',
@@ -166,9 +183,7 @@ angular.module('mathSkills')
 							lastDigitPosition = 0,
 							numberDigit,
 							completedArrayLength,
-							getRowCurrent,
-							completedArrayCarryGone = false,
-							productZeroFlag = false,
+							priorStepCarry = false,
                             changeStep = function () {
                                 $scope.currentStep = steps.shift();
                                 if ($scope.currentStep !== undefined) {
@@ -177,21 +192,28 @@ angular.module('mathSkills')
                                     $scope.instructions = 'Great Job!  Enter the complete quotient and remainder below.';
                                     $scope.complete = true;
                                 }
+
+								if (typeof $scope.currentStep !== 'undefined' && $scope.currentStep.type === 'division') {
+									$scope.completedArray.splice($scope.completedArray.length - 2, 1);
+								}
+
+								if (typeof $scope.currentStep !== "undefined" && $scope.currentStep.type === "multiplication" && $scope.currentStep.product === 0) {
+									$scope.completedArray.splice($scope.completedArray.length - 3, 1);
+								}
 								
+								// completedArrayMinusLast represents $scope.completedArray less last
 								completedArrayMinusLast = $scope.completedArray.slice();
 								
-								// remove the pre-carry row from $scope.completedArray
-								if (typeof $scope.currentStep !== "undefined" && $scope.currentStep.type === "division" && $scope.currentStep.quotient === 0) {
-									$scope.completedArray.splice(completedArrayCounter - 2, 1);
+								if (priorStepCarry === false) {
+									completedArrayMinusLast.pop();	
 								}
 								
-								// carry response to answer removes carry row, then no need to pop 
-								if (completedArrayCarryGone === false) {
-									$scope.test = completedArrayMinusLast.pop();	
+								if (typeof $scope.currentStep !== "undefined" && $scope.currentStep.type === "carry") {
+									priorStepCarry = true;
 								} else {
-									completedArrayCarryGone = false;
-								}
-								
+									priorStepCarry = false;
+								}					
+							
 							 // get position of the ones digit in last row of completedArrayMinusLast 
 								numberDigit = false;
 								if (typeof completedArrayMinusLast[0] !== "undefined") {
@@ -217,13 +239,19 @@ angular.module('mathSkills')
 										}
 									}
 								}
+								
 								// $scope.narrowDisplayArray, each element lastDigitPosition + 1 length
 								if (typeof completedArrayMinusLast[0] !== "undefined") {
 									$scope.narrowDisplayArray = [];
+									$scope.subtractionRowNumbers = [];
 									for (var ii = 0, lenRows = completedArrayMinusLast.length; ii < lenRows; ii += 1) {
-										$scope.narrowDisplayArray[ii] = []
+										$scope.narrowDisplayArray[ii] = [];
 										for (var jj = 0, lenColumns = lastDigitPosition + 1; jj < lenColumns; jj += 1) {
 											$scope.narrowDisplayArray[ii][jj] =completedArrayMinusLast[ii][jj];
+											// make array w entries representing subtraction row indexes
+											if (completedArrayMinusLast[ii][jj] === "-") {
+												$scope.subtractionRowNumbers.push(ii);
+											}
 										}
 									}
 								}
@@ -286,17 +314,22 @@ angular.module('mathSkills')
 								remainder = answerPlusOne.toString().substr(-1);
 								$scope.centralArray = new Array(answer.length * 3);
 								$scope.completedArray = [];
+								//initialize $scope.centralArray, array from steps of Long Division
 								for (var ii = 0, len = $scope.centralArray.length; ii < len; ii += 1) {
-									$scope.centralArray[ii] = Array.apply(null, new Array($scope.centralArray.length)).map(function () {return "";});
+									$scope.centralArray[ii] = Array.apply(null, new Array(answerPlusOne.toString().length)).map(function () {return "";});
 								}
 								$scope.dividend = moveDividendDecimal($scope.dividend, $scope.divisor);
 								$scope.divisor = $scope.divisor.replace(".","");
                                 steps = getLongDivisionSteps($scope.dividend, $scope.divisor, $scope.centralArray);
+								// the steps of LongDivision become $scope.centralArray
 								$scope.centralArray = steps.centralArray;
+								
 								// remove first step entry, for steps completed display
 								$scope.centralArray.shift();
+								// add the space for the decimal point to $scope.centralArray
 								for (var ii = 0, len = $scope.centralArray.length; ii < len; ii += 1) {
-									$scope.centralArray[ii].splice(integerDigits($scope.dividend),0,"");
+									//  splice is integerDigits($scope.dividend) + 1 due to column for -
+									$scope.centralArray[ii].splice(integerDigits($scope.dividend) + 1,0,"");
 								}
 								
                                 $scope.quotientOffset = steps.quotientOffset;
@@ -307,6 +340,7 @@ angular.module('mathSkills')
                         });
 
                         $scope.completedSteps = [];
+						$scope.subtractionRowNumbers = [];
                         $scope.quotientDone = '';
                         $scope.controllerId = Math.random().toString();
 
@@ -341,12 +375,6 @@ angular.module('mathSkills')
                                     case 'multiplication':
                                         product = $scope.currentStep.product.toString();
 										
-										if (product === "0") {
-											productZeroFlag = true;
-										} else {
-											productZeroFlag = false;
-										}
-                                        
                                         // Add a minus sign if it will fit in the work area, otherwise
                                         // trip the gutterMinus flag.
                                         if ($scope.currentStep.offset > 0) {
@@ -374,7 +402,6 @@ angular.module('mathSkills')
                                         });
                                         $scope.currentOffset = $scope.currentStep.offset;
 										$scope.completedArray.push($scope.centralArray[completedArrayCounter]);
-										
 										completedArrayCounter += 1;
                                         changeStep();
                                         break;
@@ -415,13 +442,10 @@ angular.module('mathSkills')
                                         }
                                         break;
                                     case 'carry':
-										if (productZeroFlag) {
-											$scope.completedArray.splice(completedArrayCounter - 3, 1);
-										}
-										completedArrayCarryGone = true;
                                         changeStep();
                                         break;
                                 }
+								
                             } else {
                                 $scope.$broadcast('checkFocus');
                             }
@@ -461,10 +485,10 @@ angular.module('mathSkills')
                         };
 						
 						$scope.getRow = function (rowIndex) {
-							getRowCurrent = rowIndex;
-							if (typeof $scope.currentStep !== "undefined" && getRowCurrent === $scope.narrowDisplayArray.length - 1 && $scope.currentStep.type === "carry") {
+							$scope.getRowCurrent = rowIndex;
+							if (typeof $scope.currentStep !== "undefined" && $scope.getRowCurrent === $scope.narrowDisplayArray.length - 1 && $scope.currentStep.type === "carry") {
 								// turn on extra space for decimal in display prior to input box 
-								if ($scope.narrowDisplayArray[0].length === integerDigits($scope.dividend)) {
+								if ($scope.narrowDisplayArray[0].length - 1 === integerDigits($scope.dividend)) {
 									$scope.showBlankSpace = true;
 								} else {
 									$scope.showBlankSpace = false;
@@ -472,6 +496,12 @@ angular.module('mathSkills')
 								return true;
 							} else {
 								return false;
+							}
+						}
+						
+						$scope.getLineUnder = function (index) {
+							if (typeof $scope.currentStep !== "undefined" && $scope.subtractionRowNumbers.indexOf(index) !== -1) {
+								return "rowWithBottom";
 							}
 						}
 						

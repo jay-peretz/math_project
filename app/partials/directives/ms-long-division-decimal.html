@@ -12,14 +12,14 @@
     ms-long-division-decimal .digit {
         display: inline-block;
         background: #eee;
-        margin: 2px;
+        margin: 0px;
         padding: 5px;
         width: 10px;
         text-align: center;
     }
 	ms-long-division-decimal .digitblank {
         display: inline-block;
-        margin: 2px;
+        margin: 0px;
         padding: 5px;
         width: 10px;
         text-align: center;
@@ -84,6 +84,12 @@
 	ms-long-division-decimal .displayNone {
 		display: none;
 	}
+	.rowWithBottom {
+	}
+	ms-long-division-decimal .rowWithBottom .borderBottom {
+        border-bottom: 1px solid black;
+		padding-bottom: 10px;
+	}
 </style>
 <div class="alert alert-info">{{instructions}}</div>
 <div ng-switch on=complete>
@@ -91,21 +97,6 @@
         <ms-expression expected={{finalAnswer}} label=finalAnswer></ms-expression>
     </span>
 </div>
-<table class=table-collapse-separate>
-	<tr ng-repeat="row in narrowDisplayArray" ng-switch on="getRow($index)">
-        <td ng-repeat="col in row">
-        	<span ng-bind-html-unsafe="col | stylecharacter"></span>
-        </td>
-        <td ng-show="showBlankSpace">
-        	<span class=digitblank>&nbsp;</span>
-        </td>
-        <td ng-switch-when=true>
-                <span>
-                    <ms-input expected="{{currentStep.carry | wrap:'input'}}" class="digit"></ms-input>
-                </span>
-        </td>
-    </tr>
-</table>
 <table class=table-collapse-separate>
     <tr>
         <td></td>
@@ -122,14 +113,29 @@
         <td class=divisorstyle>{{divisor}}</td>
         <td class=dividendstyle style="padding-left:20px;"><span ng-bind-html-unsafe="dividend | digits"></span></td>
     </tr>
-    <tr
-        ng-repeat="step in completedSteps | hideLast:showCarry"
-        class="completedStep {{step.type}}"
-    >
-        <td><span ng-show=step.gutterMinus class="digit minus">-</span></td>
-        <td><span ng-bind-html-unsafe="step.value | digits:step.offset:true"></span></td>
+    <tr>
+        <td>
+        	<!--<span ng-show=step.gutterMinus class="digit minus">-</span>-->
+        </td>
+    	<td>
+    		<table class=table-collapse-separate style="margin-left:-18px;">
+                <tr ng-repeat="row in narrowDisplayArray" ng-class="getLineUnder($index)" ng-switch on="getRow($index)">
+                    <td ng-repeat="col in row" style="padding:0;">
+                        <span ng-bind-html-unsafe="col | stylecharacter"></span>
+                    </td>
+                    <td ng-show="showBlankSpace">
+                        <span class=digitblank>&nbsp;</span>
+                    </td>
+                    <td ng-switch-when=true>
+                            <span>
+                                <ms-input expected="{{currentStep.carry | wrap:'input'}}" class="digit"></ms-input>
+                            </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
     </tr>
-    <tr ng-show=showCarry()>
+    <!--<tr ng-show=showCarry()>
     	<td></td>
         <td>
         	<span ng-bind-html-unsafe="currentStep.leading | digits:currentStep.offset"></span>
@@ -139,7 +145,7 @@
                 </span>
             </span>
         </td>
-    </tr>
+    </tr>-->
     <tr ng-show=showProduct()>
         <td></td>
         <td>

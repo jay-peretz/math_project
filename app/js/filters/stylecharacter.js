@@ -14,14 +14,11 @@ angular.module('mathSkills')
 						case (character === '-'):
 							out += '<span class="digit minus">' + character + '</span>';
 							break;
-						case (character === 'x'):
-							out += '<span class="digitblank">\xA0</span>';
-							break;
 						case (character === ''):
 							out += '<span class="digitblank">\xA0</span>';
 							break;
 						default:
-							out += '<span class=digit>' + character + '</span>';
+							out += '<span class="digit borderBottom">' + character + '</span>';
 					}
                 
                 return out;
