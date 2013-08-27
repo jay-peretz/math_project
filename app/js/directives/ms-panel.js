@@ -43,11 +43,11 @@ angular.module('mathSkills')
 							}
                         });
 
-                        $scope.$on('triggerCheckAnswer', function () { console.log('in  the checkout this');
+                        $scope.$on('triggerCheckAnswer', function () {
                             triggerAnswerAreaEvent('checkAnswer');
                         });
 
-                        $scope.$on('triggerCheckHelp', function () { console.log('in showHelpPanel');
+                        $scope.$on('triggerCheckHelp', function () {
                             triggerAnswerAreaEvent('checkHelp');
                         });
 

@@ -10,14 +10,14 @@ angular.module('mathSkills')
                     'problemData',
                     function ($scope, problemData) {
 
-                        var anwserbtn = function (data) { console.log('data', data); 
+                        var anwserbtn = function (data) { //console.log('data', data); 
                                 if (typeof data === 'boolean') { 
                                     (data === false) ? $scope.hasCheckAnswer = false : ckeckAnswerBtn();
                                 } else { 
                                     if (data === 'noAnswer'){
                                         $scope.hasCheckAnswer = false;
                                     } else {
-                                        if (data === 'noAnswerN' || data === 'noAnswerC'){ console.log('data running', data); 
+                                        if (data === 'noAnswerN' || data === 'noAnswerC'){ //console.log('data running', data); 
                                             $scope.answerButtonText = (data === 'noAnswerN') ? 'Next Problem': 'Next Step';
                                             $scope.hasCheckAnswer = true;
                                             
@@ -33,7 +33,7 @@ angular.module('mathSkills')
 
                         $scope.$watch('data', function () {
 
-                            ckeckAnswerBtn(); console.log('in showHelpPanel zdfgdhdfghn');
+                            ckeckAnswerBtn();
 
                             // If we haven't parsed $scope.data into an object.
                             if (typeof $scope.data === 'string') {
@@ -52,7 +52,7 @@ angular.module('mathSkills')
                                         $scope.$emit('triggerCheckHelp');
                                     };
                                 } else {
-                                    $scope.help = function () { console.log('in showHelpPanel');
+                                    $scope.help = function () {
                                         $scope.$emit('showHelpPanel', { 
                                             expression: $scope.data.help
                                         });
@@ -64,7 +64,7 @@ angular.module('mathSkills')
 
                                 // If we do have help, set up the actual help function.
                                 if ($scope.hasWorkbook === true) {
-                                    $scope.openWorkbook = function () { 
+                                    $scope.openWorkbook = function () {
                                         $scope.$emit('showWorkbook');
                                     };
                                 }
@@ -73,14 +73,14 @@ angular.module('mathSkills')
                                 $scope.hasCheckAnswer = $scope.data.checkAnswer;
 
                                 //if ($scope.hasCheckAnswer) { 
-                                    $scope.checkAnswer = function () { 
+                                    $scope.checkAnswer = function () {
                                         $scope.$emit('triggerCheckAnswer');
                                     };
                                 //}
 
                                 $scope.hasNextProblem = $scope.data.nextProblem;
                                 if ($scope.hasNextProblem === true) {
-                                    $scope.showNextProblem = function () { 
+                                    $scope.showNextProblem = function () {
                                         $scope.$emit('panelDone');
                                         $scope.$emit('triggerCheckAnswer');
                                     };
