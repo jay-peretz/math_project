@@ -7,7 +7,6 @@ angular.module('mathSkills')
             return function (input, offset, container) {
                 offset = +offset || 0;
                 var out = '';
-                
                 while (offset > 0) {
                     out += '<span class="digit placeholder"></span>';
                     offset -= 1;
@@ -25,13 +24,19 @@ angular.module('mathSkills')
                         
                         switch (true) {
 							case (character === '↓'): 
-								out += '<span class=spaceblank>&nbsp;</span><span class="digit arrow">' + character + '</span><span class=spaceblank>&nbsp;</span>';
+								out += '<span class="spaceblank borderBlank">&nbsp;</span><span class="digit arrow borderBlank">' + character + '</span><span class="spaceblank borderBlank">&nbsp;</span>';
 								break;
 							case (character === '-'):
 								out += '<span class="spaceblank borderBottom">&nbsp;</span><span class="digit minus borderBottom">' + character + '</span><span class="spaceblank borderBottom">&nbsp;</span>';
 								break;
 							case (character === 'x'):
-								out += '<span class=spaceblank>&nbsp;</span><span class="digitblank">\xA0</span><span class=spaceblank>&nbsp;</span>';
+								out += '<span class="spaceblank borderBlank">&nbsp;</span><span class="digitblank borderBlank">&nbsp;</span><span class="spaceblank borderBlank">&nbsp;</span>';
+								break;
+								case (character === 'y'):
+								out += '<span class="spaceblank borderBlank">&nbsp;</span><span class="digitblank borderBlank">&nbsp;</span><span class="spaceblank borderBlank">&nbsp;</span>';
+								break;
+							case (character === ''):
+								out += '<span class="spaceblank borderBlank">&nbsp;</span><span class="digit borderBlank">' + character + '</span><span class="spaceblank borderBlank">&nbsp;</span>';
 								break;
 							default:
 								out += '<span class="spaceblank borderBottom">&nbsp;</span><span class="digit borderBottom">' + character + '</span><span class="spaceblank borderBottom">&nbsp;</span>';
@@ -41,7 +46,6 @@ angular.module('mathSkills')
                         out += '</span>';
                     }
                 }
-                
                 return out;
             };
         }

@@ -27,15 +27,24 @@
 	ms-long-division-decimal .spaceblank {
         display: inline-block;
         margin: 0px;
-        padding: 0px;
+        padding: 5px 0px;
         width: 2px;
         text-align: center;
     }
     ms-long-division-decimal .digit.placeholder, ms-long-division-decimal .digit.minus {
+        display: inline-block;
+        margin: 0px;
+        padding: 5px;
         width: 10px;
+        text-align: center;
         background: transparent;
     }
     ms-long-division-decimal .digit.arrow {
+		display: inline-block;
+        margin: 0px;
+        padding: 5px;
+        width: 10px;
+        text-align: center;
         background: transparent;
     }
     ms-long-division-decimal .digit.inactive {
@@ -97,6 +106,9 @@
         border-bottom: 1px solid black;
 		padding-bottom: 10px;
 	}
+	ms-long-division-decimal .rowWithBottom .borderBlank {
+		padding-bottom: 11px;
+	}
 </style>
 <div class="alert alert-info">{{instructions}}</div>
 <div ng-switch on=complete>
@@ -121,12 +133,14 @@
         <td class=divisorstyle>{{divisor}}</td>
         <td class=dividendstyle style="padding-left:20px;"><span ng-bind-html-unsafe="dividend | stylecharacter"></span></td>
     </tr>
+</table>
+<table class="collapseTable" style="margin-left:10px;">
     <tr>
         <td>
         	<!--<span ng-show=step.gutterMinus class="digit minus">-</span>-->
         </td>
     	<td>
-    		<table class=table-collapse-separate style="margin-left:-18px;">
+    		<table class="collapseTable">
                 <tr ng-repeat="row in narrowDisplayArray" ng-class="getLineUnder($index)" ng-switch on="getRow($index)">
                     <td ng-repeat="col in row" style="padding:0;">
                         <span ng-bind-html-unsafe="col | stylecharacter"></span>
@@ -157,7 +171,7 @@
     <tr ng-show=showProduct()>
         <td></td>
         <td>
-        	<span ng-bind-html-unsafe="[] | digits:currentOffset"></span>
+        	<span ng-bind-html-unsafe="[] | digits:(currentOffset+1)"></span>
             <span ng-switch on=showProduct()>
                 <span ng-switch-when=true>
                     <ms-input expected="{{currentStep.product | wrap:'input'}}" class={{$parent.getInputClass()}}></ms-input>
@@ -168,7 +182,7 @@
     <tr ng-show=showDifference()>
         <td></td>
         <td>
-        	<span ng-bind-html-unsafe="[] | digits:currentOffset"></span>
+        	<span ng-bind-html-unsafe="[] | digits:(currentOffset+1)"></span>
             <span ng-switch on=showDifference()>
                 <span ng-switch-when=true>
                     <ms-input expected="{{currentStep.difference | wrap:'input'}}" class={{$parent.getInputClass()}}></ms-input>

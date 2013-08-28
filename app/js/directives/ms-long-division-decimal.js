@@ -221,13 +221,13 @@ angular.module('mathSkills')
 													lastDigitPosition = ii;
 												}
 												break;
-											case (completedArrayMinusLast[minusLastLength - 1][ii] !== "" && numberDigit === false):
+											case (completedArrayMinusLast[minusLastLength - 1][ii] !== "" && completedArrayMinusLast[minusLastLength - 1][ii] !== "x" && numberDigit === false):
 												if (lastDigitPosition < ii) {
 													lastDigitPosition = ii;
 												}
 												numberDigit = true;
 												break;
-											case (completedArrayMinusLast[minusLastLength - 1][ii] !== "" && numberDigit === true):
+											case (completedArrayMinusLast[minusLastLength - 1][ii] !== "" && completedArrayMinusLast[minusLastLength - 1][ii] !== "x" && numberDigit === true):
 												if (lastDigitPosition < ii) {
 													lastDigitPosition = ii;
 												}
@@ -235,15 +235,20 @@ angular.module('mathSkills')
 										}
 									}
 								}
-								
+
 								// $scope.narrowDisplayArray, each element lastDigitPosition + 1 length
 								if (typeof completedArrayMinusLast[0] !== "undefined") {
 									$scope.narrowDisplayArray = [];
 									$scope.subtractionRowNumbers = [];
 									for (var ii = 0, lenRows = completedArrayMinusLast.length; ii < lenRows; ii += 1) {
 										$scope.narrowDisplayArray[ii] = [];
-										for (var jj = 0, lenColumns = lastDigitPosition + 1; jj < lenColumns; jj += 1) {
-											$scope.narrowDisplayArray[ii][jj] =completedArrayMinusLast[ii][jj];
+										for (var jj = 0, lenColumns = lastDigitPosition + 1; jj < lenColumns; jj += 1) {	
+											// fill all columns with completedArrayMinusLast value | "y"
+											if (completedArrayMinusLast[ii][jj] !== "") {
+												$scope.narrowDisplayArray[ii][jj] =completedArrayMinusLast[ii][jj];
+											} else {
+												$scope.narrowDisplayArray[ii][jj] = "y";
+											}
 											// make array w entries representing subtraction row indexes
 											if (completedArrayMinusLast[ii][jj] === "-") {
 												$scope.subtractionRowNumbers.push(ii);
@@ -261,7 +266,7 @@ angular.module('mathSkills')
                                     if (integerDigits($scope.dividend) !== step.value.toString().length + step.offset) {
                                     	step.value += '↓';
 									} else {
-										step.value += 'x';
+										step.value += 'y';
 									}
                                 });
                             },
@@ -325,7 +330,7 @@ angular.module('mathSkills')
 								// add the space for the decimal point to $scope.centralArray
 								for (var ii = 0, len = $scope.centralArray.length; ii < len; ii += 1) {
 									//  splice is integerDigits($scope.dividend) + 1 due to column for -
-									$scope.centralArray[ii].splice(integerDigits($scope.dividend) + 1,0,"");
+									$scope.centralArray[ii].splice(integerDigits($scope.dividend) + 1,0,"x");
 								}
 								
                                 $scope.quotientOffset = steps.quotientOffset;
