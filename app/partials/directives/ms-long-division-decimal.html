@@ -24,6 +24,13 @@
         width: 10px;
         text-align: center;
     }
+	ms-long-division-decimal .spaceblank {
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+        width: 2px;
+        text-align: center;
+    }
     ms-long-division-decimal .digit.placeholder, ms-long-division-decimal .digit.minus {
         width: 10px;
         background: transparent;
@@ -94,15 +101,16 @@
 <div class="alert alert-info">{{instructions}}</div>
 <div ng-switch on=complete>
     <span ng-switch-when=true>
-        <ms-expression expected={{finalAnswer}} label=finalAnswer></ms-expression>
+        <ms-expression expected={{finalAnswer}} label=finalAnswer></ms-expression><br /><br />
     </span>
 </div>
 <table class=table-collapse-separate>
     <tr>
         <td></td>
         <td class=quotient>
-            <span ng-bind-html-unsafe="quotientDone | digits:quotientOffset"></span>
-            <span ng-switch on=showQuotient()>
+            <span>&nbsp;</span>
+            <span ng-bind-html-unsafe="quotientDone | stylecharacter:quotientOffset:true"></span>
+            <span ng-switch on=showQuotient()> 
                 <span ng-switch-when=true>
                     <ms-input expected="{{currentStep.quotient | wrap:'input'}}" class=digit></ms-input>
                 </span>
@@ -111,7 +119,7 @@
     </tr>
     <tr>
         <td class=divisorstyle>{{divisor}}</td>
-        <td class=dividendstyle style="padding-left:20px;"><span ng-bind-html-unsafe="dividend | digits"></span></td>
+        <td class=dividendstyle style="padding-left:20px;"><span ng-bind-html-unsafe="dividend | stylecharacter"></span></td>
     </tr>
     <tr>
         <td>

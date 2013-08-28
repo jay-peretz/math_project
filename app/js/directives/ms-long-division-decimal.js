@@ -192,15 +192,11 @@ angular.module('mathSkills')
                                     $scope.instructions = 'Great Job!  Enter the complete quotient and remainder below.';
                                     $scope.complete = true;
                                 }
-
+					
 								if (typeof $scope.currentStep !== 'undefined' && $scope.currentStep.type === 'division') {
 									$scope.completedArray.splice($scope.completedArray.length - 2, 1);
 								}
-
-								if (typeof $scope.currentStep !== "undefined" && $scope.currentStep.type === "multiplication" && $scope.currentStep.product === 0) {
-									$scope.completedArray.splice($scope.completedArray.length - 3, 1);
-								}
-								
+															
 								// completedArrayMinusLast represents $scope.completedArray less last
 								completedArrayMinusLast = $scope.completedArray.slice();
 								
