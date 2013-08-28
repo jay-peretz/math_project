@@ -206,8 +206,10 @@ angular.module('mathSkills')
 								
 								if (typeof $scope.currentStep !== "undefined" && $scope.currentStep.type === "carry") {
 									priorStepCarry = true;
+									$scope.arrowStep = true;
 								} else {
 									priorStepCarry = false;
+									$scope.arrowStep = false;
 								}					
 							
 							 // get position of the ones digit in last row of completedArrayMinusLast 
@@ -336,6 +338,8 @@ angular.module('mathSkills')
                                 $scope.quotientOffset = steps.quotientOffset;
                                  $scope.finalAnswer = '\\grp{\\input{' + answer +
                                     '}}{\\str{quotient}}{\\input{' + remainder + '}}{\\str{remainder}}';
+								$scope.downArrow = '↓';
+								$scope.arrowStep = false;
                                 changeStep();
                             }
                         });
@@ -505,6 +509,15 @@ angular.module('mathSkills')
 								return "rowWithBottom";
 							}
 						}
+						
+						$scope.showDownArrow = function () {
+							console.log("$scope.getRowCurrent is: ",$scope.getRowCurrent," $scope.narrowDisplayArray.length is: ",$scope.narrowDisplayArray.length);
+							 if ($scope.getRowCurrent < $scope.narrowDisplayArray.length && $scope.arrowStep) {
+								 return true;
+							 }	else {
+								 return false;
+							 }
+						 }
 						
                     }
                 ],

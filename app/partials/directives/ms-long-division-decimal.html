@@ -31,6 +31,9 @@
         width: 2px;
         text-align: center;
     }
+	ms-long-division-decimal .hideArrow {
+		display:none;
+	}
     ms-long-division-decimal .digit.placeholder, ms-long-division-decimal .digit.minus {
         display: inline-block;
         margin: 0px;
@@ -144,6 +147,9 @@
                 <tr ng-repeat="row in narrowDisplayArray" ng-class="getLineUnder($index)" ng-switch on="getRow($index)">
                     <td ng-repeat="col in row" style="padding:0;">
                         <span ng-bind-html-unsafe="col | stylecharacter"></span>
+                    </td>
+                    <td  ng-switch-when=false ng-show="showDownArrow()">
+                        <span class=digitblank>{{downArrow}}</span>
                     </td>
                     <td ng-show="showBlankSpace">
                         <span class=digitblank>&nbsp;</span>
