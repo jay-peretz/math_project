@@ -66,3 +66,8 @@
 .table-collapse-separate {
 	border-collapse:separate;
 }
+/*places button groups relative to the division graphic*/
+.dividend div table {
+    position: relative;
+    top: 12px;
+}

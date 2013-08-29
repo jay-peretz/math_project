@@ -174,9 +174,6 @@ angular.module('mathSkills')
                     function ($scope, $timeout, $filter) {
                         var steps,
 							answer,
-							digitsRightInExpPlusOne,
-							answerPlusOne,
-							remainder,
 							completedArrayCounter = 0,
 							positionFirstDigit,
 							completedArrayMinusLast,
@@ -312,14 +309,11 @@ angular.module('mathSkills')
                         $scope.$watch('divisor', function () {
                             if ($scope.dividend && $scope.divisor) {
 								answer = $filter('divide-decimals')($scope.dividend, $scope.divisor, $scope.digitsRightInExponential);
-								digitsRightInExpPlusOne = Number($scope.digitsRightInExponential) + 1;
-								answerPlusOne = $filter('divide-decimals')($scope.dividend, $scope.divisor, digitsRightInExpPlusOne);
-								remainder = answerPlusOne.toString().substr(-1);
 								$scope.centralArray = new Array(answer.length * 3);
 								$scope.completedArray = [];
 								//initialize $scope.centralArray, array from steps of Long Division
 								for (var ii = 0, len = $scope.centralArray.length; ii < len; ii += 1) {
-									$scope.centralArray[ii] = Array.apply(null, new Array(answerPlusOne.toString().length)).map(function () {return "";});
+									$scope.centralArray[ii] = Array.apply(null, new Array(answer.toString().length)).map(function () {return "";});
 								}
 								$scope.dividend = moveDividendDecimal($scope.dividend, $scope.divisor);
 								$scope.divisor = $scope.divisor.replace(".","");
@@ -334,9 +328,9 @@ angular.module('mathSkills')
 									//  splice is integerDigits($scope.dividend) + 1 due to column for -
 									$scope.centralArray[ii].splice(integerDigits($scope.dividend) + 1,0,"x");
 								}
+								
                                 $scope.quotientOffset = steps.quotientOffset;
-                                 $scope.finalAnswer = '\\grp{\\input{' + answer +
-                                    '}}{\\str{quotient}}{\\input{' + remainder + '}}{\\str{remainder}}';
+                                $scope.finalAnswer = '\\grp{\\css{\\input{$$quotient}}{width200px}}{\\str{quotient}}';
 								$scope.downArrow = '↓';
 								$scope.arrowStep = false;
                                 changeStep();
