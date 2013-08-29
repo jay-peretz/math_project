@@ -155,6 +155,7 @@ angular.module('mathSkills')
                     steps.push(getDivisionStep(dividend, divisor, centralArray, dividendArr, poppedArr, steps));
                     steps.push(getMultiplicationStep(dividend, divisor, centralArray, dividendArr, poppedArr, steps));
                     steps.push(getSubtractionStep(dividend, divisor, centralArray, dividendArr, poppedArr, steps));
+					
                 }
                 
 				//console.log("JSON.stringify(centralArray) is: ",JSON.stringify(centralArray));
@@ -318,8 +319,17 @@ angular.module('mathSkills')
 								$scope.dividend = moveDividendDecimal($scope.dividend, $scope.divisor);
 								$scope.divisor = $scope.divisor.replace(".","");
                                 steps = getLongDivisionSteps($scope.dividend, $scope.divisor, $scope.centralArray);
+								// remove the last two steps for the final dividend digit from steps
+								for (var ii = 0; ii < 2; ii += 1) {
+									steps.pop();
+								}
 								// the steps of LongDivision become $scope.centralArray
 								$scope.centralArray = steps.centralArray;
+								
+								// remove last two steps (for final dividend digit), $scope.centralArray
+								for (var ii = 0; ii < 2; ii += 1) {
+									$scope.centralArray.pop();
+								}
 								
 								// remove first step entry, for steps completed display
 								$scope.centralArray.shift();
@@ -368,7 +378,9 @@ angular.module('mathSkills')
 										$scope.completedArray.push($scope.centralArray[completedArrayCounter]);
 										completedArrayCounter += 1;
 										changeStep();
-                                        $scope.currentOffset = $scope.currentStep.offset;
+										if (typeof $scope.currentStep !== "undefined") {
+                                        	$scope.currentOffset = $scope.currentStep.offset;
+										}
                                         break;
                                     case 'multiplication':
                                         product = $scope.currentStep.product.toString();
