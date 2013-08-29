@@ -334,7 +334,6 @@ angular.module('mathSkills')
 									//  splice is integerDigits($scope.dividend) + 1 due to column for -
 									$scope.centralArray[ii].splice(integerDigits($scope.dividend) + 1,0,"x");
 								}
-								
                                 $scope.quotientOffset = steps.quotientOffset;
                                  $scope.finalAnswer = '\\grp{\\input{' + answer +
                                     '}}{\\str{quotient}}{\\input{' + remainder + '}}{\\str{remainder}}';
@@ -511,7 +510,6 @@ angular.module('mathSkills')
 						}
 						
 						$scope.showDownArrow = function () {
-							console.log("$scope.getRowCurrent is: ",$scope.getRowCurrent," $scope.narrowDisplayArray.length is: ",$scope.narrowDisplayArray.length);
 							 if ($scope.getRowCurrent < $scope.narrowDisplayArray.length && $scope.arrowStep) {
 								 return true;
 							 }	else {

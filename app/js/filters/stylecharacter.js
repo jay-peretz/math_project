@@ -27,12 +27,15 @@ angular.module('mathSkills')
 								out += '<span class="spaceblank borderBlank">&nbsp;</span><span class="digit arrow borderBlank">' + character + '</span><span class="spaceblank borderBlank">&nbsp;</span>';
 								break;
 							case (character === '-'):
-								out += '<span class="spaceblank borderBottom">&nbsp;</span><span class="digit minus borderBottom">' + character + '</span><span class="spaceblank borderBottom">&nbsp;</span>';
+								out += '<span class="spaceblank">&nbsp;</span><span class="digit minus ">' + character + '</span><span class="spaceblank">&nbsp;</span>';
 								break;
 							case (character === 'x'):
-								out += '<span class="spaceblank borderBlank">&nbsp;</span><span class="digitblank borderBlank">&nbsp;</span><span class="spaceblank borderBlank">&nbsp;</span>';
+								out += '<span class="spaceblank borderBlank">&nbsp;</span><span class="spaceblank borderBlank" style="visibility:hidden;">.</span><span class="spaceblank borderBlank">&nbsp;</span>';
 								break;
-								case (character === 'y'):
+							case (character === '.'):
+								out += '<span class="spaceblank borderBlank">&nbsp;</span><span class="spaceblank borderBlank">.</span><span class="spaceblank borderBlank">&nbsp;</span>';
+								break;
+							case (character === 'y'):
 								out += '<span class="spaceblank borderBlank">&nbsp;</span><span class="digitblank borderBlank">&nbsp;</span><span class="spaceblank borderBlank">&nbsp;</span>';
 								break;
 							case (character === ''):
