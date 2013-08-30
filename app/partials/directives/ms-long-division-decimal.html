@@ -113,7 +113,7 @@
 		padding-bottom: 11px;
 	}
 </style>
-<div class="alert alert-info">{{instructions}}</div>
+<div class="alert alert-info">{{instructions}}<br />{{addedInstructions}}</div>
 <div ng-switch on=complete>
     <span ng-switch-when=true>
         <ms-expression expected={{finalAnswer}} label=finalAnswer></ms-expression><br /><br />
@@ -197,3 +197,4 @@
         </td>
     </tr>
 </table>
+<span><br /><br />

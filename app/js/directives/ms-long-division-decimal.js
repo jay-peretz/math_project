@@ -187,7 +187,8 @@ angular.module('mathSkills')
                                 if ($scope.currentStep !== undefined) {
                                     $scope.instructions = $scope.currentStep.instructions;
                                 } else {
-                                    $scope.instructions = 'Great Job!  Enter the complete quotient and remainder below.';
+                                    $scope.instructions = "Great Job!  Enter the quotient below"
+									$scope.addedInstructions = "(remember to round if necessary):";
                                     $scope.complete = true;
                                 }
 					
@@ -340,7 +341,7 @@ angular.module('mathSkills')
 								}
 								
                                 $scope.quotientOffset = steps.quotientOffset;
-                                $scope.finalAnswer = '\\grp{\\css{\\input{$$quotient}}{width200px}}{\\str{quotient}}';
+                                $scope.finalAnswer = '\\grp{\\css{\\input{$$answer}}{width200px}}{\\str{quotient}}';
 								$scope.downArrow = '↓';
 								$scope.arrowStep = false;
                                 changeStep();
