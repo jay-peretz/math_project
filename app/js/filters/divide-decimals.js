@@ -40,12 +40,14 @@ angular.module('mathSkills')
 					while (quotientFinal.length <= quotientExponent) {
 								quotientFinal = quotientFinal + "0";
 					} 
+					quotientFinal = quotientFinal.slice(0,(1 + Math.abs(quotientExponent))) + "." + quotientFinal.slice(1 + Math.abs(quotientExponent));
 				} else {
 					for (var ii = 0, expAbs = Math.abs(quotientExponent) - 1; ii < expAbs; ii += 1) {
 						quotientFinal = "0" + quotientFinal;
 					}
 					quotientFinal = "." + quotientFinal;
-				}					
+				}	
+				
 								
 				if (typeof returnWithSign !== "undefined" && returnWithSign === true) {
 					return sign + quotientFinal;

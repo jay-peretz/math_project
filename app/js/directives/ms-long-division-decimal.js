@@ -41,7 +41,6 @@ angular.module('mathSkills')
                 
                 dividend = +curDividend;
                 quotient = Math.floor(dividend / divisor);
-
 				for (var ii = 0, len = centralArray[0].length; ii < len; ii += 1) {
 					switch (true) {
 						case (ii < (poppedArr.length - dividend.toString().length)):
@@ -174,7 +173,8 @@ angular.module('mathSkills')
 					'$filter',
                     function ($scope, $timeout, $filter) {
                         var steps,
-							answer,
+							answerWithDecimal,
+							answerNoDecimal,
 							completedArrayCounter = 0,
 							positionFirstDigit,
 							completedArrayMinusLast,
@@ -310,12 +310,13 @@ angular.module('mathSkills')
 
                         $scope.$watch('divisor', function () {
                             if ($scope.dividend && $scope.divisor) {
-								answer = $filter('divide-decimals')($scope.dividend, $scope.divisor, $scope.digitsRightInExponential);
-								$scope.centralArray = new Array(answer.length * 3);
+								answerWithDecimal = $filter('divide-decimals')($scope.dividend, $scope.divisor, $scope.digitsRightInExponential);								
+								answerNoDecimal = answerWithDecimal.replace(".","");
+								$scope.centralArray = new Array(answerNoDecimal.length * 3);
 								$scope.completedArray = [];
 								//initialize $scope.centralArray, array from steps of Long Division
 								for (var ii = 0, len = $scope.centralArray.length; ii < len; ii += 1) {
-									$scope.centralArray[ii] = Array.apply(null, new Array(answer.toString().length)).map(function () {return "";});
+									$scope.centralArray[ii] = Array.apply(null, new Array(answerNoDecimal.toString().length)).map(function () {return "";});
 								}
 								$scope.dividend = moveDividendDecimal($scope.dividend, $scope.divisor);
 								$scope.divisor = $scope.divisor.replace(".","");
@@ -370,8 +371,9 @@ angular.module('mathSkills')
 								
                                 switch ($scope.currentStep.type) {
                                     case 'division':
-                                        if ($scope.quotientDone.length + 2	=== integerDigits($scope.dividend)) {
-                                        	$scope.quotientDone += $scope.currentStep.quotient + ".";
+										
+                                        if ($scope.quotientDone.indexOf(".") === -1 && integerDigits($scope.quotientDone) === integerDigits(answerWithDecimal)) {
+                                        	$scope.quotientDone += "." + $scope.currentStep.quotient;
 										} else {
 											$scope.quotientDone += $scope.currentStep.quotient;
 										}
