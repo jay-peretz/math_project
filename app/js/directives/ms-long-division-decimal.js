@@ -54,9 +54,6 @@ angular.module('mathSkills')
 						  break;
 					}
 				}
-				
-				// add space in front to accommodate "-" on multiplication step
-				centralArray[steps.length].unshift("");
 	
 				returnObject = {
                     type: 'division',
@@ -76,12 +73,8 @@ angular.module('mathSkills')
 				
 				for (var ii = 0, len = centralArray[0].length; ii < len; ii += 1) {
 					switch (true) {
-						case (ii < (poppedArr.length - product.toString().length - 1)):
+						case (ii <= (poppedArr.length - product.toString().length - 1)):
 						  centralArray[steps.length][ii] = "";
-						  break;
-						// numbers that have spaces in front, add "-" in front of number
-						case (ii === (poppedArr.length - product.toString().length - 1)):
-						  centralArray[steps.length][ii] = "-";
 						  break;
 						case (ii > (poppedArr.length - product.toString().length) - 1 && ii < poppedArr.length ):							
 						  centralArray[steps.length][ii] = product.toString().charAt(ii - (poppedArr.length - product.toString().length));
@@ -90,13 +83,6 @@ angular.module('mathSkills')
 						  centralArray[steps.length][ii] = "";
 						  break;
 					}
-				}
-				
-				// numbers with no blanks in front, add space with "-", else add space with ""
-			    if ((poppedArr.length - product.toString().length - 1) <= 0) {
-				 	centralArray[steps.length].unshift("-");
-			    } else {
-					centralArray[steps.length].unshift("");
 				}
 				
                 returnObject = {
@@ -130,9 +116,6 @@ angular.module('mathSkills')
 						  break;
 					}
 				}
-				
-				// add space in front to accommodate "-" on multiplication step
-				centralArray[steps.length].unshift("");
 				
                 returnObject = {
                     type: 'subtraction',
@@ -182,6 +165,8 @@ angular.module('mathSkills')
 							numberDigit,
 							completedArrayLength,
 							priorStepCarry = false,
+							noRemainder = false,
+							multStepSpace,
                             changeStep = function () {
                                 $scope.currentStep = steps.shift();
                                 if ($scope.currentStep !== undefined) {
@@ -316,21 +301,42 @@ angular.module('mathSkills')
 								$scope.completedArray = [];
 								//initialize $scope.centralArray, array from steps of Long Division
 								for (var ii = 0, len = $scope.centralArray.length; ii < len; ii += 1) {
-									$scope.centralArray[ii] = Array.apply(null, new Array(answerNoDecimal.toString().length)).map(function () {return "";});
+									$scope.centralArray[ii] = Array.apply(null, new Array($scope.dividend.replace(".","").length)).map(function () {return "";});
 								}
+								
 								$scope.dividend = moveDividendDecimal($scope.dividend, $scope.divisor);
 								$scope.divisor = $scope.divisor.replace(".","");
-                                steps = getLongDivisionSteps($scope.dividend, $scope.divisor, $scope.centralArray);
-								// remove the last two steps for the final dividend digit from steps
-								for (var ii = 0; ii < 2; ii += 1) {
-									steps.pop();
+								noRemainder = ((Number(answerWithDecimal) * Number($scope.divisor)) === Number($scope.dividend));
+                                steps = getLongDivisionSteps($scope.dividend, $scope.divisor, $scope.centralArray);					
+								// add "-" in front of number in multiplication rows
+								for (var ii = 0, len = $scope.centralArray.length; ii < len; ii += 1) {
+									if (steps[ii].type === "multiplication") {
+										multStepSpace = true;
+										for (var jj = 0, len2 = $scope.centralArray[0].length; jj < len2; jj += 1) {
+											if ($scope.centralArray[ii][jj] !== "" && multStepSpace) {
+												multStepSpace = false;
+												if (jj === 0) {
+													$scope.centralArray[ii].unshift("-");
+												} else {
+													$scope.centralArray[ii][jj-1] ="-";
+													$scope.centralArray[ii].unshift("");
+												}
+											} 												
+										}
+									} else {
+										$scope.centralArray[ii].unshift("");
+									}
 								}
+
 								// the steps of LongDivision become $scope.centralArray
 								$scope.centralArray = steps.centralArray;
 								
-								// remove last two steps (for final dividend digit), $scope.centralArray
-								for (var ii = 0; ii < 2; ii += 1) {
-									$scope.centralArray.pop();
+								// remove the last two steps for the final dividend digit
+								if (noRemainder === false) {
+									for (var ii = 0; ii < 2; ii += 1) {
+										steps.pop();
+										$scope.centralArray.pop();
+									}
 								}
 								
 								// remove first step entry, for steps completed display
