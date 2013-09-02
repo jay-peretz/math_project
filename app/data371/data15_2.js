@@ -96,7 +96,7 @@ angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUti
 		{ firstQuestion: 'Find the quotient of 6744.2 and 4.2;<br>round the answer to the $$roundTo place.', dividend: '6744.2', divisor: '4.2', extendedDividend: '6744.200', decimalMovedDivisor: '42',decimalMovedDividend: '67442.00', digitsRightInExponential: "5", roundTo: 'tenths', quotient: '1605.76', answer: '1605.8', buttonString: '\\grp{\\btn{6}{F}}{\\btn{7}{T}}{\\btn{4}{F}}{\\btn{4}{F}}{\\btn{2}{F}}{\\html{.}}{\\btn{0}{F}}{\\btn{0}{F}}', template: 'division' },
 		// note that digitsRightInExponential is the total number of digits in the answer less 1
 		// problem 3
-		{ firstQuestion: 'Find the quotient of 505.52 and 14.2.', dividend: '505.52', divisor: '14.2', extendedDividend: '505.52', decimalMovedDivisor: '142',decimalMovedDividend: '5055.2', digitsRightInExponential: "2", quotient: '35.6',  answer: '35.6', buttonString: '\\grp{\\btn{5}{F}}{\\btn{0}{F}}{\\btn{5}{T}}{\\html{.}}{\\btn{5}{F}}{\\btn{2}{F}}', template: 'division' },
+		{ firstQuestion: 'Find the quotient of 505.52 and 14.2.', dividend: '505.52', divisor: '14.2', extendedDividend: '505.52', decimalMovedDivisor: '142',decimalMovedDividend: '5055.2', digitsRightInExponential: "2", roundTo: 'tenths', quotient: '35.6',  answer: '35.6', buttonString: '\\grp{\\btn{5}{F}}{\\btn{0}{F}}{\\btn{5}{T}}{\\btn{5}{F}}{\\html{.}}{\\btn{2}{F}}', template: 'division' },
    ];
 
     return dataUtils.build(desc, template, data);
