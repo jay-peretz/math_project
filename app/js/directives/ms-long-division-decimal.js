@@ -173,7 +173,9 @@ angular.module('mathSkills')
                                     $scope.instructions = $scope.currentStep.instructions;
                                 } else {
                                     $scope.instructions = "Great Job!  Enter the quotient below"
-									$scope.addedInstructions = "(remember to round if necessary):";
+									if (noRemainder === false) {
+										$scope.addedInstructions = "(remember to round if necessary):";
+									}
                                     $scope.complete = true;
                                 }
 					
@@ -277,14 +279,17 @@ angular.module('mathSkills')
 								var newDividend;
 								if (decimalDigits(dividend) >= decimalDigits(divisor)) {
 									newDividend = dividend.slice(0,integerDigits(dividend)) + dividend.substr(integerDigits(dividend) + 1, decimalDigits(divisor))+"."+ dividend.slice(integerDigits(dividend) + decimalDigits(divisor) + 1);
-									return newDividend;
 								} else {
 									for (var ii = 0, len = decimalDigits(divisor) - decimalDigits(dividend); ii < len; ii += 1) {
 										dividend = dividend + "0";
 									}
 									newDividend = dividend.slice(0,integerDigits(dividend)) + dividend.substr(integerDigits(dividend) + 1, decimalDigits(divisor))+"."+ dividend.slice(integerDigits(dividend) + decimalDigits(divisor) + 1);
-									return newDividend;
 								}
+								// if the decimal place is last position in newDividend, remove it
+								if (newDividend.indexOf(".") === newDividend.length - 1) {
+									newDividend = newDividend.slice(0, newDividend.length - 1);
+								}
+								return newDividend;
 							};
 
                         $scope.$watch('expected', function () {
@@ -295,6 +300,7 @@ angular.module('mathSkills')
 
                         $scope.$watch('divisor', function () {
                             if ($scope.dividend && $scope.divisor) {
+								$scope.subtractionRowNumbers = [];
 								answerWithDecimal = $filter('divide-decimals')($scope.dividend, $scope.divisor, $scope.digitsRightInExponential);								
 								answerNoDecimal = answerWithDecimal.replace(".","");
 								$scope.centralArray = new Array(answerNoDecimal.length * 3);
@@ -305,7 +311,14 @@ angular.module('mathSkills')
 								}
 								
 								$scope.dividend = moveDividendDecimal($scope.dividend, $scope.divisor);
-								$scope.divisor = $scope.divisor.replace(".","");
+								
+								// if $scope.divisor consists of "0.x...", remove "0."; else remove "." 
+								if (integerDigits($scope.divisor) === 1 && $scope.divisor.charAt(0) === "0") {
+									$scope.divisor = $scope.divisor.substr(2);
+								} else {
+									$scope.divisor = $scope.divisor.replace(".","");
+								}
+								
 								noRemainder = ((Number(answerWithDecimal) * Number($scope.divisor)) === Number($scope.dividend));
                                 steps = getLongDivisionSteps($scope.dividend, $scope.divisor, $scope.centralArray);					
 								// add "-" in front of number in multiplication rows
@@ -356,7 +369,6 @@ angular.module('mathSkills')
                         });
 
                         $scope.completedSteps = [];
-						$scope.subtractionRowNumbers = [];
                         $scope.quotientDone = '';
                         $scope.controllerId = Math.random().toString();
 
@@ -519,7 +531,7 @@ angular.module('mathSkills')
 						}
 						
 						$scope.getLineUnder = function (index) {
-							if (typeof $scope.currentStep !== "undefined" && $scope.subtractionRowNumbers.indexOf(index) !== -1) {
+							if ((typeof $scope.currentStep !== "undefined" || $scope.complete) && $scope.subtractionRowNumbers.indexOf(index) !== -1) {
 								return "rowWithBottom";
 							}
 						}
