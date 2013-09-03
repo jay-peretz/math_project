@@ -103,6 +103,7 @@
 	ms-long-division-decimal .displayNone {
 		display: none;
 	}
+	/* class rowWithBottom empty but necessary to turn on underline in combination with borderBottom*/
 	.rowWithBottom {
 	}
 	ms-long-division-decimal .rowWithBottom .borderBottom {
@@ -111,6 +112,10 @@
 	}
 	ms-long-division-decimal .rowWithBottom .borderBlank {
 		padding-bottom: 11px;
+	}
+	ms-long-division-decimal .fixedWidthTD {
+		width:96px;
+		text-align:right;
 	}
 </style>
 <div class="alert alert-info">{{instructions}}<br />{{addedInstructions}}</div>
@@ -121,7 +126,7 @@
 </div>
 <table class=table-collapse-separate>
     <tr>
-        <td></td>
+        <td style="width:120px;text-align:right;"></td>
         <td class=quotient>
             <span>&nbsp;</span>
             <span ng-bind-html-unsafe="quotientDone | stylecharacter:quotientOffset:true"></span>
@@ -133,14 +138,13 @@
         </td>
     </tr>
     <tr>
-        <td class=divisorstyle>{{divisor}}</td>
+        <td class=divisorstyle style="width:96px;text-align:right;">{{divisor}}</td>
         <td class=dividendstyle style="padding-left:20px;"><span ng-bind-html-unsafe="dividend | stylecharacter"></span></td>
     </tr>
 </table>
-<table class="collapseTable" style="margin-left:10px;">
+<table class="collapseTable">
     <tr>
-        <td>
-        	<!--<span ng-show=step.gutterMinus class="digit minus">-</span>-->
+        <td style="width:96px;text-align:right;">
         </td>
     	<td>
     		<table class="collapseTable">
@@ -163,19 +167,8 @@
             </table>
         </td>
     </tr>
-    <!--<tr ng-show=showCarry()>
-    	<td></td>
-        <td>
-        	<span ng-bind-html-unsafe="currentStep.leading | digits:currentStep.offset"></span>
-            <span ng-switch on=showCarry()>
-                <span ng-switch-when=true>
-                    <ms-input expected="{{currentStep.carry | wrap:'input'}}" class=digit></ms-input>
-                </span>
-            </span>
-        </td>
-    </tr>-->
     <tr ng-show=showProduct()>
-        <td></td>
+        <td style="width:96px;text-align:right;"></td>
         <td>
         	<span ng-bind-html-unsafe="[] | digits:(currentOffset+1)"></span>
             <span ng-switch on=showProduct()>
@@ -186,7 +179,7 @@
         </td>
     </tr>
     <tr ng-show=showDifference()>
-        <td></td>
+        <td style="width:96px;text-align:right;"></td>
         <td>
         	<span ng-bind-html-unsafe="[] | digits:(currentOffset+1)"></span>
             <span ng-switch on=showDifference()>
