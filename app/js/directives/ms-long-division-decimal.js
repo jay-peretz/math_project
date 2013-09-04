@@ -277,13 +277,22 @@ angular.module('mathSkills')
 							},
 							moveDividendDecimal = function(dividend, divisor) {
 								var newDividend;
+								console.log("dividend is: ",dividend," divisor is: ",divisor," decimalDigits(dividend) is: ",decimalDigits(dividend)," decimalDigits(divisor) is: ",decimalDigits(divisor));
 								if (decimalDigits(dividend) >= decimalDigits(divisor)) {
-									newDividend = dividend.slice(0,integerDigits(dividend)) + dividend.substr(integerDigits(dividend) + 1, decimalDigits(divisor))+"."+ dividend.slice(integerDigits(dividend) + decimalDigits(divisor) + 1);
+									newDividend = dividend.slice(0,integerDigits(dividend)) + dividend.substr(integerDigits(dividend) + 1, decimalDigits(divisor))+"."+ dividend.slice(integerDigits(dividend) + 1 + decimalDigits(divisor));
+									//special instance for only zeros in decimal portion of dividend
+									if (decimalDigits(dividend) > 0 && Number(dividend.slice(dividend.indexOf(".") + 1)) === 0) {
+										for (var ii = 0, addDigits = decimalDigits(dividend) - decimalDigits(newDividend); ii < addDigits; ii += 1) {
+											newDividend = newDividend + "0";
+										}
+									}
+									console.log("1 newDividend is: ",newDividend);
 								} else {
 									for (var ii = 0, len = decimalDigits(divisor) - decimalDigits(dividend); ii < len; ii += 1) {
 										dividend = dividend + "0";
 									}
 									newDividend = dividend.slice(0,integerDigits(dividend)) + dividend.substr(integerDigits(dividend) + 1, decimalDigits(divisor))+"."+ dividend.slice(integerDigits(dividend) + decimalDigits(divisor) + 1);
+									console.log("2 newDividend is: ",newDividend);
 								}
 								// if the decimal place is last position in newDividend, remove it
 								if (newDividend.indexOf(".") === newDividend.length - 1) {
@@ -317,7 +326,8 @@ angular.module('mathSkills')
                         $scope.$watch('divisor', function () {
                             if ($scope.dividend && $scope.divisor) {
 								$scope.subtractionRowNumbers = [];
-								answerWithDecimal = $filter('divide-decimals')($scope.dividend, $scope.divisor, $scope.digitsRightInExponential);								
+								answerWithDecimal = $filter('divide-decimals')($scope.dividend, $scope.divisor, $scope.digitsRightInExponential);	
+								console.log("answerWithDecimal is: ",answerWithDecimal );
 								answerNoDecimal = answerWithDecimal.replace(".","");
 								$scope.centralArray = new Array(answerNoDecimal.length * 3);
 								$scope.completedArray = [];
