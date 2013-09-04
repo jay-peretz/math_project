@@ -170,6 +170,7 @@ angular.module('mathSkills')
 							priorStepCarry = false,
 							noRemainder = false,
 							multStepSpace,
+							arrayAnswerDivisor = [],
                             changeStep = function () {
                                 $scope.currentStep = steps.shift();
                                 if ($scope.currentStep !== undefined) {
@@ -277,7 +278,7 @@ angular.module('mathSkills')
 							},
 							moveDividendDecimal = function(dividend, divisor) {
 								var newDividend;
-								console.log("dividend is: ",dividend," divisor is: ",divisor," decimalDigits(dividend) is: ",decimalDigits(dividend)," decimalDigits(divisor) is: ",decimalDigits(divisor));
+
 								if (decimalDigits(dividend) >= decimalDigits(divisor)) {
 									newDividend = dividend.slice(0,integerDigits(dividend)) + dividend.substr(integerDigits(dividend) + 1, decimalDigits(divisor))+"."+ dividend.slice(integerDigits(dividend) + 1 + decimalDigits(divisor));
 									//special instance for only zeros in decimal portion of dividend
@@ -286,13 +287,11 @@ angular.module('mathSkills')
 											newDividend = newDividend + "0";
 										}
 									}
-									console.log("1 newDividend is: ",newDividend);
 								} else {
 									for (var ii = 0, len = decimalDigits(divisor) - decimalDigits(dividend); ii < len; ii += 1) {
 										dividend = dividend + "0";
 									}
 									newDividend = dividend.slice(0,integerDigits(dividend)) + dividend.substr(integerDigits(dividend) + 1, decimalDigits(divisor))+"."+ dividend.slice(integerDigits(dividend) + decimalDigits(divisor) + 1);
-									console.log("2 newDividend is: ",newDividend);
 								}
 								// if the decimal place is last position in newDividend, remove it
 								if (newDividend.indexOf(".") === newDividend.length - 1) {
@@ -327,7 +326,6 @@ angular.module('mathSkills')
                             if ($scope.dividend && $scope.divisor) {
 								$scope.subtractionRowNumbers = [];
 								answerWithDecimal = $filter('divide-decimals')($scope.dividend, $scope.divisor, $scope.digitsRightInExponential);	
-								console.log("answerWithDecimal is: ",answerWithDecimal );
 								answerNoDecimal = answerWithDecimal.replace(".","");
 								$scope.centralArray = new Array(answerNoDecimal.length * 3);
 								$scope.completedArray = [];
@@ -336,9 +334,7 @@ angular.module('mathSkills')
 									$scope.centralArray[ii] = Array.apply(null, new Array($scope.dividend.replace(".","").length)).map(function () {return "";});
 								}
 								
-								console.log("1 $scope.dividend is: ",$scope.dividend);
 								$scope.dividend = moveDividendDecimal($scope.dividend, $scope.divisor);
-								console.log("2 $scope.dividend is: ",$scope.dividend);
 								
 								// if $scope.divisor consists of "0.x...", remove "0."; else remove "." 
 								if (integerDigits($scope.divisor) === 1 && $scope.divisor.charAt(0) === "0") {
@@ -347,7 +343,8 @@ angular.module('mathSkills')
 									$scope.divisor = $scope.divisor.replace(".","");
 								}
 								
-								noRemainder = ((Number(answerWithDecimal) * Number($scope.divisor)) === Number($scope.dividend));
+								arrayAnswerDivisor = [Number(answerWithDecimal), Number($scope.divisor)];
+								noRemainder = ($filter('multiply-decimals')(arrayAnswerDivisor) === Number($scope.dividend));
                                 steps = getLongDivisionSteps($scope.dividend, $scope.divisor, $scope.centralArray);					
 								
 								// add "-" in front of number in multiplication rows
