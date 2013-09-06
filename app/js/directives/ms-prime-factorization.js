@@ -45,7 +45,7 @@ angular.module('mathSkills')
                                             template += '{\\input{' + base + '}}';
                                         }
                                         if (base + 1 !== arr.length) {
-                                            template += '{\\str{·}}';
+                                            template += '{\\html{&bull;}}';
                                         }
                                         return template
                                     }, '\\grp');
