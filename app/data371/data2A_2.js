@@ -56,7 +56,7 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
             {  //3
                 chart: dataUtils.pre('\\chart{Time (in seconds) to Run 220 Meters}{6}{5}{["Athlete","Race #1","Race #2","Race #3","Race #4","Runner A","27","29","29","29","Runner B","30","28","28","26","Runner C","26","30","27","24","Runner D","24","28","30","28","Runner E","27","24","28","24"]}'), 
                 question: 'How many of the runners had a time of 25 seconds or better in at least one race?', template: 'main', answerBtn: 'noAnswer',
-                answertxt: '3 runners ran at least one race under 25 seconds',
+                answertxt: '3 runners ran at least one race in 25 seconds or faster',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
                 button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 2 runners}}'),
                 button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 0 runners}}'),
