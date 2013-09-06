@@ -28,7 +28,6 @@ angular.module('mathSkills')
                         });
                         $scope.cols = +args[1];
                         $scope.highlighted = +args[0];
-                        console.log($scope.rows, args);
                     }
                 });
 

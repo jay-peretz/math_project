@@ -12,7 +12,8 @@
 <table>
     <tbody>
         <tr ng-repeat="row in rows">
-            <td><table><tr><td ng-repeat="box in row" class=border ng-class="{ highlight: isHighlighted($parent.$index, $index) }"></td></tr></table></td>
+            <td><table><tr><td ng-repeat="box in row" class=border ng-class="{ highlight: isHighlighted($parent.$index, $index) }"></td></tr><tr>&nbsp;</tr></table></td>
+
         </tr>
     </tbody>
 </table>
