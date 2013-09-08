@@ -66,8 +66,9 @@ angular.module('mathSkills')
                                 badAnswer = function () {
                                     data.result = 'incorrect';
                                     $scope.class = 'error';
+                                    $scope.answer = "";
                                     $timeout(function () {
-                                        $scope.answer = "";
+                                        
                                         $scope.class = '';
                                     }, 900);
                                 };
