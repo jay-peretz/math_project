@@ -87,7 +87,7 @@ angular.module('mathSkills').value('data4_1', {
             title: 'Main Answer',
             children: [{
                 problem: '\\html{Determine the mode(s) for these values:<br>465, 465, 534, 557, 557.<br><br>If the numbers have no mode, enter "none".<br>If there is more than one mode, enter them in ascending order.}',
-                answer: '\\css{grp{\\input{465}}{\\input{557}}}{mode}',
+                answer: '\\css{grp{\\input{[465,557]}}{\\input{[557,465]}}}{mode}',
                 controls: {
                     "checkAnswer": true,
                     "help": '\\css{\\html{Solution<br><br><span class=red>465 465</span> 534 <span class=red>557 557</span><br><br>Sort the numbers in ascending order. Then select the number or numbers that appear most frequently.The mode is: 465 & 557.}}{help_4-1}'
