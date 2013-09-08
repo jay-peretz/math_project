@@ -52,7 +52,7 @@ angular.module('mathSkills')
                         });
 
                         // Hide the feedback label when the user clicks help.
-                        $scope.$on('checkHelp', function () {
+                        $scope.$on('triggerCheckHelp', function () {
                             $scope.feedback.show = false;
                         });
                     }
