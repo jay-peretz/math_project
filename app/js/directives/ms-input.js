@@ -120,7 +120,11 @@ angular.module('mathSkills')
                             $scope.class = 'success';
                         } else {
                             $scope.class = 'error';
-                            $scope.answer = '';
+                            $scope.answer = "";
+                            $timeout(function () {
+                                
+                                $scope.class = '';
+                            }, 900);
                         }
                     });
 

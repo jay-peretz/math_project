@@ -82,10 +82,10 @@ angular.module('mathSkills')
                                 var answer = +data.answer.slice(7, -1);
                                 e.stopPropagation();
 
-                                if ($scope.factorStep) {
+                                if ($scope.factorStep) { console.log('case 1');
                                     var factorIndex = $scope.primeFactors.indexOf(answer);
 
-                                    if (factorIndex !== -1) {
+                                    if (factorIndex !== -1) { console.log('case 2');
                                         $scope.factorStep = false;
                                         $scope.instructions = 'Divide ' + $scope.factoring + ' by ' + answer;
                                         $timeout(function () {
@@ -102,10 +102,13 @@ angular.module('mathSkills')
                                             $scope.complete = true;
                                             $scope.instructions = 'Last step: enter the factors in ascending order and group like factors into exponents.';
                                         }
-                                    } else {
+                                    } else { console.log('case 3');
                                         $scope.$broadcast('answerFeedback', { result: 'incorrect' });
+                                        $timeout(function () {
+                                            $scope.$broadcast('checkFocus');
+                                        }, 0);
                                     }
-                                } else {
+                                } else { 
                                     if (answer === $scope.factoring) {
                                         $scope.factorStep = true;
                                         $scope.instructions = 'Enter a prime factor of ' + $scope.factoring;
@@ -115,6 +118,9 @@ angular.module('mathSkills')
                                         $scope.$broadcast('answerFeedback', { result: 'correct' });
                                     } else {
                                         $scope.$broadcast('answerFeedback', { result: 'incorrect' });
+                                        $timeout(function () {
+                                            $scope.$broadcast('checkFocus');
+                                        }, 0);
                                     }
                                 }
                             }
