@@ -104,8 +104,8 @@ angular.module('mathSkills')
 						switch (data.label) {
 							case "simplified":
 								if (data.result === "correct") {
-									if (parser.extractTag(data.expected).args[0] !== 'No') {
-										$scope.instructions = "\\row{\\str{What is a common factor of the numerator and denominator of \xA0}}{"+currentFraction()+"}{\\str{\xA0 ?}}";
+									if (parser.extractTag(data.expected).args[0] !== '\\btn{Yes}{F}') {
+										$scope.instructions = "\\grp{\\str{What is a common factor of the numerator and denominator of \xA0}}{"+currentFraction()+"}{\\str{\xA0 ?}}";
 										$scope.answerexp = '\\input{["' + commonFactors(reduceFraction(false).numerator, reduceFraction(false).denominator).join('","') + '"]}';
 										$scope.answerlbl = "factor";
                                         focus();
