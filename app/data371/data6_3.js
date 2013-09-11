@@ -194,10 +194,10 @@ angular.module('mathSkills').service('data6_3', ['dataUtils', function (dataUtil
             { leftNum: '6', leftDen: '9', rightNum: '10', rightDen: '15', firstButton: 'T', secondButton: 'F', equalOrNot: '=', productLeft:'90',  productRight:'90', yesOrNo: 'Yes', template: 'first' },
             { leftNum: '16', leftDen: '18', rightNum: '8', rightDen: '20', firstButton: 'F', secondButton: 'T', equalOrNot: '\u2260', productLeft:'320', productRight:'144', yesOrNo: 'No', template: 'first' },
 			{ problemText: 'Solve for the missing number.', problemNum1: '3', problemDen1: '6', problemNum2: '15', answer: '30', helpProduct:'90', template: 'unknownRightDen' },
-			{ problemText: 'Solve for the missing number.', problemNum1: '76', problemNum2: '19',  problemDen2: '21',answer: '84', helpProduct:'1596', template: 'unknownLeftDen' },
+			{ problemText: 'Solve for the missing number.', problemNum1: '15', problemNum2: '6',  problemDen2: '8',answer: '20', helpProduct:'120', template: 'unknownLeftDen' },
 			{ problemText: 'Solve for the missing number.', problemNum1: '27', problemDen1: '26', problemDen2: '104', answer: '108', helpProduct:'2808', template: 'unknownRightNum' },
-			{ problemText: 'Solve for the missing number.', problemDen1: '45', problemNum2: '75', problemDen2: '25', answer: '135', helpProduct:'3375', template: 'unknownLeftNum' },
-			{ problemText: 'Solve for the missing number.', problemNum1: '19', problemDen1: '38 ', problemDen2: '152', answer: '76', helpProduct:'2888', template: 'unknownRightNum' }	
+			{ problemText: 'Solve for the missing number.', problemDen1: '4', problemNum2: '25', problemDen2: '10', answer: '10', helpProduct:'100', template: 'unknownLeftNum' },
+			{ problemText: 'Solve for the missing number.', problemNum1: '19', problemDen1: '38 ', problemDen2: '4', answer: '2', helpProduct:'76', template: 'unknownRightNum' }	
         ];
 
 	return dataUtils.build(desc, template, data);
