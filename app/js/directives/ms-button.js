@@ -9,10 +9,12 @@ angular.module('mathSkills')
     }])
     .directive('msButton', [
         'parser',
-        function (parser) {
+        '$timeout',
+        function (parser, $timeout) {
             return {
                 controller: function ($scope, $element) {
                     $scope.controllerId = Math.random().toString();
+                    $scope.lock = false; 
                     
                     // Extract the args array.
                     $scope.$watch('expected', function () {
@@ -33,55 +35,69 @@ angular.module('mathSkills')
                     });
                     
                     $scope.$on('checkFocus', function (e) {
-                        // If this event has not been marked as ignored.
-                        if (e.defaultPrevented === false) {
-                            // handle check focus event for parent scope.
-                            // set focus on button element, fire a focused event.
-                            $element.find('button').focus(); 
-                            $scope.$emit('focused', {
-                                controllerId: $scope.controllerId
-                            });
-                        }
+                        if ($scope.lock === false) {
+                            // If this event has not been marked as ignored.
+                            if (e.defaultPrevented === false) {
+                                // handle check focus event for parent scope.
+                                // set focus on button element, fire a focused event.
+                                $element.find('button').focus(); 
+                                $scope.$emit('focused', {
+                                    controllerId: $scope.controllerId
+                                });
+                            }
+                        } 
+                        
                     });
 
                     $scope.$on('checkHelp', function (e) {
-                        // If this event has not been marked as ignored.
-                        if (e.defaultPrevented === false) {
-                            // handle check help event for parent scope.
-                            // button does not use help, fire a notHelped event.
-                            
-                            if ($scope.args[1] === "T") {
-                                $scope.class = 'success';
+                        if ($scope.lock === false) {
+                            // If this event has not been marked as ignored.
+                            if (e.defaultPrevented === false) {
+                                // handle check help event for parent scope.
+                                // button does not use help, fire a notHelped event.
                                 
-                                $scope.$emit('helped', {
-                                    controllerId: $scope.controllerId
-                                });
-                                
-                            } else {
-                                
-                                $scope.$emit('notHelped', {
-                                    controllerId: $scope.controllerId
-                                });
+                                if ($scope.args[1] === "T") {
+                                    $scope.class = 'success';
+                                    
+                                    $scope.$emit('helped', {
+                                        controllerId: $scope.controllerId
+                                    });
+                                    
+                                } else {
+                                    
+                                    $scope.$emit('notHelped', {
+                                        controllerId: $scope.controllerId
+                                    });
+                                }
                             }
                         }
                     });
 
-                    $element.on('click', 'button', function (event) {
-                        var data = {
-                            expected: $scope.expected,
-                            answer: '\\but{' + $scope.args[0] + '}{' + $scope.args[1] + '}',
-                            label: $scope.label
-                        };
+                    $scope.$on('butLock', function (e, val) { 
+                        $scope.lock = val ? true : false;
+                    });
 
-                        if ($scope.args[1] === "T") {
-                            data.result = 'correct';
-                            $scope.class = 'success';
-                        } else {
-                            data.result = 'incorrect';
-                            $scope.class = 'danger';
+                    $element.on('click', 'button', function (event) {
+                        if ($scope.lock === false) {
+                            var data = {
+                                expected: $scope.expected,
+                                answer: '\\but{' + $scope.args[0] + '}{' + $scope.args[1] + '}',
+                                label: $scope.label
+                            };
+    
+                            if ($scope.args[1] === "T") {
+                                data.result = 'correct';
+                                $scope.class = 'success';
+                            } else {
+                                data.result = 'incorrect';
+                                $scope.class = 'danger';
+                                $timeout(function () {
+                                    $scope.class = '';
+                                }, 900);
+                            }
+                            $scope.$emit('answer', data);
+                            $scope.$apply();
                         }
-                        $scope.$emit('answer', data);
-                        $scope.$apply();
                     });
                 },
                 restrict: 'E',

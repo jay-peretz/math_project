@@ -67,7 +67,7 @@ angular.module('mathSkills')
                             if (index === $scope.index) {
 								// arrow downward {\\html{&#9660;}}
                                 return '\\col{\\str{' + convertSigns(op.value) + '}}{css{\\html{&#125;}}{brace90}}{\\input{' + Expression.evalQueueValue($scope.currentExpression) + '}}';
-                            } else {
+                            } else {//console.log('this is $scope.evalQueue ', $scope.evalQueue)
                                 return '\\but{' + convertSigns(op.value) + '}{' + (op.operation === $scope.evalQueue[0].operator.operation ? 'T' : 'F') + '}';
                             }
                     }
@@ -89,7 +89,7 @@ angular.module('mathSkills')
                                     $scope.index = +data.label;
                                     $scope.currentExpression = $scope.evalQueue.shift();
                                     $scope.instructions = 'Solve ' + $scope.currentExpression.op1.value + ' ' + $scope.currentExpression.operator.value + ' ' + $scope.currentExpression.op2.value + '.';
-                                    $timeout(function () { $scope.$broadcast('checkFocus'); }, 0);
+                                    $timeout(function () { $scope.$broadcast('checkFocus'); $scope.$broadcast('butLock', true); }, 0);
                                 }
                                 break;
                             case 'input' :
@@ -112,6 +112,7 @@ angular.module('mathSkills')
                                     } else {
                                         $scope.instructions = 'Click on the next operator that should be evaluated.';
                                     }
+                                    $scope.$broadcast('butLock', false); 
                                 } else {
                                     $scope.$broadcast('checkFocus');
                                 }

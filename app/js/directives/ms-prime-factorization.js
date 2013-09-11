@@ -82,10 +82,10 @@ angular.module('mathSkills')
                                 var answer = +data.answer.slice(7, -1);
                                 e.stopPropagation();
 
-                                if ($scope.factorStep) { console.log('case 1');
+                                if ($scope.factorStep) {
                                     var factorIndex = $scope.primeFactors.indexOf(answer);
 
-                                    if (factorIndex !== -1) { console.log('case 2');
+                                    if (factorIndex !== -1) {
                                         $scope.factorStep = false;
                                         $scope.instructions = 'Divide ' + $scope.factoring + ' by ' + answer;
                                         $timeout(function () {
@@ -102,7 +102,7 @@ angular.module('mathSkills')
                                             $scope.complete = true;
                                             $scope.instructions = 'Last step: enter the factors in ascending order and group like factors into exponents.';
                                         }
-                                    } else { console.log('case 3');
+                                    } else {
                                         $scope.$broadcast('answerFeedback', { result: 'incorrect' });
                                         $timeout(function () {
                                             $scope.$broadcast('checkFocus');
