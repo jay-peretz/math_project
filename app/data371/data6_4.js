@@ -27,7 +27,7 @@ angular.module('mathSkills').service('data6_4', ['dataUtils', function (dataUtil
 						answer: '\\reducefrac{\\frac{\\fracstr{$probNum}}{\\fracstr{$probDen}}}',
 						controls: {
 							"checkAnswer": true,
-							"help": false
+							"help": true
 						}
                     }]
                 }]

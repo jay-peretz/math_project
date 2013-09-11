@@ -97,6 +97,11 @@ angular.module('mathSkills')
                     e.preventDefault();
                     $scope.$$childTail.$broadcast('checkFocus');
                 });
+				
+				$scope.$on('checkHelp', function (e) {
+                    e.preventDefault();
+                    $scope.$$childTail.$broadcast('checkHelp');
+                });
 
                 $scope.$on('answer', function(e, data) {
 					if (data.controllerId !== $scope.controllerId) {
