@@ -98,7 +98,7 @@ angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtil
             { n1: 63, d1: 72, n2: 64, d2: 99, na: 56, da: 99, template: 'two' },
             { n1: 3, d1: 5, n2: 10, d2: 18, n3: 15, d3: 20, na: 1, da: 4, template: 'three' },
             { n1: 12, d1: 24, n2: 36, d2: 6, n3: 18, d3: 32, na: 27, da: 16, template: 'three' },
-            { n1: 65, d1: 77, n2: 55, d2: 104, n3: 84, d3: 132, na: 25, da: 88, template: 'three' }
+            { n1: 26, d1: 77, n2: 22, d2: 52, n3: 14, d3: 6, na: 1, da: 3, template: 'three' }
         ];
     
     return dataUtils.build(desc, template, data);
