@@ -78,13 +78,14 @@ angular.module('mathSkills')
                     });
 
                     $element.on('click', 'button', function (event) {
-                        if ($scope.lock === false) {
-                            var data = {
-                                expected: $scope.expected,
-                                answer: '\\but{' + $scope.args[0] + '}{' + $scope.args[1] + '}',
-                                label: $scope.label
-                            };
+                        
+                        var data = {
+                            expected: $scope.expected,
+                            answer: '\\but{' + $scope.args[0] + '}{' + $scope.args[1] + '}',
+                            label: $scope.label
+                        };
     
+                        if ($scope.lock === false) {
                             if ($scope.args[1] === "T") {
                                 data.result = 'correct';
                                 $scope.class = 'success';
@@ -97,6 +98,14 @@ angular.module('mathSkills')
                             }
                             $scope.$emit('answer', data);
                             $scope.$apply();
+                        } else {
+                            $scope.class = 'danger';
+                            $timeout(function () {
+                                $scope.class = '';
+                            }, 900);
+                            data.focus = true;
+                            data.result = 'incorrect';
+                            $scope.$emit('answer', data);
                         }
                     });
                 },

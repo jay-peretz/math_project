@@ -90,6 +90,9 @@ angular.module('mathSkills')
                                     $scope.currentExpression = $scope.evalQueue.shift();
                                     $scope.instructions = 'Solve ' + $scope.currentExpression.op1.value + ' ' + $scope.currentExpression.operator.value + ' ' + $scope.currentExpression.op2.value + '.';
                                     $timeout(function () { $scope.$broadcast('checkFocus'); $scope.$broadcast('butLock', true); }, 0);
+                                } else {
+                                    
+                                    if (data.focus) { $scope.$broadcast('checkFocus')}
                                 }
                                 break;
                             case 'input' :
