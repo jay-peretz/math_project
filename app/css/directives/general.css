@@ -127,3 +127,6 @@ ul.nav-list li {
 button.btn {
 	font-size:75%;
 }
+.underline {
+	text-decoration:underline;
+}
