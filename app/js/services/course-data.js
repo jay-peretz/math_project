@@ -10,7 +10,7 @@ angular.module('mathSkills.services')
         'data5_1', 'data5_2', 'data5_3', 'data5_4',
         'data6_1', 'data6_2', 'data6_3', 'data6_4',
         'data7_1', 'data7_2', 'data7_3', 'data7_4',
-        'data8_1', 'data8_2', 'data8_3', 'data8_4',
+        'data8_1', 'data8_2', 'data8_3', 'data8_4', 'data8_5',
         'data9_1', 'data9_2', 'data9_3', 'data9_4',
         'data10_1', 'data10_2', 'data10_3', 'data10_4',
         'data11_1',
@@ -34,7 +34,7 @@ angular.module('mathSkills.services')
             data5_1, data5_2, data5_3, data5_4,
             data6_1, data6_2, data6_3, data6_4,
             data7_1, data7_2, data7_3, data7_4,
-            data8_1, data8_2, data8_3, data8_4,
+            data8_1, data8_2, data8_3, data8_4, data8_5,
             data9_1, data9_2, data9_3, data9_4,
             data10_1, data10_2, data10_3, data10_4,
             data11_1,
@@ -69,7 +69,7 @@ angular.module('mathSkills.services')
                     children: [
                         data6_1, data6_2, data6_3, data6_4,
                         data7_1, data7_2, data7_3, data7_4,
-                        data8_1, data8_2, data8_3, data8_4,
+                        data8_1, data8_2, data8_3, data8_4, data8_5,
                         data9_1, data9_2, data9_3, data9_4,
                         data10_1, data10_2, data10_3, data10_4,
                         data11_1
