@@ -130,3 +130,6 @@ button.btn {
 .underline {
 	text-decoration:underline;
 }
+.width400 {
+	width: 400px;
+}
