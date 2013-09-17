@@ -46,15 +46,14 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
                         }
                     }, {
                         problem: '\\image{$illustration}',
-                        answer:
-                            '\\wb{' +
+                        answer: '\\wb{' +
                                 '\\rowgrp' +
                                     '{\\choose{[' +
-                                        '\\ins{Yes. Write a setup that will solve for the total number of houses in the subdivision.},' +
-                                        '\\ins{We must divide to solve this problem. The given total value has been divided up into equal-sized parts&mdash;each worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars.  Each <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars represents one house. Write a setup that will solve for the number of houses in the subdivision.}' +    
-                                    ']}{$$previousCorrect}}' +
-                                    '{\\grp{\\html{&#36;}}{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{million dollars}}{\\sign{&div;}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{\\html{million dollars}}}' + 
-                            '}',
+                                        '\\rowgrp{\\css{\\ins{Yes. Write a setup that will solve for the total number of houses in the subdivision.}}{width400}}{\\html{<br><br>}},' +
+                                        '\\css{\\ins{We must divide to solve this problem. The given total value has been divided up into equal-sized parts&mdash;each worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars.  Each <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars represents one house. Write a setup that will solve for the number of houses in the subdivision.}}{width400}' +    
+                                    ']}{$$previousCorrect}}' +                                    
+									'{\\grp{\\select{$firstunitwhole $firstunitn/$firstunitd million dollars}{["$firstunitwhole $firstunitn/$firstunitd million dollars", "$secondunitn/$secondunitd million dollars"]}}{\\sign{&div;}}{\\select{$secondunitn/$secondunitd million dollars}{["$firstunitwhole $firstunitn/$firstunitd million dollars", "$secondunitn/$secondunitd million dollars"]}}}' +
+                            	'}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -119,8 +118,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
                         }
                     }, {
                         problem: '\\image{$illustration}',
-                        answer:
-                            '\\wb{' +
+                        answer: '\\wb{' +
                                 '\\rowgrp' +
                                     '{\\choose{[' +
                                         '\\rowgrp{\\css{\\ins{Yes, now write a setup that will solve this problem.}}{width400}}{\\html{<br><br>}},' +
