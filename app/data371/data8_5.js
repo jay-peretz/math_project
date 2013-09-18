@@ -13,7 +13,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
                     title: 'Main Answer',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\col{\\ins{There are houses worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars in a subdivision. If each house is worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a million dollars, how many houses are in the subdivision?}}{\\input{$number}}',
+                        answer: '\\rowgrp{\\ins{There are houses worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub>   in a subdivision. If each house is worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a million dollars, how many houses are in the subdivision?}}{\\grp{\\input{$number}}{html{houses}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -80,7 +80,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
                     title: 'Main Answer',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\col{\\ins{$number houses in a subdivision are worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars.  What is the value of each house (know that each house is priced exactly the same)?}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}',
+                        answer: '\\rowgrp{\\ins{$number houses in a subdivision are worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars.  What is the value of each house (know that each house is priced exactly the same)?}}{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{html{million dollars}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -211,7 +211,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
                                 '\\rowgrp' +
                                     '{\\choose{[' +
                                         '\\rowgrp{\\css{\\ins{Now solve the problem.}}{width400}}{\\html{<br><br>}},' +
-                                        '\\css{\\ins{This is a repeated addition or multiplication problem.  The value of each house, <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars, needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}}{width400}' +
+                                        '\\css{\\ins{This is a *repeated addition* or multiplication problem.  The value of each house, <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars, needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}}{width400}' +
                                     ']}{$$previousCorrect}}' +
                                     '{\\grp{\\frac{\\str{$secondunitn}}{\\str{$secondunitd}}}{\\html{million dollars}}{\\sign{&bull;}}{\\html{$number}}{\\html{houses}}{\\sign{=}}{\\grp{\\html{&#36;}}{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{million dollars}}}}' +
                             '}',
@@ -222,14 +222,13 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
                     }]
                 }]
             },
-            /// houses div frac
-             housesDivFrac1: {
+            cookiesDiv1: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\html{<img src=img/illustrations/$illustration>}',
-                        answer: '\\col{\\ins{There are <sup>$totaln</sup>&#8260;<sub>$totald</sub> acres of land to be developed. If each house is to occupy <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre, how many houses will the developer be able to build?}}{\\input{$number}}',
+                        problem: '\\image{$illustration}',
+                        answer: '\\rowgrp{\\ins{There are cookies weighing a total of $firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds in a jar. How many $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub>-pound portions of cookies are in the jar?}}{\\grp{\\input{$number}}{html{portions}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -239,20 +238,20 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\html{<img src=img/illustrations/$illustration>}',
-                        answer: '\\wb{\\rowgrp{\\ins{You have been given the <strong>total</strong> number of acres of land where houses will be built.  How many acres are needed to build <u>one</u> house?}}{\\frac{\\input{$unitn}}{\\input{$unitd}}}}',
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{\\rowgrp{\\ins{You have been given the <strong>total</strong> weight of the cookies in the jar.  What is the weight of <u>one</u> portion?}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{html{pounds}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\html{<img src=img/illustrations/$illustration>}',
+                        problem: '\\image{$illustration}',
                         answer:
                             '\\wb{' +
                                 '\\rowgrp' + 
                                     '{\\choose{[' +
-                                        '\\ins{Yes, each house occupies <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre. To find out how many houses (each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre in size) will fit into the total <sup>$totaln</sup>&#8260;<sub>$totald</sub> acres, what operation must we use?},' +
-                                        '\\ins{No, we are told that each house occupies <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre. To find out how many houses (each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre in size) will fit into the total <sup>$totaln</sup>&#8260;<sub>$totald</sub> acres, what operation must we use?}' +    
+                                        '\\ins{Yes, each portion weights $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds. To find out how many cookie portions (each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds) are in the jar, what operation must we use?},' +
+                                        '\\ins{No, we are told that each portion weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds. To find out how many cookie portions (each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds) are in the jar , what operation must we use?}' +    
                                     ']}{$$previousCorrect}}' +
                                     '{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
                             '}',
@@ -261,29 +260,28 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
                             "help": true
                         }
                     }, {
-                        problem: '\\html{<img src=img/illustrations/$illustration>}',
-                        answer:
-                            '\\wb{' +
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
                                 '\\rowgrp' +
                                     '{\\choose{[' +
-                                        '\\ins{Yes. Write a setup that will solve for the number of houses to be built.},' +
-                                        '\\ins{We must divide to solve this problem. The given total land is being divided up into equal-sized parts&mdash;each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre.  Each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre of land will be where one house is built. Write a setup that will solve for the number of houses to be built.}' +    
-                                    ']}{$$previousCorrect}}' +
-                                    '{\\grp{\\frac{\\input{$totaln}}{\\input{$totald}}}{\\sign{&div;}}{\\frac{\\input{$unitn}}{\\input{$unitd}}}}' + 
-                            '}',
+                                        '\\rowgrp{\\css{\\ins{Yes. Write a setup that will solve for the number of cookie portions each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds in the jar.}}{width400}}{\\html{<br><br>}},' +
+                                        '\\css{\\ins{We must divide to solve this problem. The given total weight of cookies has been divided up into equal-sized portions&mdash;each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds.  Each $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds represents one portion. Write a setup that will solve for the number of cookie portions in the jar.}}{width400}' +    
+                                    ']}{$$previousCorrect}}' +                                    
+									'{\\grp{\\select{$firstunitwhole $firstunitn/$firstunitd pounds}{["$firstunitwhole $firstunitn/$firstunitd pounds", "$secondunitwhole $secondunitn/$secondunitd pounds"]}}{\\sign{&div;}}{\\select{$secondunitwhole $secondunitn/$secondunitd pounds}{["$firstunitwhole $firstunitn/$firstunitd pounds", "$secondunitwhole $secondunitn/$secondunitd pounds"]}}}' +
+                            	'}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\html{<img src=img/illustrations/$illustration>}',
+                        problem: '\\image{$illustration}',
                         answer:
                             '\\rowgrp' +
                                 '{\\choose{[' +
                                     '\\ins{Great! Now solve the problem.},' +
-                                    '\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the <sup>$totaln</sup>&#8260;<sub>$totald</sub> acres is the total and is placed first in the division set up.  The correct setup is shown to the right. Now solve the problem.}' +    
+                                    '\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the total being divided up is the weight in the jar ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds), so the weight in the jar is placed first in the division set up.  The correct setup is below. Now solve the problem.}' +    
                                 ']}{$$previousCorrect}}' +
-                                '{\\grp{\\frac{\\str{$totaln}}{\\str{$totald}}}{\\sign{&div;}}{\\frac{\\str{$unitn}}{\\str{$unitd}}}{\\sign{=}}{\\input{$number}}}',
+                                '{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{pounds}}{\\sign{&div;}}{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\fracstr{$secondunitn}}{\\fracstr{$secondunitd}}}}{\\html{pounds}}{\\sign{=}}{\\input{$number}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -291,13 +289,13 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
                     }]
                 }]
             },
-            housesDivFrac2: {
+            cookiesDiv2: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\html{<img src=img/illustrations/$illustration>}',
-                        answer: '\\col{\\ins{$number houses are to be built on <sup>$totaln</sup>&#8260;<sub>$totald</sub> acres of land.  What will be the size of each parcel of land (know that each parcel will be the same size)?}}{\\frac{\\input{$unitn}}{\\input{$unitd}}}',
+                        problem: '\\image{$illustration}',
+                        answer: '\\rowgrp{\\ins{$number portions of cookies in a jar weigh a total of $firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds.  What is the weight of each portion (know that each portion weighs exactly the same)?}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{\\html{pounds}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -307,25 +305,25 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\html{<img src=img/illustrations/$illustration>}',
+                        problem: '\\image{$illustration}',
                         answer: 
                             '\\wb{' +
                                 '\\rowgrp' +
-                                    '{\\ins{You have been <u>given the total</u> number of acres of land where houses will be built.  How many houses are being built?}}' +
-                                    '{\\input{$number}}' +
+                                    '{\\ins{You have been <u>given the total</u> weight of the cookies in the jar, and the number of portions in the jar.  What is the number of portions of cookies?}}' +
+                                    '{\\grp{\\input{$number}}{\\html{portions}}}' +
                             '}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\html{<img src=img/illustrations/$illustration>}',
+                        problem: '\\image{$illustration}',
                         answer: 
                             '\\wb{' +
                                 '\\rowgrp' +
                                     '{\\choose{[' +
-                                        '\\ins{Yes, $number houses will be built. To find out the size of each parcel of land, what operation must we use?},' +
-                                        '\\ins{No, we are told $number houses will be built. To find out the size of each parcel of land, what operation must we use?}' +    
+                                        '\\ins{Yes, there are $number portions of cookies in the jar. To find out the weight of each portion, what operation must we use?},' +
+                                        '\\ins{No, we are told there are $number portions of cookies in the jar. To find out the weight of each portion, what operation must we use?}' +    
                                     ']}{$$previousCorrect}}' +
                                     '{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
                             '}',
@@ -334,30 +332,29 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
                             "help": true
                         }
                     }, {
-                        problem: '\\html{<img src=img/illustrations/$illustration>}',
-                        answer:
-                            '\\wb{' +
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
                                 '\\rowgrp' +
                                     '{\\choose{[' +
-                                        '\\ins{Yes, now write a setup that will solve this problem.},' +
-                                        '\\ins{We must divide to solve this problem.  The <u>given total land</u> is being divided up into $number equal-sized parts of land.  Write a set up that will solve for the size of each parcel of land where a house will be built.}' +    
-                                    ']}{$$previousCorrect}}' +
-                                    '{\\grp{\\frac{\\input{$totaln}}{\\input{$totald}}}{\\sign{&div;}}{\\frac{\\input{$number}}{\\input{1}}}}' +
-                            '}',
+                                        '\\rowgrp{\\css{\\ins{Yes, now write a setup that will solve this problem.}}{width400}}{\\html{<br><br>}},' +
+                                        '\\css{\\ins{We must divide to solve this problem.  The <u>given total weight</u> of the cookies in the jar is being divided up into $number equal portions of cookies.  Pick the set up that will solve for the weight of each portion.}}{width400}' +    
+                                    ']}{$$previousCorrect}}' +                                    
+									'{\\grp{\\select{$firstunitwhole $firstunitn/$firstunitd pounds}{["$firstunitwhole $firstunitn/$firstunitd pounds", "$number portions"]}}{\\sign{&div;}}{\\select{$number portions}{["$firstunitwhole $firstunitn/$firstunitd pounds", "$number portions"]}}}' +
+                            	'}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\html{<img src=img/illustrations/$illustration>}',
+                        problem: '\\image{$illustration}',
                         answer: 
                             '\\wb{' +
                                 '\\rowgrp' +
                                     '{\\choose{[' +
-                                        '\\ins{Great! Now give the solution.},' +
-                                        '\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the <sup>$totaln</sup>&#8260;<sub>$totald</sub> acres is the total and is placed first in the division set up.  The correct setup is shown below.<br><br>Now solve the problem.}' +
+                                        '\\css{\\ins{Great! Now give the solution.}}{width400},' +
+                                        '\\css{\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the total is the total weight of the cookies in the jar ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds) and is placed first in the division set up.  The correct setup is shown below.<br><br>Now solve the problem.}}{width400}' +
                                     ']}{$$previousCorrect}}' +
-                                    '{\\grp{\\frac{\\str{$totaln}}{\\str{$totald}}}{\\sign{&div;}}{\\frac{\\str{$number}}{\\str{1}}}{\\sign{=}}{\\frac{\\input{$unitn}}{\\input{$unitd}}}}' +
+                                    '{\\rowgrp{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{pounds}}{\\sign{&div;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}{\\html{portions}}}{\\html{&nbsp;}}{\\grp{\\sign{=}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{\\html{pounds}}{\\html{/}}{\\html{portion}}}}}' +
                             '}',
                         controls: {
                             "checkAnswer": true,
@@ -366,13 +363,16 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
                     }]
                 }]
             },
-            housesMulFrac: {
+            cookiesMul: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\html{<img src=img/illustrations/$illustration>}',
-                        answer: '\\col{\\ins{Each house will occupy <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre.  If $number houses are to be built, how many acres of land are needed?}}{\\frac{\\input{$totaln}}{\\input{$totaln}}',
+                        problem: '\\image{$illustration}',
+                        answer: '\\rowgrp' + 
+									'{\\ins{If $number portions of cookies are in the jar, and each portion weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds, what is the total weight of the cookies in the jar?}}' +
+									'{\\html{&nbsp;}}' + 
+									'{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{pounds}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -382,29 +382,265 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\col{\\html{<img src=img/illustrations/$illustration>}}{\\str{You are searching for the total number of acres that are needed.  How many acres are needed to build one house?}}',
-                        answer: '\\frac{\\input{$unitn}}{\\input{$unitd}}',
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\ins{You have been <u>given the total</u> number of portions of cookies in the jar.  How many portions of cookies are in the jar?}}' +
+										'{\\grp{\\input{$number}}{\\html{portions of cookies}}}' +
+								'}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\col{\\html{<img src=img/illustrations/$illustration>}}{\\row{\\str{How many houses are being built?}}}',
-                        answer: '\\input{$number}',
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\choose{[' +
+											'\\ins{Yes, there are $number portions of cookies in the jar. To find out the total combined weight of all the cookies in the jar, what operation must we use?},' +
+											'\\ins{No, we are told there are $number portions of cookies in the jar. To find out the total combined weight of all the cookies in the jar, what operation must we use?}' +    
+										']}{$$previousCorrect}}' +
+										'{\\select{Multiplication}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+								'}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\col{\\html{<img src=img/illustrations/$illustration>}}{\\str{Write a setup that will solve for the total amount of land that is needed to build all $number houses.}}',
-                        answer: '\\grp{\\frac{\\input{$unitn}}{\\input{$unitd}}}{\\sign{&times;}}{\\frac{\\input{$number}}{\\input{1}}}',
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\choose{[' +
+											'\\rowgrp{\\css{\\ins{Yes, now write a setup that will solve this problem.}}{width400}}{\\html{<br><br>}},' +
+											'\\css{\\ins{We must multiply to solve this problem.  The <u>given weight of each portion</u> of cookies in the jar is being multiplied by $number portions of cookies.  Pick the set up that will solve for the total combined weight of the cookies in the jar.}}{width400}' +    
+										']}{$$previousCorrect}}' +                                    
+										'{\\grp{\\select{$secondunitwhole $secondunitn/$secondunitd pounds/portion}{["$secondunitwhole $secondunitn/$secondunitd pounds/portion", "$number portions"]}}{\\sign{&bull;}}{\\select{$number portions}{["$secondunitwhole $secondunitn/$secondunitd pounds/portion", "$number portions"]}}}' +
+                            	'}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\col{\\html{<img src=img/illustrations/$illustration>}}{\\str{Now solve the problem.}}',
-                        answer: '\\grp{\\frac{\\str{$unitn}}{\\str{$unitd}}}{\\sign{&div;}}{\\frac{\\str{$number}}{\\str{1}}}{\\sign{=}}{\\frac{\\input{$totaln}}{\\input{$totald}}',
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+                                '\\rowgrp' +
+                                    '{\\choose{[' +
+                                        '\\rowgrp{\\css{\\ins{Now solve the problem.}}{width400}}{\\html{<br><br>}},' +
+                                        '\\css{\\ins{This is a *repeated addition* or multiplication problem.  The weight of each portion of cookies, $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds, needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}}{width400}' +
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\grp{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\str{$secondunitn}}{\\str{$secondunitd}}}}{\\html{pounds/portion}}{\\sign{&bull;}}{\\html{$number}}{\\html{portions}}{\\sign{=}}{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{pounds}}}}' +
+                            '}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            },
+            pagesDiv1: {
+                title: 'Mixed Fraction Application Problems',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\rowgrp{\\ins{There are a total of $firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> typed pages in the tray. How many minutes did it take to type the pages in the tray if the typist types $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page per minute?}}{\\grp{\\input{$number}}{html{minutes}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{\\rowgrp{\\ins{You have been given the <strong>total</strong> number of typed pages in the tray.  What is the <u>total</u>?}}{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{html{typed pages}}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer:
+                            '\\wb{' +
+                                '\\rowgrp' + 
+                                    '{\\choose{[' +
+                                        '\\ins{Yes, the total is $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> typed pages. To find out how many minutes it takes the typist to type $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages at the rate of $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page per minute, what operation must we use?},' +
+                                        '\\ins{No, we are told that the total is $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> typed pages. To find out how many minutes it takes the typist to type $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages at the rate of $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page per minute, what operation must we use?}' +    
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+                            '}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+                                '\\rowgrp' +
+                                    '{\\choose{[' +
+                                        '\\rowgrp{\\css{\\ins{Yes. Write a setup that will solve for the number of minutes required to type $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages at $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page per minute.}}{width400}}{\\html{<br><br>}},' +
+                                        '\\css{\\ins{We must divide to solve this problem. The given total number of pages ($firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub>) were typed at a rate of $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page per minute.  Each $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page represents one minute of typing. Write a setup that will solve for the number of $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page in $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages.}}{width400}' +    
+                                    ']}{$$previousCorrect}}' +                                    
+									'{\\grp{\\select{$firstunitwhole $firstunitn/$firstunitd pages}{["$firstunitwhole $firstunitn/$firstunitd pages", "$secondunitwhole $secondunitn/$secondunitd of a page"]}}{\\sign{&div;}}{\\select{$secondunitwhole $secondunitn/$secondunitd of a page}{["$firstunitwhole $firstunitn/$firstunitd pages", "$secondunitwhole $secondunitn/$secondunitd of a page"]}}}' +
+                            	'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer:
+                            '\\rowgrp' +
+                                '{\\choose{[' +
+                                    '\\rowgrp{\\css{\\ins{Great! Now solve the problem.}}{width400}}{\\html{<br><br>}},' +
+                                    '\\css{\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the total being divided up is the number of pages in the tray ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages), so the number of pages in the tray is placed first in the division set up.  The correct setup is below. Now solve the problem.}}{width400}' +    
+                                ']}{$$previousCorrect}}' +
+                                '{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{pages}}{\\sign{&div;}}{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\fracstr{$secondunitn}}{\\fracstr{$secondunitd}}}}{\\html{pages/minute}}{\\sign{=}}{\\input{$number}}{\\html{minutes}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            },
+            pagesDiv2: {
+                title: 'Mixed Fraction Application Problems',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\image{$illustration}',
+						answer: '\\rowgrp{\\ins{If the typist typed $firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages in $number minutes, how many pages per minute did the typist type?}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{\\html{pages per minute}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: 
+                            '\\wb{' +
+                                '\\rowgrp' +
+                                    '{\\ins{You have been <u>given the total</u> number of pages the typist typed.  What is the total number of pages?}}' +
+                                    '{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{pages}}}' +
+                            '}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer:
+                            '\\wb{' +
+                                '\\rowgrp' + 
+                                    '{\\choose{[' +
+                                        '\\ins{Yes, the total is $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> typed pages. To find out how many pages a minute the typist typed, what operation must we use?},' +
+                                        '\\ins{No, we are told that the total is $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> typed pages. To find out how many pages a minute the typist typed, what operation must we use?}' +    
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+                            '}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+                                '\\rowgrp' +
+                                    '{\\choose{[' +
+                                        '\\rowgrp{\\css{\\ins{Yes. Write a setup that will solve for the number of pages per minute that must be typed in order to type $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages in $number minutes.}}{width400}}{\\html{<br><br>}},' +
+                                        '\\css{\\ins{We must divide to solve this problem. The given total number of pages ($firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub>) were typed in $number minutes.  What fraction of a page was typed in one minute?  Write a setup that will solve for the fraction of $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages that could be typed in one minute.}}{width400}' +    
+                                    ']}{$$previousCorrect}}' +                                    
+									'{\\grp{\\select{$firstunitwhole $firstunitn/$firstunitd pages}{["$firstunitwhole $firstunitn/$firstunitd pages", "$number minutes"]}}{\\sign{&div;}}{\\select{$number minutes}{["$firstunitwhole $firstunitn/$firstunitd pages", "$number minutes"]}}}' +
+                            	'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer:
+                            '\\rowgrp' +
+                                '{\\choose{[' +
+                                    '\\rowgrp{\\css{\\ins{Great! Now give the solution.}}{width400}}{\\html{<br><br>}},' +
+                                    '\\css{\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the total being divided up is the number of pages in the tray ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages), so the number of pages in the tray is placed first in the division set up.  The correct setup is below. Now solve the problem.}}{width400}' +    
+                                ']}{$$previousCorrect}}' +
+                                '{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{pages}}{\\sign{&div;}}{\\html{$number}}{\\html{ minutes}}{\\sign{=}}{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\fracstr{$secondunitn}}{\\fracstr{$secondunitd}}}}{\\html{pages/minute}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            },
+            pagesMul: {
+                title: 'Mixed Fraction Application Problems',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\image{$illustration}',
+						answer: '\\rowgrp{\\ins{If the typist typed for $number minutes at a rate of $secondunitwhole <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page per minute, how many pages did the typist type?}}{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{pages}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\ins{You have been <u>given the total</u> number of minutes the typist typed.  How many minutes did the typist type?}}' +
+										'{\\grp{\\input{$number}}{\\html{minutes}}}' +
+								'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+						answer:
+                            '\\wb{' +
+                                '\\rowgrp' + 
+                                    '{\\choose{[' +
+                                        '\\ins{Yes, the typist typed for $number minutes. To find out how many pages the typist typed if the typist typed for $number minutes at a rate of $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page a minute, what operation must we use?},' +
+                                        '\\ins{No, we are told that the typist typed for $number minutes. To find out how many pages the typist typed if the typist typed $number minutes at a rate of $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page a minute, what operation must we use?}' +    
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\select{Multiplication}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+                            '}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+                                '\\rowgrp' +
+                                    '{\\choose{[' +
+                                        '\\rowgrp{\\css{\\ins{Yes. Write a setup that will solve for the number of pages typed if the typist types $number minutes at the rate of $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pages per minute.}}{width400}}{\\html{<br><br>}},' +
+                                        '\\css{\\ins{We must multiply to solve this problem. The typist types $number minutes.  If the typist types at the rate of $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pages per minute, how many pages does the typist type?  Write a setup that will solve for the total number of pages the typist typed.}}{width400}' +    
+                                    ']}{$$previousCorrect}}' +                                    
+									'{\\grp{\\select{["$number minutes", "$secondunitwhole $secondunitn/$secondunitd pages per minute"]}{["$number minutes", "$secondunitwhole $secondunitn/$secondunitd pages per minute"]}}{\\sign{&bull;}}{\\select{["$secondunitwhole $secondunitn/$secondunitd pages per minute", "$number minutes"]}{["$number minutes", "$secondunitwhole $secondunitn/$secondunitd pages per minute"]}}}' +
+                            	'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+                                '\\rowgrp' +
+                                    '{\\choose{[' +
+                                        '\\rowgrp{\\css{\\ins{Now solve the problem.}}{width400}}{\\html{<br><br>}},' +
+                                        '\\css{\\ins{This is a *repeated addition* or multiplication problem.  The number of pages the typist can type in one minute ($secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pages), needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}}{width400}' +
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\grp{\\html{$number}}{\\html{minutes}}{\\sign{&bull;}}{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\str{$secondunitn}}{\\str{$secondunitd}}}}{\\html{pages per minute}}{\\sign{=}}{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{pages}}}}' +
+                            '}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -414,15 +650,15 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
             }
         },
         data = [
-            { total: '2.7',firstunitwhole: '2', firstunitn: '7', firstunitd: '10', secondunitn: '3', secondunitd: '10', number: '9', illustration: '8.5-11_Houses_Money/400x300/Millions_houses_a.jpg', template: 'housesDiv1' },
-            { total: '2.7',firstunitwhole: '2', firstunitn: '7', firstunitd: '10', secondunitn: '3', secondunitd: '10', number: '9', illustration: '8.5-11_Houses_Money/400x300/Millions_houses_b.jpg', template: 'housesDiv2' },
-            { total: '2.7',firstunitwhole: '2', firstunitn: '7', firstunitd: '10', secondunitn: '3', secondunitd: '10', number: '9', illustration: '8.5-11_Houses_Money/400x300/Millions_houses_c.jpg', template: 'housesMul' },
-            /*{ total: 21, unitn: 1, unitd: 3, number: 63, illustration: 'Acres_Gplane_21a.jpg', template: 'housesDiv1' },
-            { total: 21, unitn: 1, unitd: 3, number: 63, illustration: 'Acres_Gplane_21b.jpg', template: 'housesDiv2' },
-            { total: 21, unitn: 1, unitd: 3, number: 63, illustration: 'Acres_Gplane_21c.jpg', template: 'housesMul' },
-            { totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3a.jpg', template: 'housesDivFrac1' },
-            {  totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3b.jpg', template: 'housesDivFrac2' },
-            {  totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3c.jpg', template: 'housesMulFrac' }*/
+            { firstunitwhole: '2', firstunitn: '7', firstunitd: '10', secondunitn: '3', secondunitd: '10', number: '9', illustration: '8.5-11_Houses_Money/400x300/Millions_houses_a.jpg', template: 'housesDiv1' },
+            { firstunitwhole: '2', firstunitn: '7', firstunitd: '10', secondunitn: '3', secondunitd: '10', number: '9', illustration: '8.5-11_Houses_Money/400x300/Millions_houses_b.jpg', template: 'housesDiv2' },
+            { firstunitwhole: '2', firstunitn: '7', firstunitd: '10', secondunitn: '3', secondunitd: '10', number: '9', illustration: '8.5-11_Houses_Money/400x300/Millions_houses_c.jpg', template: 'housesMul' },
+            { firstunitwhole: '4', firstunitn: '4', firstunitd: '5', secondunitwhole: '1', secondunitn: '1', secondunitd: '5', number: '4', illustration: '8.5-12_Cookies/400x300/Cookies_a.jpg', template: 'cookiesDiv1' },
+            { firstunitwhole: '4', firstunitn: '4', firstunitd: '5', secondunitwhole: '1', secondunitn: '1', secondunitd: '5', number: '4', illustration: '8.5-12_Cookies/400x300/Cookies_b.jpg', template: 'cookiesDiv2' },
+            { firstunitwhole: '4', firstunitn: '4', firstunitd: '5', secondunitwhole: '1', secondunitn: '1', secondunitd: '5', number: '4', illustration: '8.5-12_Cookies/400x300/Cookies_c.jpg', template: 'cookiesMul' },
+			{ firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50', illustration: '8.5-9_Typed_Pages/400x300/Typed_Pages_a.jpg', template: 'pagesDiv1' },
+            { firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50', illustration: '8.5-9_Typed_Pages/400x300/Typed_Pages_b.jpg', template: 'pagesDiv2' },
+            { firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50',illustration: '8.5-9_Typed_Pages/400x300/Typed_Pages_c.jpg', template: 'pagesMul' },
         ];
     
     return dataUtils.build(desc, template, data);
