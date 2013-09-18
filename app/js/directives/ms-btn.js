@@ -77,6 +77,7 @@ angular.module('mathSkills')
                             if ($scope.args[1] === "T") {
                                 $scope.class = 'success';
                                 $scope.clicked = false;
+                                $element.find('.btn').focus();
                                 $scope.$emit('notHelped', {
                                     controllerId: $scope.controllerId
                                 });

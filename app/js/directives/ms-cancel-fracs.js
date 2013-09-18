@@ -15,11 +15,12 @@ angular.module('mathSkills')
                     'problemData',
                     'numberUtils',
                     'parser',
+                    '$rootScope',
                     '$scope',
                     '$element',
                     '$compile',
                     '$timeout',
-                    function (directiveUtils, problemData, numberUtils, parser, $scope, $element, $compile, $timeout) {
+                    function (directiveUtils, problemData, numberUtils, parser, $rootScope, $scope, $element, $compile, $timeout) {
 
                         $scope.controllerId = Math.random().toString();
                         $scope.instructions = 'ins{Click on 2 values (1 numerator and 1 denominator) that have a common factor other than one.}';
@@ -78,8 +79,13 @@ angular.module('mathSkills')
 
                         $scope.$watch('expected', function () {
                             if ($scope.expected) {
-                                $scope.args = directiveUtils.preProcess(parser.extractTag($scope.expected).args);
+                                $scope.args = directiveUtils.preProcess(parser.extractTag($scope.expected).args);              //console.log('this is ', $scope.args);
+                                $scope.answer = $scope.args.pop(); //console.log('answer', $scope.answer, 'args', $scope.args);
                                 $scope.display = $scope.args.length < 3;
+                                $scope.problemWidth = $scope.args.length < 3 ? "30": "40";
+                                $scope.solveBuild = '\\grp{\\sign{=}}{\\frac{\\input{' +  $scope.answer[0] + '}}{\\input{' +  $scope.answer[1] + '}}}'; //console.log('solve', $scope.solve);
+                                $scope.solve = '\\str{}';
+                                $scope.showAnswer = true;
 
                                 $scope.tag = 'canfrac';
                                 $scope.children = ['ins', 'n1', 'd1', 'n2', 'd2'];
@@ -98,22 +104,38 @@ angular.module('mathSkills')
                                     problemData.addData({arr: [$scope.args[2][1]], type:'btn', answer:[]}, 'd3');
                                 }
                                 $scope.children.push('buttons');
-                                $scope.routePath.push(7);
+                                $scope.routePath.push(8);
                                 
                                 if(isCancellable($scope.children)){
                                     problemData.addData('btn', 'stage');
                                     problemData.addData(false, 'nLock');
                                     problemData.addData(false, 'dLock');
                                     problemData.addData(cancellable($scope.children), 'comFac');
+                                    
+                                    $timeout(function () {
+                                        $scope.$emit('answerBtn', false);
+                                        $scope.$emit('triggerCheckFocus');
+                                    }, 900);
                                 } else {
                                     $scope.instructions = 'ins{Click on 2 values (1 numerator and 1 denominator) that have a common factor other than one.}';
                                     setAll('str');
                                     problemData.addData('cancellable', 'stage');
                                     buildButtons();
+                                    $timeout(function () {
+                                        $scope.$emit('answerBtn', false);
+                                        $scope.$emit('triggerCheckFocus');
+                                    }, 900);
                                 }
                                 
                                 update();
                             }
+                        });
+
+                        $scope.$on('clearClicks', function() {
+                            //$scope.$broadcast('clear', num);
+                            //$scope.$broadcast('clear', den);
+                            num = '';
+                            den = '';
                         });
 
                         $scope.$on('tx', function (e, dataIn) {
@@ -139,14 +161,14 @@ angular.module('mathSkills')
     
                                 if(num !== '' && den !== ''){
                                     
-                                    console.log('cancellable ', isCancellable($scope.children));
+console.log('cancellable ', isCancellable($scope.children));
 
-                                    console.log('num ', problemData.getData(num).arr[0], ' factors ', numberUtils.getFactors(problemData.getData(num).arr[0]));
-                                    console.log('den ', problemData.getData(den).arr[0], ' factors ', numberUtils.getFactors(problemData.getData(den).arr[0]));
-                                    console.log('common ', numberUtils.getCommonFactors(numberUtils.getFactors(problemData.getData(num).arr[0]), numberUtils.getFactors(problemData.getData(den).arr[0])));
-                                    
-                                    console.log('num answers ', numberUtils.getFactoredInput(problemData.getData(num).arr[0], problemData.getData(den).arr[0])[0]);
-                                    console.log('den answers ', numberUtils.getFactoredInput(problemData.getData(num).arr[0], problemData.getData(den).arr[0])[1]);
+console.log('num ', problemData.getData(num).arr[0], ' factors ', numberUtils.getFactors(problemData.getData(num).arr[0]));
+console.log('den ', problemData.getData(den).arr[0], ' factors ', numberUtils.getFactors(problemData.getData(den).arr[0]));
+console.log('common ', numberUtils.getCommonFactors(numberUtils.getFactors(problemData.getData(num).arr[0]), numberUtils.getFactors(problemData.getData(den).arr[0])));
+
+console.log('num answers ', numberUtils.getFactoredInput(problemData.getData(num).arr[0], problemData.getData(den).arr[0])[0]);
+console.log('den answers ', numberUtils.getFactoredInput(problemData.getData(num).arr[0], problemData.getData(den).arr[0])[1]);
 
                                     if (numberUtils.getCommonFactors(numberUtils.getFactors(problemData.getData(num).arr[0]), numberUtils.getFactors(problemData.getData(den).arr[0])).length > 0) {
 
@@ -160,9 +182,11 @@ angular.module('mathSkills')
                                         problemData.addData('input', 'stage');
                                         $scope.$broadcast('correct', num, den);
                                         $timeout(function () {
+                                            $scope.$emit('answerBtn', 'Check Answer', true);
                                             $scope.instructions = 'ins{Enter the result of cancelling the selected numerator and denominator.}';
                                             update();
                                             $scope.$apply();
+                                            $scope.$emit('triggerCheckFocus');
                                         }, 200);
 
                                     } else {
@@ -174,21 +198,21 @@ angular.module('mathSkills')
                             }
                         });
 
-                        $scope.$on('answer', function (e, dataIn) { console.log('\n', dataIn);
+                        $scope.$on('answer', function (e, dataIn) { //console.log('\n', dataIn);
                             
                             if ($scope.controllerId !== dataIn.controllerId){
                                 e.stopPropagation();
 
-                                if(problemData.getData('stage') === 'input'){ console.log('stage is input');
+                                if(problemData.getData('stage') === 'input'){ //console.log('stage is input');
                                     
                                     var gotBoth = function () {
 
-                                        if(numAnswer !== '' && denAnswer !== ''){ console.log('got both');
+                                        if(numAnswer !== '' && denAnswer !== ''){ //console.log('got both answers');
                                             if (numAnswer.result === 'correct' 
                                                     && denAnswer.result === 'correct' 
                                                     && parser.extractTag(parser.extractTag(numAnswer.answer).args[0]).args[0].length > 0
                                                     && parser.extractTag(parser.extractTag(denAnswer.answer).args[parser.extractTag(dataIn.answer).args.length - 1]).args[0].length > 0
-                                                ) { console.log('both correct');
+                                                ) { //console.log('both correct');
                                                 problemData.getData(num).arr.splice(0, 1);
                                                 problemData.getData(den).arr.splice(0, 1);
                                                 problemData.getData(num).arr.splice(0, 0, parser.extractTag(parser.extractTag(numAnswer.answer).args[0]).args[0]);
@@ -197,15 +221,24 @@ angular.module('mathSkills')
                                                 problemData.addData('cancellable', 'stage');
                                                 numAnswer = '';
                                                 denAnswer = '';
+                                                
                                                 $timeout(function () {
                                                     $scope.instructions = 'ins{Can you cancel again?<br>}';
+                                                    $scope.$emit('answerBtn', false);
                                                     buildButtons();
                                                     update();
+                                                    $timeout(function () {
+                                                        $scope.$emit('triggerCheckFocus');
+                                                    }, 0);
                                                 }, 900);
-                                            } else { console.log('wrong answer');
+                                            } else { //console.log('wrong answer');
+                                                $timeout(function () {
+                                                    $scope.$emit('triggerCheckFocus');
+                                                }, 900);
                                                 numAnswer = '';
                                                 denAnswer = '';
                                             }
+                                            problemData.resetIndex();
                                         }
                                     };
 
@@ -222,38 +255,68 @@ angular.module('mathSkills')
                                     // console.log('den ', den,'\n');
                                 }
 
-                                if(problemData.getData('stage') === 'cancellable' && dataIn.label === 'buttons' && dataIn.result === 'correct' && dataIn.expected !== "\\str{}"){ //console.log('running cancellable');
-    
-                                    if(isCancellable($scope.children)){ //console.log('running is cancellable');
-                                        setAll('btn');
-                                        problemData.addData('btn', 'stage');
-                                        problemData.addData(false, 'nLock');
-                                        problemData.addData(false, 'dLock');
-                                        answerCount = 0;
-                                        numAnswer = '';
-                                        denAnswer = '';
-                                        num = '';
-                                        den = ''; 
-                                        problemData.addData(cancellable($scope.children), 'comFac');
+                                if(problemData.getData('stage') === 'cancellable' && dataIn.label === 'buttons' && dataIn.expected !== "\\str{}"){ //console.log('running cancellable');
+
+                                    if (dataIn.result === 'correct')
+                                        if(isCancellable($scope.children)){ //console.log('running is cancellable');
+                                            setAll('btn');
+                                            problemData.addData('btn', 'stage');
+                                            problemData.addData(false, 'nLock');
+                                            problemData.addData(false, 'dLock');
+                                            answerCount = 0;
+                                            numAnswer = '';
+                                            denAnswer = '';
+                                            num = '';
+                                            den = ''; 
+                                            problemData.addData(cancellable($scope.children), 'comFac');
+                                            $timeout(function () {
+                                                $scope.$emit('answerBtn', 'noAnswer');
+                                                $scope.buttons = '\\str{}';
+                                                update();
+                                                $timeout(function () {
+                                                    $scope.$emit('triggerCheckFocus');
+                                                }, 0);
+                                            }, 900);
+                                        } else { //console.log('running isNot cancellable');
+                                            $scope.routePath.pop();
+                                            $scope.routePath.push(7);
+                                            setAll('str');
+                                            problemData.addData('solve', 'stage');
+                                            $scope.$emit('answerBtn', 'Check Answer');
+                                            $timeout(function () {
+                                                $scope.instructions = 'ins{Multiply the fractions together.<br>}';
+                                                $scope.buttons = '\\str{}';
+                                                $scope.solve = $scope.solveBuild;
+                                                update();
+                                                $timeout(function () {
+                                                    $scope.$emit('triggerCheckFocus');
+                                                }, 0);
+                                            }, 1000);
+                                            
+                                        }
+                                    } else {
                                         $timeout(function () {
-                                            $scope.buttons = '\\str{}';
-                                            update();
+                                            $scope.$emit('triggerCheckFocus');
                                         }, 900);
-                                    } else { //console.log('running isNot cancellable');
-                                        $scope.$emit('answer', {
-                                            lable: 'cancel',
-                                            result: 'correct',
-                                            controllerId: $scope.controllerId
-                                        });
                                     }
+                                
+                                }
+
+                                if(problemData.getData('stage') === 'solve' && dataIn.result === 'correct' && dataIn.expected === $scope.solveBuild){
+    
+                                    $scope.$emit('answer', {
+                                        lable: 'cancel',
+                                        result: 'correct',
+                                        controllerId: $scope.controllerId
+                                    });
+                                
                                 }
                             } 
-                        });
+                        );
 
                         directiveUtils.aggregateChildAnswers($scope);
                         directiveUtils.routeFocus($scope);
                         directiveUtils.routeHelp($scope);
-                        //directiveUtils.size($scope);
                     }
                 ],
                 scope: {
@@ -266,35 +329,40 @@ angular.module('mathSkills')
                 '<table>'+
                     '<tbody>'+
                         '<tr>'+
-                            '<td><ms-expression expected={{instructions}} label=ins></ms-expression></td>'+   // 0 
+                            '<td colspan="2"><ms-expression expected={{instructions}} label=ins></ms-expression></td>'+   // 0 
                         '</tr>'+
                         '<tr>'+
-                            '<table class={{opclass}}>'+
-                                '<tr>'+
-                                    '<td class=num><ms-expression expected={{n1}} label=n1></ms-expression></td>'+ // 1
-                                    '<td></td>'+
-                                    '<td class=num><ms-expression expected={{n2}} label=n2></ms-expression></td>'+ // 2
-                                    '<td ng-hide="display"></td>'+
-                                    '<td class=num ng-hide="display"><ms-expression expected={{n3}} label=n3></ms-expression></td>'+ // 3
-                                '</tr>'+
-                                '<tr>'+
-                                    '<td><hr class=msCancelHr></td>'+
-                                    '<td class=msCancelSign>x</td>'+     
-                                    '<td><hr class=msCancelHr></td>'+
-                                    '<td ng-hide="display" class=msCancelSign>x</td>'+     
-                                    '<td ng-hide="display"><hr class=msCancelHr></td>'+
-                                '</tr>'+
-                                '<tr>'+
-                                    '<td class=den><ms-expression expected={{d1}} label=d1></ms-expression></td>'+ // 4
-                                    '<td></td>'+
-                                    '<td class=den><ms-expression expected={{d2}} label=d2></ms-expression></td>'+ // 5
-                                    '<td ng-hide="display"></td>'+
-                                    '<td class=den ng-hide="display"><ms-expression expected={{d3}} label=d3></ms-expression></td>'+ // 6
-                                '</tr>'+
-                            '</table>'+
+                            '<td style="width:{{problemWidth}}%;">'+
+                                '<table class={{opclass}}>'+
+                                    '<tr>'+
+                                        '<td class=num><ms-expression expected={{n1}} label=n1></ms-expression></td>'+ // 1
+                                        '<td></td>'+
+                                        '<td class=num><ms-expression expected={{n2}} label=n2></ms-expression></td>'+ // 2
+                                        '<td ng-hide="display"></td>'+
+                                        '<td class=num ng-hide="display"><ms-expression expected={{n3}} label=n3></ms-expression></td>'+ // 3
+                                    '</tr>'+
+                                    '<tr>'+
+                                        '<td><hr class=msCancelHr></td>'+
+                                        '<td class=msCancelSign>x</td>'+     
+                                        '<td><hr class=msCancelHr></td>'+
+                                        '<td ng-hide="display" class=msCancelSign>x</td>'+     
+                                        '<td ng-hide="display"><hr class=msCancelHr></td>'+
+                                    '</tr>'+
+                                    '<tr>'+
+                                        '<td class=den><ms-expression expected={{d1}} label=d1></ms-expression></td>'+ // 4
+                                        '<td></td>'+
+                                        '<td class=den><ms-expression expected={{d2}} label=d2></ms-expression></td>'+ // 5
+                                        '<td ng-hide="display"></td>'+
+                                        '<td class=den ng-hide="display"><ms-expression expected={{d3}} label=d3></ms-expression></td>'+ // 6
+                                    '</tr>'+
+                                '</table>'+
+                            '</td>'+
+                            '<td>'+
+                                '<ms-expression expected={{solve}} label=buttons></ms-expression>'+ // 
+                            '</td>'+
                         '</tr>'+
                         '<tr>'+
-                            '<td><ms-expression expected={{buttons}} label=buttons></ms-expression></td>'+ // 7
+                            '<td colspan="2" style="padding: 20px 0;"><ms-expression expected={{buttons}} label=buttons></ms-expression></td>'+ // 7
                         '</tr>'+  
                     '</tbody>'+    
                 '</table>'        

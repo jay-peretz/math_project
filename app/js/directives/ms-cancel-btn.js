@@ -1,5 +1,5 @@
 'use strict';
-/*global angular */
+/*global angular $*/
 
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
@@ -44,14 +44,27 @@ angular.module('mathSkills')
                     
                     $scope.$on('checkFocus', function (e) { 
                         // If this event has not been marked as ignored.
-                        if (e.defaultPrevented === false) {
-                            // handle check focus event for parent scope.
-                            // set focus on button element, fire a focused event.
-                            $element.find('.btn').focus();
-                            $scope.$emit('focused', {
-                                controllerId: $scope.controllerId
-                            });
-                        }
+                       
+                            
+                            if (e.defaultPrevented === false) {
+                                // handle check focus event for parent scope.
+                                // set focus on button element, fire a focused event.
+                                 if (problemData.getData('stage') === 'input') {
+                                    $scope.$emit('notFocused', {
+                                        controllerId: $scope.controllerId
+                                    });
+                                } else {
+                                    //$element.find('button .btn').focus(); 
+                                    //console.log('not input');
+                                    $timeout(function () {
+                                        $($element).find('.btn').focus();
+                                    }, 0);
+                                    
+                                    $scope.$emit('focused', {
+                                        controllerId: $scope.controllerId
+                                    });
+                                }
+                            }
                     });
 
                     var helpCount = 0,
@@ -64,13 +77,16 @@ angular.module('mathSkills')
                                 helpCount += 1;
                             }
                         };
-                    $scope.$on('checkHelp', function (e) {
+                        
+                    $scope.$on('checkHelp', function (e) { //console.log('helped');
                         // If this event has not been marked as ignored.
                         if (e.defaultPrevented === false) {
                             // handle check help event for parent scope.
                             // button does not use help, fire a notHelped event.
 
                             if (problemData.getData('stage') === 'btn') { // button stage true
+                            
+                                $scope.$emit('clearClicks');
 
                                 var helped = function () {
                                     $scope.class = 'info';
@@ -91,10 +107,10 @@ angular.module('mathSkills')
                                         $scope.class = '';
                                         jQuery($element).find('button').trigger('click');
                                         //$scope.$digest();
-                                    }, 1000);
+                                    }, 0);
                                 };
                                 
-                                console.log('input', $scope.args[0], '   x= ', numberUtils.getFactors($scope.args[0])[0]);
+                                //console.log('input', $scope.args[0], '   x= ', numberUtils.getFactors($scope.args[0])[0]);
                                 
                                 if (
                                     $scope.args[1][0] === 'n'
@@ -103,7 +119,7 @@ angular.module('mathSkills')
                                     && numberUtils.getFactors($scope.args[0]).indexOf(problemData.getData('comFac')[0]) !== -1
                                 ){
                                     problemData.addData(true, 'nLock');
-                                    helped(); console.log('num', $scope.args[0]);
+                                    helped(); //console.log('num', $scope.args[0]);
                                 } else if (
                                     $scope.args[1][0] === 'd'
                                     && problemData.getData('dLock') === false
@@ -111,18 +127,18 @@ angular.module('mathSkills')
                                     && numberUtils.getFactors($scope.args[0]).indexOf(problemData.getData('comFac')[0]) !== -1
                                 ){
                                     problemData.addData(true, 'dLock');
-                                    helped(); console.log('den', $scope.args[0]);
+                                    helped(); //console.log('den', $scope.args[0]);
                                 } else {
                                     $scope.$emit('notHelped', {
                                         controllerId: $scope.controllerId
                                     });
                                 }
 
-                                console.log('i am ', $scope.args[0]);
-                                console.log('stage', problemData.getData('stage'));
-                                console.log('nLock', problemData.getData('nLock'));
-                                console.log('factors', numberUtils.getFactors($scope.args[0]));
-                                console.log('comFac', problemData.getData('comFac'), '\n');
+console.log('i am ', $scope.args[0]);
+console.log('stage', problemData.getData('stage'));
+console.log('nLock', problemData.getData('nLock'));
+console.log('factors', numberUtils.getFactors($scope.args[0]));
+console.log('comFac', problemData.getData('comFac'), '\n');
 
                             } else {  // not btn stage - notHelped
                                 $scope.$emit('notHelped', {
@@ -132,7 +148,7 @@ angular.module('mathSkills')
                         }
                     });
 
-                    $element.on('click', 'button', function (event) { console.log('clicked');
+                    $element.on('click', 'button', function (event) { //console.log('clicked');
                         
                         if (problemData.getData('stage') === 'btn'){
                             $scope.$apply($scope.class = 'info');
@@ -145,17 +161,18 @@ angular.module('mathSkills')
                             $scope.$apply($scope.class = 'danger');
                             $timeout(function () {
                                 $scope.$apply($scope.class = '');
-                            }, 900);
+                                $scope.$emit('triggerCheckFocus');
+                            }, 1000);
                         }
                     });
 
-                    $scope.$on('clear', function (e, newVal) { console.log('clear ', newVal);
+                    $scope.$on('clear', function (e, newVal) { //console.log('clear ', newVal);
                        if (newVal !== $scope.args[1]){
                            $scope.$apply($scope.class = '');
                        }
                     });
 
-                    $scope.$on('noComm', function (e, num, den) { console.log('noComm ', num, den);
+                    $scope.$on('noComm', function (e, num, den) { //console.log('noComm ', num, den);
                        if (num === $scope.args[1] || den === $scope.args[1]){
                             $scope.$apply($scope.class = 'danger');
                             $timeout(function () {
@@ -164,7 +181,7 @@ angular.module('mathSkills')
                        }
                     });
 
-                    $scope.$on('correct', function (e, num, den) { console.log('correct ', num, den);
+                    $scope.$on('correct', function (e, num, den) { //console.log('correct ', num, den);
                        if (num === $scope.args[1] || den === $scope.args[1]){
                            $scope.$apply($scope.class = 'success');
                        }

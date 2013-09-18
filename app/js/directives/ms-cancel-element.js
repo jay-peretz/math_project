@@ -24,7 +24,7 @@ angular.module('mathSkills')
                                 } else {
                                     
                                     $scope.childElements = ['\\input{[' + directiveUtils.preProcess(problemData.getData($scope.args[0]).answer) + ']}'];
-                                    console.log('this is it... ', $scope.childElements);
+                                    //console.log('this is it... ', $scope.childElements);
                                 } 
                                 if (obj.arr.length > 1) {
                                     for(var i = 1; i < obj.arr.length; ++i){

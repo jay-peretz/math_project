@@ -12,23 +12,37 @@ angular.module('mathSkills')
 
                         var anwserbtn = function (data) { //console.log('data', data); 
                                 if (typeof data === 'boolean') { 
-                                    (data === false) ? $scope.hasCheckAnswer = false : ckeckAnswerBtn();
+                                    if (data === false) {
+                                        $scope.hasCheckAnswer = false; 
+                                        problemData.addData(false, 'answerBtn');
+                                    } else {
+                                        ckeckAnswerBtn();
+                                    }
                                 } else { 
                                     if (data === 'noAnswer'){
                                         $scope.hasCheckAnswer = false;
+                                        problemData.addData('noAnswer', 'answerBtn');
                                     } else {
                                         if (data === 'noAnswerN' || data === 'noAnswerC'){ //console.log('data running', data); 
                                             $scope.answerButtonText = (data === 'noAnswerN') ? 'Next Problem': 'Next Step';
+                                            problemData.addData('noAnswer', 'answerBtn');
                                             $scope.hasCheckAnswer = true;
                                             
                                         } else {
                                             $scope.answerButtonText = data;
+                                            problemData.addData(data,'answerBtn');
+                                            $scope.hasCheckAnswer = true;
                                         }
                                     }
                                 }
                             },
                             ckeckAnswerBtn = function () {
-                                (problemData.getData('answerBtn') === undefined) ? $scope.answerButtonText = 'Check Answer' : anwserbtn(problemData.getData('answerBtn'));
+                                 if (problemData.getData('answerBtn') === undefined) { 
+                                     $scope.answerButtonText = 'Check Answer';
+                                     $scope.hasCheckAnswer = true;
+                                 } else {
+                                     anwserbtn(problemData.getData('answerBtn'));
+                                 }
                             };
 
                         $scope.$watch('data', function () {
@@ -49,6 +63,10 @@ angular.module('mathSkills')
                                     $scope.help = function () {
                                         // Change 'Check Answer' button text to 'Next Problem'.
 
+                                        //if (problemData.getData('answerBtn') === 'noAnswer') { 
+                                            $scope.answerButtonText = 'Check Answer';
+                                            $scope.hasCheckAnswer = true;
+                                        //}
                                         $scope.$emit('triggerCheckHelp');
                                     };
                                 } else {

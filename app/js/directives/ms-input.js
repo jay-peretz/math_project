@@ -166,6 +166,45 @@ angular.module('mathSkills')
                                 $scope.$emit('helped');
                             } else {
                                 // If we have an answer already, fire a notHelped event.
+                                
+                                // var parsedExpected = parser.extractTag($scope.expected).args[0];
+                                
+                                // if ($scope.myargs[0][0] === '[') {
+                                //     var answersArr = JSON.parse($scope.myargs[0]).map(String); console.log('answersArr ', answersArr);
+                                //     var answerIndex = answersArr.indexOf($scope.answer);  console.log('answerIndex ', answerIndex);
+                                    
+                                //     if (answerIndex !== -1) { 
+                                //         var correctAnswerIndex = problemData.index(answerIndex);  console.log('correctAnswerIndex ', correctAnswerIndex);
+                                //         if (correctAnswerIndex === answerIndex) {
+                                             
+                                //             $scope.$emit('notHelped', {
+                                //                 controllerId: $scope.controllerId
+                                //             });
+                                //         } else {
+                                //             $scope.answer = answersArr[correctAnswerIndex];
+                                //             $scope.$emit('helped');
+                                //         }
+                                         
+                                //     } else {
+                                //         problemData.getIndex().then(function (index){
+                                //             $scope.answer = answersArr[index];
+                                //             $scope.$emit('helped');
+                                //         });
+                                        
+                                //     }
+                                // } else { 
+                                //     if (parsedExpected === $scope.answer) {
+                                        
+                                //         $scope.$emit('notHelped', {
+                                //             controllerId: $scope.controllerId
+                                //         });
+                                //     } else {
+                                //         $scope.answer = parsedExpected;
+                                //         $scope.$emit('helped');
+                                //     }
+                                     
+                                // }
+                                
                                 $scope.$emit('notHelped', {
                                     controllerId: $scope.controllerId
                                 });

@@ -34,14 +34,7 @@ angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtil
                                 '}{'
                                 +'\\grp{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}'+
                                 '}',
-                        answer: '\\canfrac{[$n1,$d1]}{[$n2,$d2]}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true
-                        }
-                    }, {
-                        problem: '\\str{Multiply the fractions together.}',
-                        answer: '\\multiplyfracs{\\frac{\\str{$n1}}{\\str{$d1}}}{\\frac{\\str{$n2}}{\\str{$d2}}}',
+                        answer: '\\canfrac{[$n1,$d1]}{[$n2,$d2]}{[$na,$da]}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -72,14 +65,7 @@ angular.module('mathSkills').service('data7_1', ['dataUtils', function (dataUtil
                                 +'{\\str{Reduce the fractions by canceling.}}' 
 								+'{\\html{&nbsp;}}'
                                 +'{\\grp{\\frac{\\str{$n1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\sign{&times;}}{\\frac{\\str{$n3}}{\\str{$d3}}}}',
-                        answer: '\\canfrac{[$n1,$d1]}{[$n2,$d2]}{[$n3,$d3]}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true
-                        }
-                    }, {
-                        problem: '\\str{Multiply the fractions together.}',
-                        answer: '\\multiplyfracs{\\frac{\\str{$n1}}{\\str{$d1}}}{\\frac{\\str{$n2}}{\\str{$d2}}}{\\frac{\\str{$n3}}{\\str{$d3}}}',
+                        answer: '\\canfrac{[$n1,$d1]}{[$n2,$d2]}{[$n3,$d3]}{[$na,$da]}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
