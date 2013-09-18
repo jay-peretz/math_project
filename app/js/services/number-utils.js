@@ -173,7 +173,22 @@ angular.module('mathSkills.services')
                         return i==a.indexOf(itm);
                     });
                     return unique;
-                }
+                },
+				
+				/**
+				 * Randomize array element order in-place.
+				 * Using Fisher-Yates shuffle algorithm
+				 */
+				shuffleArray: function (array) {
+					var newArray = array.slice();
+					for (var i = newArray.length - 1; i > 0; i--) {
+						var j = Math.floor(Math.random() * (i + 1));
+						var temp = newArray[i];
+						newArray[i] = newArray[j];
+						newArray[j] = temp;
+					}
+					return newArray;
+				}
             };
 
             return numberUtils;

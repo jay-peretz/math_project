@@ -1,6 +1,6 @@
 /*global angular */
 
-angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtils) {
+angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', function (dataUtils, numberUtils) {
     var desc = {
             title: '8.5 Mixed Fraction Application Problems',
             path: '8.5-mixed-fraction-application-problems',
@@ -661,5 +661,5 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
             { firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50',illustration: '8.5-9_Typed_Pages/400x300/Typed_Pages_c.jpg', template: 'pagesMul' },
         ];
     
-    return dataUtils.build(desc, template, data);
+    return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
 }]);
