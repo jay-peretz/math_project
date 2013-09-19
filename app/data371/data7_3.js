@@ -37,14 +37,7 @@ angular.module('mathSkills').service('data7_3', ['dataUtils', function (dataUtil
                                 +'{\\str{Reduce the fractions by canceling.}}'
 								+'{\\html{&nbsp;}}'
                                 +'{\\row{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&times;}}{\\frac{\\fracstr{$d2}}{\\fracstr{$n2}}}}',
-                         answer: '\\canfrac{[$n1,$d1]}{[$n2,$d2]}{[$na,$da]}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true
-                        }
-                    }, {
-                        problem: '\\str{Multiply the fractions together.}',
-                        answer: '\\multiplyfracs{\\frac{\\fracstr{$$n1}}{\\fracstr{$$d1}}}{\\frac{\\fracstr{$$n2}}{\\fracstr{$$d2}}}',
+                         answer: '\\canfrac{[$n1,$d1]}{[$d2,$n2]}{[$na,$da]}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
