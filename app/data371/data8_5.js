@@ -13,7 +13,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     title: 'Main Answer',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\rowgrp{\\ins{There are houses worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub>   in a subdivision. If each house is worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a million dollars, how many houses are in the subdivision?}}{\\grp{\\input{$number}}{html{houses}}}',
+                        answer: '\\rowgrp{\\ins{There are houses worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars in a subdivision. If each house is worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a million dollars, how many houses are in the subdivision?}}{\\grp{\\input{$number}}{html{houses}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -295,7 +295,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     title: 'Main Answer',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\rowgrp{\\ins{$number portions of cookies in a jar weigh a total of $firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds.  What is the weight of each portion (know that each portion weighs exactly the same)?}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{\\html{pounds}}}',
+                        answer: '\\rowgrp{\\ins{$number portions of cookies in a jar weigh a total of $firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds.  What is the weight of each portion (given that each portion weighs exactly the same)?}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{\\html{pounds}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -385,7 +385,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                         problem: '\\image{$illustration}',
                         answer: '\\wb{' +
 									'\\rowgrp' +
-										'{\\ins{You have been <u>given the total</u> number of portions of cookies in the jar.  How many portions of cookies are in the jar?}}' +
+										'{\\ins{You have been <u>given the number</u> of portions of cookies in the jar.  Each portion weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds.  How many portions of cookies are in the jar?}}' +
 										'{\\grp{\\input{$number}}{\\html{portions of cookies}}}' +
 								'}',
                         controls: {
@@ -414,7 +414,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
 											'\\rowgrp{\\css{\\ins{Yes, now write a setup that will solve this problem.}}{width400}}{\\html{<br><br>}},' +
 											'\\css{\\ins{We must multiply to solve this problem.  The <u>given weight of each portion</u> of cookies in the jar is being multiplied by $number portions of cookies.  Pick the set up that will solve for the total combined weight of the cookies in the jar.}}{width400}' +    
 										']}{$$previousCorrect}}' +                                    
-										'{\\grp{\\select{$secondunitwhole $secondunitn/$secondunitd pounds/portion}{["$secondunitwhole $secondunitn/$secondunitd pounds/portion", "$number portions"]}}{\\sign{&bull;}}{\\select{$number portions}{["$secondunitwhole $secondunitn/$secondunitd pounds/portion", "$number portions"]}}}' +
+										'{\\grp{\\select{$secondunitwhole $secondunitn/$secondunitd}{["$secondunitwhole $secondunitn/$secondunitd", "$number"]}}{\\sign{&bull;}}{\\select{$number}{["$secondunitwhole $secondunitn/$secondunitd", "$number"]}}}' +
                             	'}',
                         controls: {
                             "checkAnswer": true,
@@ -428,7 +428,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                                         '\\rowgrp{\\css{\\ins{Now solve the problem.}}{width400}}{\\html{<br><br>}},' +
                                         '\\css{\\ins{This is a *repeated addition* or multiplication problem.  The weight of each portion of cookies, $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds, needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}}{width400}' +
                                     ']}{$$previousCorrect}}' +
-                                    '{\\grp{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\str{$secondunitn}}{\\str{$secondunitd}}}}{\\html{pounds/portion}}{\\sign{&bull;}}{\\html{$number}}{\\html{portions}}{\\sign{=}}{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{pounds}}}}' +
+                                    '{\\grp{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\str{$secondunitn}}{\\str{$secondunitd}}}}{\\sign{&bull;}}{\\html{$number}}{\\sign{=}}{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{pounds}}}}' +
                             '}',
                         controls: {
                             "checkAnswer": true,
@@ -661,5 +661,6 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
             { firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50',illustration: '8.5-9_Typed_Pages/400x300/Typed_Pages_c.jpg', template: 'pagesMul' },
         ];
     
-    return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
+	return dataUtils.build(desc, template, data);
+    //return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
 }]);
