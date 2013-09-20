@@ -23,7 +23,7 @@ angular.module('mathSkills')
                     function (directiveUtils, problemData, numberUtils, parser, $rootScope, $scope, $element, $compile, $timeout) {
 
                         $scope.controllerId = Math.random().toString();
-                        $scope.instructions = 'ins{Reduce the fractions by canceling:<br>click on 2 values (1 numerator and 1 denominator) that have a common factor other than one.}';
+                        $scope.instructions = 'ins{Reduce the fractions by canceling.<br>Click on 2 values (1 numerator and 1 denominator) that have a common factor other than one.}';
                         $scope.buttons = '\\str{}';
                         $scope.showBtns = false;
                         $scope.x = '1';
@@ -80,7 +80,7 @@ angular.module('mathSkills')
                         $scope.$watch('expected', function () {
                             if ($scope.expected) {
                                 $scope.args = directiveUtils.preProcess(parser.extractTag($scope.expected).args);              //console.log('this is ', $scope.args);
-                                $scope.answer = $scope.args.pop(); //console.log('answer', $scope.answer, 'args', $scope.args);
+                                $scope.answer = $scope.args.pop();  //console.log('answer', JSON.stringify($scope.answer), 'args', JSON.stringify($scope.args));
                                 $scope.display = $scope.args.length < 3;
                                 $scope.problemWidth = $scope.args.length < 3 ? "30": "40";
                                 $scope.solveBuild = '\\grp{\\sign{=}}{\\frac{\\input{' +  $scope.answer[0] + '}}{\\input{' +  $scope.answer[1] + '}}}'; //console.log('solve', $scope.solve);
@@ -117,7 +117,7 @@ angular.module('mathSkills')
                                         $scope.$emit('triggerCheckFocus');
                                     }, 900);
                                 } else {
-                                    $scope.instructions = 'ins{Click on 2 values (1 numerator and 1 denominator) that have a common factor other than one.}';
+                                    $scope.instructions = 'ins{Do the fractions have any common factors?}';
                                     setAll('str');
                                     problemData.addData('cancellable', 'stage');
                                     buildButtons();

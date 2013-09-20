@@ -36,7 +36,13 @@ angular.module('mathSkills').service('data7_3', ['dataUtils', function (dataUtil
                     }, {
                        problem: '\\rowgrp'
 						+'{\\grp{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
-                         answer: '\\canfrac{[$n1,$d1]}{[$d2,$n2]}{[$na,$da]}',
+                         answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{Rewrite the problem as the product of fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&times;}}{\\frac{\\fracstr{$d2}}{\\fracstr{$n2}}}}'
+										+'{\\canfrac{[$n1,$d1]}{[$d2,$n2]}{[$na,$da]}}'
+									+'}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -71,7 +77,13 @@ angular.module('mathSkills').service('data7_3', ['dataUtils', function (dataUtil
                         }
                     }, {
                         problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}',
-                        answer: '\\canfrac{[$n1,$d1]}{[$d2,$n2]}{[$d3,$n3]}{[$na,$da]}',
+                        answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{Rewrite the problem as the product of fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&times;}}{\\frac{\\fracstr{$d2}}{\\fracstr{$n2}}}{\\sign{&times;}}{\\frac{\\fracstr{$d3}}{\\fracstr{$n3}}}}'
+										+'{\\canfrac{[$n1,$d1]}{[$d2,$n2]}{[$d3,$n3]}{[$na,$da]}}'
+									+'}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
