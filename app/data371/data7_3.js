@@ -12,7 +12,7 @@ angular.module('mathSkills').service('data7_3', ['dataUtils', function (dataUtil
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}',
+                        problem: '\\grp{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}',
                         answer: '\\frac{\\input{$na}}{\\input{$da}}',
                         controls: {
                             "checkAnswer": true,
@@ -24,19 +24,18 @@ angular.module('mathSkills').service('data7_3', ['dataUtils', function (dataUtil
                     title: 'Workbook',
                     children: [{
                         problem: '\\rowgrp'
-						+'{\\str{Rewrite the problem as the product of fractions:}}'
+						+'{\\grp{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+                        answer: '\\rowgrp'
+						+'{\\ins{Rewrite the problem as the product of fractions:}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\row{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
-                        answer: '\\grp{\\frac{\\input{$n1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$d2}}{\\input{$n2}}}',
+						+'{\\grp{\\frac{\\input{$n1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$d2}}{\\input{$n2}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\col'
-                                +'{\\str{Reduce the fractions by canceling.}}'
-								+'{\\html{&nbsp;}}'
-                                +'{\\row{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&times;}}{\\frac{\\fracstr{$d2}}{\\fracstr{$n2}}}}',
+                       problem: '\\rowgrp'
+						+'{\\grp{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                          answer: '\\canfrac{[$n1,$d1]}{[$d2,$n2]}{[$na,$da]}',
                         controls: {
                             "checkAnswer": true,
@@ -61,28 +60,18 @@ angular.module('mathSkills').service('data7_3', ['dataUtils', function (dataUtil
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\rowgrp'
-						+'{\\str{Rewrite the problem as the product of fractions:}}'
+                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}',
+                        answer: '\\rowgrp'
+						+'{\\ins{Rewrite the problem as the product of fractions:}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\row{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
-                        answer: '\\grp{\\frac{\\input{$n1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$d2}}{\\input{$n2}}}{\\sign{&times;}}{\\frac{\\input{$d3}}{\\input{$n3}}}',
+						+'{\\grp{\\frac{\\input{$n1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$d2}}{\\input{$n2}}}{\\sign{&times;}}{\\frac{\\input{$d3}}{\\input{$n3}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\col'+
-                                '{\\str{Reduce the fractions by canceling.}}' +
-								'{\\html{&nbsp;}}'+
-                                '{\\row{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&times;}}{\\frac{\\fracstr{$d2}}{\\fracstr{$n2}}}{\\sign{&times;}}{\\frac{\\fracstr{$d3}}{\\fracstr{$n3}}}}',
-                        answer: '\\cancelfracs{[$n1,$d1]}{[$d2,$n2]}{[$d3,$n3]}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true
-                        }
-                    }, {
-                        problem: '\\str{Multiply the fractions together.}',
-                        answer: '\\multiplyfracs{\\frac{\\fracstr{$$n1}}{\\fracstr{$$d1}}}{\\frac{\\fracstr{$$n2}}{\\fracstr{$$d2}}}{\\frac{\\fracstr{$$n3}}{\\fracstr{$$d3}}}',
+                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}',
+                        answer: '\\canfrac{[$n1,$d1]}{[$d2,$n2]}{[$d3,$n3]}{[$na,$da]}',
                         controls: {
                             "checkAnswer": true,
                             "help": true

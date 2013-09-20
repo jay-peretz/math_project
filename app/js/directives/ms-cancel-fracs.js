@@ -23,7 +23,7 @@ angular.module('mathSkills')
                     function (directiveUtils, problemData, numberUtils, parser, $rootScope, $scope, $element, $compile, $timeout) {
 
                         $scope.controllerId = Math.random().toString();
-                        $scope.instructions = 'ins{Click on 2 values (1 numerator and 1 denominator) that have a common factor other than one.}';
+                        $scope.instructions = 'ins{Reduce the fractions by canceling:<br>click on 2 values (1 numerator and 1 denominator) that have a common factor other than one.}';
                         $scope.buttons = '\\str{}';
                         $scope.showBtns = false;
                         $scope.x = '1';
