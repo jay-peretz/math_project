@@ -12,7 +12,11 @@ angular.module('mathSkills').service('data8_3', ['dataUtils', function (dataUtil
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\row{\\html{Solve &nbsp;}}{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}{\\sign{&times;}}{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+                        problem: '\\grp'
+									+'{\\html{Solve &nbsp;}}'
+									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\sign{&times;}}'
+									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                         answer: '\\mixed{\\input{$ma}}{\\frac{\\input{$na}}{\\input{$da}}}',
                         controls: {
                             "checkAnswer": true,
@@ -23,28 +27,29 @@ angular.module('mathSkills').service('data8_3', ['dataUtils', function (dataUtil
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\rowgrp{\\row{\\str{Change the mixed numbers into improper fractions.}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}{\\sign{&times;}}{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
-                        answer: '\\grp{\\frac{\\input{$un1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$un2}}{\\input{$d2}}}',
+                        problem: '\\grp'
+									+'{\\html{Solve &nbsp;}}'
+									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\sign{&times;}}'
+									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+                        answer: '\\rowgrp'
+									+'{\\ins{Change the mixed numbers into improper fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\frac{\\input{$un1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$un2}}{\\input{$d2}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\col'+
-                                '{\\str{Reduce the fractions by canceling.}}' +
-                                '{\\html{&nbsp;}}'+
-                                '{\\row{\\frac{\\str{$un1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$un2}}{\\str{$d2}}}}',
-                        answer: '\\cancelfracs{[$un1,$d1]}{[$un2,$d2]}',
+                        problem: '\\grp'
+									+'{\\html{Solve &nbsp;}}'
+									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\sign{&times;}}'
+									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+                        answer: '\\canfrac{[$un1,$d1]}{[$un2,$d2]}{[$na,$da]}',
                         controls: {
                             "checkAnswer": true,
                             "help": false
-                        }
-                    }, {
-                        problem: '\\str{Multiply the fractions together.}',
-                        answer: '\\multiplyfracs{\\frac{\\str{$$n1}}{\\str{$$d1}}}{\\frac{\\str{$$n2}}{\\str{$$d2}}}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true
                         }
                     }]
                 }]
@@ -54,7 +59,11 @@ angular.module('mathSkills').service('data8_3', ['dataUtils', function (dataUtil
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\row{\\html{Solve &nbsp;}}{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}{\\sign{&times;}}{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+                        problem: '\\grp'
+									+'{\\html{Solve &nbsp;}}'
+									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\sign{&times;}}'
+									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                         answer: '\\mixed{\\input{$ma}}{\\frac{\\input{$na}}{\\input{$da}}}',
                         controls: {
                             "checkAnswer": true,
@@ -65,35 +74,53 @@ angular.module('mathSkills').service('data8_3', ['dataUtils', function (dataUtil
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\rowgrp{\\row{\\str{Change the mixed numbers into improper fractions.}}}{\\row{\\str{\xA0}}}{\\row{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}{\\sign{&times;}}{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
-                        answer: '\\grp{\\frac{\\input{$un1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$un2}}{\\input{$d2}}}',
+                        problem: '\\grp'
+									+'{\\html{Solve &nbsp;}}'
+									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\sign{&times;}}'
+									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+						answer: '\\rowgrp'
+									+'{\\ins{Change the mixed numbers into improper fractions:}}'
+									+'{\\html{&nbsp;}}'
+                        			+'{\\grp{\\frac{\\input{$un1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$un2}}{\\input{$d2}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\col'+
-                                '{\\str{Reduce the fractions by canceling.}}' +
-                                '{\\html{&nbsp;}}'+
-                                '{\\row{\\frac{\\str{$un1}}{\\str{$d1}}}{\\sign{&times;}}{\\frac{\\str{$un2}}{\\str{$d2}}}}',
-                        answer: '\\cancelfracs{[$un1,$d1]}{[$un2,$d2]}',
+                        problem: '\\grp'
+									+'{\\html{Solve &nbsp;}}'
+									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\sign{&times;}}'
+									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+                        answer: '\\canfrac{[$un1,$d1]}{[$un2,$d2]}{[$na,$da]}',
                         controls: {
                             "checkAnswer": true,
                             "help": false
                         }
                     }, {
-                        problem: '\\str{Multiply the fractions together.}',
-                        answer: '\\multiplyfracs{\\frac{\\str{$$n1}}{\\str{$$d1}}}{\\frac{\\str{$$n2}}{\\str{$$d2}}}',
+                        problem: '\\grp'
+									+'{\\html{Solve &nbsp;}}'
+									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\sign{&times;}}'
+									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+                        answer: '\\rowgrp'
+									+'{\\ins{Write the fraction as a mixed number.}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\frac{\\fracstr{$product}}{\\fracstr{$da}}}'
+									+'{\\str{\xA0 = \xA0}}'
+									+'{\\mixed{\\input{$ma}}{\\frac{\\input{$na}}{\\input{$da}}}}}',
                         controls: {
                             "checkAnswer": true,
-                            "help": true
-                        }
-                    }, {
-                        problem: '\\rowgrp{\\row{\\str{Write the fraction as a mixed number.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\str{$product}}{\\str{$da}}}',
-                        answer: '\\mixed{\\input{$ma}}{\\frac{\\input{$na}}{\\input{$da}}}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp{\\row{\\str{Divide the numerator by the denominator, then make the quotient the mixed number whole and the remainder the mixed number numerator. \xA0}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\fracstr{$product}}{\\fracstr{$da}}}{\\row{\\str{\xA0 = \xA0}}}{\\row{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{\\row{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{help-answer-text-tight}}}}'
+                            "help": '\\rowgrp'
+										+'{\\str{Divide the numerator by the denominator, then make the quotient the mixed number whole and the remainder the mixed number numerator. \xA0}}'
+										+'{\\str{\xA0}}'
+										+'{\\grp{\\frac{\\fracstr{$product}}{\\fracstr{$da}}}'
+										+'{\\str{\xA0 = \xA0}}'
+										+'{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{css{\\str{answer:  \xA0}}{help-answer-text}}'
+										+'{css{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{help-answer-text-tight}}}'
                         }
                     }]
                 }]

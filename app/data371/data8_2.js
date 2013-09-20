@@ -22,10 +22,10 @@ angular.module('mathSkills').service('data8_2', ['dataUtils', function (dataUtil
 								"help": '\\rowgrp'
 								+'{\\str{Divide the numerator by the denominator, then make the quotient the mixed number whole and the remainder the mixed number numerator. \xA0}}'
 								+'{\\html{&nbsp;}}'
-								+'{\\row{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}'
+								+'{\\grp{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}'
 								+'{\\sign{\xA0 = \xA0}}'
 								+'{\\mixed{\\fracstr{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}}'
-								+'{css{\\row{\\str{Answer:  \xA0}}'
+								+'{css{\\grp{\\str{Answer:  \xA0}}'
 								+'{\\mixed{\\fracstr{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}}{help-answer-text}}'
 							}
 						}]
@@ -38,19 +38,19 @@ angular.module('mathSkills').service('data8_2', ['dataUtils', function (dataUtil
 						children: [{
 							problem: '\\rowgrp'
 							+'{\\str{Write the improper fraction as a mixed number (simplify your answer if necessary):}}'
-							+'{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}',
+							+'{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}',
 							answer: '\\mixed{\\input{$answerWhole}}{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',
 							controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
 								+'{\\str{Divide the numerator by the denominator, then make the quotient the mixed number whole and the remainder the mixed number numerator. \xA0}}'
 								+'{\\html{&nbsp;}}'
-								+'{\\row{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}'
+								+'{\\grp{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}'
 								+'{\\sign{\xA0 = \xA0}}'
 								+'{\\mixed{\\fracstr{$answerWhole}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$problemDen}}}}'
 								+'{\\sign{\xA0 = \xA0}}'
 								+'{\\mixed{\\fracstr{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}}'
-								+'{css{\\row{\\str{Answer:  \xA0}}'
+								+'{css{\\grp{\\str{Answer:  \xA0}}'
 								+'{\\mixed{\\fracstr{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}}{help-answer-text}}'
 							}
 						}]

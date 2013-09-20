@@ -13,20 +13,20 @@ angular.module('mathSkills').service('data7_2', ['dataUtils', function (dataUtil
 						title: 'Main Answer',
 						children: [{
 							problem: '\\rowgrp'
-							+'{\\row{\\str{What is the reciprocal of \xA0}}'
+							+'{\\grp{\\str{What is the reciprocal of \xA0}}'
 							+'{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}'
 							+'{\\str{ ?}}}'
-							+'{\\row{\\str{Simplify if necessary.}}}}',
+							+'{\\str{Simplify if necessary.}}',
 							answer: '\\mixed{\\input{$answerWhole}}{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',
 							controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
-								+'{\\row{\\str{The reciprocal of \xA0}}'
+								+'{\\grp{\\str{The reciprocal of \xA0}}'
 								+'{\\frac{\\fracstr{$helpNumber}}{\\fracstr{$problemDen}}}'
 								+'{\\str{\xA0 is \xA0}}'
 								+'{\\frac{\\fracstr{$problemDen}}{\\fracstr{$helpNumber}}}}'
 								+'{\\html{&nbsp;}}'
-								+'{css{\\row{\\str{answer:  \xA0}}'
+								+'{css{\\grp{\\str{answer:  \xA0}}'
 								+'{\\str{$answerWhole}}}{help-answer-text}}'
 							}
 						}]
@@ -38,20 +38,20 @@ angular.module('mathSkills').service('data7_2', ['dataUtils', function (dataUtil
 						title: 'Main Answer',
 						children: [{
 							problem: '\\rowgrp'
-							+'{\\row{\\str{What is the reciprocal of \xA0}}'
+							+'{\\grp{\\str{What is the reciprocal of \xA0}}'
 							+'{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}'
 							+'{\\str{ ?}}}'
-							+'{\\row{\\str{Simplify if necessary.}}}}',
+							+'{\\str{Simplify if necessary.}}',
 							answer: '\\frac{\\input{$answerNum}}{\\input{$answerDen}}',
 							controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
-								+'{\\row{\\str{The reciprocal of \xA0}}'
+								+'{\\grp{\\str{The reciprocal of \xA0}}'
 								+'{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}'
 								+'{\\str{\xA0 is \xA0}}'
 								+'{\\frac{\\fracstr{$problemDen}}{\\fracstr{$problemNum}}}}'
 								+'{\\html{&nbsp;}}'
-								+'{css{\\row{\\str{answer:  \xA0}}'
+								+'{css{\\grp{\\str{answer:  \xA0}}'
 								+'{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}{help-answer-text}}'
 							}
 						}]
@@ -63,23 +63,23 @@ angular.module('mathSkills').service('data7_2', ['dataUtils', function (dataUtil
 						title: 'Main Answer',
 						children: [{
 							problem: '\\rowgrp'
-							+'{\\row{\\str{What is the reciprocal of \xA0}}'
+							+'{\\grp{\\str{What is the reciprocal of \xA0}}'
 							+'{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}'
 							+'{\\str{ ?}}}'
-							+'{\\row{\\str{Simplify if necessary.}}}}',
+							+'{\\str{Simplify if necessary.}}',
 							answer: '\\frac{\\input{$answerNum}}{\\input{$answerDen}}',
 							controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
-								+'{\\row{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}'
+								+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}'
 								+'{\\str{\xA0 equals \xA0}}'
 								+'{\\frac{\\fracstr{$helpNumber}}{\\fracstr{$problemDen}}}}'
-								+'{\\row{\\str{The reciprocal of \xA0}}'
+								+'{\\grp{\\str{The reciprocal of \xA0}}'
 								+'{\\frac{\\fracstr{$helpNumber}}{\\fracstr{$problemDen}}}'
 								+'{\\str{\xA0 is \xA0}}'
 								+'{\\frac{\\fracstr{$problemDen}}{\\fracstr{$helpNumber}}}}'
 								+'{\\html{&nbsp;}}'
-								+'{css{\\row{\\str{answer:  \xA0}}'
+								+'{css{\\grp{\\str{answer:  \xA0}}'
 								+'{\\mixed{\\html{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}}{help-answer-text}}'
 							}
 						}]
