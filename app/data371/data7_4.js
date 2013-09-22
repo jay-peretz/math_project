@@ -64,7 +64,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', function (dataUtil
                         answer:
                             '\\rowgrp' +
                                 '{\\choose{[' +
-                                    '\\ins{Great! Now solve the problem.},' +
+                                    '\\ins{Great! The total of $total acres is being divided up into  pieces that are each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre in size.  Now solve the problem.},' +
                                     '\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the $total acres is the total and is placed first in the division set up.  The correct setup is shown to the right. Now solve the problem.}' +    
                                 ']}{$$previousCorrect}}' +
                                 '{\\grp{\\frac{\\str{$total}}{\\str{1}}}{\\sign{&div;}}{\\frac{\\str{$unitn}}{\\str{$unitd}}}{\\sign{=}}{\\input{$number}}}',
@@ -138,7 +138,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', function (dataUtil
                             '\\wb{' +
                                 '\\rowgrp' +
                                     '{\\choose{[' +
-                                        '\\ins{Great! Now give the solution.},' +
+                                        '\\ins{Great! The total of $number houses is being divided up into $total pieces. Now give the solution.},' +
                                         '\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the $total acres is the total and is placed first in the division set up.  The correct setup is shown below.<br><br>Now solve the problem.}' +
                                     ']}{$$previousCorrect}}' +
                                     '{\\grp{\\frac{\\str{$total}}{\\str{1}}}{\\sign{&div;}}{\\frac{\\str{$number}}{\\str{1}}}{\\sign{=}}{\\frac{\\input{$unitn}}{\\input{$unitd}}}}' +
@@ -156,7 +156,9 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', function (dataUtil
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{<img src=img/illustrations/$illustration>}',
-                        answer: '\\col{\\ins{Each house will occupy <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre.  If $number houses are to be built, how many acres of land are needed?}}{\\input{$total}}',
+                        answer: '\\rowgrp'
+						+'{\\ins{Each house will occupy <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre.  If $number houses are to be built, how many acres of land are needed?}}'
+						+'{\\input{$total}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -166,29 +168,79 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', function (dataUtil
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\col{\\html{<img src=img/illustrations/$illustration>}}{\\str{You are searching for the total number of acres that are needed.  How many acres are needed to build one house?}}',
-                        answer: '\\frac{\\input{$unitn}}{\\input{$unitd}}',
+                        problem: '\\html{<img src=img/illustrations/$illustration>}',
+						answer: '\\wb'
+									+'{\\rowgrp'
+										+'{\\ins{You are searching for the total number of acres that are needed.  How many acres are needed to build one house?}}'
+										+'{\\grp{\\frac{\\input{$unitn}}{\\input{$unitd}}}{\\html{acres}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\col{\\html{<img src=img/illustrations/$illustration>}}{\\row{\\str{How many houses are being built?}}}',
-                        answer: '\\input{$number}',
+                        problem: '\\html{<img src=img/illustrations/$illustration>}',
+						answer: '\\rowgrp'
+						+'{\\ins{How many houses are being built?}}'
+						+'{\\grp{\\input{$number}}{\\html{houses}}}',
+						
+						answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\choose{[' +
+											'\\ins{Yes, it takes <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre to build one house. How many houses are being built?},' +
+											'\\ins{No, we are told it takes <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre to build one house. How many houses are being built?}' +    
+										']}{$$previousCorrect}}' +
+										'{\\grp{\\input{$number}}{\\html{houses}}}' +
+								'}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\col{\\html{<img src=img/illustrations/$illustration>}}{\\str{Write a setup that will solve for the total amount of land that is needed to build all $number houses.}}',
-                        answer: '\\grp{\\frac{\\input{$unitn}}{\\input{$unitd}}}{\\sign{&times;}}{\\frac{\\input{$number}}{\\input{1}}}',
+                        problem: '\\html{<img src=img/illustrations/$illustration>}',
+						answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\choose{[' +
+											'\\ins{Yes, $number houses are being built. To find out the total number of acres required to build $number houses, each house occupying <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre, what operation must we use?},' +
+											'\\ins{No, we are told $number houses are being built. To find out the total number of acres required to build $number houses, each house occupying <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre, what operation must we use?}' +    
+										']}{$$previousCorrect}}' +
+										'{\\select{Multiplication}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+								'}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\col{\\html{<img src=img/illustrations/$illustration>}}{\\str{Now solve the problem.}}',
-                        answer: '\\grp{\\frac{\\str{$unitn}}{\\str{$unitd}}}{\\sign{&div;}}{\\frac{\\str{$number}}{\\str{1}}}{\\sign{=}}{\\input{$total}}',
+                        problem: '\\html{<img src=img/illustrations/$illustration>}',
+						answer: '\\rowgrp'
+						+'{\\ins{Yes, the <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre is being repeated $number times.  By multiplying these two values you will identify the total number of acres needed to build the houses.<br><br>Write a setup that will solve for the total amount of land that is needed to build all $number houses.}}'
+						+'{\\grp{\\frac{\\input{$unitn}}{\\input{$unitd}}}{\\sign{&times;}}{\\frac{\\input{$number}}{\\input{1}}}}',
+						
+						answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\choose{[' +
+											'\\rowgrp{\\css{\\ins{Yes, the <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre is being repeated $number times.  Write a setup that will solve for the total amount of land that is needed to build all $number houses.}}{width400}}{\\html{<br><br>}},' +
+											'\\css{\\ins{We must multiply to solve this problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre is being repeated $number times. Write a setup that will solve for the total amount of land that is needed to build all $number houses.}}{width400}' +    
+										']}{$$previousCorrect}}' +                                    
+										'{\\grp{\\frac{\\input{$unitn}}{\\input{$unitd}}}{\\sign{&times;}}{\\frac{\\input{$number}}{\\input{1}}}}' +
+                            	'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\html{<img src=img/illustrations/$illustration>}',
+						answer: '\\rowgrp'
+						+'{\\ins{Now solve the problem.}}'
+						+'{\\grp{\\frac{\\fracstr{$unitn}}{\\fracstr{$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}{\\sign{=}}{\\input{$total}}{\\html{acres}}}',
+						
+						answer: '\\wb{' +
+                                '\\rowgrp' +
+                                    '{\\choose{[' +
+                                        '\\rowgrp{\\css{\\ins{Now solve the problem.}}{width400}}{\\html{<br><br>}},' +
+                                        '\\css{\\ins{This is a *repeated addition* or multiplication problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}}{width400}' +
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\grp{\\frac{\\fracstr{$unitn}}{\\fracstr{$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}{\\sign{=}}{\\input{$total}}{\\html{acres}}}' +
+                            '}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
