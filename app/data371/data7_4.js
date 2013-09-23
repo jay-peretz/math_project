@@ -435,7 +435,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
-			findDollarsLeft: {
+			dollarsLeftFromFraction: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
                     title: 'Main Answer',
@@ -522,7 +522,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
-            findFractionSpent: {
+            dollarsFindFractionSpent: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
                     title: 'Main Answer',
@@ -530,7 +530,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         problem: '\\image{$illustration}',
                         answer: '\\rowgrp'
 									+'{\\ins{Devinder had $number. He spent $spent of the $number shopping. What fraction of the $number did he spend?}}'
-									+'{\\grp{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}',
+									+'{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -569,8 +569,8 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         answer: '\\wb{' +
                                 '\\rowgrp' +
                                     '{\\choose{[' +
-                                        '\\rowgrp{\\css{\\ins{Yes, Devinder spent $spent. Write a fraction that will represent the fraction of money that Devinder spent.}}{width400}},' +
-                                        '\\css{\\ins{No, Devinder spent $spent.  The $spent is a part of the total $number amount, which means we can represent the $spent as the numerator of a fraction whose denominator is $number. Write a fraction that will represent the fraction of money that Devinder spent.}}{width400}' +
+                                        '\\rowgrp{\\css{\\ins{Yes, Devinder spent $spent. Using $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}}{width400}},' +
+                                        '\\css{\\ins{No, Devinder spent $spent.  The $spent is a part of the total $number amount. Using $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}}{width400}' +
                                     ']}{$$previousCorrect}}' +
                                     '{\\grp{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}' +
                             '}',
@@ -597,16 +597,15 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
-            dollarsLeftMul: {
+            dollarsFindFractionLeft: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
                     title: 'Main Answer',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\rowgrp' + 
-									'{\\ins{If $number portions of cookies are in the jar, and each portion weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds, what is the total weight of the cookies in the jar?}}' +
-									'{\\html{&nbsp;}}' + 
-									'{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{pounds}}}',
+                        answer: '\\rowgrp'
+									+'{\\ins{Matt had $number. After he went shopping, he had $left of the $number left. What fraction of the $number did he have left?}}'
+									+'{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -619,8 +618,8 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         problem: '\\image{$illustration}',
                         answer: '\\wb{' +
 									'\\rowgrp' +
-										'{\\ins{You have been <span class=underline>given the number</span> of portions of cookies in the jar.  Each portion weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds.  How many portions of cookies are in the jar?}}' +
-										'{\\grp{\\input{$number}}{\\html{portions of cookies}}}' +
+										'{\\ins{You have been given the total amount of money which Matt had before he went shopping.  How much money did he start out with?}}' +
+										'{\\grp{\\input{$number}}}' +
 								'}',
                         controls: {
                             "checkAnswer": true,
@@ -631,25 +630,11 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         answer: '\\wb{' +
 									'\\rowgrp' +
 										'{\\choose{[' +
-											'\\ins{Yes, there are $number portions of cookies in the jar. To find out the total combined weight of all the cookies in the jar, what operation must we use?},' +
-											'\\ins{No, we are told there are $number portions of cookies in the jar. To find out the total combined weight of all the cookies in the jar, what operation must we use?}' +    
+											'\\ins{Yes, Matt had $number. Now, how much money did he have left?},' +
+											'\\ins{No, we are told that he started with $number. How much money did he have left?}' +    
 										']}{$$previousCorrect}}' +
-										'{\\select{Multiplication}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+										'{\\grp{\\input{$left}}}' +
 								'}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true
-                        }
-                    }, {
-                        problem: '\\image{$illustration}',
-                        answer: '\\wb{' +
-									'\\rowgrp' +
-										'{\\choose{[' +
-											'\\rowgrp{\\css{\\ins{Yes, now write a setup that will solve this problem.}}{width400}}{\\html{<br><br>}},' +
-											'\\css{\\ins{We must multiply to solve this problem.  The <span class=underline>given weight of each portion</span> of cookies in the jar is being multiplied by $number portions of cookies.  Pick the set up that will solve for the total combined weight of the cookies in the jar.}}{width400}' +    
-										']}{$$previousCorrect}}' +                                    
-										'{\\grp{\\select{$secondunitwhole $secondunitn/$secondunitd}{["$secondunitwhole $secondunitn/$secondunitd", "$number"]}}{\\sign{&bull;}}{\\select{$number}{["$secondunitwhole $secondunitn/$secondunitd", "$number"]}}}' +
-                            	'}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -659,11 +644,27 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         answer: '\\wb{' +
                                 '\\rowgrp' +
                                     '{\\choose{[' +
-                                        '\\rowgrp{\\css{\\ins{Now solve the problem.}}{width400}}{\\html{<br><br>}},' +
-                                        '\\css{\\ins{This is a *repeated addition* or multiplication problem.  The weight of each portion of cookies, $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds, needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}}{width400}' +
+                                        '\\rowgrp{\\css{\\ins{Yes, Matt had $left left. Using $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}}{width400}},' +
+                                        '\\css{\\ins{No, Matt had $left left.  The $left is a part of the total $number amount. Using $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}}{width400}' +
                                     ']}{$$previousCorrect}}' +
-                                    '{\\grp{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\str{$secondunitn}}{\\str{$secondunitd}}}}{\\sign{&bull;}}{\\html{$number}}{\\sign{=}}{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{pounds}}}}' +
+                                    '{\\grp{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}' +
                             '}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\css{'+
+										'\\rowgrp' +
+											'{\\choose{[' +
+												'\\html{Now reduce the fraction if possible.<br><br>},' +
+												'\\html{The fraction of money that Matt had left can be represented as <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> of his total.  The fraction is below; reduce the fraction if possible.<br><br>}' +
+											']}{$$previousCorrect}}' +
+											'{\\reducefrac{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}'+
+										'}'+
+									'{well width380}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -682,11 +683,11 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             { totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3a.jpg', template: 'housesDivFrac1' },
             {  totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3b.jpg', template: 'housesDivFrac2' },
             {  totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3c.jpg', template: 'housesMulFrac' },
-			{ firstunitn: '3', firstunitd: '5', secondunitn: '2', secondunitd: '5', number: '$200', dollarsLeft: '80', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_a.jpg', template: 'findDollarsLeft' },
-            { firstunitn: '120', firstunitd: '200', number: '$200', spent: '$120', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_b.jpg', template: 'findFractionSpent' },
-            
+			{ firstunitn: '3', firstunitd: '5', secondunitn: '2', secondunitd: '5', number: '$200', dollarsLeft: '80', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_a.jpg', template: 'dollarsLeftFromFraction' },
+            { firstunitn: '120', firstunitd: '200', secondunitn: '3', secondunitd: '5', number: '$200', spent: '$120', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_b.jpg', template: 'dollarsFindFractionSpent' },
+            { firstunitn: '80', firstunitd: '200', secondunitn: '2', secondunitd: '5', number: '$200', left: '$80', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_c.jpg', template: 'dollarsFindFractionLeft' },
 			];
     
     	//return dataUtils.build(desc, template, data);
-    return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
+    	return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
 }]);
