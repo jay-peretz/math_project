@@ -65,8 +65,8 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         answer:
                             '\\rowgrp' +
                                 '{\\choose{[' +
-                                    '\\ins{Great! Now give the solution.},' +
-                                    '\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the $total acres is the total and is placed first in the division set up.  The correct setup is shown below; now solve the problem.}' +    
+                                    '\\ins{Great! The total of $total acres is being divided up into  pieces that are each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre in size.  Now solve the problem.},' +
+                                    '\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the $total acres is the total and is placed first in the division set up.  The correct setup is shown below; now solve the problem.}' +     
                                 ']}{$$previousCorrect}}' +
                                 '{\\grp{\\frac{\\str{$total}}{\\str{1}}}{\\sign{&div;}}{\\frac{\\str{$unitn}}{\\str{$unitd}}}{\\sign{=}}{\\input{$number}}}',
                         controls: {
