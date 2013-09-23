@@ -671,6 +671,243 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         }
                     }]
                 }]
+            },
+			dollarsLeftFromFraction2: {
+                title: 'Mixed Fraction Application Problems',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\rowgrp'
+									+'{\\ins{Rene had $number. She paid some bills, and was left with <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of the $number. How much money did she have left?}}'
+									+'{\\grp{\\html{$dollarSign}}{\\input{$dollarsLeft}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\ins{You have been given the total amount of money which Rene had before she paid bills.  How much money did she start out with?}}' +
+										'{\\grp{\\input{$number}}}' +
+								'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\choose{[' +
+											'\\ins{Yes, Rene had $number. Now, what part or what fraction <strong>of</strong> that money did she have left?},' +
+											'\\ins{No, we are told that she started with $number. What part or what fraction <strong>of</strong> that money did she have left?}' +    
+										']}{$$previousCorrect}}' +
+										'{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}' +
+								'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\choose{[' +
+											'\\rowgrp{\\css{\\ins{Yes, Rene had <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of her $number left. What operation must we use to find the actual amount of money she had left?}}{width400}}{\\html{<br><br>}},' +
+											'\\css{\\ins{No, Rene had <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of her $number left.  What operation must we use to find the actual amount of money she had left?}}{width400}' +    
+										']}{$$previousCorrect}}' +                                    
+										'{\\grp{\\select{Multiplication}{["Addition", "Subtraction", "Multiplication", "Division"]}}}' +
+                            	'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+                                '\\rowgrp' +
+                                    '{\\choose{[' +
+                                        '\\rowgrp{\\css{\\ins{Yes. Write a setup that will solve for the amount of money she had left.}}{width400}}{\\html{<br><br>}},' +
+                                        '\\css{\\ins{This is a <span class=underline>number of another number</span> problem.  The &quot;of&quot; between two number values means <span class=underline>multiply</span>. Write a setup that will solve for the amount of money she had left.}}{width400}' +
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{\\sign{&bull;}}{\\input{$number}}}}' +
+                            '}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+                                '\\rowgrp' +
+                                    '{\\choose{[' +
+                                        '\\rowgrp{\\css{\\ins{Now solve the problem.}}{width400}}{\\html{<br><br>}},' +
+                                        '\\css{\\ins{The amount of money Rene had left is the fraction of the money she had left (<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub>) times the total she had to begin with ($number).  The correct setup is below. Now solve the problem.}}{width400}' +
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\grp{\\frac{\\fracstr{$secondunitn}}{\\fracstr{$secondunitd}}}{\\sign{&bull;}}{\\html{$number}}{\\sign{=}}{\\html{$dollarSign}}{\\input{$dollarsLeft}}}' +
+                            '}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            },
+            dollarsFindFractionSpent2: {
+                title: 'Mixed Fraction Application Problems',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\rowgrp'
+									+'{\\ins{Penelope had $number. She spent $spent of the $number on bills. What fraction of the $number did she spend?}}'
+									+'{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\ins{You have been given the total amount of money which Penelope had before she paid bills.  How much money did she start out with?}}' +
+										'{\\grp{\\input{$number}}}' +
+								'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\choose{[' +
+											'\\ins{Yes, Penelope had $number. Now, how much money did she spend?},' +
+											'\\ins{No, we are told that she started with $number. How much money did she spend?}' +    
+										']}{$$previousCorrect}}' +
+										'{\\grp{\\input{$spent}}}' +
+								'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+                                '\\rowgrp' +
+                                    '{\\choose{[' +
+                                        '\\rowgrp{\\css{\\ins{Yes, Penelope spent $spent. Using $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}}{width400}},' +
+                                        '\\css{\\ins{No, Penelope spent $spent.  The $spent is a part of the total $number amount. Using $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}}{width400}' +
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\grp{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}' +
+                            '}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\css{'+
+										'\\rowgrp' +
+											'{\\choose{[' +
+												'\\html{Now reduce the fraction if possible.<br><br>},' +
+												'\\html{The fraction of money that Penelope spent can be represented as <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> of her total.  The fraction is below; reduce the fraction if possible.<br><br>}' +
+											']}{$$previousCorrect}}' +
+											'{\\reducefrac{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}'+
+										'}'+
+									'{well width380}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            },
+            dollarsFindFractionLeft2: {
+                title: 'Mixed Fraction Application Problems',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\rowgrp'
+									+'{\\ins{Damian had $number. After he paid bills, he had $left of the $number left. What fraction of the $number did he have left?}}'
+									+'{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\ins{You have been given the total amount of money which Damian had before he paid bills.  How much money did he start out with?}}' +
+										'{\\grp{\\input{$number}}}' +
+								'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\rowgrp' +
+										'{\\choose{[' +
+											'\\ins{Yes, Damian had $number. Now, how much money did he have left?},' +
+											'\\ins{No, we are told that he started with $number. How much money did he have left?}' +    
+										']}{$$previousCorrect}}' +
+										'{\\grp{\\input{$left}}}' +
+								'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+                                '\\rowgrp' +
+                                    '{\\choose{[' +
+                                        '\\rowgrp{\\css{\\ins{Yes, Damian had $left left. Using $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}}{width400}},' +
+                                        '\\css{\\ins{No, Damian had $left left.  The $left is a part of the total $number amount. Using $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}}{width400}' +
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\grp{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}' +
+                            '}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{' +
+									'\\css{'+
+										'\\rowgrp' +
+											'{\\choose{[' +
+												'\\html{Now reduce the fraction if possible.<br><br>},' +
+												'\\html{The fraction of money that Damian had left can be represented as <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> of his total.  The fraction is below; reduce the fraction if possible.<br><br>}' +
+											']}{$$previousCorrect}}' +
+											'{\\reducefrac{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}'+
+										'}'+
+									'{well width380}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
             }
         },
         data = [
@@ -686,6 +923,9 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 			{ firstunitn: '3', firstunitd: '5', secondunitn: '2', secondunitd: '5', number: '$200', dollarsLeft: '80', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_a.jpg', template: 'dollarsLeftFromFraction' },
             { firstunitn: '120', firstunitd: '200', secondunitn: '3', secondunitd: '5', number: '$200', spent: '$120', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_b.jpg', template: 'dollarsFindFractionSpent' },
             { firstunitn: '80', firstunitd: '200', secondunitn: '2', secondunitd: '5', number: '$200', left: '$80', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_c.jpg', template: 'dollarsFindFractionLeft' },
+			{ firstunitn: '2', firstunitd: '3', secondunitn: '1', secondunitd: '3', number: '$2400', dollarsLeft: '800', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_a.jpg', template: 'dollarsLeftFromFraction2' },
+            { firstunitn: '1600', firstunitd: '2400', secondunitn: '2', secondunitd: '3', number: '$2400', spent: '$1600', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_b.jpg', template: 'dollarsFindFractionSpent2' },
+            { firstunitn: '800', firstunitd: '2400', secondunitn: '1', secondunitd: '3', number: '$2400', left: '$800', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_c.jpg', template: 'dollarsFindFractionLeft2' }
 			];
     
     	//return dataUtils.build(desc, template, data);
