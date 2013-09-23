@@ -1,4 +1,4 @@
-/*global angular */
+ /*global angular */
 
 angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', function (dataUtils, numberUtils) {
     var desc = {
@@ -24,7 +24,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     title: 'Workbook',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\wb{\\rowgrp{\\ins{You have been given the <strong>total</strong> value of the houses in the subdivision.  What is the total value of <u>one</u> house?}}{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{html{million dollars}}}}',
+                        answer: '\\wb{\\rowgrp{\\ins{You have been given the <strong>total</strong> value of the houses in the subdivision.  What is the total value of <span class=underline>one</span> house?}}{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{html{million dollars}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -64,7 +64,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                             '\\rowgrp' +
                                 '{\\choose{[' +
                                     '\\ins{Great! Now solve the problem.},' +
-                                    '\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the total being divided up is the value of the subdivision (&#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars), so the value of the subdivision is placed first in the division set up.  The correct setup is below. Now solve the problem.}' +    
+                                    '\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total being divided up is the value of the subdivision (&#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars), so the value of the subdivision is placed first in the division set up.  The correct setup is below. Now solve the problem.}' +    
                                 ']}{$$previousCorrect}}' +
                                 '{\\grp{\\html{&#36;}}{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{million dollars}}{\\sign{&div;}}{\\frac{\\fracstr{$secondunitn}}{\\fracstr{$secondunitd}}}{\\html{million dollars}}{\\sign{=}}{\\input{$number}}}',
                         controls: {
@@ -94,7 +94,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                         answer: 
                             '\\wb{' +
                                 '\\rowgrp' +
-                                    '{\\ins{You have been <u>given the total</u> number of houses in the subdivision.  How many houses are in the subdivision?}}' +
+                                    '{\\ins{You have been <span class=underline>given the total</span> number of houses in the subdivision.  How many houses are in the subdivision?}}' +
                                     '{\\grp{\\input{$number}}{\\html{houses}}}' +
                             '}',
                         controls: {
@@ -122,7 +122,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                                 '\\rowgrp' +
                                     '{\\choose{[' +
                                         '\\rowgrp{\\css{\\ins{Yes, now write a setup that will solve this problem.}}{width400}}{\\html{<br><br>}},' +
-                                        '\\css{\\ins{We must divide to solve this problem.  The <u>given total value of the subdivision</u> is being divided up into $number identically-priced houses.  Pick the set up that will solve for the value of each house.}}{width400}' +    
+                                        '\\css{\\ins{We must divide to solve this problem.  The <span class=underline>given total value of the subdivision</span> is being divided up into $number identically-priced houses.  Pick the set up that will solve for the value of each house.}}{width400}' +    
                                     ']}{$$previousCorrect}}' +                                    
 									'{\\grp{\\select{$firstunitwhole $firstunitn/$firstunitd million dollars}{["$firstunitwhole $firstunitn/$firstunitd million dollars", "$number houses"]}}{\\sign{&div;}}{\\select{$number houses}{["$firstunitwhole $firstunitn/$firstunitd million dollars", "$number houses"]}}}' +
                             	'}',
@@ -137,7 +137,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                                 '\\rowgrp' +
                                     '{\\choose{[' +
                                         '\\css{\\ins{Great! Now give the solution.}}{width400},' +
-                                        '\\css{\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the total is the total value of the subdivision (&#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars) and is placed first in the division set up.  The correct setup is shown below.<br><br>Now solve the problem.}}{width400}' +
+                                        '\\css{\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total is the total value of the subdivision (&#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars) and is placed first in the division set up.  The correct setup is shown below.<br><br>Now solve the problem.}}{width400}' +
                                     ']}{$$previousCorrect}}' +
                                     '{\\rowgrp{\\grp{\\html{&#36;}}{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{million dollars}}{\\sign{&div;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}{\\html{houses}}}{\\html{&nbsp;}}{\\grp{\\sign{=}}{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{\\html{million dollars}}{\\html{/}}{\\html{house}}}}}' +
                             '}',
@@ -170,7 +170,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                         problem: '\\image{$illustration}',
                         answer: '\\wb{' +
 									'\\rowgrp' +
-										'{\\ins{You have been <u>given the total</u> number of houses in the subdivision.  How many houses are in the subdivision?}}' +
+										'{\\ins{You have been <span class=underline>given the total</span> number of houses in the subdivision.  How many houses are in the subdivision?}}' +
 										'{\\grp{\\input{$number}}{\\html{houses}}}' +
 								'}',
                         controls: {
@@ -197,7 +197,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
 									'\\rowgrp' +
 										'{\\choose{[' +
 											'\\rowgrp{\\css{\\ins{Yes, now write a setup that will solve this problem.}}{width400}}{\\html{<br><br>}},' +
-											'\\css{\\ins{We must multiply to solve this problem.  The <u>given value of each house in the subdivision</u> is being multiplied by $number houses.  Pick the set up that will solve for the total combined value of the houses in the subdivision.}}{width400}' +    
+											'\\css{\\ins{We must multiply to solve this problem.  The <span class=underline>given value of each house in the subdivision</span> is being multiplied by $number houses.  Pick the set up that will solve for the total combined value of the houses in the subdivision.}}{width400}' +    
 										']}{$$previousCorrect}}' +                                    
 										'{\\grp{\\select{$secondunitn/$secondunitd million dollars}{["$secondunitn/$secondunitd million dollars", "$number houses"]}}{\\sign{&bull;}}{\\select{$number houses}{["$secondunitn/$secondunitd million dollars", "$number houses"]}}}' +
                             	'}',
@@ -239,7 +239,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     title: 'Workbook',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\wb{\\rowgrp{\\ins{You have been given the <strong>total</strong> weight of the cookies in the jar.  What is the weight of <u>one</u> portion?}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{html{pounds}}}}',
+                        answer: '\\wb{\\rowgrp{\\ins{You have been given the <strong>total</strong> weight of the cookies in the jar.  What is the weight of <span class=underline>one</span> portion?}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{html{pounds}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -279,7 +279,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                             '\\rowgrp' +
                                 '{\\choose{[' +
                                     '\\ins{Great! Now solve the problem.},' +
-                                    '\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the total being divided up is the weight in the jar ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds), so the weight in the jar is placed first in the division set up.  The correct setup is below. Now solve the problem.}' +    
+                                    '\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total being divided up is the weight in the jar ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds), so the weight in the jar is placed first in the division set up.  The correct setup is below. Now solve the problem.}' +    
                                 ']}{$$previousCorrect}}' +
                                 '{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{pounds}}{\\sign{&div;}}{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\fracstr{$secondunitn}}{\\fracstr{$secondunitd}}}}{\\html{pounds}}{\\sign{=}}{\\input{$number}}}',
                         controls: {
@@ -309,7 +309,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                         answer: 
                             '\\wb{' +
                                 '\\rowgrp' +
-                                    '{\\ins{You have been <u>given the total</u> weight of the cookies in the jar, and the number of portions in the jar.  What is the number of portions of cookies?}}' +
+                                    '{\\ins{You have been <span class=underline>given the total</span> weight of the cookies in the jar, and the number of portions in the jar.  What is the number of portions of cookies?}}' +
                                     '{\\grp{\\input{$number}}{\\html{portions}}}' +
                             '}',
                         controls: {
@@ -337,7 +337,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                                 '\\rowgrp' +
                                     '{\\choose{[' +
                                         '\\rowgrp{\\css{\\ins{Yes, now write a setup that will solve this problem.}}{width400}}{\\html{<br><br>}},' +
-                                        '\\css{\\ins{We must divide to solve this problem.  The <u>given total weight</u> of the cookies in the jar is being divided up into $number equal portions of cookies.  Pick the set up that will solve for the weight of each portion.}}{width400}' +    
+                                        '\\css{\\ins{We must divide to solve this problem.  The <span class=underline>given total weight</span> of the cookies in the jar is being divided up into $number equal portions of cookies.  Pick the set up that will solve for the weight of each portion.}}{width400}' +    
                                     ']}{$$previousCorrect}}' +                                    
 									'{\\grp{\\select{$firstunitwhole $firstunitn/$firstunitd pounds}{["$firstunitwhole $firstunitn/$firstunitd pounds", "$number portions"]}}{\\sign{&div;}}{\\select{$number portions}{["$firstunitwhole $firstunitn/$firstunitd pounds", "$number portions"]}}}' +
                             	'}',
@@ -352,7 +352,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                                 '\\rowgrp' +
                                     '{\\choose{[' +
                                         '\\css{\\ins{Great! Now give the solution.}}{width400},' +
-                                        '\\css{\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the total is the total weight of the cookies in the jar ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds) and is placed first in the division set up.  The correct setup is shown below.<br><br>Now solve the problem.}}{width400}' +
+                                        '\\css{\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total is the total weight of the cookies in the jar ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds) and is placed first in the division set up.  The correct setup is shown below.<br><br>Now solve the problem.}}{width400}' +
                                     ']}{$$previousCorrect}}' +
                                     '{\\rowgrp{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{pounds}}{\\sign{&div;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}{\\html{portions}}}{\\html{&nbsp;}}{\\grp{\\sign{=}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{\\html{pounds}}{\\html{/}}{\\html{portion}}}}}' +
                             '}',
@@ -385,7 +385,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                         problem: '\\image{$illustration}',
                         answer: '\\wb{' +
 									'\\rowgrp' +
-										'{\\ins{You have been <u>given the number</u> of portions of cookies in the jar.  Each portion weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds.  How many portions of cookies are in the jar?}}' +
+										'{\\ins{You have been <span class=underline>given the number</span> of portions of cookies in the jar.  Each portion weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds.  How many portions of cookies are in the jar?}}' +
 										'{\\grp{\\input{$number}}{\\html{portions of cookies}}}' +
 								'}',
                         controls: {
@@ -412,7 +412,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
 									'\\rowgrp' +
 										'{\\choose{[' +
 											'\\rowgrp{\\css{\\ins{Yes, now write a setup that will solve this problem.}}{width400}}{\\html{<br><br>}},' +
-											'\\css{\\ins{We must multiply to solve this problem.  The <u>given weight of each portion</u> of cookies in the jar is being multiplied by $number portions of cookies.  Pick the set up that will solve for the total combined weight of the cookies in the jar.}}{width400}' +    
+											'\\css{\\ins{We must multiply to solve this problem.  The <span class=underline>given weight of each portion</span> of cookies in the jar is being multiplied by $number portions of cookies.  Pick the set up that will solve for the total combined weight of the cookies in the jar.}}{width400}' +    
 										']}{$$previousCorrect}}' +                                    
 										'{\\grp{\\select{$secondunitwhole $secondunitn/$secondunitd}{["$secondunitwhole $secondunitn/$secondunitd", "$number"]}}{\\sign{&bull;}}{\\select{$number}{["$secondunitwhole $secondunitn/$secondunitd", "$number"]}}}' +
                             	'}',
@@ -454,7 +454,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     title: 'Workbook',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\wb{\\rowgrp{\\ins{You have been given the <strong>total</strong> number of typed pages in the tray.  What is the <u>total</u>?}}{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{html{typed pages}}}}',
+                        answer: '\\wb{\\rowgrp{\\ins{You have been given the <strong>total</strong> number of typed pages in the tray.  What is the <span class=underline>total</span>?}}{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{html{typed pages}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -494,7 +494,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                             '\\rowgrp' +
                                 '{\\choose{[' +
                                     '\\rowgrp{\\css{\\ins{Great! Now solve the problem.}}{width400}}{\\html{<br><br>}},' +
-                                    '\\css{\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the total being divided up is the number of pages in the tray ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages), so the number of pages in the tray is placed first in the division set up.  The correct setup is below. Now solve the problem.}}{width400}' +    
+                                    '\\css{\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total being divided up is the number of pages in the tray ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages), so the number of pages in the tray is placed first in the division set up.  The correct setup is below. Now solve the problem.}}{width400}' +    
                                 ']}{$$previousCorrect}}' +
                                 '{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{pages}}{\\sign{&div;}}{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\fracstr{$secondunitn}}{\\fracstr{$secondunitd}}}}{\\html{pages/minute}}{\\sign{=}}{\\input{$number}}{\\html{minutes}}}',
                         controls: {
@@ -524,7 +524,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                         answer: 
                             '\\wb{' +
                                 '\\rowgrp' +
-                                    '{\\ins{You have been <u>given the total</u> number of pages the typist typed.  What is the total number of pages?}}' +
+                                    '{\\ins{You have been <span class=underline>given the total</span> number of pages the typist typed.  What is the total number of pages?}}' +
                                     '{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{pages}}}' +
                             '}',
                         controls: {
@@ -566,7 +566,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                             '\\rowgrp' +
                                 '{\\choose{[' +
                                     '\\rowgrp{\\css{\\ins{Great! Now give the solution.}}{width400}}{\\html{<br><br>}},' +
-                                    '\\css{\\ins{This is a division problem.  When we set up a division problem, the <u>first number must be the total</u> that is being divided up.  In this case the total being divided up is the number of pages in the tray ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages), so the number of pages in the tray is placed first in the division set up.  The correct setup is below. Now solve the problem.}}{width400}' +    
+                                    '\\css{\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total being divided up is the number of pages in the tray ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages), so the number of pages in the tray is placed first in the division set up.  The correct setup is below. Now solve the problem.}}{width400}' +    
                                 ']}{$$previousCorrect}}' +
                                 '{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{pages}}{\\sign{&div;}}{\\html{$number}}{\\html{ minutes}}{\\sign{=}}{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\fracstr{$secondunitn}}{\\fracstr{$secondunitd}}}}{\\html{pages/minute}}}',
                         controls: {
@@ -595,7 +595,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                         problem: '\\image{$illustration}',
                         answer: '\\wb{' +
 									'\\rowgrp' +
-										'{\\ins{You have been <u>given the total</u> number of minutes the typist typed.  How many minutes did the typist type?}}' +
+										'{\\ins{You have been <span class=underline>given the total</span> number of minutes the typist typed.  How many minutes did the typist type?}}' +
 										'{\\grp{\\input{$number}}{\\html{minutes}}}' +
 								'}',
                         controls: {
