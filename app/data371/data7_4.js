@@ -917,9 +917,9 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             { total: 21, unitn: 1, unitd: 3, number: 63, illustration: 'Acres_Gplane_21a.jpg', template: 'housesDiv1' },
             { total: 21, unitn: 1, unitd: 3, number: 63, illustration: 'Acres_Gplane_21b.jpg', template: 'housesDiv2' },
             { total: 21, unitn: 1, unitd: 3, number: 63, illustration: 'Acres_Gplane_21c.jpg', template: 'housesMul' },
-            { totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3a.jpg', template: 'housesDivFrac1' },
+            /*{ totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3a.jpg', template: 'housesDivFrac1' },
             {  totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3b.jpg', template: 'housesDivFrac2' },
-            {  totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3c.jpg', template: 'housesMulFrac' },
+            {  totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3c.jpg', template: 'housesMulFrac' },*/
 			{ firstunitn: '3', firstunitd: '5', secondunitn: '2', secondunitd: '5', number: '$200', dollarsLeft: '80', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_a.jpg', template: 'dollarsLeftFromFraction' },
             { firstunitn: '120', firstunitd: '200', secondunitn: '3', secondunitd: '5', number: '$200', spent: '$120', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_b.jpg', template: 'dollarsFindFractionSpent' },
             { firstunitn: '80', firstunitd: '200', secondunitn: '2', secondunitd: '5', number: '$200', left: '$80', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_c.jpg', template: 'dollarsFindFractionLeft' },
