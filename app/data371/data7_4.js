@@ -1,6 +1,7 @@
 /*global angular */
 
-angular.module('mathSkills').service('data7_4', ['dataUtils', function (dataUtils) {
+angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', function (dataUtils, numberUtils) {
+																		
     var desc = {
             title: '7.4 Fraction Application Problems',
             path: '7.4-fraction-application-problems',
@@ -686,5 +687,6 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', function (dataUtil
             
 			];
     
-    return dataUtils.build(desc, template, data);
+    	//return dataUtils.build(desc, template, data);
+    return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
 }]);

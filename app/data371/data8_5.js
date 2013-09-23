@@ -661,6 +661,6 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
             { firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50',illustration: '8.5-9_Typed_Pages/400x300/Typed_Pages_c.jpg', template: 'pagesMul' },
         ];
     
-	return dataUtils.build(desc, template, data);
-    //return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
+	//return dataUtils.build(desc, template, data);
+    return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
 }]);
