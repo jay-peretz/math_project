@@ -51,11 +51,11 @@ angular.module('mathSkills').service('data8_3', ['dataUtils', function (dataUtil
 										+'{\\html{Change the mixed numbers into improper fractions:}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp{\\frac{\\fracstr{$un1}}{\\fracstr{$d1}}}{\\sign{&times;}}{\\frac{\\fracstr{$un2}}{\\fracstr{$d2}}}}'
-										+'{\\canfrac{[$un1,$d1]}{[$un2,$d2]}{[$numProd,$da]}}'
+										+'{\\canfrac{[$un1,$d1]}{[$un2,$d2]}{[$product,$da]}}'
 									+'}{well}',
                         controls: {
                             "checkAnswer": true,
-                            "help": false
+                            "help": true
                         }
                     }]
                 }]
@@ -108,7 +108,7 @@ angular.module('mathSkills').service('data8_3', ['dataUtils', function (dataUtil
 									+'}{well}',
                         controls: {
                             "checkAnswer": true,
-                            "help": false
+                            "help": true
                         }
                     }, {
                         problem: '\\grp'
