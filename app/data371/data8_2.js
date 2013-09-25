@@ -25,6 +25,7 @@ angular.module('mathSkills').service('data8_2', ['dataUtils', function (dataUtil
 								+'{\\grp{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}'
 								+'{\\sign{\xA0 = \xA0}}'
 								+'{\\mixed{\\fracstr{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}}'
+								+'{\\html{&nbsp;}}'
 								+'{css{\\grp{\\str{Answer:  \xA0}}'
 								+'{\\mixed{\\fracstr{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}}{help-answer-text}}'
 							}
@@ -50,6 +51,7 @@ angular.module('mathSkills').service('data8_2', ['dataUtils', function (dataUtil
 								+'{\\mixed{\\fracstr{$answerWhole}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$problemDen}}}}'
 								+'{\\sign{\xA0 = \xA0}}'
 								+'{\\mixed{\\fracstr{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}}'
+								+'{\\html{&nbsp;}}'
 								+'{css{\\grp{\\str{Answer:  \xA0}}'
 								+'{\\mixed{\\fracstr{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}}{help-answer-text}}'
 							}
