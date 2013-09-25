@@ -250,7 +250,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                             '\\wb{' +
                                 '\\rowgrp' + 
                                     '{\\choose{[' +
-                                        '\\ins{Yes, each portion weights $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds. To find out how many cookie portions (each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds) are in the jar, what operation must we use?},' +
+                                        '\\ins{Yes, each portion weigh s $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds. To find out how many cookie portions (each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds) are in the jar, what operation must we use?},' +
                                         '\\ins{No, we are told that each portion weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds. To find out how many cookie portions (each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds) are in the jar , what operation must we use?}' +    
                                     ']}{$$previousCorrect}}' +
                                     '{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
@@ -654,7 +654,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     title: 'Main Answer',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\rowgrp{\\ins{There are cookies weighing a total of $firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds in a jar. How many $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub>-pound portions of cookies are in the jar?}}{\\grp{\\input{$number}}{html{portions}}}',
+                        answer: '\\rowgrp{\\ins{There are cans of tomatos weighing a total of $firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds in a box. How many $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pound cans of tomatos are in the box?}}{\\grp{\\input{$number}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -665,7 +665,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     title: 'Workbook',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\wb{\\rowgrp{\\ins{You have been given the <strong>total</strong> weight of the cookies in the jar.  What is the weight of <span class=underline>one</span> portion?}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{html{pounds}}}}',
+                        answer: '\\wb{\\rowgrp{\\ins{You have been given the <strong>total</strong> weight of the cans of tomatos in the box.  What is the weight of <span class=underline>one</span> can?}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{html{pounds}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -676,8 +676,8 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                             '\\wb{' +
                                 '\\rowgrp' + 
                                     '{\\choose{[' +
-                                        '\\ins{Yes, each portion weights $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds. To find out how many cookie portions (each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds) are in the jar, what operation must we use?},' +
-                                        '\\ins{No, we are told that each portion weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds. To find out how many cookie portions (each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds) are in the jar , what operation must we use?}' +    
+                                        '\\ins{Yes, each can weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds. To find out how many cans (each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds) are in the box, what operation must we use?},' +
+                                        '\\ins{No, we are told that each can weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds. To find out how many cans (each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds) are in the box , what operation must we use?}' +    
                                     ']}{$$previousCorrect}}' +
                                     '{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
                             '}',
@@ -690,8 +690,8 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                         answer: '\\wb{' +
                                 '\\rowgrp' +
                                     '{\\choose{[' +
-                                        '\\rowgrp{\\css{\\ins{Yes. Write a setup that will solve for the number of cookie portions each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds in the jar.}}{width400}}{\\html{<br><br>}},' +
-                                        '\\css{\\ins{We must divide to solve this problem. The given total weight of cookies has been divided up into equal-sized portions&mdash;each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds.  Each $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds represents one portion. Write a setup that will solve for the number of cookie portions in the jar.}}{width400}' +    
+                                        '\\rowgrp{\\css{\\ins{Yes. Choose the setup that will solve for the number of cans each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds in the box.}}{width400}}{\\html{<br><br>}},' +
+                                        '\\css{\\ins{We must divide to solve this problem. The given total weight of the box of tomatos is divided up into cans each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds.  Each $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds represents one can. Choose the setup that will solve for the number of cans in the box.}}{width400}' +    
                                     ']}{$$previousCorrect}}' +                                    
 									'{\\grp{\\select{$firstunitwhole $firstunitn/$firstunitd pounds}{["$firstunitwhole $firstunitn/$firstunitd pounds", "$secondunitwhole $secondunitn/$secondunitd pounds"]}}{\\sign{&div;}}{\\select{$secondunitwhole $secondunitn/$secondunitd pounds}{["$firstunitwhole $firstunitn/$firstunitd pounds", "$secondunitwhole $secondunitn/$secondunitd pounds"]}}}' +
                             	'}',
@@ -705,7 +705,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                             '\\rowgrp' +
                                 '{\\choose{[' +
                                     '\\ins{Great! Now solve the problem.},' +
-                                    '\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total being divided up is the weight in the jar ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds), so the weight in the jar is placed first in the division set up.  The correct setup is below. Now solve the problem.}' +    
+                                    '\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total being divided up is the weight of the box ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds), so the weight in the box is placed first in the division set up.  The correct setup is below. Now solve the problem.}' +    
                                 ']}{$$previousCorrect}}' +
                                 '{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{pounds}}{\\sign{&div;}}{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\fracstr{$secondunitn}}{\\fracstr{$secondunitd}}}}{\\html{pounds}}{\\sign{=}}{\\input{$number}}}',
                         controls: {
@@ -721,7 +721,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     title: 'Main Answer',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\rowgrp{\\ins{$number portions of cookies in a jar weigh a total of $firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds.  What is the weight of each portion (given that each portion weighs exactly the same)?}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{\\html{pounds}}}',
+                        answer: '\\rowgrp{\\ins{$number cans of tomatos in a box weigh a total of $firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds.  What is the weight of each can (given that the cans all weigh the same)?}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{\\html{pounds}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -735,8 +735,8 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                         answer: 
                             '\\wb{' +
                                 '\\rowgrp' +
-                                    '{\\ins{You have been <span class=underline>given the total</span> weight of the cookies in the jar, and the number of portions in the jar.  What is the number of portions of cookies?}}' +
-                                    '{\\grp{\\input{$number}}{\\html{portions}}}' +
+                                    '{\\ins{You have been <span class=underline>given the total</span> weight of the cans in the box, and the number of cans in the box.  What is the number of cans in the box?}}' +
+                                    '{\\grp{\\input{$number}}}' +
                             '}',
                         controls: {
                             "checkAnswer": true,
@@ -748,8 +748,8 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                             '\\wb{' +
                                 '\\rowgrp' +
                                     '{\\choose{[' +
-                                        '\\ins{Yes, there are $number portions of cookies in the jar. To find out the weight of each portion, what operation must we use?},' +
-                                        '\\ins{No, we are told there are $number portions of cookies in the jar. To find out the weight of each portion, what operation must we use?}' +    
+                                        '\\ins{Yes, there are $number cans in the box. To find out the weight of each can, what operation must we use?},' +
+                                        '\\ins{No, we are told there are $number cans of tomatos in the box. To find out the weight of each can, what operation must we use?}' +    
                                     ']}{$$previousCorrect}}' +
                                     '{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
                             '}',
@@ -763,7 +763,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                                 '\\rowgrp' +
                                     '{\\choose{[' +
                                         '\\rowgrp{\\css{\\ins{Yes, now write a setup that will solve this problem.}}{width400}}{\\html{<br><br>}},' +
-                                        '\\css{\\ins{We must divide to solve this problem.  The <span class=underline>given total weight</span> of the cookies in the jar is being divided up into $number equal portions of cookies.  Pick the set up that will solve for the weight of each portion.}}{width400}' +    
+                                        '\\css{\\ins{We must divide to solve this problem.  The <span class=underline>given total weight</span> of the cans in the box is being divided up into $number cans, all of the same weight.  Pick the set up that will solve for the weight of each can.}}{width400}' +    
                                     ']}{$$previousCorrect}}' +                                    
 									'{\\grp{\\select{$firstunitwhole $firstunitn/$firstunitd pounds}{["$firstunitwhole $firstunitn/$firstunitd pounds", "$number portions"]}}{\\sign{&div;}}{\\select{$number portions}{["$firstunitwhole $firstunitn/$firstunitd pounds", "$number portions"]}}}' +
                             	'}',
@@ -778,9 +778,9 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                                 '\\rowgrp' +
                                     '{\\choose{[' +
                                         '\\css{\\ins{Great! Now give the solution.}}{width400},' +
-                                        '\\css{\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total is the total weight of the cookies in the jar ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds) and is placed first in the division set up.  The correct setup is shown below.<br><br>Now solve the problem.}}{width400}' +
+                                        '\\css{\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total is the total weight of the cans in the box ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pounds) and is placed first in the division set up.  The correct setup is shown below.<br><br>Now solve the problem.}}{width400}' +
                                     ']}{$$previousCorrect}}' +
-                                    '{\\rowgrp{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{pounds}}{\\sign{&div;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}{\\html{portions}}}{\\html{&nbsp;}}{\\grp{\\sign{=}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{\\html{pounds}}{\\html{/}}{\\html{portion}}}}}' +
+                                    '{\\rowgrp{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\sign{&div;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}}{\\html{&nbsp;}}{\\grp{\\sign{=}}{\\grp{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{\\html{pounds}}}}}' +
                             '}',
                         controls: {
                             "checkAnswer": true,
@@ -796,7 +796,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     children: [{
                         problem: '\\image{$illustration}',
                         answer: '\\rowgrp' + 
-									'{\\ins{If $number portions of cookies are in the jar, and each portion weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds, what is the total weight of the cookies in the jar?}}' +
+									'{\\ins{If $number cans of tomatos are in the box, and each can weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds, what is the total weight of the cans in the box?}}' +
 									'{\\html{&nbsp;}}' + 
 									'{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{pounds}}}',
                         controls: {
@@ -811,8 +811,8 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                         problem: '\\image{$illustration}',
                         answer: '\\wb{' +
 									'\\rowgrp' +
-										'{\\ins{You have been <span class=underline>given the number</span> of portions of cookies in the jar.  Each portion weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds.  How many portions of cookies are in the jar?}}' +
-										'{\\grp{\\input{$number}}{\\html{portions of cookies}}}' +
+										'{\\ins{You have been <span class=underline>given the number</span> of cans in the box.  Each can weighs $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds.  How many cans of tomatos are in the box?}}' +
+										'{\\grp{\\input{$number}}}' +
 								'}',
                         controls: {
                             "checkAnswer": true,
@@ -823,8 +823,8 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                         answer: '\\wb{' +
 									'\\rowgrp' +
 										'{\\choose{[' +
-											'\\ins{Yes, there are $number portions of cookies in the jar. To find out the total combined weight of all the cookies in the jar, what operation must we use?},' +
-											'\\ins{No, we are told there are $number portions of cookies in the jar. To find out the total combined weight of all the cookies in the jar, what operation must we use?}' +    
+											'\\ins{Yes, there are $number cans of tomatos in the box. To find out the total combined weight of all the cans in the box, what operation must we use?},' +
+											'\\ins{No, we are told there are $number cans of tomatos in the box. To find out the total combined weight of all the cans in the box, what operation must we use?}' +    
 										']}{$$previousCorrect}}' +
 										'{\\select{Multiplication}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
 								'}',
@@ -838,7 +838,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
 									'\\rowgrp' +
 										'{\\choose{[' +
 											'\\rowgrp{\\css{\\ins{Yes, now write a setup that will solve this problem.}}{width400}}{\\html{<br><br>}},' +
-											'\\css{\\ins{We must multiply to solve this problem.  The <span class=underline>given weight of each portion</span> of cookies in the jar is being multiplied by $number portions of cookies.  Pick the set up that will solve for the total combined weight of the cookies in the jar.}}{width400}' +    
+											'\\css{\\ins{We must multiply to solve this problem.  The <span class=underline>given weight of each can</span> is being multiplied by $number cans.  Pick the set up that will solve for the total combined weight of the cans in the box.}}{width400}' +    
 										']}{$$previousCorrect}}' +                                    
 										'{\\grp{\\select{$secondunitwhole $secondunitn/$secondunitd}{["$secondunitwhole $secondunitn/$secondunitd", "$number"]}}{\\sign{&bull;}}{\\select{$number}{["$secondunitwhole $secondunitn/$secondunitd", "$number"]}}}' +
                             	'}',
@@ -852,7 +852,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                                 '\\rowgrp' +
                                     '{\\choose{[' +
                                         '\\rowgrp{\\css{\\ins{Now solve the problem.}}{width400}}{\\html{<br><br>}},' +
-                                        '\\css{\\ins{This is a *repeated addition* or multiplication problem.  The weight of each portion of cookies, $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds, needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}}{width400}' +
+                                        '\\css{\\ins{This is a *repeated addition* or multiplication problem.  The weight of each can of tomatos, $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds, needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}}{width400}' +
                                     ']}{$$previousCorrect}}' +
                                     '{\\grp{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\str{$secondunitn}}{\\str{$secondunitd}}}}{\\sign{&bull;}}{\\html{$number}}{\\sign{=}}{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{pounds}}}}' +
                             '}',
@@ -874,9 +874,9 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
 			{ firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50', illustration: '8.5-9_Typed_Pages/400x300/Typed_Pages_a.jpg', template: 'pagesDiv1' },
             { firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50', illustration: '8.5-9_Typed_Pages/400x300/Typed_Pages_b.jpg', template: 'pagesDiv2' },
             { firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50',illustration: '8.5-9_Typed_Pages/400x300/Typed_Pages_c.jpg', template: 'pagesMul' },
-			{ firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50', illustration: '8.5-10_Tomato_Cans/400x300/51.25lbs_41-Cans_X-Lbs-Can.jpg', template: 'tomCanDiv1' },
-            { firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50', illustration: '8.5-10_Tomato_Cans/400x300/51.25-lbs_X-Cans_1.25-lbs_Can.jpg', template: 'tomCanDiv2' },
-            { firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50',illustration: '8.5-10_Tomato_Cans/400x300/X-lbs_41-Cans_1.25-lbs_Can.jpg', template: 'tomCanMul' }
+			{ firstunitwhole: '51', firstunitn: '1', firstunitd: '4', secondunitwhole: '1', secondunitn: '1', secondunitd: '4', number: '41', illustration: '8.5-10_Tomato_Cans/400x300/51.25-lbs_X-Cans_1.25-lbs_Can.jpg', template: 'tomCanDiv1' },
+            { firstunitwhole: '51', firstunitn: '1', firstunitd: '4', secondunitwhole: '1', secondunitn: '1', secondunitd: '4', number: '41', illustration: '8.5-10_Tomato_Cans/400x300/51.25lbs_41-Cans_X-Lbs-Can.jpg', template: 'tomCanDiv2' },
+            { firstunitwhole: '51', firstunitn: '1', firstunitd: '4', secondunitwhole: '1', secondunitn: '1', secondunitd: '4', number: '41', illustration: '8.5-10_Tomato_Cans/400x300/X-lbs_41-Cans_1.25-lbs_Can.jpg', template: 'tomCanMul' }
         ];
     
 	return dataUtils.build(desc, template, data);
