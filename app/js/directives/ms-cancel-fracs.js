@@ -199,119 +199,120 @@ console.log('den answers ', numberUtils.getFactoredInput(problemData.getData(num
                         });
 
                         $scope.$on('answer', function (e, dataIn) { //console.log('\n', dataIn);
-                            
-                            if ($scope.controllerId !== dataIn.controllerId){
-                                e.stopPropagation();
-
-                                if(problemData.getData('stage') === 'input'){ //console.log('stage is input');
-                                    
-                                    var gotBoth = function () {
-
-                                        if(numAnswer !== '' && denAnswer !== ''){ //console.log('got both answers');
-                                            if (numAnswer.result === 'correct' 
-                                                    && denAnswer.result === 'correct' 
-                                                    && parser.extractTag(parser.extractTag(numAnswer.answer).args[0]).args[0].length > 0
-                                                    && parser.extractTag(parser.extractTag(denAnswer.answer).args[parser.extractTag(dataIn.answer).args.length - 1]).args[0].length > 0
-                                                ) { //console.log('both correct');
-                                                problemData.getData(num).arr.splice(0, 1);
-                                                problemData.getData(den).arr.splice(0, 1);
-                                                problemData.getData(num).arr.splice(0, 0, parser.extractTag(parser.extractTag(numAnswer.answer).args[0]).args[0]);
-                                                problemData.getData(den).arr.splice(0, 0, parser.extractTag(parser.extractTag(denAnswer.answer).args[parser.extractTag(dataIn.answer).args.length - 1]).args[0]);
-                                                setAll('str');
-                                                problemData.addData('cancellable', 'stage');
-                                                numAnswer = '';
-                                                denAnswer = '';
-                                                
-                                                $timeout(function () {
-                                                    $scope.instructions = 'ins{Can you cancel again?<br>}';
-                                                    $scope.$emit('answerBtn', false);
-                                                    buildButtons();
-                                                    update();
-                                                    $timeout(function () {
-                                                        $scope.$emit('triggerCheckFocus');
-                                                    }, 0);
-                                                }, 900);
-                                            } else { //console.log('wrong answer');
-                                                $timeout(function () {
-                                                    $scope.$emit('triggerCheckFocus');
-                                                }, 900);
-                                                numAnswer = '';
-                                                denAnswer = '';
-                                            }
-                                            problemData.resetIndex();
-                                        }
-                                    };
-
-                                    if(problemData.getData('stage') === 'input' && dataIn.label === num){ //console.log('we have num match');
-                                        numAnswer = dataIn;
-                                        gotBoth(); 
-                                    }
-                                    if(problemData.getData('stage') === 'input' && dataIn.label === den){ //console.log('we have den match');
-                                        denAnswer = dataIn;
-                                        gotBoth(); 
-                                    }
-                                    // console.log('ac',  answerCount);
-                                    // console.log('num ', num);
-                                    // console.log('den ', den,'\n');
-                                }
-
-                                if(problemData.getData('stage') === 'cancellable' && dataIn.label === 'buttons' && dataIn.expected !== "\\str{}"){ //console.log('running cancellable');
-
-                                    if (dataIn.result === 'correct')
-                                        if(isCancellable($scope.children)){ //console.log('running is cancellable');
-                                            setAll('btn');
-                                            problemData.addData('btn', 'stage');
-                                            problemData.addData(false, 'nLock');
-                                            problemData.addData(false, 'dLock');
-                                            answerCount = 0;
-                                            numAnswer = '';
-                                            denAnswer = '';
-                                            num = '';
-                                            den = ''; 
-                                            problemData.addData(cancellable($scope.children), 'comFac');
-                                            $timeout(function () {
-                                                $scope.$emit('answerBtn', 'noAnswer');
-                                                $scope.buttons = '\\str{}';
-                                                update();
-                                                $timeout(function () {
-                                                    $scope.$emit('triggerCheckFocus');
-                                                }, 0);
-                                            }, 900);
-                                        } else { //console.log('running isNot cancellable');
-                                            $scope.routePath.pop();
-                                            $scope.routePath.push(7);
-                                            setAll('str');
-                                            problemData.addData('solve', 'stage');
-                                            $scope.$emit('answerBtn', 'Check Answer');
-                                            $timeout(function () {
-                                                $scope.instructions = 'ins{Multiply the fractions together.<br>}';
-                                                $scope.buttons = '\\str{}';
-                                                $scope.solve = $scope.solveBuild;
-                                                update();
-                                                $timeout(function () {
-                                                    $scope.$emit('triggerCheckFocus');
-                                                }, 0);
-                                            }, 1000);
-                                            
-                                        }
-                                    } else {
-                                        $timeout(function () {
-                                            $scope.$emit('triggerCheckFocus');
-                                        }, 900);
-                                    }
-                                
-                                }
-
-                                if(problemData.getData('stage') === 'solve' && dataIn.result === 'correct' && dataIn.expected === $scope.solveBuild){
-    
-                                    $scope.$emit('answer', {
-                                        lable: 'cancel',
-                                        result: 'correct',
-                                        controllerId: $scope.controllerId
-                                    });
-                                
-                                }
-                            } 
+																				  
+                            if(problemData.getData('stage') !== 'solve' || dataIn.result !== 'correct' || dataIn.expected !== $scope.solveBuild){
+							
+								if ($scope.controllerId !== dataIn.controllerId){
+									e.stopPropagation();
+	
+									if(problemData.getData('stage') === 'input'){ //console.log('stage is input');
+										
+										var gotBoth = function () {
+	
+											if(numAnswer !== '' && denAnswer !== ''){ //console.log('got both answers');
+												if (numAnswer.result === 'correct' 
+														&& denAnswer.result === 'correct' 
+														&& parser.extractTag(parser.extractTag(numAnswer.answer).args[0]).args[0].length > 0
+														&& parser.extractTag(parser.extractTag(denAnswer.answer).args[parser.extractTag(dataIn.answer).args.length - 1]).args[0].length > 0
+													) { //console.log('both correct');
+													problemData.getData(num).arr.splice(0, 1);
+													problemData.getData(den).arr.splice(0, 1);
+													problemData.getData(num).arr.splice(0, 0, parser.extractTag(parser.extractTag(numAnswer.answer).args[0]).args[0]);
+													problemData.getData(den).arr.splice(0, 0, parser.extractTag(parser.extractTag(denAnswer.answer).args[parser.extractTag(dataIn.answer).args.length - 1]).args[0]);
+													setAll('str');
+													problemData.addData('cancellable', 'stage');
+													numAnswer = '';
+													denAnswer = '';
+													
+													$timeout(function () {
+														$scope.instructions = 'ins{Can you cancel again?<br>}';
+														$scope.$emit('answerBtn', false);
+														buildButtons();
+														update();
+														$timeout(function () {
+															$scope.$emit('triggerCheckFocus');
+														}, 0);
+													}, 900);
+												} else { //console.log('wrong answer');
+													$timeout(function () {
+														$scope.$emit('triggerCheckFocus');
+													}, 900);
+													numAnswer = '';
+													denAnswer = '';
+												}
+												problemData.resetIndex();
+											}
+										};
+	
+										if(problemData.getData('stage') === 'input' && dataIn.label === num){ //console.log('we have num match');
+											numAnswer = dataIn;
+											gotBoth(); 
+										}
+										if(problemData.getData('stage') === 'input' && dataIn.label === den){ //console.log('we have den match');
+											denAnswer = dataIn;
+											gotBoth(); 
+										}
+										// console.log('ac',  answerCount);
+										// console.log('num ', num);
+										// console.log('den ', den,'\n');
+									}
+	
+									if(problemData.getData('stage') === 'cancellable' && dataIn.label === 'buttons' && dataIn.expected !== "\\str{}"){ //console.log('running cancellable');
+	
+										if (dataIn.result === 'correct')
+											if(isCancellable($scope.children)){ //console.log('running is cancellable');
+												setAll('btn');
+												problemData.addData('btn', 'stage');
+												problemData.addData(false, 'nLock');
+												problemData.addData(false, 'dLock');
+												answerCount = 0;
+												numAnswer = '';
+												denAnswer = '';
+												num = '';
+												den = ''; 
+												problemData.addData(cancellable($scope.children), 'comFac');
+												$timeout(function () {
+													$scope.$emit('answerBtn', 'noAnswer');
+													$scope.buttons = '\\str{}';
+													update();
+													$timeout(function () {
+														$scope.$emit('triggerCheckFocus');
+													}, 0);
+												}, 900);
+											} else { //console.log('running isNot cancellable');
+												$scope.routePath.pop();
+												$scope.routePath.push(7);
+												setAll('str');
+												problemData.addData('solve', 'stage');
+												$scope.$emit('answerBtn', 'Check Answer');
+												$timeout(function () {
+													$scope.instructions = 'ins{Multiply the fractions together.<br>}';
+													$scope.buttons = '\\str{}';
+													$scope.solve = $scope.solveBuild;
+													update();
+													$timeout(function () {
+														$scope.$emit('triggerCheckFocus');
+													}, 0);
+												}, 1000);
+												
+											}
+										} else {
+											$timeout(function () {
+												$scope.$emit('triggerCheckFocus');
+											}, 900);
+										}
+									
+									}
+	
+									
+								} else {									
+									$scope.$emit('answer', {
+										label: 'cancel',
+										result: 'correct',
+										controllerId: $scope.controllerId
+									});									
+								}
+							}
                         );
 
                         directiveUtils.aggregateChildAnswers($scope);
