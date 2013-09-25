@@ -272,6 +272,7 @@ console.log('den answers ', numberUtils.getFactoredInput(problemData.getData(num
 												den = ''; 
 												problemData.addData(cancellable($scope.children), 'comFac');
 												$timeout(function () {
+													$scope.instructions = 'ins{Click on 2 values (1 numerator and 1 denominator) that have a common factor other than one.<br>}';
 													$scope.$emit('answerBtn', 'noAnswer');
 													$scope.buttons = '\\str{}';
 													update();
