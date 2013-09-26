@@ -48,15 +48,6 @@ angular.module('mathSkills').service('data10_2', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\grp{\\sign{&minus;}}{\\css{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}{border-bottom-with-padding}}'
 								+'}',
-						answer: '\\rowgrp'						
-							+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-							+'{\\sign{=}}'
-							+'{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-							+'{\\sign{=}}'
-							+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}}',
-							
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'

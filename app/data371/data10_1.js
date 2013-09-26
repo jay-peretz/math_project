@@ -178,15 +178,6 @@ angular.module('mathSkills').service('data10_1', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\grp{\\sign{+}}{\\css{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}{border-bottom-with-padding}}'
 								+'}',
-						answer: '\\rowgrp'
-							+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\grp{\\sign{+}}{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\frac{\\input{$sumNum}}{\\input{$answerDen}}}}',
-							
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'

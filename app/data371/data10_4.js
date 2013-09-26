@@ -31,38 +31,75 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 					title: 'Workbook',
 					children: [{
 						problem: '\\rowgrp'
-						+'{\\str{Find the lowest common denominator (LCD) of the fractions:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\html{<span style="font-size:420%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{-}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}}',
-						answer: '\\input{$denanswer}',
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
+						answer: '\\rowgrp'
+									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\input{$denanswer}}'
+								+'}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\str{The LCD of $den1 and $den2 is $denanswer.}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{\xA0 Answer: \xA0 $denanswer}}{help-answer-text}}'
+							"help": true
 						},
 					}, {
-						problem: '\\str{Use the LCD to convert the fractions: }',
-						answer: '\\rowgrp'
-						+'{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\str{$denanswer}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\str{$denanswer}}}}}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
+						answer: '\\css'
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$denanswer}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Use the LCD to convert the fractions:}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\str{$denanswer}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\str{$denanswer}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+								+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
 						}
 					}, {
-						problem: '\\str{Subtract the fractions:}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
 						answer: '\\css'
-						+'{\\rowgrp'
-						+'{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$denanswer}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\css{\\grp{\\sign{\xA0 \xA0 - }}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$denanswer}}}}}{border-bottom-with-padding}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{\xA0 \xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}}{centerTableText3}',
+									+'{\\rowgrp'
+										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{$denanswer}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\str{$denanswer}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$denanswer}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+										+'{\\ins{Subtract the fractions:}}'
+										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\str{$denanswer}}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\sign{-}}{\\grp{\\css{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$denanswer}}}}{border-bottom-with-padding}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}'
+										+'{\\html{&nbsp;}}'
+									+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
@@ -94,45 +131,111 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 					title: 'Workbook',
 					children: [{
 						problem: '\\rowgrp'
-						+'{\\str{Find the lowest common denominator (LCD) of the fractions:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\html{<span style="font-size:420%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{-}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}}',
-						answer: '\\input{$denanswer1}',
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
+						answer: '\\rowgrp'
+									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\input{$denanswer1}}'
+								+'}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\str{The LCD of $den1 and $den2 is $denanswer1.}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{\xA0 Answer: \xA0 $denanswer1}}{help-answer-text}}'
+							"help": true
 						},
 					}, {
-						problem: '\\str{Use the LCD to convert the fractions: }',
-						answer: '\\rowgrp'
-						+'{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\str{$denanswer1}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\str{$denanswer1}}}}}',
-						controls: {
-							"checkAnswer": true,
-							"help": true
-						}
-					}, {
-						problem: '\\str{Subtract the fractions:}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
 						answer: '\\css'
-						+'{\\rowgrp'
-						+'{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$denanswer1}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\css{\\grp{\\sign{\xA0 \xA0 - }}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$denanswer1}}}}}{border-bottom-with-padding}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{\xA0 \xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer1}}{\\input{$denanswer1}}}}}}{centerTableText3}',
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$denanswer1}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Use the LCD to convert the fractions:}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\str{$denanswer1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\str{$denanswer1}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+								+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
 						}
 					}, {
-						problem: '\\row{\\str{Reduce \xA0}}{\\mixed{\\str{$wholeanswer}}{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$denanswer1}}}}{\\str{\xA0 to its lowest terms }}',
-						answer: '\\reducefrac{mixed{\\str{$wholeanswer}}{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$denanswer1}}}}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
+						answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{$denanswer1}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\str{$denanswer1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$denanswer1}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+										+'{\\ins{Subtract the fractions:}}'
+										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\str{$denanswer1}}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\sign{-}}{\\grp{\\css{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$denanswer1}}}}{border-bottom-with-padding}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer1}}{\\input{$denanswer1}}}}}'
+										+'{\\html{&nbsp;}}'
+									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						}
+					}, {
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
+						answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{$denanswer1}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\str{$denanswer1}}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$denanswer1}}}}}{border-bottom-with-padding}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Subtract the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\str{$denanswer1}}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\sign{-}}{\\grp{\\css{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$denanswer1}}}}{border-bottom-with-padding}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\mixed{\\fracstr{$wholeanswer}}{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$denanswer1}}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\reducefrac{mixed{\\str{$wholeanswer}}{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$denanswer1}}}}}'
+									+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": false
@@ -152,7 +255,7 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 						+'{\\html{&nbsp;}}'
 						+'{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}{border-bottom-with-padding}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$denanswer2}}}}}}'
 						+'{centerTableText3}',
 						controls: {
 							"checkAnswer": true,
@@ -164,63 +267,154 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 					title: 'Workbook',
 					children: [{
 						problem: '\\rowgrp'
-						+'{\\str{Find the lowest common denominator (LCD) of the fractions:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\html{<span style="font-size:420%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{-}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}}',
-						answer: '\\input{$dennew1}',
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
+						answer: '\\rowgrp'
+									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\input{$denanswer}}'
+								+'}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\str{The LCD of $den1 and $den2 is $dennew1.}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{\xA0 Answer: \xA0 $dennew1}}{help-answer-text}}'
+							"help": true
 						},
 					}, {
-						problem: '\\str{Use the LCD to convert the fractions: }',
-						answer: '\\rowgrp'
-						+'{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\str{$dennew1}}}}}'
-						+'{\\grp{\\str{\xA0}}}'
-						+'{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\str{$dennew1}}}}}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
+						answer: '\\css'
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$denanswer}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Use the LCD to convert the fractions:}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\str{$denanswer}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\str{$denanswer}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+								+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
 						}
 					}, {
-						problem: '\\str{Do you need to borrow one whole?}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
 						answer: '\\css'
-						+'{\\rowgrp'
-						+'{\\grp{\\sign{\xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\butgrp{\\row{\\but{YES}{T}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\but{NO}{F}}}}}'
-						+'{centerTableText3}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						}
-					}, {
-						problem: '\\str{Rewrite the fractional part of the minuend, borrowing one from the whole number: }',
-						answer: '\\rowgrp'
-						+'{\\grp{\\sign{&nbsp;&nbsp;}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}{\\sign{\xA0 = \xA0}}{\\sign{&nbsp;&nbsp;}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\input{$numnew3}}{\\str{$dennew1}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}{\\sign{\xA0 = \xA0}}{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}}',
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$denanswer}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{Use the LCD to convert the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\str{$denanswer}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$denanswer}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Do you need to borrow one whole?}}'
+									+'{\\grp{\\btn{YES}{T}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\btn{NO}{F}}}'
+								+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
 						}
 					}, {
-						problem: '\\str{Subtract the fractions:}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
 						answer: '\\css'
-						+'{\\rowgrp'
-						+'{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\str{$numnew3}}{\\str{$dennew1}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\css{\\grp{\\sign{\xA0 \xA0 - }}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{\xA0 \xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$dennew1}}}}}}'
-						+'{centerTableText3}',
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$denanswer}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{Use the LCD to convert the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\str{$denanswer}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$denanswer}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{You need to borrow one whole.}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Rewrite the fractional part of the minuend, borrowing one from the whole number:}}'									
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$wholeReduced}}{\\frac{\\input{$numnew3}}{\\str{$denanswer}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$denanswer}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+								+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						}
+					}, {
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
+						answer: '\\css'
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$denanswer}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{Use the LCD to convert the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\str{$denanswer}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$denanswer}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{You need to borrow one whole.}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{Rewrite the fractional part of the minuend, borrowing one from the whole number:}}'									
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$wholeReduced}}{\\frac{\\fracstr{$numnew3}}{\\str{$denanswer}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$denanswer}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Subtract the fractions:}}'
+									
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\str{$numnew3}}{\\str{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\grp{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}{border-bottom-with-padding}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+								+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
@@ -240,7 +434,7 @@ fourth: {
 						+'{\\html{&nbsp;}}'
 						+'{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}{border-bottom-with-padding}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$denanswer}}}}}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$denanswer2}}}}}}'
 						+'{centerTableText3}',
 						controls: {
 							"checkAnswer": true,
@@ -252,73 +446,204 @@ fourth: {
 					title: 'Workbook',
 					children: [{
 						problem: '\\rowgrp'
-						+'{\\str{Find the lowest common denominator (LCD) of the fractions:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\html{<span style="font-size:420%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{-}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}}',
-						answer: '\\input{$dennew1}',
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
+						answer: '\\rowgrp'
+									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\input{$dennew1}}'
+								+'}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\str{The LCD of $den1 and $den2 is $dennew1.}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{\xA0 Answer: \xA0 $dennew1}}{help-answer-text}}'
+							"help": true
 						},
 					}, {
-						problem: '\\str{Use the LCD to convert the fractions: }',
-						answer: '\\rowgrp'
-						+'{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\str{$dennew1}}}}}'
-						+'{\\grp{\\str{\xA0}}}'
-						+'{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{\\sign{\xA0 \xA0 = \xA0 \xA0}}{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\str{$dennew1}}}}}',
-						controls: {
-							"checkAnswer": true,
-							"help": true
-						}
-					}, {
-						problem: '\\str{Do you need to borrow one whole?}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
 						answer: '\\css'
-						+'{\\rowgrp'
-						+'{\\grp{\\sign{\xA0}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\butgrp{\\row{\\but{YES}{T}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\but{NO}{F}}}}}'
-						+'{centerTableText3}',
-						controls: {
-							"checkAnswer": true,
-							"help": false
-						}
-					}, {
-						problem: '\\str{Rewrite the fractional part of the minuend, borrowing one from the whole number: }',
-						answer: '\\rowgrp'
-						+'{\\grp{\\sign{&nbsp;&nbsp;}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$dennew1}}}}{\\sign{\xA0 = \xA0}}{\\sign{&nbsp;&nbsp;}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\input{$numnew3}}{\\str{$dennew1}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}{\\sign{\xA0 = \xA0}}{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}}',
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$dennew1}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Use the LCD to convert the fractions:}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\str{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+								+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
 						}
 					}, {
-						problem: '\\str{Subtract the fractions:}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
 						answer: '\\css'
-						+'{\\rowgrp'
-						+'{\\grp{\\sign{\xA0 \xA0 \xA0 \xA0}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\str{$numnew3}}{\\str{$dennew1}}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\css{\\grp{\\sign{\xA0 \xA0 - }}{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{\xA0 \xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numnew4}}{\\input{$dennew1}}}}}}'
-						+'{centerTableText3}',
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$dennew1}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{Use the LCD to convert the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\str{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Do you need to borrow one whole?}}'
+									+'{\\grp{\\btn{YES}{T}}{\\grp{\\html{&nbsp; &nbsp;}}}{\\btn{NO}{F}}}'
+								+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
 						}
 					}, {
-						problem: '\\row{\\str{Reduce \xA0}}{\\mixed{\\str{$wholeanswer}}{\\frac{\\fracstr{$numnew4}}{\\fracstr{$dennew1}}}}{\\str{\xA0 to its lowest terms }}',
-						answer: '\\reducefrac{mixed{\\str{$wholeanswer}}{\\frac{\\fracstr{$numnew4}}{\\fracstr{$dennew1}}}}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
+						answer: '\\css'
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$dennew1}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{Use the LCD to convert the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\str{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{You need to borrow one whole.}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Rewrite the fractional part of the minuend, borrowing one from the whole number:}}'									
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$wholeReduced}}{\\frac{\\input{$numnew3}}{\\str{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+								+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": false
+							"help": true
+						}
+					}, {
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
+						answer: '\\css'
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$dennew1}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{Use the LCD to convert the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\str{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{You need to borrow one whole.}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{Rewrite the fractional part of the minuend, borrowing one from the whole number:}}'									
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$wholeReduced}}{\\frac{\\fracstr{$numnew3}}{\\str{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Subtract the fractions:}}'
+									
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\str{$numnew3}}{\\str{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\grp{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}{border-bottom-with-padding}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numnew4}}{\\input{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+								+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						}
+					}, {
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}{border-bottom-with-padding}}'
+								+'}',
+						answer: '\\css'
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$dennew1}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{Use the LCD to convert the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\str{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{You need to borrow one whole.}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{Rewrite the fractional part of the minuend, borrowing one from the whole number:}}'									
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$wholeReduced}}{\\frac{\\fracstr{$numnew3}}{\\str{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}'
+										+'{\\sign{=}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\str{$dennew1}}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{Subtract the fractions:}}'
+									
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$wholeReduced}}{\\frac{\\str{$numnew3}}{\\str{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\grp{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$dennew1}}}}{border-bottom-with-padding}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\mixed{\\fracstr{$wholeanswer}}{\\frac{\\fracstr{$numnew4}}{\\fracstr{$dennew1}}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\reducefrac{mixed{\\str{$wholeanswer}}{\\frac{\\fracstr{$numnew4}}{\\fracstr{$dennew1}}}}}'
+								+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
 						}
 					}]
 				}]
