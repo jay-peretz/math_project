@@ -29,21 +29,25 @@ angular.module('mathSkills').service('data10_2', ['dataUtils', function (dataUti
                     title: 'Workbook',
                     children: [{
 						problem: '\\rowgrp'
-						+'{\\str{Determine the lowest common denominator (LCD) of the fractions:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{&minus;}}{\\css{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}{border-bottom-with-padding}}}',
-						answer: '\\input{$answerDen}',
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}{border-bottom-with-padding}}'
+								+'}',
+						answer: '\\rowgrp'
+									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\input{$answerDen}}'
+								+'}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\str{The LCD of $firstDen and $secondDen is $answerDen.}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{\xA0 Answer: \xA0 $answerDen}}{help-answer-text}}'
+							"help": true
 						},
                     }, {
-						problem: '\\str{Use the LCD to convert the fractions: }',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}{border-bottom-with-padding}}'
+								+'}',
 						answer: '\\rowgrp'						
 							+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 							+'{\\sign{=}}'
@@ -52,18 +56,57 @@ angular.module('mathSkills').service('data10_2', ['dataUtils', function (dataUti
 							+'{\\grp{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
 							+'{\\sign{=}}'
 							+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}}',
+							
+						answer: '\\css'
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$answerDen}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Use the LCD to convert the fractions:}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+										+'{\\sign{=}}'
+										+'{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+										+'{\\sign{=}}'
+										+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+								+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
 						}
                     }, {
-						problem: '\\str{Subtract the fractions: }',
-						answer: '\\rowgrp'
-							+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}{border-bottom-with-padding}}'
+								+'}',
+							answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{$answerDen}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+											+'{\\sign{=}}'
+											+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\sign{-}}{\\css{\\grp{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+										+'{\\sign{=}}'
+										+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+										+'{\\ins{Subtract the fractions:}}'
+										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\sign{-}}{\\grp{\\css{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}{border-bottom-with-padding}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}'
+										+'{\\html{&nbsp;}}'
+									+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true						
@@ -95,49 +138,88 @@ angular.module('mathSkills').service('data10_2', ['dataUtils', function (dataUti
                     title: 'Workbook',
                     children: [{
 						problem: '\\rowgrp'
-						+'{\\str{Determine the lowest common denominator (LCD) of the fractions:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\row{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-						+'{\\str{\xA0 , \xA0}}'
-						+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-						+'{\\str{\xA0 and \xA0}}'
-						+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}}',
-						answer: '\\input{$answerDen}',
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\grp{\\css{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}{border-bottom-with-padding}}}}',
+						answer: '\\rowgrp'
+									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\input{$answerDen}}'
+								+'}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\str{The LCD of $firstDen, $secondDen, and $thirdDen is $answerDen.}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{\xA0 Answer: \xA0 $answerDen}}{help-answer-text}}'
+							"help": true
 						},
                     }, {
-						problem: '\\str{Use the LCD to convert the fractions: }',
-						answer: '\\rowgrp'						
-							+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-							+'{\\sign{=}}'
-							+'{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-							+'{\\sign{=}}'
-							+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
-							+'{\\sign{=}}'
-							+'{\\frac{\\input{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\grp{\\css{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}{border-bottom-with-padding}}}}',
+						answer: '\\css'
+							+'{\\rowgrp'
+								+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\html{$answerDen}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\ins{Use the LCD to convert the fractions:}}'
+								+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+									+'{\\sign{=}}'
+									+'{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+									+'{\\sign{=}}'
+									+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\grp{\\sign{-}}{\\css{\\grp{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+									+'{\\sign{=}}'
+									+'{\\frac{\\input{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}}'
+								+'{\\html{&nbsp;}}'
+							+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
 						}
                     }, {
-						problem: '\\str{Subtract the fractions: }',
-						answer: '\\rowgrp'
-							+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\grp{\\css{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}{border-bottom-with-padding}}}}',
+						answer: '\\css'
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$answerDen}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{Use the LCD to convert the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+									+'{\\sign{=}}'
+									+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+									+'{\\sign{=}}'
+									+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{-}}{\\css{\\grp{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+									+'{\\sign{=}}'
+									+'{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Subtract the fractions:}}'
+									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\sign{&minus;}}{\\css{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}{border-bottom-with-padding}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}'
+									+'{\\html{&nbsp;}}'
+								+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
