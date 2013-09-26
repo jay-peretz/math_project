@@ -53,6 +53,7 @@ angular.module('mathSkills')
 
                         $scope.$on('showHelpPanel', function (e, data) {
                             turnOffAnswer();
+                            $scope.$broadcast('setAnswerBtn', false, false);
                             $scope.$on('answer', function (e, data) {
                                  data.result = "helped";
                                  data.answer = "\\str{helped}";
