@@ -1150,6 +1150,6 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             { firstunitn: '800', firstunitd: '2400', secondunitn: '1', secondunitd: '3', number: '$2400', left: '$800', plainDollars: '2400', plainLeft: '800', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_c.jpg', template: 'dollarsFindFractionLeft2' }
 			];
     
-    	return dataUtils.build(desc, template, data);
-    	//return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
+    	//return dataUtils.build(desc, template, data);
+    	return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
 }]);
