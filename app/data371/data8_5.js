@@ -568,7 +568,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                                     '\\rowgrp{\\css{\\ins{Great! Now give the solution.}}{width400}}{\\html{<br><br>}},' +
                                     '\\css{\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total being divided up is the number of pages in the tray ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages), so the number of pages in the tray is placed first in the division set up.  The correct setup is below. Now solve the problem.}}{width400}' +    
                                 ']}{$$previousCorrect}}' +
-                                '{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{pages}}{\\sign{&div;}}{\\html{$number}}{\\html{ minutes}}{\\sign{=}}{\\mixed{\\fracstr{$secondunitwhole}}{\\frac{\\fracstr{$secondunitn}}{\\fracstr{$secondunitd}}}}{\\html{pages/minute}}}',
+                                '{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{pages}}{\\sign{&div;}}{\\html{$number}}{\\html{ minutes}}{\\sign{=}}{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{\\html{pages/minute}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true

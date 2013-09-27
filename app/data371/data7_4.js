@@ -457,7 +457,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         answer: '\\wb{' +
 									'\\rowgrp' +
 										'{\\ins{You have been given the total amount of money which Justina had before she went shopping.  How much money did she start out with?}}' +
-										'{\\grp{\\input{$number}}}' +
+										'{\\grp{\\html{$dollarSign}}{\\input{$plainDollars}}}' +
 								'}',
                         controls: {
                             "checkAnswer": true,
@@ -499,7 +499,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                                         '\\rowgrp{\\css{\\ins{Yes. Write a setup that will solve for the amount of money she had left.}}{width400}}{\\html{<br><br>}},' +
                                         '\\css{\\ins{This is a <span class=underline>number of another number</span> problem.  The &quot;of&quot; between two number values means <span class=underline>multiply</span>. Write a setup that will solve for the amount of money she had left.}}{width400}' +
                                     ']}{$$previousCorrect}}' +
-                                    '{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{\\sign{&bull;}}{\\input{$number}}}}' +
+                                    '{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{\\sign{&bull;}}{\\html{$dollarSign}}{\\input{$plainDollars}}}}' +
                             '}',
                         controls: {
                             "checkAnswer": true,
@@ -544,7 +544,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         answer: '\\wb{' +
 									'\\rowgrp' +
 										'{\\ins{You have been given the total amount of money which Devinder had before he went shopping.  How much money did he start out with?}}' +
-										'{\\grp{\\input{$number}}}' +
+										'{\\grp{\\html{$dollarSign}}{\\input{$plainDollars}}}' +
 								'}',
                         controls: {
                             "checkAnswer": true,
@@ -558,7 +558,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											'\\ins{Yes, Devinder had $number. Now, how much money did he spend?},' +
 											'\\ins{No, we are told that he started with $number. How much money did he spend?}' +    
 										']}{$$previousCorrect}}' +
-										'{\\grp{\\input{$spent}}}' +
+										'{\\grp{\\html{$dollarSign}}{\\input{$plainSpent}}}' +
 								'}',
                         controls: {
                             "checkAnswer": true,
@@ -619,7 +619,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         answer: '\\wb{' +
 									'\\rowgrp' +
 										'{\\ins{You have been given the total amount of money which Matt had before he went shopping.  How much money did he start out with?}}' +
-										'{\\grp{\\input{$number}}}' +
+										'{\\grp{\\html{$dollarSign}}{\\input{$plainDollars}}}' +
 								'}',
                         controls: {
                             "checkAnswer": true,
@@ -633,7 +633,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											'\\ins{Yes, Matt had $number. Now, how much money did he have left?},' +
 											'\\ins{No, we are told that he started with $number. How much money did he have left?}' +    
 										']}{$$previousCorrect}}' +
-										'{\\grp{\\input{$left}}}' +
+										'{\\grp{\\html{$dollarSign}}{\\input{$plainLeft}}}' +
 								'}',
                         controls: {
                             "checkAnswer": true,
@@ -694,7 +694,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         answer: '\\wb{' +
 									'\\rowgrp' +
 										'{\\ins{You have been given the total amount of money which Rene had before she paid bills.  How much money did she start out with?}}' +
-										'{\\grp{\\input{$number}}}' +
+										'{\\grp{\\html{$dollarSign}}{\\input{$plainDollars}}}' +
 								'}',
                         controls: {
                             "checkAnswer": true,
@@ -736,7 +736,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                                         '\\rowgrp{\\css{\\ins{Yes. Write a setup that will solve for the amount of money she had left.}}{width400}}{\\html{<br><br>}},' +
                                         '\\css{\\ins{This is a <span class=underline>number of another number</span> problem.  The &quot;of&quot; between two number values means <span class=underline>multiply</span>. Write a setup that will solve for the amount of money she had left.}}{width400}' +
                                     ']}{$$previousCorrect}}' +
-                                    '{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{\\sign{&bull;}}{\\input{$number}}}}' +
+                                    '{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{\\sign{&bull;}}{\\html{$dollarSign}}{\\input{$plainDollars}}}}' +
                             '}',
                         controls: {
                             "checkAnswer": true,
@@ -781,7 +781,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         answer: '\\wb{' +
 									'\\rowgrp' +
 										'{\\ins{You have been given the total amount of money which Penelope had before she paid bills.  How much money did she start out with?}}' +
-										'{\\grp{\\input{$number}}}' +
+										'{\\grp{\\html{$dollarSign}}{\\input{$plainDollars}}}' +
 								'}',
                         controls: {
                             "checkAnswer": true,
@@ -795,7 +795,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											'\\ins{Yes, Penelope had $number. Now, how much money did she spend?},' +
 											'\\ins{No, we are told that she started with $number. How much money did she spend?}' +    
 										']}{$$previousCorrect}}' +
-										'{\\grp{\\input{$spent}}}' +
+										'{\\grp{\\html{$dollarSign}}{\\input{$plainSpent}}}' +
 								'}',
                         controls: {
                             "checkAnswer": true,
@@ -856,7 +856,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         answer: '\\wb{' +
 									'\\rowgrp' +
 										'{\\ins{You have been given the total amount of money which Damian had before he paid bills.  How much money did he start out with?}}' +
-										'{\\grp{\\input{$number}}}' +
+										'{\\grp{\\html{$dollarSign}}{\\input{$plainDollars}}}' +
 								'}',
                         controls: {
                             "checkAnswer": true,
@@ -870,7 +870,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											'\\ins{Yes, Damian had $number. Now, how much money did he have left?},' +
 											'\\ins{No, we are told that he started with $number. How much money did he have left?}' +    
 										']}{$$previousCorrect}}' +
-										'{\\grp{\\input{$left}}}' +
+										'{\\grp{\\html{$dollarSign}}{\\input{$plainLeft}}}' +
 								'}',
                         controls: {
                             "checkAnswer": true,
@@ -920,12 +920,12 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             /*{ totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3a.jpg', template: 'housesDivFrac1' },
             {  totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3b.jpg', template: 'housesDivFrac2' },
             {  totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: 'Acres_Gplane_2.3c.jpg', template: 'housesMulFrac' },*/
-			{ firstunitn: '3', firstunitd: '5', secondunitn: '2', secondunitd: '5', number: '$200', dollarsLeft: '80', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_a.jpg', template: 'dollarsLeftFromFraction' },
-            { firstunitn: '120', firstunitd: '200', secondunitn: '3', secondunitd: '5', number: '$200', spent: '$120', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_b.jpg', template: 'dollarsFindFractionSpent' },
-            { firstunitn: '80', firstunitd: '200', secondunitn: '2', secondunitd: '5', number: '$200', left: '$80', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_c.jpg', template: 'dollarsFindFractionLeft' },
-			{ firstunitn: '2', firstunitd: '3', secondunitn: '1', secondunitd: '3', number: '$2400', dollarsLeft: '800', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_a.jpg', template: 'dollarsLeftFromFraction2' },
-            { firstunitn: '1600', firstunitd: '2400', secondunitn: '2', secondunitd: '3', number: '$2400', spent: '$1600', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_b.jpg', template: 'dollarsFindFractionSpent2' },
-            { firstunitn: '800', firstunitd: '2400', secondunitn: '1', secondunitd: '3', number: '$2400', left: '$800', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_c.jpg', template: 'dollarsFindFractionLeft2' }
+			{ firstunitn: '3', firstunitd: '5', secondunitn: '2', secondunitd: '5', number: '$200', dollarsLeft: '80', plainDollars: '200', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_a.jpg', template: 'dollarsLeftFromFraction' },
+            { firstunitn: '120', firstunitd: '200', secondunitn: '3', secondunitd: '5', number: '$200', spent: '$120', plainDollars: '200', plainSpent: '120', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_b.jpg', template: 'dollarsFindFractionSpent' },
+            { firstunitn: '80', firstunitd: '200', secondunitn: '2', secondunitd: '5', number: '$200', left: '$80', plainDollars: '200', plainLeft: '80', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_c.jpg', template: 'dollarsFindFractionLeft' },
+			{ firstunitn: '2', firstunitd: '3', secondunitn: '1', secondunitd: '3', number: '$2400', dollarsLeft: '800', plainDollars: '2400', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_a.jpg', template: 'dollarsLeftFromFraction2' },
+            { firstunitn: '1600', firstunitd: '2400', secondunitn: '2', secondunitd: '3', number: '$2400', spent: '$1600', plainDollars: '2400', plainSpent: '1600', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_b.jpg', template: 'dollarsFindFractionSpent2' },
+            { firstunitn: '800', firstunitd: '2400', secondunitn: '1', secondunitd: '3', number: '$2400', left: '$800', plainDollars: '2400', plainLeft: '800', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_c.jpg', template: 'dollarsFindFractionLeft2' }
 			];
     
     	//return dataUtils.build(desc, template, data);
