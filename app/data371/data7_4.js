@@ -82,7 +82,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 								'}{well}',
                         controls: {
                             "checkAnswer": true,
-                            "help": '\\row{\\frac{\\str{$total}}{\\str{1}}}{\\sign{&div;}}{\\frac{\\str{$unitn}}{\\str{$unitd}}}{\\sign{=}}{\\str{$number}}'
+                            "help": true
                         }
                     }]
                 }]
@@ -1128,6 +1128,300 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         }
                     }]
                 }]
+            },
+			coffeeDiv1: {
+                title: 'Fraction Application Problems',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\rowgrp'+
+									'{\\ins{There are $total pounds of coffee in a barrel. If each bag of coffee is to weigh <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds, how many bags of coffee will the barrel produce?}}'+
+									'{\\grp{\\input{$number}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{\\css{\\rowgrp'
+										+'{\\html{There are $total pounds of coffee in a barrel. If each bag of coffee is to weigh <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds, how many bags of coffee will the barrel produce?}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{You have been given the <strong>total</strong> weight of the coffee from which the  bags of coffee will be produced.  How many pounds of coffee are in <span class=underline>one</span> bag of coffee?}}'
+										+'{\\frac{\\input{$unitn}}{\\input{$unitd}}}'
+										+'}}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer:
+                            '\\wb{css{' +
+                                '\\rowgrp' +
+									'{\\html{There are $total pounds of coffee in a barrel. If each bag of coffee is to weigh <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds, how many bags of coffee will the barrel produce?}}'+
+									'{\\html{&nbsp;}}'+
+                                    '{\\choose{[' +
+                                        '\\ins{Yes, each bag of coffee weighs <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds. To find out how many bags of coffee (each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds in size) can be produced from $total pounds of coffee, what operation must we use?},' +
+                                        '\\ins{No, we are told that each bag of coffee weighs <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds. To find out how many bags of coffee (each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds in size) can be produced from $total pounds of coffee, what operation must we use?}' +    
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+                            '}}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer:
+                            '\\wb{\\css{' +
+                                '\\rowgrp' +
+									'{\\html{There are $total pounds of coffee in a barrel. If each bag of coffee is to weigh <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds, how many bags of coffee will the barrel produce?}}'+
+									'{\\html{&nbsp;}}'+
+                                    '{\\choose{[' +
+                                        '\\ins{Yes. Write a setup that will solve for the number of bags of coffee that can be produced from the barrel.},' +
+                                        '\\ins{We must divide to solve this problem. The given total of coffee in the barrel is being divided up into equal-sized parts&mdash;each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds.  Each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds of coffee will make one bag of coffee. Write a setup that will solve for the number of bags of coffee that can be produced.}' +    
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\grp{\\frac{\\input{$total}}{\\input{1}}}{\\sign{&div;}}{\\frac{\\input{$unitn}}{\\input{$unitd}}}}' + 
+                            '}}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\css{\\rowgrp' +
+									'{\\html{There are $total pounds of coffee in a barrel. If each bag of coffee is to weigh <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds, how many bags of coffee will the barrel produce?}}'+
+									'{\\html{&nbsp;}}'+
+									'{\\choose{[' +
+										'\\ins{Great! The total of $total pounds is being divided up into parts that are each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds in size.  Now solve the problem.},' +
+										'\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the $total pounds is the total and is placed first in the division set up.  The correct setup is shown below; now solve the problem.}' +     
+									']}{$$previousCorrect}}' +
+									'{\\grp{\\frac{\\str{$total}}{\\str{1}}}{\\sign{&div;}}{\\frac{\\str{$unitn}}{\\str{$unitd}}}{\\sign{=}}{\\input{$number}}}'+
+								'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            },
+            coffeeDiv2: {
+                title: 'Fraction Application Problems',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\rowgrp'+
+									'{\\ins{$number bags of coffee are to be produced from $total pounds in a barrel.  What will be the weight of each bag of coffee (know that each bag will be the same weight)?}}'+
+									'{\\frac{\\input{$unitn}}{\\input{$unitd}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: 
+                            '\\wb'+
+								'{\\css' +
+									'{\\rowgrp' +
+										'{\\html{$number bags of coffee are to be produced from $total pounds in a barrel.  What is the total weight of the coffee?}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\ins{You have been <span class=underline>given the total</span> weight of the coffee from which the  bags of coffee will be produced.  What is the total weight of the coffee?}}' +
+										'{\\grp{\\input{$total}}{\\html{pounds}}}' +
+								'}{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: 
+                            '\\wb' +
+								'{\\css'+
+									'{\\rowgrp' +
+										'{\\html{$number bags of coffee are to be produced from $total pounds in a barrel.  What will be the weight of each bag of coffee (know that each bag will be the same weight)?}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\choose{[' +
+											'\\ins{Yes, there are $total pounds of coffee in the barrel. How many bags are to be produced?},' +
+											'\\ins{No, we are told there are $total pounds of coffee in the barrel. How many bags are to be produced?}' +    
+										']}{$$previousCorrect}}' +
+										'{\\grp{\\input{$number}}{\\html{bags}}}' +
+								'}{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: 
+                            '\\wb' +
+								'{\\css'+
+									'{\\rowgrp' +
+										'{\\html{$number bags of coffee are to be produced from $total pounds in a barrel.  What will be the weight of each bag of coffee (know that each bag will be the same weight)?}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\choose{[' +
+											'\\ins{Yes, $number bags of coffee will be produced. To find out the weight of each bag of coffee, what operation must we use?},' +
+											'\\ins{No, we are told $number bags of coffee will be produced. To find out the weight of each bag of coffee, what operation must we use?}' +    
+										']}{$$previousCorrect}}' +
+										'{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+								'}{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer:
+                            '\\wb' +
+								'{\\css'+
+									'{\\rowgrp' +
+										'{\\html{$number bags of coffee are to be produced from $total pounds in a barrel.  What will be the weight of each bag of coffee (know that each bag will be the same weight)?}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\choose{[' +
+											'\\ins{Yes, now write a setup that will solve this problem.},' +
+											'\\ins{We must divide to solve this problem.  The <span class=underline>given total weight</span> is being divided up into $number equal-sized parts.  Write a set up that will solve for the weight of each bag of coffee to be produced.}' +    
+										']}{$$previousCorrect}}' +
+										'{\\grp{\\frac{\\input{$total}}{\\input{1}}}{\\sign{&div;}}{\\frac{\\input{$number}}{\\input{1}}}}' +
+								'}{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: 
+                            '\\wb' +
+								'{\\css'+
+									'{\\rowgrp' +
+										'{\\html{$number bags of coffee are to be produced from $total pounds in a barrel.  What will be the weight of each bag of coffee (know that each bag will be the same weight)?}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\choose{[' +
+											'\\ins{Great! The total of $total pounds of coffee is being divided up into $number parts. Now give the solution.},' +
+											'\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the $total pounds of coffee is the total and is placed first in the division set up.  The correct setup is shown below.<br><br>Now solve the problem.}' +
+										']}{$$previousCorrect}}' +
+										'{\\grp{\\frac{\\str{$total}}{\\str{1}}}{\\sign{&div;}}{\\frac{\\str{$number}}{\\str{1}}}{\\sign{=}}{\\frac{\\input{$unitn}}{\\input{$unitd}}}}' +
+								'}{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            },
+            coffeeMul: {
+                title: 'Fraction Application Problems',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\rowgrp'+
+									'{\\ins{Each bag of coffee will weigh <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds.  If $number bags of coffee are to be produced, how many total pounds of coffee will be used?}}'+
+									'{\\grp{\\input{$total}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\image{$illustration}',
+						answer: '\\wb'
+									+'{\\css'
+										+'{\\rowgrp'
+											+'{\\html{Each bag of coffee will weigh <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds.  If $number bags of coffee are to be produced, how many total pounds of coffee will be used?}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\ins{You are searching for the total number of pounds of coffee that are needed.  How many pounds of coffee are needed to produce one bag of coffee?}}'
+											+'{\\grp{\\frac{\\input{$unitn}}{\\input{$unitd}}}{\\html{pounds of coffee}}}'+
+										'}'
+									+'{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+						answer: '\\wb' +
+									'{\\css'+
+										'{\\rowgrp' +
+											'{\\html{Each bag of coffee will weigh <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds.  If $number bags of coffee are to be produced, how many total pounds of coffee will be used?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\ins{Yes, it takes <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds to build one bag of coffee. How many bags of coffee are being produced?},' +
+												'\\ins{No, we are told it takes <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds to build one bag of coffee. How many bags of coffee are being produced?}' +    
+											']}{$$previousCorrect}}' +
+											'{\\grp{\\input{$number}}{\\html{bags of coffee}}}' +
+										'}'+
+									'{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+						answer: '\\wb' +
+									'{\\css'+
+										'{\\rowgrp' +
+											'{\\html{Each bag of coffee will weigh <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds.  If $number bags of coffee are to be produced, how many total pounds of coffee will be used?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\ins{Yes, $number bags of coffee are being produced. To find out the total number of pounds of coffee required to produce $number bags of coffee, each bag weighing <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds, what operation must we use?},' +
+												'\\ins{No, we are told $number bags of coffee are being produced. To find out the total number of pounds of coffee required to produce $number bags of coffee, each bag weighing <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds, what operation must we use?}' +    
+											']}{$$previousCorrect}}' +
+											'{\\select{Multiplication}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+										'}'+
+									'{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+						answer: '\\wb' +
+									'{\\css'+
+										'{\\rowgrp' +
+											'{\\html{Each bag of coffee will weigh <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds.  If $number bags of coffee are to be produced, how many total pounds of coffee will be used?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\rowgrp{\\ins{Yes, the <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds is being repeated $number times.  Write a setup that will solve for the total weight of coffee that is needed to produce all $number bags of coffee.}},' +
+												'\\ins{We must multiply to solve this problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds is being repeated $number times. Write a setup that will solve for the total weight of coffee that is needed to produce all $number bags of coffee.}' +    
+											']}{$$previousCorrect}}' +                                    
+											'{\\grp{\\frac{\\input{[$unitn, $number]}}{\\input{[$unitd, 1]}}}{\\sign{&times;}}{\\frac{\\input{[$number, $unitn]}}{\\input{[1, $unitd]}}}}' +
+										'}'+
+									'{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+						answer: '\\css'+
+										'{\\rowgrp' +
+											'{\\html{Each bag of coffee will weigh <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds.  If $number bags of coffee are to be produced, how many total pounds of coffee will be used?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\rowgrp{\\ins{Now solve the problem.}},' +
+												'\\ins{This is a *repeated addition* or multiplication problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}' +
+											']}{$$previousCorrect}}' +
+											'{\\grp{\\frac{\\fracstr{$unitn}}{\\fracstr{$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}{\\sign{=}}{\\input{$total}}{\\html{pounds of coffee}}}' +
+										'}'+
+									'{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
             }
         },
         data = [
@@ -1147,9 +1441,12 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             { firstunitn: '80', firstunitd: '200', secondunitn: '2', secondunitd: '5', number: '$200', left: '$80', plainDollars: '200', plainLeft: '80', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_c.jpg', template: 'dollarsFindFractionLeft' },
 			{ firstunitn: '2', firstunitd: '3', secondunitn: '1', secondunitd: '3', number: '$2400', dollarsLeft: '800', plainDollars: '2400', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_a.jpg', template: 'dollarsLeftFromFraction2' },
             { firstunitn: '1600', firstunitd: '2400', secondunitn: '2', secondunitd: '3', number: '$2400', spent: '$1600', plainDollars: '2400', plainSpent: '1600', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_b.jpg', template: 'dollarsFindFractionSpent2' },
-            { firstunitn: '800', firstunitd: '2400', secondunitn: '1', secondunitd: '3', number: '$2400', left: '$800', plainDollars: '2400', plainLeft: '800', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_c.jpg', template: 'dollarsFindFractionLeft2' }
+            { firstunitn: '800', firstunitd: '2400', secondunitn: '1', secondunitd: '3', number: '$2400', left: '$800', plainDollars: '2400', plainLeft: '800', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_c.jpg', template: 'dollarsFindFractionLeft2' },
+			{ total: 56, unitn: 7, unitd: 10, number: 80, illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56a.jpg', template: 'coffeeDiv1' },
+            { total: 56, unitn: 7, unitd: 10, number: 80, illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56b.jpg', template: 'coffeeDiv2' },
+            { total: 56, unitn: 7, unitd: 10, number: 80, illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56c.jpg', template: 'coffeeMul' }
 			];
     
-    	//return dataUtils.build(desc, template, data);
-    	return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
+    	return dataUtils.build(desc, template, data);
+    	//return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
 }]);
