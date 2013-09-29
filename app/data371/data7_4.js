@@ -8,7 +8,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             children: []
         },
         template = {
-            housesDiv1: {
+           housesDiv1: {
                 title: 'Fraction Application Problems',
                 children: [{
                     title: 'Main Answer',
@@ -283,7 +283,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                 }]
             },
             /// houses div frac
-             housesDivFrac1: {
+             /*housesDivFrac1: {
                 title: 'Fraction Application Problems',
                 children: [{
                     title: 'Main Answer',
@@ -558,7 +558,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         }
                     }]
                 }]
-            },
+            },*/
 			dollarsLeftFromFraction: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -1422,12 +1422,306 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                         }
                     }]
                 }]
+            },
+			lumberDiv1: {
+                title: 'Fraction Application Problems',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\rowgrp'+
+									'{\\ins{There are $total feet of lumber in a beam. If each piece is to be <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot, how many pieces of lumber will the beam produce?}}'+
+									'{\\grp{\\input{$number}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\wb{\\css{\\rowgrp'
+										+'{\\html{There are $total feet of lumber in a beam. If each piece is to be <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot, how many pieces of lumber will the beam produce?}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{You have been given the <strong>total</strong> length of the lumber from which the  pieces of lumber will be produced.  How many feet of lumber are in <span class=underline>one</span> piece?}}'
+										+'{\\frac{\\input{$unitn}}{\\input{$unitd}}}'
+										+'}}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer:
+                            '\\wb{css{' +
+                                '\\rowgrp' +
+									'{\\html{There are $total feet of lumber in a beam. If each piece is to be <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot, how many pieces of lumber will the beam produce?}}'+
+									'{\\html{&nbsp;}}'+
+                                    '{\\choose{[' +
+                                        '\\ins{Yes, each piece is <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot. To find out how many pieces of lumber (each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot in size) can be produced from $total feet of lumber, what operation must we use?},' +
+                                        '\\ins{No, we are told that each piece is <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot. To find out how many pieces of lumber (each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot in size) can be produced from $total feet of lumber, what operation must we use?}' +    
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+                            '}}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer:
+                            '\\wb{\\css{' +
+                                '\\rowgrp' +
+									'{\\html{There are $total feet of lumber in a beam. If each piece is to be <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot, how many pieces of lumber will the beam produce?}}'+
+									'{\\html{&nbsp;}}'+
+                                    '{\\choose{[' +
+                                        '\\ins{Yes. Write a setup that will solve for the number of pieces of lumber that can be produced from the beam.},' +
+                                        '\\ins{We must divide to solve this problem. The given total of lumber in the beam is being divided up into equal-sized parts&mdash;each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot.  Each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot of lumber will make one piece. Write a setup that will solve for the number of pieces of lumber that can be produced.}' +    
+                                    ']}{$$previousCorrect}}' +
+                                    '{\\grp{\\frac{\\input{$total}}{\\input{1}}}{\\sign{&div;}}{\\frac{\\input{$unitn}}{\\input{$unitd}}}}' + 
+                            '}}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: '\\css{\\rowgrp' +
+									'{\\html{There are $total feet of lumber in a beam. If each piece is to be <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot, how many pieces of lumber will the beam produce?}}'+
+									'{\\html{&nbsp;}}'+
+									'{\\choose{[' +
+										'\\ins{Great! The total of $total feet is being divided up into parts that are each <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot in size.  Now solve the problem.},' +
+										'\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the $total feet is the total and is placed first in the division set up.  The correct setup is shown below; now solve the problem.}' +     
+									']}{$$previousCorrect}}' +
+									'{\\grp{\\frac{\\str{$total}}{\\str{1}}}{\\sign{&div;}}{\\frac{\\str{$unitn}}{\\str{$unitd}}}{\\sign{=}}{\\input{$number}}}'+
+								'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            },
+            lumberDiv2: {
+                title: 'Fraction Application Problems',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\rowgrp'+
+									'{\\ins{$number pieces of lumber are to be produced from $total feet in a beam.  What will be the length of each piece (know that each piece will be the same length)?}}'+
+									'{\\frac{\\input{$unitn}}{\\input{$unitd}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: 
+                            '\\wb'+
+								'{\\css' +
+									'{\\rowgrp' +
+										'{\\html{$number pieces of lumber are to be produced from $total feet in a beam.  What is the total length of the lumber?}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\ins{You have been <span class=underline>given the total</span> length of the lumber from which the  pieces of lumber will be produced.  What is the total length of the lumber?}}' +
+										'{\\grp{\\input{$total}}{\\html{feet}}}' +
+								'}{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: 
+                            '\\wb' +
+								'{\\css'+
+									'{\\rowgrp' +
+										'{\\html{$number pieces of lumber are to be produced from $total feet in a beam.  What will be the length of each piece (know that each piece will be the same length)?}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\choose{[' +
+											'\\ins{Yes, there are $total feet of lumber in the beam. How many pieces are to be produced?},' +
+											'\\ins{No, we are told there are $total feet of lumber in the beam. How many pieces are to be produced?}' +    
+										']}{$$previousCorrect}}' +
+										'{\\grp{\\input{$number}}{\\html{pieces}}}' +
+								'}{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: 
+                            '\\wb' +
+								'{\\css'+
+									'{\\rowgrp' +
+										'{\\html{$number pieces of lumber are to be produced from $total feet in a beam.  What will be the length of each piece (know that each piece will be the same length)?}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\choose{[' +
+											'\\ins{Yes, $number pieces of lumber will be produced. To find out the length of each piece, what operation must we use?},' +
+											'\\ins{No, we are told $number pieces of lumber will be produced. To find out the length of each piece, what operation must we use?}' +    
+										']}{$$previousCorrect}}' +
+										'{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+								'}{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer:
+                            '\\wb' +
+								'{\\css'+
+									'{\\rowgrp' +
+										'{\\html{$number pieces of lumber are to be produced from $total feet in a beam.  What will be the length of each piece (know that each piece will be the same length)?}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\choose{[' +
+											'\\ins{Yes, now write a setup that will solve this problem.},' +
+											'\\ins{We must divide to solve this problem.  The <span class=underline>given total length</span> is being divided up into $number equal-sized parts.  Write a set up that will solve for the length of each piece to be produced.}' +    
+										']}{$$previousCorrect}}' +
+										'{\\grp{\\frac{\\input{$total}}{\\input{1}}}{\\sign{&div;}}{\\frac{\\input{$number}}{\\input{1}}}}' +
+								'}{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+                        answer: 
+                            '\\wb' +
+								'{\\css'+
+									'{\\rowgrp' +
+										'{\\html{$number pieces of lumber are to be produced from $total feet in a beam.  What will be the length of each piece (know that each piece will be the same length)?}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\choose{[' +
+											'\\ins{Great! The total of $total feet of lumber is being divided up into $number parts. Now give the solution.},' +
+											'\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the $total feet of lumber is the total and is placed first in the division set up.  The correct setup is shown below.<br><br>Now solve the problem.}' +
+										']}{$$previousCorrect}}' +
+										'{\\grp{\\frac{\\str{$total}}{\\str{1}}}{\\sign{&div;}}{\\frac{\\str{$number}}{\\str{1}}}{\\sign{=}}{\\frac{\\input{$unitn}}{\\input{$unitd}}}}' +
+								'}{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            },
+            lumberMul: {
+                title: 'Fraction Application Problems',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\image{$illustration}',
+                        answer: '\\rowgrp'+
+									'{\\ins{Each piece will be <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot.  If $number pieces of lumber are to be produced, how many total feet of lumber will be used?}}'+
+									'{\\grp{\\input{$total}}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\image{$illustration}',
+						answer: '\\wb'
+									+'{\\css'
+										+'{\\rowgrp'
+											+'{\\html{Each piece will be <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot.  If $number pieces of lumber are to be produced, how many total feet of lumber will be used?}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\ins{You are searching for the total number of feet of lumber that are needed.  How many feet of lumber are needed to produce one piece?}}'
+											+'{\\grp{\\frac{\\input{$unitn}}{\\input{$unitd}}}{\\html{foot of lumber}}}'+
+										'}'
+									+'{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+						answer: '\\wb' +
+									'{\\css'+
+										'{\\rowgrp' +
+											'{\\html{Each piece will be <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot.  If $number pieces of lumber are to be produced, how many total feet of lumber will be used?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\ins{Yes, it takes <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot to build one piece. How many pieces of lumber are being produced?},' +
+												'\\ins{No, we are told it takes <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot to build one piece. How many pieces of lumber are being produced?}' +    
+											']}{$$previousCorrect}}' +
+											'{\\grp{\\input{$number}}{\\html{pieces of lumber}}}' +
+										'}'+
+									'{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+						answer: '\\wb' +
+									'{\\css'+
+										'{\\rowgrp' +
+											'{\\html{Each piece will be <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot.  If $number pieces of lumber are to be produced, how many total feet of lumber will be used?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\ins{Yes, $number pieces of lumber are being produced. To find out the total number of feet of lumber required to produce $number pieces of lumber, each piece being <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot, what operation must we use?},' +
+												'\\ins{No, we are told $number pieces of lumber are being produced. To find out the total number of feet of lumber required to produce $number pieces of lumber, each piece being <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot, what operation must we use?}' +    
+											']}{$$previousCorrect}}' +
+											'{\\select{Multiplication}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+										'}'+
+									'{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+						answer: '\\wb' +
+									'{\\css'+
+										'{\\rowgrp' +
+											'{\\html{Each piece will be <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot.  If $number pieces of lumber are to be produced, how many total feet of lumber will be used?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\rowgrp{\\ins{Yes, the <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot is being repeated $number times.  Write a setup that will solve for the total length of lumber that is needed to produce all $number pieces of lumber.}},' +
+												'\\ins{We must multiply to solve this problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot is being repeated $number times. Write a setup that will solve for the total length of lumber that is needed to produce all $number pieces of lumber.}' +    
+											']}{$$previousCorrect}}' +                                    
+											'{\\grp{\\frac{\\input{[$unitn, $number]}}{\\input{[$unitd, 1]}}}{\\sign{&times;}}{\\frac{\\input{[$number, $unitn]}}{\\input{[1, $unitd]}}}}' +
+										'}'+
+									'{well}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\image{$illustration}',
+						answer: '\\css'+
+										'{\\rowgrp' +
+											'{\\html{Each piece will be <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot.  If $number pieces of lumber are to be produced, how many total feet of lumber will be used?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\rowgrp{\\ins{Now solve the problem.}},' +
+												'\\ins{This is a *repeated addition* or multiplication problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}' +
+											']}{$$previousCorrect}}' +
+											'{\\grp{\\frac{\\fracstr{$unitn}}{\\fracstr{$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}{\\sign{=}}{\\input{$total}}{\\html{feet of lumber}}}' +
+										'}'+
+									'{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
             }
         },
         data = [
-            { total: 15, unitn: 3, unitd: 4, number: 20, illustration: '7.4A-01_Acres_Houses/7.4A-01_15_Acres_Houses/400x300/Acres_Gplane_15a.jpg', template: 'housesDiv1' },
+            /*{ total: 15, unitn: 3, unitd: 4, number: 20, illustration: '7.4A-01_Acres_Houses/7.4A-01_15_Acres_Houses/400x300/Acres_Gplane_15a.jpg', template: 'housesDiv1' },
             { total: 15, unitn: 3, unitd: 4, number: 20, illustration: '7.4A-01_Acres_Houses/7.4A-01_15_Acres_Houses/400x300/Acres_Gplane_15b.jpg', template: 'housesDiv2' },
-            { total: 15, unitn: 3, unitd: 4, number: 20, illustration: '7.4A-01_Acres_Houses/7.4A-01_15_Acres_Houses/400x300/Acres_Gplane_15c.jpg', template: 'housesMul' },
+            { total: 15, unitn: 3, unitd: 4, number: 20, illustration: '7.4A-01_Acres_Houses/7.4A-01_15_Acres_Houses/400x300/Acres_Gplane_15c.jpg', template: 'housesMul' },*/
             { total: 21, unitn: 1, unitd: 3, number: 63, illustration: '7.4A-01_Acres_Houses/7.4A-01_21_Acres_Houses/400x300/Acres_Gplane_21a.jpg', template: 'housesDiv1' },
             { total: 21, unitn: 1, unitd: 3, number: 63, illustration: '7.4A-01_Acres_Houses/7.4A-01_21_Acres_Houses/400x300/Acres_Gplane_21b.jpg', template: 'housesDiv2' },
             { total: 21, unitn: 1, unitd: 3, number: 63, illustration: '7.4A-01_Acres_Houses/7.4A-01_21_Acres_Houses/400x300/Acres_Gplane_21c.jpg', template: 'housesMul' },
@@ -1444,9 +1738,12 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             { firstunitn: '800', firstunitd: '2400', secondunitn: '1', secondunitd: '3', number: '$2400', left: '$800', plainDollars: '2400', plainLeft: '800', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_c.jpg', template: 'dollarsFindFractionLeft2' },
 			{ total: 56, unitn: 7, unitd: 10, number: 80, illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56a.jpg', template: 'coffeeDiv1' },
             { total: 56, unitn: 7, unitd: 10, number: 80, illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56b.jpg', template: 'coffeeDiv2' },
-            { total: 56, unitn: 7, unitd: 10, number: 80, illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56c.jpg', template: 'coffeeMul' }
+            { total: 56, unitn: 7, unitd: 10, number: 80, illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56c.jpg', template: 'coffeeMul' },
+			{ total: 12, unitn: 1, unitd: 3, number: 36, illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-01.jpg', template: 'lumberDiv1' },
+            { total: 12, unitn: 1, unitd: 3, number: 36, illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-02.jpg', template: 'lumberDiv2' },
+            { total: 12, unitn: 1, unitd: 3, number: 36, illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-03.jpg', template: 'lumberMul' }
 			];
     
-    	return dataUtils.build(desc, template, data);
-    	//return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
+    	//return dataUtils.build(desc, template, data);
+    	return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
 }]);
