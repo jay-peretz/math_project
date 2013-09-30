@@ -24,49 +24,69 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     title: 'Workbook',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\wb{\\rowgrp{\\ins{You have been given the <strong>total</strong> value of the houses in the subdivision.  What is the total value of <span class=underline>one</span> house?}}{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{html{million dollars}}}}',
+                        answer: '\\wb'+
+									'{\\css'+
+										'{\\rowgrp'+
+											'{\\html{There are houses worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars in a subdivision. If each house is worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a million dollars, how many houses are in the subdivision?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\ins{You have been given the <strong>total</strong> value of the houses in the subdivision.  What is the total value of <span class=underline>one</span> house?}}' +
+											'{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{html{million dollars}}}}' +
+										'}'+
+									'{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\image{$illustration}',
-                        answer:
-                            '\\wb{' +
-                                '\\rowgrp' + 
-                                    '{\\choose{[' +
-                                        '\\ins{Yes, each house is valued at <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars. To find out how many houses (each worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars) are in the subdivision, what operation must we use?},' +
-                                        '\\ins{No, we are told that each house is valued at <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars. To find out how many houses (each worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars) are in the subdivision , what operation must we use?}' +    
-                                    ']}{$$previousCorrect}}' +
-                                    '{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
-                            '}',
+                        answer: '\\wb'+
+									'{\\css'+
+										'{\\rowgrp'+
+											'{\\html{There are houses worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars in a subdivision. If each house is worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a million dollars, how many houses are in the subdivision?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\ins{Yes, each house is valued at <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars. To find out how many houses (each worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars) are in the subdivision, what operation must we use?},' +
+												'\\ins{No, we are told that each house is valued at <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars. To find out how many houses (each worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars) are in the subdivision , what operation must we use?}' +    
+											']}{$$previousCorrect}}' +
+											'{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+										'}'+
+									'{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\image{$illustration}',
-                        answer: '\\wb{' +
-                                '\\rowgrp' +
-                                    '{\\choose{[' +
-                                        '\\rowgrp{\\css{\\ins{Yes. Write a setup that will solve for the total number of houses in the subdivision.}}{width400}}{\\html{<br><br>}},' +
-                                        '\\css{\\ins{We must divide to solve this problem. The given total value has been divided up into equal-sized parts&mdash;each worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars.  Each <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars represents one house. Write a setup that will solve for the number of houses in the subdivision.}}{width400}' +    
-                                    ']}{$$previousCorrect}}' +                                    
-									'{\\grp{\\select{$firstunitwhole $firstunitn/$firstunitd million dollars}{["$firstunitwhole $firstunitn/$firstunitd million dollars", "$secondunitn/$secondunitd million dollars"]}}{\\sign{&div;}}{\\select{$secondunitn/$secondunitd million dollars}{["$firstunitwhole $firstunitn/$firstunitd million dollars", "$secondunitn/$secondunitd million dollars"]}}}' +
-                            	'}',
+                        answer: '\\wb'+
+									'{\\css'+
+										'{\\rowgrp'+
+											'{\\html{There are houses worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars in a subdivision. If each house is worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a million dollars, how many houses are in the subdivision?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\ins{Yes. Write a setup that will solve for the total number of houses in the subdivision.},' +
+                                        '\\ins{We must divide to solve this problem. The given total value has been divided up into equal-sized parts&mdash;each worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars.  Each <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars represents one house. Write a setup that will solve for the number of houses in the subdivision.}' +    
+											']}{$$previousCorrect}}' +
+											'{\\grp{\\css{\\select{$firstunitwhole $firstunitn/$firstunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$secondunitn/$secondunitd"]}}{width160}}{\\sign{&div;}}{\css{\\select{$secondunitn/$secondunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$secondunitn/$secondunitd"]}}{width160}}}' +
+										'}'+
+									'{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\image{$illustration}',
-                        answer:
-                            '\\rowgrp' +
-                                '{\\choose{[' +
-                                    '\\ins{Great! Now solve the problem.},' +
-                                    '\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total being divided up is the value of the subdivision (&#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars), so the value of the subdivision is placed first in the division set up.  The correct setup is below. Now solve the problem.}' +    
-                                ']}{$$previousCorrect}}' +
-                                '{\\grp{\\html{&#36;}}{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{million dollars}}{\\sign{&div;}}{\\frac{\\fracstr{$secondunitn}}{\\fracstr{$secondunitd}}}{\\html{million dollars}}{\\sign{=}}{\\input{$number}}}',
+                        answer: '\\wb'+
+									'{\\css'+
+										'{\\rowgrp'+
+											'{\\html{There are houses worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars in a subdivision. If each house is worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a million dollars, how many houses are in the subdivision?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\ins{Great! Now solve the problem.},' +
+                                        		'\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total being divided up is the value of the subdivision (&#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars), so the value of the subdivision is placed first in the division set up.  The correct setup is below. Now solve the problem.}' +    
+											']}{$$previousCorrect}}' +
+											'{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\sign{&div;}}{\\frac{\\fracstr{$secondunitn}}{\\fracstr{$secondunitd}}}{\\sign{=}}{\\input{$number}}{html{houses}}}' +
+										'}'+
+									'{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -80,7 +100,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     title: 'Main Answer',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\rowgrp{\\ins{$number houses in a subdivision are worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars.  What is the value of each house (know that each house is priced exactly the same)?}}{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{html{million dollars}}}',
+                        answer: '\\rowgrp{\\ins{$number houses in a subdivision are worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars.  What is the value of each house (given that each house is priced exactly the same)?}}{\\grp{\\html{&#36;}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{html{million dollars}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -91,56 +111,69 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     title: 'Workbook',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: 
-                            '\\wb{' +
-                                '\\rowgrp' +
-                                    '{\\ins{You have been <span class=underline>given the total</span> number of houses in the subdivision.  How many houses are in the subdivision?}}' +
-                                    '{\\grp{\\input{$number}}{\\html{houses}}}' +
-                            '}',
+                        answer: '\\wb'+
+									'{\\css'+
+										'{\\rowgrp'+
+											'{\\html{$number houses in a subdivision are worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars.  What is the value of each house (given that each house is priced exactly the same)?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\ins{You have been <span class=underline>given the total</span> number of houses in the subdivision.  How many houses are in the subdivision?}}' +
+											'{\\grp{\\input{$number}}}' +
+										'}'+
+									'{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\image{$illustration}',
-                        answer: 
-                            '\\wb{' +
-                                '\\rowgrp' +
-                                    '{\\choose{[' +
-                                        '\\ins{Yes, there are $number houses in the subdivision. To find out the price of each house, what operation must we use?},' +
-                                        '\\ins{No, we are told there are $number houses in the subdivision. To find out the price of each house, what operation must we use?}' +    
-                                    ']}{$$previousCorrect}}' +
-                                    '{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
-                            '}',
+                        answer: '\\wb'+
+									'{\\css'+
+										'{\\rowgrp'+
+											'{\\html{$number houses in a subdivision are worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars.  What is the value of each house (given that each house is priced exactly the same)?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\ins{Yes, there are $number houses in the subdivision. To find out the price of each house, what operation must we use?},' +
+												'\\ins{No, we are told there are $number houses in the subdivision. To find out the price of each house, what operation must we use?}' +    
+											']}{$$previousCorrect}}' +
+											'{\\select{Division}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+										'}'+
+									'{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\image{$illustration}',
-                        answer: '\\wb{' +
-                                '\\rowgrp' +
-                                    '{\\choose{[' +
-                                        '\\rowgrp{\\css{\\ins{Yes, now write a setup that will solve this problem.}}{width400}}{\\html{<br><br>}},' +
-                                        '\\css{\\ins{We must divide to solve this problem.  The <span class=underline>given total value of the subdivision</span> is being divided up into $number identically-priced houses.  Pick the set up that will solve for the value of each house.}}{width400}' +    
-                                    ']}{$$previousCorrect}}' +                                    
-									'{\\grp{\\select{$firstunitwhole $firstunitn/$firstunitd million dollars}{["$firstunitwhole $firstunitn/$firstunitd million dollars", "$number houses"]}}{\\sign{&div;}}{\\select{$number houses}{["$firstunitwhole $firstunitn/$firstunitd million dollars", "$number houses"]}}}' +
-                            	'}',
+                        answer: '\\wb'+
+									'{\\css'+
+										'{\\rowgrp'+
+											'{\\html{$number houses in a subdivision are worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars.  What is the value of each house (given that each house is priced exactly the same)?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\ins{Yes, now write a setup that will solve this problem.},' +
+                                        		'\\ins{We must divide to solve this problem.  The <span class=underline>given total value of the subdivision</span> is being divided up into $number identically-priced houses.  Pick the set up that will solve for the value of each house.}' +    
+											']}{$$previousCorrect}}' +
+											'{\\grp{\\css{\\select{$firstunitwhole $firstunitn/$firstunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$secondunitn/$secondunitd"]}}{width160}}{\\sign{&div;}}{\css{\\select{$number}{["$firstunitwhole $firstunitn/$firstunitd", "$number"]}}{width160}}}' +
+										'}'+
+									'{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\image{$illustration}',
-                        answer: 
-                            '\\wb{' +
-                                '\\rowgrp' +
-                                    '{\\choose{[' +
-                                        '\\css{\\ins{Great! Now give the solution.}}{width400},' +
-                                        '\\css{\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total is the total value of the subdivision (&#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars) and is placed first in the division set up.  The correct setup is shown below.<br><br>Now solve the problem.}}{width400}' +
-                                    ']}{$$previousCorrect}}' +
-                                    '{\\rowgrp{\\grp{\\html{&#36;}}{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\html{million dollars}}{\\sign{&div;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}{\\html{houses}}}{\\html{&nbsp;}}{\\grp{\\sign{=}}{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{\\html{million dollars}}{\\html{/}}{\\html{house}}}}}' +
-                            '}',
+                        answer: '\\wb'+
+									'{\\css'+
+										'{\\rowgrp'+
+											'{\\html{$number houses in a subdivision are worth a total of &#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars.  What is the value of each house (given that each house is priced exactly the same)?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\ins{Great! Now give the solution.},' +
+                                        		'\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total is the total value of the subdivision (&#36;$firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> million dollars) and is placed first in the division set up.  The correct setup is shown below.<br><br>Now solve the problem.}' +    
+											']}{$$previousCorrect}}' +
+											'{\\rowgrp{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\sign{&div;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}}{\\html{&nbsp;}}{\\grp{\\sign{=}}{\\grp{\\html{&#36;}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{\\html{million dollars}}}}}' +
+										'}'+
+									'{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -168,53 +201,68 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     title: 'Workbook',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\wb{' +
-									'\\rowgrp' +
-										'{\\ins{You have been <span class=underline>given the total</span> number of houses in the subdivision.  How many houses are in the subdivision?}}' +
-										'{\\grp{\\input{$number}}{\\html{houses}}}' +
-								'}',
+                        answer: '\\wb'
+									+'{\\css'
+										+'{\\rowgrp'
+											+'{\\html{If $number houses have been built, and each house is priced at <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars, what is the total value of all the houses in the subdivision combined?}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\ins{You have been <span class=underline>given the total</span> number of houses in the subdivision.  How many houses are in the subdivision?}}'
+											+'{\\grp{\\input{$number}}}'+
+										'}'
+									+'{well}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\image{$illustration}',
-                        answer: '\\wb{' +
-									'\\rowgrp' +
-										'{\\choose{[' +
-											'\\ins{Yes, there are $number houses in the subdivision. To find out the total combined value of all the houses in the subdivision, what operation must we use?},' +
-											'\\ins{No, we are told there are $number houses in the subdivision. To find out the total combined value of all the houses in the subdivision, what operation must we use?}' +    
-										']}{$$previousCorrect}}' +
-										'{\\select{Multiplication}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
-								'}',
+                        answer: '\\wb' +
+									'{\\css'+
+										'{\\rowgrp' +
+											'{\\html{If $number houses have been built, and each house is priced at <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars, what is the total value of all the houses in the subdivision combined?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\ins{Yes, there are $number houses in the subdivision. To find out the total combined value of all the houses in the subdivision, what operation must we use?},' +
+												'\\ins{No, we are told there are $number houses in the subdivision. To find out the total combined value of all the houses in the subdivision, what operation must we use?}' +    
+											']}{$$previousCorrect}}' +
+											'{\\select{Multiplication}{["Addition", "Subtraction", "Multiplication", "Division"]}}' +
+										'}'+
+									'{well}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\image{$illustration}',
-                        answer: '\\wb{' +
-									'\\rowgrp' +
-										'{\\choose{[' +
-											'\\rowgrp{\\css{\\ins{Yes, now write a setup that will solve this problem.}}{width400}}{\\html{<br><br>}},' +
-											'\\css{\\ins{We must multiply to solve this problem.  The <span class=underline>given value of each house in the subdivision</span> is being multiplied by $number houses.  Pick the set up that will solve for the total combined value of the houses in the subdivision.}}{width400}' +    
-										']}{$$previousCorrect}}' +                                    
-										'{\\grp{\\select{$secondunitn/$secondunitd million dollars}{["$secondunitn/$secondunitd million dollars", "$number houses"]}}{\\sign{&bull;}}{\\select{$number houses}{["$secondunitn/$secondunitd million dollars", "$number houses"]}}}' +
-                            	'}',
+                        answer: '\\wb' +
+									'{\\css'+
+										'{\\rowgrp' +
+											'{\\html{If $number houses have been built, and each house is priced at <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars, what is the total value of all the houses in the subdivision combined?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\ins{Yes, now write a setup that will solve this problem.},' +
+												'\\ins{We must multiply to solve this problem.  The <span class=underline>given value of each house in the subdivision</span> is being multiplied by $number houses.  Pick the set up that will solve for the total combined value of the houses in the subdivision.}' +    
+											']}{$$previousCorrect}}' +
+											'{\\grp{\\css{\\select{$secondunitn/$secondunitd}{["$secondunitn/$secondunitd", "$number"]}}{width160}}{\\sign{&bull;}}{\css{\\select{$number}{["$secondunitn/$secondunitd", "$number"]}}{width160}}}' +
+										'}'+
+									'{well}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\image{$illustration}',
-                        answer: '\\wb{' +
-                                '\\rowgrp' +
-                                    '{\\choose{[' +
-                                        '\\rowgrp{\\css{\\ins{Now solve the problem.}}{width400}}{\\html{<br><br>}},' +
-                                        '\\css{\\ins{This is a *repeated addition* or multiplication problem.  The value of each house, <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars, needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}}{width400}' +
-                                    ']}{$$previousCorrect}}' +
-                                    '{\\grp{\\frac{\\str{$secondunitn}}{\\str{$secondunitd}}}{\\html{million dollars}}{\\sign{&bull;}}{\\html{$number}}{\\html{houses}}{\\sign{=}}{\\grp{\\html{&#36;}}{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{million dollars}}}}' +
-                            '}',
+                        answer: '\\css'+
+										'{\\rowgrp' +
+											'{\\html{If $number houses have been built, and each house is priced at <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars, what is the total value of all the houses in the subdivision combined?}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\choose{[' +
+												'\\rowgrp{\\ins{Now solve the problem.}},' +
+												'\\ins{This is a *repeated addition* or multiplication problem.  The value of each house, <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars, needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}' +
+											']}{$$previousCorrect}}' +
+											'{\\grp{\\frac{\\str{$secondunitn}}{\\str{$secondunitd}}}{\\sign{&bull;}}{\\html{$number}}{\\sign{=}}{\\grp{\\html{&#36;}}{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{million dollars}}}}' +
+										'}'+
+									'{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -879,6 +927,6 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
             { firstunitwhole: '51', firstunitn: '1', firstunitd: '4', secondunitwhole: '1', secondunitn: '1', secondunitd: '4', number: '41', illustration: '8.5-10_Tomato_Cans/400x300/X-lbs_41-Cans_1.25-lbs_Can.jpg', template: 'tomCanMul' }
         ];
     
-	//return dataUtils.build(desc, template, data);
-    return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
+	return dataUtils.build(desc, template, data);
+    // return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
 }]);

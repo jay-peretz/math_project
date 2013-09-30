@@ -136,3 +136,7 @@ button.btn {
 .width380 {
 	width: 380px;
 }
+/* .width160 select is used in data8_5.js*/
+.width160 select{
+	width: 160px;
+}
