@@ -1080,6 +1080,6 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
             { firstunitwhole: '51', firstunitn: '1', firstunitd: '4', secondunitwhole: '1', secondunitn: '1', secondunitd: '4', number: '41', firstMult: '41', secondMult: '1 1/4', multArray: '[\\"41\\",\\"1 1/4\\"]', flip: [[1], ["firstMult", "secondMult"]], illustration: '8.5-10_Tomato_Cans/400x300/X-lbs_41-Cans_1.25-lbs_Can.jpg', template: 'tomCanMul' }
         ];
     
-	return dataUtils.build(desc, template, data);
-    // return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
+	//return dataUtils.build(desc, template, data);
+    return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
 }]);
