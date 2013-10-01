@@ -255,7 +255,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 												'\\rowgrp{\\ins{Yes, the <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre is being repeated $number times.  Write a setup that will solve for the total amount of land that is needed to build all $number houses.}},' +
 												'\\ins{We must multiply to solve this problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre is being repeated $number times. Write a setup that will solve for the total amount of land that is needed to build all $number houses.}' +    
 											']}{$$previousCorrect}}' +                                    
-											'{\\grp{\\frac{\\input{[$unitn, $number]}}{\\input{[$unitd, 1]}}}{\\sign{&times;}}{\\frac{\\input{[$number, $unitn]}}{\\input{[1, $unitd]}}}}' +
+											'{\\grp{\\frac{\\input{$firstMultNum}}{\\input{$firstMultDen}}}{\\sign{&times;}}{\\frac{\\input{$secondMultNum}}{\\input{$secondMultDen}}}}' +
 										'}'+
 									'{well}}',
                         controls: {
@@ -272,7 +272,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 												'\\rowgrp{\\ins{Now solve the problem.}},' +
 												'\\ins{This is a *repeated addition* or multiplication problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}' +
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\frac{\\fracstr{$unitn}}{\\fracstr{$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}{\\sign{=}}{\\input{$total}}{\\html{acres}}}' +
+											'{\\grp{\\frac{\\fracstr{$$unitn}}{\\fracstr{$$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$$number}}{\\fracstr{$$unitDenom}}}{\\sign{=}}{\\input{$total}}{\\html{acres}}}' +
 										'}'+
 									'{well}',
                         controls: {
@@ -1724,7 +1724,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             { total: 15, unitn: 3, unitd: 4, number: 20, illustration: '7.4A-01_Acres_Houses/7.4A-01_15_Acres_Houses/400x300/Acres_Gplane_15c.jpg', template: 'housesMul' },*/
             { total: 21, unitn: 1, unitd: 3, number: 63, illustration: '7.4A-01_Acres_Houses/7.4A-01_21_Acres_Houses/400x300/Acres_Gplane_21a.jpg', template: 'housesDiv1' },
             { total: 21, unitn: 1, unitd: 3, number: 63, illustration: '7.4A-01_Acres_Houses/7.4A-01_21_Acres_Houses/400x300/Acres_Gplane_21b.jpg', template: 'housesDiv2' },
-            { total: 21, unitn: 1, unitd: 3, number: 63, illustration: '7.4A-01_Acres_Houses/7.4A-01_21_Acres_Houses/400x300/Acres_Gplane_21c.jpg', template: 'housesMul' },
+            { total: 21, unitn: 1, unitd: 3, number: 63, unitDenom: 1, firstMultNum: '[\\"1\\",\\"63\\"]', firstMultDen: '[\\"3\\",\\"1\\"]', secondMultNum: '[\\"63\\",\\"1\\"]', secondMultDen: '[\\"1\\",\\"3\\"]', flip: [[1], ["unitn", "number"], ["unitDenom", "unitd"]], illustration: '7.4A-01_Acres_Houses/7.4A-01_21_Acres_Houses/400x300/Acres_Gplane_21c.jpg', template: 'housesMul' },
 			/*
             { totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: '7.4A-01_Acres_Houses/7.4A-01_2.3_Acres_Houses/400x300/Acres_Gplane_2.3a.jpg', template: 'housesDivFrac1' },
             {  totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: '7.4A-01_Acres_Houses/7.4A-01_2.3_Acres_Houses/400x300/Acres_Gplane_2.3b.jpg', template: 'housesDivFrac2' },
@@ -1744,6 +1744,6 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             { total: 12, unitn: 1, unitd: 3, number: 36, illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-03.jpg', template: 'lumberMul' }
 			];
     
-    	//return dataUtils.build(desc, template, data);
-    	return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
+    	return dataUtils.build(desc, template, data);
+    	//return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
 }]);
