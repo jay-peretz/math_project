@@ -1742,6 +1742,6 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             { total: 12, unitn: 1, unitd: 3, number: 36, unitDenom: 1, firstMultNum: '[\\"1\\",\\"36\\"]', firstMultDen: '[\\"3\\",\\"1\\"]', secondMultNum: '[\\"36\\",\\"1\\"]', secondMultDen: '[\\"1\\",\\"3\\"]', flip: [[1], ["unitn", "number"], ["unitDenom", "unitd"]], illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-03.jpg', template: 'lumberMul' }
 			];
     
-    	return dataUtils.build(desc, template, data);
-    	//return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
+    	//return dataUtils.build(desc, template, data);
+    	return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
 }]);
