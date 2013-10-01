@@ -254,7 +254,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											'{\\choose{[' +
 												'\\rowgrp{\\ins{Yes, the <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre is being repeated $number times.  Write a setup that will solve for the total amount of land that is needed to build all $number houses.}},' +
 												'\\ins{We must multiply to solve this problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre is being repeated $number times. Write a setup that will solve for the total amount of land that is needed to build all $number houses.}' +    
-											']}{$$previousCorrect}}' +                                    
+											']}{$$previousCorrect}}' +
 											'{\\grp{\\frac{\\input{$firstMultNum}}{\\input{$firstMultDen}}}{\\sign{&times;}}{\\frac{\\input{$secondMultNum}}{\\input{$secondMultDen}}}}' +
 										'}'+
 									'{well}}',
@@ -1395,8 +1395,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											'{\\choose{[' +
 												'\\rowgrp{\\ins{Yes, the <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds is being repeated $number times.  Write a setup that will solve for the total weight of coffee that is needed to produce all $number bags of coffee.}},' +
 												'\\ins{We must multiply to solve this problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds is being repeated $number times. Write a setup that will solve for the total weight of coffee that is needed to produce all $number bags of coffee.}' +    
-											']}{$$previousCorrect}}' +                                    
-											'{\\grp{\\frac{\\input{[$unitn, $number]}}{\\input{[$unitd, 1]}}}{\\sign{&times;}}{\\frac{\\input{[$number, $unitn]}}{\\input{[1, $unitd]}}}}' +
+											']}{$$previousCorrect}}' +                                    		'{\\grp{\\frac{\\input{$firstMultNum}}{\\input{$firstMultDen}}}{\\sign{&times;}}{\\frac{\\input{$secondMultNum}}{\\input{$secondMultDen}}}}' +
 										'}'+
 									'{well}}',
                         controls: {
@@ -1413,7 +1412,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 												'\\rowgrp{\\ins{Now solve the problem.}},' +
 												'\\ins{This is a *repeated addition* or multiplication problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}' +
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\frac{\\fracstr{$unitn}}{\\fracstr{$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}{\\sign{=}}{\\input{$total}}{\\html{pounds of coffee}}}' +
+											'{\\grp{\\frac{\\fracstr{$$unitn}}{\\fracstr{$$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$$number}}{\\fracstr{$$unitDenom}}}{\\sign{=}}{\\input{$total}}{\\html{pounds of coffee}}}' +
 										'}'+
 									'{well}',
                         controls: {
@@ -1689,8 +1688,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											'{\\choose{[' +
 												'\\rowgrp{\\ins{Yes, the <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot is being repeated $number times.  Write a setup that will solve for the total length of lumber that is needed to produce all $number pieces of lumber.}},' +
 												'\\ins{We must multiply to solve this problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot is being repeated $number times. Write a setup that will solve for the total length of lumber that is needed to produce all $number pieces of lumber.}' +    
-											']}{$$previousCorrect}}' +                                    
-											'{\\grp{\\frac{\\input{[$unitn, $number]}}{\\input{[$unitd, 1]}}}{\\sign{&times;}}{\\frac{\\input{[$number, $unitn]}}{\\input{[1, $unitd]}}}}' +
+											']}{$$previousCorrect}}' +                                    		'{\\grp{\\frac{\\input{$firstMultNum}}{\\input{$firstMultDen}}}{\\sign{&times;}}{\\frac{\\input{$secondMultNum}}{\\input{$secondMultDen}}}}' +
 										'}'+
 									'{well}}',
                         controls: {
@@ -1707,7 +1705,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 												'\\rowgrp{\\ins{Now solve the problem.}},' +
 												'\\ins{This is a *repeated addition* or multiplication problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}' +
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\frac{\\fracstr{$unitn}}{\\fracstr{$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}{\\sign{=}}{\\input{$total}}{\\html{feet of lumber}}}' +
+											'{\\grp{\\frac{\\fracstr{$$unitn}}{\\fracstr{$$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$$number}}{\\fracstr{$$unitDenom}}}{\\sign{=}}{\\input{$total}}{\\html{feet of lumber}}}' +
 										'}'+
 									'{well}',
                         controls: {
@@ -1738,10 +1736,10 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             { firstunitn: '800', firstunitd: '2400', secondunitn: '1', secondunitd: '3', number: '$2400', left: '$800', plainDollars: '2400', plainLeft: '800', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_c.jpg', template: 'dollarsFindFractionLeft2' },
 			{ total: 56, unitn: 7, unitd: 10, number: 80, illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56a.jpg', template: 'coffeeDiv1' },
             { total: 56, unitn: 7, unitd: 10, number: 80, illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56b.jpg', template: 'coffeeDiv2' },
-            { total: 56, unitn: 7, unitd: 10, number: 80, illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56c.jpg', template: 'coffeeMul' },
+            { total: 56, unitn: 7, unitd: 10, number: 80, unitDenom: 1, firstMultNum: '[\\"7\\",\\"80\\"]', firstMultDen: '[\\"10\\",\\"1\\"]', secondMultNum: '[\\"80\\",\\"7\\"]', secondMultDen: '[\\"1\\",\\"10\\"]', flip: [[1], ["unitn", "number"], ["unitDenom", "unitd"]], illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56c.jpg', template: 'coffeeMul' },
 			{ total: 12, unitn: 1, unitd: 3, number: 36, illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-01.jpg', template: 'lumberDiv1' },
             { total: 12, unitn: 1, unitd: 3, number: 36, illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-02.jpg', template: 'lumberDiv2' },
-            { total: 12, unitn: 1, unitd: 3, number: 36, illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-03.jpg', template: 'lumberMul' }
+            { total: 12, unitn: 1, unitd: 3, number: 36, unitDenom: 1, firstMultNum: '[\\"1\\",\\"36\\"]', firstMultDen: '[\\"3\\",\\"1\\"]', secondMultNum: '[\\"36\\",\\"1\\"]', secondMultDen: '[\\"1\\",\\"3\\"]', flip: [[1], ["unitn", "number"], ["unitDenom", "unitd"]], illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-03.jpg', template: 'lumberMul' }
 			];
     
     	return dataUtils.build(desc, template, data);
