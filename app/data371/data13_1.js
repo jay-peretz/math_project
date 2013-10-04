@@ -49,15 +49,16 @@ angular.module('mathSkills').service('data13_1', ['dataUtils', function (dataUti
         },
         data = [
             { questionLayout: 'math', firstDecimal: '47.2', secondDecimal: '59.6', answer: '106.8', template: 'twoDecimals' },
+			{ questionLayout: 'math', firstDecimal: '86.21', secondDecimal: '8.83', thirdDecimal: '235.755', answer: '330.795', template: 'threeDecimals' },
 			{ questionLayout: 'english', firstDecimal: '73.98', secondDecimal: '396.43', thirdDecimal: '47.514', answer: '517.924', template: 'threeDecimals' },
 			{ questionLayout: 'english', firstDecimal: '95.2', secondDecimal: '53.3', thirdDecimal: '75.12', answer: '223.62', template: 'threeDecimals' },
-			{ questionLayout: 'math', firstDecimal: '86.21', secondDecimal: '8.83', thirdDecimal: '235.755', answer: '330.795', template: 'threeDecimals' },
-			{ questionLayout: 'english', firstDecimal: '3.471', secondDecimal: '92.43', thirdDecimal: '8.11', answer: '104.011', template: 'threeDecimals' },
-			{ questionLayout: 'math', firstDecimal: '66.6', secondDecimal: '36.94', thirdDecimal: '7.44', answer: '110.98', template: 'threeDecimals' },
-			{ questionLayout: 'math', firstDecimal: '4.2', secondDecimal: '1.883', thirdDecimal: '72.79', answer: '78.873', template: 'threeDecimals' },
-			{ questionLayout: 'english', firstDecimal: '4068.97963', secondDecimal: '343390.77255', thirdDecimal: '537.75789', answer: '347997.51007', template: 'threeDecimals' },
-			{ questionLayout: 'math', firstDecimal: '532.2879', secondDecimal: '51694.671', thirdDecimal: '685.8118', answer: '52912.7707', template: 'threeDecimals' },
-			{ questionLayout: 'english', firstDecimal: '5267.4401', secondDecimal: '583.1444', thirdDecimal: '938.78761', answer: '6789.37211', template: 'threeDecimals' },
+			// problem 5
+			{ questionLayout: 'english', firstDecimal: '3.4', secondDecimal: '0.811', answer: '4.211', template: 'twoDecimals' },
+			{ questionLayout: 'english', firstDecimal: '6.6', secondDecimal: '135', answer: '141.6', template: 'twoDecimals' },
+			{ questionLayout: 'english', firstDecimal: '4.2', secondDecimal: '1.883', thirdDecimal: '72.79', answer: '78.873', template: 'threeDecimals' },
+			{ questionLayout: 'english', firstDecimal: '4068.97', secondDecimal: '125.692', thirdDecimal: '59', answer: '4253.662', template: 'threeDecimals' },
+			{ questionLayout: 'english', firstDecimal: '1.05', secondDecimal: '0.062', thirdDecimal: '0.3593', answer: '1.4713', template: 'threeDecimals' },
+			{ questionLayout: 'english', firstDecimal: '5267.4', secondDecimal: '583', thirdDecimal: '29.1444', answer: '5879.5444', template: 'threeDecimals' },
         ];
 
     return dataUtils.build(desc, template, data);
