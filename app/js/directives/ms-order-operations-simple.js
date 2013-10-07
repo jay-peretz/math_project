@@ -12,18 +12,34 @@ angular.module('mathSkills')
             controller: ['$scope', '$element', function ($scope, $element) {
                 var saved = null,
                     saveStep = function () {
-                        saved = parser.replace($scope.rows[$scope.cur], 'but', 'str');
+                        saved = parser.replace($scope.rows[$scope.cur], 'btn', 'html');
                     },
                     showInput = function () {
                         var newArgs = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
-                            if (parsed.tag === 'but' && parsed.args[1] === 'T') {
-                                tagString = '\\col{\\sign{' + parsed.args[0] + '}}{css{\\html{&#123;}}{brace90}}{' + $scope.answers[$scope.cur] + '}';
+                            if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
+                                tagString = '\\rowgrp{\\sign{' + parsed.args[0] + '}}{css{\\html{&#123;}}{brace90}}{' + $scope.answers[$scope.cur] + '}';
                             }
                             return tagString;
                         });
-                        $scope.rows[$scope.cur] = '\\row{' + newArgs.join('}{') + '}';
-                    };
+                        $scope.rows[$scope.cur] = '\\grp{' + newArgs.join('}{') + '}';
+						$scope.currentExpression = updateExpression($scope.rows, $scope.cur);
+                    },
+					updateExpression = function (scopeRows, scopeCur) {
+						var workingExpression = "\\rowgrp{";
+										
+						for (var ii = 0; ii <= scopeCur; ii += 1) {	
+							if (ii !== 0) {
+								workingExpression += "}{"+scopeRows[ii];
+							} else {
+								workingExpression += scopeRows[ii];
+							}
+						}
+						
+						workingExpression += "}";
+						console.log("workingExpression is: ",workingExpression);
+						return workingExpression;
+					};
                 $scope.cur = 0;
                 $scope.mode = 'row';
                 $scope.instructions = 'Click on the operator that should be evaluated first.';
@@ -33,7 +49,8 @@ angular.module('mathSkills')
                         try {
                             var expecteds = parser.extractTag($scope.expected).args[0].split(',');
                             $scope.rows = expecteds.filter(function (str, i) { return i % 2 === 0; });
-                            $scope.answers = expecteds.filter(function (str, i) { return i % 2 !== 0; });
+                            $scope.answers = expecteds.filter(function (str, i) { return i % 2 !== 0; });							
+							$scope.currentExpression = updateExpression($scope.rows, $scope.cur);
                         } catch (e) {
                             console.error(e, $scope.rows);
                         }
@@ -41,6 +58,7 @@ angular.module('mathSkills')
                 });
 
                 $scope.$on('answer', function (e, data) {
+					var answerExpected = $scope.answers[$scope.cur];
                     switch ($scope.mode) {
                         case 'row':
                             if (data.result === 'correct') {
@@ -52,7 +70,7 @@ angular.module('mathSkills')
                             e.stopPropagation();
                             break;
                         case 'answer':
-                            if (data.result === 'correct' && data.expected === $scope.answers[$scope.cur]) {
+                            if (data.result === 'correct' && data.expected.indexOf(answerExpected) !== -1) {
                                 if ($scope.rows.length === $scope.cur + 2) {
                                     $scope.instructions = 'Great Job!  You have fully solved the problem.';
                                     $timeout(function () {
@@ -64,6 +82,8 @@ angular.module('mathSkills')
                                     $timeout(function () {
                                         $scope.rows[$scope.cur] = saved;
                                         $scope.cur += 1;
+										$scope.currentExpression = updateExpression($scope.rows, $scope.cur);
+										console.log("$scope.currentExpression is: ",$scope.currentExpression);
                                         $scope.mode = 'row';
                                         $scope.instructions = 'Click on the operator that should be evaluated next.';
                                     }, 0);

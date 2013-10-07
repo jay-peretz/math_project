@@ -1,14 +1,6 @@
 <div class="alert alert-block alert-info">{{instructions}}</div>
-<table>
-    <tr ng-repeat="row in rows">
-        <td class="line" ng-switch on="$index <= cur">
-            <span ng-switch-when=true>
-                <ms-expression
-                    expected={{row}}
-                    ng-class="{ complete: $parent.$index < $parent.cur, active: $parent.$index == $parent.cur }"
-                    ng-show="$parent.$index <= $parent.cur"
-                ></ms-expression>
-            </span>
-        </td>
-    </tr>
-</table>
+<span>
+    <ms-expression
+        expected={{currentExpression}}  
+    ></ms-expression>
+</span>
