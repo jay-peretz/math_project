@@ -46,7 +46,6 @@ angular.module('mathSkills')
 						}
 						
 						workingExpression += "}";
-						console.log("workingExpression is: ",workingExpression);
 						return workingExpression;
 					};
                 $scope.cur = 0;

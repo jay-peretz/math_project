@@ -36,13 +36,14 @@ angular.module('mathSkills')
                         }
                     });
     
-                    $scope.$on('answer', function (e, data) { //console.log("button answer obj", data);  
+                    $scope.$on('answer', function (e, data) { //console.log("button answer obj", data);
+						var buttonMarkedSuccess = $('button').hasClass('btn-success');
                         // If this event was not fired by us.
                         if (data.controllerId !== $scope.controllerId) {
                             // Stop this event from going up the scope chain.
                             e.stopPropagation();
-    
-                            if (data.clicked === true){
+    							
+                            if (data.clicked === true || buttonMarkedSuccess){
                                 data.expected = '\\but{' + $scope.correctAnswer + '}{T}'; 
                                 data.controllerId = $scope.controllerId;
                                 $scope.$emit('answer', data);
