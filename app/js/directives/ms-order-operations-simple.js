@@ -15,14 +15,24 @@ angular.module('mathSkills')
                         saved = parser.replace($scope.rows[$scope.cur], 'btn', 'html');
                     },
                     showInput = function () {
-                        var newArgs = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
+                        var newArgs1 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
-                                tagString = '\\rowgrp{\\html{&nbsp;}}{\\html{&nbsp;}}{\\html{&nbsp;}}{\\html{&nbsp;}}{\\html{&nbsp;}}{\\css{\\sign{' + parsed.args[0] + '}}{bigger}}{\\html{&nbsp;}}{css{\\html{&#125;}}{brace90}}{' + $scope.answers[$scope.cur] + '}';
+                                tagString = '\\grp{\\html{}}{\\css{\\sign{' + parsed.args[0] + '}}{bigger}}';
                             }
                             return tagString;
                         });
-                        $scope.rows[$scope.cur] = '\\grp{' + newArgs.join('}{') + '}';
+						var newArgs2 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
+                            var parsed = parser.extractTag(tagString);
+                            if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
+                                tagString = '\\rowgrp{css{\\html{&#125;}}{brace90}}{' + $scope.answers[$scope.cur] + '}';
+                            } else {
+								tagString = '\\css{' + tagString + '}{noShow}';
+							}
+                            return tagString;
+                        });
+                        $scope.rows[$scope.cur] = '\\grp{' + newArgs1.join('}{') + '}';
+						$scope.inputExpression = '\\grp{' + newArgs2.join('}{') + '}';
 						$scope.currentExpression = updateExpression($scope.rows, $scope.cur);
                     },
 					updateExpression = function (scopeRows, scopeCur) {
@@ -71,6 +81,7 @@ angular.module('mathSkills')
                             break;
                         case 'answer':
                             if (data.result === 'correct' && data.expected.indexOf(answerExpected) !== -1) {
+								$scope.inputExpression = "";
                                 if ($scope.rows.length === $scope.cur + 2) {
                                     $scope.instructions = 'Great Job!  You have fully solved the problem.';
                                     $timeout(function () {
@@ -108,6 +119,11 @@ angular.module('mathSkills')
                             '<span>'+
 							'<ms-expression expected={{currentExpression}}>'+
 								'expected={{currentExpression}}'+
+							'</ms-expression>'+
+							'</span>'+
+							'<span>'+
+							'<ms-expression expected={{inputExpression}}>'+
+								'expected={{inputExpression}}'+
 							'</ms-expression>'+
 							'</span>'
         };
