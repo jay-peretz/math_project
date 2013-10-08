@@ -12,7 +12,16 @@ angular.module('mathSkills')
             controller: ['$scope', '$element', function ($scope, $element) {
                 var saved = null,
                     saveStep = function () {
-                        saved = parser.replace($scope.rows[$scope.cur], 'btn', 'html');
+                        //saved = parser.replace($scope.rows[$scope.cur], 'btn', 'html');
+						var newArgsSaved = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
+                            var parsed = parser.extractTag(tagString);
+                            if (parsed.tag === 'btn') {
+                                tagString = '\\css{\\sign{' + parsed.args[0] + '}}{bigger}';
+                            }
+                            return tagString;
+                        });
+						saved = '\\grp{' + newArgsSaved.join('}{') + '}';
+						console.log("saved is: ",saved);
                     },
                     showInput = function () {
                         var newArgs1 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
@@ -67,6 +76,7 @@ angular.module('mathSkills')
 
                 $scope.$on('answer', function (e, data) {
 					var answerExpected = $scope.answers[$scope.cur];
+					
                     switch ($scope.mode) {
                         case 'row':
                             if (data.result === 'correct') {
@@ -92,7 +102,6 @@ angular.module('mathSkills')
                                         $scope.rows[$scope.cur] = saved;
                                         $scope.cur += 1;
 										$scope.currentExpression = updateExpression($scope.rows, $scope.cur);
-										console.log("$scope.currentExpression is: ",$scope.currentExpression);
                                         $scope.mode = 'row';
                                         $scope.instructions = 'Click on the operator that should be evaluated next.';
                                     }, 0);

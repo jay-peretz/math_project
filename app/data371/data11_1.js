@@ -40,11 +40,11 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
                 prob: '\\\\grp{\\\\html{3}}{\\\\sign{+}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{2}}}{\\\\sign{&times;}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{4}}}{\\\\sign{-}}{\\\\html{2}}',
                 ans: '\\\\mixed{\\\\input{1}}{\\\\frac{\\\\input{1}}{\\\\input{8}}}',
                 wb: '\\\\ordopssimple{' +
-                        '\\\\btngrp{\\\\html{3}}{\\\\html{&nbsp;}}{\\\\btn{+}{F}{bigger}}{\\\\html{&nbsp;}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{2}}}{\\\\html{&nbsp;}}{\\\\btn{\xB7}{T}{bigger}}{\\\\html{&nbsp;}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{4}}}{\\\\html{&nbsp;}}{\\\\btn{-}{F}{bigger}}{\\\\html{&nbsp;}}{\\\\html{2}},' +
+                        '\\\\btngrp{\\\\html{3}}{\\\\btn{+}{F}{bigger}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{2}}}{\\\\btn{\xB7}{T}{bigger}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{4}}}{\\\\btn{-}{F}{bigger}}{\\\\html{2}},' +
                         '\\\\frac{\\\\input{1}}{\\\\input{8}},' +
-                        '\\\\btngrp{\\\\html{3}}{\\\\html{&nbsp;}}{\\\\btn{+}{T}{bigger}}{\\\\html{&nbsp;}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{8}}}{\\\\html{&nbsp;}}{\\\\btn{-}{F}{bigger}}{\\\\html{&nbsp;}}{\\\\html{2}},' +
+                        '\\\\btngrp{\\\\html{3}}{\\\\btn{+}{T}{bigger}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{8}}}{\\\\btn{-}{F}{bigger}}{\\\\html{2}},' +
                         '\\\\mixed{\\\\input{3}}{\\\\frac{\\\\input{1}}{\\\\input{8}}},' +
-                        '\\\\btngrp{\\\\mixed{\\\\fracstr{3}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{8}}}}{\\\\html{&nbsp;}}{\\\\btn{-}{T}{bigger}}{\\\\html{&nbsp;}}{\\\\html{2}},' +
+                        '\\\\btngrp{\\\\mixed{\\\\fracstr{3}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{8}}}}{\\\\btn{-}{T}{bigger}}{\\\\html{2}},' +
                         '\\\\mixed{\\\\input{1}}{\\\\frac{\\\\input{1}}{\\\\input{8}}},' +
                         '\\\\grp{\\\\mixed{\\\\fracstr{1}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{8}}}' +
                     '}',
