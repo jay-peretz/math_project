@@ -78,7 +78,7 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
 				prob : '\\\\grp{\\\\sign{(}}{\\\\frac{\\\\fracstr{9}}{\\\\fracstr{5}}}{\\\\sign{-}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{4}}}{\\\\sign{)}}{\\\\sign{\xF7}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{6}}}',
 				ans: '\\\\mixed{\\\\input{1}}{\\\\frac{\\\\input{43}}{\\\\input{50}}}' ,
 				wb : '\\\\ordopssimple{' +
-						'\\\\btngrp{\\\\sign{(}}{\\\\frac{\\\\fracstr{9}}{\\\\fracstr{5}}}{\\\\btn{-}{T}{bigger}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{4}}}{\\\\sign{)}}{\\\\btn{\xF7}{F}{bigger}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{6}}},' +
+						'\\\\btngrp{\\\\css{\\\\html{(}}{bigger}}{\\\\frac{\\\\fracstr{9}}{\\\\fracstr{5}}}{\\\\btn{-}{T}{bigger}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{4}}}{\\\\css{\\\\html{)}}{bigger}}{\\\\btn{\xF7}{F}{bigger}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{6}}},' +
 						'\\\\frac{\\\\input{31}}{\\\\input{20}},' +
 						'\\\\btngrp{\\\\frac{\\\\fracstr{31}}{\\\\fracstr{20}}}{\\\\btn{\xF7}{T}{bigger}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{6}}},' +
 						'\\\\mixed{\\\\input{1}}{\\\\frac{\\\\input{43}}{\\\\input{50}}},' +
