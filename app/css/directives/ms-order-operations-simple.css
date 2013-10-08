@@ -1,3 +1,6 @@
-ms-order-operations-simple table {
+.ms-order-ops-simple table {
 	text-align:center;
+}
+.ms-order-ops-simple div.noShow {
+	visibility:hidden;
 }

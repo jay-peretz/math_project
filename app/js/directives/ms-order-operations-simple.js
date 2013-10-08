@@ -31,8 +31,7 @@ angular.module('mathSkills')
 							}
                             return tagString;
                         });
-                        $scope.rows[$scope.cur] = '\\grp{' + newArgs1.join('}{') + '}';
-						$scope.inputExpression = '\\grp{' + newArgs2.join('}{') + '}';
+                        $scope.rows[$scope.cur] = '\\rowgrp{\\grp{' + newArgs1.join('}{') + '}}{\\grp{' + newArgs2.join('}{') + '}}';
 						$scope.currentExpression = updateExpression($scope.rows, $scope.cur);
                     },
 					updateExpression = function (scopeRows, scopeCur) {
@@ -116,14 +115,9 @@ angular.module('mathSkills')
 			template:   '<div class="alert alert-block alert-info">'+
                                 '{{instructions}}'+
                             '</div>'+
-                            '<span>'+
+                            '<span class=ms-order-ops-simple>'+
 							'<ms-expression expected={{currentExpression}}>'+
 								'expected={{currentExpression}}'+
-							'</ms-expression>'+
-							'</span>'+
-							'<span>'+
-							'<ms-expression expected={{inputExpression}}>'+
-								'expected={{inputExpression}}'+
 							'</ms-expression>'+
 							'</span>'
         };
