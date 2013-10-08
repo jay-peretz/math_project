@@ -42,9 +42,9 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
                 wb: '\\\\ordopssimple{' +
                         '\\\\grp{\\\\html{3}}{\\\\html{&nbsp;}}{\\\\btn{+}{F}{bigger}}{\\\\html{&nbsp;}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{2}}}{\\\\html{&nbsp;}}{\\\\btn{\xB7}{T}{bigger}}{\\\\html{&nbsp;}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{4}}}{\\\\html{&nbsp;}}{\\\\btn{-}{F}{bigger}}{\\\\html{&nbsp;}}{\\\\html{2}},' +
                         '\\\\frac{\\\\input{1}}{\\\\input{8}},' +
-                        '\\\\grp{\\\\html{3}}{\\\\html{&nbsp;}}{\\\\btn{+}{T}}{\\\\html{&nbsp;}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{8}}}{\\\\html{&nbsp;}}{\\\\btn{-}{F}}{\\\\html{&nbsp;}}{\\\\html{2}},' +
+                        '\\\\grp{\\\\html{3}}{\\\\html{&nbsp;}}{\\\\btn{+}{T}{bigger}}{\\\\html{&nbsp;}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{8}}}{\\\\html{&nbsp;}}{\\\\btn{-}{F}{bigger}}{\\\\html{&nbsp;}}{\\\\html{2}},' +
                         '\\\\mixed{\\\\input{3}}{\\\\frac{\\\\input{1}}{\\\\input{8}}},' +
-                        '\\\\grp{\\\\mixed{\\\\fracstr{3}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{8}}}}{\\\\html{&nbsp;}}{\\\\btn{-}{T}}{\\\\html{&nbsp;}}{\\\\html{2}},' +
+                        '\\\\grp{\\\\mixed{\\\\fracstr{3}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{8}}}}{\\\\html{&nbsp;}}{\\\\btn{-}{T}{bigger}}{\\\\html{&nbsp;}}{\\\\html{2}},' +
                         '\\\\mixed{\\\\input{1}}{\\\\frac{\\\\input{1}}{\\\\input{8}}},' +
                         '\\\\grp{\\\\mixed{\\\\fracstr{1}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{8}}}' +
                     '}',
@@ -54,9 +54,9 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
                 prob: '\\\\grp{\\\\frac{\\\\fracstr{3}}{\\\\fracstr{8}}}{\\\\sign{+}}{\\\\frac{\\\\fracstr{6}}{\\\\fracstr{8}}}{\\\\sign{-}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{8}}}',
                 ans: '\\\\frac{\\\\input{1}}{\\\\input{2}}',
                 wb: '\\\\ordopssimple{' +
-                        '\\\\grp{\\\\frac{\\\\fracstr{3}}{\\\\fracstr{8}}}{\\\\btn{+}{T}}{\\\\frac{\\\\fracstr{6}}{\\\\fracstr{8}}}{\\\\btn{-}{F}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{8}}},' +
+                        '\\\\grp{\\\\frac{\\\\fracstr{3}}{\\\\fracstr{8}}}{\\\\btn{+}{T}{bigger}}{\\\\frac{\\\\fracstr{6}}{\\\\fracstr{8}}}{\\\\btn{-}{F}{bigger}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{8}}},' +
                         '\\\\frac{\\\\input{9}}{\\\\input{8}},' +
-                        '\\\\grp{\\\\frac{\\\\fracstr{9}}{\\\\fracstr{8}}}{\\\\btn{-}{T}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{8}}},' +
+                        '\\\\grp{\\\\frac{\\\\fracstr{9}}{\\\\fracstr{8}}}{\\\\btn{-}{T}{bigger}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{8}}},' +
                         '\\\\frac{\\\\input{1}}{\\\\input{2}},' +
 						'\\\\grp{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{2}}}' +
                     '}',
@@ -66,9 +66,9 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
 				prob: '\\\\grp{\\\\frac{\\\\fracstr{8}}{\\\\fracstr{6}}}{\\\\sign{-}}{\\\\frac{\\\\fracstr{3}}{\\\\fracstr{3}}}{\\\\sign{&divide;}}{\\\\frac{\\\\fracstr{6}}{\\\\fracstr{5}}}',
 				ans: '\\\\frac{\\\\input{1}}{\\\\input{2}}',
 				wb: '\\\\ordopssimple{' +
-						'\\\\grp{\\\\frac{\\\\fracstr{8}}{\\\\fracstr{6}}}{\\\\btn{-}{F}}{\\\\frac{\\\\fracstr{3}}{\\\\fracstr{3}}}{\\\\btn{÷}{T}}{\\\\frac{\\\\fracstr{6}}{\\\\fracstr{5}}},' +
+						'\\\\grp{\\\\frac{\\\\fracstr{8}}{\\\\fracstr{6}}}{\\\\btn{-}{F}{bigger}}{\\\\frac{\\\\fracstr{3}}{\\\\fracstr{3}}}{\\\\btn{÷}{T}{bigger}}{\\\\frac{\\\\fracstr{6}}{\\\\fracstr{5}}},' +
 						'\\\\frac{\\\\input{5}}{\\\\input{6}},' +
-						'\\\\grp{\\\\frac{\\\\fracstr{8}}{\\\\fracstr{6}}}{\\\\btn{-}{T}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{6}}},' +
+						'\\\\grp{\\\\frac{\\\\fracstr{8}}{\\\\fracstr{6}}}{\\\\btn{-}{T}{bigger}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{6}}},' +
 						'\\\\frac{\\\\input{1}}{\\\\input{2}},' +
 						'\\\\grp{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{2}}}' +
 						'}',
@@ -78,9 +78,9 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
 				prob : '\\\\grp{\\\\sign{(}}{\\\\frac{\\\\fracstr{9}}{\\\\fracstr{5}}}{\\\\sign{-}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{4}}}{\\\\sign{)}}{\\\\sign{\xF7}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{6}}}',
 				ans: '\\\\mixed{\\\\input{1}}{\\\\frac{\\\\input{43}}{\\\\input{50}}}' ,
 				wb : '\\\\ordopssimple{' +
-						'\\\\grp{\\\\sign{(}}{\\\\frac{\\\\fracstr{9}}{\\\\fracstr{5}}}{\\\\btn{-}{T}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{4}}}{\\\\sign{)}}{\\\\btn{\xF7}{F}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{6}}},' +
+						'\\\\grp{\\\\sign{(}}{\\\\frac{\\\\fracstr{9}}{\\\\fracstr{5}}}{\\\\btn{-}{T}{bigger}}{\\\\frac{\\\\fracstr{1}}{\\\\fracstr{4}}}{\\\\sign{)}}{\\\\btn{\xF7}{F}{bigger}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{6}}},' +
 						'\\\\frac{\\\\input{31}}{\\\\input{20}},' +
-						'\\\\grp{\\\\frac{\\\\fracstr{31}}{\\\\fracstr{20}}}{\\\\btn{\xF7}{T}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{6}}},' +
+						'\\\\grp{\\\\frac{\\\\fracstr{31}}{\\\\fracstr{20}}}{\\\\btn{\xF7}{T}{bigger}}{\\\\frac{\\\\fracstr{5}}{\\\\fracstr{6}}},' +
 						'\\\\mixed{\\\\input{1}}{\\\\frac{\\\\input{43}}{\\\\input{50}}},' +
 						'\\\\grp{\\\\mixed{\\\\fracstr{1}}{\\\\frac{\\\\fracstr{43}}{\\\\fracstr{50}}}}' +
 						'}',

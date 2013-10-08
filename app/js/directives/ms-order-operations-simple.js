@@ -18,7 +18,7 @@ angular.module('mathSkills')
                         var newArgs = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
-                                tagString = '\\rowgrp{\\sign{' + parsed.args[0] + '}}{css{\\html{&#123;}}{brace90}}{' + $scope.answers[$scope.cur] + '}';
+                                tagString = '\\rowgrp{\\html{&nbsp;}}{\\html{&nbsp;}}{\\html{&nbsp;}}{\\html{&nbsp;}}{\\html{&nbsp;}}{\\css{\\sign{' + parsed.args[0] + '}}{bigger}}{\\html{&nbsp;}}{css{\\html{&#125;}}{brace90}}{' + $scope.answers[$scope.cur] + '}';
                             }
                             return tagString;
                         });
@@ -102,6 +102,13 @@ angular.module('mathSkills')
                 expected: '@',
                 label: '@'
             },
-            templateUrl: 'partials/directives/ms-order-operations-simple.html'
+			template:   '<div class="alert alert-block alert-info">'+
+                                '{{instructions}}'+
+                            '</div>'+
+                            '<span>'+
+							'<ms-expression expected={{currentExpression}}>'+
+								'expected={{currentExpression}}'+
+							'</ms-expression>'+
+							'</span>'
         };
     }]);
