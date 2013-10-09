@@ -84,6 +84,23 @@ angular.module('mathSkills')
 					return (newArray.reverse());
 				}
 				
+				function isBlank(str) {
+    				return (!str || /^\s*$/.test(str));
+				}
+				
+				function shiftRight (arrayRow) {
+					var newArrayRow = [];					
+					newArrayRow = arrayRow.slice();					
+					for (var ii = arrayRow.length - 1; ii >= 0; ii -= 1) {
+						if (isBlank(newArrayRow[arrayRow.length - 1])) {
+							newArrayRow.pop();
+							newArrayRow.unshift(" ");
+						} else {
+							return newArrayRow;
+						}
+					}					
+				}
+				
 			 // Extract the tag values
 				$scope.$watch('expected', function () { 
 					if ($scope.expected) {
@@ -242,8 +259,8 @@ angular.module('mathSkills')
 						$scope.secondArray = [];
 						$scope.thirdArray = [];
 						$scope.fourthArray = [];
-						$scope.firstArray = numberDisplayArray[0].slice();
-						$scope.secondArray = numberDisplayArray[1].slice();
+						$scope.firstArray = shiftRight(numberDisplayArray[0]).slice();
+						$scope.secondArray = shiftRight(numberDisplayArray[1]).slice();
 						if ($scope.displayresult) {
 							$scope.thirdArray = arrayRemoveEmptyRows(productArray).slice();
 							// if productArray.length = 1, the multiplier is single digit, so just display answerArray (not productArray) 
