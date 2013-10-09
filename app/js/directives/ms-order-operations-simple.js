@@ -48,13 +48,13 @@ angular.module('mathSkills')
 										
 						for (var ii = 0; ii <= scopeCur; ii += 1) {	
 							if (ii !== 0) {
-								workingExpression += "}{"+scopeRows[ii];
+								workingExpression += "}}{\\grp{\\html{&nbsp;}}{"+scopeRows[ii];
 							} else {
-								workingExpression += scopeRows[ii];
+								workingExpression += "\\grp{\\html{&nbsp;}}{"+scopeRows[ii];
 							}
 						}
 						
-						workingExpression += "}";
+						workingExpression += "}}";
 						return workingExpression;
 					};
                 $scope.cur = 0;
