@@ -14,7 +14,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     title: 'Main Answer',
                     children: [{
                         problem: '\\image{$illustration}',
-                        answer: '\\col{\\ins{There are $total acres of land to be developed. If each house is to occupy <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre, how many houses will the developer be able to build?}}{\\input{$number}}',
+                        answer: '\\rowgrp{\\ins{There are $total acres of land to be developed. If each house is to occupy <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre, how many houses will the developer be able to build?}}{\\grp{\\input{$number}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -171,7 +171,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 								'}{well}}',
                         controls: {
                             "checkAnswer": true,
-                            "help": '\\row{\\frac{\\str{$total}}{\\str{1}}}{\\sign{&div;}}{\\frac{\\str{$number}}{\\str{1}}}{\\sign{=}}{\\frac{\\str{$unitn}}{\\str{$unitd}}}'
+                            "help": true
                         }
                     }]
                 }]
@@ -200,7 +200,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 										+'{\\rowgrp'
 											+'{\\html{Each house will occupy <sup>$unitn</sup>&#8260;<sub>$unitd</sub> of an acre.  If $number houses are to be built, how many acres of land are needed?}}'
 											+'{\\html{&nbsp;}}'
-											+'{\\ins{You are searching for the total number of acres that are needed.  How many acres are needed to build one house?}}'
+											+'{\\ins{You are searching for the total number of acres that are needed.  How many acres are needed to build just one house?}}'
 											+'{\\grp{\\frac{\\input{$unitn}}{\\input{$unitd}}}{\\html{acres}}}'+
 										'}'
 									+'{well}}',
@@ -1217,7 +1217,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     children: [{
                         problem: '\\image{$illustration}',
                         answer: '\\rowgrp'+
-									'{\\ins{$number bags of coffee are to be produced from $total pounds in a barrel.  What will be the weight of each bag of coffee (know that each bag will be the same weight)?}}'+
+									'{\\ins{$number bags of coffee are to be produced from $total pounds in a barrel.  How much will each bag of coffee weigh (know that each bag will be the same weight)?}}'+
 									'{\\frac{\\input{$unitn}}{\\input{$unitd}}}',
                         controls: {
                             "checkAnswer": true,
@@ -1248,11 +1248,11 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                             '\\wb' +
 								'{\\css'+
 									'{\\rowgrp' +
-										'{\\html{$number bags of coffee are to be produced from $total pounds in a barrel.  What will be the weight of each bag of coffee (know that each bag will be the same weight)?}}'+
+										'{\\html{$number bags of coffee are to be produced from $total pounds in a barrel.  How much will each bag of coffee weigh (know that each bag will be the same weight)?}}'+
 										'{\\html{&nbsp;}}'+
 										'{\\choose{[' +
-											'\\ins{Yes, there are $total pounds of coffee in the barrel. How many bags are to be produced?},' +
-											'\\ins{No, we are told there are $total pounds of coffee in the barrel. How many bags are to be produced?}' +    
+											'\\ins{Yes, there is a total of $total pounds of coffee in the barrel. How many bags are to be produced?},' +
+											'\\ins{No, we are told there is a total of $total pounds of coffee in the barrel. How many bags are to be produced?}' +    
 										']}{$$previousCorrect}}' +
 										'{\\grp{\\input{$number}}{\\html{bags}}}' +
 								'}{well}}',
@@ -1266,7 +1266,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                             '\\wb' +
 								'{\\css'+
 									'{\\rowgrp' +
-										'{\\html{$number bags of coffee are to be produced from $total pounds in a barrel.  What will be the weight of each bag of coffee (know that each bag will be the same weight)?}}'+
+										'{\\html{$number bags of coffee are to be produced from $total pounds in a barrel.  How much will each bag of coffee weigh (know that each bag will be the same weight)?}}'+
 										'{\\html{&nbsp;}}'+
 										'{\\choose{[' +
 											'\\ins{Yes, $number bags of coffee will be produced. To find out the weight of each bag of coffee, what operation must we use?},' +
@@ -1284,7 +1284,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                             '\\wb' +
 								'{\\css'+
 									'{\\rowgrp' +
-										'{\\html{$number bags of coffee are to be produced from $total pounds in a barrel.  What will be the weight of each bag of coffee (know that each bag will be the same weight)?}}'+
+										'{\\html{$number bags of coffee are to be produced from $total pounds in a barrel.  What will be the weight of each bag of coffee (given that each bag will be the same weight)?}}'+
 										'{\\html{&nbsp;}}'+
 										'{\\choose{[' +
 											'\\ins{Yes, now write a setup that will solve this problem.},' +
@@ -1302,7 +1302,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                             '\\wb' +
 								'{\\css'+
 									'{\\rowgrp' +
-										'{\\html{$number bags of coffee are to be produced from $total pounds in a barrel.  What will be the weight of each bag of coffee (know that each bag will be the same weight)?}}'+
+										'{\\html{$number bags of coffee are to be produced from $total pounds in a barrel.  How much will each bag of coffee weigh (given that each bag will be the same weight)?}}'+
 										'{\\html{&nbsp;}}'+
 										'{\\choose{[' +
 											'\\ins{Great! The total of $total pounds of coffee is being divided up into $number parts. Now give the solution.},' +
@@ -1526,9 +1526,9 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                             '\\wb'+
 								'{\\css' +
 									'{\\rowgrp' +
-										'{\\html{$number pieces of lumber are to be produced from $total feet in a beam.  What is the total length of the lumber?}}'+
+										'{\\html{$number pieces of lumber are to be produced from $total feet in a beam.  What will be the length of each piece?}}'+
 										'{\\html{&nbsp;}}'+
-										'{\\ins{You have been <span class=underline>given the total</span> length of the lumber from which the  pieces of lumber will be produced.  What is the total length of the lumber?}}' +
+										'{\\ins{You have been <span class=underline>given the total</span> length of the lumber from which the  pieces of lumber will be produced.  What will be the length of each piece?}}' +
 										'{\\grp{\\input{$total}}{\\html{feet}}}' +
 								'}{well}}',
                         controls: {
@@ -1742,6 +1742,6 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             { total: 12, unitn: 1, unitd: 3, number: 36, unitDenom: 1, firstMultNum: '[\\"1\\",\\"36\\"]', firstMultDen: '[\\"3\\",\\"1\\"]', secondMultNum: '[\\"36\\",\\"1\\"]', secondMultDen: '[\\"1\\",\\"3\\"]', flip: [[1], ["unitn", "number"], ["unitDenom", "unitd"]], illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-03.jpg', template: 'lumberMul' }
 			];
     
-    	//return dataUtils.build(desc, template, data);
-    	return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
+    	return dataUtils.build(desc, template, data);
+    	//return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
 }]);
