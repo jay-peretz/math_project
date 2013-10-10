@@ -21,9 +21,9 @@ angular.module('mathSkills')
                             return tagString;
                         });
 						saved = '\\grp{' + newArgsSaved.join('}{') + '}';
-						console.log("saved is: ",saved);
                     },
                     showInput = function () {
+						var tagCounter = 0;
                         var newArgs1 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
@@ -33,6 +33,11 @@ angular.module('mathSkills')
                         });
 						var newArgs2 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
+							tagCounter += 1;
+							// improve centering of brace when input is mixed number by removing 1st tag
+							if (parser.extractTag($scope.answers[$scope.cur]).tag === "mixed" && tagCounter === 1) {
+								tagString = '\\html{}';
+							}
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
                                 tagString = '\\rowgrp{css{\\html{&#125;}}{brace90}}{' + $scope.answers[$scope.cur] + '}';
                             } else {
@@ -49,7 +54,7 @@ angular.module('mathSkills')
 						for (var ii = 0; ii <= scopeCur; ii += 1) {	
 							if (ii !== 0) {
 								workingExpression += "}}{\\grp{\\html{&nbsp;}}{"+scopeRows[ii];
-							} else {
+							} else {						
 								workingExpression += "\\grp{\\html{&nbsp;}}{"+scopeRows[ii];
 							}
 						}
