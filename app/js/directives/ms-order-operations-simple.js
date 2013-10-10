@@ -23,21 +23,21 @@ angular.module('mathSkills')
 						saved = '\\grp{' + newArgsSaved.join('}{') + '}';
                     },
                     showInput = function () {
-						var tagCounter = 0;
                         var newArgs1 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
-                                tagString = '\\grp{\\html{}}{\\css{\\sign{' + parsed.args[0] + '}}{bigger}}';
+								// improve centering of brace when input is mixed number
+								if (parser.extractTag($scope.answers[$scope.cur]).tag !== "mixed") {
+									tagString = '\\grp{\\html{}}{\\css{\\sign{' + parsed.args[0] + '}}{bigger}}';
+								} else {
+                                	tagString = '\\grp{\\html{&nbsp;}}{\\html{&nbsp;}}{\\css{\\sign{' + parsed.args[0] + '}}{bigger}}{\\html{&nbsp;}}{\\html{&nbsp;}}';
+								}
                             }
                             return tagString;
                         });
 						var newArgs2 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
-							tagCounter += 1;
-							// improve centering of brace when input is mixed number by removing 1st tag
-							if (parser.extractTag($scope.answers[$scope.cur]).tag === "mixed" && tagCounter === 1) {
-								tagString = '\\html{}';
-							}
+							
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
                                 tagString = '\\rowgrp{css{\\html{&#125;}}{brace90}}{' + $scope.answers[$scope.cur] + '}';
                             } else {
