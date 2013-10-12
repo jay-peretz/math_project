@@ -18,6 +18,9 @@ table.td_padding td {
 .padTop {
 	padding-top:4px;
 }
+.padBottom {
+	padding-bottom:4px;
+}
 .tr_height_1-5 {
 	height: 1.5em;
 }
@@ -64,7 +67,7 @@ table.td_padding td {
             </td>
         </tr>
         <tr>
-            <td>
+            <td class=padBottom>
                 <table ng-show="mathdisplay" class="collapseTable td_padding large-font-size"  style="float:right;">
                    <tr ng-repeat='row in thirdArray' ng-class="rowNumber($index)" class='tr_height_1-5'>
                         <td class='text_align_center' ng-repeat='col in row'>
