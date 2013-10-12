@@ -88,6 +88,7 @@ angular.module('mathSkills')
     				return (!str || /^\s*$/.test(str));
 				}
 				
+				// right-align the multiplier and multiplicand
 				function shiftRight (arrayRow) {
 					var newArrayRow = [];					
 					newArrayRow = arrayRow.slice();					
@@ -99,6 +100,16 @@ angular.module('mathSkills')
 							return newArrayRow;
 						}
 					}					
+				}
+				
+				// add padding if not the decimal point- decimal point gets no padding
+				$scope.styleDecimal = function (index, arrayNumber) {
+					var arrayValue = eval("$scope." + arrayNumber + "Array["+index+"]");
+					if (arrayValue === ".") {
+						return "noPadding";
+					} else {
+						return "addPadding";
+					}
 				}
 				
 			 // Extract the tag values
@@ -280,7 +291,7 @@ angular.module('mathSkills')
 					
 				});
 			},
-			templateUrl: 'partials/directives/ms-multiplication.html'
+			templateUrl: 'partials/directives/ms-multiplication-decimals.html'
 
 		};
 	}]);

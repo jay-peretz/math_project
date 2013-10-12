@@ -1,0 +1,89 @@
+<style>
+table.td_padding td {
+	padding:0px;
+}
+.noPadding {
+	padding:0px;
+}
+.addPadding {
+	padding-left:4px;
+	padding-right:4px;
+}
+.noShow {
+	visibility:hidden;
+}
+.inline-block {
+	display: inline-block;
+}
+.padTop {
+	padding-top:4px;
+}
+.tr_height_1-5 {
+	height: 1.5em;
+}
+
+</style>
+<table>
+	<tr style="height:1.5em;">
+    	<td>
+			<span ng-hide="mathdisplay">{{inenglishfirst}}</span>
+        </td>
+        <td style="vertical-align: center;">
+            <span ng-hide="mathdisplay" class="multiply-dot"> &sdot; </span>
+        </td>
+        <td>
+            <span ng-hide="mathdisplay">{{inenglishsecond}}</span>
+        </td>
+    </tr>
+</table>
+<span>
+	<table>
+    	<tr>
+        	<td>
+                <table ng-show="mathdisplay" class="collapseTable td_padding large-font-size"  style="float:right;">
+                    <tr class="tr_height_1-5">
+                        <td class='text_align_center inline-block' ng-repeat='col in firstArray'>
+                        	<span ng-class="styleDecimal($index, 'first')">{{col}}</span>
+                        </td>
+                   </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table ng-show="mathdisplay" class="collapseTable td_padding large-font-size"  style="float:right;">
+                    <tr>
+                        <td class="border-bottom-2px-black text_align_center inline-block">
+                            <span>{{sign}}</span>
+                        </td>
+                        <td class="border-bottom-2px-black text_align_center inline-block" ng-repeat='col in secondArray'>
+                        	<span ng-class="styleDecimal($index, 'second')">{{col}}</span>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table ng-show="mathdisplay" class="collapseTable td_padding large-font-size"  style="float:right;">
+                   <tr ng-repeat='row in thirdArray' ng-class="rowNumber($index)" class='tr_height_1-5'>
+                        <td class='text_align_center' ng-repeat='col in row'>
+                        	<span class=addPadding>{{col}}</span>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table ng-show="mathdisplay" class="collapseTable td_padding large-font-size"  style="float:right;">
+                    <tr>
+                        <td class='text_align_center tr_height_1-5 inline-block'  ng-repeat='col in fourthArray'>
+                        	<span class="border-top-2px-black padTop" ng-class="styleDecimal($index, 'fourth')">{{col}}</span>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>       
+</span>
