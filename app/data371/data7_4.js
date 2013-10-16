@@ -1342,7 +1342,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											+'{\\html{Each bag of coffee will weigh <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds.  If $number bags of coffee are to be produced, how many total pounds of coffee will be used?}}'
 											+'{\\html{&nbsp;}}'
 											+'{\\ins{You are searching for the total number of pounds of coffee that are needed.  How many pounds of coffee are needed to produce one bag of coffee?}}'
-											+'{\\grp{\\frac{\\input{$unitn}}{\\input{$unitd}}}{\\html{pounds of coffee}}}'+
+											+'{\\grp{\\frac{\\input{$unitn}}{\\input{$unitd}}}}'+
 										'}'
 									+'{well}}',
                         controls: {
@@ -1360,7 +1360,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 												'\\ins{Yes, it takes <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds to build one bag of coffee. How many bags of coffee are being produced?},' +
 												'\\ins{No, we are told it takes <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds to build one bag of coffee. How many bags of coffee are being produced?}' +    
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\input{$number}}{\\html{bags of coffee}}}' +
+											'{\\grp{\\input{$number}}}' +
 										'}'+
 									'{well}}',
                         controls: {
@@ -1412,7 +1412,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 												'\\rowgrp{\\ins{Now solve the problem.}},' +
 												'\\ins{This is a *repeated addition* or multiplication problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> pounds needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}' +
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\frac{\\fracstr{$$unitn}}{\\fracstr{$$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$$number}}{\\fracstr{$$unitDenom}}}{\\sign{=}}{\\input{$total}}{\\html{pounds of coffee}}}' +
+											'{\\grp{\\frac{\\fracstr{$$unitn}}{\\fracstr{$$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$$number}}{\\fracstr{$$unitDenom}}}{\\sign{=}}{\\input{$total}}}' +
 										'}'+
 									'{well}',
                         controls: {
