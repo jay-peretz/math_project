@@ -1528,8 +1528,8 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 									'{\\rowgrp' +
 										'{\\html{$number pieces of lumber are to be produced from $total feet in a beam.  What will be the length of each piece?}}'+
 										'{\\html{&nbsp;}}'+
-										'{\\ins{You have been <span class=underline>given the total</span> length of the lumber from which the  pieces of lumber will be produced.  What will be the length of each piece?}}' +
-										'{\\grp{\\input{$total}}{\\html{feet}}}' +
+										'{\\ins{You have been <span class=underline>given the total</span> length of the lumber from which the  pieces of lumber will be produced.  What is the total length?}}' +
+										'{\\grp{\\input{$total}}}' +
 								'}{well}}',
                         controls: {
                             "checkAnswer": true,
@@ -1547,7 +1547,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											'\\ins{Yes, there are $total feet of lumber in the beam. How many pieces are to be produced?},' +
 											'\\ins{No, we are told there are $total feet of lumber in the beam. How many pieces are to be produced?}' +    
 										']}{$$previousCorrect}}' +
-										'{\\grp{\\input{$number}}{\\html{pieces}}}' +
+										'{\\grp{\\input{$number}}}' +
 								'}{well}}',
                         controls: {
                             "checkAnswer": true,
@@ -1635,7 +1635,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											+'{\\html{Each piece will be <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot.  If $number pieces of lumber are to be produced, how many total feet of lumber will be used?}}'
 											+'{\\html{&nbsp;}}'
 											+'{\\ins{You are searching for the total number of feet of lumber that are needed.  How many feet of lumber are needed to produce one piece?}}'
-											+'{\\grp{\\frac{\\input{$unitn}}{\\input{$unitd}}}{\\html{foot of lumber}}}'+
+											+'{\\grp{\\frac{\\input{$unitn}}{\\input{$unitd}}}}'+
 										'}'
 									+'{well}}',
                         controls: {
@@ -1653,7 +1653,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 												'\\ins{Yes, it takes <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot to build one piece. How many pieces of lumber are being produced?},' +
 												'\\ins{No, we are told it takes <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot to build one piece. How many pieces of lumber are being produced?}' +    
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\input{$number}}{\\html{pieces of lumber}}}' +
+											'{\\grp{\\input{$number}}}' +
 										'}'+
 									'{well}}',
                         controls: {
@@ -1705,7 +1705,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 												'\\rowgrp{\\ins{Now solve the problem.}},' +
 												'\\ins{This is a *repeated addition* or multiplication problem.  The <sup>$unitn</sup>&#8260;<sub>$unitd</sub> foot needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}' +
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\frac{\\fracstr{$$unitn}}{\\fracstr{$$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$$number}}{\\fracstr{$$unitDenom}}}{\\sign{=}}{\\input{$total}}{\\html{feet of lumber}}}' +
+											'{\\grp{\\frac{\\fracstr{$$unitn}}{\\fracstr{$$unitd}}}{\\sign{&times;}}{\\frac{\\fracstr{$$number}}{\\fracstr{$$unitDenom}}}{\\sign{=}}{\\input{$total}}}' +
 										'}'+
 									'{well}',
                         controls: {
