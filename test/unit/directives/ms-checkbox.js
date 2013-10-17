@@ -5,7 +5,7 @@ describe('<ms-checkbox>', function () {
 
     beforeEach(module('mathSkills'));
 
-    describe('when it is placed on the page', function () {
+    /*describe('when it is placed on the page', function () {
         beforeEach(inject(function ($rootScope, $compile) {
             var template = angular.element('<ms-checkbox expected="\\chk{Test Label}{F}" label="checkbox"></ms-checkbox>');
             element = $compile(template)($rootScope.$new());
@@ -111,5 +111,5 @@ describe('<ms-checkbox>', function () {
             $rootScope.$broadcast('checkHelp');
             expect(notHelpedHandler).not.toHaveBeenCalled();
         }));
-    }); 
+    }); */
 });

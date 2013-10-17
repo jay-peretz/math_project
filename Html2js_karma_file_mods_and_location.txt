@@ -1,0 +1,47 @@
+*** For Windows Vista, the Html2js.js file is located here:
+
+
+C:\Users\owner\AppData\Roaming\npm\node_modules\karma\lib\preprocessors
+
+
+*** The file required modification to work with the math_project, as follows:
+
+
+done(util.format(template, htmlPath.replace('app/', ""), htmlPath.replace('app/', ""), escapeContent(content)));
+  // original below; modification above 29Apr13 by math team for c9 development
+  //done(util.format(template, htmlPath, htmlPath, escapeContent(content)));
+
+
+*** The contents of the file at this writing including the modifications are as follows:
+
+
+var util = require('util');
+
+var log = require('../logger').create('preprocess.html2js');
+
+
+var template = 'angular.module(\'%s\', []).run(function($templateCache) {\n' +
+    '  $templateCache.put(\'%s\',\n    \'%s\');\n' +
+    '});\n';
+
+var escapeContent = function(content) {
+  return content.replace(/'/g, '\\\'').replace(/\r?\n/g, '\\n\' +\n    \'');
+};
+
+var Html2js = function(content, file, basePath, done) {
+  log.debug('Processing "%s".', file.originalPath);
+
+  var htmlPath = file.originalPath.replace(basePath + '/', '');
+
+  file.path = file.path + '.js';
+  done(util.format(template, htmlPath.replace('app/', ""), htmlPath.replace('app/', ""), escapeContent(content)));
+  // original below; modification above 29Apr13 by math team for c9 development
+  //done(util.format(template, htmlPath, htmlPath, escapeContent(content)));
+};
+
+// PUBLISH
+module.exports = Html2js;
+
+
+
+
