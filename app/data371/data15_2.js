@@ -1,9 +1,9 @@
 /*global angular */
 
-angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUtils) {
+angular.module('mathSkills').service('data15_1', ['dataUtils', function (dataUtils) {
     var desc = {
-			title: '15.2 Dividing Decimals',
-			path: '15.2-dividing-decimals',
+			title: '15.1 Dividing Decimals',
+			path: '15.1-dividing-decimals',
             children: []
         },
 	    template = {

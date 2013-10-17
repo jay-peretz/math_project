@@ -1,9 +1,9 @@
 /*global angular */
  
-angular.module('mathSkills').service('data15_1', ['dataUtils', function (dataUtils) {
+angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUtils) {
     var desc = {
-			title: '15.1 Change Fractions to Decimals',
-    		path: '15.1-change-fractions-to-decimals',
+			title: '15.2 Change Fractions to Decimals',
+    		path: '15.2-change-fractions-to-decimals',
             children: []
         },
         template = {
