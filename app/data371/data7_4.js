@@ -638,7 +638,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 												'\\rowgrp{\\ins{Yes. Write a setup that will solve for the amount of money she had left.}},' +
 												'\\ins{This is a <span class=underline>number of another number</span> problem.  The &quot;of&quot; between two number values means <span class=underline>multiply</span>. Write a setup that will solve for the amount of money she had left.}' +
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{\\sign{&bull;}}{\\html{$dollarSign}}{\\input{$plainDollars}}}}' +
+											'{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}{\\sign{&bull;}}{\\input{$plainDollars}}}}' +
                            				'}'+
 									'{well}',
                         controls: {
