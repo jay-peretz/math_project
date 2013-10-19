@@ -23,11 +23,11 @@ angular.module('mathSkills').service('data14_1', ['dataUtils', function (dataUti
             }
         },
         data = [
-            { number1: '8.4', number2: '6.7', mathorenglish1: 'math', answer: '56.28', template: 'main' },
+            { number1: '84', number2: '6.7', mathorenglish1: 'math', answer: '562.8', template: 'main' },
             { number1: '0.4', number2: '8.7', mathorenglish1: 'math', answer: '3.48', template: 'main' },
-            { number1: '8.7', number2: '2.3', mathorenglish1: 'english', answer: '20.01', template: 'main' },
-            { number1: '2.6', number2: '2.3', mathorenglish1: 'math', answer: '5.98', template: 'main' },
-            { number1: '6.6', number2: '4.4', mathorenglish1: 'english', answer: '29.04', template: 'main' },
+            { number1: '8.7', number2: '23', mathorenglish1: 'english', answer: '200.1', template: 'main' },
+            { number1: '2.6', number2: '0.14', mathorenglish1: 'math', answer: '0.364', template: 'main' },
+            { number1: '66', number2: '4.4', mathorenglish1: 'english', answer: '290.4', template: 'main' },
             { number1: '3.4', number2: '3.6', mathorenglish1: 'math', answer: '12.24', template: 'main' },
             { number1: '5.27', number2: '1.3', mathorenglish1: 'math', answer: '6.851', template: 'main' },
             { number1: '8.68', number2: '39.8', mathorenglish1: 'english', answer: '345.464', template: 'main' },

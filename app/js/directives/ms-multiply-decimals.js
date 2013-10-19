@@ -102,6 +102,16 @@ angular.module('mathSkills')
 					}					
 				}
 				
+				function replaceDecimalRight (arrayRow) {
+					var newArrayRow = [];					
+					newArrayRow = arrayRow.slice();	
+					if (newArrayRow[newArrayRow.length - 1] === ".") {
+						newArrayRow.pop();
+						newArrayRow.unshift(" ");
+					}
+					return newArrayRow;
+				}
+				
 				// add padding if not the decimal point- decimal point gets no padding
 				$scope.styleDecimal = function (index, arrayNumber) {
 					var arrayValue = eval("$scope." + arrayNumber + "Array["+index+"]"),
@@ -282,15 +292,15 @@ angular.module('mathSkills')
 						$scope.secondArray = [];
 						$scope.thirdArray = [];
 						$scope.fourthArray = [];
-						$scope.firstArray = shiftRight(numberDisplayArray[0]).slice();
-						$scope.secondArray = shiftRight(numberDisplayArray[1]).slice();
+						$scope.firstArray = replaceDecimalRight(shiftRight(numberDisplayArray[0]).slice());
+						$scope.secondArray = replaceDecimalRight(shiftRight(numberDisplayArray[1]).slice());
 						if ($scope.displayresult) {
 							$scope.thirdArray = arrayRemoveEmptyRows(productArray).slice();
 							// if productArray.length = 1, the multiplier is single digit, so just display answerArray (not productArray) 
 							if (productArray.length == 1) {
 								$scope.thirdArray = [];
 							} 
-							$scope.fourthArray = answerDisplayArray.slice();
+							$scope.fourthArray = replaceDecimalRight(answerDisplayArray.slice());
 						} else {
 							$scope.thirdArray = [];
 							$scope.fourthArray = [];
