@@ -104,11 +104,23 @@ angular.module('mathSkills')
 				
 				// add padding if not the decimal point- decimal point gets no padding
 				$scope.styleDecimal = function (index, arrayNumber) {
-					var arrayValue = eval("$scope." + arrayNumber + "Array["+index+"]");
-					if (arrayValue === ".") {
-						return "noPadding";
-					} else {
-						return "addPadding";
+					var arrayValue = eval("$scope." + arrayNumber + "Array["+index+"]"),
+						arrayValuePlusOne = eval("$scope." + arrayNumber + "Array["+(index + 1)+"]"),
+						arrayValueMinusOne = eval("$scope." + arrayNumber + "Array["+(index - 1)+"]");
+					
+					switch (true) {
+						case (arrayValuePlusOne !== undefined && arrayValuePlusOne === "."):
+							return "addPaddingLeft";
+							break;
+						case (arrayValue === "."):
+							return "noPadding";
+							break;
+						case (arrayValueMinusOne !== undefined && arrayValueMinusOne === "."):
+							return "addPaddingRight";
+							break;
+						default:
+							return "addPadding";
+							break;
 					}
 				}
 				
