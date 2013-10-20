@@ -112,6 +112,22 @@ angular.module('mathSkills')
 					return newArrayRow;
 				}
 				
+				function removeZerosRight (workArray) {
+					var newWorkArray = [];					
+					newWorkArray = workArray.slice();	
+					for (var ii = 1, len = newWorkArray.length; ii < len; ii += 1) {
+						for (var jj = 1; jj <= ii; jj += 1) {
+							console.log("newWorkArray[ii][newWorkArray["+ii+"].length - "+jj+"] is: ",newWorkArray[ii][newWorkArray[ii].length - jj]);
+							if ((newWorkArray[ii][newWorkArray[ii].length - jj]).toString() === "0") {
+								newWorkArray[ii][newWorkArray[ii].length - jj] = "";
+							}
+						}
+					}
+					console.log("JSON.stringify(newWorkArray) is: ",JSON.stringify(newWorkArray));
+					return newWorkArray;
+				}
+				
+				
 				// add padding if not the decimal point- decimal point gets no padding
 				$scope.styleDecimal = function (index, arrayNumber) {
 					var arrayValue = eval("$scope." + arrayNumber + "Array["+index+"]"),
@@ -295,7 +311,7 @@ angular.module('mathSkills')
 						$scope.firstArray = replaceDecimalRight(shiftRight(numberDisplayArray[0]).slice());
 						$scope.secondArray = replaceDecimalRight(shiftRight(numberDisplayArray[1]).slice());
 						if ($scope.displayresult) {
-							$scope.thirdArray = arrayRemoveEmptyRows(productArray).slice();
+							$scope.thirdArray = removeZerosRight(arrayRemoveEmptyRows(productArray).slice());
 							// if productArray.length = 1, the multiplier is single digit, so just display answerArray (not productArray) 
 							if (productArray.length == 1) {
 								$scope.thirdArray = [];
