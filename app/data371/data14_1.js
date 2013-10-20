@@ -16,7 +16,7 @@ angular.module('mathSkills').service('data14_1', ['dataUtils', function (dataUti
 						answer: '\\input{$answer}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\row{\\str{Add the number of decimal places in the multiplicand to the number of decimal places in the multiplier to obtain the number of decimal places in the answer:}}}{\\row{\\multiplydecimals{math}{complete}{$number1}{$number2}}{\\css{\\row{\\str{Answer: \xA0}}{\\commasnumber{$answer}}}{help-answer-text}}}'
+							"help": '\\rowgrp{\\row{\\str{Add the number of digits to the right of the decimal points in your multiplication problem.  This tells you the number of digits that will be to the right of the decimal point in your answer.}}}{\\row{\\multiplydecimals{math}{complete}{$number1}{$number2}}{\\css{\\row{\\str{Answer: \xA0}}{\\commasnumber{$answer}}}{help-answer-text}}}'
 						}
                     }]
                 }]
