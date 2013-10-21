@@ -25,64 +25,16 @@ angular.module('mathSkills')
 				var tagParameters = [],
 					problemObjects = [],
 					answerObject = 0,
-				 	allNumbersArray = new Array(2),
 					numberDisplayArray = [],
 					answerDisplayArray = [],
 					productArray = [],
-					carryArray = [],
-					userAnswer = [],
-					answerArray = [],
 					multiplicandDigits = 0,
 					multiplierDigits = 0,
-					maxAnswerDigits = 0,
-					productColumn = 0,
-					gotCarry = 0,
 					answerString = "",
 					multiplier = [],
 					multiplicand = [],
-					multiplicandParsed = "",
-					multiplierParsed = "",
-					maxNumberLength = 0, 
 					placesLeft = 0,
 					placesRight = 0;
-				
-				function removeLeadingZeros (zerosNumberArray) {
-					for (var ii = 0, oneNotZero = 0; ii < zerosNumberArray.length; ii++) {
-						if (zerosNumberArray[ii]!==0) {
-							oneNotZero = 1;
-						} else if (oneNotZero == 0) {
-							zerosNumberArray[ii] = "";
-						}
-					}			
-				}
-						
-				// function arrayRemoveEmptyRows produces a new array that only has rows with numbers in them
-				// single-digit multiplier is determined below in help setup, and the $scope.thirdArray set to []
-				function arrayRemoveEmptyRows(arrayOrig) {
-					var rowNotEmpty = 0,
-						kk = 0,
-						copyArray = [],
-						newArray = [];
-						
-					copyArray = arrayOrig.slice();
-					for (var ii = arrayOrig.length - 1; ii >= 0; ii--) {
-						rowNotEmpty = 0;
-						
-						for (var jj = arrayOrig[ii].length - 1; jj >= 0; jj--) {
-							if (arrayOrig[ii][jj] !== "") {
-								rowNotEmpty = 1;
-							}
-						}
-						if (rowNotEmpty == 1) {
-							newArray[kk] = new Array(arrayOrig[ii].length);
-							for (var jj = arrayOrig[ii].length - 1; jj >= 0; jj--) {
-								newArray[kk][jj] = arrayOrig[ii][jj];
-							}
-							kk++;
-						}
-					}
-					return (newArray.reverse());
-				}
 				
 				function isBlank(str) {
     				return (!str || /^\s*$/.test(str));
@@ -112,21 +64,40 @@ angular.module('mathSkills')
 					return newArrayRow;
 				}
 				
-				function removeZerosRight (workArray) {
-					var newWorkArray = [];					
-					newWorkArray = workArray.slice();	
-					for (var ii = 1, len = newWorkArray.length; ii < len; ii += 1) {
-						for (var jj = 1; jj <= ii; jj += 1) {
-							console.log("newWorkArray[ii][newWorkArray["+ii+"].length - "+jj+"] is: ",newWorkArray[ii][newWorkArray[ii].length - jj]);
-							if ((newWorkArray[ii][newWorkArray[ii].length - jj]).toString() === "0") {
-								newWorkArray[ii][newWorkArray[ii].length - jj] = "";
-							}
+				function createWorkArray (multiplicand, multiplier, maxAnswerDigits) {
+					var workArray = [],
+						multDigit,
+						newIndex = 0,
+						workLength,
+						reps,
+						multiplierString,
+						lengthMultiplier,
+						multiplicandLessDecimal,
+						multiplierLessDecimal;	
+					
+					multiplicandLessDecimal = Number(multiplicand.toString().replace(".", ""));
+					multiplierLessDecimal = Number(multiplier.toString().replace(".", ""));
+					multiplierString = multiplierLessDecimal.toString();
+					lengthMultiplier = multiplierString.length;
+					
+					for (var ii = lengthMultiplier - 1; ii >= 0; ii -= 1) {						
+							multDigit = Number(multiplierString.substr(ii, 1));
+							workArray[newIndex] = ($filter('multiply-decimals')([multDigit,multiplicandLessDecimal])).toString().split("");
+							newIndex += 1;
+					}
+					
+					for (var ii = 0, numberRows = workArray.length; ii < numberRows; ii += 1) {
+						reps = maxAnswerDigits - workArray[ii].length;
+						for (var kk = 0; kk < ii; kk += 1) {
+							workArray[ii].push(" ");							
+						}
+						for (var kk = 0, diff = reps - ii; kk < diff; kk += 1) {
+							workArray[ii].unshift(" ");							
 						}
 					}
-					console.log("JSON.stringify(newWorkArray) is: ",JSON.stringify(newWorkArray));
-					return newWorkArray;
+
+					return workArray;
 				}
-				
 				
 				// add padding if not the decimal point- decimal point gets no padding
 				$scope.styleDecimal = function (index, arrayNumber) {
@@ -181,9 +152,6 @@ angular.module('mathSkills')
 						multiplicandDigits = problemObjects[0].toString().length;
 						multiplierDigits = problemObjects[1].toString().length;
 						
-						// get the maximum number of digits
-						maxAnswerDigits = answerObject.toString().length;
-						
 						var decimalDigits = function (num) {
 							if (num.toString().indexOf('.') > 0) {
 								return num.toString().split('.')[1].length;
@@ -193,8 +161,7 @@ angular.module('mathSkills')
 						};
 						
 						// get the maximum number of digits right and left of the decimal place
-						
-						placesRight = decimalDigits(answerObject);
+						placesRight = decimalDigits(problemObjects[0]) + decimalDigits(problemObjects[1]);
 						if (answerObject.toString().indexOf('.') > 0) {
 							placesLeft = answerObject.toString().length - (placesRight + 1);
 						} else {
@@ -210,100 +177,8 @@ angular.module('mathSkills')
 						}
 						answerDisplayArray = $filter('decimal-to-display-array')(answerObject, placesLeft, placesRight, 1);
 						
-						
-						for (var ii = 0, len = 2; ii<len; ii++) {
-							allNumbersArray[ii] = new Array(maxAnswerDigits); 
-						}
-						
-						// initialize arrays
-						for (var ii = 0; ii<2; ii++) {
-							for (var jj = 0; jj<maxAnswerDigits; jj++) {
-								allNumbersArray[ii][jj] = 0;
-								answerArray[jj] = 0;
-							}
-						}
-						// create a two-dimensional array for ones-column multiplication results 
-						for (var ii = 0; ii<maxAnswerDigits; ii++) {
-							productArray[ii] = new Array(maxAnswerDigits);
-							for (var jj = 0; jj<maxAnswerDigits; jj++) {
-								productArray[ii][jj] = 0;
-							}
-						}
-						
-						// create an array with a row for each number, one digit per column
-						for (var ii = 0; ii<2; ii++) {
-							var currentNumber = problemObjects[ii],
-								currentNumberString = currentNumber.toString().replace(".", ""),
-								currentNumbLength = currentNumberString.length,
-								endPosArrayWrite = maxAnswerDigits-currentNumbLength;
-							
-							for (var jj = maxAnswerDigits-1, kk = 1; jj>=endPosArrayWrite; jj--) {
-								allNumbersArray[ii][jj] = currentNumberString.substr(currentNumbLength-kk, 1);
-								kk++;
-							}
-						}
-				
-						// create an array of results of multiplication of the two numbers
-						for (var ii = maxAnswerDigits - 1, kk = 0; ii >= 0; ii--) {
-							for (var jj = maxAnswerDigits - 1; jj >= 0; jj--) {
-								productColumn = 0;
-								productColumn = allNumbersArray[0][jj]*allNumbersArray[1][ii];
-								/*while (productColumn > 9) {
-									productColumn = productColumn - 10;
-								}*/
-								if (kk<multiplierDigits) {
-									productArray[kk][jj-kk] = productColumn;
-								}
-							}
-							kk++
-						}
-						
-						// work the carries
-						for (var ii = 0; ii < multiplierDigits; ii++) {
-							for (var jj = maxAnswerDigits-1; jj > 0; jj--) {
-								productColumn = 0;
-								productColumn = productArray[ii][jj];
-								if ((productColumn > 9)&&(jj<maxAnswerDigits)){
-									productColumn = Math.floor(productColumn/10);				
-									productArray[ii][jj-1] = productArray[ii][jj-1]+productColumn;
-								}
-							}
-						}
-						
-						// rework productArray to only show the part of the product < 10
-						for (var ii = 0, len = productArray.length; ii < len; ii++) {
-							for (var jj = maxAnswerDigits-1; jj > 0; jj--) {
-								productColumn = 0;
-								productColumn = productArray[ii][jj];
-								if ((productColumn > 9)&&(jj<maxAnswerDigits)){
-									productColumn = productColumn - (Math.floor(productColumn/10)*10);				
-									productArray[ii][jj] = productColumn;
-								}
-							}
-						}
-						
-						$scope.productArraysSum = 0;
-						$scope.arraysTotalArray = [];
-						for (var ii = 0, len = productArray.length; ii < len; ii++) {
-							$scope.productArraysSum += parseInt(productArray[ii].toString().replace(/,/g, ''), 10);
-						}
-						$scope.arraysTotalArray = $scope.productArraysSum.toString().split("");
-						
-						// create an array for the answer, one digit per column
-						for (var ii = maxAnswerDigits-1, kk = $scope.arraysTotalArray.length-1; ii >= 0; ii--) {
-							if (kk >= 0) {
-								answerArray[ii] = $scope.arraysTotalArray[kk];
-								kk--;
-							}					
-						}
-						
-						if ($scope.answerObject >= 1) {
-							removeLeadingZeros(answerArray);
-						}
-						for (var ii = 0, len = productArray.length; ii < len; ii++) {
-							removeLeadingZeros(productArray[ii]);
-						}		
-						
+						var displayWorkArray = [];
+						displayWorkArray = createWorkArray(problemObjects[0], problemObjects[1], answerDisplayArray.length).slice();	
 						$scope.firstArray = [];
 						$scope.secondArray = [];
 						$scope.thirdArray = [];
@@ -311,7 +186,7 @@ angular.module('mathSkills')
 						$scope.firstArray = replaceDecimalRight(shiftRight(numberDisplayArray[0]).slice());
 						$scope.secondArray = replaceDecimalRight(shiftRight(numberDisplayArray[1]).slice());
 						if ($scope.displayresult) {
-							$scope.thirdArray = removeZerosRight(arrayRemoveEmptyRows(productArray).slice());
+							$scope.thirdArray = displayWorkArray;
 							// if productArray.length = 1, the multiplier is single digit, so just display answerArray (not productArray) 
 							if (productArray.length == 1) {
 								$scope.thirdArray = [];
