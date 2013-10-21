@@ -12,14 +12,17 @@ angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\row{\\str{Change \xA0}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}{\\str{\xA0 to a decimal:}}',
+						problem: '\\grp'
+									+'{\\html{Change &nbsp;}}'
+									+'{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}'
+									+'{\\html{&nbsp; to a decimal:}}',
 						answer: '\\input{$answer}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\str{$fractionNum divided by $fractionDen equals $answer}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{Answer:  $answer}}{help-answer-text}}'
+										+'{\\html{$fractionNum divided by $fractionDen equals $answer}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css{\\html{Answer:  $answer}}{help-answer-text}}'
 						}
                     }]
                 }]
@@ -29,16 +32,19 @@ angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\rowgrp{\\row{\\str{Change \xA0}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}{\\str{\xA0 to a decimal;}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round to the hundredths place if necessary.}}}',
+						problem: '\\rowgrp'
+									+'{\\grp{\\html{Change &nbsp;}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}{\\html{&nbsp; to a decimal;}}}'
+									+'{\\html{\&nbsp;}}'
+									+'{\\html{Round to the hundredths place if necessary.}}',
 						answer: '\\input{$answer}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\str{$fractionNum divided by $fractionDen equals $unrounded}}'
-							+'{\\str{$unrounded rounded to the hundredths place equals:}}'
-							+'{\\str{$answer}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{Answer:  $answer}}{help-answer-text}}'
+										+'{\\html{$fractionNum divided by $fractionDen equals $unrounded}}'
+										+'{\\html{$unrounded rounded to the hundredths place equals:}}'
+										+'{\\html{$answer}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css{\\html{Answer:  $answer}}{help-answer-text}}'
 						 }
                     }]
                 }]
