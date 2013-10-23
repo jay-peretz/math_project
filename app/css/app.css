@@ -59,6 +59,69 @@
 
 /* fadeIn */
 ms-panel > div {
+    -ms-animation: fadein 1s;
+    -moz-animation: fadein 1s;
+    -o-animation: fadein 1s;
+    -webkit-animation: fadein 1s;
+    animation: fadein 1s;
+}
+
+ms-panel .helpPanel > div {
+    -ms-animation: fadein 1s;
+    -moz-animation: fadein 1s;
+    -o-animation: fadein 1s;
+    -webkit-animation: fadein 1s;
+    animation: fadein 1s;
+}
+
+ms-panel > div {
+    padding-top: 10;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0.0;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0.0;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0.0;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0.0;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+/* Original Animations prior 23Oct13 commented out below- includes slideup discontinued per Matt*/
+
+/* fadeIn */
+/*ms-panel > div {
     -ms-animation: fadein 1s, slideup 0.25s ease-in;
     -moz-animation: fadein 1s, slideup 0.25s ease-in;
     -o-animation: fadein 1s, slideup 0.25s ease-in;
@@ -116,11 +179,11 @@ ms-panel > div {
     to {
         opacity: 1.0;
     }
-}
+}*/
 
 /* bounce */
 
-@-webkit-keyframes slideup {
+/*@-webkit-keyframes slideup {
     from {
         margin-top: 10px;
     }
@@ -158,4 +221,6 @@ ms-panel > div {
     to {
         margin-top: inherit;
     }
-}
+}*/
+
+/* Original Animations prior 23Oct13 commented out above- includes slideup discontinued per Matt*/
