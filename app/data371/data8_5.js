@@ -7,6 +7,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
             children: []
         },
         template = {
+			// problem 1
             housesDiv1: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -94,6 +95,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			// problem 2
             housesDiv2: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -181,6 +183,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			// problem 3
             housesMul: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -272,6 +275,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			// problem 4
             cookiesDiv1: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -359,6 +363,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			// problem 5
             cookiesDiv2: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -446,6 +451,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			// problem 6
             cookiesMul: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -537,6 +543,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			// problem 7
             pagesDiv1: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -624,6 +631,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			// problem 8
             pagesDiv2: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -711,6 +719,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			// problem 9
             pagesMul: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -799,6 +808,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			// problem 10
 			tomCanDiv1: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -886,6 +896,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			// problem 11
             tomCanDiv2: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -973,6 +984,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			// problem 12
             tomCanMul: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -1066,17 +1078,29 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
             }
         },
         data = [
+			// problem 1
             { firstunitwhole: '2', firstunitn: '7', firstunitd: '10', secondunitn: '3', secondunitd: '10', number: '9', illustration: '8.5-11_Houses_Money/400x300/Millions_houses_a.jpg', template: 'housesDiv1' },
+			// problem 2
             { firstunitwhole: '2', firstunitn: '7', firstunitd: '10', secondunitn: '3', secondunitd: '10', number: '9', illustration: '8.5-11_Houses_Money/400x300/Millions_houses_b.jpg', template: 'housesDiv2' },
+			// problem 3
             { firstunitwhole: '2', firstunitn: '7', firstunitd: '10', secondunitn: '3', secondunitd: '10', number: '9', firstMult: '9', secondMult: '3/10', multArray: '[\\"9\\",\\"3/10\\"]', flip: [[1], ["firstMult", "secondMult"]], illustration: '8.5-11_Houses_Money/400x300/Millions_houses_c.jpg', template: 'housesMul' },
+			// problem 4
             { firstunitwhole: '4', firstunitn: '4', firstunitd: '5', secondunitwhole: '1', secondunitn: '1', secondunitd: '5', number: '4', illustration: '8.5-12_Cookies/400x300/Cookies_a.jpg', template: 'cookiesDiv1' },
+			// problem 5
             { firstunitwhole: '4', firstunitn: '4', firstunitd: '5', secondunitwhole: '1', secondunitn: '1', secondunitd: '5', number: '4', illustration: '8.5-12_Cookies/400x300/Cookies_b.jpg', template: 'cookiesDiv2' },
+			// problem 6
             { firstunitwhole: '4', firstunitn: '4', firstunitd: '5', secondunitwhole: '1', secondunitn: '1', secondunitd: '5', number: '4', firstMult: '4', secondMult: '1 4/5', multArray: '[\\"4\\",\\"1 4/5\\"]', flip: [[1], ["firstMult", "secondMult"]], illustration: '8.5-12_Cookies/400x300/Cookies_c.jpg', template: 'cookiesMul' },
+			// problem 7
 			{ firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50', illustration: '8.5-9_Typed_Pages/400x300/Typed_Pages_a.jpg', template: 'pagesDiv1' },
+			// problem 8
             { firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50', illustration: '8.5-9_Typed_Pages/400x300/Typed_Pages_b.jpg', template: 'pagesDiv2' },
+			// problem 9
             { firstunitwhole: '7', firstunitn: '1', firstunitd: '2', secondunitwhole: '', secondunitn: '3', secondunitd: '20', number: '50', firstMult: '50', secondMult: '3/20', multArray: '[\\"50\\",\\"3/20\\"]', flip: [[1], ["firstMult", "secondMult"]], illustration: '8.5-9_Typed_Pages/400x300/Typed_Pages_c.jpg', template: 'pagesMul' },
+			// problem 10
 			{ firstunitwhole: '51', firstunitn: '1', firstunitd: '4', secondunitwhole: '1', secondunitn: '1', secondunitd: '4', number: '41', illustration: '8.5-10_Tomato_Cans/400x300/51.25-lbs_X-Cans_1.25-lbs_Can.jpg', template: 'tomCanDiv1' },
+			// problem 11
             { firstunitwhole: '51', firstunitn: '1', firstunitd: '4', secondunitwhole: '1', secondunitn: '1', secondunitd: '4', number: '41', illustration: '8.5-10_Tomato_Cans/400x300/51.25lbs_41-Cans_X-Lbs-Can.jpg', template: 'tomCanDiv2' },
+			// problem 12
             { firstunitwhole: '51', firstunitn: '1', firstunitd: '4', secondunitwhole: '1', secondunitn: '1', secondunitd: '4', number: '41', firstMult: '41', secondMult: '1 1/4', multArray: '[\\"41\\",\\"1 1/4\\"]', flip: [[1], ["firstMult", "secondMult"]], illustration: '8.5-10_Tomato_Cans/400x300/X-lbs_41-Cans_1.25-lbs_Can.jpg', template: 'tomCanMul' }
         ];
     
