@@ -8,6 +8,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             children: []
         },
         template = {
+		   //problem 1
            housesDiv1: {
                 title: 'Fraction Application Problems',
                 children: [{
@@ -87,6 +88,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			//problem 2
             housesDiv2: {
                 title: 'Fraction Application Problems',
                 children: [{
@@ -176,6 +178,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			//problem 3
             housesMul: {
                 title: 'Fraction Application Problems',
                 children: [{
@@ -559,6 +562,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },*/
+			//problem 4
 			dollarsLeftFromFraction: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -666,6 +670,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			//problem 5
             dollarsFindFractionSpent: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -755,6 +760,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			//problem 6
             dollarsFindFractionLeft: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -844,6 +850,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			//problem 7
 			dollarsLeftFromFraction2: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -951,6 +958,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			//problem 8
             dollarsFindFractionSpent2: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -1040,6 +1048,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			//problem 9
             dollarsFindFractionLeft2: {
                 title: 'Mixed Fraction Application Problems',
                 children: [{
@@ -1129,6 +1138,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			//problem 10
 			coffeeDiv1: {
                 title: 'Fraction Application Problems',
                 children: [{
@@ -1210,6 +1220,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			//problem 11
             coffeeDiv2: {
                 title: 'Fraction Application Problems',
                 children: [{
@@ -1317,6 +1328,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			//problem 12
             coffeeMul: {
                 title: 'Fraction Application Problems',
                 children: [{
@@ -1422,6 +1434,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			//problem 13
 			lumberDiv1: {
                 title: 'Fraction Application Problems',
                 children: [{
@@ -1503,6 +1516,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			//problem 14
             lumberDiv2: {
                 title: 'Fraction Application Problems',
                 children: [{
@@ -1610,6 +1624,7 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
                     }]
                 }]
             },
+			//problem 15
             lumberMul: {
                 title: 'Fraction Application Problems',
                 children: [{
@@ -1720,25 +1735,40 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
             /*{ total: 15, unitn: 3, unitd: 4, number: 20, illustration: '7.4A-01_Acres_Houses/7.4A-01_15_Acres_Houses/400x300/Acres_Gplane_15a.jpg', template: 'housesDiv1' },
             { total: 15, unitn: 3, unitd: 4, number: 20, illustration: '7.4A-01_Acres_Houses/7.4A-01_15_Acres_Houses/400x300/Acres_Gplane_15b.jpg', template: 'housesDiv2' },
             { total: 15, unitn: 3, unitd: 4, number: 20, illustration: '7.4A-01_Acres_Houses/7.4A-01_15_Acres_Houses/400x300/Acres_Gplane_15c.jpg', template: 'housesMul' },*/
+			//problem 1
             { total: 21, unitn: 1, unitd: 3, number: 63, illustration: '7.4A-01_Acres_Houses/7.4A-01_21_Acres_Houses/400x300/Acres_Gplane_21a.jpg', template: 'housesDiv1' },
+			//problem 2
             { total: 21, unitn: 1, unitd: 3, number: 63, illustration: '7.4A-01_Acres_Houses/7.4A-01_21_Acres_Houses/400x300/Acres_Gplane_21b.jpg', template: 'housesDiv2' },
+			//problem 3
             { total: 21, unitn: 1, unitd: 3, number: 63, unitDenom: 1, firstMultNum: '[\\"1\\",\\"63\\"]', firstMultDen: '[\\"3\\",\\"1\\"]', secondMultNum: '[\\"63\\",\\"1\\"]', secondMultDen: '[\\"1\\",\\"3\\"]', flip: [[1], ["unitn", "number"], ["unitDenom", "unitd"]], illustration: '7.4A-01_Acres_Houses/7.4A-01_21_Acres_Houses/400x300/Acres_Gplane_21c.jpg', template: 'housesMul' },
 			/*
             { totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: '7.4A-01_Acres_Houses/7.4A-01_2.3_Acres_Houses/400x300/Acres_Gplane_2.3a.jpg', template: 'housesDivFrac1' },
             {  totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: '7.4A-01_Acres_Houses/7.4A-01_2.3_Acres_Houses/400x300/Acres_Gplane_2.3b.jpg', template: 'housesDivFrac2' },
             {  totaln: 2, totald: 3, unitn: 1, unitd: 9, number: 6, illustration: '7.4A-01_Acres_Houses/7.4A-01_2.3_Acres_Houses/400x300/Acres_Gplane_2.3c.jpg', template: 'housesMulFrac' },
 			*/
+			//problem 4
 			{ firstunitn: '3', firstunitd: '5', secondunitn: '2', secondunitd: '5', number: '$200', dollarsLeft: '80', plainDollars: '200', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_a.jpg', template: 'dollarsLeftFromFraction' },
+			//problem 5
             { firstunitn: '120', firstunitd: '200', secondunitn: '3', secondunitd: '5', number: '$200', spent: '$120', plainDollars: '200', plainSpent: '120', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_b.jpg', template: 'dollarsFindFractionSpent' },
+			//problem 6
             { firstunitn: '80', firstunitd: '200', secondunitn: '2', secondunitd: '5', number: '$200', left: '$80', plainDollars: '200', plainLeft: '80', dollarSign: '$', illustration: '7.4B-01_200_Dollars/400x300/$200_c.jpg', template: 'dollarsFindFractionLeft' },
+			//problem 7
 			{ firstunitn: '2', firstunitd: '3', secondunitn: '1', secondunitd: '3', number: '$2400', dollarsLeft: '800', plainDollars: '2400', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_a.jpg', template: 'dollarsLeftFromFraction2' },
+			//problem 8
             { firstunitn: '1600', firstunitd: '2400', secondunitn: '2', secondunitd: '3', number: '$2400', spent: '$1600', plainDollars: '2400', plainSpent: '1600', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_b.jpg', template: 'dollarsFindFractionSpent2' },
+			//problem 9
             { firstunitn: '800', firstunitd: '2400', secondunitn: '1', secondunitd: '3', number: '$2400', left: '$800', plainDollars: '2400', plainLeft: '800', dollarSign: '$', illustration: '7.4B-02_2400_Dollars/400x300/$2400_c.jpg', template: 'dollarsFindFractionLeft2' },
+			//problem 10
 			{ total: 56, unitn: 7, unitd: 10, number: 80, illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56a.jpg', template: 'coffeeDiv1' },
+			//problem 11
             { total: 56, unitn: 7, unitd: 10, number: 80, illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56b.jpg', template: 'coffeeDiv2' },
+			//problem 12
             { total: 56, unitn: 7, unitd: 10, number: 80, unitDenom: 1, firstMultNum: '[\\"7\\",\\"80\\"]', firstMultDen: '[\\"10\\",\\"1\\"]', secondMultNum: '[\\"80\\",\\"7\\"]', secondMultDen: '[\\"1\\",\\"10\\"]', flip: [[1], ["unitn", "number"], ["unitDenom", "unitd"]], illustration: '7.4A-02_Coffee/7.4A-02_56lbs_Coffee/400x300/Coffee_56c.jpg', template: 'coffeeMul' },
+			//problem 13
 			{ total: 12, unitn: 1, unitd: 3, number: 36, illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-01.jpg', template: 'lumberDiv1' },
+			//problem 14
             { total: 12, unitn: 1, unitd: 3, number: 36, illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-02.jpg', template: 'lumberDiv2' },
+			//problem 15
             { total: 12, unitn: 1, unitd: 3, number: 36, unitDenom: 1, firstMultNum: '[\\"1\\",\\"36\\"]', firstMultDen: '[\\"3\\",\\"1\\"]', secondMultNum: '[\\"36\\",\\"1\\"]', secondMultDen: '[\\"1\\",\\"3\\"]', flip: [[1], ["unitn", "number"], ["unitDenom", "unitd"]], illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-03.jpg', template: 'lumberMul' }
 			];
     
