@@ -209,7 +209,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
 										+'{\\rowgrp'
 											+'{\\html{If $number houses have been built, and each house is priced at <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars, what is the total value of all the houses in the subdivision combined?}}'
 											+'{\\html{&nbsp;}}'
-											+'{\\ins{You have been <span class=underline>given the total</span> number of houses in the subdivision.  How many houses are in the subdivision?}}'
+											+'{\\ins{You have been <span class=underline>given the number</span> of houses in the subdivision.  How many houses are in the subdivision?}}'
 											+'{\\grp{\\input{$number}}}'+
 										'}'
 									+'{well}}',
@@ -742,7 +742,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', 'numberUtils', fun
 										'{\\rowgrp'+
 											'{\\html{If the typist typed for $number minutes at a rate of $secondunitwhole <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page per minute, how many pages did the typist type?}}'+
 											'{\\html{&nbsp;}}'+
-											'{\\ins{You have been <span class=underline>given the total</span> number of minutes the typist typed.  How many minutes did the typist type?}}' +
+											'{\\ins{You have been <span class=underline>given the number</span> of minutes the typist typed.  How many minutes did the typist type?}}' +
 											'{\\grp{\\input{$number}}}' +
 										'}'+
 									'{well}',
