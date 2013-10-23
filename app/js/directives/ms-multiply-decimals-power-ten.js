@@ -39,10 +39,15 @@ angular.module('mathSkills')
 					multiplicandPlacesRight = 0;
 					
 					
-		$scope.getClassBorder = function(index) {				
+		$scope.getClassBorder = function(index) {	
+			var returnClasses = "";
 			if (($scope.borderBelowArray[index] == 'arrowRight')||($scope.borderBelowArray[index] == 'arrowLeft')) {
-				return ('borderArrowhead');
+				returnClasses += 'borderArrowhead';
 			}
+			if ($scope.firstArray[index] === ".") {
+				returnClasses += ' largeDecimal';
+			}
+			return returnClasses;
 		}
 		$scope.getArrowhead = function(index) {				
 			if ($scope.borderBelowArray[index] == 'arrowRight') {
