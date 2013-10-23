@@ -36,7 +36,7 @@ angular.module('mathSkills')
 				
 				// add appropriate zeros and decimal point back into quotientDigitsOnly
 				quotientFinal = quotientDigitsOnly;
-				if (quotientExponent > 0) {
+				if (quotientExponent >= 0) {
 					while (quotientFinal.length <= quotientExponent) {
 								quotientFinal = quotientFinal + "0";
 					} 
