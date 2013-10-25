@@ -13,12 +13,13 @@ angular.module('mathSkills').service('data17_1', ['dataUtils', function (dataUti
 					title: 'Main Answer',
 					children: [{
 						problem: '\\col{\\row{\\str{$instructions}}}{\\row{\\html{&nbsp;}}}{\\row{\\html{$quantityLabel1 $label1 per $quantityLabel2 $label2}}}',
-						answer: '\\rowgrp'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\btn{A}{$buttonValueA}}{\\html{\xA0 \xA0 $buttonLabelA $label3 per $label4}}}'
-						+'{\\grp{\\btn{B}{$buttonValueB}}{\\html{\xA0 \xA0 $buttonLabelB $label3 per $label4}}}'
-						+'{\\grp{\\btn{C}{$buttonValueC}}{\\html{\xA0 \xA0 $buttonLabelC $label3 per $label4}}}'
-						+'{\\grp{\\btn{D}{$buttonValueD}}{\\html{\xA0 \xA0 $buttonLabelD $label3 per $label4}}}',
+						answer: '\\btngrp{\\rowgrp'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\btn{A}{$buttonValueA}}{\\html{\xA0 \xA0 $buttonLabelA $label3 per $label4}}}'
+									+'{\\grp{\\btn{B}{$buttonValueB}}{\\html{\xA0 \xA0 $buttonLabelB $label3 per $label4}}}'
+									+'{\\grp{\\btn{C}{$buttonValueC}}{\\html{\xA0 \xA0 $buttonLabelC $label3 per $label4}}}'
+									+'{\\grp{\\btn{D}{$buttonValueD}}{\\html{\xA0 \xA0 $buttonLabelD $label3 per $label4}}}'
+								+'}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -49,12 +50,13 @@ angular.module('mathSkills').service('data17_1', ['dataUtils', function (dataUti
 						+'{\\row{\\html{&nbsp;}}}'
 						+'{\\row{\\mixed{\\html{$startWholePart}}{frac{\\str{$startNumerator}}{\\str{$startDenominator}}}}'
 						+'{\\html{$label1 $comparison $quantityLabel2 $label2}}}',
-						answer: '\\rowgrp'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\btn{A}{$buttonValueA}}{\\html{&nbsp;&nbsp;}}{\\mixed{\\html{$wholePartA}}{frac{\\str{$numeratorA}}{\\str{$denominatorA}}}}{\\html{ $label3 per $label4}}}'
-						+'{\\grp{\\btn{B}{$buttonValueB}}{\\html{&nbsp;&nbsp;}}{\\mixed{\\html{$wholePartB}}{frac{\\str{$numeratorB}}{\\str{$denominatorB}}}}{\\html{ $label3 per $label4}}}'
-						+'{\\grp{\\btn{C}{$buttonValueC}}{\\html{&nbsp;&nbsp;}}{\\mixed{\\html{$wholePartC}}{frac{\\str{$numeratorC}}{\\str{$denominatorC}}}}{\\html{ $label3 per $label4}}}'
-						+'{\\grp{\\btn{D}{$buttonValueD}}{\\html{&nbsp;&nbsp;}}{\\mixed{\\html{$wholePartD}}{frac{\\str{$numeratorD}}{\\str{$denominatorD}}}}{\\html{ $label3 per $label4}}}',
+						answer: '\\btngrp{\\rowgrp'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\btn{A}{$buttonValueA}}{\\html{&nbsp;&nbsp;}}{\\mixed{\\html{$wholePartA}}{frac{\\str{$numeratorA}}{\\str{$denominatorA}}}}{\\html{ $label3 per $label4}}}'
+									+'{\\grp{\\btn{B}{$buttonValueB}}{\\html{&nbsp;&nbsp;}}{\\mixed{\\html{$wholePartB}}{frac{\\str{$numeratorB}}{\\str{$denominatorB}}}}{\\html{ $label3 per $label4}}}'
+									+'{\\grp{\\btn{C}{$buttonValueC}}{\\html{&nbsp;&nbsp;}}{\\mixed{\\html{$wholePartC}}{frac{\\str{$numeratorC}}{\\str{$denominatorC}}}}{\\html{ $label3 per $label4}}}'
+									+'{\\grp{\\btn{D}{$buttonValueD}}{\\html{&nbsp;&nbsp;}}{\\mixed{\\html{$wholePartD}}{frac{\\str{$numeratorD}}{\\str{$denominatorD}}}}{\\html{ $label3 per $label4}}}'
+								+'}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
