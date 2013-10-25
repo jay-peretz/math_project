@@ -13,9 +13,9 @@ angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\grp'
-									+'{\\html{Change &nbsp;}}'
+									+'{\\html{Change }}'
 									+'{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}'
-									+'{\\html{&nbsp; to a decimal:}}',
+									+'{\\html{ to a decimal:}}',
 						answer: '\\input{$answer}',
 						controls: {
 							"checkAnswer": true,
@@ -27,9 +27,9 @@ angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUti
                     title: 'Workbook',
                     children: [{
 						problem: '\\grp'
-									+'{\\html{Change &nbsp;}}'
+									+'{\\html{Change }}'
 									+'{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}'
-									+'{\\html{&nbsp; to a decimal:}}',
+									+'{\\html{ to a decimal:}}',
 						answer: '\\css{\\rowgrp'
 									+'{\\ins{Place the dividend and divisor in the proper places for the problem "$fractionNum divided by $fractionDen:"}}'
 									+'{\\html{&nbsp;}}'
@@ -40,9 +40,9 @@ angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUti
 						}
                     }, {
 						problem: '\\grp'
-									+'{\\html{Change &nbsp;}}'
+									+'{\\html{Change }}'
 									+'{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}'
-									+'{\\html{&nbsp; to a decimal:}}',
+									+'{\\html{ to a decimal:}}',
 						answer: '\\css{\\rowgrp'
 									+'{\\ins{Click on the right-most digit of the number you would like to divide into.}}'
 									+'{\\html{&nbsp;}}'
@@ -53,9 +53,9 @@ angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUti
 						}
                     }, {
 						problem: '\\grp'
-									+'{\\html{Change &nbsp;}}'
+									+'{\\html{Change }}'
 									+'{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}'
-									+'{\\html{&nbsp; to a decimal:}}',	
+									+'{\\html{ to a decimal:}}',
 						answer: '\\css{\\longdivdecimal{$extendedDividend}{$fractionDen}{$digitsRightInExponential}}{well}',
 						controls: {
 							"checkAnswer": true,
@@ -70,7 +70,7 @@ angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-									+'{\\grp{\\html{Change &nbsp;}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}{\\html{&nbsp; to a decimal;}}}'
+									+'{\\grp{\\html{Change }}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}{\\html{ to a decimal;}}}'
 									+'{\\html{\&nbsp;}}'
 									+'{\\html{Round to the hundredths place if necessary.}}',
 						answer: '\\input{$answer}',
@@ -84,7 +84,7 @@ angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUti
                     title: 'Workbook',
                     children: [{
 						problem: '\\rowgrp'
-									+'{\\grp{\\html{Change &nbsp;}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}{\\html{&nbsp; to a decimal;}}}'
+									+'{\\grp{\\html{Change }}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}{\\html{ to a decimal;}}}'
 									+'{\\html{\&nbsp;}}'
 									+'{\\html{Round to the hundredths place if necessary.}}',
 						answer: '\\css{\\rowgrp'
@@ -97,7 +97,7 @@ angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUti
 						}
                     }, {
 						problem: '\\rowgrp'
-									+'{\\grp{\\html{Change &nbsp;}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}{\\html{&nbsp; to a decimal;}}}'
+									+'{\\grp{\\html{Change }}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}{\\html{ to a decimal;}}}'
 									+'{\\html{\&nbsp;}}'
 									+'{\\html{Round to the hundredths place if necessary.}}',
 						answer: '\\css{\\rowgrp'
@@ -110,7 +110,7 @@ angular.module('mathSkills').service('data15_2', ['dataUtils', function (dataUti
 						}
                     }, {
 						problem: '\\rowgrp'
-									+'{\\grp{\\html{Change &nbsp;}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}{\\html{&nbsp; to a decimal;}}}'
+									+'{\\grp{\\html{Change }}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}{\\html{ to a decimal;}}}'
 									+'{\\html{\&nbsp;}}'
 									+'{\\html{Round to the hundredths place if necessary.}}',
 						answer: '\\css'

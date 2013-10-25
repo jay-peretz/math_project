@@ -4,6 +4,9 @@ ms-group td {
 ms-group ms-mixed-number td {
     padding: 0px;
 }
+ms-group ms-fraction td {
+    padding: 0px;
+}
 ms-group input {
     width: 40px;
 }
