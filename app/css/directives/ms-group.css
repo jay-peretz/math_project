@@ -1,6 +1,9 @@
 ms-group td {
     padding: 0 5px;
 }
+ms-group ms-mixed-number td {
+    padding: 0px;
+}
 ms-group input {
     width: 40px;
 }
