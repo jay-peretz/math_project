@@ -729,8 +729,8 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											'{\\html{Devinder had $number. He spent $spent of the $number shopping. What fraction of the $number did he spend?}}'+
 											'{\\html{&nbsp;}}'+
 											'{\\choose{[' +
-												'\\rowgrp{\\ins{Yes, Devinder spent $spent. Using $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}},' +
-												'\\ins{No, Devinder spent $spent.  The $spent is a part of the total $number amount. Using $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}' +
+												'\\rowgrp{\\ins{Yes, Devinder spent $spent. Using the numbers $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}},' +
+												'\\ins{No, Devinder spent $spent.  The $spent is a part of the total $number amount. Using the numbers $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}' +
 											']}{$$previousCorrect}}' +
 											'{\\grp{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}' +
                             			'}'+
@@ -747,10 +747,10 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											'{\\html{Devinder had $number. He spent $spent of the $number shopping. What fraction of the $number did he spend?}}'+
 											'{\\html{&nbsp;}}'+
 											'{\\choose{[' +
-												'\\ins{Now reduce the fraction if possible.},' +
-												'\\ins{The fraction of money that Devinder spent can be represented as <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> of his total. Reduce the fraction if possible.}' +
+												'\\ins{Simplify the fraction <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> to lowest terms.},' +
+												'\\ins{The fraction of money that Devinder spent can be represented as <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> of his total. Simplify the fraction to lowest terms.}' +
 											']}{$$previousCorrect}}' +
-											'{\\reducefrac{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}'+
+											'{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}'+
 										'}'+
 									'{well}',
                         controls: {
@@ -1017,8 +1017,8 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											'{\\html{Penelope had $number. She spent $spent of the $number on bills. What fraction of the $number did she spend?}}'+
 											'{\\html{&nbsp;}}'+
 											'{\\choose{[' +
-												'\\rowgrp{\\ins{Yes, Penelope spent $spent. Using $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}},' +
-												'\\ins{No, Penelope spent $spent.  The $spent is a part of the total $number amount. Using $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}' +
+												'\\rowgrp{\\ins{Yes, Penelope spent $spent. Using the numbers $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}},' +
+												'\\ins{No, Penelope spent $spent.  The $spent is a part of the total $number amount. Using the numbers $firstunitn and $firstunitd, write a fraction that shows the part of $firstunitd that $firstunitn represents.}' +
 											']}{$$previousCorrect}}' +
 											'{\\grp{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}' +
 										'}'+
@@ -1035,10 +1035,10 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', 'numberUtils', fun
 											'{\\html{Penelope had $number. She spent $spent of the $number on bills. What fraction of the $number did she spend?}}'+
 											'{\\html{&nbsp;}}'+
 											'{\\choose{[' +
-												'\\ins{Now reduce the fraction if possible.},' +
-												'\\ins{The fraction of money that Penelope spent can be represented as <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> of her total.  Reduce the fraction if possible.}' +
+												'\\ins{Simplify the fraction <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> to lowest terms.},' +
+												'\\ins{The fraction of money that Penelope spent can be represented as <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> of her total.  Simplify the fraction to lowest terms.}' +
 											']}{$$previousCorrect}}' +
-											'{\\reducefrac{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}'+
+											'{\\grp{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}'+
 										'}'+
 									'{well}',
                         controls: {
