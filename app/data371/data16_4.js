@@ -1,7 +1,7 @@
 /*global angular */
 
-angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUtils) {
-    var ret = {
+angular.module('mathSkills').service('data16_4', ['dataUtils', 'numberUtils', function (dataUtils, numberUtils) {
+    var desc = {
             title: '16.4 Proportion Application Problems',
             path: '16.4-proportion-application-problems',
             children: []
@@ -528,7 +528,16 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
             }
             
-        ];
+        ],
+		problemShuffle = [
+				{ problems: [1,2,7,8,9,17,18,19,20,21,22,23], select: 4},
+				{ problems: [3,4,5,10,11,12,13,14,15,16,24,25,26], select: 3},
+				{ problems: [6,27,28,29,30,31,32,33,34], select: 3}
+		];
+
     
-    return dataUtils.build(ret, template, data);
+    	//return dataUtils.build(desc, template, data);
+    	//return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
+		return dataUtils.build(desc, template, numberUtils.shuffleArraySections(data, problemShuffle));
+		
 }]);
