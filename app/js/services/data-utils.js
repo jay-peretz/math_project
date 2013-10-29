@@ -53,7 +53,6 @@ angular.module('mathSkills.services').value('dataUtils', {
 		
 		if (typeof shuffle !== "undefined") {
 			data = shuffleArraySections(data, shuffle);
-			console.log("data.length is: ",data.length);
 		}
 		
         desc.children = data.map(function (problem) {
