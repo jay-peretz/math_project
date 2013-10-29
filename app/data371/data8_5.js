@@ -1102,8 +1102,12 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
             { firstunitwhole: '51', firstunitn: '1', firstunitd: '4', secondunitwhole: '1', secondunitn: '1', secondunitd: '4', number: '41', illustration: '8.5-10_Tomato_Cans/400x300/51.25lbs_41-Cans_X-Lbs-Can.jpg', template: 'tomCanDiv2' },
 			// problem 12
             { firstunitwhole: '51', firstunitn: '1', firstunitd: '4', secondunitwhole: '1', secondunitn: '1', secondunitd: '4', number: '41', firstMult: '41', secondMult: '1 1/4', multArray: '[\\"41\\",\\"1 1/4\\"]', flip: [[1], ["firstMult", "secondMult"]], illustration: '8.5-10_Tomato_Cans/400x300/X-lbs_41-Cans_1.25-lbs_Can.jpg', template: 'tomCanMul' }
-        ];
+        ];/*,
+		shuffle = [
+		{ problems: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15], total: 15}
+		];    
+    	return dataUtils.build(desc, template, data, shuffle);*/
     
-	return dataUtils.build(desc, template, data);
-    //return dataUtils.build(desc, template, dataUtils.shuffleArray(data));
+		return dataUtils.build(desc, template, data);
+
 }]);

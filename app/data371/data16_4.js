@@ -529,15 +529,13 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
             }
             
         ],
-		problemShuffle = [
-				{ problems: [1,2,7,8,9,17,18,19,20,21,22,23], select: 4},
-				{ problems: [3,4,5,10,11,12,13,14,15,16,24,25,26], select: 3},
-				{ problems: [6,27,28,29,30,31,32,33,34], select: 3}
+		shuffle = [
+				{ problems: [1,2,7,8,9,17,18,19,20,21,22,23], total: 4},
+				{ problems: [3,4,5,10,11,12,13,14,15,16,24,25,26], total: 3},
+				{ problems: [6,27,28,29,30,31,32,33,34], total: 3}
 		];
 
     
-    	//return dataUtils.build(desc, template, data);
-    	//return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
-		return dataUtils.build(desc, template, dataUtils.shuffleArraySections(data, problemShuffle));
+    	return dataUtils.build(desc, template, data, shuffle);
 		
 }]);

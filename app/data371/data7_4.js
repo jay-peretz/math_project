@@ -1770,8 +1770,12 @@ angular.module('mathSkills').service('data7_4', ['dataUtils', function (dataUtil
             { total: 12, unitn: 1, unitd: 3, number: 36, illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-02.jpg', template: 'lumberDiv2' },
 			//problem 15
             { total: 12, unitn: 1, unitd: 3, number: 36, unitDenom: 1, firstMultNum: '[\\"1\\",\\"36\\"]', firstMultDen: '[\\"3\\",\\"1\\"]', secondMultNum: '[\\"36\\",\\"1\\"]', secondMultDen: '[\\"1\\",\\"3\\"]', flip: [[1], ["unitn", "number"], ["unitDenom", "unitd"]], illustration: '7.4A-03_Lumber/7.4A-03_12ft_Board/400x300/12-Ft_Board-03.jpg', template: 'lumberMul' }
-			];
-    
+			];/*,
+		shuffle = [
+		{ problems: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15], total: 15}
+		];    
+    	return dataUtils.build(desc, template, data, shuffle);*/
+		    
     	return dataUtils.build(desc, template, data);
-    	//return dataUtils.build(desc, template, dataUtils.shuffleArray(data));
+		
 }]);
