@@ -1,6 +1,6 @@
 /*global angular */
 
-angular.module('mathSkills').service('data16_4', ['dataUtils', 'numberUtils', function (dataUtils, numberUtils) {
+angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUtils) {
     var desc = {
             title: '16.4 Proportion Application Problems',
             path: '16.4-proportion-application-problems',
@@ -538,6 +538,6 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', 'numberUtils', fu
     
     	//return dataUtils.build(desc, template, data);
     	//return dataUtils.build(desc, template, numberUtils.shuffleArray(data));
-		return dataUtils.build(desc, template, numberUtils.shuffleArraySections(data, problemShuffle));
+		return dataUtils.build(desc, template, dataUtils.shuffleArraySections(data, problemShuffle));
 		
 }]);
