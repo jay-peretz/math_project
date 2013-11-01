@@ -578,6 +578,13 @@ angular.module('mathSkills').service('data17_2', ['dataUtils', function (dataUti
                 xlblarr: '[\\"minute\\",\\"runner\\",\\"mile\\"]',
                 previousCorrect: true,
             }
-        ];
-	return dataUtils.build(desc, template, data);
+        ],
+		shuffle = [
+				{ problems: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,22,23], total: 8},
+				{ problems: [18,19], total: 1},
+				{ problems: [20,21], total: 1}
+		];
+
+    
+    	return dataUtils.build(desc, template, data, shuffle);
 }]);
