@@ -315,36 +315,6 @@ angular.module('mathSkills').service('data17_2', ['dataUtils', function (dataUti
                             "checkAnswer": true,
                             "help": true
                         }
-                    }, {
-                        problem: '\\html{$question $round}',
-                        answer: '\\wb{\\rowgrp{'+
-                                    '\\choose{['+
-                                        '\\ins{Congratulations!},'+
-                                        '\\ins{The correct solution is:}'+
-                                    ']}{$$previousCorrect}'+
-                                '}{'+
-                                    '\\equiv'+
-                                        '{\\grp{\\str{$ln}}{\\frac{\\str{$Nln}}{\\str{$Dln}}}{\\str{$lbln}}}'+
-                                        '{\\grp{\\str{$ld}}{\\frac{\\str{$Nld}}{\\str{$Dld}}}{\\str{$lbld}}}'+
-                                        '{\\str{=}}'+
-                                        '{\\grp{\\str{$rn}}{\\frac{\\str{$Nrn}}{\\str{$Drn}}}{\\str{$lbln}}}'+
-                                        '{\\grp{\\str{$answer}}{\\str{tablets}}}'+
-                                '}{'+
-                                    '\\ins{Now fill in the boxes below with the complete unit rate answer.}'+
-                                '}{'+
-                                    '\\size{\\grp'+
-                                        '{\\str{Answer:}}'+
-                                        '{\\input{$$answer}}'+
-                                        '{\\frac{\\input{$Nanswer}}{\\input{$Danswer}}}'+
-                                        '{\\select{tablets}{[\\"(mg) medication\\",\\"cups\\",\\"tablets\\",\\"day\\"]}}'+
-                                        '{\\html{<span class="bigger">/</span>}}'+
-                                        '{\\select{day}{[\\"(mg) medication\\",\\"cups\\",\\"tablets\\",\\"day\\"]}}'+
-                                    '}{zero pad-left}'+
-                                '}}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true
-                        }
                     }]
                 }]
             }
