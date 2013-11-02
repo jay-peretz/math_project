@@ -113,13 +113,13 @@ angular.module('mathSkills').service('data18_2', ['dataUtils', function (dataUti
 			// problem 6
 			{ startNumber: '0.7758', answer: '77.58', finalWhole: '77', finalNum: '29', finalDen: '50', helpNum: '58', helpDen: '100', template: 'twoStepReduce'  },
 			// problem 7
-			{ startNumber: '0.463', answer: '46.3', template: 'main'  },
+			{ startNumber: '0.463', answer: '46.3', finalWhole: '46', finalNum: '3', finalDen: '10', template: 'twoStepNoReduce'  },
 			// problem 8
-			{ startNumber: '0.8769', answer: '87.69', template: 'main'  },
+			{ startNumber: '0.8769', answer: '87.69', finalWhole: '87', finalNum: '69', finalDen: '100', template: 'twoStepNoReduce' },
 			// problem 9
-			{ startNumber: '1.432', answer: '143.2', template: 'main'  },
+			{ startNumber: '1.432', answer: '143.2',  finalWhole: '143', finalNum: '1', finalDen: '5', helpNum: '2', helpDen: '10', template: 'twoStepReduce' },
 			// problem 10
-			{ startNumber: '0.5', answer: '50', template: 'main'  }
+			{ startNumber: '0.518', answer: '51.8', finalWhole: '51', finalNum: '4', finalDen: '5', helpNum: '8', helpDen: '10', template: 'twoStepReduce' }
         ];
 
 
