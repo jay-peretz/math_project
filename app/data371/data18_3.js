@@ -50,7 +50,7 @@ angular.module('mathSkills').service('data18_3', ['dataUtils', function (dataUti
 						answer: '\\css{\\rowgrp'
 						+'{\\grp{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}{\\str{%}}{\\sign{=}}{\\str{$decimalPercent}}{\\str{%}}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\css{\\str{Now change the percent into a decimal:}}{alert alert-info}}'
+						+'{\\css{\\str{Now change the $changePercent into a decimal:}}{alert alert-info}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\input{$decimalAnswer}}}'						
 						+'}{well}',
@@ -71,11 +71,11 @@ angular.module('mathSkills').service('data18_3', ['dataUtils', function (dataUti
 			{ startNumber: '85', decimalPercent: '0.85', template: 'main'  },
 			{ startNumber: '55.6', decimalPercent: '0.556', template: 'main'  },
 			{ startNumber: '67.85', decimalPercent: '0.6785', template: 'main'  },
-			{ instructRound: '', problemWhole: '7', problemNum: '1', problemDen: '2', rounded: "", decimalPercent: '7.5', decimalAnswer: '0.075', template: 'fraction'  },
-			{ instructRound: 'Round the decimal percent to the hundredths place.', problemWhole: '66', problemNum: '2', problemDen: '3', rounded: " (rounded to hundredth's place)", decimalPercent: '66.67', decimalAnswer: '0.6667', template: 'fraction'  },
-			{ instructRound: '', problemWhole: '62', problemNum: '1', problemDen: '2', rounded: '', decimalPercent: '62.5', decimalAnswer: '0.625', template: 'fraction'  },
-			{ instructRound: 'Round the decimal percent to the hundredths place.', problemWhole: '', problemNum: '5', problemDen: '7', rounded: " (rounded to hundredth's place)", decimalPercent: '0.71', decimalAnswer: '0.0071', template: 'fraction'  },
-			{ instructRound: '', problemWhole: '', problemNum: '4', problemDen: '5', rounded: '', decimalPercent: '0.8', decimalAnswer: '0.008', template: 'fraction'  },
+			{ instructRound: '', problemWhole: '7', problemNum: '1', problemDen: '2', rounded: "", decimalPercent: '7.5', decimalAnswer: '0.075', changePercent: 'percent', template: 'fraction'  },
+			{ instructRound: 'Round the decimal percent to the hundredths place.', problemWhole: '66', problemNum: '2', problemDen: '3', rounded: " (rounded to hundredth's place)", decimalPercent: '66.67', decimalAnswer: '0.6667', changePercent: 'rounded percent', template: 'fraction'  },
+			{ instructRound: '', problemWhole: '62', problemNum: '1', problemDen: '2', rounded: '', decimalPercent: '62.5', decimalAnswer: '0.625', changePercent: 'percent', template: 'fraction'  },
+			{ instructRound: 'Round the decimal percent to the hundredths place.', problemWhole: '', problemNum: '5', problemDen: '7', rounded: " (rounded to hundredth's place)", decimalPercent: '0.71', decimalAnswer: '0.0071',  changePercent: 'rounded percent', template: 'fraction'  },
+			{ instructRound: '', problemWhole: '', problemNum: '4', problemDen: '5', rounded: '', decimalPercent: '0.8', decimalAnswer: '0.008', changePercent: 'percent', template: 'fraction'  },
         ];
 
 
