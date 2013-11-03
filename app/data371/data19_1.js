@@ -45,6 +45,8 @@ angular.module('mathSkills').service('data19_1', ['dataUtils', function (dataUti
 							"checkAnswer": true,
 							"help": '\\rowgrp'
 							+'{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}'
+							+'{\\html{ \xA0 &bull; \xA0 }}'
+							+'{\\frac{\\fracstr{100}}{\\fracstr{1}}}'
 							+'{\\sign{ \xA0 = \xA0 }}'
 							+'{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{\\str{%}}}'
 							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
@@ -69,6 +71,8 @@ angular.module('mathSkills').service('data19_1', ['dataUtils', function (dataUti
 							"checkAnswer": true,
 							"help": '\\rowgrp'
 							+'{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}'
+							+'{\\html{ \xA0 &bull; \xA0 }}'
+							+'{\\frac{\\fracstr{100}}{\\fracstr{1}}}'
 							+'{\\sign{ \xA0 = \xA0 }}'
 							+'{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{\\str{%}}}'
 							+'{\\row{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
@@ -94,6 +98,8 @@ angular.module('mathSkills').service('data19_1', ['dataUtils', function (dataUti
 							"checkAnswer": true,
 							"help": '\\rowgrp'
 							+'{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}'
+							+'{\\html{ \xA0 &bull; \xA0 }}'
+							+'{\\frac{\\fracstr{100}}{\\fracstr{1}}}'
 							+'{\\sign{ \xA0 = \xA0 }}'
 							+'{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{\\str{%}}'
 							+'{\\sign{ \xA0 = \xA0 }}'
@@ -106,15 +112,25 @@ angular.module('mathSkills').service('data19_1', ['dataUtils', function (dataUti
             }
         },
         data = [
+			// problem 1
             { fractionWhole: '&nbsp;', fractionNum: '4', fractionDen: '5', answerPercent: '80', template: 'main' },
+			// problem 2
 			{ fractionWhole: '&nbsp;', fractionNum: '1', fractionDen: '10', answerPercent: '10', template: 'main' },
+			// problem 3
 			{ fractionWhole: '&nbsp;', fractionNum: '49', fractionDen: '50', answerPercent: '98', template: 'main' },
+			// problem 4
 			{ fractionWhole: '&nbsp;', fractionNum: '9', fractionDen: '5', answerPercent: '180', template: 'main' },
+			// problem 5
 			{ fractionWhole: '&nbsp;', fractionNum: '16', fractionDen: '10', answerPercent: '160', template: 'main' },
+			// problem 6
 			{ fractionWhole: '&nbsp;', fractionNum: '6', fractionDen: '7', answerFractionWhole: '85', answerFractionNum: '5', answerFractionDen: '7', template: 'second' },
+			// problem 7
 			{ fractionWhole: '&nbsp;', fractionNum: '3', fractionDen: '11', answerFractionWhole: '27', answerFractionNum: '3', answerFractionDen: '11', template: 'second' },
+			// problem 8
 			{ fractionWhole: '&nbsp;', fractionNum: '2', fractionDen: '3', answerFractionWhole: '66', answerFractionNum: '2', answerFractionDen: '3', percentDecimal: '66.7', template: 'third' },
+			// problem 9
 			{ fractionWhole: '&nbsp;', fractionNum: '1', fractionDen: '12', answerFractionWhole: '8', answerFractionNum: '1', answerFractionDen: '3', percentDecimal: '8.3', template: 'third' },
+			// problem 10	
 			{ fractionWhole: '&nbsp;', fractionNum: '2', fractionDen: '9', answerFractionWhole: '22', answerFractionNum: '2', answerFractionDen: '9', percentDecimal: '22.2', template: 'third' },
         ];
 

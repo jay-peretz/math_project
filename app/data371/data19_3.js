@@ -175,15 +175,25 @@ angular.module('mathSkills').service('data19_3', ['dataUtils', function (dataUti
             }
         },
         data = [
+			// problem 1
             { decimalPercent: '38', answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', template: 'main' },
-            { decimalPercent: '44', answerNum: '11', answerDen: '25', helpNum: '44', helpDen: '100', template: 'main' },			
+			// problem 2
+            { decimalPercent: '44', answerNum: '11', answerDen: '25', helpNum: '44', helpDen: '100', template: 'main' },	
+			// problem 3
             { decimalPercent: '35', answerNum: '7', answerDen: '25', helpNum: '35', helpDen: '100', template: 'main' },
-            { problemWhole: '1', problemNum: '1', problemDen: '4', answerNum: '1', answerDen: '80', helpNum: '5', helpDen: '400', template: 'second' },
+			// problem 4
+            { problemWhole: '83', problemNum: '1', problemDen: '3', answerNum: '5', answerDen: '6', helpNum: '250', helpDen: '300', template: 'second' },
+			// problem 5
 			{ problemWhole: '1', problemNum: '5', problemDen: '6', answerNum: '11', answerDen: '600', template: 'second' },
-			{ problemWhole: '&nbsp;', problemNum: '4', problemDen: '5', answerNum: '1', answerDen: '125', helpNum: '4', helpDen: '500', template: 'second' },
-			{  problemDecimal: '5.2', fractionWhole: '5', fractionNum: '2', fractionDen: '10', answerFractionWhole: '5', answerFractionNum: '1', answerFractionDen: '5', helpWhole: '&nbsp;', helpNum: '26', helpDen: '500', answerSecondWhole: '&nbsp;', answerSecondNum: '13', answerSecondDen: '250', template: 'third' },
+			// problem 6
+			{ problemWhole: '&nbsp;', problemNum: '4', problemDen: '5', answerNum: '1', answerDen: '125', template: 'second' },
+			// problem 7
+			{  problemDecimal: '37.5', fractionWhole: '37', fractionNum: '5', fractionDen: '10', answerFractionWhole: '37', answerFractionNum: '1', answerFractionDen: '2', answerSecondWhole: '&nbsp;', answerSecondNum: '3', answerSecondDen: '8', template: 'third' },
+			// problem 8
 			{  problemDecimal: '2.3', answerFractionWhole: '2', answerFractionNum: '3', answerFractionDen: '10', answerSecondWhole: '&nbsp;', answerSecondNum: '23', answerSecondDen: '1000', template: 'fourth' },
-			{  problemDecimal: '8.8', fractionWhole: '8', fractionNum: '8', fractionDen: '10', answerFractionWhole: '8', answerFractionNum: '4', answerFractionDen: '5', helpWhole: '&nbsp;', helpNum: '44', helpDen: '500', answerSecondWhole: '&nbsp;', answerSecondNum: '11', answerSecondDen: '125', template: 'third' },
+			// problem 9
+			{  problemDecimal: '87.5', fractionWhole: '87', fractionNum: '5', fractionDen: '10', answerFractionWhole: '87', answerFractionNum: '1', answerFractionDen: '2', answerSecondWhole: '&nbsp;', answerSecondNum: '7', answerSecondDen: '8', template: 'third' },
+			// problem 10
 			{  problemDecimal: '3.7', answerFractionWhole: '3', answerFractionNum: '7', answerFractionDen: '10', answerSecondWhole: '&nbsp;', answerSecondNum: '37', answerSecondDen: '1000', template: 'fourth' }
         ];
 
