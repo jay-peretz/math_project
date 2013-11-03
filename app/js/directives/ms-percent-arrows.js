@@ -39,6 +39,7 @@ angular.module('mathSkills')
 					multiplierPlacesRight = 0,
 					multiplicandPlacesLeft = 0,
 					multiplicandPlacesRight = 0,
+					addedZeros = 0,
 					addText = "",
 					percentSignOrEmpty;
 					
@@ -99,27 +100,46 @@ angular.module('mathSkills')
 							}
 						};
 						
-						// get the maximum number of digits right and left of the answer decimal place
-						
+						multiplierPlacesRight = decimalDigits(problemObjects[1]);
+						multiplicandPlacesRight = decimalDigits(problemObjects[0]);
 						answerPlacesRight = decimalDigits(answerObject);
+						
+						// get the number of digits left of the answer decimal place
+						
 						if (answerObject.toString().indexOf('.') > 0) {
 							answerPlacesLeft = answerObject.toString().length - (answerPlacesRight + 1);
 						} else {
 							answerPlacesLeft = answerObject.toString().length;
 						}
 						
-						// get the maximum number of digits right and left of the multiplier decimal place
+						// get the number of places shifted and whether the shift is left or right
+						if (multiplicandPlacesRight < answerPlacesRight) {
+							$scope.pointLeftOrRight = "left";
+							$scope.decimalDisplacement = Math.abs(Math.round(Math.log(problemObjects[1])/Math.log(10)));
+						} else {
+							$scope.pointLeftOrRight = "right";
+							$scope.decimalDisplacement = Math.abs(Math.round(Math.log(problemObjects[1])/Math.log(10)));
+						}
 						
-						multiplierPlacesRight = decimalDigits(problemObjects[1]);
+						// correct for the number of places shifted > number of places left of decimal in the answer
+						if ($scope.pointLeftOrRight === "right" && $scope.decimalDisplacement > answerPlacesLeft) {
+							while ($scope.decimalDisplacement > answerPlacesLeft) {
+								answerDisplayArray.unshift("0");
+								answerPlacesLeft += 1;
+								addedZeros += 1;
+							}
+						}
+						
+						// get the number of digits left of the multiplier decimal place
+						
 						if (problemObjects[1].toString().indexOf('.') > 0) {
 							multiplierPlacesLeft = problemObjects[1].toString().length - (multiplierPlacesRight + 1);
 						} else {
 							multiplierPlacesLeft = problemObjects[1].toString().length;
 						}
 						
-						// get the maximum number of digits right and left of the multiplicand decimal place
+						// get the number of digits left of the multiplicand decimal place
 						
-						multiplicandPlacesRight = decimalDigits(problemObjects[0]);
 						if (problemObjects[0].toString().indexOf('.') > 0) {
 							multiplicandPlacesLeft = problemObjects[0].toString().length - (multiplicandPlacesRight + 1);
 						} else {
@@ -135,7 +155,12 @@ angular.module('mathSkills')
 						}
 						answerDisplayArray = $filter('decimal-to-display-array')(answerObject, answerPlacesLeft, answerPlacesRight, 1);
 						
-
+						// in answerDisplayArray, replace " " left of digits with "0"
+						for (var ii = 0; ii < addedZeros; ii += 1) {
+							if (answerDisplayArray[ii] === "\xA0") {
+								answerDisplayArray[ii] = "0";
+							}
+						}
 		
 						$scope.decimalPointerArray = [];
 						$scope.borderBelowArray = [];
@@ -181,15 +206,6 @@ angular.module('mathSkills')
 							// use this to add a carat under the decimal point if desired
 							$scope.decimalPointerArray.push("^");
 							$scope.decimalPointerArray.push("\xA0");
-						}
-						
-						// get the number of places shifted and whether the shift is left or right
-						if (multiplicandPlacesRight < answerPlacesRight) {
-							$scope.pointLeftOrRight = "left";
-							$scope.decimalDisplacement = Math.abs(Math.round(Math.log(problemObjects[1])/Math.log(10)));
-						} else {
-							$scope.pointLeftOrRight = "right";
-							$scope.decimalDisplacement = Math.abs(Math.round(Math.log(problemObjects[1])/Math.log(10)));
 						}
 						
 						if (tagParameters[1] === "100") {
