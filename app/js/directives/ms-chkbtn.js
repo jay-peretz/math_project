@@ -133,7 +133,7 @@ angular.module('mathSkills')
                                     'font-size: 1.8em;'+
                                     'width: 29px;'+
                                     'height: 29px;'+
-                                    'border:2px solid black;'+
+                                    
                                 '}'+
                                 '.marg{'+
                                     'margin-bottom: 4px;'+
