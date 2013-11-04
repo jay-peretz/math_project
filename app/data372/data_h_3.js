@@ -1,6 +1,6 @@
 /*global angular */
 
-angular.module('mathSkills').service('dataH_3', ['dataUtils', function (dataUtils) {
+angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUtils) {
     var desc = {
 			title: 'H.3 Subtraction of Mixed Numbers',
       		path: 'H.3-subtraction-of-mixed-numbers',
