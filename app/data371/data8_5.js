@@ -65,9 +65,9 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
 											'{\\html{&nbsp;}}'+
 											'{\\choose{[' +
 												'\\ins{Yes. Write a setup that will solve for the total number of houses in the subdivision.},' +
-                                        '\\ins{We must divide to solve this problem. The given total value has been divided up into equal-sized parts&mdash;each worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars.  Each <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars represents one house. Write a setup that will solve for the number of houses in the subdivision.}' +    
+                                        		'\\ins{We must divide to solve this problem. The given total value has been divided up into equal-sized parts&mdash;each worth <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars.  Each <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars represents one house. Write a setup that will solve for the number of houses in the subdivision.}' +    
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\css{\\select{$firstunitwhole $firstunitn/$firstunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$secondunitn/$secondunitd"]}}{width160}}{\\sign{&div;}}{\css{\\select{$secondunitn/$secondunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$secondunitn/$secondunitd"]}}{width160}}}' +
+											'{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\sign{&div;}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}' + 
 										'}'+
 									'{well}',
                         controls: {
@@ -155,7 +155,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
 												'\\ins{Yes, now write a setup that will solve this problem.},' +
                                         		'\\ins{We must divide to solve this problem.  The <span class=underline>given total value of the subdivision</span> is being divided up into $number identically-priced houses.  Pick the set up that will solve for the value of each house.}' +    
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\css{\\select{$firstunitwhole $firstunitn/$firstunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$secondunitn/$secondunitd"]}}{width160}}{\\sign{&div;}}{\css{\\select{$number}{["$firstunitwhole $firstunitn/$firstunitd", "$number"]}}{width160}}}' +
+											'{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\sign{&div;}}{\\frac{\\input{$number}}{\\input{1}}}}' + 
 										'}'+
 									'{well}',
                         controls: {
@@ -246,9 +246,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
 												'\\ins{Yes, now write a setup that will solve this problem.},' +
 												'\\ins{We must multiply to solve this problem.  The <span class=underline>given value of each house in the subdivision</span> is being multiplied by $number houses.  Pick the set up that will solve for the total combined value of the houses in the subdivision.}' +    
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\css{\\select{[\"$firstMult\",\"$secondMult\"]}{$multArray}}{width160}}'+
-											'{\\sign{&bull;}}'+
-                                			'{\css{\\select{[\"$secondMult\",\"$firstMult\"]}{$multArray}}{width160}}}'+ 
+											'{\\grp{\\frac{\\input{$firstMultNum}}{\\input{$firstMultDen}}}{\\html{&bull;}}{\\frac{\\input{$secondMultNum}}{\\input{$secondMultDen}}}}' +
 										'}'+
 									'{well}}',
                         controls: {
@@ -265,7 +263,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
 												'\\rowgrp{\\ins{Now solve the problem.}},' +
 												'\\ins{This is a *repeated addition* or multiplication problem.  The value of each house, <sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> million dollars, needs to be repeated $number times. The correct setup is shown below. Now solve the problem.}' +
 											']}{$$previousCorrect}}' +
-											'{\\grp{html{$$firstMult}}{\\sign{&bull;}}{\\html{$$secondMult}}{\\sign{=}}{\\grp{\\html{&#36;}}{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{million dollars}}}}' +
+											'{\\grp{\\frac{\\fracstr{$$number}}{\\fracstr{$$oneWhole}}}{\\html{&bull;}}{\\frac{\\fracstr{$$secondunitn}}{\\fracstr{$$secondunitd}}}{\\sign{=}}{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\html{million dollars}}}' +
 										'}'+
 									'{well}',
                         controls: {
@@ -335,7 +333,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
 												'\\ins{Yes. Write a setup that will solve for the number of cookie portions each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds in the jar.},' +
                                         '\\ins{We must divide to solve this problem. The given total weight of cookies has been divided up into equal-sized portions&mdash;each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds.  Each $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds represents one portion. Write a setup that will solve for the number of cookie portions in the jar.}' +    
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\css{\\select{$firstunitwhole $firstunitn/$firstunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$secondunitwhole $secondunitn/$secondunitd"]}}{width160}}{\\sign{&div;}}{\css{\\select{$secondunitwhole $secondunitn/$secondunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$secondunitwhole $secondunitn/$secondunitd"]}}{width160}}}'+
+											'{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\sign{&div;}}{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}}' + 
 										'}'+
 									'{well}',
                         controls: {
@@ -1083,7 +1081,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
 			// problem 2
             { firstunitwhole: '2', firstunitn: '7', firstunitd: '10', secondunitn: '3', secondunitd: '10', number: '9', illustration: '8.5-11_Houses_Money/400x300/Millions_houses_b.jpg', template: 'housesDiv2' },
 			// problem 3
-            { firstunitwhole: '2', firstunitn: '7', firstunitd: '10', secondunitn: '3', secondunitd: '10', number: '9', firstMult: '9', secondMult: '3/10', multArray: '[\\"9\\",\\"3/10\\"]', flip: [[1], ["firstMult", "secondMult"]], illustration: '8.5-11_Houses_Money/400x300/Millions_houses_c.jpg', template: 'housesMul' },
+            { firstunitwhole: '2', firstunitn: '7', firstunitd: '10', secondunitn: '3', secondunitd: '10', number: '9', oneWhole: '1', firstMultNum: '[\\"9\\",\\"3\\"]', firstMultDen: '[\\"1\\",\\"10\\"]', secondMultNum: '[\\"3\\",\\"9\\"]', secondMultDen: '[\\"10\\",\\"1\\"]', flip: [[1], ["secondunitn", "number"], ["oneWhole", "secondunitd"]], illustration: '8.5-11_Houses_Money/400x300/Millions_houses_c.jpg', template: 'housesMul' },
 			// problem 4
             { firstunitwhole: '4', firstunitn: '4', firstunitd: '5', secondunitwhole: '1', secondunitn: '1', secondunitd: '5', number: '4', illustration: '8.5-12_Cookies/400x300/Cookies_a.jpg', template: 'cookiesDiv1' },
 			// problem 5
