@@ -36,7 +36,7 @@ angular.module('mathSkills')
                 // Change the path after a short delay.
                 $timeout(function () {
                     $location.path(newPath);
-                }, 200);
+                }, 1000);
             });
 
             $scope.$on('answer', function (e, data) {

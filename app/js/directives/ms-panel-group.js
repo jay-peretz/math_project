@@ -54,7 +54,7 @@ angular.module('mathSkills')
                                     $scope.currentPanel += 1;
 //if ($scope.currentPanel === $scope.panels.length - 1) {$scope.$broadcast('answerBtn', 'Next Problem'); } // set Answer Button Text
                                     $scope.panelScopes[$scope.currentPanel].$broadcast('checkFocus');
-                                }, 200);
+                                }, 1000);
                             // Otherwise $emit panelGroupDone
                             } else {
                                 $scope.$emit('panelGroupDone', {
