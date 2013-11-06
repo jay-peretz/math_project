@@ -421,7 +421,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
 												'\\ins{Yes, now write a setup that will solve this problem.},' +
                                         '\\ins{We must divide to solve this problem.  The <span class=underline>given total weight</span> of the cookies in the jar is being divided up into $number equal portions of cookies.  Pick the set up that will solve for the weight of each portion.}' +    
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\css{\\select{$firstunitwhole $firstunitn/$firstunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$number"]}}{width160}}{\\sign{&div;}}{\css{\\select{$number}{["$firstunitwhole $firstunitn/$firstunitd", "$number"]}}{width160}}}'+
+											'{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\sign{&div;}}{\\frac{\\input{$number}}{\\input{1}}}}' + 
 										'}'+
 									'{well}',
                         controls: {
@@ -601,7 +601,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
 												'\\ins{Yes. Write a setup that will solve for the number of minutes required to type $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages at $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page per minute.},' +
 												'\\ins{We must divide to solve this problem. The given total number of pages ($firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub>) were typed at a rate of $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page per minute.  Each $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page represents one minute of typing. Write a setup that will solve for the number of $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> of a page in $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages.}' +    
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\css{\\select{$firstunitwhole $firstunitn/$firstunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$secondunitwhole $secondunitn/$secondunitd"]}}{width160}}{\\sign{&div;}}{\css{\\select{$secondunitwhole $secondunitn/$secondunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$secondunitwhole $secondunitn/$secondunitd"]}}{width160}}}' +
+											'{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\sign{&div;}}{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}}' + 
 										'}'+
 									'{well}',
                         controls: {
@@ -689,7 +689,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
 												'\\ins{Yes. Write a setup that will solve for the number of pages per minute that must be typed in order to type $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages in $number minutes.},' +
 												'\\ins{We must divide to solve this problem. The given total number of pages ($firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub>) were typed in $number minutes.  What fraction of a page was typed in one minute?  Write a setup that will solve for the fraction of $firstunitwhole<sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages that could be typed in one minute.}' +    
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\css{\\select{$firstunitwhole $firstunitn/$firstunitd pages}{["$firstunitwhole $firstunitn/$firstunitd pages", "$number minutes"]}}{width160}}{\\sign{&div;}}{\css{\\select{$number minutes}{["$firstunitwhole $firstunitn/$firstunitd pages", "$number minutes"]}}{width160}}}' +
+											'{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\sign{&div;}}{\\frac{\\input{$number}}{\\input{1}}}}' + 
 										'}'+
 									'{well}',
                         controls: {
@@ -707,7 +707,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
 												'\\ins{Great! Now give the solution.},' +
 												'\\ins{This is a division problem.  When we set up a division problem, the <span class=underline>first number must be the total</span> that is being divided up.  In this case the total being divided up is the number of pages in the tray ($firstunitwhole <sup>$firstunitn</sup>&#8260;<sub>$firstunitd</sub> pages), so the number of pages in the tray is placed first in the division set up.  The correct setup is below. Now solve the problem.}' +    
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\sign{&div;}}{\\html{$number}}{\\sign{=}}{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{\\html{pages/minute}}}' +
+											'{\\grp{\\mixed{\\fracstr{$firstunitwhole}}{\\frac{\\fracstr{$firstunitn}}{\\fracstr{$firstunitd}}}}{\\sign{&div;}}{\\frac{\\fracstr{$number}}{\\fracstr{1}}}{\\sign{=}}{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}{\\html{pages/minute}}}' +
 										'}'+
 									'{well}',
                         controls: {
@@ -866,7 +866,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
 												'\\ins{Yes. Choose the setup that will solve for the number of cans each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds in the box.},' +
 												'\\ins{We must divide to solve this problem. The given total weight of the box of tomatos is divided up into cans each weighing $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds.  Each $secondunitwhole<sup>$secondunitn</sup>&#8260;<sub>$secondunitd</sub> pounds represents one can. Choose the setup that will solve for the number of cans in the box.}' +    
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\css{\\select{$firstunitwhole $firstunitn/$firstunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$secondunitwhole $secondunitn/$secondunitd"]}}{width160}}{\\sign{&div;}}{\css{\\select{$secondunitwhole $secondunitn/$secondunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$secondunitwhole $secondunitn/$secondunitd"]}}{width160}}}' +
+											'{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\sign{&div;}}{\\mixed{\\input{$secondunitwhole}}{\\frac{\\input{$secondunitn}}{\\input{$secondunitd}}}}}' +
 										'}'+
 									'{well}}',
                         controls: {
@@ -954,7 +954,7 @@ angular.module('mathSkills').service('data8_5', ['dataUtils', function (dataUtil
 												'\\ins{Yes, now write a setup that will solve this problem.},' +
 												'\\ins{We must divide to solve this problem.  The <span class=underline>given total weight</span> of the cans in the box is being divided up into $number cans, all of the same weight.  Pick the set up that will solve for the weight of each can.}' +    
 											']}{$$previousCorrect}}' +
-											'{\\grp{\\css{\\select{$firstunitwhole $firstunitn/$firstunitd}{["$firstunitwhole $firstunitn/$firstunitd", "$number"]}}{width160}}{\\sign{&div;}}{\css{\\select{$number}{["$firstunitwhole $firstunitn/$firstunitd", "$number"]}}{width160}}}' +
+											'{\\grp{\\mixed{\\input{$firstunitwhole}}{\\frac{\\input{$firstunitn}}{\\input{$firstunitd}}}}{\\sign{&div;}}{\\frac{\\input{$number}}{\\input{1}}}}' + 
 										'}'+
 									'{well}}',
                         controls: {
