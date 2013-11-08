@@ -6,8 +6,10 @@ angular.module('mathSkills')
             directiveTemplate: '<ms-percent-arrows expected={{expected}}></ms-percent-arrows>'
         });
     }])
-	// decimaltopercent receives four parameters:  a decimal number to convert, a multiplier for conversion (e.g. 100),
-	// the name of the type converted from (e.g., decimal), and the name of the type converted to (e.g., percentage)
+	// decimaltopercent receives four parameters:  
+	// a decimal number to convert, a multiplier for conversion (e.g. 100),
+	// the name of the type converted from (e.g., decimal), 
+	// and the name of the type converted to (e.g., percentage)
   .directive('msPercentArrows', [
 	'parser',
 	function (parser) {

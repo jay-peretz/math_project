@@ -23,7 +23,7 @@ angular.module('mathSkills').service('data19_2', ['dataUtils', function (dataUti
 							+'{\\row{\\str{Divide the numerator of the fraction by the denominator.}}}'
 							+'{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}'
 							+'{\\row{\\str{the fraction \xA0}}{\\frac{\\str{$fractionNum}}{\\str{$fractionDen}}}'
-							+'{\\str{\xA0 means \xA0 $fractionNum }}{\\css{\\str{\xF7}}{bigger}}{\\str{\xA0 $fractionDen}}}'
+							+'{\\str{\xA0 means \xA0 $fractionNum }}{\\css{\\str{\xF7}}{bigger}}{\\str{ $fractionDen}}}'
 							+'{\\row{\\html{&nbsp;}}}'
 							+'{\\row{\\css{\\str{\xA0 Answer: \xA0 $answerDecimal}}{help-answer-text}}}'
 						}
@@ -44,9 +44,15 @@ angular.module('mathSkills').service('data19_2', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\percentarrows{$answerDecimal}{100}{decimal}{percent}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{Answer: $answerPercent %}}{help-answer-text}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}{\\sign{=}}{\\str{$answerDecimal}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Change the decimal to a percentage:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\percentarrows{$answerDecimal}{100}{decimal}{percent}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css{\\str{Answer: $answerPercent %}}{help-answer-text}}'
+										+'{\\html{&nbsp;}}'
 						}
 					}]
                 }]
@@ -88,9 +94,16 @@ angular.module('mathSkills').service('data19_2', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\percentarrows{$answerDecimal}{100}{decimal}{percent}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{Answer: $answerPercent %}}{help-answer-text}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}{\\sign{=}}{\\str{$answerDecimal}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Change the decimal to a percentage:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\percentarrows{$answerDecimal}{100}{decimal}{percent}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css{\\str{Answer: $answerPercent %}}{help-answer-text}}'
+										+'{\\html{&nbsp;}}'
 						}
 					}, {
 						problem: '\\rowgrp'

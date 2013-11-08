@@ -32,9 +32,9 @@ angular.module('mathSkills').service('data18_3', ['dataUtils', function (dataUti
 							"checkAnswer": true,
 							"help": '\\rowgrp'
 							+'{\\row{\\str{The fractional percent of \xA0}}{\\mixed{\\html{$problemWhole}}{\\frac{\\str{$problemNum}}{\\str{$problemDen}}}}{\\str{%}}}'
-							+'{\\row{\\str{equals the decimal percent of \xA0}}{\\str{$decimalPercent%}}}'
+							+'{\\row{\\str{equals the decimal percent of \xA0}}{\\str{$decimalPercent% $rounded}}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{Answer$rounded:}}{help-answer-text}}'
+							+'{\\css{\\str{Answer:}}{help-answer-text}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\css{\\str{$decimalPercent%}}{help-answer-text}}'
 							+'{\\html{&nbsp;}}'

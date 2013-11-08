@@ -139,15 +139,15 @@ angular.module('mathSkills').service('data19_4', ['dataUtils', function (dataUti
         },
         data = [
 			// problem 1
-            { decimalPercent: '38', decimal: '.38', answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', outLoud: 'thirty-eight hundredths', template: 'main' },
+            { decimalPercent: '38', decimal: '0.38', answerNum: '19', answerDen: '50', helpNum: '38', helpDen: '100', outLoud: 'thirty-eight hundredths', template: 'main' },
 			// problem 2
-            { decimalPercent: '82', decimal: '.82', answerNum: '41', answerDen: '50', helpNum: '82', helpDen: '100', outLoud: 'eighty-two hundredths', template: 'main' },
+            { decimalPercent: '82', decimal: '0.82', answerNum: '41', answerDen: '50', helpNum: '82', helpDen: '100', outLoud: 'eighty-two hundredths', template: 'main' },
 			// problem 3
-            { decimalPercent: '6.7', decimal: '.067', answerNum: '67', answerDen: '1000', helpNum: '67', helpDen: '1000', outLoud: 'sixty-seven thousandths', template: 'main' },
+            { decimalPercent: '6.7', decimal: '0.067', answerNum: '67', answerDen: '1000', helpNum: '67', helpDen: '1000', outLoud: 'sixty-seven thousandths', template: 'main' },
 			// problem 4
-            { decimalPercent: '3.5', decimal: '.035', answerNum: '7', answerDen: '200', helpNum: '35', helpDen: '1000', outLoud: 'thirty-five thousandths', template: 'main' },
+            { decimalPercent: '3.5', decimal: '0.035', answerNum: '7', answerDen: '200', helpNum: '35', helpDen: '1000', outLoud: 'thirty-five thousandths', template: 'main' },
 			// problem 5
-            { decimalPercent: '4.73', decimal: '.0473', answerNum: '473', answerDen: '10000', helpNum: '473', helpDen: '10000', outLoud: 'four hundred seventy-three ten-thousandths', template: 'main' },
+            { decimalPercent: '4.73', decimal: '0.0473', answerNum: '473', answerDen: '10000', helpNum: '473', helpDen: '10000', outLoud: 'four hundred seventy-three ten-thousandths', template: 'main' },
 			// problem 6
 			{ problemWhole: '1', problemNum: '4', problemDen: '5', decimalPercent: '1.8', decimal: '0.018',  answerNum: '9', answerDen: '500', helpNum: '18', helpDen: '1000', outLoud: 'eighteen thousandths', template: 'second' },
 			// problem 7
