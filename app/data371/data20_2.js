@@ -40,13 +40,21 @@ angular.module('mathSkills').service('data20_2', function () {
                     }, {
                         problem: '\\html{$problem}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\html{},\\ins{The standard percent proportion is set up as follows:}]}{$$previousCorrect}'+
+                            '\\choose{[\\html{},\\html{The standard percent proportion is set up as follows:}]}{$$previousCorrect}'+
+						'}{'+
+                            '\\html{&nbsp;}'+
                         '}{'+
                             '\\choose{[\\html{},\\grp{\\frac{\\str{$$dln}}{\\str{$$dld}}}{\\sign{=}}{\\frac{\\str{$$drn}}{\\str{$$drd}}}]}{$$previousCorrect}'+
+						'}{'+
+                            '\\html{&nbsp;}'+
                         '}{'+
-                            '\\choose{[\\ins{Yes!},\\ins{We substitute the given values to get:}]}{$$previousCorrect}'+
+                            '\\choose{[\\html{Yes!  The correct setup is:},\\html{We substitute the given values to get:}]}{$$previousCorrect}'+
+						'}{'+
+                            '\\html{&nbsp;}'+
                         '}{'+
                             '\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}'+
+						'}{'+
+                            '\\html{&nbsp;}'+
                         '}{'+
                             '\\ins{Now solve the problem.}'+
                         '}{'+
@@ -60,8 +68,12 @@ angular.module('mathSkills').service('data20_2', function () {
                         problem: '\\html{$problem}',
                         answer: '\\wb{\\rowgrp{'+
                             '\\choose{[\\html{},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}'+
-                        '}{'+
-                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems. We substitute the given values to get:}]}{$$previousCorrect}'+
+						'}{'+
+                            '\\html{&nbsp;}'+
+						'}{'+
+                            '\\choose{[\\html{Congratulations!},\\html{The correct answer is found by following the process to solve all proportion problems. We substitute the given values to get:}]}{$$previousCorrect}'+
+						'}{'+
+							'\\html{&nbsp;}'+
                         '}{'+
                             '\\choose{[\\grp{\\frac{\\str{$$answer}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\html{X}}{\\sign{=}}{\\html{$$ld &#149; $$rn &#247; $$rd}}}{proportion-application}]}{$$previousCorrect}'+
                         '}{'+
