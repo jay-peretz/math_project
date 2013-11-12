@@ -133,6 +133,9 @@ button.btn.btn-.bigger {
 button.btn.btn-success.bigger {
 	font-size:125%;
 }
+button.btn.btn-.huge {
+	font-size:175%;
+}
 .underline {
 	text-decoration:underline;
 }
