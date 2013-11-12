@@ -28,18 +28,17 @@ angular.module('mathSkills')
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
 								// improve centering of brace when input is mixed number
 								if (parser.extractTag($scope.answers[$scope.cur]).tag !== "mixed") {
-									tagString = '\\grp{\\html{}}{\\css{\\sign{' + parsed.args[0] + '}}{bigger}}';
+									tagString = '\\grp{\\css{\\sign{' + parsed.args[0] + '}}{bigger}}{\\html{&nbsp;}}';
 								} else {
-                                	tagString = '\\grp{\\html{&nbsp;}}{\\html{&nbsp;}}{\\css{\\sign{' + parsed.args[0] + '}}{bigger}}{\\html{&nbsp;}}{\\html{&nbsp;}}';
+                                	tagString = '\\grp{\\html{&nbsp;}}{\\css{\\sign{' + parsed.args[0] + '}}{bigger}}{\\html{&nbsp;}}{\\html{&nbsp;}}';
 								}
                             }
                             return tagString;
                         });
 						var newArgs2 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
-							
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
-                                tagString = '\\rowgrp{css{\\html{&#125;}}{brace90}}{' + $scope.answers[$scope.cur] + '}';
+                                tagString = '\\rowgrp{css{\\html{&#125;}}{brace90Simple}}{' + $scope.answers[$scope.cur] + '}';
                             } else {
 								tagString = '\\css{' + tagString + '}{noShow}';
 							}

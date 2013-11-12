@@ -9,3 +9,11 @@
 ms-order-operations-simple table {
 	text-align:center;
 }
+.brace90Simple {
+	margin-left:.7em;
+	transform: rotate(90deg) scale(1,4);
+	  -webkit-transform: rotate(90deg) scale(1,4);
+	  -moz-transform: rotate(90deg) scale(1,4);
+	  -ms-transform: rotate(90deg) scale(1,4);
+	  -o-transform: rotate(90deg) scale(1,4);
+}
