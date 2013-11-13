@@ -1,4 +1,3 @@
-// Karma configuration
 // Generated on Fri Mar 29 2013 12:32:24 GMT-0700 (Pacific Daylight Time)
 
 
