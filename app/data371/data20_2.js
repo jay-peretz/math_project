@@ -1,7 +1,6 @@
 /*global angular */
-
-angular.module('mathSkills').service('data20_2', function () {
-    var ret = {
+angular.module('mathSkills').service('data20_2', ['dataUtils', function (dataUtils) {
+    var desc = {
             title: '20.2 Solve Percent Problems (proportion method)',
             path: '20.2-solve-percent-problems',
             children: []
@@ -110,22 +109,8 @@ angular.module('mathSkills').service('data20_2', function () {
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             }
-        ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('(\\$)?\\$' + symbol, 'g'), function ($0, $1) { return $1?$0 : data[symbol]; }); //console.log(string); 
-                }
-            }
-            var ret = JSON.parse(string);
-            ret.data = angular.copy(data);
-            return ret;
-        };
-
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
-    
-    return ret;
-});
+        ];
+		
+    return dataUtils.build(desc, template, data);
+	
+}]);
