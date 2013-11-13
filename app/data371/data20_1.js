@@ -43,7 +43,7 @@ angular.module('mathSkills').service('data20_1', ['dataUtils', function (dataUti
 						 +'{\\str{%}}'
 						 +'{\\wholepart{\xA0 of $problemNumber}}}'
 						 +'{\\row{\\html{&nbsp;}}'
-						 +'{\\str{is equal to what amount?}}}',
+						 +'{\\str{Solve by changing the fractional percentage into a decimal.}}}',
 						answer: '\\grp{\\input{$answer}}',
 						controls: {
 							"checkAnswer": true,
@@ -83,8 +83,8 @@ angular.module('mathSkills').service('data20_1', ['dataUtils', function (dataUti
 						 +'{\\str{%}}'
 						 +'{\\wholepart{\xA0 of $problemNumber}}}'
 						 +'{\\row{\\html{&nbsp;}}'
-						 +'{\\str{is equal to what amount?}}}',
-						answer: '\\grp{\\input{$answer}}',
+						 +'{\\str{Solve by changing the fractional percentage into a fraction.}}}',
+						answer: '\\mixed{input{$wholeAnswer}}{\\frac{\\input{$numAnswer}}{\\input{$denAnswer}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -92,21 +92,25 @@ angular.module('mathSkills').service('data20_1', ['dataUtils', function (dataUti
 							+'{\\html{&nbsp;}}'
 							+'{\\row'
 							+'{\\mixed{\\html{$problemWhole}}{\\frac{\\str{$problemNumerator}}{\\str{$problemDenominator}}}}'
-							+'{\\str{%}}{\\sign{&sdot;}}{\\str{$problemNumber}}{\\sign{ = }}}'  
+							+'{\\str{%}}{\\sign{&sdot;}}{\\str{$problemNumber}}{\\sign{\xA0 = }}}'  
 							+'{\\html{&nbsp;}}'
 							+'{\\str{First... change the percent in fractional form into a fraction:}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\row{\\mixed{\\html{$problemWhole}}{\\frac{\\str{$problemNumerator}}{\\str{$problemDenominator}}}}'
 							+'{\\css{\\html{ \xF7 }}{bigger}}'
 							+'{\\frac{\\str{100}}{\\str{1}}}'
-							+'{\\sign{ = }}'
-							+'{\\frac{\\str{$numNew}}{\\str{$denNew}}}}'
+							+'{\\sign{\xA0 = \xA0}}'
+							+'{\\mixed{html{$wholeNew}}{\\frac{\\str{$numNew}}{\\str{$denNew}}}}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\str{The problem now is:}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\row{\\frac{\\str{$numNew}}{\\str{$denNew}}}{\\sign{&sdot;}}{\\str{$problemNumber}}{\\sign{ = }}{\\str{$answer}}}'
+							+'{\\row{\\mixed{html{$wholeNew}}{\\frac{\\str{$numNew}}{\\str{$denNew}}}}{\\sign{&sdot;}}{\\str{$problemNumber}}{\\sign{\xA0 = \xA0}}{\\mixed{html{$wholeAnswer}}{\\frac{\\str{$numAnswer}}{\\str{$denAnswer}}}}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{Answer:  $answer}}{help-answer-text help-answer-margin-right}}'
+							+'{\\css{\\grp'
+								+'{\\str{Answer: }}'
+								+'{\\mixed{html{$wholeAnswer}}{\\frac{\\str{$numAnswer}}{\\str{$denAnswer}}}}'
+								+'}'
+							+'{help-answer-text help-answer-margin-right}}'
 							+'{\\html{&nbsp;}}'
 						}
                     }]
@@ -127,13 +131,13 @@ angular.module('mathSkills').service('data20_1', ['dataUtils', function (dataUti
 			// problem 6
 			{ problemWhole: '&nbsp;', problemNumerator: '1', problemDenominator: '10', problemNumber: '140', fractionAsDecimal: '0.1', fractionAsPercent: '0.001',  answer: '0.14', template: 'fraction'  },
 			// problem 7
-			{ problemWhole: '&nbsp;', problemNumerator: '5', problemDenominator: '8', problemNumber: '120', fractionAsDecimal: '0.625', fractionAsPercent: '0.00625',  answer: '0.75', template: 'fraction'  },
+			{ problemWhole: '2', problemNumerator: '1', problemDenominator: '2', problemNumber: '60', fractionAsDecimal: '2.5', fractionAsPercent: '0.025',  answer: '1.5', template: 'fraction'  },
 			// problem 8
-			{ problemWhole: '83', problemNumerator: '1', problemDenominator: '3', problemNumber: '180', numNew: '5', denNew: '6',  answer: '150', template: 'fractionForm'  },
-			// problem 9
-			{ problemWhole: '8', problemNumerator: '3', problemDenominator: '4', problemNumber: '60', fractionAsDecimal: '8.75', fractionAsPercent: '0.0875',  answer: '5.25', template: 'fraction'  },
+			{ problemWhole: '', problemNumerator: '5', problemDenominator: '8', problemNumber: '120', wholeNew: '', numNew: '1', denNew: '160',  wholeAnswer: '', numAnswer: '3', denAnswer: '4', template: 'fractionForm'  },
+			// problem 9 
+			{ problemWhole: '137', problemNumerator: '1', problemDenominator: '2', problemNumber: '72', wholeNew: '', numNew: '11', denNew: '8',  wholeAnswer: '99', numAnswer: '', denAnswer: '', template: 'fractionForm'  },
 			// problem 10 
-			{ problemWhole: '137', problemNumerator: '1', problemDenominator: '2', problemNumber: '72', fractionAsDecimal: '137.5', fractionAsPercent: '1.375',  answer: '99', template: 'fraction'  }
+			{ problemWhole: '83', problemNumerator: '1', problemDenominator: '3', problemNumber: '180', wholeNew: '', numNew: '5', denNew: '6',  wholeAnswer: '150', numAnswer: '', denAnswer: '',  answer: '150', template: 'fractionForm'  },
         ];
 
 
