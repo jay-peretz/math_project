@@ -32,6 +32,32 @@ angular.module('mathSkills').service('data20_1', ['dataUtils', function (dataUti
 						}
                     }]
                 }]
+            }, 
+            main2: {
+                title: 'Change a Percent to a Decimal',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                         problem: '\\str{$problemPercent% of $problemNumber is what amount?}',
+						answer: '\\grp{\\input{$answer}}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\row{\\str{The percent expression is $problemPercent%}}{\\sign{&sdot;}}{\\str{$problemNumber}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\str{Change the percent value into its equivalent decimal by dividing by 100:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\row{\\str{$problemPercent}}{\\sign{&divide;}}{\\str{100}}{\\sign{ = }}{\\str{ $problemEquivalent}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\str{The problem now is:}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\row{\\str{$problemEquivalent}}{\\sign{&sdot;}}{\\str{$problemNumber}}{\\sign{ = }}{\\str{$answer}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\css{\\str{Answer:  $answer}}{help-answer-text help-answer-margin-right}}'
+							+'{\\html{&nbsp;}}'
+						}
+                    }]
+                }]
             },
 			fraction: {
                 title: 'Change a Percent to a Decimal',
@@ -121,11 +147,11 @@ angular.module('mathSkills').service('data20_1', ['dataUtils', function (dataUti
 			// problem 1
             { problemPercent: '1', problemNumber: '113', problemEquivalent: '0.01', answer: '1.13', template: 'main'  },
 			// problem 2
-            { problemPercent: '54', problemNumber: '31', problemEquivalent: '0.54', answer: '16.74', template: 'main'  },
+            { problemPercent: '54', problemNumber: '31', problemEquivalent: '0.54', answer: '16.74', template: 'main2'  },
 			// problem 3
             { problemPercent: '223', problemNumber: '157', problemEquivalent: '2.23', answer: '350.11', template: 'main'  },
 			// problem 4
-            { problemPercent: '30', problemNumber: '60', problemEquivalent: '0.3', answer: '18', template: 'main'  },
+            { problemPercent: '30', problemNumber: '60', problemEquivalent: '0.3', answer: '18', template: 'main2'  },
 			// problem 5
             { problemPercent: '12.8', problemNumber: '300', problemEquivalent: '0.128', answer: '38.4', template: 'main'  },
 			// problem 6
