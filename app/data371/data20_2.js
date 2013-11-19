@@ -58,10 +58,32 @@ angular.module('mathSkills').service('data20_2', ['dataUtils', function (dataUti
                             '\\ins{$helpText}'+
                         '}{'+
                             '\\css{\\grp{\\html{X}}{\\sign{=}}{\\input{$$answer}}{\\html{$symbol}}}{proportion-application}'+
-                        '}}{well}',
+                        '}}{well}{end}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
+                        }
+                    }, {
+                        problem: '\\html{$problem}',
+                        answer: '\\wb{\\rowgrp{'+
+                            '\\choose{[\\html{},\\grp{\\frac{\\str{$$ln}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}}]}{$$previousCorrect}'+
+                        '}{'+
+							'\\html{&nbsp;}'+
+						'}{'+
+                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems. We substitute the given values to get:}]}{$$previousCorrect}'+
+                        '}{'+
+                            '\\choose{[\\grp{\\frac{\\str{$$answer}}{\\str{$$ld}}}{\\sign{=}}{\\frac{\\str{$$rn}}{\\str{$$rd}}},\\css{\\grp{\\html{X}}{\\sign{=}}{\\html{$$ld &#149; $$rn &#247; $$rd}}}{proportion-application}]}{$$previousCorrect}'+
+                        '}{'+
+							'\\html{&nbsp;}'+
+						'}{'+
+                            '\\choose{[\\html{},\\ins{The answer is}]}{$$previousCorrect}'+
+                        '}{'+
+                            '\\choose{[\\html{},\\css{\\grp{\\html{$$answer}}{\\html{$$symbol}}}{proportion-application}]}{$$previousCorrect}'+
+                        '}}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+							"stepwiseNextProblem": true
                         }
                     }]
                 }]

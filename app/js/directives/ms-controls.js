@@ -37,8 +37,12 @@ angular.module('mathSkills')
                                 }
                             },
                             ckeckAnswerBtn = function () {
-                                 if (problemData.getData('answerBtn') === undefined) { 
-                                     $scope.answerButtonText = 'Check Answer';
+                                 if (problemData.getData('answerBtn') === undefined) {
+									 if ($scope.stepwiseNextProblem === true) {
+										$scope.answerButtonText = 'Next Problem';
+									 } else {
+                                     	$scope.answerButtonText = 'Check Answer';
+									 }
                                      $scope.hasCheckAnswer = true;
                                  } else {
                                      anwserbtn(problemData.getData('answerBtn'));
@@ -103,10 +107,21 @@ angular.module('mathSkills')
                                         $scope.$emit('triggerCheckAnswer');
                                     };
                                 }
+								
+								// $scope.stepwiseNextProblem will provide stepwise "Next Help" button.
+								if (typeof $scope.data.stepwiseNextProblem !== "undefined" && $scope.data.stepwiseNextProblem === true) {
+                                	$scope.stepwiseNextProblem = true;
+								} else {
+									$scope.stepwiseNextProblem = false;
+								}
+
                             }
                         });
 
                         $scope.$on('setAnswerBtn', function (e, data, flag) {
+							if ($scope.stepwiseNextProblem === true) {
+                                     data = 'Next Problem';
+							}
                             anwserbtn(data);
                             if(flag !== false) {
                                 $scope.$apply();
