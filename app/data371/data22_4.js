@@ -1,7 +1,7 @@
 /*global angular */
 
-angular.module('mathSkills').service('data22_4', function () {
-    var ret = {
+angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUtils) {
+    var desc = {
             title: '22.4 Solve Percent Problems (proportion method)',
             path: '22.4-solve-percent-problems',
             children: []
@@ -109,11 +109,17 @@ angular.module('mathSkills').service('data22_4', function () {
             var ret = JSON.parse(string);
             ret.data = angular.copy(data);
             return ret;
-        };
+        },
+		// shuffle specifics still to go
+		shuffle = [
+					{ problems: [1,2,3,4,5], total: 5},
+					{ problems: [7,8,9,10], total: 3},
+					{ problems: [11,12,13], total: 2}
+			];
 
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
-    
-    return ret;
-});
+	    
+	    	//return dataUtils.build(desc, template, data, shuffle);
+			return dataUtils.build(desc, template, data);
+			
+	}]);
+

@@ -1,4 +1,5 @@
 /*global angular */
+
 angular.module('mathSkills').service('data20_2', ['dataUtils', function (dataUtils) {
     var desc = {
             title: '20.2 Solve Percent Problems (proportion method)',

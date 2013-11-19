@@ -1,7 +1,7 @@
 /*global angular */
 
-angular.module('mathSkills').service('data21_4', function () {
-    var ret = {
+angular.module('mathSkills').service('data21_4', ['dataUtils', function (dataUtils) {
+    var desc = {
             title: '21.4 Discounts',
             path: '21.4-discounts',
             children: []
@@ -555,21 +555,15 @@ angular.module('mathSkills').service('data21_4', function () {
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             }
         ],
-        interpolate = function (obj, data) {
-            var string = JSON.stringify(obj);
-            for (var symbol in data) {
-                if (data.hasOwnProperty(symbol)) {
-                    string = string.replace(new RegExp('(\\$)?\\$' + symbol, 'g'), function ($0, $1) { return $1?$0 : data[symbol]; }); //console.log(string); 
-                }
-            }
-            var ret = JSON.parse(string);
-            ret.data = angular.copy(data);
-            return ret;
-        };
+		// shuffle specifics still to go
+		shuffle = [
+					{ problems: [1,2,3,4,5], total: 5},
+					{ problems: [7,8,9,10], total: 3},
+					{ problems: [11,12,13], total: 2}
+			];
 
-    ret.children = data.map(function (problem) {
-        return interpolate(template[problem.template], problem);
-    });
-    
-    return ret;
-});
+	    
+	    	//return dataUtils.build(desc, template, data, shuffle);
+			return dataUtils.build(desc, template, data);
+			
+	}]);
