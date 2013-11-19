@@ -108,9 +108,11 @@ angular.module('mathSkills')
                                     };
                                 }
 								
-								// $scope.stepwiseNextProblem will provide stepwise "Next Help" button.
+								// $scope.stepwiseNextProblem === true, "Next Problem" text on button.
 								if (typeof $scope.data.stepwiseNextProblem !== "undefined" && $scope.data.stepwiseNextProblem === true) {
                                 	$scope.stepwiseNextProblem = true;
+									// add stepwiseNextProblem to problemData to pass to ms-feedback.js
+									problemData.addData(true, 'stepwiseNextProblem');
 								} else {
 									$scope.stepwiseNextProblem = false;
 								}

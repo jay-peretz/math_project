@@ -7,7 +7,8 @@ angular.module('mathSkills')
             return {
                 controller: [
                     '$scope',
-                    function ($scope) {
+					'problemData',
+                    function ($scope, problemData) {
                         // Sayings arrays.
                         var correctSayings = [
                                 'Great Job!',
@@ -33,11 +34,16 @@ angular.module('mathSkills')
                         };
 
                         $scope.$on('answer', function (e, data) {
-                            
+													   
                             if(data.noFeedback !== true){
                                 // Show the feedback label.
                                 $scope.feedback.show = true;
                             }
+							
+							// no feedback for workbook steps with control "stepwiseNextProblem": true
+							if (problemData.getData('stepwiseNextProblem') !== undefined && problemData.getData('stepwiseNextProblem') === true) {
+								$scope.feedback.show = false;
+							}
 
                             // Set the feedback label content.
                             if (data.result === 'correct') {
