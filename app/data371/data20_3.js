@@ -13,6 +13,9 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\html{$problem<br><br><span class=blue-text>$round</span>}',
                         answer: '\\grp{\\input{$answer}}',
+						answer: '\\grp'+
+                                    '{\\input{$answer}}'+
+                                    '{\\html{$post_symbol}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -48,7 +51,7 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                         '}{'+
                             '\\ins{Now solve the problem.}'+
                         '}{'+
-                            '\\css{\\grp{\\html{X}}{\\sign{=}}{\\input{$$answer}}}{proportion-application}'+
+                            '\\css{\\grp{\\html{X}}{\\sign{=}}{\\input{$$answer}}{\\html{$post_symbol}}}{proportion-application}'+
                         '}}{well}{end}',
                         controls: {
                             "checkAnswer": true,
@@ -88,7 +91,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '70', rn: 'x', 
                 ld: '100', rd: '50', 
                 solution: '$$ln &#149; $$rd &#247; $$ld',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //1b -2
@@ -102,7 +106,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '70', rn: '35', 
                 ld: '100', rd: 'x', 
                 solution: '$$ld &#149; $$rn &#247; $$ln',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //1c -3
@@ -116,7 +121,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: 'x', rn: '35', 
                 ld: '100', rd: '50', 
                 solution: '$$ld &#149; $$rn &#247; $$rd',
-                previousCorrect: true,
+                post_symbol: "%",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             
@@ -131,7 +137,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '60', rn: 'x', 
                 ld: '100', rd: '40', 
                 solution: '$$ln &#149; $$rd &#247; $$ld',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //2b -5
@@ -145,7 +152,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '60', rn: '24', 
                 ld: '100', rd: 'x', 
                 solution: '$$ld &#149; $$rn &#247; $$ln',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //2c -6
@@ -159,7 +167,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: 'x', rn: '24', 
                 ld: '100', rd: '40', 
                 solution: '$$ld &#149; $$rn &#247; $$rd',
-                previousCorrect: true,
+                post_symbol: "%",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             
@@ -174,7 +183,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '78', rn: 'x', 
                 ld: '100', rd: '400', 
                 solution: '$$ln &#149; $$rd &#247; $$ld',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //3b -8
@@ -188,7 +198,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '78', rn: '312', 
                 ld: '100', rd: 'x', 
                 solution: '$$ld &#149; $$rn &#247; $$ln',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //3c -9
@@ -202,7 +213,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: 'x', rn: '312', 
                 ld: '100', rd: '400', 
                 solution: '$$ld &#149; $$rn &#247; $$rd',
-                previousCorrect: true,
+                post_symbol: "%",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             
@@ -217,7 +229,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '30', rn: 'x', 
                 ld: '100', rd: '2500', 
                 solution: '$$ln &#149; $$rd &#247; $$ld',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //4b -11
@@ -231,7 +244,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '30', rn: '750', 
                 ld: '100', rd: 'x', 
                 solution: '$$ld &#149; $$rn &#247; $$ln',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //4c -12
@@ -245,7 +259,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: 'x', rn: '750', 
                 ld: '100', rd: '2500', 
                 solution: '$$ld &#149; $$rn &#247; $$rd',
-                previousCorrect: true,
+                post_symbol: "%",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             
@@ -260,7 +275,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '54', rn: 'x', 
                 ld: '100', rd: '5200', 
                 solution: '$$ln &#149; $$rd &#247; $$ld',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //5b -14
@@ -274,7 +290,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '54', rn: '2808', 
                 ld: '100', rd: 'x', 
                 solution: '$$ld &#149; $$rn &#247; $$ln',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //5c -15
@@ -288,7 +305,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: 'x', rn: '2808', 
                 ld: '100', rd: '5200', 
                 solution: '$$ld &#149; $$rn &#247; $$rd',
-                previousCorrect: true,
+                post_symbol: "%",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             
@@ -303,7 +321,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '140', rn: 'x', 
                 ld: '100', rd: '30', 
                 solution: '$$ln &#149; $$rd &#247; $$ld',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //6b -17
@@ -317,7 +336,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '140', rn: '42', 
                 ld: '100', rd: 'x', 
                 solution: '$$ld &#149; $$rn &#247; $$ln',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //6c -18
@@ -331,7 +351,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: 'x', rn: '42', 
                 ld: '100', rd: '30', 
                 solution: '$$ld &#149; $$rn &#247; $$rd',
-                previousCorrect: true,
+                post_symbol: "%",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             
@@ -346,7 +367,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '20', rn: 'x', 
                 ld: '100', rd: '540', 
                 solution: '$$ln &#149; $$rd &#247; $$ld',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //7b -20
@@ -360,7 +382,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '20', rn: '108', 
                 ld: '100', rd: 'x', 
                 solution: '$$ld &#149; $$rn &#247; $$ln',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //7c -21
@@ -374,7 +397,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: 'x', rn: '108', 
                 ld: '100', rd: '540', 
                 solution: '$$ld &#149; $$rn &#247; $$rd',
-                previousCorrect: true,
+                post_symbol: "%",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             
@@ -389,7 +413,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '90', rn: 'x', 
                 ld: '100', rd: '160', 
                 solution: '$$ln &#149; $$rd &#247; $$ld',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //8b -23
@@ -403,11 +428,12 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '90', rn: '144', 
                 ld: '100', rd: 'x', 
                 solution: '$$ld &#149; $$rn &#247; $$ln',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //8c -24
-                problem: 'A grocery store sold 144 pounds of bananas out of the original 160 pounds of bananas which the store had in the morning. What percent of the store’s banana’s were sold?',
+                problem: 'A grocery store sold 144 pounds of bananas out of the original 160 pounds of bananas which the store had in the morning. What percent of the store’s bananas were sold?',
                 round: '',
                 xtext:'',
 				setupText: ').',
@@ -417,7 +443,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: 'x', rn: '144', 
                 ld: '100', rd: '160', 
                 solution: '$$ld &#149; $$rn &#247; $$rd',
-                previousCorrect: true,
+                post_symbol: "%",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             
@@ -432,7 +459,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '25', rn: 'x', 
                 ld: '100', rd: '60', 
                 solution: '$$ln &#149; $$rd &#247; $$ld',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //9b -26
@@ -446,7 +474,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '25', rn: '15', 
                 ld: '100', rd: 'x', 
                 solution: '$$ld &#149; $$rn &#247; $$ln',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //9c -27
@@ -460,7 +489,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: 'x', rn: '15', 
                 ld: '100', rd: '60', 
                 solution: '$$ld &#149; $$rn &#247; $$rd',
-                previousCorrect: true,
+                post_symbol: "%",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             
@@ -475,7 +505,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '55', rn: 'x', 
                 ld: '100', rd: '80', 
                 solution: '$$ln &#149; $$rd &#247; $$ld',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //10b -29
@@ -489,7 +520,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: '45', rn: '36', 
                 ld: '100', rd: 'x', 
                 solution: '$$ld &#149; $$rn &#247; $$ln',
-                previousCorrect: true,
+                post_symbol: "",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             {  //10c -30
@@ -503,7 +535,8 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                 ln: 'x', rn: '44', 
                 ld: '100', rd: '80', 
                 solution: '$$ld &#149; $$rn &#247; $$rd',
-                previousCorrect: true,
+                post_symbol: "%",
+				previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             } 
         ],
@@ -518,7 +551,7 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
 			];
 
 	    
-	    	return dataUtils.build(desc, template, data, shuffle);
-			//return dataUtils.build(desc, template, data);
+	    	//return dataUtils.build(desc, template, data, shuffle);
+			return dataUtils.build(desc, template, data);
 			
 	}]);
