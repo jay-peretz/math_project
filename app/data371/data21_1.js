@@ -80,7 +80,8 @@ angular.module('mathSkills').service('data21_1', ['dataUtils', function (dataUti
                                                 '{\\str{X}}'+
                                                 '{\\sign{=}}'+
 												'{\\str{$pre_symbol}}'+
-                                                '{\\set{$answerIn}{$$key}}'+
+                                                //'{\\set{$answerIn}{$$key}}'+
+												'{$answerIn}'+
 												'{\\str{$post_symbol}}'+
                                         '}{proportion-application}'+
                                     '}'+
@@ -551,7 +552,7 @@ angular.module('mathSkills').service('data21_1', ['dataUtils', function (dataUti
             {  //11a problem 31
                 problem: 'Alex bought a coat for $100. If the sales tax rate is 8.75%, how much sales tax does he pay?',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
-                answer: '8.45', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '8.75', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -568,7 +569,7 @@ angular.module('mathSkills').service('data21_1', ['dataUtils', function (dataUti
                 key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: '8.75', rn: '8.45', 
+                ln: '8.75', rn: '8.75', 
                 ld: '100', rd: 'x', 
                 solution: '$$ld &#149; $$rn <span class=bigger>&#247;</span> $$ln',
                 previousCorrect: true,
@@ -581,7 +582,7 @@ angular.module('mathSkills').service('data21_1', ['dataUtils', function (dataUti
                 key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: 'x', rn: '8.45', 
+                ln: 'x', rn: '8.75', 
                 ld: '100', rd: '100', 
                 solution: '$$ld &#149; $$rn <span class=bigger>&#247;</span> $$rd',
                 previousCorrect: true,
@@ -676,7 +677,7 @@ angular.module('mathSkills').service('data21_1', ['dataUtils', function (dataUti
 			];
 
 	    
-	    	//return dataUtils.build(desc, template, data, shuffle);
-			return dataUtils.build(desc, template, data);
+	    	return dataUtils.build(desc, template, data, shuffle);
+			//return dataUtils.build(desc, template, data);
 			
 	}]);
