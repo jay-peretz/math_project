@@ -12,7 +12,7 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{$problem<br><br><span class=blue-text>$round</span>}',
-                        answer: '\\input{$answer}',
+                        answer: '\\grp{\\input{$answer}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
