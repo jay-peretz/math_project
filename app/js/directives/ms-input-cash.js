@@ -177,7 +177,7 @@ angular.module('mathSkills')
                     });
 
                 },
-                template: '<div class="control-group {{class}}"><input style="width:{{width}};" ng-model=answer ms-strip-commas ms-add-zero ms-add-cash-zeros></label></div>'
+                template: '<div class="control-group {{class}}"><input style="width:{{width}};" ng-model=answer ms-strip-commas ms-add-zero ms-add-cash-zeros></div>'
             };
         }
     ]);

@@ -68,21 +68,21 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 chart: dataUtils.pre('\\chart{Utility Bill for Gas and Electricity}{5}{5}{["Student","Therms of Gas Used","Cost of Gas","Kilowatt Hours of Electricity Used","Cost of Electricity","Anne","18","$26","188","$41","Travis","10","$14","183","$40","Nathan","20","$28","261","$56","Sondra","12","$17","251","$54"]}'), 
                 question: 'How much more money does Nathan spend on gas than Anne?', template: 'main',
                 answertxt: 'Nathan spends $2 more than Anne on gas',
-                answerIn: dataUtils.pre('\\grp{\\str{$}}{\\input{2}}'),
+                answerIn: dataUtils.pre('\\grp{\\str{$}}{\\inputcash{2.00}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //5
                 chart: dataUtils.pre('\\chart{Utility Bill for Gas and Electricity}{5}{5}{["Student","Therms of Gas Used","Cost of Gas","Kilowatt Hours of Electricity Used","Cost of Electricity","Anne","18","$26","188","$41","Travis","10","$14","183","$40","Nathan","20","$28","261","$56","Sondra","12","$17","251","$54"]}'), 
                 question: 'How much more money does Nathan spend on electricity than on gas?', template: 'main',
                 answertxt: 'Nathan spends $28 more on electricity than he spends on gas ($56 - $28 = $28)',
-                answerIn: dataUtils.pre('\\grp{\\str{$}}{\\input{28}}'),
+                answerIn: dataUtils.pre('\\grp{\\str{$}}{\\inputcash{28.00}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //6
                 chart: dataUtils.pre('\\chart{Utility Bill for Gas and Electricity}{5}{5}{["Student","Therms of Gas Used","Cost of Gas","Kilowatt Hours of Electricity Used","Cost of Electricity","Anne","18","$26","188","$41","Travis","10","$14","183","$40","Nathan","20","$28","261","$56","Sondra","12","$17","251","$54"]}'), 
                 question: 'How much more money does Nathan spend on the total utility bill (the cost of both gas and electricity) than Anne?', template: 'main',
                 answertxt: 'Nathan\'s total is $28 + $56 = $84<br><br>Anne\'s total is $26 + $41 = $67<br><br>Nathan spends $84 - $67 = $17',
-                answerIn: dataUtils.pre('\\grp{\\str{$}}{\\input{17}}'),
+                answerIn: dataUtils.pre('\\grp{\\str{$}}{\\inputcash{17.00}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //7
