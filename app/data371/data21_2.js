@@ -33,9 +33,9 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                                         '\\ins{Set up a percent proportion to solve the problem (use "X" for an unknown value).}'+
                                     '}{'+
                                         '\\grp'+
-                                        '{\\frac{\\input{[\"$ln\",\"$rn\"]}}{\\input{[\"$ld\",\"$rd\"]}}}'+
+                                        '{\\frac{\\input{[\"$$ln\",\"$$rn\"]}}{\\input{[\"$$ld\",\"$$rd\"]}}}'+
                                         '{\\sign{=}}'+
-                                        '{\\frac{\\input{[\"$rn\",\"$ln\"]}}{\\input{[\"$rd\",\"$ld\"]}}}'+
+                                        '{\\frac{\\input{[\"$$rn\",\"$$ln\"]}}{\\input{[\"$$rd\",\"$$ld\"]}}}'+
                                     '}'+
                                 '}{well}',
                         controls: {
@@ -181,7 +181,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '1016.80', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rn', keyf: 'ln', 
+                key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
@@ -189,7 +189,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             { //2
                 problem: 'Jacob paid $1,016.80 in social security taxes this year. What were his total earnings?',
@@ -197,7 +197,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'',
                 answerIn: dataUtils.pre('\\input{$$answer}'),
                 answer: '16400', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rd', keyf: 'ld', 
+                key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '1016.80', 
@@ -205,7 +205,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             { //3
                 problem: 'On total wages of $55,200, how much social security tax did Mary pay?',
@@ -213,7 +213,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '3422.40', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rn', keyf: 'ln', 
+                key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
@@ -221,7 +221,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             { //4
                 problem: 'Mary paid $3,422.40 in social security taxes this year. What were her total earnings?',
@@ -229,7 +229,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '55200', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rd', keyf: 'ld', 
+                key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '3422.40', 
@@ -237,7 +237,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             { //5
                 problem: 'On total wages of $33,030, how much social security tax did Slina pay?',
@@ -245,7 +245,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '2047.86', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rn', keyf: 'ln', 
+                key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
@@ -253,7 +253,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             { //6
                 problem: 'Slina paid $2,047.86 in social security taxes this year. What were her total earnings?',
@@ -261,7 +261,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '33030', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rd', keyf: 'ld', 
+                key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '2047.86', 
@@ -269,7 +269,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             { //7
                 problem: 'On total wages of $10010.48, how much social security tax did Tim pay?',
@@ -277,7 +277,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'Round answer to the nearest cent.',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '620.65', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rn', keyf: 'ln', 
+                key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
@@ -285,7 +285,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             { //8
                 problem: 'Tim paid $620.65 in social security taxes this year. What were his total earnings?',
@@ -293,7 +293,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'Round answer to the nearest cent.',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '10010.48', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rd', keyf: 'ld', 
+                key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '620.65', 
@@ -301,7 +301,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             { //9
                 problem: 'On total wages of $1,560,960, how much social security tax did Justin pay?',
@@ -309,7 +309,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '8103.40', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rn', keyf: 'ln', 
+                key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
@@ -317,7 +317,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
                 onlyFirst130: "Social Security tax is only paid on the first $130,700 of Justin's $1,560,960 total earnings. ",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             { //10
                 problem: 'Justin paid $8103.40 in social security taxes this year. What were his total earnings?',
@@ -325,7 +325,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '130700', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rd', keyf: 'ld', 
+                key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '8103.40', 
@@ -333,7 +333,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             { //11
                 problem: 'On total wages of $70,234.34, how much social security tax did Alison pay?',
@@ -341,7 +341,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'Round answer to the nearest cent.',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '4354.53', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rn', keyf: 'ln', 
+                key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
@@ -349,7 +349,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             { //12
                 problem: 'Alison paid $4,354.53 in social security taxes this year. What were her total earnings?',
@@ -357,7 +357,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'Round answer to the nearest cent.',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '70234.35', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rd', keyf: 'ld', 
+                key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '4354.53', 
@@ -365,7 +365,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             { //13
                 problem: 'On total wages of $555,001, how much social security tax did Rosemary pay?',
@@ -373,7 +373,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'Round answer to the nearest cent.',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '34410.06', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rn', keyf: 'ln', 
+                key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
@@ -381,7 +381,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
                 onlyFirst130: "Social Security tax is only paid on the first $130,700 of Rosemary's $555,001 total earnings. ",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             { //14
                 problem: 'On total wages of $212,000, how much social security tax did Marcia pay?',
@@ -389,7 +389,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 round:'Round answer to the nearest cent.',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '8103.40', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rn', keyf: 'ln', 
+                key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
@@ -397,7 +397,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
                 onlyFirst130: "Social Security tax is only paid on the first $130,700 of Marcia's $212,000 total earnings. ",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             
             { 	//15
