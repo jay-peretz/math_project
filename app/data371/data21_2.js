@@ -55,9 +55,9 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                                             '\\choose{['+
                                                 '\\ins{}{q},'+
                                                 '\\grp'+
-                                                    '{\\frac{\\str{$dln}}{\\str{$dld}}}'+
+                                                    '{\\frac{\\str{$$dln}}{\\str{$$dld}}}'+
                                                     '{\\sign{=}}'+
-                                                    '{\\frac{\\str{$drn}}{\\str{$drd}}}'+
+                                                    '{\\frac{\\str{$$drn}}{\\str{$$drd}}}'+
                                             ']}{$$previousCorrect}}'+
                                         '{bottom-marg}'+
                                     '}{'+
@@ -68,9 +68,9 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                                     '}{'+
                                         '\\css{'+
                                             '\\grp'+
-                                                '{\\frac{\\str{$ln}}{\\str{$ld}}}'+
+                                                '{\\frac{\\str{$$ln}}{\\str{$$ld}}}'+
                                                 '{\\sign{=}}'+
-                                                '{\\frac{\\str{$rn}}{\\str{$rd}}}'+
+                                                '{\\frac{\\str{$$rn}}{\\str{$$rd}}}'+
                                         '}{bottom-marg}'+
                                     '}{'+
                                         '\\ins{Now solve the problem.}'+
