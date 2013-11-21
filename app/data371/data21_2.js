@@ -63,7 +63,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                                     '}{'+
                                         '\\choose{['+
                                             '\\ins{Yes!},'+
-                                            '\\ins{We substitute the given values to get:}]}'+
+                                            '\\ins{$onlyFirst130We substitute the given values to get:}]}'+
                                         '{$$previousCorrect}'+
                                     '}{'+
                                         '\\css{'+
@@ -152,7 +152,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
 						+'{\\str{$problem}}'
 						+'{\\str{\xA0}}'
 						+'{\\str{\xA0}}'
-						+'{\\chart{2012 Income Tax Rate Schedule for Single Person}{7}{2}{["If you have a taxable income:","Amount of Income Tax","between $0 and $8,925, then you pay:","10% <span class=bigger>&sdot;</span>(amount of taxable income)","between $8,925 and $36,250, then you pay:","$893 + <br> 15% <span class=bigger>&sdot;</span>(amount of taxable income over $8,925)","between $36,250 and $87,850, then you pay:","$4,991 + <br> 25% <span class=bigger>&sdot;</span>(amount of taxable income over $36,250)", "between $87,850 and $183,250, then you pay:","$17,891 + <br>28% <span class=bigger>&sdot;</span>(amount of taxable income over $87,850)", "between $183,250 and $398,350, then you pay:","$44,603 +<br> 33% <span class=bigger>&sdot;</span>(amount of taxable income over $183,250)", "over $398,350, then you pay:","$116,164 +<br> 39.6% <span class=bigger>&sdot;</span>(amount of taxable income over $398,350)"]}}',
+						+'{\\chart{2013 Income Tax Rate Schedule for Single Person}{7}{2}{["If you have a taxable income:","Amount of Income Tax","between $0 and $8,925, then you pay:","10% <span class=bigger>&sdot;</span>(amount of taxable income)","between $8,925 and $36,250, then you pay:","$893 + <br> 15% <span class=bigger>&sdot;</span>(amount of taxable income over $8,925)","between $36,250 and $87,850, then you pay:","$4,991 + <br> 25% <span class=bigger>&sdot;</span>(amount of taxable income over $36,250)", "between $87,850 and $183,250, then you pay:","$17,891 + <br>28% <span class=bigger>&sdot;</span>(amount of taxable income over $87,850)", "between $183,250 and $398,350, then you pay:","$44,603 +<br> 33% <span class=bigger>&sdot;</span>(amount of taxable income over $183,250)", "over $398,350, then you pay:","$116,164 +<br> 39.6% <span class=bigger>&sdot;</span>(amount of taxable income over $398,350)"]}}',
 						answer: '\\grp{\\str{$}}{\\css{\\inputcash{$answer}}{width200px}}',
 						controls: {
 							"checkAnswer": true,
@@ -186,7 +186,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '16400', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                onlyFirst130: "",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
@@ -201,7 +202,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '1016.80', 
                 ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
+                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
+                onlyFirst130: "",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
@@ -216,7 +218,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '55200', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                onlyFirst130: "",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
@@ -231,7 +234,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '3422.40', 
                 ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
+                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
+                onlyFirst130: "",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
@@ -246,7 +250,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '33030', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                onlyFirst130: "",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
@@ -261,7 +266,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '2047.86', 
                 ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
+                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
+                onlyFirst130: "",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
@@ -276,7 +282,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '10010.48', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                onlyFirst130: "",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
@@ -291,7 +298,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '620.65', 
                 ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
+                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
+                onlyFirst130: "",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
@@ -306,7 +314,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '130700', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                onlyFirst130: "Social Security tax is only paid on the first $130,700 of Justin's $1,560,960 total earnings. ",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
@@ -321,7 +330,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '8103.40', 
                 ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
+                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
+                onlyFirst130: "",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
@@ -336,7 +346,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '70234.34', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                onlyFirst130: "",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
@@ -351,7 +362,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '4354.53', 
                 ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
+                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
+                onlyFirst130: "",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
@@ -366,28 +378,30 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '555001', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\str{*}}{\\str{$$rd}}{\\str{/}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                onlyFirst130: "Social Security tax is only paid on the first $130,700 of Rosemary's $555,001 total earnings. ",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
             { //14
-                problem: 'Rosemary paid $8,103.40 in social security taxes this year. What were her total earnings?',
+                problem: 'On total wages of $212,000, how much social security tax did Marcia pay?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'Round answer to the nearest cent.',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
-                answer: '130700', template: 'main', pre_symbol: '$', post_symbol: '', 
-                key: 'rd', keyf: 'ld', 
+                answer: '8103.40', template: 'main', pre_symbol: '$', post_symbol: '', 
+                key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: '6.2', rn: '8103.40', 
-                ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\str{*}}{\\str{$$rn}}{\\str{/}}{\\str{$$ln}}'),
+                ln: '6.2', rn: 'x', 
+                ld: '100', rd: '130700', 
+                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                onlyFirst130: "Social Security tax is only paid on the first $130,700 of Marcia's $212,000 total earnings. ",
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
             
-            { 
-                problem: 'How much income tax did Julie pay in 2012 if her taxable income was $6,983? (round to the nearest dollar)',
+            { 	//15
+                problem: 'How much income tax did Julie pay in 2012 if her taxable income was $6,983? Round to the nearest dollar.',
 				 answer: '698.00', 
 				 helpFirst: "Julie's taxable income puts her in the first bracket.  She pays:", 
 				 helpSecond: "10% of $6,983",
@@ -396,9 +410,9 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
 				 helpfifth: "",
 				 template: 'incomeTax'
             },
-            { 
-                problem: 'How much income tax did Mark pay in 2012 if his taxable income was $57,547? (round to the nearest dollar)',
-				 answer: '10,315.00', 
+            { 	//16
+                problem: 'How much income tax did Mark pay in 2012 if his taxable income was $57,547? Round to the nearest dollar.',
+				 answer: '10315.00', 
 				 helpFirst: "Mark's taxable income puts him in the third bracket.  He pays:", 
 				 helpSecond: "$4,991 + 25% of the amount over $36,250",
 				 helpThird: "$4,991 + (.25)($57,547 - $36,250)",
@@ -406,9 +420,9 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
 				 helpfifth: "$4,991 + $5,324.25<br><br>",
 				 template: 'incomeTax'
             },
-			{ 
-                problem: 'Kevin earned a total of $16,236 in 2012.  His taxable income, however, was $14,118. Calculate his income tax for 2012 (round to the nearest dollar)',
-				 answer: '1,760.00', 
+			{ 	//17
+                problem: 'Kevin earned a total of $16,236 in 2012.  His taxable income, however, was $14,118. Calculate his income tax for 2012 Round to the nearest dollar.',
+				 answer: '1760.00', 
 				 helpFirst: "Kevin's taxable income puts him in the second bracket.  He pays:", 
 				 helpSecond: "$893 + 15% of the amount over $8,925",
 				 helpThird: "$893 + (.15)($14,118 - $8,925)",
@@ -416,9 +430,9 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
 				 helpfifth: "$893 + $778.95<br><br>",
 				 template: 'incomeTax'
             },
-			{ 
-                problem: 'How much income tax did Susan pay in 2012 if her taxable income was $233,819? (round to the nearest dollar)',
-				 answer: '61,291.00', 
+			{ 	//18
+                problem: 'How much income tax did Susan pay in 2012 if her taxable income was $233,819? Round to the nearest dollar.',
+				 answer: '61291.00', 
 				 helpFirst: "Susan's taxable income puts her in the fifth bracket.  She pays:", 
 				 helpSecond: "$44,603 + 33% of the amount over $183,250",
 				 helpThird: "$44,603 + (.33)($233,819 - $183,250)",
@@ -426,9 +440,9 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
 				 helpfifth: "$44,603 + $16,687.77<br><br>",
 				 template: 'incomeTax'
             },
-			{ 
-                problem: "Dana earned a total of $15,425,378 in 2012.  Taxable income for Dana, however, was $8,424,169. Calculate Dana's income tax for 2012 (round to the nearest dollar)",
-				 answer: '3,294,388.00', 
+			{ 	//19
+                problem: "Dana earned a total of $15,425,378 in 2012.  Taxable income for Dana, however, was $8,424,169. Calculate Dana's income tax for 2012 Round to the nearest dollar.",
+				 answer: '3294388.00', 
 				 helpFirst: "Dana's taxable income puts Dana in the fifth bracket.  Dana pays:", 
 				 helpSecond: "$116,164 + 39.6% of the amount over $398,350",
 				 helpThird: "$116,164 + (.396)($8,424,169 - $398,350)",
