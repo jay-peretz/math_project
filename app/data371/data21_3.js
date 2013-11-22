@@ -79,7 +79,7 @@ angular.module('mathSkills').service('data21_3', ['dataUtils', function (dataUti
                                             '\\grp'+
                                                 '{\\str{X}}'+
                                                 '{\\sign{=}}'+
-                                                '{\\set{\\input{$$answer}}{$$key}}'+
+                                                '{\\set{\\inputcash{$$answer}}{$$key}}'+
                                         '}{proportion-application}'+
                                     '}'+
                                 '}{well}{end}',
