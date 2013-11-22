@@ -33,9 +33,9 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                                         '\\ins{Set up a percent proportion to solve the problem (use "X" for an unknown value).}'+
                                     '}{'+
                                         '\\grp'+
-                                        '{\\frac{\\input{[\"$$ln\",\"$$rn\"]}}{\\input{[\"$$ld\",\"$$rd\"]}}}'+
+                                        '{\\frac{\\input{[\"$ln\",\"$rn\"]}}{\\input{[\"$ld\",\"$rd\"]}}}'+
                                         '{\\sign{=}}'+
-                                        '{\\frac{\\input{[\"$$rn\",\"$$ln\"]}}{\\input{[\"$$rd\",\"$$ld\"]}}}'+
+                                        '{\\frac{\\input{[\"$rn\",\"$ln\"]}}{\\input{[\"$rd\",\"$ld\"]}}}'+
                                     '}'+
                                 '}{well}',
                         controls: {
@@ -138,7 +138,9 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                                     '}}{well}',
                         controls: {
                             "checkAnswer": true,
-                            "help": true
+                            "help": false,
+							"stepwiseNextProblem": true
+							
                         }
                     }]
                 }]
@@ -186,10 +188,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '16400', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{16400}}{\\html{&#149;}}{\\str{6.2}}{css{\\html{\xF7}}{bigger}}{\\str{100}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //2
                 problem: 'Jacob paid $1,016.80 in social security taxes this year. What were his total earnings?',
@@ -202,10 +204,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '1016.80', 
                 ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
+                solution: dataUtils.pre('\\grp{\\str{100}}{\\html{&#149;}}{\\str{1016.80}}{css{\\html{\xF7}}{bigger}}{\\str{6.2}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //3
                 problem: 'On total wages of $55,200, how much social security tax did Mary pay?',
@@ -218,10 +220,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '55200', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{55200}}{\\html{&#149;}}{\\str{6.2}}{css{\\html{\xF7}}{bigger}}{\\str{100}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //4
                 problem: 'Mary paid $3,422.40 in social security taxes this year. What were her total earnings?',
@@ -234,10 +236,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '3422.40', 
                 ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
+                solution: dataUtils.pre('\\grp{\\str{100}}{\\html{&#149;}}{\\str{3422.40}}{css{\\html{\xF7}}{bigger}}{\\str{6.2}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //5
                 problem: 'On total wages of $33,030, how much social security tax did Slina pay?',
@@ -250,10 +252,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '33030', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{33030}}{\\html{&#149;}}{\\str{6.2}}{css{\\html{\xF7}}{bigger}}{\\str{100}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //6
                 problem: 'Slina paid $2,047.86 in social security taxes this year. What were her total earnings?',
@@ -266,10 +268,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '2047.86', 
                 ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
+                solution: dataUtils.pre('\\grp{\\str{100}}{\\html{&#149;}}{\\str{2047.86}}{css{\\html{\xF7}}{bigger}}{\\str{6.2}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //7
                 problem: 'On total wages of $10010.48, how much social security tax did Tim pay?',
@@ -282,10 +284,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '10010.48', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{10010.48}}{\\html{&#149;}}{\\str{6.2}}{css{\\html{\xF7}}{bigger}}{\\str{100}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //8
                 problem: 'Tim paid $620.65 in social security taxes this year. What were his total earnings?',
@@ -298,10 +300,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '620.65', 
                 ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
+                solution: dataUtils.pre('\\grp{\\str{100}}{\\html{&#149;}}{\\str{620.65}}{css{\\html{\xF7}}{bigger}}{\\str{6.2}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //9
                 problem: 'On total wages of $1,560,960, how much social security tax did Justin pay?',
@@ -314,10 +316,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '130700', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{130700}}{\\html{&#149;}}{\\str{6.2}}{css{\\html{\xF7}}{bigger}}{\\str{100}}'),
                 onlyFirst130: "Social Security tax is only paid on the first $130,700 of Justin's $1,560,960 total earnings. ",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //10
                 problem: 'Justin paid $8103.40 in social security taxes this year. What were his total earnings?',
@@ -330,10 +332,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '8103.40', 
                 ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
+                solution: dataUtils.pre('\\grp{\\str{100}}{\\html{&#149;}}{\\str{8103.40}}{css{\\html{\xF7}}{bigger}}{\\str{6.2}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //11
                 problem: 'On total wages of $70,234.34, how much social security tax did Alison pay?',
@@ -346,10 +348,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '70234.34', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{70234.34}}{\\html{&#149;}}{\\str{6.2}}{css{\\html{\xF7}}{bigger}}{\\str{100}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //12
                 problem: 'Alison paid $4,354.53 in social security taxes this year. What were her total earnings?',
@@ -362,10 +364,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: '4354.53', 
                 ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\str{$$ld}}{\\html{&#149;}}{\\str{$$rn}}{css{\\html{\xF7}}{bigger}}{\\str{$$ln}}'),
+                solution: dataUtils.pre('\\grp{\\str{100}}{\\html{&#149;}}{\\str{4354.53}}{css{\\html{\xF7}}{bigger}}{\\str{6.2}}'),
                 onlyFirst130: "",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //13
                 problem: 'On total wages of $555,001, how much social security tax did Rosemary pay?',
@@ -378,10 +380,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '555001', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{555001}}{\\html{&#149;}}{\\str{6.2}}{css{\\html{\xF7}}{bigger}}{\\str{100}}'),
                 onlyFirst130: "Social Security tax is only paid on the first $130,700 of Rosemary's $555,001 total earnings. ",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //14
                 problem: 'On total wages of $212,000, how much social security tax did Marcia pay?',
@@ -394,10 +396,10 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '6.2', rn: 'x', 
                 ld: '100', rd: '130700', 
-                solution: dataUtils.pre('\\grp{\\str{$$ln}}{\\html{&#149;}}{\\str{$$rd}}{css{\\html{\xF7}}{bigger}}{\\str{$$ld}}'),
+                solution: dataUtils.pre('\\grp{\\str{130700}}{\\html{&#149;}}{\\str{6.2}}{css{\\html{\xF7}}{bigger}}{\\str{100}}'),
                 onlyFirst130: "Social Security tax is only paid on the first $130,700 of Marcia's $212,000 total earnings. ",
                 previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             
             { 	//15
