@@ -453,9 +453,49 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
 				 helpfourth: "$116,164 + (.396)($8,025,819)<br><br>",
 				 helpfifth: "$116,164 + $3,178,224.32<br><br>",
 				 template: 'incomeTax'
+            },
+			{ 	//20
+                 problem: 'Ricardo had a taxable income of $39,500. How much income tax did he have to pay?  Round to the nearest dollar.',
+				 answer: '5804', 
+				 helpFirst: "Ricardo's taxable income puts him in the third bracket.  He pays:", 
+				 helpSecond: "$4,991 + 25% of the amount over $36,250",
+				 helpThird: "$4,991 + (.25)($39,500 - $36,250)",
+				 helpfourth: "$4,991 + (.25)($3,250)<br><br>",
+				 helpfifth: "$4,991 + $812.50<br><br>",
+				 template: 'incomeTax'
+            },
+			{ 	//21
+                 problem: 'Adrianna had a taxable income of $30,208. How much income tax did she have to pay?  Round to the nearest dollar.',
+				 answer: '4085', 
+				 helpFirst: "Adrianna's taxable income puts her in the second bracket.  She pays:", 
+				 helpSecond: "$893 + 15% of the amount over $8,925",
+				 helpThird: "$893 + (.15)($30,208 - $8,925)",
+				 helpfourth: "$893 + (.15)($21,283)<br><br>",
+				 helpfifth: "$893 + $3,192.45<br><br>",
+				 template: 'incomeTax'
+            },
+			{ 	//22
+                 problem: 'Cho had a taxable income of $62,300. How much income tax did she have to pay?  Round to the nearest dollar.',
+				 answer: '11504', 
+				 helpFirst: "Cho's taxable income puts her in the third bracket.  She pays:", 
+				 helpSecond: "$4,991 + 25% of the amount over $36,250",
+				 helpThird: "$4,991 + (.25)($62,300 - $36,250)",
+				 helpfourth: "$4,991 + (.25)($26,050)<br><br>",
+				 helpfifth: "$4,991 + $6,512.50<br><br>",
+				 template: 'incomeTax'
             }
-        ];
-		
-    return dataUtils.build(desc, template, data);
-	
-}]);
+        ],
+		shuffle = [
+					{ problems: [1,7,11], total: 2},
+					{ problems: [2,8,12], total: 2},
+					{ problems: [9,13], total: 1},
+					{ problems: [3,4,5,6,10], total: 1},
+					{ problems: [14], total: 1},
+					{ problems: [15,16,17,18,19,20,21,22], total: 5}
+			];
+
+	    
+	    	return dataUtils.build(desc, template, data, shuffle);
+			//return dataUtils.build(desc, template, data);
+			
+	}]);
