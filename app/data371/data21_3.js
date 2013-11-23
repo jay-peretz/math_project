@@ -1,7 +1,7 @@
 /*global angular */
 
 angular.module('mathSkills').service('data21_3', ['dataUtils', function (dataUtils) {
-    var ret = {
+    var desc = {
             title: '21.3 Commission',
             path: '21.3-commission',
             children: []
@@ -443,6 +443,16 @@ angular.module('mathSkills').service('data21_3', ['dataUtils', function (dataUti
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             }
             
-        ];
-    return dataUtils.build(ret, template, data);
-}]);
+        ],
+		shuffle = [
+					{ problems: [1,4,7,10], total: 2},
+					{ problems: [2,5,8,11], total: 2},
+					{ problems: [3,6,9,12], total: 2},
+					{ problems: [13,14,15,16,17,18,19,20,21,22,23,24], total: 4}
+			];
+
+	    
+	    	return dataUtils.build(desc, template, data, shuffle);
+			//return dataUtils.build(desc, template, data);
+			
+	}]);
