@@ -545,7 +545,7 @@ angular.module('mathSkills').service('data20_3', ['dataUtils', function (dataUti
 					{ problems: [1,4,7], total: 2},
 					{ problems: [11,14,17], total: 2},
 					{ problems: [18,21,24], total: 2},
-					{ problems: [2,3,5,6,8,9,10,12,13,15,16,19,20,22,23], total: 2},
+					{ problems: [2,3,5,6,8,9,10,12,13,15,16,19,20,22,23,26,29], total: 2},
 					{ problems: [25,28], total: 1},
 					{ problems: [27,30], total: 1}
 			];
