@@ -632,8 +632,8 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             {  //7a -33
                 problem: 'A store had total weekly sales of $75,000. Last week it had a decrease of 18%. What was the amount of the decrease in the store’s sales last week?',
                 round: '',
-                inAnswer: '13500',
-                answer: '13500', template: 'dollar', pre_symbol: '$', post_symbol: '', 
+                inAnswer: '13500.00',
+                answer: '13,500', template: 'dollar', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -647,8 +647,8 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             {  //7b -34
                 problem: 'A store’s sales for last week were $13,500 below the weekly average. If this amount represented an 18% decrease, what were the average total weekly sales?',
                 round: '',
-                inAnswer: '75000',
-                answer: '75000', template: 'dollar', pre_symbol: '$', post_symbol: '', 
+                inAnswer: '75000.00',
+                answer: '75,000', template: 'dollar', pre_symbol: '$', post_symbol: '', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '18', rn: '13500', 
