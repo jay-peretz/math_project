@@ -243,7 +243,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 										'{\\choose{[\\html{},\\rowgrp{\\grp{\\html{X}}'+
 															'{\\sign{=}}{\\html{&#36;}}{\\html{$firstAnswer}}}{\\html{&nbsp;}}]}{$$previousCorrect}}'+
 										'{\\ins{$secondWBText}}'+
-										'{\\grp{\\html{$rd}}{\\sign{$stepSign}}{\\html{$firstAnswer}}{\\sign{=}}{\\css{\\inputcash{$secondInAnswer}}{width120px}}}'+
+										'{\\grp{\\html{$rd}}{\\sign{$stepSign}}{\\html{$firstAnswer}}{\\sign{=}}{\\html{&#36;}}{\\css{\\inputcash{$secondInAnswer}}{width120px}}}'+
 										'}{well}',
                         controls: {
                             "checkAnswer": true,
@@ -302,6 +302,94 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                             "checkAnswer": true,
                             "help": false,
 							"stepwiseNextProblem": true
+                        }
+                    }]
+                }]
+            },
+            questionDouble: {
+                title: 'Discounts',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
+                        answer: '\\rowgrp'+
+									'{\\grp{\\chkbtn{Profit}{$buttonValueA}}{\\chkbtn{ Loss }{$buttonValueB}}}'+
+									'{\\html{&nbsp;}}'+
+									'{\\grp{\\html{By how much? &#36;}}{\\css{\\inputcash{$aInAnswer}}{width120px}}}',
+                        controls: {
+                            "checkAnswer": true,
+							"workbook": false,
+                            "help": '\\rowgrp'+
+                            '{\\html{Find the amount of the $firstDescriptor:}}'+
+							'{\\html{&nbsp;}}'+
+                            '{\\grp{\\frac{\\html{$ln}}{\\html{$ld}}}{\\sign{=}}{\\frac{\\html{$rn}}{\\html{$rd}}}}'+
+                            '{\\html{&nbsp;}}'+
+                            '{\\grp'+
+								'{\\str{X}}'+
+								'{\\sign{=}}'+
+								'{\\html{&#36;}}'+
+								'{\\html{$firstAnswer}}'+
+							'}'+
+							'{\\html{&nbsp;}}'+
+							'{\\html{$secondWBText}}'+
+							'{\\html{&nbsp;}}'+
+							'{\\grp'+
+								'{\\html{$rd}}'+
+								'{\\sign{$stepSign}}'+
+								'{\\html{$firstAnswer}}'+
+								'{\\sign{=}}'+
+								'{\\html{&#36;}}'+
+								'{\\html{$secondAnswer}}'+
+							'}'+
+							'{\\html{&nbsp;}}'+
+							'{\\html{Find the amount of the $secondDescriptor.}}'+
+							'{\\html{&nbsp;}}'+
+                            '{\\grp{\\frac{\\html{$l2n}}{\\html{$l2d}}}{\\sign{=}}{\\frac{\\html{$r2n}}{\\html{$r2d}}}}'+
+                            '{\\html{&nbsp;}}'+
+                            '{'+
+                            '\\grp'+
+								'{\\str{X}}'+
+								'{\\sign{=}}'+
+								'{\\html{&#36;}}'+
+								'{\\html{$thirdAnswer}}'+
+							'}'+
+							'{\\html{&nbsp;}}'+
+							'{\\html{$thirdWBText}}'+
+							'{\\html{&nbsp;}}'+
+							'{\\grp{\\html{$r2d}}{\\sign{-}}{\\html{$thirdAnswer}}{\\sign{=}}{\\html{&#36;}}{\\html{$thirdAnswer}}}'+
+							'{\\html{&nbsp;}}'+
+							'{\\html{$fourthWBText}}'+
+							'{\\html{&nbsp;}}'+
+							'{\\grp{\\html{$rd}}{\\sign{-}}{\\html{$thirdAnswer}}{\\sign{=}}{\\html{&#36;}}{\\html{$aAnswer}}}'+
+							'{\\html{&nbsp;}}'+
+							'{\\css{\\html{$fifthWBText}}{help-answer-text}}'
+                        }
+                    },
+					{
+                        problem: '\\html{$bProblem<br><br><span class="blue-text">$newQuestion</span>}',
+                        answer: '\\grp{\\input{$bAnswer}}{\\html{&#37;}}',
+                        controls: {
+                            "checkAnswer": true,
+							"workbook": false,
+                            "help": '\\rowgrp'+
+									'{\\grp'+
+										'{\\frac{\\html{$rn}}{\\html{$ld}}}{\\sign{=}}{\\frac{\\html{$aAnswer}}{\\html{$rd}}}}'+
+                            		'{\\html{&nbsp;}}'+
+									'{\\grp'+
+											'{\\html{X}}'+
+											'{\\sign{=}}'+
+											'{$thirdSolution}'+
+											'{\\html{&nbsp;}}'+
+									'}'+
+									'{\\html{&nbsp;}}'+
+									'{\\grp'+
+										'{\\str{X}}'+
+										'{\\sign{=}}'+
+										'{\\html{$bAnswer}}'+
+										'{\\html{&#37;}}'+
+									'}'+
+									'{\\html{&nbsp;}}'+
+									'{\\css{\\html{The percent loss was $bAnswer %}}{help-answer-text}}'
                         }
                     }]
                 }]
@@ -510,32 +598,60 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 				thirdWBText: 'After the markdown, what did the house sell for?'
             },
             {  //15
-                problem: 'A professional baseball team had an average of 22,548 people attend each of its games lastyear. This year there is an increase in average attendance of 2,706 people per game. What is the percent increase in the team’s average attendance?',
-                round: 'Round to the nearest whole percent.',
-				inAnswer: '12',
-                answer: '12', template: 'percent', 
+                problem: 'An artist spent $80 to create a sculpture. He tried to sell it at a 75% markup. When it didn’t sell, he marked it down 40%. What was the sculpture being sold for now?',
+                round: '',
+				inAnswer: '84.00', answer: '84',
+				firstInAnswer: '60.00', firstAnswer: '60',
+                secondInAnswer: '140.00', secondAnswer: '140',
+				thirdInAnswer: '56.00', thirdAnswer: '56',
+				firstDescriptor: 'markup',
+				secondDescriptor: 'markdown',
+				stepSign: '+',
+		        template: 'dollarDouble', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: 'x', rn: '2706', 
-                ld: '100', rd: '22548', 
-                solution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{2706}}{css{\\html{\xF7}}{bigger}}{\\html{22548}}'),
+                ln: '75', rn: 'x', 
+                ld: '100', rd: '80', 
+				l2n: '40', r2n: 'x', 
+                l2d: '100', r2d: '140', 
+                solution: dataUtils.pre('\\grp{\\html{80}}{\\html{&#149;}}{\\html{75}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
+				secondSolution: dataUtils.pre('\\grp{\\html{140}}{\\html{&#149;}}{\\html{40}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
                 xtext: '',
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
+                secondWBText: 'After the markup, what was the selling price of the sculpture?',
+				thirdWBText: 'After the markdown, what did the sculpture sell for?'
             },
             {  //16
-                problem: 'A professional baseball team had an average of 22,548 people attend each of its games last year. This year’s average attendance is 25,254. What is the percent increase in the team’s average attendance?',
-                round: 'Round to the nearest whole percent.',
-				inAnswer: '12',
-                xtext:'We get the Amount (Part Quantity) by subtracting average attendance from this year\'s <br><br>25254 - 22548 = 2706<br><br>',
-                answer: '12', template: 'percent',
+                problem: 'A used car dealership purchased a car from a client for $3,500. After repairing and tuning up the car, the dealership marked up the price 70% to sell it. When it didn’t sell, the dealership marked down the selling price by 50%. When the dealership finally sold the car at the second sales price, did it make a profit or loss?',
+				bProblem: 'A used car dealership purchased a car from a client for $3,500. When the dealership finally sold the car, it lost $525 on the sale.',
+                round: '',
+				newQuestion: 'What was the percent loss?',
+				aInAnswer: '525.00', aAnswer: '525',
+				bAnswer: '15',
+				buttonValueA: 'F',
+				buttonValueB: 'T',
+				firstAnswer: '2450',
+                secondAnswer: '5950',
+				thirdAnswer: '2975',
+				firstDescriptor: 'markup',
+				secondDescriptor: 'markdown',
+				stepSign: '+',
+		        template: 'questionDouble', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: 'x', rn: '2706', 
-                ld: '100', rd: '22548', 
-                solution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{2706}}{css{\\html{\xF7}}{bigger}}{\\html{22548}}'),
-                previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
+                ln: '70', rn: 'x', 
+                ld: '100', rd: '3500', 
+				l2n: '50', r2n: 'x', 
+                l2d: '100', r2d: '5950', 
+                solution: dataUtils.pre('\\grp{\\html{3500}}{\\html{&#149;}}{\\html{75}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
+				secondSolution: dataUtils.pre('\\grp{\\html{5950}}{\\html{&#149;}}{\\html{50}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
+				thirdSolution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{525}}{css{\\html{\xF7}}{bigger}}{\\html{3500}}'),
+                xtext: '',
+                secondWBText: 'After the markup, the selling price of the car was:',
+				thirdWBText: 'After the markdown, the car sold for:',
+				fourthWBText: 'The dealership spent $3500 for the car and it sold the car for only $2975, a loss of:',
+				fifthWBText: 'The dealership lost $525 on the car'
             },
             
             {  //17
