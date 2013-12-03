@@ -30,7 +30,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
-                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$inAnswer}}{width200px}}',
+                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$inAnswer}}{width120px}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -116,7 +116,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
-                        answer: '\\grp{\\css{\\input{$answer}}{width200px}}{\\html{&#37;}}',
+                        answer: '\\grp{\\css{\\input{$answer}}{width120px}}{\\html{&#37;}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -202,7 +202,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
-                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$inAnswer}}{width200px}}',
+                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$inAnswer}}{width120px}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -214,7 +214,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
                         answer: '\\wb{\\rowgrp'+
-                            '{\\ins{Find the amount of the first discount.}}'+
+                            '{\\ins{Find the amount of the $firstDescriptor.}}'+
                             '{\\grp{\\frac{\\html{$ln}}{\\html{$ld}}}{\\sign{=}}{\\frac{\\html{$rn}}{\\html{$rd}}}}'+
                             '{\\html{&nbsp;}}'+
                             '{'+
@@ -223,7 +223,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 										'{\\str{X}}'+
 										'{\\sign{=}}'+
 										'{\\html{&#36;}}'+
-										'{\\inputcash{$inAnswer}}'+
+										'{\\css{\\inputcash{$firstInAnswer}}{width120px}}'+
 								'}{proportion-application}'+
 							'}'+
                         '}{well}',
@@ -233,58 +233,71 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                         }
                     }, {
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
-                        answer: '\\wb{\\rowgrp{'+
-                            '\\choose{[\\html{That is correct.   },\\rowgrp{\\grp'+
-											'{\\html{X}}'+
-											'{\\sign{=}}'+
-											'{$solution}}'+
-                                            '{\\html{&nbsp;}}]}'+
-                                            '{$$previousCorrect}'+
-                        '}{'+
-                            '\\css{\\choose{[\\html{},\\grp{\\html{X}}'+
-											'{\\sign{=}}{\\html{&#36;}}{\\html{$answer}}]}{$$previousCorrect}}{bottom-marg}'+
-                        '}{'+
-                            '\\ins{$secondWBText}'+
-                        '}{'+
-                            '\\css{\\grp{\\html{$rd}}{\\sign{-}}{\\html{$answer}}{\\sign{=}}{\\inputcash{$secondInAnswer}}{bottom-marg}'+
-                        '}{'+
-                            '\\ins{Now solve the problem.<br><span class="blue-text">$round</span>}'+
-                        '}{'+
+                        answer: '\\wb{\\rowgrp'+
+										'{\\choose{[\\html{That\'s right.},\\grp'+
+														'{\\html{X}}'+
+														'{\\sign{=}}'+
+														'{$solution}]}'+
+													'{$$previousCorrect}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\choose{[\\html{},\\rowgrp{\\grp{\\html{X}}'+
+															'{\\sign{=}}{\\html{&#36;}}{\\html{$firstAnswer}}}{\\html{&nbsp;}}]}{$$previousCorrect}}'+
+										'{\\ins{$secondWBText}}'+
+										'{\\grp{\\html{$rd}}{\\sign{$stepSign}}{\\html{$firstAnswer}}{\\sign{=}}{\\css{\\inputcash{$secondInAnswer}}{width120px}}}'+
+										'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    },{
+                        problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
+                        answer: '\\wb{\\rowgrp'+
+							'{\\choose{[\\html{Correct.},\\grp{\\html{$rd}}{\\sign{$stepSign}}{\\html{$firstAnswer}}{\\sign{=}}{\\html{$secondAnswer}}]}'+
+													'{$$previousCorrect}}'+
+							'{\\html{&nbsp;}}'+
+                            '{\\ins{Find the amount of the $secondDescriptor.}}'+
+                            '{\\grp{\\frac{\\html{$l2n}}{\\html{$l2d}}}{\\sign{=}}{\\frac{\\html{$r2n}}{\\html{$r2d}}}}'+
+                            '{\\html{&nbsp;}}'+
+                            '{'+
                             '\\css{'+
 								'\\grp'+
 										'{\\str{X}}'+
 										'{\\sign{=}}'+
 										'{\\html{&#36;}}'+
-										'{\\inputcash{$inAnswer}}'+
+										'{\\css{\\inputcash{$thirdInAnswer}}{width120px}}'+
 								'}{proportion-application}'+
 							'}'+
-						'}}{well}',
+                        '}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
+                        answer: '\\wb{\\rowgrp'+
+										'{\\choose{[\\html{Now for the last step:},\\rowgrp{\\grp'+
+														'{\\html{X}}'+
+														'{\\sign{=}}'+
+														'{$secondSolution}}'+
+														'{\\html{&nbsp;}}]}'+
+													'{$$previousCorrect}}'+
+										'{\\css{\\choose{[\\html{},\\grp{\\html{X}}'+
+															'{\\sign{=}}{\\html{&#36;}}{\\html{$thirdAnswer}}]}{$$previousCorrect}}{bottom-marg}}'+
+										'{\\ins{$thirdWBText}}'+
+										'{\\css{\\grp{\\html{$r2d}}{\\sign{-}}{\\html{$thirdAnswer}}{\\sign{=}}{\\html{&#36;}}{\\css{\\inputcash{$inAnswer}}{width120px}}}{bottom-marg}}'+
+										'}{well}{end}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    },
+					{
+                        problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\css{\\choose{[\\html{},\\grp{\\frac{\\html{$$ln}}{\\html{$$ld}}}{\\sign{=}}{\\frac{\\html{$$rn}}{\\html{$$rd}}}]}{$$previousCorrect}}{bottom-marg}'+
-                        '}{'+
-                            '\\choose{[\\ins{Congratulations!},\\ins{The correct answer is found by following the process to solve all proportion problems. We substitute the given values to get:}]}{$$previousCorrect}'+
-                        '}{'+
-                            '\\choose{'+
-								'[\\grp'+
-								  '{\\frac{\\html{$$ln}}{\\html{$$ld}}}{\\sign{=}}{\\frac{\\html{$$rn}}{\\html{$$rd}}},'+
-								'\\css{'+
-										'\\grp'+
-											'{\\html{X}}'+
-											'{\\sign{=}}'+
-											'{$solution}'+
-									'}{proportion-application}'+
-								']}{$$previousCorrect}'+
-                        '}{'+
-                            '\\choose{[\\html{},\\ins{The answer is}]}{$$previousCorrect}'+
-                        '}{'+
-                            '\\choose{[\\html{},\\css{\\grp{\\html{&#36;}}{\\html{$answer}}}{proportion-application}]}{$$previousCorrect}'+
-                        '}}{well}',
+									'\\choose{[\\html{},\\ins{The answer is}]}{$$previousCorrect}'+
+                        			'}{'+
+                            		'\\choose{[\\html{},\\grp{\\html{$r2d}}{\\sign{-}}{\\html{$thirdAnswer}}{\\sign{=}}{\\html{&#36; $answer}}]}{$$previousCorrect}'+
+                        		'}}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -449,33 +462,52 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
             {  //13
                 problem: 'A store originally priced a sofa at $840. When it didn’t sell the owner marked down the price 25%. When it still didn’t sell, he marked it down another 20% off the discounted price. For what price did the owner finally sell the sofa?',
                 round: '',
-                inAnswer: '210.00',
-                secondInAnswer: '630.00',
-                secondAnswer: '630',
-		        	answer: '210', template: 'dollarDouble', 
+				answer: '504', inAnswer: '504.00',
+				firstInAnswer: '210.00', firstAnswer: '210',
+                secondInAnswer: '630.00', secondAnswer: '630',
+				thirdInAnswer: '126.00', thirdAnswer: '126',
+				firstDescriptor: 'first discount',
+				secondDescriptor: 'second discount',
+				stepSign: '-',
+		        template: 'dollarDouble', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '25', rn: 'x', 
                 ld: '100', rd: '840', 
+				l2n: '20', r2n: 'x', 
+                l2d: '100', r2d: '630', 
                 solution: dataUtils.pre('\\grp{\\html{25}}{\\html{&#149;}}{\\html{840}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
+				secondSolution: dataUtils.pre('\\grp{\\html{630}}{\\html{&#149;}}{\\html{20}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
                 xtext: '',
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
-                secondWBText: 'After the first discount what is the price of the sofa?'
+                secondWBText: 'After the first discount what is the price of the sofa?',
+				thirdWBText: 'After the second discount the sofa sold for how much?'
             },
             {  //14
-                problem: 'A baseball team had an increase in average attendance of 2,706 people per game this year.If this represented a 12% increase, what was the average attendance at games last year?',
-                round: 'Round to the nearest person.',
-                inAnswer: '22550',
-                answer: '22550', template: 'percent',
+                problem: 'A contractor originally invested $260,000 in a house. She fixed it up and then tried to sell it at a 25% markup. When it didn’t sell, she marked down the selling price by 15%. What was the house being sold for now?',
+                round: '',
+				answer: '276,250', inAnswer: '276250.00',
+				firstInAnswer: '65000.00', firstAnswer: '65,000',
+                secondInAnswer: '325000.00', secondAnswer: '325,000',
+				thirdInAnswer: '48750.00', thirdAnswer: '48,750',
+				firstDescriptor: 'markup',
+				secondDescriptor: 'markdown',
+				stepSign: '+',
+		        template: 'dollarDouble', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: '12', rn: '2706', 
-                ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{2706}}{css{\\html{\xF7}}{bigger}}{\\html{12}}'),
-				xtext: '',
+                ln: '25', rn: 'x', 
+                ld: '100', rd: '260,000', 
+				l2n: '15', r2n: 'x', 
+                l2d: '100', r2d: '325,000', 
+                solution: dataUtils.pre('\\grp{\\html{260,000}}{\\html{&#149;}}{\\html{25}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
+				secondSolution: dataUtils.pre('\\grp{\\html{325,000}}{\\html{&#149;}}{\\html{15}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
+                xtext: '',
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
+                secondWBText: 'After the workup, what was the selling price of the house?',
+				thirdWBText: 'After the markdown, what did the house sell for?'
             },
             {  //15
                 problem: 'A professional baseball team had an average of 22,548 people attend each of its games lastyear. This year there is an increase in average attendance of 2,706 people per game. What is the percent increase in the team’s average attendance?',
