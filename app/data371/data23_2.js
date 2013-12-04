@@ -382,6 +382,23 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				fourthAnswer: '8',
 				template: 'quartsToCups' 
 			}
+			,
+			{ // problem 3
+				problemText: '<span class=bigger><sup>1</sup>/<sub>2</sub></span> quart is how many cups?',
+				firstNumSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"1 tbs\\", \\"1 oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
+				initialAmount: '<sup>1</sup>/<sub>2</sub>',
+				numeratorStart: '1',
+				denominatorStart: '2',
+				firstNumAnswer: '2 pt',
+				firstDenAnswer: '1 qt',
+				secondNumAnswer: '2 c',
+				secondDenAnswer: '1 pt',
+				thirdNumAnswer: '',
+				thirdDenAnswer: '',
+				fourthAnswer: '2',
+				template: 'quartsToCups' 
+			}
         ];
 
     return dataUtils.build(desc, template, data);
