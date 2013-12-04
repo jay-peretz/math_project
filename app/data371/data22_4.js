@@ -306,7 +306,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     }]
                 }]
             },
-            questionDouble: {
+            questionTriple: {
                 title: 'Discounts',
                 children: [{
                     title: 'Main Answer',
@@ -356,11 +356,11 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 							'{\\html{&nbsp;}}'+
 							'{\\html{$thirdWBText}}'+
 							'{\\html{&nbsp;}}'+
-							'{\\grp{\\html{$r2d}}{\\sign{-}}{\\html{$thirdAnswer}}{\\sign{=}}{\\html{&#36;}}{\\html{$thirdAnswer}}}'+
+							'{\\grp{\\html{$r2d}}{\\sign{-}}{\\html{$thirdAnswer}}{\\sign{=}}{\\html{&#36;}}{\\html{$fourthAnswer}}}'+
 							'{\\html{&nbsp;}}'+
 							'{\\html{$fourthWBText}}'+
 							'{\\html{&nbsp;}}'+
-							'{\\grp{\\html{$rd}}{\\sign{-}}{\\html{$thirdAnswer}}{\\sign{=}}{\\html{&#36;}}{\\html{$aAnswer}}}'+
+							'{$fourthSolution}'+
 							'{\\html{&nbsp;}}'+
 							'{\\css{\\html{$fifthWBText}}{help-answer-text}}'
                         }
@@ -634,10 +634,11 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 				firstAnswer: '2450',
                 secondAnswer: '5950',
 				thirdAnswer: '2975',
+				fourthAnswer: '2975',
 				firstDescriptor: 'markup',
 				secondDescriptor: 'markdown',
 				stepSign: '+',
-		        template: 'questionDouble', 
+		        template: 'questionTriple', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '70', rn: 'x', 
@@ -651,22 +652,42 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 secondWBText: 'After the markup, the selling price of the car was:',
 				thirdWBText: 'After the markdown, the car sold for:',
 				fourthWBText: 'The dealership spent $3500 for the car and it sold the car for only $2975, a loss of:',
+				fourthSolution: dataUtils.pre('\\grp{\\html{3500}}{css{\\html{-}}{bigger}}{\\html{2975}}{css{\\html{=}}{bigger}}{\\html{525}}'),
 				fifthWBText: 'The dealership lost $525 on the car'
             },
             
             {  //17
-                problem: 'At the local community college, 6,840 students were enrolled last semester. This semester there was a 6% increase in enrollment. How many more students are enrolled at the college this semester than last year?',
-                round: 'Round to the nearest whole student.',
-                inAnswer: '410',
-                answer: '410', template: 'percent', 
+                problem: 'Sheila paid $50 for a painting at a garage sale. Knowing that the painting was worth much more than this, she tried to sell the painting at a 220% markup. It didn’t sell so she marked down her selling price 60%. When she finally sold the painting, did she make a profit or loss?',
+				bProblem: 'Sheila paid $50 for a painting at a garage sale. When she finally sold the painting, she made $14 profit on the sale.',
+                round: '',
+				newQuestion: 'What was the percent profit?',
+				aInAnswer: '14.00', aAnswer: '14',
+				bAnswer: '28',
+				buttonValueA: 'T',
+				buttonValueB: 'F',
+				firstAnswer: '110',
+                secondAnswer: '160',
+				thirdAnswer: '96',
+				fourthAnswer: '64',
+				firstDescriptor: 'markup',
+				secondDescriptor: 'markdown',
+				stepSign: '+',
+		        template: 'questionTriple', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: '6', rn: 'x', 
-                ld: '100', rd: '6840', 
-                solution: dataUtils.pre('\\grp{\\html{6}}{\\html{&#149;}}{\\html{6840}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
-				xtext: '',
-                previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
+                ln: '220', rn: 'x', 
+                ld: '100', rd: '50', 
+				l2n: '60', r2n: 'x', 
+                l2d: '100', r2d: '160', 
+                solution: dataUtils.pre('\\grp{\\html{50}}{\\html{&#149;}}{\\html{220}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
+				secondSolution: dataUtils.pre('\\grp{\\html{160}}{\\html{&#149;}}{\\html{60}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
+				thirdSolution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{14}}{css{\\html{\xF7}}{bigger}}{\\html{50}}'),
+                xtext: '',
+                secondWBText: 'After the markup, the selling price of the painting was:',
+				thirdWBText: 'After the markdown, the painting sold for:',
+				fourthWBText: 'Sheila paid $50 for a painting and she sold the painting for $64, a profit of:',
+				fourthSolution: dataUtils.pre('\\grp{\\html{64}}{css{\\html{-}}{bigger}}{\\html{50}}{css{\\html{=}}{bigger}}{\\html{14}}'),
+				fifthWBText: 'Sheila made $14 profit on the painting'
             }
         ],
 		// shuffle specifics still to go
