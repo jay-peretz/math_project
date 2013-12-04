@@ -21,7 +21,9 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 										+'{\\html{?}}'
 										+'{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}'
 									+'}',
-                        answer: '\\input{$fourthAnswer}',
+                        answer: '\\grp'
+									+'{\\input{$fourthAnswer}}'
+									+'{\\html{c}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
