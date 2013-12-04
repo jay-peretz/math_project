@@ -12,14 +12,60 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\html{$problem}',
-                        answer:'\\input{0}',
-                        controls:{
+                        problem: '\\html{$problem<br><br><span class="blue-text">$firstQuestion &nbsp; $round</span>}',
+                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$fullFirstAnswer}}{width120px}}',
+                        controls: {
                             "checkAnswer": true,
-                            "help": false,
-                            "workbook": false,
-                            "stepwiseNextProblem": true
-                            }
+							"workbook": false,
+                            "help": '\\rowgrp'+
+										'{\\html{Find the amount of the $firstDescriptor.<br>$round}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp{\\frac{\\html{$ln}}{\\html{$ld}}}{\\sign{=}}{\\frac{\\html{$rn}}{\\html{$rd}}}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\str{X}}'+
+											'{\\sign{=}}'+
+											'{$solution}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\str{X}}'+
+											'{\\sign{=}}'+
+											'{\\html{&#36;}}'+
+											'{\\html{$firstAnswer}}'+
+										'}'
+                        }
+                    },
+					{
+                        problem: '\\html{$problem<br><br><span class="blue-text">$secondQuestion &nbsp; $round</span>}',
+                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$fullSecondAnswer}}{width120px}}',
+                        controls: {
+                            "checkAnswer": true,
+							"workbook": false,
+                            "help": '\\rowgrp'+
+										'{\\html{Find the amount of the $firstDescriptor.<br>$round}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp{\\frac{\\html{$ln}}{\\html{$ld}}}{\\sign{=}}{\\frac{\\html{$rn}}{\\html{$rd}}}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\str{X}}'+
+											'{\\sign{=}}'+
+											'{$solution}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\str{X}}'+
+											'{\\sign{=}}'+
+											'{\\html{&#36;}}'+
+											'{\\html{$firstAnswer}}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\html{$secondDescriptor}}'+
+										'{\\html{&nbsp;}}'+
+										'{$secondSolution}'+
+										'{\\html{&nbsp;}}'+
+										'{\\css{\\html{$textAnswer}}{help-answer-text}}'
+                        }
                     }]
                 }]
             },
@@ -397,8 +443,20 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
         },
         data = [
             { //1
-                problem: 'We dont know what we are doing yet', 
-                template: 'placeholder'
+                template: 'placeholder',
+                problem: 'The owner of Appliances For You purchased refrigerators for $420 from the manufacturer. In turn, the owner marked up her cost by 62%.',
+				round: '',
+				firstQuestion: 'What is the amount of the markup?',
+				secondQuestion: 'How much did a customer have to pay for a refrigerator at this store?',
+				fullFirstAnswer: '260.40', firstAnswer: '260.40',
+				fullSecondAnswer: '680.40',
+				firstDescriptor: 'markup',
+				secondDescriptor: 'Add the markup to the price:',
+				ln: '62', rn: 'X', 
+                ld: '100', rd: '420', 
+				solution: dataUtils.pre('\\grp{\\html{420}}{\\html{&#149;}}{\\html{62}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
+				secondSolution: dataUtils.pre('\\grp{\\html{420}}{css{\\html{+}}{bigger}}{\\html{260.40}}{css{\\html{=}}{bigger}}{\\html{$&nbsp;680.40}}'),
+				textAnswer: 'The customer pays $680.40 for a refrigerator'
             },
             {  //2
                 problem: 'The owner of Appliances For You bought a refrigerator from the manufacturer for $420. If she marked up the price $260.40, what was her percent markup?',
@@ -432,9 +490,21 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
-            {  //4
-                problem: 'We dont know what we are doing yet', 
-                template: 'placeholder'
+            { //4
+                template: 'placeholder',
+                problem: 'Broccoli was purchased by a local grocery store for $1.50 a pound. The store marked up the price 26%.',
+				round: '',
+				firstQuestion: 'What was the amount of the markup at the store?',
+				secondQuestion: 'How much did a customer pay for a pound of broccoli?',
+				fullFirstAnswer: '0.39', firstAnswer: '0.39',
+				fullSecondAnswer: '1.89',
+				firstDescriptor: 'markup',
+				secondDescriptor: 'Add the markup to the price:',
+				ln: '26', rn: 'X', 
+                ld: '100', rd: '1.50', 
+				solution: dataUtils.pre('\\grp{\\html{1.50}}{\\html{&#149;}}{\\html{26}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
+				secondSolution: dataUtils.pre('\\grp{\\html{1.50}}{css{\\html{+}}{bigger}}{\\html{0.39}}{css{\\html{=}}{bigger}}{\\html{$&nbsp;1.89}}'),
+				textAnswer: 'The customer pays $1.89 for a pound of broccoli'
             },
             {  //5
                 problem: 'A local grocery store bought broccoli from a local farmer for $1.50 per pound. If the store increased the price by $0.39 a pound, what was the percent markup?',
@@ -464,18 +534,21 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
-            {  //7to be done
-                problem: 'Last year City A had a rainfall of about 28 inches. This year the rainfall increased by 6.16 inches. What was the percent increase in the amount of rainfall received this year?',
-                round: '',
-                answer: '22', template: 'percent', 
-                dln: '%', drn: 'Amount (Part Quantity)', 
-                dld: '100', drd: 'Base (Whole Quantity)',
-                ln: 'x', rn: '6.16', 
-                ld: '100', rd: '28', 
-                solution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{6.16}}{css{\\html{\xF7}}{bigger}}{\\html{28}}'),
-                xtext: '',
-                previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
+            { //7
+                template: 'placeholder',
+                problem: 'When a clothing store couldn’t sell its summer dresses for $32, it marked them down 35%.',
+				round: '',
+				firstQuestion: 'What is the amount of the markdown?',
+				secondQuestion: 'How much did the store sell the dresses for after the markdown?',
+				fullFirstAnswer: '11.20', firstAnswer: '11.20',
+				fullSecondAnswer: '20.80',
+				firstDescriptor: 'markdown',
+				secondDescriptor: 'Subtract the markdown from the price:',
+				ln: '35', rn: 'X', 
+                ld: '100', rd: '32', 
+				solution: dataUtils.pre('\\grp{\\html{32}}{\\html{&#149;}}{\\html{35}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
+				secondSolution: dataUtils.pre('\\grp{\\html{32}}{css{\\html{-}}{bigger}}{\\html{11.20}}{css{\\html{=}}{bigger}}{\\html{$&nbsp;20.80}}'),
+				textAnswer: 'The store sold the dresses for $20.80'
             },
             {  //8
                 problem: 'A clothing store couldn’t sell its summer dresses for $32, so it marked them down $11.20. What was the percent markdown?',
@@ -505,19 +578,21 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
-            {  //10to be done
-                problem: 'Margaret received a raise in her salary of $103.50 per month. If this was a 4.5% increase, how much money did Margaret earn per month before her raise? ',
-                round: '',
-                inAnswer: '2300.00',
-                answer: '2300', template: 'dollar',
-                dln: '%', drn: 'Amount (Part Quantity)', 
-                dld: '100', drd: 'Base (Whole Quantity)',
-                ln: '4.5', rn: '103.50', 
-                ld: '100', rd: 'x', 
-                solution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{103.50}}{css{\\html{\xF7}}{bigger}}{\\html{4.5}}'),
-                xtext: '',
-                previousCorrect: true,
-                flip: [[1], ["ln", "rn"], ["ld", "rd"]],
+            { //10
+                template: 'placeholder',
+                problem: 'The owner of a hardware store bought a set of tools for $169.95.',
+				round: 'Round the answer to the nearest cent.',
+				firstQuestion: 'If he marked up the price by 30%, what was the amount of the markup for the tools?',
+				secondQuestion: 'If he marked up the price by 30%, what was the selling price for the set of tools?',
+				fullFirstAnswer: '50.99', firstAnswer: '50.99',
+				fullSecondAnswer: '220.94',
+				firstDescriptor: 'markup',
+				secondDescriptor: 'Add the markup to the price:',
+				ln: '30', rn: 'X', 
+                ld: '100', rd: '169.95', 
+				solution: dataUtils.pre('\\grp{\\html{169.95}}{\\html{&#149;}}{\\html{30}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
+				secondSolution: dataUtils.pre('\\grp{\\html{169.95}}{css{\\html{+}}{bigger}}{\\html{50.99}}{css{\\html{=}}{bigger}}{\\html{$&nbsp;220.94}}'),
+				textAnswer: 'The selling price for the tools is $220.94'
             },
             {  //11
                 problem: 'The price of a box of organic strawberries was selling for $4.29. If the price was reduced by$1.29 per box, what was the percent markdown? Round answer to the nearest tenth of a percent.',
