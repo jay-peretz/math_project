@@ -16,10 +16,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}'
+										+'{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$firstImage>}}'
 										+'{\\sign{&equals;}}'
 										+'{\\html{?}}'
-										+'{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}'
+										+'{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}'
 									+'}',
                         answer: '\\grp'
 									+'{\\input{$fourthAnswer}}'
@@ -37,10 +37,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}'
+										+'{\\html{$initialAmount}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$firstImage>}}'
 										+'{\\sign{&equals;}}'
 										+'{\\html{?}}'
-										+'{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}'
+										+'{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}'
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
@@ -70,10 +70,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
+										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$firstImage>}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
 										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{4}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}}{\\grp{\\html{1}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}}}'
-										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}}',
+										+'{\\frac{\\grp{\\html{4}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$secondImage>}}}{\\grp{\\html{1}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$firstImage>}}}}'
+										+'{\\sign{&equals;}}{\\html{?}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
 										+'{\\html{What is the second equivalence fraction to multiply by?}}'
@@ -105,14 +105,14 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
+										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$firstImage>}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
 										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{4}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}}{\\grp{\\html{1}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}}}'
+										+'{\\frac{\\grp{\\html{4}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$secondImage>}}}{\\grp{\\html{1}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$firstImage>}}}}'
 										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{2}}{\\image{23.2_Fluid_Volume/pint-01_50x70.png}}}{\\grp{\\html{1}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}}}'
+										+'{\\frac{\\grp{\\html{2}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$thirdImage>}}}{\\grp{\\html{1}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$secondImage>}}}}'
 										+'{\\sign{&equals;}}'
 										+'{\\html{?}}'
-										+'{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}}',
+										+'{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
 										+'{\\html{What is the third equivalence fraction to multiply by?}}'
@@ -148,14 +148,14 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
+										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$firstImage>}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
 										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{4}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}}{\\grp{\\html{1}}{\\image{23.2_Fluid_Volume/gallon-01-56x70.png}}}}'
+										+'{\\frac{\\grp{\\html{4}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$secondImage>}}}{\\grp{\\html{1}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$firstImage>}}}}'
 										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{2}}{\\image{23.2_Fluid_Volume/pint-01_50x70.png}}}{\\grp{\\html{1}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}}}'
+										+'{\\frac{\\grp{\\html{2}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$thirdImage>}}}{\\grp{\\html{1}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$secondImage>}}}}'
 										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{2}}{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}}{\\grp{\\html{1}}{\\image{23.2_Fluid_Volume/pint-01_50x70.png}}}}'
-										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}'
+										+'{\\frac{\\grp{\\html{2}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}}{\\grp{\\html{1}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$thirdImage>}}}}'
+										+'{\\sign{&equals;}}{\\html{?}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}'
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
@@ -203,10 +203,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}'
+										+'{\\html{$initialAmount}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$secondImage>}}'
 										+'{\\sign{&equals;}}'
 										+'{\\html{?}}'
-										+'{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}'
+										+'{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}'
 									+'}',
                         answer: '\\grp'
 									+'{\\input{$fourthAnswer}}'
@@ -224,10 +224,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}'
+										+'{\\html{$initialAmount}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$secondImage>}}'
 										+'{\\sign{&equals;}}'
 										+'{\\html{?}}'
-										+'{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}'
+										+'{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}'
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
@@ -257,10 +257,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
+										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$secondImage>}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
 										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{2}}{\\image{23.2_Fluid_Volume/pint-01_50x70.png}}}{\\grp{\\html{1}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}}}'
-										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}}',
+										+'{\\frac{\\grp{\\html{2}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$thirdImage>}}}{\\grp{\\html{1}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$secondImage>}}}}'
+										+'{\\sign{&equals;}}{\\html{?}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
 										+'{\\html{What is the second equivalence fraction to multiply by?}}'
@@ -292,12 +292,12 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
+										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$secondImage>}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
 										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{2}}{\\image{23.2_Fluid_Volume/pint-01_50x70.png}}}{\\grp{\\html{1}}{\\image{23.2_Fluid_Volume/quart-02-40x70.png}}}}'
+										+'{\\frac{\\grp{\\html{2}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$thirdImage>}}}{\\grp{\\html{1}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$secondImage>}}}}'
 										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{2}}{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}}{\\grp{\\html{1}}{\\image{23.2_Fluid_Volume/pint-01_50x70.png}}}}'
-										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.2_Fluid_Volume/cup-02-50x60.png}}'
+										+'{\\frac{\\grp{\\html{2}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}}{\\grp{\\html{1}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$thirdImage>}}}}'
+										+'{\\sign{&equals;}}{\\html{?}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}'
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
@@ -348,6 +348,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				thirdNumAnswer: '2 c',
 				thirdDenAnswer: '1 pt',
 				fourthAnswer: '48',
+				firstImage: 'gallon-01-56x70.png',
+				secondImage: 'quart-02-40x70.png',
+				thirdImage: 'pint-01_50x70.png',
+				fourthImage: 'cup-02-50x60.png',
 				template: 'gallonsToCups' 
 			},
 			{ // problem 2
@@ -364,6 +368,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				thirdNumAnswer: '2 c',
 				thirdDenAnswer: '1 pt',
 				fourthAnswer: '8',
+				firstImage: 'gallon-01-56x70.png',
+				secondImage: 'quart-02-40x70.png',
+				thirdImage: 'pint-01_50x70.png',
+				fourthImage: 'cup-02-50x60.png',
 				template: 'gallonsToCups' 
 			},
 			{ // problem 3
@@ -380,6 +388,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				thirdNumAnswer: '',
 				thirdDenAnswer: '',
 				fourthAnswer: '8',
+				firstImage: 'gallon-01-56x70.png',
+				secondImage: 'quart-02-40x70.png',
+				thirdImage: 'pint-01_50x70.png',
+				fourthImage: 'cup-02-50x60.png',
 				template: 'quartsToCups' 
 			}
 			,
@@ -397,6 +409,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				thirdNumAnswer: '',
 				thirdDenAnswer: '',
 				fourthAnswer: '2',
+				firstImage: 'gallon-01-56x70.png',
+				secondImage: 'quart-02-40x70.png',
+				thirdImage: 'pint-01_50x70.png',
+				fourthImage: 'cup-02-50x60.png',
 				template: 'quartsToCups' 
 			}
         ];
