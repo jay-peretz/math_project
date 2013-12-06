@@ -261,16 +261,10 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
                         answer: '\\wb{\\rowgrp'+
                             '{\\ins{Find the amount of the $firstDescriptor.}}'+
-                            '{\\grp{\\frac{\\html{$ln}}{\\html{$ld}}}{\\sign{=}}{\\frac{\\html{$rn}}{\\html{$rd}}}}'+
                             '{\\html{&nbsp;}}'+
-                            '{'+
-                            '\\css{'+
-								'\\grp'+
-										'{\\str{X}}'+
-										'{\\sign{=}}'+
-										'{\\html{&#36;}}'+
-										'{\\css{\\inputcash{$firstInAnswer}}{width120px}}'+
-								'}{proportion-application}'+
+							'{\\grp'+
+								'{\\html{&#36;}}'+
+								'{\\css{\\inputcash{$firstInAnswer}}{width120px}}'+
 							'}'+
                         '}{well}',
                         controls: {
@@ -280,17 +274,40 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
                         answer: '\\wb{\\rowgrp'+
-										'{\\choose{[\\html{That\'s right.},\\grp'+
+										'{\\choose{[\\html{That\'s right.},'+
+											'\\grp'+
+												'{\\frac{\\html{$ln}}{\\html{$ld}}}'+
+												'{\\sign{=}}'+
+												'{\\frac{\\html{$rn}}{\\html{$rd}}}'+
+										']}{$$previousCorrect}}'+
+										'{\\choose{[\\html{},'+
+												'\\rowgrp'+
+													'{\\html{&nbsp;}}'+
+													'{\\grp'+
 														'{\\html{X}}'+
 														'{\\sign{=}}'+
-														'{$solution}]}'+
-													'{$$previousCorrect}}'+
+														'{$solution}'+
+													'}'+
+										']}{$$previousCorrect}}'+
 										'{\\html{&nbsp;}}'+
-										'{\\choose{[\\html{},\\rowgrp{\\grp{\\html{X}}'+
-															'{\\sign{=}}{\\html{&#36;}}{\\html{$firstAnswer}}}{\\html{&nbsp;}}]}{$$previousCorrect}}'+
+										'{\\choose{[\\html{},'+
+												'\\rowgrp'+
+													'{\\grp'+
+														'{\\html{X}}'+
+														'{\\sign{=}}'+
+														'{\\html{&#36;}}'+
+														'{\\html{$firstAnswer}}'+
+													'}'+
+													'{\\html{&nbsp;}}'+
+										']}{$$previousCorrect}}'+
 										'{\\ins{$secondWBText}}'+
-										'{\\grp{\\html{$rd}}{\\sign{$stepSign}}{\\html{$firstAnswer}}{\\sign{=}}{\\html{&#36;}}{\\css{\\inputcash{$secondInAnswer}}{width120px}}}'+
-										'}{well}',
+										'{\\grp'+
+											'{\\css'+
+												'{\\inputcash{$secondInAnswer}}'+
+												'{width120px}'+
+											'}'+
+										'}'+
+									'}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -298,22 +315,23 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     },{
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
                         answer: '\\wb{\\rowgrp'+
-							'{\\choose{[\\html{Correct.},\\grp{\\html{$rd}}{\\sign{$stepSign}}{\\html{$firstAnswer}}{\\sign{=}}{\\html{$secondAnswer}}]}'+
-													'{$$previousCorrect}}'+
-							'{\\html{&nbsp;}}'+
-                            '{\\ins{Find the amount of the $secondDescriptor.}}'+
-                            '{\\grp{\\frac{\\html{$l2n}}{\\html{$l2d}}}{\\sign{=}}{\\frac{\\html{$r2n}}{\\html{$r2d}}}}'+
-                            '{\\html{&nbsp;}}'+
-                            '{'+
-                            '\\css{'+
-								'\\grp'+
-										'{\\str{X}}'+
-										'{\\sign{=}}'+
-										'{\\html{&#36;}}'+
-										'{\\css{\\inputcash{$thirdInAnswer}}{width120px}}'+
-								'}{proportion-application}'+
-							'}'+
-                        '}{well}',
+										'{\\choose{[\\html{Correct.},'
+											+'\\grp'+
+												'{\\html{$rd}}'+
+												'{\\sign{$stepSign}}'+
+												'{\\html{$firstAnswer}}'+
+												'{\\sign{=}}'+
+												'{\\html{&#36;}}'+
+												'{\\html{$secondAnswer}}'+
+										']}{$$previousCorrect}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\ins{Find the amount of the $secondDescriptor.}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\html{&#36;}}'+
+											'{\\css{\\inputcash{$thirdInAnswer}}{width120px}}'+
+										'}'+
+                        			'}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -321,17 +339,40 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
                         answer: '\\wb{\\rowgrp'+
-										'{\\choose{[\\html{Now for the last step:},\\rowgrp{\\grp'+
+										'{\\choose{[\\html{Now for the last step:},'+
+											'\\rowgrp'+
+												'{\\grp'+
+													'{\\frac{\\html{$l2n}}{\\html{$l2d}}}'+
+													'{\\sign{=}}'+
+													'{\\frac{\\html{$r2n}}{\\html{$r2d}}}'+
+												'}'+
+												'{\\html{&nbsp;}}'+
+										']}{$$previousCorrect}}'+		
+										'{\\choose{[\\html{},'+
+												'\\rowgrp'+
+													'{\\grp'+
 														'{\\html{X}}'+
 														'{\\sign{=}}'+
-														'{$secondSolution}}'+
-														'{\\html{&nbsp;}}]}'+
-													'{$$previousCorrect}}'+
-										'{\\css{\\choose{[\\html{},\\grp{\\html{X}}'+
-															'{\\sign{=}}{\\html{&#36;}}{\\html{$thirdAnswer}}]}{$$previousCorrect}}{bottom-marg}}'+
+														'{$secondSolution}'+
+													'}'+
+													'{\\html{&nbsp;}}'+
+										']}{$$previousCorrect}}'+
+										'{\\choose{[\\html{},'+
+											'\\grp'+
+												'{\\html{X}}'+
+												'{\\sign{=}}'+
+												'{\\html{&#36;}}'+
+												'{\\html{$thirdAnswer}}'+
+										']}{$$previousCorrect}}'+
+										'{\\html{&nbsp;}}'+
 										'{\\ins{$thirdWBText}}'+
-										'{\\css{\\grp{\\html{$r2d}}{\\sign{-}}{\\html{$thirdAnswer}}{\\sign{=}}{\\html{&#36;}}{\\css{\\inputcash{$inAnswer}}{width120px}}}{bottom-marg}}'+
-										'}{well}{end}',
+										'{\\grp'+
+											'{\\html{&#36;}}'+
+											'{\\css'+
+												'{\\inputcash{$inAnswer}}{width120px}'+
+											'}'+
+										'}'+
+									'}{well}{end}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
