@@ -17,6 +17,34 @@ body {
 	font-size:125%;
 }
 
+.equivalence-table {
+	text-align:center;
+	margin-left:80px;
+}
+
+.equivalence-table th {
+	color: #069;
+	font-size: 105%;
+	font-weight: normal;
+	padding-bottom: .2em;
+}
+
+.equivalence-table tr {
+ 	border-bottom: 1px solid black;
+}
+
+.equivalence-table tr:first-child {
+ 	border-bottom: 0px;
+}
+
+.equivalence-table tr:last-child {
+ 	border-bottom: 0px;
+}
+
+.equivalence-table tr td {
+ 	padding: .5em .2em;
+}
+
 .help-answer-text {
 	display:block;	
 	margin-left:50px;
