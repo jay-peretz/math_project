@@ -68,21 +68,22 @@ angular.module('mathSkills').service('data_g_2', ['dataUtils', function (dataUti
         										+'{\\html{&nbsp;}}'
         										+'{\\html{Use the LCD to convert the fractions:}}'
         										+'{\\html{&nbsp;}}'
-        										+'{\\grp{\\html{<span>&nbsp;style=550%'</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+        										+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
         										+'{\\sign{=}}'
         										+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
         										+'{\\html{&nbsp;}}'
-        										+'{\\grp{\\sign{+}}{\\css{\\grp{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+        										+'{\\grp{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
         										+'{\\sign{=}}'
-        										+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}{border-bottom-with-padding}}}'
+        										+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
         										+'{\\html{&nbsp;}}'
         										+'{\\ins{Add the fractions:}}'
-        										+'{\\grp{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
+        										/*+'{\\grp{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
         										+'{\\html{&nbsp;}}'
         										+'{\\grp{\\sign{+}}{\\grp{\\css{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}{border-bottom-with-padding}}}}'
         										+'{\\html{&nbsp;}}'
         										+'{\\grp{\\frac{\\input{$sumNum}}{\\input{$answerDen}}}}'
-        										+'{\\html{&nbsp;}}'
+        										+'{\\html{&nbsp;}}'*/
+												+'{\\grp{\\frac{\\grp{\\fracstr{$firstAnswerNum}}{\\sign{+}}{\\fracstr{$secondAnswerNum}}}{\\fracstr{$answerDen}}}{\\sign{=}}{\\frac{\\input{$sumNum}}{\\input{$answerDen}}}}'	
         									+'}{well}',
         						controls: {
         							"checkAnswer": true,
