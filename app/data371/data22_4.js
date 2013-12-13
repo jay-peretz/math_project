@@ -13,7 +13,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{$problem<br><br><span class="blue-text">$firstQuestion &nbsp; $round</span>}',
-                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$fullFirstAnswer}}{width120px}}',
+                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$fullFirstAnswer}}{width120}}',
                         controls: {
                             "checkAnswer": true,
 							"workbook": false,
@@ -38,7 +38,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     },
 					{
                         problem: '\\html{$problem<br><br><span class="blue-text">$secondQuestion &nbsp; $round</span>}',
-                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$fullSecondAnswer}}{width120px}}',
+                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$fullSecondAnswer}}{width120}}',
                         controls: {
                             "checkAnswer": true,
 							"workbook": false,
@@ -76,7 +76,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
-                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$inAnswer}}{width120px}}',
+                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$inAnswer}}{width120}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -162,7 +162,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
-                        answer: '\\grp{\\css{\\input{$answer}}{width120px}}{\\html{&#37;}}',
+                        answer: '\\grp{\\css{\\input{$answer}}{width120}}{\\html{&#37;}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -248,7 +248,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
-                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$inAnswer}}{width120px}}',
+                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$inAnswer}}{width120}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -264,7 +264,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                             '{\\html{&nbsp;}}'+
 							'{\\grp'+
 								'{\\html{&#36;}}'+
-								'{\\css{\\inputcash{$firstInAnswer}}{width120px}}'+
+								'{\\css{\\inputcash{$firstInAnswer}}{width120}}'+
 							'}'+
                         '}{well}',
                         controls: {
@@ -304,7 +304,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 										'{\\grp'+
 											'{\\css'+
 												'{\\inputcash{$secondInAnswer}}'+
-												'{width120px}'+
+												'{width120}'+
 											'}'+
 										'}'+
 									'}{well}',
@@ -329,7 +329,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 										'{\\html{&nbsp;}}'+
 										'{\\grp'+
 											'{\\html{&#36;}}'+
-											'{\\css{\\inputcash{$thirdInAnswer}}{width120px}}'+
+											'{\\css{\\inputcash{$thirdInAnswer}}{width120}}'+
 										'}'+
                         			'}{well}',
                         controls: {
@@ -369,7 +369,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 										'{\\grp'+
 											'{\\html{&#36;}}'+
 											'{\\css'+
-												'{\\inputcash{$inAnswer}}{width120px}'+
+												'{\\inputcash{$inAnswer}}{width120}'+
 											'}'+
 										'}'+
 									'}{well}{end}',
@@ -402,7 +402,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                         answer: '\\rowgrp'+
 									'{\\grp{\\chkbtn{Profit}{$buttonValueA}}{\\chkbtn{ Loss }{$buttonValueB}}}'+
 									'{\\html{&nbsp;}}'+
-									'{\\grp{\\html{By how much? &#36;}}{\\css{\\inputcash{$aInAnswer}}{width120px}}}',
+									'{\\grp{\\html{By how much? &#36;}}{\\css{\\inputcash{$aInAnswer}}{width120}}}',
                         controls: {
                             "checkAnswer": true,
 							"workbook": false,
@@ -653,6 +653,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 round: 'Round answer to the nearest cent.',
                 xtext:'',
                 answer: '41.11', template: 'dollar', 
+                inAnswer:'41.11',
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '45', rn: '18.50', 

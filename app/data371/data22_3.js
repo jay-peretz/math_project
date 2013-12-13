@@ -226,7 +226,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             {  //1d -4
                 problem: 'Last year the bird population on a small island in the Pacific Ocean was 240. This year the population is 252 birds. What was the percent increase in the number of birds living on the island?',
                 round: '',
-                xtext:'We get the Amount (Part Quantity) by subtracting last year\'s bird population from this year\'s population. <br><br>252 - 240 = 12<br><br>',
+                xtext:'We get the Amount (Part Quantity) of the increase by subtracting last year\'s bird population from this year\'s population. <br><br>252 - 240 = 12<br><br>',
                 answer: '5', template: 'percent', pre_symbol: '', post_symbol: '%', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -281,7 +281,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             {  //2d -8
                 problem: 'City A received 28 inches of rain last year. This year it received 34.16 inches. What was the percent increase in the amount of rainfall received this year?',
                 round: '',
-                xtext:'We get the Amount (Part Quantity) by subtracting last year\'s rainfall from this year\'s. <br><br>34.16 - 28 = 6.16<br><br>',
+                xtext:'We get the Amount (Part Quantity) of the increase by subtracting last year\'s rainfall from this year\'s. <br><br>34.16 - 28 = 6.16<br><br>',
                 answer: '22', template: 'percent', post_symbol: '%', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -336,7 +336,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             {  //3d -12
                 problem: 'Margaret had a monthly salary of $2,300. After receiving an increase, she now earned $2,403.50 per month. What was the percent increase of her salary?',
                 round: '',
-                xtext:'We get the Amount (Part Quantity) by subtracting last year\'s monthly salary from this year\'s. <br><br>2403.50 - 2300 = 103.50<br><br>',
+                xtext:'We get the Amount (Part Quantity) of the increase by subtracting last year\'s bird population from this year\'s population. <br><br>2403.50 - 2300 = 103.50<br><br>',
                 answer: '4.5', template: 'percent', pre_symbol: '', post_symbol: '%', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -395,7 +395,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
                 problem: 'A professional baseball team had an average of 22,548 people attend each of its games last year. This year’s average attendance is 25,254. What is the percent increase in the team’s average attendance?',
                 round: 'Round to the nearest whole percent.',
 				inAnswer: '12',
-                xtext:'We get the Amount (Part Quantity) by subtracting average attendance from this year\'s <br><br>25254 - 22548 = 2706<br><br>',
+                xtext:'We get the Amount (Part Quantity) of the increase by subtracting average attendance from this year\'s <br><br>25254 - 22548 = 2706<br><br>',
                 answer: '12', template: 'percent', post_symbol: '%', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -450,7 +450,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             },
             {  //5d -20
                 problem: 'At the local community college, 6,840 students were enrolled last semester. This semester there are 7,250 students. What was the percent increase in enrolled students this semester?',
-				xtext:'We get the Amount (Part Quantity) by subtracting last smester from this semester <br><br> 7250 - 6840 = 410<br><br>',
+				xtext:'We get the Amount (Part Quantity) of the increase by subtracting last semester from this semester <br><br> 7250 - 6840 = 410<br><br>',
 				round: 'Round to the nearest whole percent.',
                 inAnswer: '6',
                 answer: '6', template: 'percent', post_symbol: '%',
@@ -465,7 +465,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             
             {  //1a -21
                 problem: 'Last year the bird population on a small island in the Pacific Ocean was 240. This year the population decreased 5%. How many fewer birds are on the island this year than last year?',
-                round: 'Round the answer to the nearest cent.',
+                round: '',
                 inAnswer: '12',
                 answer: '12', template: 'percent', post_symbol: '', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -479,7 +479,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             },
             {  //1b -22
                 problem: 'The bird population on a small island in the Pacific Ocean decreased by 12 birds this year. This was a 5% decrease in the bird population. What was the bird population last year?',
-                round: 'Round the answer to the nearest cent.',
+                round: '',
                 inAnswer: '240',
                 answer: '240', template: 'percent', post_symbol: '', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -507,7 +507,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             {  //1d -24
                 problem: 'Last year the bird population on a small island in the Pacific Ocean was 240. This year the population is 228 birds. What was the percent decrease in the number of birds living on the island?',
                 round: 'Round the answer to the nearest whole percent.',
-                xtext:'We get the Amount (Part Quantity) by subtracting this year\'s population from the last year\'s population. <br><br>240 - 228 = 12<br><br>',
+                xtext:'We get the Amount (Part Quantity) of the decrease by subtracting this year\'s population from the last year\'s population. <br><br>240 - 228 = 12<br><br>',
                 answer: '5', template: 'percent', post_symbol: '%', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -520,7 +520,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             
             {  //2a -25
                 problem: 'Last year City A had a rainfall of about 40 inches. This year’s rainfall decreased 15%. How many fewer inches of rain did the city receive this year than last year?',
-                round: 'Round the answer to the nearest cent.',
+                round: '',
                 inAnswer: '6',
                 answer: '6', template: 'percent', post_symbol: '', 
                 key: 'rn', keyf: 'ln', 
@@ -535,7 +535,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             },
             {  //2b -26
                 problem: 'City A received 6 inches of rain less this year than last year. This was a 15% decrease from the amount of rain received last year. How much rain did City A receive last year?',
-                round: 'Round the answer to the nearest cent.',
+                round: '',
                 inAnswer: '40',
                 answer: '40', template: 'percent', post_symbol: '', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -549,7 +549,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             },
             {  //2c -27
                 problem: 'Last year City A had a rainfall of about 40 inches. This year the rainfall decreased by 6 inches. What was the percent decrease in the amount of rainfall received this year?',
-                round: 'Round the answer to the nearest whole percent.',
+                round: '',
                 answer: '15', template: 'percent', post_symbol: '%', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -562,8 +562,8 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             },
             {  //2d -28
                 problem: 'City A received 40 inches of rain last year. This year it received 34 inches. What was the percent decrease in the amount of rainfall received this year?',
-                round: 'Round the answer to the nearest whole percent.',
-                xtext:'We get the Amount (Part Quantity) by subtracting this year\'s rain from last year\'s rain. <br><br>40 - 34 = 6<br><br>',
+                round: '',
+                xtext:'We get the Amount (Part Quantity) of the decrease by subtracting this year\'s rain from last year\'s rain. <br><br>40 - 34 = 6<br><br>',
                 answer: '15', template: 'percent', post_symbol: '%', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -618,7 +618,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             {  //3d -32
                 problem: 'Margaret had a monthly salary of $2,300. After receiving a decrease, she now earned $2,242.50 per month. What was the percent decrease of her salary?',
                 round: '',
-                xtext:'We get the Amount (Part Quantity) by subtracting the current salary from the original salary. <br><br>2300 - 2242.50 = 57.50<br><br>',
+                xtext:'We get the Amount (Part Quantity) of the decrease by subtracting the current salary from the original salary. <br><br>2300 - 2242.50 = 57.50<br><br>',
                 answer: '2.5', template: 'percent', pre_symbol: '', post_symbol: '%', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -674,7 +674,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             {  //7d -36
                 problem: 'A store had total weekly sales of $75,000. This week its sales were $61,500. What was the percent decrease in sales this week compared to the normal weekly sales?',
                 round: '',
-                xtext:'We get the Amount (Part Quantity) by subtracting this week\'s sales from the total weekly sales. <br><br>75000 - 61500 = 13500<br><br>',
+                xtext:'We get the Amount (Part Quantity) of the decrease by subtracting this week\'s sales from the total weekly sales. <br><br>75000 - 61500 = 13500<br><br>',
                 answer: '18', template: 'percent', pre_symbol: '', post_symbol: '%', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
@@ -729,7 +729,7 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
             {  //8d -40
                 problem: 'A marine fish sanctuary was the home for about 180,000 fish last year. It was estimated that the fish population in the sanctuary was now about 126,000. What was the percent decrease in the number of fish in the sanctuary this year from last year?',
                 round: '',
-                xtext:'We get the Amount (Part Quantity) by subtracting this year\'s fish population from last year\'s. <br><br>180000 - 126000 = 54000<br><br>',
+                xtext:'We get the Amount (Part Quantity) of the decrease by subtracting this year\'s fish population from last year\'s. <br><br>180000 - 126000 = 54000<br><br>',
                 answer: '30', template: 'percent', pre_symbol: '', post_symbol: '%', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
