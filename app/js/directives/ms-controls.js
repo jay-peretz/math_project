@@ -117,6 +117,25 @@ angular.module('mathSkills')
 									$scope.stepwiseNextProblem = false;
 								}
 
+								// "hasModal" field in data, turn on modal button
+								if (typeof $scope.data.modalButton !== "undefined" && typeof $scope.data.modalText !== "undefined") {
+									$scope.modalButton = $scope.data.modalButton;
+                                	$scope.hasModal = true;
+									// add hasModal to problemData to pass to ms-feedback.js
+									problemData.addData(true, 'modalButton');
+									problemData.addData(true, 'modalText');
+									
+									$scope.openModal = function () {
+										$scope.$emit('showModalText', {
+                                            modalText: $scope.data.modalText
+                                        });
+									};
+								
+								} else {
+									$scope.hasModal = false;
+								}
+
+
                             }
                         });
 

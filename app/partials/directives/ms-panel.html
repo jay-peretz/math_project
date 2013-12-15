@@ -19,6 +19,20 @@
                     <ms-controls data='{ "nextProblem": true }' class=span3></ms-controls>
                 </div>
             </span>
+            <span>
+                <div>
+                    <div id="example" class="modal hide fade in" ng-show=showModal>  
+                    <div class="modal-body">  
+                    <ms-expression expected={{modalText}}></ms-expression>            
+                    </div>  
+                    <div class="modal-footer">  
+                    <a href="#" class="btn" data-dismiss="modal">Close</a>  
+                    </div>  
+                    </div>  
+                    </div>  
+
+                </div>
+            </span>
         </div>
     </div>
     <ms-help-prompt></ms-help-prompt>

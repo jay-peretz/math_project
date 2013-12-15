@@ -31,4 +31,11 @@
         <i class="icon-question-sign icon-white"></i>
         Open Workbook
     </button>
+    <button
+        class="btn btn-warning btn-block"
+        ng-click=openModal()
+        ng-show=hasModal
+    >
+        <ms-expression expected={{modalButton}}></ms-expression>
+    </button>
 </div>

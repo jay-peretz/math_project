@@ -101,7 +101,9 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": false,
-                            "workbook": true
+                            "workbook": true,
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": "\\html{test Modal text}"
                         }
                     }]
                 }, {

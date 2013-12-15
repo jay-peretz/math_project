@@ -70,6 +70,11 @@ angular.module('mathSkills')
                         $scope.$on('triggerCheckFocus', function () {
                             triggerAnswerAreaEvent('checkFocus');
                         });
+						
+						$scope.$on('showModalText', function (e, data) {
+                            $scope.modalText = data.modalText;
+							$("#example").modal();
+                        });
 
                         $scope.$on('checkFocus', function (e) {
                             if (e.defaultPrevented === false) {
