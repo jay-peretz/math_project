@@ -2,11 +2,6 @@
 /*global angular */
 
 angular.module('mathSkills')
-	.config(['parserProvider', function (parserProvider) {
-		parserProvider.register('input', {
-			directiveTemplate: '<ms-modal expected={{expected}} label={{label}}></ms-modal>'
-    	});
-    }])
     .directive('msModal', [
         function () {
             return {
