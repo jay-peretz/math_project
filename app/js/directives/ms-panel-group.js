@@ -57,6 +57,7 @@ angular.module('mathSkills')
                                 }, 1000);
                             // Otherwise $emit panelGroupDone
                             } else {
+								$(".modal.in").modal('hide');
                                 $scope.$emit('panelGroupDone', {
                                     title: $scope.title
                                 });
