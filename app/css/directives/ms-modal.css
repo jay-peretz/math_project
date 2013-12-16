@@ -1,0 +1,4 @@
+.modal, .modal.fade.in {
+	top:5%;
+    left: 75%; /* was 10% */
+}

@@ -11,6 +11,7 @@
 @import 'directives/ms-group.css';
 @import 'directives/ms-input.css';
 @import 'directives/ms-image.css';
+@import 'directives/ms-modal.css';
 @import 'directives/ms-order-operations.css';
 @import 'directives/ms-order-operations-simple.css';
 @import 'directives/ms-placevalue.css';
