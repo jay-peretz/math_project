@@ -12,59 +12,104 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\html{$problem<br><br><span class="blue-text">$firstQuestion &nbsp; $round</span>}',
-                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$fullFirstAnswer}}{width120}}',
+                        problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
+                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$inAnswer}}{width120}}',
                         controls: {
                             "checkAnswer": true,
-							"workbook": false,
-                            "help": '\\rowgrp'+
-										'{\\html{Find the amount of the $firstDescriptor.<br>$round}}'+
-										'{\\html{&nbsp;}}'+
-										'{\\grp{\\frac{\\html{$ln}}{\\html{$ld}}}{\\sign{=}}{\\frac{\\html{$rn}}{\\html{$rd}}}}'+
-										'{\\html{&nbsp;}}'+
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
+                        answer: '\\wb{\\rowgrp{'+
+                            '\\ins{Set up a percent proportion to solve for the $firstDescriptor (use "x" for an unknown value).}'+
+                        '}{'+
+                            '\\grp'+
+                            '{\\frac{\\input{[\"$ln\",\"$rn\"]}}{\\input{[\"$ld\",\"$rd\"]}}}'+
+                            '{\\sign{=}}'+
+                            '{\\frac{\\input{[\"$rn\",\"$ln\"]}}{\\input{[\"$rd\",\"$ld\"]}}}'+
+                        '}}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }, {
+                        problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
+                        answer: '\\wb{\\rowgrp'+
+										'{\\choose{[\\html{},\\ins{The standard percent proportion is set up as follows:}]}{$$previousCorrect}}'+
+                            			'{\\css{\\choose{[\\html{},\\grp{\\frac{\\html{$$dln}}{\\html{$$dld}}}{\\sign{=}}{\\frac{\\html{$$drn}}{\\html{$$drd}}}]}{$$previousCorrect}}{bottom-marg}}'+
+                            			'{\\choose{[\\ins{Yes!},\\ins{We substitute the given values to get:}]}{$$previousCorrect}}'+
 										'{\\grp'+
-											'{\\str{X}}'+
+											'{\\frac{\\html{$$ln}}{\\html{$$ld}}}'+
 											'{\\sign{=}}'+
-											'{$solution}'+
+											'{\\frac{\\html{$$rn}}{\\html{$$rd}}}'+
 										'}'+
 										'{\\html{&nbsp;}}'+
+										'{\\ins{Now solve for x (the amount of the $firstDescriptor). $round}}'+
+										'{\\html{&nbsp;}}'+
 										'{\\grp'+
-											'{\\str{X}}'+
+											'{\\html{&#36;}}'+
+											'{\\css{\\inputcash{$firstInAnswer}}{width120}}'+
+										'}'+
+									'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    },{
+                        problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
+                        answer: '\\wb{\\rowgrp'+
+										'{\\choose{[\\html{},'+
+											'\\rowgrp'+
+												'{\\grp'+
+													'{\\frac{\\html{$ln}}{\\html{$ld}}}'+
+													'{\\sign{=}}'+
+													'{\\frac{\\html{$rn}}{\\html{$rd}}}'+
+												'}'+
+												'{\\html{&nbsp;}}'+
+										']}{$$previousCorrect}}'+
+										'{\\choose{[\\ins{Correct.},'+
+											'\\rowgrp'+
+												'{\\grp'+
+													'{\\html{x}}'+
+													'{\\sign{=}}'+
+													'{$solution}'+
+												'}'+
+												'{\\html{&nbsp;}}'+
+										']}{$$previousCorrect}}'+
+										'{\\grp'+
+											'{\\html{x}}'+
 											'{\\sign{=}}'+
 											'{\\html{&#36;}}'+
-											'{\\html{$firstAnswer}}'+
-										'}'
+											'{\\html{$firstInAnswer}}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\ins{What is the $secondDescriptor?}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\html{&#36;}}'+
+											'{\\css{\\inputcash{$answer}}{width120}}'+
+										'}'+
+                        			'}{well}{end}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
                         }
                     },
 					{
-                        problem: '\\html{$problem<br><br><span class="blue-text">$secondQuestion &nbsp; $round</span>}',
-                        answer: '\\grp{\\html{&#36;}}{\\css{\\inputcash{$fullSecondAnswer}}{width120}}',
+                        problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
+                        answer: '\\wb{\\rowgrp{'+
+									'\\choose{[\\html{},\\ins{$thirdDescriptor}]}{$$previousCorrect}'+
+                        			'}{'+
+                            		'\\choose{[\\html{},\\grp{\\html{$rd}}{\\sign{$stepSign}}{\\html{$firstInAnswer}}{\\sign{=}}{\\html{&#36; $answer}}]}{$$previousCorrect}'+
+                        		'}}{well}',
                         controls: {
                             "checkAnswer": true,
-							"workbook": false,
-                            "help": '\\rowgrp'+
-										'{\\html{Find the amount of the $firstDescriptor.<br>$round}}'+
-										'{\\html{&nbsp;}}'+
-										'{\\grp{\\frac{\\html{$ln}}{\\html{$ld}}}{\\sign{=}}{\\frac{\\html{$rn}}{\\html{$rd}}}}'+
-										'{\\html{&nbsp;}}'+
-										'{\\grp'+
-											'{\\str{X}}'+
-											'{\\sign{=}}'+
-											'{$solution}'+
-										'}'+
-										'{\\html{&nbsp;}}'+
-										'{\\grp'+
-											'{\\str{X}}'+
-											'{\\sign{=}}'+
-											'{\\html{&#36;}}'+
-											'{\\html{$firstAnswer}}'+
-										'}'+
-										'{\\html{&nbsp;}}'+
-										'{\\html{$secondDescriptor}}'+
-										'{\\html{&nbsp;}}'+
-										'{$secondSolution}'+
-										'{\\html{&nbsp;}}'+
-										'{\\css{\\html{$textAnswer}}{help-answer-text}}'
+                            "help": false,
+							"stepwiseNextProblem": true
                         }
                     }]
                 }]
@@ -88,7 +133,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\ins{Set up a percent proportion to solve the problem (use "X" for an unknown value).}'+
+                            '\\ins{Set up a percent proportion to solve the problem (use "x" for an unknown value).}'+
                         '}{'+
                             '\\grp'+
                             '{\\frac{\\input{[\"$ln\",\"$rn\"]}}{\\input{[\"$ld\",\"$rd\"]}}}'+
@@ -137,7 +182,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 								  '{\\frac{\\html{$$ln}}{\\html{$$ld}}}{\\sign{=}}{\\frac{\\html{$$rn}}{\\html{$$rd}}},'+
 								'\\css{'+
 										'\\grp'+
-											'{\\html{X}}'+
+											'{\\html{x}}'+
 											'{\\sign{=}}'+
 											'{$solution}'+
 									'}{proportion-application}'+
@@ -174,7 +219,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
                         answer: '\\wb{\\rowgrp{'+
-                            '\\ins{Set up a percent proportion to solve the problem (use "X" for an unknown value).}'+
+                            '\\ins{Set up a percent proportion to solve the problem (use "x" for an unknown value).}'+
                         '}{'+
                             '\\grp'+
                             '{\\frac{\\input{[\"$ln\",\"$rn\"]}}{\\input{[\"$ld\",\"$rd\"]}}}'+
@@ -224,7 +269,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 								  '{\\frac{\\html{$$ln}}{\\html{$$ld}}}{\\sign{=}}{\\frac{\\html{$$rn}}{\\html{$$rd}}},'+
 								'\\css{'+
 										'\\grp'+
-											'{\\html{X}}'+
+											'{\\html{x}}'+
 											'{\\sign{=}}'+
 											'{$solution}'+
 									'}{proportion-application}'+
@@ -274,32 +319,27 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
                         answer: '\\wb{\\rowgrp'+
-										'{\\choose{[\\html{That\'s right.},'+
-											'\\grp'+
-												'{\\frac{\\html{$ln}}{\\html{$ld}}}'+
-												'{\\sign{=}}'+
-												'{\\frac{\\html{$rn}}{\\html{$rd}}}'+
-										']}{$$previousCorrect}}'+
-										'{\\choose{[\\html{},'+
-												'\\rowgrp'+
-													'{\\html{&nbsp;}}'+
-													'{\\grp'+
-														'{\\html{X}}'+
-														'{\\sign{=}}'+
-														'{$solution}'+
-													'}'+
-										']}{$$previousCorrect}}'+
+										'{\\html{Find the amount of the $firstDescriptor.}}'+
 										'{\\html{&nbsp;}}'+
-										'{\\choose{[\\html{},'+
-												'\\rowgrp'+
-													'{\\grp'+
-														'{\\html{X}}'+
-														'{\\sign{=}}'+
-														'{\\html{&#36;}}'+
-														'{\\html{$firstAnswer}}'+
-													'}'+
-													'{\\html{&nbsp;}}'+
-										']}{$$previousCorrect}}'+
+										'{\\grp'+
+											'{\\frac{\\html{$ln}}{\\html{$ld}}}'+
+											'{\\sign{=}}'+
+											'{\\frac{\\html{$rn}}{\\html{$rd}}}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\html{x}}'+
+											'{\\sign{=}}'+
+											'{$solution}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\html{x}}'+
+											'{\\sign{=}}'+
+											'{\\html{&#36;}}'+
+											'{\\html{$firstAnswer}}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
 										'{\\ins{$secondWBText}}'+
 										'{\\grp'+
 											'{\\css'+
@@ -315,15 +355,37 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     },{
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
                         answer: '\\wb{\\rowgrp'+
-										'{\\choose{[\\html{Correct.},'
-											+'\\grp'+
-												'{\\html{$rd}}'+
-												'{\\sign{$stepSign}}'+
-												'{\\html{$firstAnswer}}'+
-												'{\\sign{=}}'+
-												'{\\html{&#36;}}'+
-												'{\\html{$secondAnswer}}'+
-										']}{$$previousCorrect}}'+
+										'{\\html{Find the amount of the $firstDescriptor.}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\frac{\\html{$ln}}{\\html{$ld}}}'+
+											'{\\sign{=}}'+
+											'{\\frac{\\html{$rn}}{\\html{$rd}}}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\html{x}}'+
+											'{\\sign{=}}'+
+											'{$solution}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\html{x}}'+
+											'{\\sign{=}}'+
+											'{\\html{&#36;}}'+
+											'{\\html{$firstAnswer}}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\html{$secondWBText}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\html{$rd}}'+
+											'{\\sign{$stepSign}}'+
+											'{\\html{$firstAnswer}}'+
+											'{\\sign{=}}'+
+											'{\\html{&#36;}}'+
+											'{\\html{$secondAnswer}}'+
+										'}'+
 										'{\\html{&nbsp;}}'+
 										'{\\ins{Find the amount of the $secondDescriptor.}}'+
 										'{\\html{&nbsp;}}'+
@@ -339,31 +401,58 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\html{$problem<br><br><span class="blue-text">$round</span>}',
                         answer: '\\wb{\\rowgrp'+
-										'{\\choose{[\\html{Now for the last step:},'+
-											'\\rowgrp'+
-												'{\\grp'+
-													'{\\frac{\\html{$l2n}}{\\html{$l2d}}}'+
-													'{\\sign{=}}'+
-													'{\\frac{\\html{$r2n}}{\\html{$r2d}}}'+
-												'}'+
-												'{\\html{&nbsp;}}'+
-										']}{$$previousCorrect}}'+		
-										'{\\choose{[\\html{},'+
-												'\\rowgrp'+
-													'{\\grp'+
-														'{\\html{X}}'+
-														'{\\sign{=}}'+
-														'{$secondSolution}'+
-													'}'+
-													'{\\html{&nbsp;}}'+
-										']}{$$previousCorrect}}'+
-										'{\\choose{[\\html{},'+
-											'\\grp'+
-												'{\\html{X}}'+
-												'{\\sign{=}}'+
-												'{\\html{&#36;}}'+
-												'{\\html{$thirdAnswer}}'+
-										']}{$$previousCorrect}}'+
+										'{\\html{Find the amount of the $firstDescriptor.}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\frac{\\html{$ln}}{\\html{$ld}}}'+
+											'{\\sign{=}}'+
+											'{\\frac{\\html{$rn}}{\\html{$rd}}}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\html{x}}'+
+											'{\\sign{=}}'+
+											'{$solution}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\html{x}}'+
+											'{\\sign{=}}'+
+											'{\\html{&#36;}}'+
+											'{\\html{$firstAnswer}}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\html{$secondWBText}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\html{$rd}}'+
+											'{\\sign{$stepSign}}'+
+											'{\\html{$firstAnswer}}'+
+											'{\\sign{=}}'+
+											'{\\html{&#36;}}'+
+											'{\\html{$secondAnswer}}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\html{Find the amount of the $secondDescriptor.}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\frac{\\html{$l2n}}{\\html{$l2d}}}'+
+											'{\\sign{=}}'+
+											'{\\frac{\\html{$r2n}}{\\html{$r2d}}}'+
+										'}'+
+										'{\\html{&nbsp;}}'+	
+										'{\\grp'+
+											'{\\html{x}}'+
+											'{\\sign{=}}'+
+											'{$secondSolution}'+
+										'}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp'+
+											'{\\html{x}}'+
+											'{\\sign{=}}'+
+											'{\\html{&#36;}}'+
+											'{\\html{$thirdAnswer}}'+
+										'}'+
 										'{\\html{&nbsp;}}'+
 										'{\\ins{$thirdWBText}}'+
 										'{\\grp'+
@@ -463,7 +552,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 										'{\\frac{\\html{$rn}}{\\html{$ld}}}{\\sign{=}}{\\frac{\\html{$aAnswer}}{\\html{$rd}}}}'+
                             		'{\\html{&nbsp;}}'+
 									'{\\grp'+
-											'{\\html{X}}'+
+											'{\\html{x}}'+
 											'{\\sign{=}}'+
 											'{$thirdSolution}'+
 											'{\\html{&nbsp;}}'+
@@ -485,19 +574,25 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
         data = [
             { //1
                 template: 'placeholder',
-                problem: 'The owner of Appliances For You purchased refrigerators for $420 from the manufacturer. In turn, the owner marked up her cost by 62%.',
+                problem: 'The owner of Appliances For You purchased refrigerators for $420 from the manufacturer. In turn, the owner marked up her cost by 62%. How much did a customer have to pay for a refrigerator at this store?',
 				round: '',
-				firstQuestion: 'What is the amount of the markup?',
-				secondQuestion: 'How much did a customer have to pay for a refrigerator at this store?',
-				fullFirstAnswer: '260.40', firstAnswer: '260.40',
-				fullSecondAnswer: '680.40',
+				answer: '680.40', inAnswer: '680.40',
+				firstInAnswer: '260.40', firstAnswer: '260.40',
 				firstDescriptor: 'markup',
-				secondDescriptor: 'Add the markup to the price:',
-				ln: '62', rn: 'X', 
-                ld: '100', rd: '420', 
-				solution: dataUtils.pre('\\grp{\\html{420}}{\\html{&#149;}}{\\html{62}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
-				secondSolution: dataUtils.pre('\\grp{\\html{420}}{css{\\html{+}}{bigger}}{\\html{260.40}}{css{\\html{=}}{bigger}}{\\html{$&nbsp;680.40}}'),
-				textAnswer: 'The customer pays $680.40 for a refrigerator'
+				secondDescriptor: 'cost of the refrigerator after the markup',
+				thirdDescriptor: 'The customer had to pay:',
+				stepSign: '+',
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '62', rn: 'x', 
+                ld: '100', rd: '420',
+				solution: dataUtils.pre('\\grp{\\html{420}}'+
+                '{\\html{&#149;}}'+
+                '{\\html{62}}'+
+                '{css{\\html{\xF7}}{bigger}}'+
+                '{\\html{100}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]]
             },
             {  //2
                 problem: 'The owner of Appliances For You bought a refrigerator from the manufacturer for $420. If she marked up the price $260.40, what was her percent markup?',
@@ -506,7 +601,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 				answer: '62', template: 'percent',  
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: 'X', rn: '260.40', 
+                ln: 'x', rn: '260.40', 
                 ld: '100', rd: '420', 
                 solution: dataUtils.pre('\\grp{\\html{100}}'+
                 '{\\html{&#149;}}'+
@@ -525,27 +620,33 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '62', rn: '260.40', 
-                ld: '100', rd: 'X', 
+                ld: '100', rd: 'x', 
                 solution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{260.40}}{css{\\html{\xF7}}{bigger}}{\\html{62}}'),
                 xtext:'',
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //4
-                template: 'placeholder',
-                problem: 'Broccoli was purchased by a local grocery store for $1.50 a pound. The store marked up the price 26%.',
+				template: 'placeholder',
+				problem: 'Broccoli was purchased by a local grocery store for $1.50 a pound. The store marked up the price 26%. How much did a customer pay for a pound of broccoli?',
 				round: '',
-				firstQuestion: 'What was the amount of the markup at the store?',
-				secondQuestion: 'How much did a customer pay for a pound of broccoli?',
-				fullFirstAnswer: '0.39', firstAnswer: '0.39',
-				fullSecondAnswer: '1.89',
+				answer: '1.89', inAnswer: '1.89',
+				firstInAnswer: '0.39', firstAnswer: '0.39',
 				firstDescriptor: 'markup',
-				secondDescriptor: 'Add the markup to the price:',
-				ln: '26', rn: 'X', 
-                ld: '100', rd: '1.50', 
-				solution: dataUtils.pre('\\grp{\\html{1.50}}{\\html{&#149;}}{\\html{26}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
-				secondSolution: dataUtils.pre('\\grp{\\html{1.50}}{css{\\html{+}}{bigger}}{\\html{0.39}}{css{\\html{=}}{bigger}}{\\html{$&nbsp;1.89}}'),
-				textAnswer: 'The customer pays $1.89 for a pound of broccoli'
+				secondDescriptor: 'cost of the broccoli after the markup',
+				thirdDescriptor: 'The customer had to pay:',
+				stepSign: '+',
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '26', rn: 'x', 
+                ld: '100', rd: '1.50',
+				solution: dataUtils.pre('\\grp{\\html{1.50}}'+
+                '{\\html{&#149;}}'+
+                '{\\html{26}}'+
+                '{css{\\html{\xF7}}{bigger}}'+
+                '{\\html{100}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]]
             },
             {  //5
                 problem: 'A local grocery store bought broccoli from a local farmer for $1.50 per pound. If the store increased the price by $0.39 a pound, what was the percent markup?',
@@ -554,7 +655,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 answer: '26', template: 'percent',  
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: 'X', rn: '0.39', 
+                ln: 'x', rn: '0.39', 
                 ld: '100', rd: '1.50', 
                 solution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{0.39}}{css{\\html{\xF7}}{bigger}}{\\html{1.50}}'),
                 previousCorrect: true,
@@ -569,27 +670,33 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '26', rn: '0.39', 
-                ld: '100', rd: 'X', 
+                ld: '100', rd: 'x', 
                 solution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{0.39}}{css{\\html{\xF7}}{bigger}}{\\html{26}}'),
                 xtext:'',
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //7
-                template: 'placeholder',
-                problem: 'When a clothing store couldn’t sell its summer dresses for $32, it marked them down 35%.',
+				template: 'placeholder',
+				problem: 'When a clothing store couldn’t sell its summer dresses for $32, it marked them down 35%. How much did the store sell the dresses for after the markdown?',
 				round: '',
-				firstQuestion: 'What is the amount of the markdown?',
-				secondQuestion: 'How much did the store sell the dresses for after the markdown?',
-				fullFirstAnswer: '11.20', firstAnswer: '11.20',
-				fullSecondAnswer: '20.80',
+				answer: '20.80', inAnswer: '20.80',
+				firstInAnswer: '11.20', firstAnswer: '11.20',
 				firstDescriptor: 'markdown',
-				secondDescriptor: 'Subtract the markdown from the price:',
-				ln: '35', rn: 'X', 
-                ld: '100', rd: '32', 
-				solution: dataUtils.pre('\\grp{\\html{32}}{\\html{&#149;}}{\\html{35}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
-				secondSolution: dataUtils.pre('\\grp{\\html{32}}{css{\\html{-}}{bigger}}{\\html{11.20}}{css{\\html{=}}{bigger}}{\\html{$&nbsp;20.80}}'),
-				textAnswer: 'The store sold the dresses for $20.80'
+				secondDescriptor: 'cost of the dresses after the markdown',
+				thirdDescriptor: 'The store sold the dresses for:',
+				stepSign: '+',
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '35', rn: 'x', 
+                ld: '100', rd: '32',
+				solution: dataUtils.pre('\\grp{\\html{32}}'+
+                '{\\html{&#149;}}'+
+                '{\\html{35}}'+
+                '{css{\\html{\xF7}}{bigger}}'+
+                '{\\html{100}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]]
             },
             {  //8
                 problem: 'A clothing store couldn’t sell its summer dresses for $32, so it marked them down $11.20. What was the percent markdown?',
@@ -598,7 +705,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 answer: '35', template: 'percent', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: 'X', rn: '11.20', 
+                ln: 'x', rn: '11.20', 
                 ld: '100', rd: '32', 
                 solution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{11.20}}{css{\\html{\xF7}}{bigger}}{\\html{32}}'),
                 previousCorrect: true,
@@ -613,27 +720,33 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '35', rn: '11.20', 
-                ld: '100', rd: 'X', 
+                ld: '100', rd: 'x', 
                 solution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{11.20}}{css{\\html{\xF7}}{bigger}}{\\html{35}}'),
                 xtext: '',
                 previousCorrect: true,
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //10
-                template: 'placeholder',
-                problem: 'The owner of a hardware store bought a set of tools for $169.95.',
+				template: 'placeholder',
+				problem: 'The owner of a hardware store bought a set of tools for $169.95. If he marked up the price by 30%, what was the selling price for the set of tools?',
 				round: 'Round the answer to the nearest cent.',
-				firstQuestion: 'If he marked up the price by 30%, what was the amount of the markup for the tools?',
-				secondQuestion: 'If he marked up the price by 30%, what was the selling price for the set of tools?',
-				fullFirstAnswer: '50.99', firstAnswer: '50.99',
-				fullSecondAnswer: '220.94',
+				answer: '220.94', inAnswer: '220.94',
+				firstInAnswer: '50.99', firstAnswer: '50.99',
 				firstDescriptor: 'markup',
-				secondDescriptor: 'Add the markup to the price:',
-				ln: '30', rn: 'X', 
-                ld: '100', rd: '169.95', 
-				solution: dataUtils.pre('\\grp{\\html{169.95}}{\\html{&#149;}}{\\html{30}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
-				secondSolution: dataUtils.pre('\\grp{\\html{169.95}}{css{\\html{+}}{bigger}}{\\html{50.99}}{css{\\html{=}}{bigger}}{\\html{$&nbsp;220.94}}'),
-				textAnswer: 'The selling price for the tools is $220.94'
+				secondDescriptor: 'cost of the tools after the markup',
+				thirdDescriptor: 'The selling price for the set of tools was:',
+				stepSign: '+',
+                dln: '%', drn: 'Amount (Part Quantity)', 
+                dld: '100', drd: 'Base (Whole Quantity)',
+                ln: '30', rn: 'x', 
+                ld: '100', rd: '169.95',
+				solution: dataUtils.pre('\\grp{\\html{169.95}}'+
+                '{\\html{&#149;}}'+
+                '{\\html{30}}'+
+                '{css{\\html{\xF7}}{bigger}}'+
+                '{\\html{100}}'),
+                previousCorrect: true,
+                flip: [[1], ["ln", "rn"], ["ld", "rd"]]
             },
             {  //11
                 problem: 'The price of a box of organic strawberries was selling for $4.29. If the price was reduced by$1.29 per box, what was the percent markdown? Round answer to the nearest tenth of a percent.',
@@ -641,7 +754,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 answer: '30.1', template: 'percent', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: 'X', rn: '1.29', 
+                ln: 'x', rn: '1.29', 
                 ld: '100', rd: '4.29', 
                 solution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{1.29}}{css{\\html{\xF7}}{bigger}}{\\html{4.29}}'),
                 xtext: '',
@@ -657,7 +770,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
                 ln: '45', rn: '18.50', 
-                ld: '100', rd: 'X', 
+                ld: '100', rd: 'x', 
                 solution: dataUtils.pre('\\grp{\\html{100}}{\\html{&#149;}}{\\html{18.50}}{css{\\html{\xF7}}{bigger}}{\\html{45}}'),
                 xtext: '',
                 previousCorrect: true,
@@ -677,9 +790,9 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 		        template: 'dollarDouble', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: '25', rn: 'X', 
+                ln: '25', rn: 'x', 
                 ld: '100', rd: '840', 
-				l2n: '20', r2n: 'X', 
+				l2n: '20', r2n: 'x', 
                 l2d: '100', r2d: '630', 
                 solution: dataUtils.pre('\\grp{\\html{25}}{\\html{&#149;}}{\\html{840}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
 				secondSolution: dataUtils.pre('\\grp{\\html{630}}{\\html{&#149;}}{\\html{20}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
@@ -702,9 +815,9 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 		        template: 'dollarDouble', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: '25', rn: 'X', 
+                ln: '25', rn: 'x', 
                 ld: '100', rd: '260,000', 
-				l2n: '15', r2n: 'X', 
+				l2n: '15', r2n: 'x', 
                 l2d: '100', r2d: '325,000', 
                 solution: dataUtils.pre('\\grp{\\html{260,000}}{\\html{&#149;}}{\\html{25}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
 				secondSolution: dataUtils.pre('\\grp{\\html{325,000}}{\\html{&#149;}}{\\html{15}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
@@ -727,9 +840,9 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 		        template: 'dollarDouble', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: '75', rn: 'X', 
+                ln: '75', rn: 'x', 
                 ld: '100', rd: '80', 
-				l2n: '40', r2n: 'X', 
+				l2n: '40', r2n: 'x', 
                 l2d: '100', r2d: '140', 
                 solution: dataUtils.pre('\\grp{\\html{80}}{\\html{&#149;}}{\\html{75}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
 				secondSolution: dataUtils.pre('\\grp{\\html{140}}{\\html{&#149;}}{\\html{40}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
@@ -758,9 +871,9 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 		        template: 'questionTriple', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: '70', rn: 'X', 
+                ln: '70', rn: 'x', 
                 ld: '100', rd: '3500', 
-				l2n: '50', r2n: 'X', 
+				l2n: '50', r2n: 'x', 
                 l2d: '100', r2d: '5950', 
                 solution: dataUtils.pre('\\grp{\\html{3500}}{\\html{&#149;}}{\\html{75}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
 				secondSolution: dataUtils.pre('\\grp{\\html{5950}}{\\html{&#149;}}{\\html{50}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
@@ -792,9 +905,9 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
 		        template: 'questionTriple', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
-                ln: '220', rn: 'X', 
+                ln: '220', rn: 'x', 
                 ld: '100', rd: '50', 
-				l2n: '60', r2n: 'X', 
+				l2n: '60', r2n: 'x', 
                 l2d: '100', r2d: '160', 
                 solution: dataUtils.pre('\\grp{\\html{50}}{\\html{&#149;}}{\\html{220}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
 				secondSolution: dataUtils.pre('\\grp{\\html{160}}{\\html{&#149;}}{\\html{60}}{css{\\html{\xF7}}{bigger}}{\\html{100}}'),
