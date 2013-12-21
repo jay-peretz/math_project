@@ -26,14 +26,22 @@ angular.module('mathSkills')
                         var newArgs1 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
-								// improve centering of brace when input is mixed number
-								if (parser.extractTag($scope.answers[$scope.cur]).tag !== "mixed") {
-									tagString = '\\grp{\\css{\\sign{' + parsed.args[0] + '}}{bigger}}{\\html{&nbsp;}}';
-								} else {
-                                	tagString = '\\grp{\\html{&nbsp;}}{\\css{\\sign{' + parsed.args[0] + '}}{bigger}}{\\html{&nbsp;}}{\\html{&nbsp;}}';
+								// improve centering of brace- adjust space around operator in penultimate line of display based on last line tag displayed
+								switch (true) {
+									case(parser.extractTag($scope.answers[$scope.cur]).tag === "frac"):
+										tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+										break;
+									case(parser.extractTag($scope.answers[$scope.cur]).tag === "mixed"): 
+										tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+										break;
+									// default includes whole numbers 
+									default: 
+										tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+										break;
+										
 								}
                             } else if (parsed.tag === 'btn') {
-								tagString = '\\grp{\\css{\\html{' + parsed.args[0] + '}}{fakeButton}}{\\html{&nbsp;}}';
+								tagString = '\\grp{\\css{\\html{' + parsed.args[0] + '}}{fakeButton}}';
 							}
 							
                             return tagString;
@@ -41,7 +49,7 @@ angular.module('mathSkills')
 						var newArgs2 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
-                                tagString = '\\rowgrp{css{\\html{&#125;}}{brace90Simple}}{' + $scope.answers[$scope.cur] + '}';
+								tagString = '\\grp{\\rowgrp{css{\\html{&#125;}}{brace90Simple}}{' + $scope.answers[$scope.cur] + '}}';
                             } else {
 								tagString = '\\css{' + tagString + '}{noShow}';
 							}
