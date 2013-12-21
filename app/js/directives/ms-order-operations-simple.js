@@ -32,7 +32,10 @@ angular.module('mathSkills')
 								} else {
                                 	tagString = '\\grp{\\html{&nbsp;}}{\\css{\\sign{' + parsed.args[0] + '}}{bigger}}{\\html{&nbsp;}}{\\html{&nbsp;}}';
 								}
-                            }
+                            } else if (parsed.tag === 'btn') {
+								tagString = '\\grp{\\css{\\html{' + parsed.args[0] + '}}{fakeButton}}{\\html{&nbsp;}}';
+							}
+							
                             return tagString;
                         });
 						var newArgs2 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
@@ -88,6 +91,9 @@ angular.module('mathSkills')
                                 showInput();
                                 $scope.mode = 'answer';
                                 $scope.instructions = 'Evaluate the operator.';
+								$timeout(function () { 
+									$scope.$broadcast('checkFocus');
+								}, 0);
                             }
                             e.stopPropagation();
                             break;
