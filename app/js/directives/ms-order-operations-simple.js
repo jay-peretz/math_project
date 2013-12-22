@@ -26,10 +26,11 @@ angular.module('mathSkills')
                         var newArgs1 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
-								// improve centering of brace- adjust space around operator in penultimate line of display based on last line tag displayed
+								// improve centering of brace- adjust space around operator in second-to-last line of display based on last line tag displayed
 								switch (true) {
 									case(parser.extractTag($scope.answers[$scope.cur]).tag === "frac"):
-										tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+									// case "frac" wide to allow two digit numbers in numerator or denominator
+										tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
 										break;
 									case(parser.extractTag($scope.answers[$scope.cur]).tag === "mixed"): 
 										tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
@@ -48,10 +49,16 @@ angular.module('mathSkills')
                         });
 						var newArgs2 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
-                            if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
-								tagString = '\\grp{\\rowgrp{css{\\html{&#125;}}{brace90Simple}}{' + $scope.answers[$scope.cur] + '}}';
-                            } else {
-								tagString = '\\css{' + tagString + '}{noShow}';
+							switch (true) {
+								case(parsed.tag === 'btn' && parsed.args[1] === 'T'):
+									tagString = '\\grp{\\rowgrp{css{\\html{&#125;}}{brace90Simple}}{' + $scope.answers[$scope.cur] + '}}';
+									break	
+								case(parsed.tag === 'btn' && parsed.args[1] === 'F'):					
+									tagString = '\\grp{\\css{\\html{' + parsed.args[0] + '}}{fakeButton noShow}}';
+									break;
+								default:
+									tagString = '\\css{' + tagString + '}{noShow}';
+									break;
 							}
                             return tagString;
                         });
