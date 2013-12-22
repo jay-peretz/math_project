@@ -30,7 +30,7 @@ angular.module('mathSkills')
 								switch (true) {
 									case(parser.extractTag($scope.answers[$scope.cur]).tag === "frac"):
 									// case "frac" wide to allow two digit numbers in numerator or denominator
-										tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
+										tagString = '\\sign{&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
 										break;
 									case(parser.extractTag($scope.answers[$scope.cur]).tag === "mixed"): 
 										tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
