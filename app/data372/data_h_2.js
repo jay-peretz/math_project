@@ -21,12 +21,12 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
                     title: 'twoFractions Answer',
                     children: [{
 						problem: '\\html{&nbsp;}',
-						answer: '\\rowgrp'
-							+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}{border-bottom-with-padding}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}',
+						answer: '\\grp'
+							+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+							+'{\\sign{&minus;}}'
+							+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": false,
@@ -119,14 +119,18 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\html{&nbsp;}',
-						answer: '\\rowgrp'
-							+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}}'
+						answer: '\\grp'
+							+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'
+							+'{\\sign{&minus;}}'
+							+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\css{\\grp{\\sign{&minus;}}{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}}{border-bottom-with-padding}}'
+							+'{\\sign{&minus;}}'
+							+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\html{<span style="font-size:300%;">&nbsp;</span>}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}',
+							+'{\\sign{=}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": false,
