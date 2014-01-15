@@ -91,7 +91,7 @@ angular.module('mathSkills').service('data_g_3', ['dataUtils', function (dataUti
 										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 										+'{\\sign{+}}'
 										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-									+'}{well}',
+									+'}',
 						answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Convert the mixed numbers to improper fractions:}}'
@@ -155,6 +155,7 @@ angular.module('mathSkills').service('data_g_3', ['dataUtils', function (dataUti
 										+'{\\html{$answerDen}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{=}}'
@@ -259,100 +260,10 @@ angular.module('mathSkills').service('data_g_3', ['dataUtils', function (dataUti
 					children: [{
 						problem: '',
 						answer: '\\css{\\grp'
-						+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-						+'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-						+'{\\sign{=}}'
-						+'{\\mixed{\\input{$wholeanswer2}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}}',
-						//+'{centerTableText3}',
-						controls: {
-							"checkAnswer": true,
-							"help": false,
-							"workbook": true
-						}
-					}]
-				}, {
-					title: 'Workbook',
-					children: [{
-						problem: '\\css{\\grp'
-									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-									+'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
-						answer: '\\rowgrp'
-									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp{\\input{$answerDen}}}',
-						controls: {
-							"checkAnswer": true,
-							"help": true
-						},
-					}, {
-						problem: '\\css{\\grp'
-									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-									+'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
-						answer: '\\css'
-									+'{\\rowgrp'
-										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\html{$answerDen}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\ins{Use the LCD to convert the fractions:}}'
-										+'{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-										+'{\\sign{=}}'
-										+'{\\mixed{\\str{$whole1}}{\\frac{\\input{$numnew1}}{\\fracstr{$answerDen}}}}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-										+'{\\sign{=}}'
-										+'{\\mixed{\\str{$whole2}}{\\frac{\\input{$numnew2}}{\\fracstr{$answerDen}}}}}}'
-										+'{\\html{&nbsp;}}'
-									+'}{well}',
-						controls: {
-							"checkAnswer": true,
-							"help": true
-						}
-					}, {
-						problem: '\\css{\\grp'
-									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-									+'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
-						answer: '\\css'
-									+'{\\rowgrp'
-										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\html{$answerDen}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\html{Use the LCD to convert the fractions:}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-										+'{\\sign{=}}'
-										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\fracstr{$answerDen}}}}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-										+'{\\sign{=}}'
-										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$numnew2}}{\\fracstr{$answerDen}}}}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\ins{Add the fractions:}}'
-										+'{\\grp{\\mixed{\\str{$whole1}}{\\frac{\\str{$numnew1}}{\\str{$answerDen}}}}'
-										+'{\\sign{+}}{\\grp{\\css{\\mixed{\\str{$whole2}}{\\frac{\\str{$numnew2}}{\\str{$answerDen}}}}}}'
-										+'{\\sign{=}}'
-										+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer1}}{\\input{$answerDen}}}}}'
-										+'{\\html{&nbsp;}}'
-									+'}{well}',
-						controls: {
-							"checkAnswer": true,
-							"help": true
-						}
-					}]
-				}]
-            },
-			third: {
-                title: 'Adding Mixed Numbers',
-				children: [{
-					title: 'Main Answer',
-					children: [{
-						problem: '',
-						answer: '\\css{\\grp'
 								+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 								+'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
 								+'{\\sign{=}}'
-								+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer3}}{\\input{$answerDen1}}}}}',
+								+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer3}}{\\input{$answer1Den}}}}}',
 								//+'{centerTableText3}',
 						controls: {
 								"checkAnswer": true,
@@ -646,7 +557,7 @@ angular.module('mathSkills').service('data_g_3', ['dataUtils', function (dataUti
 					}]
 				}]
 			},
-			fourth: {
+			third: {
                 title: 'Adding Mixed Numbers',
 				children: [{
 					title: 'Main Answer',
@@ -843,7 +754,7 @@ angular.module('mathSkills').service('data_g_3', ['dataUtils', function (dataUti
 					}]
 				}]
             },
-            fifth: {
+            fourth: {
                 title: 'Adding Mixed Numbers',
 				children: [{
 					title: 'Main Answer',
@@ -1149,7 +1060,7 @@ angular.module('mathSkills').service('data_g_3', ['dataUtils', function (dataUti
 					}]
 				}]
             },
-			sixth: {
+			fifth: {
                 title: 'Adding Mixed Numbers',
 				children: [{
 					title: 'Main Answer',
@@ -1162,7 +1073,7 @@ angular.module('mathSkills').service('data_g_3', ['dataUtils', function (dataUti
 									+'{\\sign{+}}'
 									+'{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}'
 									+'{\\sign{=}}'
-									+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer3}}{\\input{$answerDen1}}}}}',
+									+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer3}}{\\input{$answer1Den}}}}}',
 									//+'{centerTableText3}',
 						controls: {
 							"checkAnswer": true,
@@ -1548,19 +1459,19 @@ angular.module('mathSkills').service('data_g_3', ['dataUtils', function (dataUti
 			// problem 3
 			{ whole1: 2, num1: 2, den1: 3, whole2: 1, num2: 3, den2: 5, wholeanswer: 4, numanswer1: 64, numanswer2: 4, answerDen: 15, numnew1: 8, numnew2: 8, numlcd1: 40, numlcd2: 24, template: 'main' },
 			// problem 4
-			{ whole1: 2, num1: 1, den1: 10, whole2: 1 , num2: 5, den2: '\xA06\xA0', wholeanswer1: 3, numanswer1: 118, numanswer2: 28, numanswer3: 14, answerDen: 30, answerDen1: 15, numnew1: 21, numnew2: 11, numlcd1: 63, numlcd2: 55, template: 'third' },
+			{ whole1: 2, num1: 1, den1: 10, whole2: 1 , num2: 5, den2: '\xA06\xA0', wholeanswer1: 3, numanswer1: 118, numanswer2: 28, numanswer3: 14, answerDen: 30, answer1Den: 15, numnew1: 21, numnew2: 11, numlcd1: 63, numlcd2: 55, template: 'second' },
 			// problem 5
-			{ whole1: 2, num1: 3, den1: 8, whole2: 1, num2: 1, den2: 5, wholeanswer1: 3, wholeanswer2: 3, numanswer1: 23,  numanswer2: 23,answerDen: 40, numnew1: 15, numnew2: '\xA08', template: 'second' },
+			{ whole1: 2, num1: 3, den1: 8, whole2: 1, num2: 1, den2: 5, wholeanswer: 3, numanswer1: 143, numanswer2: 23, answerDen: 40, numnew1: 19, numnew2: 6, numlcd1: 95, numlcd2: 48, template: 'main' },
 			// problem 6
-			{ whole1: 2, num1: 7, den1: 12, whole2: 1 , num2: 1, den2: '\xA06\xA0', wholeanswer1: 3, numanswer1: 45, answerDen: 12, answerDen1: 4, numnew1: 31, numnew2: 7, numanswer2: 9, numanswer3: 3, numlcd1: 31, numlcd2: 14, template: 'third' },
+			{ whole1: 2, num1: 7, den1: 12, whole2: 1 , num2: 1, den2: '\xA06\xA0', wholeanswer1: 3, numanswer1: 45, answerDen: 12, answer1Den: 4, numnew1: 31, numnew2: 7, numanswer2: 9, numanswer3: 3, numlcd1: 31, numlcd2: 14, template: 'second' },
 			// problem 7
-			{ whole1: 2, num1: 2, den1: 9, whole2: 1, num2: 5, den2: 8, wholeanswer1: 3, wholeanswer2: 3, numanswer1: 61,  numanswer2: 61,answerDen: 72, numnew1: 16, numnew2: 45, template: 'second' },
+			{ whole1: 2, num1: 2, den1: 9, whole2: 1, num2: 5, den2: 8, wholeanswer: 3, numanswer1: 277,  numanswer2: 61, answerDen: 72, numnew1: 20, numnew2: 13, numlcd1: 160, numlcd2: 117, template: 'main' },
 			// problem 8
-			{ whole1: 2, num1: 1, den1: 12, whole2: 1, num2: 3, den2: '\xA04\xA0', whole3: 4,  num3: 5, den3: '\xA06\xA0', wholeanswer1: 7, numanswer1: 20, answerDen1: 12, numnew1: '\xA01', numnew2: '\xA09', numnew3: 10, wholeanswer2: 8, numanswer2: 5, answerDen2: 3, numanswer3: 2, template: 'fourth' },
+			{ whole1: 2, num1: 1, den1: 12, whole2: 1, num2: 3, den2: '\xA04\xA0', whole3: 4,  num3: 5, den3: '\xA06\xA0', wholeanswer1: 7, numanswer1: 20, answerDen1: 12, numnew1: '\xA01', numnew2: '\xA09', numnew3: 10, wholeanswer2: 8, numanswer2: 5, answerDen2: 3, numanswer3: 2, template: 'third' },
 			// problem 9
-			{ whole1: 2, num1: 5, den1: '\xA08\xA0', whole2: 1, num2: 1, den2: 10, whole3: 1, num3: 1, den3: '\xA04\xA0', wholeanswer1: 4, numanswer1: 199, answerDen: 40, numnew1: 21, numnew2: 11, numnew3: 5, numanswer2: 39, numlcd1: 105, numlcd2: 44, numlcd3: 50, template: 'fifth' },
+			{ whole1: 2, num1: 5, den1: '\xA08\xA0', whole2: 1, num2: 1, den2: 10, whole3: 1, num3: 1, den3: '\xA04\xA0', wholeanswer1: 4, numanswer1: 199, answerDen: 40, numnew1: 21, numnew2: 11, numnew3: 5, numanswer2: 39, numlcd1: 105, numlcd2: 44, numlcd3: 50, template: 'fourth' },
 			// problem 10
-			{ whole1: 2, num1: 1, den1: 6, whole2: 3, num2: 1, den2: 4, whole3: 1, num3: 1, den3: 4, wholeanswer1: 6, numanswer1: 80, numanswer2: 8, numanswer3: 2, answerDen: 12, answerDen1: 3, numnew1: 13, numnew2: 13, numnew3: 5, numlcd1: 26, numlcd2: 39, numlcd3: 15, template: 'sixth' },
+			{ whole1: 2, num1: 1, den1: 6, whole2: 3, num2: 1, den2: 4, whole3: 1, num3: 1, den3: 4, wholeanswer1: 6, numanswer1: 80, numanswer2: 8, numanswer3: 2, answerDen: 12, answer1Den: 3, numnew1: 13, numnew2: 13, numnew3: 5, numlcd1: 26, numlcd2: 39, numlcd3: 15, template: 'fifth' },
         ];
 
     return dataUtils.build(desc, template, data);
