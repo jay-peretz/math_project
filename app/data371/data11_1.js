@@ -46,7 +46,7 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
                         '\\grp{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{6}}},' +
                         '\\frac{\\input{5}}{\\input{6}},' +
 						'\\grp{\\frac{\\fracstr{5}}{\\fracstr{6}}}' +
-                    '}'),
+                    '}{Evaluate the operator (simplify any fractions).}'),
                 template: 'main'
             },
 			//problem 2

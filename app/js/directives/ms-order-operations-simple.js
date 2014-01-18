@@ -85,6 +85,7 @@ angular.module('mathSkills')
 
                 $scope.$watch('expected', function () {
                     if ($scope.expected) {
+						$scope.evalText = parser.extractTag($scope.expected).args.length > 1 ? parser.extractTag($scope.expected).args[1] : 'Evaluate the operator.';
                         try {
                             var expecteds = parser.extractTag($scope.expected).args[0].split(',');
                             $scope.rows = expecteds.filter(function (str, i) { return i % 2 === 0; });
@@ -105,7 +106,7 @@ angular.module('mathSkills')
                                 saveStep();
                                 showInput();
                                 $scope.mode = 'answer';
-                                $scope.instructions = 'Evaluate the operator.';
+                                $scope.instructions = $scope.evalText;
 								$timeout(function () { 
 									$scope.$broadcast('checkFocus');
 								}, 0);
