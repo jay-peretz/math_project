@@ -54,7 +54,8 @@ angular.module('mathSkills').service('data_g_2', ['dataUtils', function (dataUti
         									+'}{well}',
         						controls: {
         							"checkAnswer": true,
-        							"help": true
+        							"help": true,
+									"fixBottomRight": true
         						}
                             }, {
                             	problem: '\\grp'
@@ -81,7 +82,8 @@ angular.module('mathSkills').service('data_g_2', ['dataUtils', function (dataUti
         									+'}{well}',
         						controls: {
         							"checkAnswer": true,
-        							"help": true
+        							"help": true,
+									"fixBottomRight": true
         						}
                             }]
                         }]
@@ -146,7 +148,8 @@ angular.module('mathSkills').service('data_g_2', ['dataUtils', function (dataUti
         									+'}{well}',
         						controls: {
         							"checkAnswer": true,
-        							"help": true
+        							"help": true,
+									"fixBottomRight": true
         						}
                             }, {
         						problem: '\\grp'
@@ -181,7 +184,8 @@ angular.module('mathSkills').service('data_g_2', ['dataUtils', function (dataUti
         								+'}{well}',
         						controls: {
         							"checkAnswer": true,
-        							"help": true
+        							"help": true,
+									"fixBottomRight": true
         						}
                             }]
                         }]

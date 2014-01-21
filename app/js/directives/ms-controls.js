@@ -52,6 +52,7 @@ angular.module('mathSkills')
                         $scope.$watch('data', function () {
 
                             ckeckAnswerBtn();
+							var controlsFix;
 
                             // If we haven't parsed $scope.data into an object.
                             if (typeof $scope.data === 'string') {
@@ -134,7 +135,14 @@ angular.module('mathSkills')
 								} else {
 									$scope.hasModal = false;
 								}
-
+								
+								$scope.fixBottomRight = function () {
+									if (typeof $scope.data.fixBottomRight !== "undefined" && $scope.data.fixBottomRight === true) {
+										return "fixBottomRight span2";
+									} else {
+										return "";
+									}
+								}
 
                             }
                         });
