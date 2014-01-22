@@ -93,7 +93,8 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
         									+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true						
+							"help": true,
+							"fixBottomRight": true
 						}
                     }]
                 }]
@@ -196,7 +197,8 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
         								+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"fixBottomRight": true
 						}
                     }]
                 }]
