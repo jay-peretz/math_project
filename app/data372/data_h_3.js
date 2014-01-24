@@ -38,7 +38,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
           +'{\\ins{Convert the mixed numbers to improper fractions:}}'
           +'{\\grp'
            +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{+}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
+           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
            +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
           +'}'
           +'{\\html{&nbsp;}}'
@@ -65,7 +65,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
           +'{\\html{&nbsp;}}'
           +'{\\grp'
            +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{+}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
+           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
            +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
           +'}'
           +'{\\html{&nbsp;}}'
@@ -95,7 +95,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
           +'{\\html{&nbsp;}}'
           +'{\\grp'
            +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{+}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
+           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
            +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
           +'}'
           +'{\\html{&nbsp;}}'
@@ -130,14 +130,14 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
      }, {
       problem: '\\css{\\grp'
          +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-         +'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+         +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
          +'{\\rowgrp'
           +'{\\html{Convert the mixed numbers to improper fractions:}}'
           +'{\\html{&nbsp;}}'
           +'{\\grp'
            +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{+}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
+           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
            +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
           +'}'
           +'{\\html{&nbsp;}}'
@@ -165,7 +165,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
            +'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
           +'}'
           +'{\\html{&nbsp;}}'
-          +'{\\ins{Add the fractions:}}'
+          +'{\\ins{Subtract the fractions:}}'
           +'{\\grp'
            +'{\\frac'
             +'{\\grp'
@@ -188,14 +188,14 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
      }, {
       problem: '\\css{\\grp'
          +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-         +'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+         +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
          +'{\\rowgrp'
           +'{\\html{Convert the mixed numbers to improper fractions:}}'
           +'{\\html{&nbsp;}}'
           +'{\\grp'
            +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{+}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
+           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
            +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
           +'}'
           +'{\\html{&nbsp;}}'
@@ -260,7 +260,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
       problem: '',
       answer: '\\css{\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-        +'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
+        +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
         +'{\\sign{=}}'
         +'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer3}}{\\input{$answer1Den}}}}}',
       controls: {
@@ -274,7 +274,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
      children: [{
       problem: '\\css{\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-        +'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+        +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
         +'{\\rowgrp'
         +'{\\ins{Convert the mixed numbers to improper fractions:}}'
@@ -298,7 +298,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
      }, {
       problem: '\\css{\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-        +'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+        +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
         +'{\\rowgrp'
         +'{\\html{Convert the mixed numbers to improper fractions:}}'
@@ -325,7 +325,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
      }, {
       problem: '\\css{\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-        +'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+        +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
         +'{\\rowgrp'
         +'{\\html{Convert the mixed numbers to improper fractions:}}'
@@ -368,7 +368,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
      }, {
       problem: '\\css{\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-        +'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+        +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
         +'{\\rowgrp'
         +'{\\html{Convert the mixed numbers to improper fractions:}}'
@@ -403,7 +403,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
          +'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
         +'}'
         +'{\\html{&nbsp;}}'
-        +'{\\ins{Add the fractions:}}'
+        +'{\\ins{Subtract the fractions:}}'
         +'{\\grp'
          +'{\\frac'
           +'{\\grp'
@@ -426,7 +426,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
      }, {
       problem: '\\css{\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-        +'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+        +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
         +'{\\rowgrp'
          +'{\\html{Convert the mixed numbers to improper fractions:}}'
@@ -490,7 +490,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
      }, {
       problem: '\\css{\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-        +'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+        +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
         +'{\\rowgrp'
          +'{\\html{Convert the mixed numbers to improper fractions:}}'
@@ -746,7 +746,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
          +'{\\frac{\\fracstr{$numlcd3}}{\\fracstr{$answerDen}}}'
         +'}'
        +'{\\html{&nbsp;}}'
-        +'{\\ins{Add the fractions:}}'
+        +'{\\ins{Subtract the fractions:}}'
         +'{\\grp'
          +'{\\frac'
           +'{\\grp'
@@ -1037,7 +1037,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
             +'{\\frac{\\fracstr{$numlcd3}}{\\fracstr{$answerDen}}}'
            +'}'
            +'{\\html{&nbsp;}}'
-           +'{\\ins{Add the fractions:}}'
+           +'{\\ins{Subtract the fractions:}}'
            +'{\\grp'
             +'{\\frac'
              +'{\\grp'
@@ -1245,7 +1245,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
         ];
 data = [
             // problem 1
-            { whole1: 2, num1: 4, den1: 5, whole2: 1, num2: 3, den2: 4, wholeanswer: 1, numanswer: 1, denanswer: 20, numnew1: 16, numnew2: 15, template: 'main' },
+            { whole1: 2, num1: 4, den1: 5, whole2: 1, num2: 3, den2: 4, wholeanswer: 1, numanswer1: 21, numanswer2: 1, denanswer: 20, numnew1: 16, numnew2: 15,  answerDen: 20, numnew1: 14, numnew2: 7, numlcd1: 56, numlcd2: 35, template: 'main' },
             // problem 2
             { whole1: 3, num1: 8, den1: 9, whole2: 2, num2: 5, den2: 6, wholeanswer: 1, numanswer: 1, denanswer: 18, numnew1: 16, numnew2: 15, template: 'main' },
             // problem 3
