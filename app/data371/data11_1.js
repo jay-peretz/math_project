@@ -59,7 +59,7 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
 						'\\grp{\\frac{\\fracstr{8}}{\\fracstr{6}}}{\\btn{-}{T}{bigger}}{\\frac{\\fracstr{5}}{\\fracstr{6}}},' +
 						'\\frac{\\input{1}}{\\input{2}},' +
 						'\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}' +
-						'}'),
+						'}{Evaluate the operator (simplify any fractions).}'),
 				template: 'main'
 			},
 			// problem 5
@@ -72,7 +72,7 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
 						'\\grp{\\frac{\\fracstr{31}}{\\fracstr{20}}}{\\btn{\xF7}{T}{bigger}}{\\frac{\\fracstr{5}}{\\fracstr{6}}},' +
 						'\\mixed{\\input{1}}{\\frac{\\input{43}}{\\input{50}}},' +
 						'\\grp{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{43}}{\\fracstr{50}}}}' +
-						'}'),
+						'}{Evaluate the operator (simplify any fractions).}'),
 				template: 'main'
 			},
 			// problem 10
@@ -86,8 +86,8 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
                         '\\mixed{\\input{3}}{\\frac{\\input{1}}{\\input{8}}},' +
                         '\\grp{\\mixed{\\fracstr{3}}{\\frac{\\fracstr{1}}{\\fracstr{8}}}}{\\btn{-}{T}{bigger}}{\\html{2}},' +
                         '\\mixed{\\input{1}}{\\frac{\\input{1}}{\\input{8}}},' +
-                        '\\grp{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{8}}}' +
-                    '}'),
+                        '\\grp{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{8}}}}' +
+                    '}{Evaluate the operator (simplify any fractions).}'),
                 template: 'main'
             }
         ];
