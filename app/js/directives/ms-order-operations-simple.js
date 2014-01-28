@@ -24,13 +24,33 @@ angular.module('mathSkills')
                     },
                     showInput = function () {
                         var newArgs1 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
-                            var parsed = parser.extractTag(tagString);
+                            var parsed = parser.extractTag(tagString),
+								curWhole = "0",
+								curNum = "0",
+								curDen = "0";
+							// given inputs in frac tag, get numerator, denominator
+							if (parser.extractTag($scope.answers[$scope.cur]).tag === "frac") {			
+								curNum = parser.extractTag(parser.extractTag($scope.answers[$scope.cur]).args[0]).args[0];
+								curDen = parser.extractTag(parser.extractTag($scope.answers[$scope.cur]).args[1]).args[0]
+							}
+							// given inputs in mixed tag, get whole, numerator, denominator- this is not used at the moment
+							/*if (parser.extractTag($scope.answers[$scope.cur]).tag === "mixed") {					
+								curWhole = parser.extractTag(parser.extractTag($scope.answers[$scope.cur]).args[0]).args[0];
+								curNum = parser.extractTag(parser.extractTag(parser.extractTag($scope.answers[$scope.cur]).args[1]).args[0]).args[0];
+								curDen = parser.extractTag(parser.extractTag(parser.extractTag($scope.answers[$scope.cur]).args[1]).args[1]).args[0]
+							}*/
+							
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
 								// improve centering of brace- adjust space around operator in second-to-last line of display based on last line tag displayed
 								switch (true) {
 									case(parser.extractTag($scope.answers[$scope.cur]).tag === "frac"):
-									// case "frac" wide to allow two digit numbers in numerator or denominator
-										tagString = '\\sign{&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
+									// test for two digit numbers in numerator or denominator and adjust space
+										if (curNum.length > 1 || curDen.length > 1) {
+											console.log("length > 1");
+											tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
+										} else {
+											tagString = '\\sign{&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
+										}
 										break;
 									case(parser.extractTag($scope.answers[$scope.cur]).tag === "mixed"): 
 										tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
