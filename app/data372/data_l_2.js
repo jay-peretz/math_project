@@ -84,21 +84,21 @@ angular.module('mathSkills').service('data_l_2', ['dataUtils', function (dataUti
 			answer:dataUtils.pre('\\grp{\\sign{=}}{\\frac{\\input{-3}}{\\input{14}}}'),	
 			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\frac{\\str{3}}{\\str{14}}}}'), 
 			template: 'first',
-			firstHelp: dataUtils.pre('{\\grp{\\html{The 3/4 is negative and the 7/10 is negative and the 5 is negative. <span class=underline>Division of two numbers with the same signs, always results in positive.</span> Just divide the absolute values and make the answer positive.}}}')} ,
+			firstHelp: dataUtils.pre('{\\grp{\\html{The 3/4 is negative and the 7/10 is negative and the 5 is negative. <span class=underline> Division of two numbers with the same signs, always results in positive and numbers with different signs, always results in negative.</span> Just divide the absolute values and make the answer negative.}}}')} ,
 
 			// problem 9
 			{prob: dataUtils.pre('{\\grp{\\mixed{\\str{2}}{\\frac{\\fracstr{4}}{\\fracstr{5}}}}{\\sign{&divide;}}{\\html{(}}{\\sign{-}}{\\mixed{\\str{2}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\html{)}}}'),
 			answer:dataUtils.pre('\\grp{\\sign{=}}{\\frac{\\input{-6}}{\\input{5}}}'),	
-			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\mixed{\\fracstr{1}}{\\frac{\\str{17}}{\\str{35}}}}}'), 
+			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\frac{\\str{6}}{\\str{5}}}}'), 
 			template: 'first',
 			firstHelp: dataUtils.pre('{\\grp{\\html{The 2 4/5 is positive and the 2 1/3 is negative. <span class=underline>Division of two numbers with different signs, always results in negative.</span> Just divide the absolute values and make the answer negative.}}}')} ,
+			
 			// problem 10
 			{prob: dataUtils.pre('{\\grp{html{4}}{\\sign{&divide;}}{\\html{(}}{\\sign{-}}{\\mixed{\\str{2}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}}{\\html{)}}{\\sign{&divide;}}{\\mixed{\\str{2}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}}'),
 			answer:dataUtils.pre('\\grp{\\sign{=}}{\\frac{\\input{-2}}{\\input{3}}}'),	
 			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\frac{\\str{2}}{\\str{3}}}}'), 
 			template: 'first',
-			firstHelp: dataUtils.pre('{\\grp{\\html{}}}') },
-//The  is positive and the  is negative. <span class=underline>Division of two numbers with the different signs, always results in a negative.</span> Just divide the absolute values and make the answer negative.
+			firstHelp: dataUtils.pre('{\\grp{\\html{The 4 is positive and the 2 2/3 is negative and the 2 1/4 is positive. <span class=underline>Division of two numbers with the different signs, always results in negative.</span> Just divide the absolute values and make the answer negative.}}}') },
 			];
 
 	return dataUtils.build(desc, template, data);
