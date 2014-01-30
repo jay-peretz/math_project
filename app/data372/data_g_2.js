@@ -50,7 +50,20 @@ angular.module('mathSkills').service('data_g_2', ['dataUtils', function (dataUti
         										+'{\\html{$answerDen}}'
         										+'{\\html{&nbsp;}}'
         										+'{\\ins{Use the LCD to convert the fractions:}}'
-        										+'{\\frac{\\grp{\\input{$firstAnswerNum}}{\\sign{+}}{\\input{$secondAnswerNum}}}{\\fracstr{$answerDen}}}'
+        										+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+        										+'{\\sign{+}}'
+        										+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'       								
+        										+'{\\html{&nbsp;}}'        										
+        										+'{\\grp'
+        											+'{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+        											+'{\\sign{+}}'
+        											+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
+        										+'}'
+        										+'{\\html{&nbsp;}}'
+        										
+        										
+        										
+        										//+'{\\frac{\\grp{\\input{$firstAnswerNum}}{\\sign{+}}{\\input{$secondAnswerNum}}}{\\fracstr{$answerDen}}}'
         									+'}{well}',
         						controls: {
         							"checkAnswer": true,
