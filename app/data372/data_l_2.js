@@ -89,14 +89,14 @@ angular.module('mathSkills').service('data_l_2', ['dataUtils', function (dataUti
 			// problem 9
 			{prob: dataUtils.pre('{\\grp{\\mixed{\\str{2}}{\\frac{\\fracstr{4}}{\\fracstr{5}}}}{\\sign{&divide;}}{\\html{(}}{\\sign{-}}{\\mixed{\\str{2}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\html{)}}}'),
 			answer:dataUtils.pre('\\grp{\\sign{=}}{\\frac{\\input{-6}}{\\input{5}}}'),	
-			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\frac{\\str{6}}{\\str{5}}}}'), 
+			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\mixed{\\fracstr{1}}{\\frac{\\str{17}}{\\str{35}}}}'), 
 			template: 'first',
 			firstHelp: dataUtils.pre('{\\grp{\\html{The 2 4/5 is positive and the 2 1/3 is negative. <span class=underline>Division of two numbers with different signs, always results in negative.</span> Just divide the absolute values and make the answer negative.}}}')} ,
 			
 			// problem 10
 			{prob: dataUtils.pre('{\\grp{html{4}}{\\sign{&divide;}}{\\html{(}}{\\sign{-}}{\\mixed{\\str{2}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}}{\\html{)}}{\\sign{&divide;}}{\\mixed{\\str{2}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}}'),
 			answer:dataUtils.pre('\\grp{\\sign{=}}{\\frac{\\input{-2}}{\\input{3}}}'),	
-			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\frac{\\str{2}}{\\str{3}}}}'), 
+			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\mixed{\\fracstr{3}}{\\frac{\\str{3}}{\\str{8}}}}}'), 
 			template: 'first',
 			firstHelp: dataUtils.pre('{\\grp{\\html{The 4 is positive and the 2 2/3 is negative and the 2 1/4 is positive. <span class=underline>Division of two numbers with the different signs, always results in negative.</span> Just divide the absolute values and make the answer negative.}}}') },
 			];
