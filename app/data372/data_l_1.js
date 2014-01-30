@@ -49,7 +49,7 @@ angular.module('mathSkills').service('data_l_1', ['dataUtils', function (dataUti
 			answer: '120', 
 			textAnswer: ' &nbsp; 120', 
 			template: 'first',
-			firstHelp: dataUtils.pre('{\\grp{\\html{The 5 is positive, the 6 is negative and the 8 is negative. <span class=underline>Multiplication of two integers with the same sign, always results in positive.</span> Just multiply the absolute values and make the answer positive.}}}') },
+			firstHelp: dataUtils.pre('{\\grp{\\html{The 5 is positive, the 6 is negative and the 4 is negative. <span class=underline>Multiplication of two integers with the same sign, always results in positive.</span> Just multiply the absolute values and make the answer positive.}}}') },
 			
 			// problem 4
 			{prob: dataUtils.pre('{\\grp{html{2.6}}{\\sign{\xB7}}{\\html{(}}{\\sign{-}}{html{3.1}}{\\html{)}}}'),
