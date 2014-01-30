@@ -80,7 +80,7 @@ angular.module('mathSkills').service('data_l_2', ['dataUtils', function (dataUti
 			firstHelp: dataUtils.pre('{\\grp{\\html{The 5/8 is negative and the 15/16 is negative. <span class=underline>Division of two numbers with the same signs, always results in positive.</span> Just divide the absolute values and make the answer positive.}}}') },
 
 			// problem 8
-			{prob: dataUtils.pre('{\\pan{5}{7}{\\grp{\\html{(}}{\\sign{-}}{\\frac{\\str{3}}{\\str{4}}}{\\html{)}}{\\sign{&divide;}}{\\html{(}}{\\sign{-}}{\\frac{\\str{7}}{\\str{10}}}{\\html{)}}{\\sign{&divide;}}{\\sign{-}}{html{5}}}}'),
+			{prob: dataUtils.pre('{\\grp{\\html{(}}{\\sign{-}}{\\frac{\\str{3}}{\\str{4}}}{\\html{)}}{\\sign{&divide;}}{\\html{(}}{\\sign{-}}{\\frac{\\str{7}}{\\str{10}}}{\\html{)}}{\\sign{&divide;}}{\\sign{-}}{html{5}}}'),
 			answer:dataUtils.pre('\\grp{\\sign{=}}{\\frac{\\input{-3}}{\\input{14}}}'),	
 			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\frac{\\str{3}}{\\str{14}}}}'), 
 			template: 'first',
