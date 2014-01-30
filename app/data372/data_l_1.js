@@ -14,18 +14,38 @@ angular.module('mathSkills').service('data_l_1', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-						+'$prob',
-						answer: '\\input{$answer}',
+								+'$prob',
+						answer:  '\\input{$answer}',
 						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'$firstHelp'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\html{answer:  $textAnswer}}{help-answer-text}}'
+								"checkAnswer": true,
+								"help": '\\rowgrp'
+									+'$firstHelp'
+									+'{\\html{&nbsp;}}'
+									+'{css{\\html{answer:  $textAnswer}}{help-answer-text}}'
 						}
 					}]
 				}]
 			},
+			
+			// second template, fractions operations
+			second: {
+                title: 'Evaluate Signed Expressions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+								  +'$prob',
+						answer:  '$answer',
+						controls: {
+									"checkAnswer": true,
+									"help": '\\rowgrp'
+											+'$firstHelp'
+											+'{\\html{&nbsp;}}'
+											+'{css{\\grp{\\html{answer: }}$textAnswer}{help-answer-text}}'
+							}
+						}]
+					}]
+				},
 				
         },
         data = [
@@ -49,7 +69,7 @@ angular.module('mathSkills').service('data_l_1', ['dataUtils', function (dataUti
 			answer: '120', 
 			textAnswer: ' &nbsp; 120', 
 			template: 'first',
-			firstHelp: dataUtils.pre('{\\grp{\\html{The 5 is positive, the 6 is negative and the 4 is negative. <span class=underline>Multiplication of two integers with the same sign, always results in positive.</span> Just multiply the absolute values and make the answer positive.}}}') },
+			firstHelp: dataUtils.pre('{\\grp{\\html{The 5 is positive, the 6 and the 4 are negative. <span class=underline>Multiplication of two integers with the same sign, always results in positive.</span> Just multiply the absolute values and make the answer positive.}}}') },
 			
 			// problem 4
 			{prob: dataUtils.pre('{\\grp{html{2.6}}{\\sign{\xB7}}{\\html{(}}{\\sign{-}}{html{3.1}}{\\html{)}}}'),
@@ -64,6 +84,27 @@ angular.module('mathSkills').service('data_l_1', ['dataUtils', function (dataUti
 			textAnswer: ' &nbsp; 3', 
 			template: 'first',
 			firstHelp: dataUtils.pre('{\\grp{\\html{The 7.5 is negative and the 0.4 is negative. <span class=underline>Multiplication of two integers with the same sign, always results in positive.</span> Just multiply the absolute values and make the answer positive.}}}') },
+			
+			// problem 6
+			{prob: dataUtils.pre('{\\grp{\\sign{-}}{\\frac{\\str{3}}{\\str{4}}}{\\sign{\xB7}}{\\html{(}}{\\frac{\\str{5}}{\\str{9}}}{\\html{)}}}'),
+			answer: dataUtils.pre('\\grp{\\sign{=}}{\\frac{\\input{-5}}{\\input{12}}}'),	
+			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\frac{\\str{5}}{\\str{12}}}}'), 
+			template: 'second',
+			firstHelp: dataUtils.pre('{\\grp{\\html{The 3/4 is negative and the 5/9 is positive. <span class=underline>Multiplication of two numbers with the different signs, always results in a negative.</span> Just multiply the absolute values and make the answer negative.}}}') },
+			
+			// problem 7
+			{prob: dataUtils.pre('{\\grp{\\frac{\\str{7}}{\\str{8}}}{\\sign{\xB7}}{\\html{(}}{\\sign{-}}{\\frac{\\str{4}}{\\str{21}}}{\\html{)}}}'),
+			answer: dataUtils.pre('\\grp{\\sign{=}}{\\frac{\\input{-1}}{\\input{6}}}'),	
+			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\frac{\\str{1}}{\\str{6}}}}'), 
+			template: 'second',
+			firstHelp: dataUtils.pre('{\\grp{\\html{The 7/8 is positive and the 4/21 is negative. <span class=underline>Multiplication of two numbers with the different signs, always results in a negative.</span> Just multiply the absolute values and make the answer negative.}}}') },
+			
+			// problem 8
+			{prob: dataUtils.pre('{\\grp{\\html{(}}{\\sign{-}}{\\frac{\\str{1}}{\\str{2}}}{\\html{)}}{\\sign{\xB7}}{\\html{(}}{\\frac{\\str{3}}{\\str{16}}}{\\html{)}}{\\sign{\xB7}}{\\html{(}}{\\sign{-}}{\\frac{\\str{11}}{\\str{6}}}{\\html{)}}}'),
+			answer: dataUtils.pre('\\grp{\\sign{=}}{\\frac{\\input{11}}{\\input{64}}}'),	
+			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\frac{\\str{11}}{\\str{64}}}}'), 
+			template: 'second',
+			firstHelp: dataUtils.pre('{\\grp{\\html{The 1/2 and the 11/6 are negative, and the 3/16 is positive. <span class=underline>Multiplication of two integers with the same sign, always results in a positive.</span> Just multiply the absolute values and make the answer positive.}}}') },
 			
         ];
 
