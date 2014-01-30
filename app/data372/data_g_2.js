@@ -59,11 +59,7 @@ angular.module('mathSkills').service('data_g_2', ['dataUtils', function (dataUti
         											+'{\\sign{+}}'
         											+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
         										+'}'
-        										+'{\\html{&nbsp;}}'
-        										
-        										
-        										
-        										//+'{\\frac{\\grp{\\input{$firstAnswerNum}}{\\sign{+}}{\\input{$secondAnswerNum}}}{\\fracstr{$answerDen}}}'
+        										+'{\\html{&nbsp;}}'       									
         									+'}{well}',
         						controls: {
         							"checkAnswer": true,
