@@ -62,11 +62,11 @@ angular.module('mathSkills').service('data_l_2', ['dataUtils', function (dataUti
 			firstHelp: dataUtils.pre('{\\grp{\\html{The 180 is negative and the 0.3 is negative. <span class=underline>Division of two numbers with the same signs, always results in positive.</span> Just divide the absolute values and make the answer positive.}}}') },
 			
 			// problem 5
-			{prob: dataUtils.pre('{\\grp{html{130.6}}{\\sign{&divide;}}{\\html{(}}{\\sign{-}}{html{32}}{\\html{)}}}'),
+			{prob: dataUtils.pre('{\\grp{html{129.6}}{\\sign{&divide;}}{\\html{(}}{\\sign{-}}{html{32}}{\\html{)}}}'),
 			answer: dataUtils.pre('\\grp{\\sign{=}}{\\input{-4.05}}'),	 
 			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\sign{-}}{html{4.05}}'),
 			template: 'first',
-			firstHelp: dataUtils.pre('{\\grp{\\html{The 130.6 is positive and the 32 is negative. <span class=underline>Division of two numbers with the different sign, always results in negative.</span> Just divide the absolute values and make the answer negative.}}}') },
+			firstHelp: dataUtils.pre('{\\grp{\\html{The 129.6 is positive and the 32 is negative. <span class=underline>Division of two numbers with the different sign, always results in negative.</span> Just divide the absolute values and make the answer negative.}}}') },
 			
 			// problem 6
 			{prob: dataUtils.pre('{\\grp{\\html{(}}{\\sign{-}}{\\frac{\\str{3}}{\\str{7}}}{\\html{)}}{\\sign{&divide;}}{html{8}}}'),
