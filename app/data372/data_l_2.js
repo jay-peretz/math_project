@@ -17,6 +17,9 @@ angular.module('mathSkills').service('data_l_2', ['dataUtils', function (dataUti
 						problem: '\\rowgrp'
 								  +'$prob',
 						answer:  '$answer',
+						answer: '\\pan{5}{7}{'+
+                                    '$answer'+
+                                '}',
 						controls: {
 									"checkAnswer": true,
 									"help": '\\rowgrp'
