@@ -57,14 +57,14 @@ angular.module('mathSkills').service('data_l_1', ['dataUtils', function (dataUti
 			answer: '48', 
 			textAnswer: ' &nbsp; 48', 
 			template: 'first',
-			firstHelp: dataUtils.pre('{\\grp{\\html{The 6 is negative and the 8 is negative. <span class=underline>Multiplication of two integers with the same sign, always results in positive.</span> Just multiply the absolute values and make the answer positive.}}}') },
+			firstHelp: dataUtils.pre('{\\grp{\\html{The 6 is negative and the 8 is negative. Because there are two negative signs (<span class=underline>an even number of negative signs</span>) in this multiplication problem, the answer is positive. }}}') },
 			
 			// problem 2
 			{prob: dataUtils.pre('{\\grp{\\sign{-}}{html{4}}{\\sign{\xB7}}{html{10}}}'),
 			answer: '-40', 
 			textAnswer: ' &nbsp; -40', 
 			template: 'first',
-			firstHelp: dataUtils.pre('{\\grp{\\html{The 4 is negative and the 10 is positive. <span class=underline>Multiplication of two integers with the different signs, always results in a negative.</span> Just multiply the absolute values and make the answer negative.}}}') },
+			firstHelp: dataUtils.pre('{\\grp{\\html{The 4 is negative and the 10 is positive. Because there is one negative sign (<span class=underline>an odd number of negative signs</span>) in this multiplication problem, the answer is negative. }}}') },
 			
 			// problem 3
 			{prob: dataUtils.pre('{\\grp{html{5}}{\\sign{\xB7}}{\\html{(}}{\\sign{-}}{html{6}}{\\html{)}}{\\sign{\xB7}}{\\html{(}}{\\sign{-}}{html{4}}{\\html{)}}}'),
