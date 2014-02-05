@@ -7,12 +7,36 @@ angular.module('mathSkills').service('data_e_3', ['dataUtils', function (dataUti
             children: []
         },
         template = {
+    		 one: {
+					title: 'Find the Reciprocal of a Fraction',
+					children: [{
+						title: 'Main Answer',
+						children: [{
+							problem: '\\rowgrp'
+							+'{\\grp{\\str{What is the reciprocal of \xA0}}'
+							+'{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}',
+							answer: '\\frac{\\input{$na}}{\\input{$da}}',
+							controls: {
+								"checkAnswer": true,
+								"help": '\\rowgrp'
+								+'{\\grp{\\str{The reciprocal of \xA0}}'
+								+'{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}'
+								+'{\\str{\xA0 is \xA0}}'
+								+'{\\frac{\\fracstr{$d1}}{\\fracstr{$n1}}}}'
+								+'{\\html{&nbsp;}}'
+								+'{css{\\grp{\\str{answer:  \xA0}}'
+								+'{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{help-answer-text}}'
+							}
+						}]
+					}]
+			   },
             two: {
                 title: 'Dividing Fractions',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\grp{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}',
+                        problem: '\\grp{\\html{Find the quotient of &nbsp;}}'
+                        		+'{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}',
                         answer: '\\frac{\\input{$na}}{\\input{$da}}',
                         controls: {
                             "checkAnswer": true,
@@ -24,18 +48,20 @@ angular.module('mathSkills').service('data_e_3', ['dataUtils', function (dataUti
                     title: 'Workbook',
                     children: [{
                         problem: '\\rowgrp'
-						+'{\\grp{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+		                        +'{\\grp{\\html{Find the quotient of &nbsp;}}'
+								+'{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                         answer: '\\rowgrp'
-						+'{\\ins{Rewrite the problem as the product of fractions:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\frac{\\input{$n1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$d2}}{\\input{$n2}}}}',
+								+'{\\ins{Rewrite the problem as the product of fractions:}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\grp{\\frac{\\input{$n1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$d2}}{\\input{$n2}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
                        problem: '\\rowgrp'
-						+'{\\grp{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+                    	   		+'{\\grp{\\html{Find the quotient of &nbsp;}}'
+                    	   		+'{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                          answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Rewrite the problem as the product of fractions:}}'
@@ -55,7 +81,10 @@ angular.module('mathSkills').service('data_e_3', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}',
+                        problem: '\\rowgrp'
+                        		+'{\\html{Find the quotient of : }}'
+                        		+'{\\html{&nbsp;}}'
+                        		+'{\\grp{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
                         answer: '\\frac{\\input{$na}}{\\input{$da}}',
                         controls: {
                             "checkAnswer": true,
@@ -66,17 +95,23 @@ angular.module('mathSkills').service('data_e_3', ['dataUtils', function (dataUti
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}',
+                        problem: '\\rowgrp'
+                        	+'{\\html{Find the quotient of : }}'
+                    		+'{\\html{&nbsp;}}'
+                    		+'{\\grp{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
                         answer: '\\rowgrp'
-						+'{\\ins{Rewrite the problem as the product of fractions:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\frac{\\input{$n1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$d2}}{\\input{$n2}}}{\\sign{&times;}}{\\frac{\\input{$d3}}{\\input{$n3}}}}',
+								+'{\\ins{Rewrite the problem as the product of fractions:}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\grp{\\frac{\\input{$n1}}{\\input{$d1}}}{\\sign{&times;}}{\\frac{\\input{$d2}}{\\input{$n2}}}{\\sign{&times;}}{\\frac{\\input{$d3}}{\\input{$n3}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
                         }
                     }, {
-                        problem: '\\row{\\html{Solve &nbsp;}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}',
+                        problem: '\\rowgrp'
+                        	+'{\\html{Find the quotient of : }}'
+                    		+'{\\html{&nbsp;}}'
+                    		+'{\\grp{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}{\\sign{&divide;}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
                         answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Rewrite the problem as the product of fractions:}}'
@@ -93,16 +128,18 @@ angular.module('mathSkills').service('data_e_3', ['dataUtils', function (dataUti
             }
         },
         data = [
-            { n1: 1, d1: 2, n2: 3, d2: 2, na: 1, da: 3, template: 'two' },
-            { n1: 5, d1: 10, n2: 5, d2: 2, na: 1, da: 5, template: 'two' },
-            { n1: 7, d1: 6, n2: 7, d2: 3, na: 1, da: 2, template: 'two' },
+            { n1: 3, d1: 7, na: 7, da: 3, template: 'one' },
+			{ n1: 8, d1: 5, na: 5, da: 8, template: 'one' },
+            { n1: 2, d1: 9, n2: 1, d2: 3, na: 2, da: 3, template: 'two' },
+            { n1: 7, d1: 8, n2: 3, d2: 2, na: 7, da: 12, template: 'two' },
+            { n1: 4, d1: 5, n2: 2, d2: 15, na: 6, da: '', template: 'two' },
             { n1: 2, d1: 9, n2: 5, d2: 3, na: 2, da: 15, template: 'two' },
             { n1: 10, d1: 3, n2: 12, d2: 11, na: 55, da: 18, template: 'two' },
-            { n1: 17, d1: 34, n2: 12, d2: 14, na: 7, da: 12, template: 'two' },
+            { n1: 14, d1: 15, n2: 7, d2: 3, na: 2, da: 5, template: 'two' },
             { n1: 18, d1: 27, n2: 23, d2: 21, na: 14, da: 23, template: 'two' },
-            { n1: 2, d1: 4, n2: 12, d2: 8, n3: 24, d3: 18, na: 1, da: 4, template: 'three' },
+            { n1: 3, d1: 4, n2: 2, d2: 5, n3: 9, d3: 8, na: 4, da: 15, template: 'three' },
             { n1: 27, d1: 14, n2: 28, d2: 21, n3: 9, d3: 12, na: 27, da: 14, template: 'three' },
-            { n1: 5, d1: 10, n2: 27, d2: 32, n3: 8, d3: 10, na: 20, da: 27, template: 'three' }
+            { n1: 4, d1: 9, n2: 3, d2: 5, n3: 6, d3: 7, na: 70, da: 81, template: 'three' }
         ];
 
     return dataUtils.build(desc, template, data);
