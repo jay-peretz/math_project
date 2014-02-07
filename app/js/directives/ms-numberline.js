@@ -42,6 +42,7 @@ angular.module('mathSkills')
 					
 				numberLineArray[0] = [];
 				numberLineArray[1] = [];
+				numberLineArray[2] = [];
 					
 
 			 // Extract the value/s for $scope.firstnumber & $scope.secondnumber
@@ -81,10 +82,12 @@ angular.module('mathSkills')
 									numberLineArray[0][jj] = "\xA0"+"\xA0"+"|";
 								} else {
 									if (ii == numberFirst) {
-										numberLineArray[1][jj] = "\xA0"+"X"+"\xA0";
+										numberLineArray[2][jj] = "\xA0"+"x"+"\xA0";
+										numberLineArray[1][jj] = "\xA0"+ii+"\xA0";
 										numberLineArray[0][jj] = "\xA0"+"\xA0"+"|";
 									} else if (ii == numberSecond) {
-										numberLineArray[1][jj] = "\xA0"+"Y"+"\xA0";
+										numberLineArray[2][jj] = "\xA0"+"x"+"\xA0";
+										numberLineArray[1][jj] = "\xA0"+ii+"\xA0";
 										numberLineArray[0][jj] = "\xA0"+"\xA0"+"|";
 									}
 								}

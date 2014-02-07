@@ -36,7 +36,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
             }
         },
         data = [
-			{ firstButton: 'F', secondButton: 'T', firstNumber: '25', secondNumber: '33', startGraph: '20', endGraph: '35', statement: 'LESS THAN', template: 'second', answerBtn: 'noAnswer' },
+			{ firstButton: 'F', secondButton: 'T', firstNumber: '-5', secondNumber: '5', startGraph: '-10', endGraph: '10', statement: 'LESS THAN', template: 'second', answerBtn: 'noAnswer' },
         ];
 
 	return dataUtils.build(desc, template, data);
