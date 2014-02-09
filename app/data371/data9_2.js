@@ -24,7 +24,7 @@ angular.module('mathSkills').service('data9_2', ['dataUtils', function (dataUtil
                     title: 'Workbook',
                     children: [{
                         problem: '\\str{Find the LCM of $firstDen and $secondDen.}',
-						answer: '\\findlcm{$firstDen}{$secondDen}',
+						answer: '\\findlcmtest{$firstDen}{$secondDen}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
@@ -49,7 +49,7 @@ angular.module('mathSkills').service('data9_2', ['dataUtils', function (dataUtil
                     title: 'Workbook',
                     children: [{
                         problem: '\\str{Find the LCM of $firstDen, $secondDen and $thirdDen.}',
-						answer: '\\findlcm{$firstDen}{$secondDen}{$thirdDen}',
+						answer: '\\findlcmtest{$firstDen}{$secondDen}{$thirdDen}',
 						controls: {
 							"checkAnswer": true,
 							"help": true

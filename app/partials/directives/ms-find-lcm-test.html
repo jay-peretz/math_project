@@ -1,0 +1,36 @@
+<div>
+    <div class="alert alert-info">{{instructions}}</div>
+    <table class=factors>
+        <tr ng-repeat="step in completed">
+            <td class=divisor>
+                {{step.factor}}
+            </td>
+            <td class=dividend>
+                <span ng-repeat="number in step.numbers" class=factoring>{{number}}</span>
+            </td>
+        </tr>
+        <tr ng-class="{ noborder: done }">
+            <td class=divisor ng-show=factorExp>
+                <span ng-hide=done>
+                    <ms-expression expected={{factorExp}}></ms-expression>
+                </span>
+                <span ng-show=done>
+                    <ms-expression expected={{factoredExp}}></ms-expression>
+                </span>
+            </td>
+            <td class=dividend>
+                <span>
+                    <span ng-repeat="number in numbers" class=factoring>{{number}}</span>
+                </span>
+            </td>
+        </tr>
+        <tr ng-show=done class=noborder>
+            <td class=divisor ng-show=done>
+                <span>
+                    <ms-input expected={{lcm}} label=lcm></ms-input>
+                </span>
+            </td>
+            <td class=dividend></td>
+        </tr>
+    </table>
+</div>

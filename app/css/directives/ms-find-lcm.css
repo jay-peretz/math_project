@@ -23,3 +23,29 @@ ms-find-lcm .factoring {
 ms-find-lcm ms-input label span {
     display: none;
 }
+ms-find-lcm-test table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+ms-find-lcm-test .dividend {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    padding: 10px;
+}
+ms-find-lcm-test .noborder .dividend {
+    border: none;
+}
+ms-find-lcm-test .divisor {
+    padding: 10px 20px 0 0;
+}
+ms-find-lcm-test input {
+    width: 40px;
+}
+ms-find-lcm-test .factoring {
+    width: 40px;
+    display: inline-block;
+}
+ms-find-lcm-test ms-input label span {
+    display: none;
+}
+
