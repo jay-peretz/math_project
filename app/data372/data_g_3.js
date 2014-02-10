@@ -262,7 +262,7 @@ angular.module('mathSkills').service('data_g_3', ['dataUtils', function (dataUti
 								+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 								+'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
 								+'{\\sign{=}}'
-								+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer3}}{\\input{$answer1Den}}}}}',
+								+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer2}}{\\input{$answer1Den}}}}}',
 						controls: {
 								"checkAnswer": true,
 								"help": false,
@@ -476,83 +476,16 @@ angular.module('mathSkills').service('data_g_3', ['dataUtils', function (dataUti
 										+'{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$answerDen}}}'
 									+'}'
 									+'{\\html{&nbsp;}}'
-									+'{\\ins{Rewrite the answer as a mixed number with a proper fraction:}}'
+									+'{\\ins{Rewrite the answer as a mixed number with a <span class=underline>simplified</span> proper fraction:}}'
 									+'{\\grp'
 										+'{\\frac{\\str{$numanswer1}}{\\str{$answerDen}}}'
 										+'{\\sign{ = }}'
-										+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}}'
+										+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer2}}{\\input{$answer1Den}}}}}'
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true,
 							"fixBottomRight": true
-						}
-					}, {
-						problem: '\\css{\\grp'
-								+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-								+'{\\sign{+}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
-						answer: '\\css'
-								+'{\\rowgrp'
-									+'{\\html{Convert the mixed numbers to improper fractions:}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-										+'{\\sign{+}}'
-										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-									+'}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
-										+'{\\sign{+}}'
-										+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
-									+'}'
-									+'{\\html{&nbsp;}}'
-									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\html{$answerDen}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\html{Use the LCD to convert the fractions:}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
-										+'{\\sign{+}}'
-										+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
-									+'}'
-									+'{\\html{&nbsp;}}'	
-									+'{\\grp'
-										+'{\\frac{\\fracstr{$numlcd1}}{\\fracstr{$answerDen}}}'
-										+'{\\sign{+}}'
-										+'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
-									+'}'
-									+'{\\html{&nbsp;}}'
-									+'{\\html{Add the fractions:}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\str{$numlcd1}}'
-												+'{\\sign{+}}'
-												+'{\\str{$numlcd2}}'
-											+'}'
-											+'{\\fracstr{$answerDen}}'
-										+'}'
-										+'{\\sign{=}}'
-										+'{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$answerDen}}}'
-									+'}'
-									+'{\\html{&nbsp;}}'
-									+'{\\html{Rewrite the answer as a mixed number with a proper fraction:}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\frac{\\str{$numanswer1}}{\\str{$answerDen}}}'
-										+'{\\sign{ = }}'
-										+'{\\mixed{\\str{$wholeanswer1}}{\\frac{\\fracstr{$numanswer2}}{\\fracstr{$answerDen}}}}}'
-									+'{\\html{&nbsp;}}'	
-									+'{\\reducefrac{\\mixed{\\str{$wholeanswer1}}{\\frac{\\fracstr{$numanswer2}}{\\fracstr{$answerDen}}}}}'
-								+'}{well}',
-						controls: {
-							"checkAnswer": true,
-							"help": true,
-						    "fixBottomRight": true
 						}
 					}]
 				}]
@@ -1223,13 +1156,13 @@ angular.module('mathSkills').service('data_g_3', ['dataUtils', function (dataUti
         },
         data = [
 			// problem 1
-            { whole1: 5, num1: 4, den1: 5, whole2: 2, num2: 3, den2: 4,wholeanswer: '8', numanswer1: 171, numanswer2: 11, answerDen: 20, numnew1: 29, numnew2: 11, numlcd1: 116, numlcd2: 55, template: 'main' },
+            { whole1: 2, num1: 1, den1: 5, whole2: 3, num2: 2, den2: 5,wholeanswer: '5', numanswer1: 28, numanswer2: 3, answerDen: 5, numnew1: 11, numnew2: 17, numlcd1: 11, numlcd2: 17, template: 'main' },
 			// problem 2
-			{ whole1: 2, num1: 5, den1: 6, whole2: 1, num2: 8, den2: 9, wholeanswer: 4, numanswer1: 85, numanswer2: 13, answerDen: 18, numnew1: 17, numnew2: 17, numlcd1: 51, numlcd2: 34, template: 'main' },
+			{ whole1: 1, num1: 2, den1: 3, whole2: 2, num2: 1, den2: 3, wholeanswer: 4, numanswer1: 12, numanswer2: 0, answerDen: 3, numnew1: 5, numnew2: 7, numlcd1: 5, numlcd2: 7, template: 'main' },
 			// problem 3
-			{ whole1: 2, num1: 2, den1: 3, whole2: 1, num2: 3, den2: 5, wholeanswer: 4, numanswer1: 64, numanswer2: 4, answerDen: 15, numnew1: 8, numnew2: 8, numlcd1: 40, numlcd2: 24, template: 'main' },
+			{ whole1: 3, num1: 3, den1: 8, whole2: 3, num2: 7, den2: 8, wholeanswer1: 7, numanswer1: 58, numanswer2: 1, answerDen: 8, answer1Den: 4, numnew1: 27, numnew2: 31, numlcd1: 27, numlcd2: 31, template: 'second' },
 			// problem 4
-			{ whole1: 2, num1: 1, den1: 10, whole2: 1 , num2: 5, den2: '\xA06\xA0', wholeanswer1: 3, numanswer1: 118, numanswer2: 28, numanswer3: 14, answerDen: 30, answer1Den: 15, numnew1: 21, numnew2: 11, numlcd1: 63, numlcd2: 55, template: 'second' },
+			{ whole1: 2, num1: 1, den1: 10, whole2: 1 , num2: 5, den2: '\xA06\xA0', wholeanswer1: 3, numanswer1: 118, numanswer2: 14, answerDen: 30, answer1Den: 15, numnew1: 21, numnew2: 11, numlcd1: 63, numlcd2: 55, template: 'second' },
 			// problem 5
 			{ whole1: 2, num1: 3, den1: 8, whole2: 1, num2: 1, den2: 5, wholeanswer: 3, numanswer1: 143, numanswer2: 23, answerDen: 40, numnew1: 19, numnew2: 6, numlcd1: 95, numlcd2: 48, template: 'main' },
 			// problem 6
