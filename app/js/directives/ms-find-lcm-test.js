@@ -10,7 +10,7 @@ angular.module('mathSkills')
         });
     }])
     .directive('msFindLcmTest', ['numberUtils', 'panelGroupData', 'parser', '$timeout', function (numberUtils, panelGroupData, parser, $timeout) {
-																								  		console.log("test");
+		
         var count = function (val, arr) {
                 return arr.reduce(function (acc, cur) {
                     return val === cur ? acc + 1 : acc;
@@ -46,6 +46,7 @@ angular.module('mathSkills')
 
         return {
             controller: ['$scope', function ($scope) {
+				$scope.done = false;
 				$scope.controllerId = Math.random().toString();
                 var getFactorExp = function () {
                         return '\\input{[' + $scope.primeFactors.join(',') + ']}';
@@ -79,6 +80,13 @@ angular.module('mathSkills')
                             $scope.$broadcast('checkFocus');
                         }, 0);
                     };
+					$scope.borderTest = function () {
+						if ($scope.done) {
+							return ('');
+						} else {
+							return ('dividend');
+						}
+					};
 
                 $scope.numbers = null;
                 $scope.completed = [];
@@ -127,6 +135,11 @@ angular.module('mathSkills')
 				
 							focus();
 						}
+						console.log("test is: ",$scope.primeFactors.length===0);
+						if ($scope.primeFactors.length===0) {
+								$scope.done = true;
+						}
+						console.log("$scope.done is: ",$scope.done);
                     }
 					e.stopPropagation();
                 });

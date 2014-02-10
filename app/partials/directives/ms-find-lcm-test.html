@@ -9,14 +9,12 @@
                 <span ng-repeat="number in step.numbers" class=factoring>{{number}}</span>
             </td>
         </tr>
-        <tr ng-class="{ noborder: done }">
-            <td class=divisor ng-show=factorExp>
-                <span ng-hide=done>
+        <tr ng-hide=done>
+            <td class=divisor>
+                <span>
                     <ms-expression expected={{factorExp}}></ms-expression>
                 </span>
-                <span ng-show=done>
-                    <ms-expression expected={{factoredExp}}></ms-expression>
-                </span>
+                
             </td>
             <td class=dividend>
                 <span>
@@ -25,9 +23,14 @@
             </td>
         </tr>
         <tr ng-show=done class=noborder>
-            <td class=divisor ng-show=done>
+            <td class=divisor>
                 <span>
-                    <ms-input expected={{lcm}} label=lcm></ms-input>
+                    <ms-input expected={{lcm}} label={{$index}}></ms-input>
+                </span>
+            </td>
+            <td ng-class=noborder ng-show=done>
+                <span>
+                    <span ng-repeat="number in numbers" class=factoring>{{number}}</span>
                 </span>
             </td>
             <td class=dividend></td>
