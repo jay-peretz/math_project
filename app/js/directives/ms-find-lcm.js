@@ -10,6 +10,7 @@ angular.module('mathSkills')
         });
     }])
     .directive('msFindLcm', ['numberUtils', 'panelGroupData', 'parser', '$timeout', function (numberUtils, panelGroupData, parser, $timeout) {
+		
         var count = function (val, arr) {
                 return arr.reduce(function (acc, cur) {
                     return val === cur ? acc + 1 : acc;
@@ -45,6 +46,8 @@ angular.module('mathSkills')
 
         return {
             controller: ['$scope', function ($scope) {
+				$scope.factorExpLabel = "";
+				$scope.controllerId = Math.random().toString();
                 var getFactorExp = function () {
                         return '\\input{[' + $scope.primeFactors.join(',') + ']}';
                     },
@@ -77,6 +80,13 @@ angular.module('mathSkills')
                             $scope.$broadcast('checkFocus');
                         }, 0);
                     };
+					$scope.borderOrNot = function () {
+						if ($scope.factorExpLabel === "lcm") {
+							return ('noborder');
+						} else {
+							return ('');
+						}
+					};
 
                 $scope.numbers = null;
                 $scope.completed = [];
@@ -96,8 +106,8 @@ angular.module('mathSkills')
                         $scope.factorExp = getFactorExp();
 
                         // Compute the LCM.
-                        $scope.lcm = '\\input{' + $scope.primeFactors.reduce(function (a, b) { return a * b; }, 1) + '}';
-
+						$scope.lcmNumber = $scope.primeFactors.reduce(function (a, b) { return a * b; }, 1);
+						$scope.lcm = '\\input{' + $scope.lcmNumber + '}';
                         focus();
                     }
                 });
@@ -105,32 +115,27 @@ angular.module('mathSkills')
                 $scope.$on('answer', function (e, data) {
                     if (data.label !== 'lcm') {
                         e.stopPropagation();
-
-                        if (data.result === 'correct') {
-                            switch (data.label) {
-                                case 'factor' :
-                                    var factor = extractArg(data.answer);
-                                    saveState(factor);
-                                    setUpFactored(factor);
-                                    remove(+factor, $scope.primeFactors);
-                                    $scope.factorExp = getFactorExp();
-                                    $scope.factorStep = false;
-                                    $scope.factoredExp = getFactoredExp();
-                                    break;
-                                case 'factored' :
-                                    if ($scope.primeFactors.length === 0) {
-                                        $scope.factorStep = true;
-                                        $scope.done = true;
-                                        $scope.instructions = 'Now multiply the factors together to find the LCM.';
-                                    } else {
-                                        panelGroupData.resetIndex();
-                                        $scope.factorStep = true;
-                                    }
-                                    break;
-                            }
-                        }
-                        focus();
+						
+						if ($scope.primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) !== -1){
+							e.preventDefault();
+								var factor = extractArg(data.answer);
+								saveState(factor);
+								setUpFactored(factor);
+								if ($scope.primeFactors.length > 1) {
+										remove(+factor, $scope.primeFactors);
+										$scope.factorExp = getFactorExp();
+										$scope.factoredExp = getFactoredExp();
+										$scope.factorExpLabel = "";
+								} else {
+										$scope.factorExpLabel = "lcm";
+										remove(+factor, $scope.primeFactors);
+										$scope.factorExp = '\\input{' + $scope.lcmNumber + '}';
+										$scope.instructions = 'Now multiply the factors together to find the LCM.';  
+								}
+							focus();
+						}
                     }
+					
                 });
             }],
             restrict: 'E',
