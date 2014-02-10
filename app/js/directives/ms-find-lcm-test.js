@@ -80,11 +80,11 @@ angular.module('mathSkills')
                             $scope.$broadcast('checkFocus');
                         }, 0);
                     };
-					$scope.borderTest = function () {
+					$scope.borderOrNot = function () {
 						if ($scope.done) {
-							return ('');
+							return ('noborder');
 						} else {
-							return ('dividend');
+							return ('');
 						}
 					};
 
@@ -106,8 +106,8 @@ angular.module('mathSkills')
                         $scope.factorExp = getFactorExp();
 
                         // Compute the LCM.
-                        $scope.lcm = '\\input{' + $scope.primeFactors.reduce(function (a, b) { return a * b; }, 1) + '}';
-						console.log("$scope.primeFactors is: ",$scope.primeFactors," $scope.factorExp is: ",$scope.factorExp," $scope.lcm is: ",$scope.lcm);
+						$scope.lcmNumber = $scope.primeFactors.reduce(function (a, b) { return a * b; }, 1);
+						$scope.lcm = '\\input{' + $scope.lcmNumber + '}';
                         focus();
                     }
                 });
@@ -116,32 +116,31 @@ angular.module('mathSkills')
 					console.log("data is: ",data);
                     if (data.label !== 'lcm') {
                         e.stopPropagation();
-						console.log("Number(parser.extractTag(data.answer).args[0]) is: ",Number(parser.extractTag(data.answer).args[0]),"$scope.primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) is: ",$scope.primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])));
+						
 						if ($scope.primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) !== -1){
 							e.preventDefault();
-								console.log("$scope.primeFactors.length is: ",$scope.primeFactors.length);
-								if ($scope.primeFactors.length !== 0) {
-										var factor = extractArg(data.answer);
-										saveState(factor);
-										setUpFactored(factor);
+								var factor = extractArg(data.answer);
+								saveState(factor);
+								setUpFactored(factor);
+								if ($scope.primeFactors.length > 1) {
 										remove(+factor, $scope.primeFactors);
 										$scope.factorExp = getFactorExp();
 										$scope.factoredExp = getFactoredExp();
-										console.log("$scope.factorExp is: ",$scope.factorExp," $scope.factoredExp is: ",$scope.factoredExp);
+										$scope.factorExpLabel = "";
 								} else {
 										$scope.done = true;
-										$scope.instructions = 'Now multiply the factors together to find the LCM.';   
+										$scope.factorExpLabel = "lcm";
+										remove(+factor, $scope.primeFactors);
+										$scope.factorExp = '\\input{' + $scope.lcmNumber + '}';
+										$scope.instructions = 'Now multiply the factors together to find the LCM.';  
 								}
 				
 							focus();
 						}
-						console.log("test is: ",$scope.primeFactors.length===0);
-						if ($scope.primeFactors.length===0) {
-								$scope.done = true;
-						}
+						
 						console.log("$scope.done is: ",$scope.done);
                     }
-					e.stopPropagation();
+					
                 });
             }],
             restrict: 'E',
