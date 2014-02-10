@@ -46,7 +46,7 @@ angular.module('mathSkills')
 
         return {
             controller: ['$scope', function ($scope) {
-				$scope.done = false;
+				$scope.factorExpLabel = "";
 				$scope.controllerId = Math.random().toString();
                 var getFactorExp = function () {
                         return '\\input{[' + $scope.primeFactors.join(',') + ']}';
@@ -81,7 +81,7 @@ angular.module('mathSkills')
                         }, 0);
                     };
 					$scope.borderOrNot = function () {
-						if ($scope.done) {
+						if ($scope.factorExpLabel === "lcm") {
 							return ('noborder');
 						} else {
 							return ('');
@@ -113,7 +113,6 @@ angular.module('mathSkills')
                 });
 
                 $scope.$on('answer', function (e, data) {
-					console.log("data is: ",data);
                     if (data.label !== 'lcm') {
                         e.stopPropagation();
 						
@@ -128,17 +127,13 @@ angular.module('mathSkills')
 										$scope.factoredExp = getFactoredExp();
 										$scope.factorExpLabel = "";
 								} else {
-										$scope.done = true;
 										$scope.factorExpLabel = "lcm";
 										remove(+factor, $scope.primeFactors);
 										$scope.factorExp = '\\input{' + $scope.lcmNumber + '}';
 										$scope.instructions = 'Now multiply the factors together to find the LCM.';  
 								}
-				
 							focus();
 						}
-						
-						console.log("$scope.done is: ",$scope.done);
                     }
 					
                 });
