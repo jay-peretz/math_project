@@ -99,6 +99,90 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
                     }]
                 }]
             },
+            twoFractionsMixed: {
+                title: 'Subtracting Unlike Fractions',
+                children: [{
+                    title: 'twoFractions Answer',
+                    children: [{
+						problem: '\\html{&nbsp;}',
+						answer: '\\grp'
+							+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+							+'{\\sign{&minus;}}'
+							+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+							+'{\\sign{=}}'
+							+'{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": false,
+							"workbook": true
+						}
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+						problem: '\\grp'
+									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+									+'{\\sign{&minus;}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}'
+								+'}',
+						answer: '\\rowgrp'
+									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\input{$answerDen}}'
+								+'}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						},
+                    }, {
+						problem: '\\grp'
+									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+									+'{\\sign{&minus;}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}'
+								+'}',
+						answer: '\\css'
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$answerDen}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Use the LCD to convert the fractions:}}'
+									+'{\\frac{\\grp{\\input{$firstAnswerNum}}{\\sign{&minus;}}{\\input{$secondAnswerNum}}}{\\fracstr{$answerDen}}}'
+        									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						}
+                    }, {
+						problem: 'grp'
+									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+									+'{\\sign{&minus;}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}'
+								+'}',
+							answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{$answerDen}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+											+'{\\sign{&minus;}}'											
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{&minus;}}'
+											+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{Subtract the numerators:}}'
+										+'{\\grp{\\frac{\\grp{\\fracstr{$firstAnswerNum}}{\\sign{&minus;}}{\\fracstr{$secondAnswerNum}}}{\\fracstr{$answerDen}}}{\\sign{=}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}'	
+        									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true,
+							"fixBottomRight": true
+						}
+                    }]
+                }]
+            },
 			threeFractions: {
                 title: 'Subtracting Unlike Fractions',
                 children: [{
@@ -205,16 +289,16 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
             }
         },
         data = [
-            { firstNum: '4', firstDen: '5', secondNum: '3', secondDen: '4', firstAnswerNum: '16', secondAnswerNum: '15', differenceNum: '1', answerDen: '20', template: 'twoFractions' },
-            { firstNum: '3', firstDen: '2', secondNum: '3', secondDen: '5', firstAnswerNum: '15', secondAnswerNum: '6', differenceNum: '9', answerDen: '10', template: 'twoFractions' },
-			{ firstNum: '5', firstDen: '6', secondNum: '1', secondDen: '8', firstAnswerNum: '20', secondAnswerNum: '3', differenceNum: '17', answerDen: '24', template: 'twoFractions' },
-			{ firstNum: '5', firstDen: '8', secondNum: '1', secondDen: '2', firstAnswerNum: '5', secondAnswerNum: '4', differenceNum: '1', answerDen: '8', template: 'twoFractions' },
-			{ firstNum: '4', firstDen: '3', secondNum: '8', secondDen: '7', firstAnswerNum: '28', secondAnswerNum: '24', differenceNum: '4', answerDen: '21', template: 'twoFractions' },
-			{ firstNum: '7', firstDen: '16', secondNum: '1', secondDen: '4', firstAnswerNum: '7', secondAnswerNum: '4', differenceNum: '3', answerDen: '16', template: 'twoFractions' },
-			{ firstNum: '7', firstDen: '8', secondNum: '1', secondDen: '3', firstAnswerNum: '21', secondAnswerNum: '8', differenceNum: '5', answerDen: '24', template: 'twoFractions' },
-			{ firstNum: '11', firstDen: '12', secondNum: '1', secondDen: '\xA03\xA0', thirdNum: '1', thirdDen: '\xA06\xA0', firstAnswerNum: '11', secondAnswerNum: '4', thirdAnswerNum: '2', differenceNum: '5', answerDen: '12', template: 'threeFractions' },
-			{ firstNum: '13', firstDen: '10', secondNum: '1', secondDen: '\xA04\xA0', thirdNum: '3', thirdDen: '\xA05\xA0', firstAnswerNum: '26', secondAnswerNum: '5', thirdAnswerNum: '12', differenceNum: '9', answerDen: '20', template: 'threeFractions' },
-			{ firstNum: '7', firstDen: '3', secondNum: '5', secondDen: '4', thirdNum: '1', thirdDen: '6', firstAnswerNum: '28', secondAnswerNum: '15', thirdAnswerNum: '2', differenceNum: '11', answerDen: '12', template: 'threeFractions' }
+            { firstNum: '5', firstDen: '6', secondNum: '2', secondDen: '3', firstAnswerNum: '5', secondAnswerNum: '4', differenceNum: '1', answerDen: '6', template: 'twoFractions' },
+            { firstNum: '1', firstDen: '4', secondNum: '1', secondDen: '10', firstAnswerNum: '5', secondAnswerNum: '2', differenceNum: '3', answerDen: '20', template: 'twoFractions' },
+			{ firstNum: '7', firstDen: '8', secondNum: '5', secondDen: '12', firstAnswerNum: '21', secondAnswerNum: '10', differenceNum: '11', answerDen: '24', template: 'twoFractions' },
+			{ firstNum: '1', firstDen: '2', secondNum: '3', secondDen: '11', firstAnswerNum: '11', secondAnswerNum: '6', differenceNum: '5', answerDen: '22', template: 'twoFractions' },
+			{ firstNum: '5', firstDen: '3', secondNum: '2', secondDen: '7', firstAnswerNum: '35', secondAnswerNum: '6', differenceNum: '29', answerDen: '21', template: 'twoFractions' },
+			{ firstNum: '7', firstDen: '4', secondNum: '2', secondDen: '3', firstAnswerNum: '21', secondAnswerNum: '8', differenceNum: '13', answerDen: '12', template: 'twoFractions' },
+			{ firstNum: '7', firstDen: '8', secondNum: '1', secondDen: '\xA06\xA0', thirdNum: '2', thirdDen: '\xA03\xA0', firstAnswerNum: '21', secondAnswerNum: '4', thirdAnswerNum: '16', differenceNum: '1', answerDen: '24', template: 'threeFractions' },
+			{ firstNum: '9', firstDen: '5', secondNum: '3', secondDen: '\xA08\xA0', thirdNum: '1', thirdDen: '\xA02\xA0', firstAnswerNum: '72', secondAnswerNum: '15', thirdAnswerNum: '20', differenceNum: '37', answerDen: '40', template: 'threeFractions' },
+			{ firstNum: '4', firstDen: '5', secondNum: '1', secondDen: '2', thirdNum: '3', thirdDen: '10', firstAnswerNum: '8', secondAnswerNum: '5', thirdAnswerNum: '3', differenceNum: '0', answerDen: '10', template: 'threeFractions' },
+			{ firstNum: '11', firstDen: '14', secondNum: '2', secondDen: '7', thirdNum: '1', thirdDen: '4', firstAnswerNum: '22', secondAnswerNum: '8', thirdAnswerNum: '7', differenceNum: '7', answerDen: '28', template: 'threeFractions' }
 			
         ];
 
