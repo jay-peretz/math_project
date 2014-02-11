@@ -1,9 +1,9 @@
 /*global angular */
 
-angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUtils) {
+angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUtils) {
     var desc = {
-			title: '23.2 Converting Units of Volume',
-            path: '23.2-converting-units-of-Volume',
+			title: '23.1 Converting Units of Volume',
+            path: '23.1-converting-units-of-Volume',
             children: []
         },
         template = {
