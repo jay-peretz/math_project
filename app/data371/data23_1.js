@@ -217,7 +217,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{What is the first equivalence fraction to multiply by?}}'
+										+'{\\html{What is the first fraction (that equals 1 whole) that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
@@ -229,7 +229,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-							+'{\\html{The equivalence denominator must match the measure to be converted, so the equivalence denominator is 1 gallon;<br>4 quarts equals 1 gallon, so the equivalence numerator is 4 quarts.}}'
+							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "gallons" that we don\'t want as a part of the answer.  The fraction with quarts in the numerator and gallons in the denominator allows us to cancel out "gallons".}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\grp'
 								+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
@@ -323,7 +323,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\sign{&equals;}}{\\html{?}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{What is the second equivalence fraction to multiply by?}}'
+										+'{\\html{What is the second fraction (that equals 1 whole) that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
@@ -336,7 +336,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\html{<span>The equivalence denominator must match the measure to be converted, so the equivalence denominator is 1 quart;</span><br><span>2 pints equals 1 quart, so the equivalence numerator is 2 pints:</span>}}'
+										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "quarts" that we don\'t want as a part of the answer.  The fraction with pints in the numerator and quarts in the denominator allows us to cancel out "quarts".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
@@ -436,7 +436,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{What is the third equivalence fraction to multiply by?}}'
+										+'{\\html{What is the third fraction (that equals 1 whole) that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
@@ -451,7 +451,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\html{<span>The equivalence denominator must match the measure to be converted, so the equivalence denominator is 1 pint;</span><br><span>2 cups equals 1 pint, so the equivalence numerator is 2 cups:</span>}}'
+										+'{\\html{The purpose of the third fraction we multiply by is to cancel out the word "pints" that we don\'t want as a part of the answer.  The fraction with cups in the numerator and pints in the denominator allows us to cancel out "pints".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
@@ -554,7 +554,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Multiply equivalence fractions to obtain a result:}}'
+										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
@@ -872,7 +872,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{What is the first equivalence fraction to multiply by?}}'
+										+'{\\html{What is the first fraction (that equals 1 whole) that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart qt}}{\\html{$denominatorStart}}}'
@@ -884,7 +884,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-							+'{\\html{The equivalence denominator must match the measure to be converted, so the equivalence denominator is 1 quart;<br>2 pints equals 1 quart, so the equivalence numerator is 2 pints.}}'
+							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "quarts" that we don\'t want as a part of the answer.  The fraction with pints in the numerator and quarts in the denominator allows us to cancel out "quarts".}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\grp'
 								+'{\\frac{\\html{$numeratorStart qt}}{\\html{$denominatorStart}}}'
@@ -978,7 +978,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\sign{&equals;}}{\\html{?}}{\\html{<img src=img/math_project_images/23.2_Fluid_Volume/$fourthImage>}}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{What is the second equivalence fraction to multiply by?}}'
+										+'{\\html{What is the second fraction (that equals 1 whole) that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart qt}}{\\html{$denominatorStart}}}'
@@ -991,7 +991,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\html{<span>The equivalence denominator must match the measure to be converted, so the equivalence denominator is 1 pint;</span><br><span>2 cups equals 1 pint, so the equivalence numerator is 2 cups:</span>}}'
+										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "pints" that we don\'t want as a part of the answer.  The fraction with cups in the numerator and pints in the denominator allows us to cancel out "pints".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart qt}}{\\html{$denominatorStart}}}'
@@ -1090,7 +1090,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Multiply equivalence fractions to obtain a result:}}'
+										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart qt}}{\\html{$denominatorStart}}}'
