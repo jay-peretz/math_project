@@ -17,7 +17,8 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
 									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
 									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
-                        answer: '\\mixed{\\input{$ma}}{\\frac{\\input{$na}}{\\input{$da}}}',
+                        //answer: '\\mixed{\\input{$ma}}{\\frac{\\input{$na}}{\\input{$da}}}',
+                        answer: '\\mixed{\\input{$ma}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -149,9 +150,9 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
             }
         },
         data = [
-            { m1: 1, n1: 1, d1: 3, un1: 4, m2: 1, n2: 2, d2: 3, un2: 5, ma: 2, na: 2, da: 9, product: '20', template: 'simple' },
-            { m1: 1, n1: 3, d1: 7, un1: 10, m2: 1, n2: 1, d2: 7, un2: 8, ma: 1, na: 31, product: '80', da: 49, rn1: 4, rd1:3, rn2: 5, rd2: 3, template: 'mixed' },
-            { m1: 1, n1: 2, d1: 5, un1: 7, m2: 2, n2: 1, d2: 5, un2: 11, ma: 3, na: 2, product: '77', da: 25, rn1: 7, rd1:5, rn2: 11, rd2: 5, template: 'mixed' },
+            { m1: 1, n1: 1, d1: 5, un1: 6, m2: 2, n2: 1, d2: 2, un2: 5, ma: 3, na: 3, da: 1, product: '3', template: 'simple' },
+            { m1: 2, n1: 2, d1: 3, un1: 8, m2: 1, n2: 1, d2: 4, un2: 5, ma: 3, na: 1, product: '10', da: 3, rn1: 8, rd1:3, rn2: 5, rd2: 4, template: 'mixed' },
+            { m1: 2, n1: '', d1: '', un1: 2, m2: 1, n2: 3, d2: 10, un2: 13, ma: 2, na: 3, product: '26', da: 5, rn1: 2, rd1:1, rn2: 13, rd2: 10, template: 'mixed' },
             { m1: 2, n1: 1, d1: 2, un1: 5, m2: 2, n2: 1, d2: 2, un2: 5, ma: 6, na: 1, product: '25', da: 4, rn1: 5, rd1:2, rn2: 5, rd2: 2, template: 'mixed' },
             { m1: 2, n1: 1, d1: 8, un1: 17, m2: 1, n2: 3, d2: 8, un2: 11, ma: 2, na: 59, product: '187', da: 64, rn1: 17, rd1: 8, rn2: 11, rd2: 8, template: 'mixed' },
             { m1: 1, n1: 2, d1: 3, un1: 5, m2: 1, n2: 5, d2: 6, un2: 11, ma: 3, na: 1, product: '55', da: 18, rn1: 5, rd1:3, rn2: 11, rd2: 6, template: 'mixed' },
