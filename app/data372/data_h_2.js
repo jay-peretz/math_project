@@ -61,7 +61,15 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
 									+'{\\html{$answerDen}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Use the LCD to convert the fractions:}}'
-									+'{\\frac{\\grp{\\input{$firstAnswerNum}}{\\sign{&minus;}}{\\input{$secondAnswerNum}}}{\\fracstr{$answerDen}}}'
+									+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+        										+'{\\sign{&minus;}}'
+        										+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'       								
+        							+'{\\html{&nbsp;}}'
+									+'{\\grp'
+        										+'{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+        										+'{\\sign{&minus;}}'
+        										+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
+        										+'}'
         									+'}{well}',
 						controls: {
 							"checkAnswer": true,
@@ -145,7 +153,16 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
 									+'{\\html{$answerDen}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Use the LCD to convert the fractions:}}'
-									+'{\\frac{\\grp{\\input{$firstAnswerNum}}{\\sign{&minus;}}{\\input{$secondAnswerNum}}}{\\fracstr{$answerDen}}}'
+									//+'{\\frac{\\grp{\\input{$firstAnswerNum}}{\\sign{&minus;}}{\\input{$secondAnswerNum}}}{\\fracstr{$answerDen}}}'
+									+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+        										+'{\\sign{&minus;}}'
+        										+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'       								
+        							+'{\\html{&nbsp;}}'
+									+'{\\grp'
+        										+'{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+        										+'{\\sign{&minus;}}'
+        										+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
+        										+'}'
         									+'}{well}',
 						controls: {
 							"checkAnswer": true,
@@ -276,8 +293,19 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
 									+'{\\html{$answerDen}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Use the LCD to convert the fractions:}}'
-									+'{\\frac{\\grp{\\input{$firstAnswerNum}}{\\sign{&minus;}}{\\input{$secondAnswerNum}}{\\sign{&minus;}}{\\input{$thirdAnswerNum}}}{\\fracstr{$answerDen}}}'
 									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+											+'{\\sign{&minus;}}'
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+											+'{\\sign{&minus;}}'
+											+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\grp{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{&minus;}}'
+											+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{&minus;}}'
+											+'{\\frac{\\input{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}'
+    										+'{\\html{&nbsp;}}'
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
@@ -339,7 +367,7 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
 							+'{\\html{&nbsp;}}'
 							+'{\\sign{=}}'
 							+'{\\html{&nbsp;}}'
-							+'{\\mixed{\\input{$wholeanswer}}}',
+							+'{\\input{$wholeanswer}}',
 						controls: {
 							"checkAnswer": true,
 							"help": false,
@@ -380,8 +408,18 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
 									+'{\\html{$answerDen}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Use the LCD to convert the fractions:}}'
-									+'{\\frac{\\grp{\\input{$firstAnswerNum}}{\\sign{&minus;}}{\\input{$secondAnswerNum}}{\\sign{&minus;}}{\\input{$thirdAnswerNum}}}{\\fracstr{$answerDen}}}'
-									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+											+'{\\sign{&minus;}}'
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+											+'{\\sign{&minus;}}'
+											+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\grp{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{&minus;}}'
+											+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{&minus;}}'
+											+'{\\frac{\\input{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}'
+    										+'{\\html{&nbsp;}}'
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
@@ -458,7 +496,7 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
 									+'{\\grp'
            								+'{\\frac{\\str{$differenceNum}}{\\str{$answerDen}}}'
            								+'{\\sign{ = }}'
-           								+'{\\mixed{\\input{$wholeanswer}}}}'	
+           								+'{\\input{$wholeanswer}}}'	
         								+'}{well}',
 						controls: {
 							"checkAnswer": true,
