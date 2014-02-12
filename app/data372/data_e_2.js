@@ -3,7 +3,7 @@
 angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUtils) {
     var desc = {
             title: 'E.2 Multiplication of  Mixed Numbers',
-            path: 'E.s-multiplication-of-mixed-numbers',
+            path: 'E.2-multiplication-of-mixed-numbers',
             children: []
         },
         template = {
