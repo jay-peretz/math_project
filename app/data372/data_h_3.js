@@ -7,261 +7,17 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
             children: []
         },
         template = {
-            main: {
+             main: {
                 title: 'Subtraction of Mixed Numbers',
-    children: [{
-     title: 'Main Answer',
-     children: [{
-      problem: '',
-      answer: '\\css{\\grp'
-        +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-        +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-        +'{\\sign{=}}'
-        +'{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}}',
-      controls: {
-        "checkAnswer": true,
-        "help": false,
-        "workbook": true
-      }
-     }]
-    }, {
-     title: 'Workbook',
-     children: [{
-      problem: '\\grp'
-         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-         +'{\\sign{-}}'
-         +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-        +'}',
-      answer: '\\css'
-         +'{\\rowgrp'
-          +'{\\ins{Convert the mixed numbers to improper fractions:}}'
-          +'{\\grp'
-           +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
-           +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-          +'{\\grp'
-           +'{\\frac{\\input{$numnew1}}{\\fracstr{$den1}}}'
-           +'{\\sign{-}}'
-           +'{\\frac{\\input{$numnew2}}{\\fracstr{$den2}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-         +'}{well}',
-      controls: {
-       "checkAnswer": true,
-       "help": true
-      },
-     }, {
-      problem: '\\grp'
-         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-         +'{\\sign{-}}'
-         +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-        +'}',
-      answer: '\\css'
-         +'{\\rowgrp'
-          +'{\\html{Convert the mixed numbers to improper fractions:}}'
-          +'{\\html{&nbsp;}}'
-          +'{\\grp'
-           +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
-           +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-          +'{\\grp'
-           +'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
-           +'{\\sign{-}}'
-           +'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-          +'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
-          +'{\\grp{\\input{$answerDen}}}'
-         +'}{well}',
-      controls: {
-       "checkAnswer": true,
-       "help": true
-      },
-     }, {
-      problem: '\\css'
-         +'{\\grp'
-          +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-          +'{\\sign{-}}'
-          +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-         +'}',
-      answer: '\\css'
-         +'{\\rowgrp'
-          +'{\\html{Convert the mixed numbers to improper fractions:}}'
-          +'{\\html{&nbsp;}}'
-          +'{\\grp'
-           +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
-           +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-          +'{\\grp'
-           +'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
-           +'{\\sign{-}}'
-           +'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-          +'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
-          +'{\\html{&nbsp;}}'
-          +'{\\html{$answerDen}}'
-          +'{\\html{&nbsp;}}'
-          +'{\\ins{Use the LCD to convert the fractions:}}'
-          +'{\\grp'
-           +'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
-           +'{\\sign{-}}'
-           +'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
-          +'}'
-          +'{\\html{&nbsp;}}' 
-          +'{\\grp'
-           +'{\\frac{\\input{$numlcd1}}{\\fracstr{$answerDen}}}'
-           +'{\\sign{-}}'
-           +'{\\frac{\\input{$numlcd2}}{\\fracstr{$answerDen}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-         +'}{well}',
-      controls: {
-       "checkAnswer": true,
-       "help": true
-      }
-     }, {
-      problem: '\\css{\\grp'
-         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-         +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
-      answer: '\\css'
-         +'{\\rowgrp'
-          +'{\\html{Convert the mixed numbers to improper fractions:}}'
-          +'{\\html{&nbsp;}}'
-          +'{\\grp'
-           +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
-           +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-          +'{\\grp'
-           +'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
-           +'{\\sign{-}}'
-           +'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-          +'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
-          +'{\\html{&nbsp;}}'
-          +'{\\html{$answerDen}}'
-          +'{\\html{&nbsp;}}'
-          +'{\\html{Use the LCD to convert the fractions:}}'
-          +'{\\html{&nbsp;}}'
-          +'{\\grp'
-           +'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
-           +'{\\sign{-}}'
-           +'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
-          +'}'
-          +'{\\html{&nbsp;}}' 
-          +'{\\grp'
-           +'{\\frac{\\fracstr{$numlcd1}}{\\fracstr{$answerDen}}}'
-           +'{\\sign{-}}'
-           +'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-          +'{\\ins{Subtract the fractions:}}'
-          +'{\\grp'
-           +'{\\frac'
-            +'{\\grp'
-             +'{\\str{$numlcd1}}'
-             +'{\\sign{-}}'
-             +'{\\str{$numlcd2}}'
-            +'}'
-            +'{\\fracstr{$answerDen}}'
-           +'}'
-           +'{\\sign{=}}'
-           +'{\\frac{\\input{$numanswer1}}{\\fracstr{$answerDen}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-         +'}{well}',
-      controls: {
-       "checkAnswer": true,
-       "help": true,
-       "fixBottomRight": true
-      }
-     }, {
-      problem: '\\css{\\grp'
-         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-         +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
-      answer: '\\css'
-         +'{\\rowgrp'
-          +'{\\html{Convert the mixed numbers to improper fractions:}}'
-          +'{\\html{&nbsp;}}'
-          +'{\\grp'
-           +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-           +'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
-           +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-          +'{\\grp'
-           +'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
-           +'{\\sign{-}}'
-           +'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-          +'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
-          +'{\\html{&nbsp;}}'
-          +'{\\html{$answerDen}}'
-          +'{\\html{&nbsp;}}'
-          +'{\\html{Use the LCD to convert the fractions:}}'
-          +'{\\html{&nbsp;}}'
-          +'{\\grp'
-           +'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
-           +'{\\sign{-}}'
-           +'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
-          +'}'
-          +'{\\html{&nbsp;}}' 
-          +'{\\grp'
-           +'{\\frac{\\fracstr{$numlcd1}}{\\fracstr{$answerDen}}}'
-           +'{\\sign{-}}'
-           +'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-          +'{\\html{Add the fractions:}}'
-          +'{\\html{&nbsp;}}'
-          +'{\\grp'
-           +'{\\frac'
-            +'{\\grp'
-             +'{\\str{$numlcd1}}'
-             +'{\\sign{-}}'
-             +'{\\str{$numlcd2}}'
-            +'}'
-            +'{\\fracstr{$answerDen}}'
-           +'}'
-           +'{\\sign{=}}'
-           +'{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$answerDen}}}'
-          +'}'
-          +'{\\html{&nbsp;}}'
-          +'{\\ins{Rewrite the answer as a mixed number with a proper fraction:}}'
-          +'{\\grp'
-           +'{\\frac{\\str{$numanswer1}}{\\str{$answerDen}}}'
-           +'{\\sign{ = }}'
-           +'{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}}'
-         +'}{well}',
-      controls: {
-       "checkAnswer": true,
-       "help": true,
-       "fixBottomRight": true
-      }
-     }]
-    }]
-            },
-			first: {
-                title: 'Addition of Mixed Numbers',
 				children: [{
 					title: 'Main Answer',
 					children: [{
 						problem: '',
-						answer: '\\css{\\grp'
+						answer: '\\grp'
 								+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 								+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
 								+'{\\sign{=}}'
-								+'{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}}',
+								+'{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}',
 						controls: {
 								"checkAnswer": true,
 								"help": false,
@@ -274,8 +30,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 						problem: '\\grp'
 									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 									+'{\\sign{-}}'
-									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-								+'}',
+									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\ins{Convert the mixed numbers to improper fractions:}}'
@@ -296,10 +51,252 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 							"checkAnswer": true,
 							"help": true
 						},
-					},  {
-						problem: '\\css{\\grp'
+					}, {
+						problem: '\\grp'
+									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+									+'{\\sign{-}}'
+									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+						answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{Convert the mixed numbers to improper fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+											+'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
+											+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\sign{-}}'
+											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
+										+'{\\grp{\\input{$answerDen}}}'
+									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						},
+					}, {
+						problem: '\\grp'
+										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+										+'{\\sign{-}}'
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+						answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{Convert the mixed numbers to improper fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+											+'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
+											+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\sign{-}}'
+											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{$answerDen}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{Use the LCD to convert the fractions:}}'
+										+'{\\grp'
+											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\sign{-}}'
+											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'	
+										+'{\\grp'
+											+'{\\frac{\\input{$numlcd1}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{-}}'
+											+'{\\frac{\\input{$numlcd2}}{\\fracstr{$answerDen}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						}
+					}, {
+						problem: '\\grp'
 									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 									+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+						answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{Convert the mixed numbers to improper fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+											+'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
+											+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\sign{-}}'
+											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{$answerDen}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\sign{-}}'
+											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'	
+										+'{\\grp'
+											+'{\\frac{\\fracstr{$numlcd1}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{-}}'
+											+'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{Subtract the fractions:}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\str{$numlcd1}}'
+													+'{\\sign{-}}'
+													+'{\\str{$numlcd2}}'
+												+'}'
+												+'{\\fracstr{$answerDen}}'
+											+'}'
+											+'{\\sign{=}}'
+											+'{\\frac{\\input{$numanswer1}}{\\fracstr{$answerDen}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true,
+							"fixBottomRight": true
+						}
+					}, {
+						problem: '\\grp'
+									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+									+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+						answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{Convert the mixed numbers to improper fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+											+'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
+											+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\sign{-}}'
+											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{$answerDen}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\sign{-}}'
+											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'	
+										+'{\\grp'
+											+'{\\frac{\\fracstr{$numlcd1}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{-}}'
+											+'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Subtract the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\str{$numlcd1}}'
+													+'{\\sign{-}}'
+													+'{\\str{$numlcd2}}'
+												+'}'
+												+'{\\fracstr{$answerDen}}'
+											+'}'
+											+'{\\sign{=}}'
+											+'{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$answerDen}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{Rewrite the answer as a mixed number with a proper fraction:}}'
+										+'{\\grp'
+											+'{\\frac{\\str{$numanswer1}}{\\str{$answerDen}}}'
+											+'{\\sign{ = }}'
+											+'{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}}'
+									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true,
+							"fixBottomRight": true
+						}
+					}]
+				}]
+            },
+			first: {
+                title: 'Subtraction of Mixed Numbers',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+						problem: '',
+						answer: '\\grp'
+									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+									+'{\\sign{-}}'
+									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
+									+'{\\sign{=}}'
+									+'{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}',
+						controls: {
+								"checkAnswer": true,
+								"help": false,
+								"workbook": true
+						}
+					}]
+				}, {
+					title: 'Workbook',
+					children: [{
+						problem: '\\grp'
+									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+									+'{\\sign{-}}'
+									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+						answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\ins{Convert the mixed numbers to improper fractions:}}'
+										+'{\\grp'
+											+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+											+'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{-}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
+											+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\input{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\sign{-}}'
+											+'{\\frac{\\input{$numnew2}}{\\fracstr{$den2}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						},
+					}, {
+						problem: '\\grp'
+									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+									+'{\\sign{-}}'
+									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Convert the mixed numbers to improper fractions:}}'
@@ -337,9 +334,10 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 							"fixBottomRight": true
 						}
 					}, {
-						problem: '\\css{\\grp'
+						problem: '\\grp'
 									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-									+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+									+'{\\sign{-}}'
+									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Convert the mixed numbers to improper fractions:}}'
@@ -391,11 +389,11 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
      title: 'Main Answer',
      children: [{
       problem: '',
-      answer: '\\css{\\grp'
+      answer: '\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
         +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
         +'{\\sign{=}}'
-        +'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer3}}{\\input{$answer1Den}}}}}',
+        +'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer3}}{\\input{$answer1Den}}}}',
       controls: {
         "checkAnswer": true,
         "help": false,
@@ -405,7 +403,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
     }, {
      title: 'Workbook',
      children: [{
-      problem: '\\css{\\grp'
+      problem: '\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
         +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
@@ -429,7 +427,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
        "help": true
       },
      }, {
-      problem: '\\css{\\grp'
+      problem: '\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
         +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
@@ -456,7 +454,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
        "help": true
       }
      }, {
-      problem: '\\css{\\grp'
+      problem: '\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
         +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
@@ -499,7 +497,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
        "fixBottomRight": true
       }
      }, {
-      problem: '\\css{\\grp'
+      problem: '\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
         +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
@@ -557,7 +555,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
        "fixBottomRight": true
       }
      }, {
-      problem: '\\css{\\grp'
+      problem: '\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
         +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
@@ -621,7 +619,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
        "fixBottomRight": true
       }
      }, {
-      problem: '\\css{\\grp'
+      problem: '\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
         +'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
       answer: '\\css'
@@ -696,14 +694,14 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
      title: 'Main Answer',
      children: [{
       problem: '',
-      answer: '\\css{\\grp'
+      answer: '\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
         +'{\\sign{-}}'
         +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
         +'{\\sign{-}}'
         +'{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}'
         +'{\\sign{=}}'
-        +'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}}',
+        +'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}',
       controls: {
        "checkAnswer": true,
        "help": false,
@@ -713,7 +711,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
     }, {
      title: 'Workbook',
      children: [{
-      problem: '\\css{\\grp'
+      problem: '\\grp'
          +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
          +'{\\sign{-}}'
          +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
@@ -743,7 +741,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
        "help": true
       },
      }, {
-      problem: '\\css{\\grp'
+      problem: '\\grp'
          +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
          +'{\\sign{-}}'
          +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
@@ -777,7 +775,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
        "help": true
       }
      }, {
-      problem: '\\css{\\grp'
+      problem: '\\grp'
          +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
          +'{\\sign{-}}'
          +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
@@ -831,7 +829,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
        "fixBottomRight": true
       }
      },{
-      problem: '\\css{\\grp'
+      problem: '\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
         +'{\\sign{-}}'
         +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
@@ -902,7 +900,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
         "fixBottomRight": true
       }
      }, {
-       problem: '\\css{\\grp'
+       problem: '\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
         +'{\\sign{-}}'
         +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
@@ -987,14 +985,14 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
      title: 'Main Answer',
      children: [{
       problem: '',
-      answer: '\\css{\\grp'
+      answer: '\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
         +'{\\sign{-}}'
         +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
         +'{\\sign{-}}'
         +'{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}'
         +'{\\sign{=}}'
-        +'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}}',
+        +'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}',
       controls: {
        "checkAnswer": true,
        "help": false,
@@ -1004,7 +1002,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
     }, {
      title: 'Workbook',
      children: [{
-      problem: '\\css{\\grp'
+      problem: '\\grp'
          +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
          +'{\\sign{-}}'
          +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
@@ -1034,7 +1032,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
        "help": true
       },
      }, {
-      problem: '\\css{\\grp'
+      problem: '\\grp'
          +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
          +'{\\sign{-}}'
          +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
@@ -1068,7 +1066,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
        "help": true
       }
      }, {
-      problem: '\\css{\\grp'
+      problem: '\\grp'
          +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
          +'{\\sign{-}}'
          +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
@@ -1122,7 +1120,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
        "fixBottomRight": true
       }
      },{
-      problem: '\\css{\\grp'
+      problem: '\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
         +'{\\sign{-}}'
         +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
@@ -1193,7 +1191,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
         "fixBottomRight": true
       }
      }, {
-       problem: '\\css{\\grp'
+       problem: '\\grp'
         +'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
         +'{\\sign{-}}'
         +'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
@@ -1278,11 +1276,11 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 					title: 'Main Answer',
 					children: [{
 						problem: '',
-						answer: '\\css{\\grp'
+						answer: '\\grp'
 								+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 								+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
 								+'{\\sign{=}}'
-								+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer2}}{\\input{$answer1Den}}}}}',
+								+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer2}}{\\input{$answer1Den}}}}',
 						controls: {
 								"checkAnswer": true,
 								"help": false,
@@ -1292,7 +1290,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 				}, {
 					title: 'Workbook',
 					children: [{
-						problem: '\\css{\\grp'
+						problem: '\\grp'
 								+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 								+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
@@ -1316,7 +1314,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 							"help": true
 						},
 					},  {
-						problem: '\\css{\\grp'
+						problem: '\\grp'
 								+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 								+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
@@ -1356,7 +1354,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 							"fixBottomRight": true
 						}
 					}, {
-						problem: '\\css{\\grp'
+						problem: '\\grp'
 								+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 								+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
@@ -1410,11 +1408,11 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 					title: 'Main Answer',
 					children: [{
 						problem: '',
-						answer: '\\css{\\grp'
+						answer: '\\grp'
 								+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 								+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
 								+'{\\sign{=}}'
-								+'{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}}',
+								+'{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}',
 						controls: {
 								"checkAnswer": true,
 								"help": false,
@@ -1427,8 +1425,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 						problem: '\\grp'
 									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 									+'{\\sign{-}}'
-									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-								+'}',
+									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\ins{Convert the mixed numbers to improper fractions:}}'
@@ -1453,8 +1450,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 						problem: '\\grp'
 									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 									+'{\\sign{-}}'
-									+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den3}}}'
-								+'}',
+									+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den3}}}',
 						answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Convert the mixed numbers to improper fractions:}}'
@@ -1479,12 +1475,10 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 							"help": true
 						},
 					}, {
-						problem: '\\css'
-									+'{\\grp'
+						problem: '\\grp'
 										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 										+'{\\sign{-}}'
-										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-									+'}',
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Convert the mixed numbers to improper fractions:}}'
@@ -1524,7 +1518,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 							"help": true
 						}
 					}, {
-						problem: '\\css{\\grp'
+						problem: '\\grp'
 									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 									+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
@@ -1582,7 +1576,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 							"fixBottomRight": true
 						}
 					}, {
-						problem: '\\css{\\grp'
+						problem: '\\grp'
 									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 									+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
@@ -1654,11 +1648,11 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 					title: 'Main Answer',
 					children: [{
 						problem: '',
-						answer: '\\css{\\grp'
+						answer: '\\grp'
 								+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 								+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
 								+'{\\sign{=}}'
-								+'{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}}',
+								+'{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}',
 						controls: {
 								"checkAnswer": true,
 								"help": false,
@@ -1671,8 +1665,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 						problem: '\\grp'
 									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 									+'{\\sign{-}}'
-									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-								+'}',
+									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\ins{Convert the mixed numbers to improper fractions:}}'
@@ -1697,8 +1690,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 						problem: '\\grp'
 									+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den3}}}'
 									+'{\\sign{-}}'
-									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-								+'}',
+									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Convert the mixed numbers to improper fractions:}}'
@@ -1723,12 +1715,10 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 							"help": true
 						},
 					}, {
-						problem: '\\css'
-									+'{\\grp'
+						problem: '\\grp'
 										+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 										+'{\\sign{-}}'
-										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
-									+'}',
+										+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Convert the mixed numbers to improper fractions:}}'
@@ -1768,7 +1758,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 							"help": true
 						}
 					}, {
-						problem: '\\css{\\grp'
+						problem: '\\grp'
 									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 									+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
@@ -1826,7 +1816,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
 							"fixBottomRight": true
 						}
 					}, {
-						problem: '\\css{\\grp'
+						problem: '\\grp'
 									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 									+'{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
 						answer: '\\css'
