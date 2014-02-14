@@ -66,6 +66,12 @@ angular.module('mathSkills')
                             numbers: angular.copy($scope.numbers)
                         });
                     },
+					saveFinalState = function () {
+                        $scope.completed.push({
+                            factor: "",
+                            numbers: angular.copy($scope.numbers)
+                        });
+                    },
                     setUpFactored = function (factor) {
                         $scope.numbers = $scope.numbers.map(divideIfDivisible.bind(null, +factor));
                     },
@@ -87,12 +93,20 @@ angular.module('mathSkills')
 							return ('');
 						}
 					};
+					$scope.borderIndexed = function (index) {
+						if (index === $scope.howManyPrimes) {
+							return ('noborder');
+						} else {
+							return ('');
+						}
+					};
 
                 $scope.numbers = null;
                 $scope.completed = [];
                 $scope.factorExp = '';
                 $scope.factorStep = true;
                 $scope.instructions = 'Factor each number down to 1.';
+				$scope.done = false;
 
                 $scope.$watch('expected', function () {
                     if ($scope.expected) {
@@ -101,13 +115,13 @@ angular.module('mathSkills')
 
                         // Get the modes of the numbers' prime factors.
                         $scope.primeFactors = modes($scope.numbers.map(numberUtils.primeFactors));
+						$scope.howManyPrimes = $scope.primeFactors.length;
 
                         // Setup our input expression.
                         $scope.factorExp = getFactorExp();
 
                         // Compute the LCM.
 						$scope.lcmNumber = $scope.primeFactors.reduce(function (a, b) { return a * b; }, 1);
-						$scope.lcm = '\\input{' + $scope.lcmNumber + '}';
                         focus();
                     }
                 });
@@ -117,7 +131,6 @@ angular.module('mathSkills')
                         e.stopPropagation();
 						
 						if ($scope.primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) !== -1){
-							e.preventDefault();
 								var factor = extractArg(data.answer);
 								saveState(factor);
 								setUpFactored(factor);
@@ -128,7 +141,9 @@ angular.module('mathSkills')
 										$scope.factorExpLabel = "";
 								} else {
 										$scope.factorExpLabel = "lcm";
+										$scope.done = true;
 										remove(+factor, $scope.primeFactors);
+										saveFinalState();
 										$scope.factorExp = '\\input{' + $scope.lcmNumber + '}';
 										$scope.instructions = 'Now multiply the factors together to find the LCM.';  
 								}
