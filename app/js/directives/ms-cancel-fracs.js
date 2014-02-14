@@ -117,7 +117,8 @@ angular.module('mathSkills')
                                         $scope.$emit('triggerCheckFocus');
                                     }, 900);
                                 } else {
-                                    $scope.instructions = 'ins{Do the fractions have any common factors?}';
+                                    //$scope.instructions = 'ins{Do the fractions have any common factors?}';
+                                    $scope.instructions = 'ins{Do any numerator and denominator have a common factor?}';
                                     setAll('str');
                                     problemData.addData('cancellable', 'stage');
                                     buildButtons();
