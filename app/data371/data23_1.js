@@ -122,7 +122,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\html{Write the given value as a fraction.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\input{gal}}}{\\input{$denominatorStart}}}'
+											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}}{\\input{$denominatorStart}}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -777,7 +777,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\html{Write the given value as a fraction.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\input{qt}}}{\\input{$denominatorStart}}}'
+											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}}{\\input{$denominatorStart}}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -1199,6 +1199,8 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
         data = [
             { //problem 1
 				problemText: '3 gallons is how many cups?',
+				labelSelect: '[\\"tsp\\", \\"tbs\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
+				labelAnswer: 'gal',
 				firstNumSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
 				firstDenSelect: '[\\"1 tbs\\", \\"1 oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
 				initialAmount: '3',
@@ -1219,6 +1221,8 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 			},
 			{ // problem 2
 				problemText: '<span class=bigger><sup>1</sup>/<sub>2</sub></span> gallon is how many cups?',
+				labelSelect: '[\\"tsp\\", \\"tbs\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
+				labelAnswer: 'gal',
 				firstNumSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
 				firstDenSelect: '[\\"1 tbs\\", \\"1 oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
 				initialAmount: '<sup>1</sup>/<sub>2</sub>',
@@ -1239,6 +1243,8 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 			},
 			{ // problem 3
 				problemText: '2 quarts is how many cups?',
+				labelSelect: '[\\"tsp\\", \\"tbs\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
+				labelAnswer: 'qt',
 				firstNumSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
 				firstDenSelect: '[\\"1 tbs\\", \\"1 oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
 				initialAmount: '2',
@@ -1260,6 +1266,8 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 			,
 			{ // problem 3
 				problemText: '<span class=bigger><sup>1</sup>/<sub>2</sub></span> quart is how many cups?',
+				labelSelect: '[\\"tsp\\", \\"tbs\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
+				labelAnswer: 'qt',
 				firstNumSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
 				firstDenSelect: '[\\"1 tbs\\", \\"1 oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
 				initialAmount: '<sup>1</sup>/<sub>2</sub>',
