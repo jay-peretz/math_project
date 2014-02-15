@@ -134,11 +134,11 @@ angular.module('mathSkills')
                                     });
                                 }
 
-console.log('i am ', $scope.args[0]);
+/*console.log('i am ', $scope.args[0]);
 console.log('stage', problemData.getData('stage'));
 console.log('nLock', problemData.getData('nLock'));
 console.log('factors', numberUtils.getFactors($scope.args[0]));
-console.log('comFac', problemData.getData('comFac'), '\n');
+console.log('comFac', problemData.getData('comFac'), '\n');*/
 
                             } else {  // not btn stage - notHelped
                                 $scope.$emit('notHelped', {

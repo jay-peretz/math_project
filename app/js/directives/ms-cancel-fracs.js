@@ -162,14 +162,14 @@ angular.module('mathSkills')
     
                                 if(num !== '' && den !== ''){
                                     
-console.log('cancellable ', isCancellable($scope.children));
+/*console.log('cancellable ', isCancellable($scope.children));
 
 console.log('num ', problemData.getData(num).arr[0], ' factors ', numberUtils.getFactors(problemData.getData(num).arr[0]));
 console.log('den ', problemData.getData(den).arr[0], ' factors ', numberUtils.getFactors(problemData.getData(den).arr[0]));
 console.log('common ', numberUtils.getCommonFactors(numberUtils.getFactors(problemData.getData(num).arr[0]), numberUtils.getFactors(problemData.getData(den).arr[0])));
 
 console.log('num answers ', numberUtils.getFactoredInput(problemData.getData(num).arr[0], problemData.getData(den).arr[0])[0]);
-console.log('den answers ', numberUtils.getFactoredInput(problemData.getData(num).arr[0], problemData.getData(den).arr[0])[1]);
+console.log('den answers ', numberUtils.getFactoredInput(problemData.getData(num).arr[0], problemData.getData(den).arr[0])[1]);*/
 
                                     if (numberUtils.getCommonFactors(numberUtils.getFactors(problemData.getData(num).arr[0]), numberUtils.getFactors(problemData.getData(den).arr[0])).length > 0) {
 
@@ -186,7 +186,7 @@ console.log('den answers ', numberUtils.getFactoredInput(problemData.getData(num
                                             $scope.$emit('answerBtn', 'Check Answer', true);
                                             $scope.instructions = 'ins{Enter the result of cancelling the selected numerator and denominator.}';
                                             update();
-                                            $scope.$apply();
+                                            //$scope.$apply();
                                             $scope.$emit('triggerCheckFocus');
                                         }, 200);
 

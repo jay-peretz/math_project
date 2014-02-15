@@ -152,9 +152,9 @@ angular.module('mathSkills')
                                      data = 'Next Problem';
 							}
                             anwserbtn(data);
-                            if(flag !== false) {
+                            /*if(flag !== false) {
                                 $scope.$apply();
-                            }
+                            }*/
                         });
                     }
                 ],
