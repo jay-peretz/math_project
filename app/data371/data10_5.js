@@ -33,20 +33,18 @@ angular.module('mathSkills').service('data10_5', ['dataUtils', function (dataUti
 										+'}'
 										+'{html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+											+'{\\frac{\\fracstr{$firstLCDNum}}{\\fracstr{$lcdDen}}}'
 											+'{\\css{\\html{?}}{fakeButton}}'
-											+'{\\frac{\\fracstr{$reduceNum}}{\\fracstr{$reduceDen}}}'
+											+'{\\frac{\\fracstr{$secondLCDNum}}{\\fracstr{$lcdDen}}}'
 										+'}'
 										+'{html{&nbsp;}}'
 										+'{\\css{\\html{Answer:}}{help-answer-text}}'
 										+'{html{&nbsp;}}'
 										+'{\\css'
 											+'{\\grp'
-												+'{\\html{Therefore}}'
-												+'{\\html{&nbsp;}}'
 												+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-												+'{\\sign{<}}'
-												+'{\\frac{\\fracstr{$reduceNum}}{\\fracstr{$reduceDen}}}'
+												+'{\\sign{$answerSign}}'
+												+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
 											+'}'
 										+'{help-answer-text}}'
 						}
@@ -113,10 +111,36 @@ angular.module('mathSkills').service('data10_5', ['dataUtils', function (dataUti
            }
         },
         data = [
-            { firstNum: '1', firstDen: '4', secondNum: '2', secondDen: '6', reduceNum: '1', reduceDen: '3', firstButton: 'T', secondButton: 'F', thirdButton: 'F', template: 'first', answerBtn: 'noAnswer'
+			// problem 1
+            { firstNum: '1', firstDen: '4', secondNum: '2', secondDen: '6', firstLCDNum: '3', lcdDen: '12', secondLCDNum: '4', firstButton: 'T', secondButton: 'F', thirdButton: 'F', answerSign: '<', template: 'first', answerBtn: 'noAnswer'
 			},
+			// problem 2
+            { firstNum: '2', firstDen: '3', secondNum: '3', secondDen: '8', firstLCDNum: '16', lcdDen: '24', secondLCDNum: '9', firstButton: 'F', secondButton: 'F', thirdButton: 'T', answerSign: '>', template: 'first', answerBtn: 'noAnswer'
+			},
+			// problem 3
+            { firstNum: '7', firstDen: '9', secondNum: '2', secondDen: '3', firstLCDNum: '14', lcdDen: '18', secondLCDNum: '12', firstButton: 'F', secondButton: 'F', thirdButton: 'T', answerSign: '>', template: 'first', answerBtn: 'noAnswer'
+			},
+			// problem 4
+            { firstNum: '2', firstDen: '5', secondNum: '8', secondDen: '20', firstLCDNum: '8', lcdDen: '20', secondLCDNum: '8', firstButton: 'F', secondButton: 'T', thirdButton: 'F', answerSign: '=', template: 'first', answerBtn: 'noAnswer'
+			},
+			// problem 5
+            { firstNum: '3', firstDen: '7', secondNum: '1', secondDen: '2', firstLCDNum: '6', lcdDen: '14', secondLCDNum: '7', firstButton: 'T', secondButton: 'F', thirdButton: 'F', answerSign: '<', template: 'first', answerBtn: 'noAnswer'
+			},
+			// problem 6
 			{ firstNum: '1', firstDen: '2', secondNum: '2', secondDen: '3', thirdNum: '3',thirdDen: '5', firstLCDNum: '15', secondLCDNum: '20', thirdLCDNum: '18', lcdDen: '30', firstAnswerNum: '1', firstAnswerDen: '2', secondAnswerNum: '3', secondAnswerDen: '5', thirdAnswerNum: '2', thirdAnswerDen: '3', template: 'second', answerBtn: 'noAnswer'
-			}
+			},
+			// problem 7
+			{ firstNum: '3', firstDen: '4', secondNum: '5', secondDen: '6', thirdNum: '2',thirdDen: '5', firstLCDNum: '45', secondLCDNum: '50', thirdLCDNum: '24', lcdDen: '60', firstAnswerNum: '2', firstAnswerDen: '5', secondAnswerNum: '3', secondAnswerDen: '4', thirdAnswerNum: '5', thirdAnswerDen: '6', template: 'second', answerBtn: 'noAnswer'
+			},
+			// problem 8
+			{ firstNum: '7', firstDen: '8', secondNum: '1', secondDen: '3', thirdNum: '4',thirdDen: '4', firstLCDNum: '21', secondLCDNum: '8', thirdLCDNum: '24', lcdDen: '24', firstAnswerNum: '1', firstAnswerDen: '3', secondAnswerNum: '7', secondAnswerDen: '8', thirdAnswerNum: '4', thirdAnswerDen: '4', template: 'second', answerBtn: 'noAnswer'
+			},
+			// problem 9
+			{ firstNum: '9', firstDen: '10', secondNum: '4', secondDen: '5', thirdNum: '5',thirdDen: '6', firstLCDNum: '54', secondLCDNum: '48', thirdLCDNum: '50', lcdDen: '60', firstAnswerNum: '4', firstAnswerDen: '5', secondAnswerNum: '5', secondAnswerDen: '6', thirdAnswerNum: '9', thirdAnswerDen: '10', template: 'second', answerBtn: 'noAnswer'
+			},
+			// problem 10
+			{ firstNum: '23', firstDen: '40', secondNum: '3', secondDen: '4', thirdNum: '3',thirdDen: '5', firstLCDNum: '23', secondLCDNum: '30', thirdLCDNum: '24', lcdDen: '40', firstAnswerNum: '23', firstAnswerDen: '40', secondAnswerNum: '3', secondAnswerDen: '5', thirdAnswerNum: '3', thirdAnswerDen: '4', template: 'second', answerBtn: 'noAnswer'
+			},
         ];
 
 	return dataUtils.build(desc, template, data);
