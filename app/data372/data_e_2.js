@@ -366,7 +366,7 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
         },
         data = [ 
 			// prob 1
-            { m1: 1, n1: 2, d1: 5, m2: 2, n2: 1, d2: 2, nw1: 6, dw1: 5, nw2: 5, dw2: 2, ma: 3, na: '', da: '', nproduct: 3,  dproduct: 1, template: 'mixedWholeAns' },           // prob 2
+            { m1: 1, n1: 1, d1: 5, m2: 2, n2: 1, d2: 2, nw1: 6, dw1: 5, nw2: 5, dw2: 2, ma: 3, na: '', da: '', nproduct: 3,  dproduct: 1, template: 'mixedWholeAns' },           // prob 2
             { m1: 2, n1: 2, d1: 3, m2: 1, n2: 1, d2: 4, ma: 3, na: 1, da: 3, nw1: 8, dw1: 3, nw2: 5, dw2: 4, nproduct: '10', dproduct: '3', template: 'mixedGeneric' },
 			// prob 3
             { m1: 2, n1: '', d1: '', m2: 1, n2: 3, d2: 10, ma: 2, na: 3, da: 5, nw1: 2, dw1: 1, nw2: 13, dw2: 10, nproduct: '13', dproduct: '5', template: 'mixedGeneric' },
@@ -379,7 +379,7 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
 			// prob 7
             { m1: 3, n1: 3, d1: 8, un1: 27, m2: '', n2: 2, d2: 9, un2: 2, ma: '', na: 3, product: '3', da: 4, template: 'simple' },
 			// prob 8
-            { m1: 3, n1: 3, d1: 7, m2: 1, n2: 5, d2: 6, m3: 28, n3: '', d3: '', ma: 88, na: '', da: '', nw1: 24, dw1: 7, nw2: 11, dw2: 6, nw3: 28, dw3: 1, nproduct: '88', dproduct: '1', template: 'mixedWholeAnsThree' },
+            { m1: 3, n1: 3, d1: 7, m2: 1, n2: 5, d2: 6, m3: 28, n3: '', d3: '', ma: 176, na: '', da: '', nw1: 24, dw1: 7, nw2: 11, dw2: 6, nw3: 28, dw3: 1, nproduct: '176', dproduct: '1', template: 'mixedWholeAnsThree' },
 			// prob 9
             { m1: 12, n1: '', d1: '', m2: '', n2: 4, d2: 7, m3: 6, n3: 1, d3: 2, ma: 44, na: 4, da: 7, nw1: 12, dw1: 1, nw2: 4, dw2: 7, nw3: 13, dw3: 2, nproduct: '312', dproduct: '7', template: 'mixedGenericThree' },
 			// prob 10
