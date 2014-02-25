@@ -158,6 +158,6 @@ angular.module('mathSkills')
                 expected: '@',
                 label: '@'
             },
-            templateUrl: 'partials/directives/ms-find-lcm.html'
+            templateUrl: 'partials/directives/ms-find-gcf.html'
         };
     }]);
