@@ -79,7 +79,8 @@ angular.module('mathSkills').service('data_e_4', ['dataUtils', function (dataUti
 								+'}{well}',
                         controls: {
                             "checkAnswer": true,
-                            "help": true
+                            "help": true,
+							"fixBottomRight": true
                         }
                     }]
                 }]
@@ -164,7 +165,8 @@ angular.module('mathSkills').service('data_e_4', ['dataUtils', function (dataUti
 								+'}{well}',
                         controls: {
                             "checkAnswer": true,
-                            "help": true
+                            "help": true,
+							"fixBottomRight": true
                         }
                     }]
                 }]
@@ -272,8 +274,9 @@ angular.module('mathSkills').service('data_e_4', ['dataUtils', function (dataUti
 								+'}{well}',
                         controls: {
                             "checkAnswer": true,
-                            "help": '\\rowgrp{\\row{\\str{Divide the numerator by the denominator, then make the quotient the mixed number whole and the remainder the mixed number numerator. \xA0}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\fracstr{$$numProd}}{\\fracstr{$$da}}}{\\row{\\str{\xA0 = \xA0}}}{\\row{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{\\row{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{label_like}}}}'
-                        }
+							"help": true,
+							"fixBottomRight": true
+                         }
                     }]
                 }]
             },
@@ -390,8 +393,8 @@ angular.module('mathSkills').service('data_e_4', ['dataUtils', function (dataUti
 								+'}{well}',
                         controls: {
                             "checkAnswer": true,
-                            "help": '\\rowgrp{\\row{\\str{Divide the numerator by the denominator, then make the quotient the mixed number whole and the remainder the mixed number numerator. \xA0}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\fracstr{$$numProd}}{\\fracstr{$$da}}}{\\row{\\str{\xA0 = \xA0}}}{\\row{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{\\row{css{\\str{answer:  \xA0}}{label_like margin-left-small}}{css{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{label_like}}}}'
-                        }
+                            "help": true,
+                            "fixBottomRight": true                      }
                     }]
                 }]
             },
@@ -402,9 +405,9 @@ angular.module('mathSkills').service('data_e_4', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\grp'
 									+'{\\str{Solve: \xA0}}'
-									+'{\\html{(}}{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&divide;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}{\\html{)}}'
+									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 									+'{\\sign{&times;}}'
 									+'{\\mixed{\\fracstr{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
                         answer: '\\mixed{\\input{$ma}}{\\frac{\\input{$na}}{\\input{$da}}}',
@@ -419,15 +422,15 @@ angular.module('mathSkills').service('data_e_4', ['dataUtils', function (dataUti
                     children: [{
                          problem: '\\grp'
 									+'{\\str{Solve: \xA0}}'
-									+'{\\html{(}}{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&divide;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}{\\html{)}}'
+									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 									+'{\\sign{&times;}}'
 									+'{\\mixed{\\fracstr{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
                         answer: '\\rowgrp'
 									+'{\\ins{Change the mixed numbers into improper fractions.}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\grp{\\html{(}}{\\frac{\\input{$wn1}}{\\input{$wd1}}}{\\sign{&divide;}}{\\frac{\\input{$wn2}}{\\input{$wd2}}}{\\html{)}}{\\sign{&times;}}{\\frac{\\input{$wn3}}{\\input{$wd3}}}}',
+									+'{\\grp{\\frac{\\input{$wn1}}{\\input{$wd1}}}{\\sign{&divide;}}{\\frac{\\input{$wn2}}{\\input{$wd2}}}{\\sign{&times;}}{\\frac{\\input{$wn3}}{\\input{$wd3}}}}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -435,16 +438,16 @@ angular.module('mathSkills').service('data_e_4', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\grp'
 									+'{\\str{Solve: \xA0}}'
-									+'{\\html{(}}{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&divide;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}{\\html{)}}'
+									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 									+'{\\sign{&times;}}'
 									+'{\\mixed{\\fracstr{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
                         answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\str{Change the mixed numbers into improper fractions.}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\grp{\\html{(}}{\\frac{\\fracstr{$wn1}}{\\fracstr{$wd1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$wn2}}{\\fracstr{$wd2}}}{\\html{)}}{\\sign{&times;}}{\\frac{\\fracstr{$wn3}}{\\fracstr{$wd3}}}}'
+										+'{\\grp{\\frac{\\fracstr{$wn1}}{\\fracstr{$wd1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$wn2}}{\\fracstr{$wd2}}}{\\sign{&times;}}{\\frac{\\fracstr{$wn3}}{\\fracstr{$wd3}}}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{Rewrite the problem as the product of the fractions.}}'
 										+'{\\html{&nbsp;}}'
@@ -457,16 +460,16 @@ angular.module('mathSkills').service('data_e_4', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\grp'
 									+'{\\str{Solve: \xA0}}'
-									+'{\\html{(}}{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&divide;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}{\\html{)}}'
+									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 									+'{\\sign{&times;}}'
 									+'{\\mixed{\\fracstr{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
                         answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\str{Change the mixed numbers into improper fractions.}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\grp{\\html{(}}{\\frac{\\fracstr{$wn1}}{\\fracstr{$wd1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$wn2}}{\\fracstr{$wd2}}}{\\html{)}}{\\sign{&times;}}{\\frac{\\fracstr{$wn3}}{\\fracstr{$wd3}}}}'
+										+'{\\grp{\\frac{\\fracstr{$wn1}}{\\fracstr{$wd1}}}{\\sign{&divide;}}{\\frac{\\fracstr{$wn2}}{\\fracstr{$wd2}}}{\\sign{&times;}}{\\frac{\\fracstr{$wn3}}{\\fracstr{$wd3}}}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\str{Rewrite the problem as the product of the fractions.}}'
 										+'{\\html{&nbsp;}}'
@@ -475,7 +478,8 @@ angular.module('mathSkills').service('data_e_4', ['dataUtils', function (dataUti
 								+'}{well}',
                         controls: {
                             "checkAnswer": true,
-                            "help": true
+                            "help": true,
+							"fixBottomRight": true
                         }
                     }]
                 }]
