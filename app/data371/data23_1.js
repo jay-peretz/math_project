@@ -24,7 +24,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\grp'
 									+'{\\input{$fourthAnswer}}'
-									+'{\\html{c}}'
+									+'{\\html{$answerLabel}}'
 									+'{$modalChart}',
                         controls: {
                             "checkAnswer": true,
@@ -75,7 +75,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\html{What is the first fraction (that equals 1 whole) that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
+											+'{\\frac{\\html{$numeratorStart $measureStart}}{\\html{$denominatorStart}}}'
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\select{$firstNumAnswer}{$firstNumSelect}}'
 											+'{\\select{$firstDenAnswer}{$firstDenSelect}}}'
@@ -84,10 +84,10 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "gallons" that we don\'t want as a part of the answer.  The fraction with quarts in the numerator and gallons in the denominator allows us to cancel out "gallons".}}'
+							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with $secondWordCancel in the numerator and $firstWordCancel in the denominator allows us to cancel out "$firstWordCancel".}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\grp'
-								+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
+								+'{\\frac{\\html{$numeratorStart $measureStart}}{\\html{$denominatorStart}}}'
 								+'{\\sign{&times;}}'
 								+'{\\css{\\frac{\\html{4 qt}}{\\html{1 gal}}}{blue-text}}'
 							+'}',
@@ -109,7 +109,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\html{What is the second fraction (that equals 1 whole) that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
+											+'{\\frac{\\html{$numeratorStart $measureStart}}{\\html{$denominatorStart}}}'
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{4 qt}}{\\html{1 gal}}}'
 											+'{\\sign{&times;}}'
@@ -119,10 +119,10 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "quarts" that we don\'t want as a part of the answer.  The fraction with pints in the numerator and quarts in the denominator allows us to cancel out "quarts".}}'
+										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "$secondWordCancel" that we don\'t want as a part of the answer.  The fraction with $thirdWordCancel in the numerator and $secondWordCancel in the denominator allows us to cancel out "$secondWordCancel".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
+											+'{\\frac{\\html{$numeratorStart $measureStart}}{\\html{$denominatorStart}}}'
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{4 qt}}{\\html{1 gal}}}'
 											+'{\\sign{&times;}}'
@@ -150,7 +150,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\html{What is the third fraction (that equals 1 whole) that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
+											+'{\\frac{\\html{$numeratorStart $measureStart}}{\\html{$denominatorStart}}}'
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{4 qt}}{\\html{1 gal}}}'
 											+'{\\sign{&times;}}'
@@ -162,10 +162,10 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\html{The purpose of the third fraction we multiply by is to cancel out the word "pints" that we don\'t want as a part of the answer.  The fraction with cups in the numerator and pints in the denominator allows us to cancel out "pints".}}'
+										+'{\\html{The purpose of the third fraction we multiply by is to cancel out the word "$thirdWordCancel" that we don\'t want as a part of the answer.  The fraction with $fourthWordCancel in the numerator and $thirdWordCancel in the denominator allows us to cancel out "$thirdWordCancel".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
+											+'{\\frac{\\html{$numeratorStart $measureStart}}{\\html{$denominatorStart}}}'
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{4 qt}}{\\html{1 gal}}}'
 											+'{\\sign{&times;}}'
@@ -196,7 +196,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart gal}}{\\html{$denominatorStart}}}'
+											+'{\\frac{\\html{$numeratorStart $measureStart}}{\\html{$denominatorStart}}}'
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{4 qt}}{\\html{1 gal}}}'
 											+'{\\sign{&times;}}'
@@ -213,7 +213,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                             "help": '\\rowgrp'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>gal</span}}{\\html{<span class=blue-text>$denominatorStart</span}}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$measureStart</span}}{\\html{<span class=blue-text>$denominatorStart</span}}}'
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{<span class=blue-text>4</span> <span class=line_through>qt</span}}{\\html{<span class=blue-text>1</span> <span class=line_through>gal</span}}}'
 											+'{\\sign{&times;}}'
@@ -246,7 +246,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\grp'
 									+'{\\input{$fourthAnswer}}'
-									+'{\\html{c}}'
+									+'{\\html{$answerLabel}}'
 									+'{$modalChart}',
                         controls: {
                             "checkAnswer": true,
@@ -297,7 +297,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\html{What is the first fraction (that equals 1 whole) that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart qt}}{\\html{$denominatorStart}}}'
+											+'{\\frac{\\html{$numeratorStart $measureStart}}{\\html{$denominatorStart}}}'
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\select{$firstNumAnswer}{$firstNumSelect}}'
 											+'{\\select{$firstDenAnswer}{$firstDenSelect}}}'
@@ -306,10 +306,10 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "quarts" that we don\'t want as a part of the answer.  The fraction with pints in the numerator and quarts in the denominator allows us to cancel out "quarts".}}'
+							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with $secondWordCancel in the numerator and $firstWordCancel in the denominator allows us to cancel out "$firstWordCancel".}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\grp'
-								+'{\\frac{\\html{$numeratorStart qt}}{\\html{$denominatorStart}}}'
+								+'{\\frac{\\html{$numeratorStart $measureStart}}{\\html{$denominatorStart}}}'
 								+'{\\sign{&times;}}'
 								+'{\\css{\\frac{\\html{2 pt}}{\\html{1 qt}}}{blue-text}}'
 							+'}',
@@ -341,10 +341,10 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "pints" that we don\'t want as a part of the answer.  The fraction with cups in the numerator and pints in the denominator allows us to cancel out "pints".}}'
+										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "$secondWordCancel" that we don\'t want as a part of the answer.  The fraction with $thirdWordCancel in the numerator and $secondWordCancel in the denominator allows us to cancel out "$secondWordCancel".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart qt}}{\\html{$denominatorStart}}}'
+											+'{\\frac{\\html{$numeratorStart $measureStart}}{\\html{$denominatorStart}}}'
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{2 pt}}{\\html{1 qt}}}'
 											+'{\\sign{&times;}}'
@@ -371,7 +371,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart qt}}{\\html{$denominatorStart}}}'
+											+'{\\frac{\\html{$numeratorStart $measureStart}}{\\html{$denominatorStart}}}'
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{2 pt}}{\\html{1 qt}}}'
 											+'{\\sign{&times;}}'
@@ -386,7 +386,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                             "help": '\\rowgrp'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>qt</span}}{\\html{<span class=blue-text>$denominatorStart</span}}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$measureStart</span}}{\\html{<span class=blue-text>$denominatorStart</span}}}'
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{<span class=blue-text>2</span> <span class=line_through>pt</span}}{\\html{<span class=blue-text>1</span> <span class=line_through>qt</span}}}'
 											+'{\\sign{&times;}}'
@@ -419,6 +419,12 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				thirdNumAnswer: '2 c',
 				thirdDenAnswer: '1 pt',
 				fourthAnswer: '48',
+				answerLabel: 'c',
+				measureStart: 'gal',
+				firstWordCancel: 'gallons',
+				secondWordCancel: 'quarts',
+				thirdWordCancel: 'pints',
+				fourthWordCancel: 'cups',
 				firstImage: 'gallon-01-56x70.png',
 				secondImage: 'quart-02-40x70.png',
 				thirdImage: 'pint-01_50x70.png',
@@ -442,6 +448,12 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				thirdNumAnswer: '2 c',
 				thirdDenAnswer: '1 pt',
 				fourthAnswer: '8',
+				answerLabel: 'c',
+				measureStart: 'gal',
+				firstWordCancel: 'gallons',
+				secondWordCancel: 'quarts',
+				thirdWordCancel: 'pints',
+				fourthWordCancel: 'cups',
 				firstImage: 'gallon-01-56x70.png',
 				secondImage: 'quart-02-40x70.png',
 				thirdImage: 'pint-01_50x70.png',
@@ -465,6 +477,11 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				thirdNumAnswer: '',
 				thirdDenAnswer: '',
 				fourthAnswer: '8',
+				answerLabel: 'c',
+				measureStart: 'qt',
+				firstWordCancel: 'quarts',
+				secondWordCancel: 'pints',
+				thirdWordCancel: 'cups',
 				firstImage: 'gallon-01-56x70.png',
 				secondImage: 'quart-02-40x70.png',
 				thirdImage: 'pint-01_50x70.png',
@@ -489,6 +506,11 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				thirdNumAnswer: '',
 				thirdDenAnswer: '',
 				fourthAnswer: '2',
+				answerLabel: 'c',
+				measureStart: 'qt',
+				firstWordCancel: 'quarts',
+				secondWordCancel: 'pints',
+				thirdWordCancel: 'cups',
 				firstImage: 'gallon-01-56x70.png',
 				secondImage: 'quart-02-40x70.png',
 				thirdImage: 'pint-01_50x70.png',
