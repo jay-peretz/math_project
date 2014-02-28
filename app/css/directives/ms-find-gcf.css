@@ -1,0 +1,26 @@
+ms-find-gcf table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+ms-find-gcf .dividend {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    padding: 10px;
+}
+ms-find-gcf .noborder .dividend {
+    border: none;
+}
+ms-find-gcf .divisor {
+    padding: 10px 20px 0 0;
+}
+ms-find-gcf input {
+    width: 40px;
+}
+ms-find-gcf .factoring {
+    width: 40px;
+    display: inline-block;
+}
+ms-find-gcf ms-input label span {
+    display: none;
+}
+
