@@ -239,13 +239,13 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}'
+										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
 										+'{\\sign{&equals;}}'
 										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$fourthImage}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
 									+'}',
                         answer: '\\grp'
-									+'{\\input{$fourthAnswer}}'
+									+'{\\input{$finalAnswer}}'
 									+'{\\html{$unitsThird}}'
 									+'{$modalChart}',
                         controls: {
@@ -261,10 +261,10 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}'
+										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
 										+'{\\sign{&equals;}}'
 										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$fourthImage}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
@@ -287,10 +287,10 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}'
+										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
 										+'{\\sign{&equals;}}'
 										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$fourthImage}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
@@ -322,10 +322,10 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
+										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
 										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}}'
-										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$fourthImage}}}',
+										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
+										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
 										+'{\\html{What is the second fraction (that equals 1 whole) that you need to multiply by?}}'
@@ -359,12 +359,12 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
+										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
 										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}}'
+										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
 										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorThird}}{\\image{23.1-Volume-Weight-Measure/$fourthImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}}'
-										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$fourthImage}}'
+										+'{\\frac{\\grp{\\html{$numeratorThird}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}}'
+										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
@@ -377,7 +377,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{$secondNumAnswer}}{\\html{$secondDenAnswer}}}'
 											+'{\\sign{&equals;}}'
-											+'{\\input{$fourthAnswer}}'
+											+'{\\input{$finalAnswer}}'
 											+'{\\html{$unitsThird}}'
 										+'}'
 									+'}{well}',
@@ -392,7 +392,135 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{<span class=blue-text>$secondNumAnswer</span}}{\\html{<span class=blue-text>1</span> <span class=line_through>pt</span}}}'
 											+'{\\sign{&equals;}}'
-											+'{\\html{<span class=blue-text>$fourthAnswer $unitsThird</span}}'
+											+'{\\html{<span class=blue-text>$finalAnswer $unitsThird</span}}'
+										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }]
+                }]
+            },
+			oneStepSmallerUnit: {
+                title: 'Converting Units of Volume',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\sign{&equals;}}'
+										+'{\\html{?}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$secondImage}}'
+									+'}',
+                        answer: '\\grp'
+									+'{\\input{$finalAnswer}}'
+									+'{\\html{$unitsSecond}}'
+									+'{$modalChart}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\sign{&equals;}}'
+										+'{\\html{?}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$secondImage}}'
+									+'}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{Write the given value as a fraction.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}}{\\input{$denominatorStart}}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true,
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+							   
+					}, {
+                        problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\sign{&equals;}}'
+										+'{\\html{?}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$secondImage}}'
+									+'}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{What is the fraction (that equals 1 whole) that you need to multiply by?}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\select{$firstNumAnswer}{$firstNumSelect}}'
+											+'{\\select{$firstDenAnswer}{$firstDenSelect}}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+							+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with $secondWordCancel in the numerator and $firstWordCancel in the denominator allows us to cancel out "$firstWordCancel".}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp'
+								+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+								+'{\\sign{&times;}}'
+								+'{\\css{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}{blue-text}}'
+							+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }, {
+                        problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
+										+'{\\sign{&times;}}'
+										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
+										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}'
+									+'}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
+											+'{\\sign{&equals;}}'
+											+'{\\input{$finalAnswer}}'
+											+'{\\html{$unitsSecond}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span}}{\\html{<span class=blue-text>$denominatorStart</span}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span class=line_through>$unitsSecond</span}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsStart</span}}}'
+											+'{\\sign{&equals;}}'
+											+'{\\html{<span class=blue-text>$finalAnswer $unitsSecond</span}}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
@@ -403,7 +531,30 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
             }
         },
         data = [
-			
+			{ // problem 5
+				problemText: '3 tons is how many pounds?',
+				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
+				labelAnswer: 'tons',
+				firstNumSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
+				firstDenSelect: '[\\"1 oz\\", \\"1 lbs\\", \\"1 ton\\"]',
+				initialAmount: '3',
+				numeratorStart: '3',
+				denominatorStart: '1',
+				numeratorSecond: '2000',
+				numeratorThird: '2',
+				unitsStart: 'tons',
+				unitsSecond: 'lbs',
+				firstNumAnswer: '2000 lbs',
+				firstDenAnswer: '1 ton',
+				finalAnswer: '6000',
+				firstWordCancel: 'tons',
+				secondWordCancel: 'pounds',
+				firstImage: 'Ton_01_40x50.png',
+				secondImage: 'Pound_02_40x60.png',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
+				template: 'oneStepSmallerUnit' 
+			}
+			,
             { //problem 29
 				problemText: '3 gallons is how many cups?',
 				labelSelect: '[\\"tsp\\", \\"tbs\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
@@ -490,16 +641,13 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstDenAnswer: '1 qt',
 				secondNumAnswer: '2 c',
 				secondDenAnswer: '1 pt',
-				thirdNumAnswer: '',
-				thirdDenAnswer: '',
-				fourthAnswer: '8',
+				finalAnswer: '8',
 				firstWordCancel: 'quarts',
 				secondWordCancel: 'pints',
 				thirdWordCancel: 'cups',
-				firstImage: 'gallon-01-56x70.png',
-				secondImage: 'quart-02-40x70.png',
-				thirdImage: 'pint-01_50x70.png',
-				fourthImage: 'cup-02-50x60.png',
+				firstImage: 'quart-02-40x70.png',
+				secondImage: 'pint-01_50x70.png',
+				thirdImage: 'cup-02-50x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
 				template: 'twoStepSmallerUnit' 
 			}
@@ -522,16 +670,13 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstDenAnswer: '1 qt',
 				secondNumAnswer: '2 c',
 				secondDenAnswer: '1 pt',
-				thirdNumAnswer: '',
-				thirdDenAnswer: '',
-				fourthAnswer: '2',
+				finalAnswer: '2',
 				firstWordCancel: 'quarts',
 				secondWordCancel: 'pints',
 				thirdWordCancel: 'cups',
-				firstImage: 'gallon-01-56x70.png',
-				secondImage: 'quart-02-40x70.png',
-				thirdImage: 'pint-01_50x70.png',
-				fourthImage: 'cup-02-50x60.png',
+				firstImage: 'quart-02-40x70.png',
+				secondImage: 'pint-01_50x70.png',
+				thirdImage: 'cup-02-50x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
 				template: 'twoStepSmallerUnit' 
 			}
