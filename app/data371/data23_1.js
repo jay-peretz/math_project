@@ -213,15 +213,15 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                             "help": '\\rowgrp'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span}}{\\html{<span class=blue-text>$denominatorStart</span}}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span>}}{\\html{<span class=blue-text>$denominatorStart</span>}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>4</span> <span class=line_through>qt</span}}{\\html{<span class=blue-text>1</span> <span class=line_through>gal</span}}}'
+											+'{\\frac{\\html{<span class=blue-text>4</span> <span class=line_through>qt</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>gal</span>}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>2</span> <span class=line_through>pt</span}}{\\html{<span class=blue-text>1</span> <span class=line_through>qt</span}}}'
+											+'{\\frac{\\html{<span class=blue-text>2</span> <span class=line_through>pt</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>qt</span>}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>2 c</span}}{\\html{<span class=blue-text>1</span> <span class=line_through>pt</span}}}'
+											+'{\\frac{\\html{<span class=blue-text>2 c</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>pt</span>}}}'
 											+'{\\sign{&equals;}}'
-											+'{\\html{<span class=blue-text>$fourthAnswer c</span}}'
+											+'{\\html{<span class=blue-text>$fourthAnswer c</span>}}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
@@ -386,13 +386,13 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                             "help": '\\rowgrp'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span}}{\\html{<span class=blue-text>$denominatorStart</span}}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span>}}{\\html{<span class=blue-text>$denominatorStart</span>}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span class=line_through>$unitsSecond</span}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsStart</span}}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span class=line_through>$unitsSecond</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsStart</span>}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>$secondNumAnswer</span}}{\\html{<span class=blue-text>1</span> <span class=line_through>pt</span}}}'
+											+'{\\frac{\\html{<span class=blue-text>$secondNumAnswer</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>pt</span>}}}'
 											+'{\\sign{&equals;}}'
-											+'{\\html{<span class=blue-text>$finalAnswer $unitsThird</span}}'
+											+'{\\html{<span class=blue-text>$finalAnswer $unitsThird</span>}}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
@@ -495,7 +495,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'{\\grp'
 										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
 										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
+										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{$denominatorSecond}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
 										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}'
 									+'}',
                         answer: '\\pan{12}{11}'
@@ -516,11 +516,11 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                             "help": '\\rowgrp'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span}}{\\html{<span class=blue-text>$denominatorStart</span}}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span>}}{\\html{<span class=blue-text>$denominatorStart</span>}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span class=line_through>$unitsSecond</span}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsStart</span}}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span>$unitsSecond</span>}}{\\html{<span class=blue-text>$denominatorSecond</span> <span class=line_through>$unitsStart</span>}}}'
 											+'{\\sign{&equals;}}'
-											+'{\\html{<span class=blue-text>$finalAnswer $unitsSecond</span}}'
+											+'{\\html{<span class=blue-text>$finalAnswer $unitsSecond</span>}}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
@@ -541,7 +541,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				numeratorStart: '3',
 				denominatorStart: '1',
 				numeratorSecond: '2000',
-				numeratorThird: '2',
+				denominatorSecond: '1',
 				unitsStart: 'tons',
 				unitsSecond: 'lbs',
 				firstNumAnswer: '2000 lbs',
@@ -550,6 +550,78 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstWordCancel: 'tons',
 				secondWordCancel: 'pounds',
 				firstImage: 'Ton_01_40x50.png',
+				secondImage: 'Pound_02_40x60.png',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
+				template: 'oneStepSmallerUnit' 
+			}
+			,
+			{ // problem 6
+				problemText: '7 pounds is how many ounces?',
+				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
+				labelAnswer: 'lbs',
+				firstNumSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
+				firstDenSelect: '[\\"1 oz\\", \\"1 lbs\\", \\"1 ton\\"]',
+				initialAmount: '7',
+				numeratorStart: '7',
+				denominatorStart: '1',
+				numeratorSecond: '16',
+				denominatorSecond: '1',
+				unitsStart: 'lbs',
+				unitsSecond: 'oz',
+				firstNumAnswer: '16 oz',
+				firstDenAnswer: '1 lbs',
+				finalAnswer: '112',
+				firstWordCancel: 'pounds',
+				secondWordCancel: 'ounces',
+				firstImage: 'Pound_02_40x60.png',
+				secondImage: 'Ounce_01_V2_Large_40x60.png',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
+				template: 'oneStepSmallerUnit' 
+			}
+			,
+			{ // problem 7
+				problemText: '9000 pounds is how many tons?',
+				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
+				labelAnswer: 'lbs',
+				firstNumSelect: '[\\"1 oz\\", \\"1 lbs\\", \\"1 ton\\"]',
+				firstDenSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
+				initialAmount: '9000',
+				numeratorStart: '9000',
+				denominatorStart: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '2000',
+				unitsStart: 'lbs',
+				unitsSecond: 'tons',
+				firstNumAnswer: '1 ton',
+				firstDenAnswer: '2000 lbs',
+				finalAnswer: '4.5',
+				firstWordCancel: 'pounds',
+				secondWordCancel: 'tons',
+				firstImage: 'Pound_02_40x60.png',
+				secondImage: 'Ton_01_40x50.png',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
+				template: 'oneStepSmallerUnit' 
+			}
+			,
+			{ // problem 8
+				problemText: '128 ounces is how many pounds?',
+				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
+				labelAnswer: 'oz',
+				firstNumSelect: '[\\"1 oz\\", \\"1 lbs\\", \\"1 ton\\"]',
+				firstDenSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
+				initialAmount: '128',
+				numeratorStart: '128',
+				denominatorStart: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '16',
+				unitsStart: 'oz',
+				unitsSecond: 'lbs',
+				firstNumAnswer: '1 lbs',
+				firstDenAnswer: '16 oz',
+				finalAnswer: '8',
+				firstWordCancel: 'ounces',
+				secondWordCancel: 'pounds',
+				firstImage: 'Ounce_01_V2_Large_40x60.png',
 				secondImage: 'Pound_02_40x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
 				template: 'oneStepSmallerUnit' 
