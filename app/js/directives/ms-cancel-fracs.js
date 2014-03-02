@@ -186,7 +186,7 @@ console.log('den answers ', numberUtils.getFactoredInput(problemData.getData(num
                                             $scope.$emit('answerBtn', 'Check Answer', true);
                                             $scope.instructions = 'ins{Enter the result of cancelling the selected numerator and denominator.}';
                                             update();
-                                            //$scope.$apply();
+                                            $scope.$apply();
                                             $scope.$emit('triggerCheckFocus');
                                         }, 200);
 
