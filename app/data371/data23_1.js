@@ -7,7 +7,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
             children: []
         },
         template = {
-            threeStepSmallerUnit: {
+            threeStep: {
                 title: 'Converting Units of Volume',
                 children: [{
                     title: 'Main Answer',
@@ -230,7 +230,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                     }]
                 }]
             },
-			twoStepSmallerUnit: {
+			twoStep: {
                 title: 'Converting Units of Volume',
                 children: [{
                     title: 'Main Answer',
@@ -401,7 +401,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                     }]
                 }]
             },
-			oneStepSmallerUnit: {
+			oneStep: {
                 title: 'Converting Units of Volume',
                 children: [{
                     title: 'Main Answer',
@@ -552,7 +552,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'Ton_01_40x50.png',
 				secondImage: 'Pound_02_40x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
-				template: 'oneStepSmallerUnit' 
+				template: 'oneStep' 
 			}
 			,
 			{ // problem 6
@@ -576,7 +576,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'Pound_02_40x60.png',
 				secondImage: 'Ounce_01_V2_Large_40x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
-				template: 'oneStepSmallerUnit' 
+				template: 'oneStep' 
 			}
 			,
 			{ // problem 7
@@ -600,7 +600,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'Pound_02_40x60.png',
 				secondImage: 'Ton_01_40x50.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
-				template: 'oneStepSmallerUnit' 
+				template: 'oneStep' 
 			}
 			,
 			{ // problem 8
@@ -624,7 +624,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'Ounce_01_V2_Large_40x60.png',
 				secondImage: 'Pound_02_40x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
-				template: 'oneStepSmallerUnit' 
+				template: 'oneStep' 
 			}
 			,
             { //problem 29
@@ -659,7 +659,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				thirdImage: 'pint-01_50x70.png',
 				fourthImage: 'cup-02-50x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
-				template: 'threeStepSmallerUnit' 
+				template: 'threeStep' 
 			},
 			{ // problem 30
 				problemText: '<span class=bigger><sup>1</sup>/<sub>2</sub></span> gallon is how many cups?',
@@ -693,7 +693,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				thirdImage: 'pint-01_50x70.png',
 				fourthImage: 'cup-02-50x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
-				template: 'threeStepSmallerUnit' 
+				template: 'threeStep' 
 			},
 			{ // problem 31
 				problemText: '2 quarts is how many cups?',
@@ -721,7 +721,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				secondImage: 'pint-01_50x70.png',
 				thirdImage: 'cup-02-50x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
-				template: 'twoStepSmallerUnit' 
+				template: 'twoStep' 
 			}
 			,
 			{ // problem 32
@@ -750,7 +750,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				secondImage: 'pint-01_50x70.png',
 				thirdImage: 'cup-02-50x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
-				template: 'twoStepSmallerUnit' 
+				template: 'twoStep' 
 			}
         ];
 
