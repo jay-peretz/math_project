@@ -220,7 +220,7 @@ angular.module('mathSkills').service('data_g_2', ['dataUtils', function (dataUti
 					// problem 5
         			{ firstNum: '7', firstDen: '11', secondNum: '2', secondDen: '3', firstAnswerNum: '21', secondAnswerNum: '22', sumNum: '43', answerDen: '33', whole:'1', answerNum:'10', answer1Den: '33', answer2Den: '33', template: 'twoFractions' },
 					// problem 6
-        			{ firstNum: '7', firstDen: '3', secondNum: '10', secondDen: '6', firstAnswerNum: '14', secondAnswerNum: '10', sumNum: '4', answerDen: '', whole:'4', answerNum:'', answer1Den: '6', answer2Den:'', template: 'twoFractions' },
+        			{ firstNum: '7', firstDen: '3', secondNum: '10', secondDen: '6', firstAnswerNum: '14', secondAnswerNum: '10', sumNum: '4', answerDen: '', whole:'4', answerNum:'', answer1Den: '6', answer2Den:'1', template: 'twoFractions' },
 					// problem 7
         			{ firstNum: '2', firstDen: '9', secondNum: '1', secondDen: '6', thirdNum: '2', thirdDen: '3', firstAnswerNum: '4', secondAnswerNum: '3', thirdAnswerNum: '12', sumNum: '19', answerDen: '18', whole:'1', answerNum:'1', answer1Den: '18', answer2Den: '18', template: 'threeFractions' },
 					// problem 8
