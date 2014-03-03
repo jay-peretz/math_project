@@ -215,13 +215,13 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\grp'
 											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span>}}{\\html{<span class=blue-text>$denominatorStart</span>}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>4</span> <span class=line_through>qt</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>gal</span>}}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span class=line_through>$unitsSecond</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsStart</span>}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>2</span> <span class=line_through>pt</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>qt</span>}}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorThird</span> <span class=line_through>$unitsThird</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsSecond</span>}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>2 c</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>pt</span>}}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorFourth $unitsFourth</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsThird</span>}}}'
 											+'{\\sign{&equals;}}'
-											+'{\\html{<span class=blue-text>$fourthAnswer c</span>}}'
+											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsFourth</span>}}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
@@ -390,9 +390,9 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span class=line_through>$unitsSecond</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsStart</span>}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>$secondNumAnswer</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>pt</span>}}}'
+											+'{\\frac{\\html{<span class=blue-text>$secondNumAnswer</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsSecond</span>}}}'
 											+'{\\sign{&equals;}}'
-											+'{\\html{<span class=blue-text>$finalAnswer $unitsThird</span>}}'
+											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsThird</span>}}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
@@ -520,7 +520,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span>$unitsSecond</span>}}{\\html{<span class=blue-text>$denominatorSecond</span> <span class=line_through>$unitsStart</span>}}}'
 											+'{\\sign{&equals;}}'
-											+'{\\html{<span class=blue-text>$finalAnswer $unitsSecond</span>}}'
+											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsSecond</span>}}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
@@ -547,6 +547,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstNumAnswer: '2000 lbs',
 				firstDenAnswer: '1 ton',
 				finalAnswer: '6000',
+				helpFinalAnswer: '6,000',
 				firstWordCancel: 'tons',
 				secondWordCancel: 'pounds',
 				firstImage: 'Ton_01_40x50.png',
@@ -571,6 +572,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstNumAnswer: '16 oz',
 				firstDenAnswer: '1 lbs',
 				finalAnswer: '112',
+				helpFinalAnswer: '112',
 				firstWordCancel: 'pounds',
 				secondWordCancel: 'ounces',
 				firstImage: 'Pound_02_40x60.png',
@@ -595,6 +597,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstNumAnswer: '1 ton',
 				firstDenAnswer: '2000 lbs',
 				finalAnswer: '4.5',
+				helpFinalAnswer: '4.5',
 				firstWordCancel: 'pounds',
 				secondWordCancel: 'tons',
 				firstImage: 'Pound_02_40x60.png',
@@ -619,6 +622,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstNumAnswer: '1 lbs',
 				firstDenAnswer: '16 oz',
 				finalAnswer: '8',
+				helpFinalAnswer: '8',
 				firstWordCancel: 'ounces',
 				secondWordCancel: 'pounds',
 				firstImage: 'Ounce_01_V2_Large_40x60.png',
@@ -643,6 +647,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstNumAnswer: '1 pt',
 				firstDenAnswer: '2 c',
 				finalAnswer: '4',
+				helpFinalAnswer: '4',
 				firstWordCancel: 'cups',
 				secondWordCancel: 'pints',
 				firstImage: 'cup-02-50x60.png',
@@ -667,6 +672,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstNumAnswer: '1 tbs',
 				firstDenAnswer: '3 tsp',
 				finalAnswer: '4',
+				helpFinalAnswer: '4',
 				firstWordCancel: 'tsp',
 				secondWordCancel: 'tbs',
 				firstImage: 'TeaSpoon_01_46x65.png',
@@ -691,6 +697,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstNumAnswer: '4 qt',
 				firstDenAnswer: '1 gal',
 				finalAnswer: '20',
+				helpFinalAnswer: '20',
 				firstWordCancel: 'gal',
 				secondWordCancel: 'qts',
 				firstImage: 'gallon-01-56x70.png',
@@ -715,12 +722,44 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstNumAnswer: '8 fl oz',
 				firstDenAnswer: '1 c',
 				finalAnswer: '24',
+				helpFinalAnswer: '24',
 				firstWordCancel: 'c',
 				secondWordCancel: 'fl oz',
 				firstImage: 'cup-02-50x60.png',
 				secondImage: 'OZ_Shot_01-44x65.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
 				template: 'oneStep' 
+			}
+			,
+			{ // problem 21
+				problemText: '1.5 tons is how many ounces?',
+				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
+				labelAnswer: 'tons',
+				firstNumSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
+				firstDenSelect: '[\\"1 fl oz\\", \\"1 lbs\\", \\"1 ton\\"]',
+				initialAmount: '1.5',
+				numeratorStart: '3',
+				denominatorStart: '2',
+				numeratorSecond: '2000',
+				numeratorThird: '16',
+				unitsStart: 'tons',
+				unitsSecond: 'lbs',
+				unitsThird: 'oz',
+				firstNumAnswer: '2000 lbs',
+				firstDenAnswer: '1 ton',
+				secondNumAnswer: '16 oz',
+				secondDenAnswer: '1 lbs',
+				finalAnswer: '48000',
+				helpFinalAnswer: '48,000',
+				firstWordCancel: 'tons',
+				secondWordCancel: 'lbs',
+				thirdWordCancel: 'oz',
+				firstImage: 'Ton_01_40x50.png',
+				secondImage: 'Pound_02_40x60.png',
+				thirdImage: 'Ounce_01_V2_Large_40x60.png',
+				
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
+				template: 'twoStep' 
 			}
 			,
             { //problem 29
@@ -746,6 +785,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				thirdNumAnswer: '2 c',
 				thirdDenAnswer: '1 pt',
 				fourthAnswer: '48',
+				helpFinalAnswer: '48',
 				firstWordCancel: 'gallons',
 				secondWordCancel: 'quarts',
 				thirdWordCancel: 'pints',
@@ -780,6 +820,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				thirdNumAnswer: '2 c',
 				thirdDenAnswer: '1 pt',
 				fourthAnswer: '8',
+				helpFinalAnswer: '8',
 				firstWordCancel: 'gallons',
 				secondWordCancel: 'quarts',
 				thirdWordCancel: 'pints',
@@ -810,6 +851,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				secondNumAnswer: '2 c',
 				secondDenAnswer: '1 pt',
 				finalAnswer: '8',
+				helpFinalAnswer: '8',
 				firstWordCancel: 'quarts',
 				secondWordCancel: 'pints',
 				thirdWordCancel: 'cups',
@@ -839,6 +881,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				secondNumAnswer: '2 c',
 				secondDenAnswer: '1 pt',
 				finalAnswer: '2',
+				helpFinalAnswer: '2',
 				firstWordCancel: 'quarts',
 				secondWordCancel: 'pints',
 				thirdWordCancel: 'cups',
