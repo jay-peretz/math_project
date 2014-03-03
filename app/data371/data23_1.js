@@ -7,7 +7,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
             children: []
         },
         template = {
-            threeStepSmallerUnit: {
+            threeStep: {
                 title: 'Converting Units of Volume',
                 children: [{
                     title: 'Main Answer',
@@ -230,7 +230,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                     }]
                 }]
             },
-			twoStepSmallerUnit: {
+			twoStep: {
                 title: 'Converting Units of Volume',
                 children: [{
                     title: 'Main Answer',
@@ -401,7 +401,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                     }]
                 }]
             },
-			oneStepSmallerUnit: {
+			oneStep: {
                 title: 'Converting Units of Volume',
                 children: [{
                     title: 'Main Answer',
@@ -536,7 +536,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
 				labelAnswer: 'tons',
 				firstNumSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
-				firstDenSelect: '[\\"1 oz\\", \\"1 lbs\\", \\"1 ton\\"]',
+				firstDenSelect: '[\\"1 fl oz\\", \\"1 lbs\\", \\"1 ton\\"]',
 				initialAmount: '3',
 				numeratorStart: '3',
 				denominatorStart: '1',
@@ -552,7 +552,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'Ton_01_40x50.png',
 				secondImage: 'Pound_02_40x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
-				template: 'oneStepSmallerUnit' 
+				template: 'oneStep' 
 			}
 			,
 			{ // problem 6
@@ -560,7 +560,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
 				labelAnswer: 'lbs',
 				firstNumSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
-				firstDenSelect: '[\\"1 oz\\", \\"1 lbs\\", \\"1 ton\\"]',
+				firstDenSelect: '[\\"1 fl oz\\", \\"1 lbs\\", \\"1 ton\\"]',
 				initialAmount: '7',
 				numeratorStart: '7',
 				denominatorStart: '1',
@@ -576,14 +576,14 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'Pound_02_40x60.png',
 				secondImage: 'Ounce_01_V2_Large_40x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
-				template: 'oneStepSmallerUnit' 
+				template: 'oneStep' 
 			}
 			,
 			{ // problem 7
 				problemText: '9000 pounds is how many tons?',
 				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
 				labelAnswer: 'lbs',
-				firstNumSelect: '[\\"1 oz\\", \\"1 lbs\\", \\"1 ton\\"]',
+				firstNumSelect: '[\\"1 fl oz\\", \\"1 lbs\\", \\"1 ton\\"]',
 				firstDenSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
 				initialAmount: '9000',
 				numeratorStart: '9000',
@@ -600,14 +600,14 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'Pound_02_40x60.png',
 				secondImage: 'Ton_01_40x50.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
-				template: 'oneStepSmallerUnit' 
+				template: 'oneStep' 
 			}
 			,
 			{ // problem 8
 				problemText: '128 ounces is how many pounds?',
 				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
 				labelAnswer: 'oz',
-				firstNumSelect: '[\\"1 oz\\", \\"1 lbs\\", \\"1 ton\\"]',
+				firstNumSelect: '[\\"1 fl oz\\", \\"1 lbs\\", \\"1 ton\\"]',
 				firstDenSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
 				initialAmount: '128',
 				numeratorStart: '128',
@@ -624,7 +624,103 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'Ounce_01_V2_Large_40x60.png',
 				secondImage: 'Pound_02_40x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
-				template: 'oneStepSmallerUnit' 
+				template: 'oneStep' 
+			}
+			,
+			{ // problem 9
+				problemText: '8 cups is how many pints?',
+				labelSelect: '[\\"tsp\\", \\"tbs\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
+				labelAnswer: 'c',
+				firstNumSelect: '[\\"1 tbs\\", \\"1 fl oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
+				initialAmount: '8',
+				numeratorStart: '8',
+				denominatorStart: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '2',
+				unitsStart: 'c',
+				unitsSecond: 'pts',
+				firstNumAnswer: '1 pt',
+				firstDenAnswer: '2 c',
+				finalAnswer: '4',
+				firstWordCancel: 'cups',
+				secondWordCancel: 'pints',
+				firstImage: 'cup-02-50x60.png',
+				secondImage: 'pint-01_50x70.png',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
+				template: 'oneStep' 
+			}
+			,
+			{ // problem 10
+				problemText: '12 teaspoons is how many tablespoons?',
+				labelSelect: '[\\"tsp\\", \\"tbs\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
+				labelAnswer: 'tsp',
+				firstNumSelect: '[\\"1 tbs\\", \\"1 fl oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
+				initialAmount: '12',
+				numeratorStart: '12',
+				denominatorStart: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '3',
+				unitsStart: 'tsp',
+				unitsSecond: 'tbs',
+				firstNumAnswer: '1 tbs',
+				firstDenAnswer: '3 tsp',
+				finalAnswer: '4',
+				firstWordCancel: 'tsp',
+				secondWordCancel: 'tbs',
+				firstImage: 'TeaSpoon_01_46x65.png',
+				secondImage: 'Tablepoon_TeaSpoon_01_46x65.png',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
+				template: 'oneStep' 
+			}
+			,
+			{ // problem 11
+				problemText: '5 gallons is how many quarts?',
+				labelSelect: '[\\"tsp\\", \\"tbs\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
+				labelAnswer: 'gal',
+				firstNumSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"1 tbs\\", \\"1 fl oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
+				initialAmount: '5',
+				numeratorStart: '5',
+				denominatorStart: '1',
+				numeratorSecond: '4',
+				denominatorSecond: '1',
+				unitsStart: 'gal',
+				unitsSecond: 'qts',
+				firstNumAnswer: '4 qt',
+				firstDenAnswer: '1 gal',
+				finalAnswer: '20',
+				firstWordCancel: 'gal',
+				secondWordCancel: 'qts',
+				firstImage: 'gallon-01-56x70.png',
+				secondImage: 'quart-02-40x70.png',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
+				template: 'oneStep' 
+			}
+			,
+			{ // problem 12
+				problemText: '3 cups is how many fluid ounces?',
+				labelSelect: '[\\"tsp\\", \\"tbs\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
+				labelAnswer: 'c',
+				firstNumSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"1 tbs\\", \\"1 fl oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
+				initialAmount: '3',
+				numeratorStart: '3',
+				denominatorStart: '1',
+				numeratorSecond: '8',
+				denominatorSecond: '1',
+				unitsStart: 'c',
+				unitsSecond: 'fl oz',
+				firstNumAnswer: '8 fl oz',
+				firstDenAnswer: '1 c',
+				finalAnswer: '24',
+				firstWordCancel: 'c',
+				secondWordCancel: 'fl oz',
+				firstImage: 'cup-02-50x60.png',
+				secondImage: 'OZ_Shot_01-44x65.png',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
+				template: 'oneStep' 
 			}
 			,
             { //problem 29
@@ -632,7 +728,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				labelSelect: '[\\"tsp\\", \\"tbs\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
 				labelAnswer: 'gal',
 				firstNumSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
-				firstDenSelect: '[\\"1 tbs\\", \\"1 oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"1 tbs\\", \\"1 fl oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
 				initialAmount: '3',
 				numeratorStart: '3',
 				denominatorStart: '1',
@@ -659,14 +755,14 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				thirdImage: 'pint-01_50x70.png',
 				fourthImage: 'cup-02-50x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
-				template: 'threeStepSmallerUnit' 
+				template: 'threeStep' 
 			},
 			{ // problem 30
 				problemText: '<span class=bigger><sup>1</sup>/<sub>2</sub></span> gallon is how many cups?',
 				labelSelect: '[\\"tsp\\", \\"tbs\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
 				labelAnswer: 'gal',
 				firstNumSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
-				firstDenSelect: '[\\"1 tbs\\", \\"1 oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"1 tbs\\", \\"1 fl oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
 				initialAmount: '<sup>1</sup>/<sub>2</sub>',
 				numeratorStart: '1',
 				denominatorStart: '2',
@@ -693,14 +789,14 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				thirdImage: 'pint-01_50x70.png',
 				fourthImage: 'cup-02-50x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
-				template: 'threeStepSmallerUnit' 
+				template: 'threeStep' 
 			},
 			{ // problem 31
 				problemText: '2 quarts is how many cups?',
 				labelSelect: '[\\"tsp\\", \\"tbs\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
 				labelAnswer: 'qt',
 				firstNumSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
-				firstDenSelect: '[\\"1 tbs\\", \\"1 oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"1 tbs\\", \\"1 fl oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
 				initialAmount: '2',
 				numeratorStart: '2',
 				denominatorStart: '1',
@@ -721,7 +817,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				secondImage: 'pint-01_50x70.png',
 				thirdImage: 'cup-02-50x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
-				template: 'twoStepSmallerUnit' 
+				template: 'twoStep' 
 			}
 			,
 			{ // problem 32
@@ -729,7 +825,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				labelSelect: '[\\"tsp\\", \\"tbs\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
 				labelAnswer: 'qt',
 				firstNumSelect: '[\\"3 tsp\\", \\"2 tbs\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
-				firstDenSelect: '[\\"1 tbs\\", \\"1 oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"1 tbs\\", \\"1 fl oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
 				initialAmount: '<sup>1</sup>/<sub>2</sub>',
 				numeratorStart: '1',
 				denominatorStart: '2',
@@ -750,7 +846,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				secondImage: 'pint-01_50x70.png',
 				thirdImage: 'cup-02-50x60.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
-				template: 'twoStepSmallerUnit' 
+				template: 'twoStep' 
 			}
         ];
 

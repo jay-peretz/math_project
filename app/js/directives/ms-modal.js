@@ -12,7 +12,7 @@ angular.module('mathSkills')
                         $rootScope.$on('showModalText', function (e, data) {
                             $scope.modalText = data.modalText;
 							$("#indexModal").modal({  
-							  backdrop: false  
+							  //backdrop: false  
 							});
                         });
                     }
@@ -23,7 +23,7 @@ angular.module('mathSkills')
                     label: '@'
                 },
                 template: '<div>'+
-								'<div id="indexModal" class="modal hide fade in" ng-show=showModal>'+  
+								'<div id="indexModal" class="modal hide fade in" role="dialog" aria-hidden="true" data-backdrop="false" ng-show=showModal>'+  
 									'<div class="modal-body">'+  
 									'<ms-expression expected={{modalText}}></ms-expression>'+
 									'</div>'+ 
