@@ -166,7 +166,7 @@ angular.module('mathSkills').service('data_a_1', ['dataUtils', function (dataUti
 		 help: '\\\\rowgrp{\\\\row{\\\\str{The expression can be expressed as either:}}}{\\\\row{\\\\str{(2 + 7 + 4) (140) / 2}}}{\\\\row{\\\\str{or}}}{\\\\row{\\\\grp{\\\\frac{\\\\str{(140) (2 + 7 + 4)}}{\\\\str{2}}}}}', 
 		 template: 'expressions' },
 		 {instructions: 'When playing the video game Survival, Sergei started with 50 points. He first earned 40 points for escaping bandits. He then had his total points tripled for finding a spring in the desert. However, when he ate a poisonous plant, he became sick for two days. He had to surrender 35 points for each day he was ill. At this point in the game, how many points did Sergei have?',
-		 answer: '\\\\input{235}',
+		 answer: '\\\\input{200}',
 		 help: '{\\\\row{\\\\str{The expression can be expressed as:}}}{\\\\row{\\\\str{[(50 + 40) • 3] - 35 • 2}}}{\\\\row{\\\\str{or}}}{\\\\row{\\\\str{200}}}',
 		 template:'expressions2'},
 		 {instructions: 'Five hundred tickets were sold to a movie opening. Fifty people did not show. For those who did attend the opening, they were seated evenly in three separate sections in the theater. How many people sat in each section?',
