@@ -6,7 +6,11 @@ angular.module('mathSkills')
         return {
             link: function (scope, element, attrs, ctrl) {
                 ctrl.$parsers.unshift(function (viewValue) {
-                    return viewValue.replace(/^\+/, '');
+					if (typeof viewValue !== "undefined" && viewValue.length > 1){
+                    	return viewValue.replace(/^\+/, '');
+					} else {
+						return viewValue;
+					}
                 });
             },
             require: 'ngModel',
