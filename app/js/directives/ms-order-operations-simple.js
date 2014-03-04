@@ -57,7 +57,7 @@ angular.module('mathSkills')
 										break;
 									// default includes whole numbers 
 									default: 
-										tagString = '\\sign{&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
+										tagString = '\\sign{<span style="padding-left:.8em;">&nbsp;</span>' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
 										break;
 										
 								}

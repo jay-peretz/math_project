@@ -1,6 +1,9 @@
 .ms-order-ops-simple table {
 	text-align:center;
 }
+.ms-order-ops-simple table {
+	margin-bottom:5px;
+}
 .ms-order-ops-simple div.noShow {
 	visibility:hidden;
 }
