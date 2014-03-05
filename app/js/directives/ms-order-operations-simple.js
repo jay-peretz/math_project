@@ -101,11 +101,22 @@ angular.module('mathSkills')
 					};
                 $scope.cur = 0;
                 $scope.mode = 'row';
+				$scope.instructArray = ['Evaluate the operator.'];
                 $scope.instructions = 'Click on the operator that should be evaluated first.';
 
                 $scope.$watch('expected', function () {
                     if ($scope.expected) {
-						$scope.evalText = parser.extractTag($scope.expected).args.length > 1 ? parser.extractTag($scope.expected).args[1] : 'Evaluate the operator.';
+						// more than one parameter to ordopssimple tag, push to array
+						// set 'row' instruction to first additional parameter 
+						if (parser.extractTag($scope.expected).args.length > 1) {
+							for (var ii = 1, len = parser.extractTag($scope.expected).args.length; ii < len; ii += 1) {
+								$scope.instructArray.push(parser.extractTag($scope.expected).args[ii]);
+							}
+							$scope.evalText = $scope.instructArray[$scope.cur + 1];
+						} else {
+							// if only one parameter, 'row' instruction to default
+							$scope.evalText = $scope.instructArray[$scope.cur];
+						}
                         try {
                             var expecteds = parser.extractTag($scope.expected).args[0].split(',');
                             $scope.rows = expecteds.filter(function (str, i) { return i % 2 === 0; });
@@ -126,7 +137,12 @@ angular.module('mathSkills')
                                 saveStep();
                                 showInput();
                                 $scope.mode = 'answer';
-                                $scope.instructions = $scope.evalText;
+								console.log("$scope.cur + 1 is: ",$scope.cur + 1," $scope.instructArray.length is: ",$scope.instructArray.length);
+								if ($scope.cur + 1 < $scope.instructArray.length) { 
+                                	$scope.evalText = $scope.instructArray[$scope.cur + 1];
+								}
+								$scope.instructions = $scope.evalText;
+								console.log("$scope.instructions is: ",$scope.instructions);
 								$timeout(function () { 
 									$scope.$broadcast('checkFocus');
 								}, 0);
