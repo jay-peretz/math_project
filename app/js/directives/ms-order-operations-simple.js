@@ -137,12 +137,10 @@ angular.module('mathSkills')
                                 saveStep();
                                 showInput();
                                 $scope.mode = 'answer';
-								console.log("$scope.cur + 1 is: ",$scope.cur + 1," $scope.instructArray.length is: ",$scope.instructArray.length);
 								if ($scope.cur + 1 < $scope.instructArray.length) { 
                                 	$scope.evalText = $scope.instructArray[$scope.cur + 1];
 								}
 								$scope.instructions = $scope.evalText;
-								console.log("$scope.instructions is: ",$scope.instructions);
 								$timeout(function () { 
 									$scope.$broadcast('checkFocus');
 								}, 0);
