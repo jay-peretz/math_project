@@ -68,29 +68,45 @@ angular.module('mathSkills')
 					if (typeof $scope.graphvertical === "string") {
 						$scope.graphverticalIn = $scope.graphvertical;
 					}
-					
+						
+				var d1 = [[-9, 0]];
+				var d2 = [[6, 0]];
+				var d3 = [[-3, 0]];
+				var data = [
+					{ data: d1, 
+						points: { symbol: "circle"}, 
+						color: "#CC0000"
+						},
+					{ data: d2, 
+						points: { symbol: "circle" }, 
+						color: "#CC0000"
+						},
+					{ data: d3, 
+						points: { symbol: "circle" },
+						color: "#CC0000"
+						}				
+				];	
 
-					$.plot("#placeholder", [graphdataIn], {
+					$.plot("#placeholder", data, {
+					//$.plot("#placeholder", data, [graphdataIn], {
 						series: {
-							lines: { show: true },
-							points: { show: true }
-							// bars: {
-								// show: true,
-								// barWidth: 0.4,
-								// align: "center"
-							// }
+							lines: { show: false },
+							points: { 
+								show: true,
+								radius: 4
+								}
 						},
 						xaxis: {
-							//mode: "categories",
-							color: "red", // color of the axis
-							tickColor: "blue",
-							tickLength: 10,	
+							color: null, // color of the axis
+							tickColor: null,
+							font: null,
+							//tickLength: 10,	
 							//alignTicksWithAxis: 1,
 							ticks: function tickGenerator(axis) {
 							    var res = [], i = axis.min;
 							    do {
 							        var v = i * axis.tickSize;
-							        res.push([v, i ]);							        
+							        res.push(v);							        
 							        if (i == 0)
 							        	res.push(0);
 							        ++i;
@@ -103,20 +119,28 @@ angular.module('mathSkills')
 							max: 10,
 							tickDecimals: 0
 						},
-						 yaxis: {ticks: 1, min: -1, max: 1 },
+						 yaxis: {
+						 	color: "#606060",
+						 	ticks: 1, 
+						 	min: -0.5, 
+						 	max: 0.5 
+						 	},
 						 
 						 grid: {
-							show: true,
-							color: "#000", // color of the grid lines specified in xaxis
+							show:
+							 true,
+							margin: { left: 20 },
+							//color: "#000", // color of the grid lines specified in xaxis
 							//backgroundColor: "#fff", 
 							//markings: [ { xaxis: { from: 0, to: 0 }, color: "#bb0000" } ],
 							markings: function (axes) {
 							    var markings = [];
 							    for (var x = axes.xaxis.min + 1; x < axes.xaxis.max; x++)
-							        markings.push({ xaxis: { from: x, to: x }, color: "999", lineWidth: 1 });
+							        markings.push({ xaxis: { from: x, to: x }, color: "#A0A0A0", lineWidth: 1 });
 							    return markings;
 							},
-							backgroundColor: { colors: [ "#fff", "#999" ] },
+							backgroundColor: { colors: [ "#fff", "#F0F0F0", "#fff" ] },
+							hoverable: true,
 							borderWidth: {
 							top: 0,
 							right: 0,
