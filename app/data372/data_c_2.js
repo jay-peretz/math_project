@@ -12,7 +12,7 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						 problem: '\\row{\\str{Find the GCF of \xA0}}{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}{\\str{\xA0 and \xA0}}{\\frac{\\str{$secondNum}}{\\str{$secondDen}}}',
+						 problem: '\\row{\\str{Find the LCM of \xA0}}{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}{\\str{\xA0 and \xA0}}{\\frac{\\str{$secondNum}}{\\str{$secondDen}}}',
 						answer: '\\input{$answer}',
 						controls: {
 							"checkAnswer": true,
@@ -23,7 +23,7 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\str{Find the GCF of $firstNum and $secondNum.}',
+                        problem: '\\str{Find the LCM of $firstDen and $secondDen.}',
 						answer: '\\findlcm{$firstDen}{$secondDen}',
 						controls: {
 							"checkAnswer": true,
@@ -32,11 +32,44 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
                     }]
                }]
 			},
-			
+			threeFractions: {
+                title: '9.2 Find the LCM',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						 problem: '\\row{\\str{Find the LCM of \xA0}}{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}{\\str{, \xA0}}{\\frac{\\str{$secondNum}}{\\str{$secondDen}}}{\\str{\xA0 and \xA0}}{\\frac{\\str{$thirdNum}}{\\str{$thirdDen}}}',
+						answer: '\\input{$answer}',
+						controls: {
+							"checkAnswer": true,
+							"help": false,
+							"workbook": true
+						}
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\str{Find the LCM of $firstDen, $secondDen and $thirdDen.}',
+						answer: '\\findlcm{$firstDen}{$secondDen}{$thirdDen}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						}
+                    }]
+               }]
+			}
         },
         data = [
-            { firstNum: '10', firstDen: '', secondNum: '15', secondDen: '', answer: '5', template: 'twoFractions' },
-			  ];
+            { firstNum: '1', firstDen: '2', secondNum: '2', secondDen: '4', answer: '4', template: 'twoFractions' },
+			{ firstNum: '1', firstDen: '2', secondNum: '2', secondDen: '3', answer: '6', template: 'twoFractions' },
+			{ firstNum: '1', firstDen: '4', secondNum: '3', secondDen: '8', answer: '8', template: 'twoFractions' },
+			{ firstNum: '5', firstDen: '6', secondNum: '5', secondDen: '9', answer: '18', template: 'twoFractions' },
+			{ firstNum: '2', firstDen: '3', secondNum: '1', secondDen: '10', answer: '30', template: 'twoFractions' },
+			{ firstNum: '3', firstDen: '4', secondNum: '1', secondDen: '6', answer: '12', template: 'twoFractions' },
+			{ firstNum: '3', firstDen: '4', secondNum: '7', secondDen: '8', thirdNum: '5', thirdDen: '6', answer: '24', template: 'threeFractions' },
+			{ firstNum: '1', firstDen: '4', secondNum: '1', secondDen: '6', thirdNum: '2', thirdDen: '3', answer: '12', template: 'threeFractions' },
+			{ firstNum: '1', firstDen: '6', secondNum: '7', secondDen: '10', thirdNum: '3', thirdDen: '5', answer: '30', template: 'threeFractions' },
+			{ firstNum: '1', firstDen: '4', secondNum: '2', secondDen: '5', thirdNum: '5', thirdDen: '7', answer: '140', template: 'threeFractions' },
+        ];
 
     return dataUtils.build(desc, template, data);
 }]);
