@@ -30,7 +30,7 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 						+'{\\html{Solve:}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\html{$problemStatement}}',
-						answer: '\\ordops{$ordopsStatement}',
+						answer: '$wb',
 						controls: {
 							"checkAnswer": true,
 							"help": true
@@ -40,7 +40,15 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			}	
         },
         data = [
-            { problemStatement: '7 <span class=margin-not-bigger>&bull;</span> 2 <span class=bigger>+</span> 4', ordopsStatement: '7 * 2 + 4', answer: '18', template: 'first' },
+            { problemStatement: '7 <span class=margin-not-bigger>&bull;</span> 2 <span class=bigger>+</span> 4', ordopsStatement: '7 * 2 + 4', answer: '18',
+			wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\html{7}}{\\btn{\xB7}{T}{huge}}{\\html{2}}{\\btn{+}{F}{bigger}}{\\html{4}},' +
+                        '\\input{14},' +
+                        '\\grp{\\html{14}}{\\btn{+}{T}{bigger}}{\\html{4}},' +
+                        '\\input{18},' +
+						'\\grp{\\html{18}},' +
+                    '}{Evaluate the operator.}'),
+			template: 'first' },
 			{ problemStatement: '( 15 <span class=bigger>&minus;</span> 10 ) <span class=bigger>&divide;</span> 5', ordopsStatement: '( 15 - 10 ) / 5', answer: '1', template: 'first' },
 			{ problemStatement: '4 <span class=bigger>&divide;</span> 2 <span class=bigger>+</span> 9', ordopsStatement: '4 / 2 + 9', answer: '11', template: 'first' },
 			{ problemStatement: '6 <span class=bigger>&minus;</span> ( 6 <span class=bigger>&divide;</span> 3 )', ordopsStatement: '6 - (6 / 3)', answer: '4', template: 'first' },
