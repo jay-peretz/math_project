@@ -7,401 +7,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
             children: []
         },
         template = {
-            threeStep: {
-                title: 'Converting Units of Volume',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$fourthImage}}'
-									+'}',
-                        answer: '\\grp'
-									+'{\\input{$fourthAnswer}}'
-									+'{\\html{$unitsFourth}}'
-									+'{$modalChart}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": false,
-                            "workbook": true
-                        }
-                    }]
-                }, {
-                    title: 'Workbook',
-                    children: [{
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$fourthImage}}'
-									+'}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{Write the given value as a fraction.}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}}{\\input{$denominatorStart}}}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true,
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-							   
-					}, {
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$fourthImage}}'
-									+'}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{What is the first fraction (that equals 1 whole) that you need to multiply by?}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\select{$firstNumAnswer}{$firstNumSelect}}'
-											+'{\\select{$firstDenAnswer}{$firstDenSelect}}}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with $secondWordCancel in the numerator and $firstWordCancel in the denominator allows us to cancel out "$firstWordCancel".}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp'
-								+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
-								+'{\\sign{&times;}}'
-								+'{\\css{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}{blue-text}}'
-							+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }, {
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
-										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$fourthImage}}}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{What is the second fraction (that equals 1 whole) that you need to multiply by?}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\select{$secondNumAnswer}{$firstNumSelect}}{\\select{$secondDenAnswer}{$firstDenSelect}}}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "$secondWordCancel" that we don\'t want as a part of the answer.  The fraction with $thirdWordCancel in the numerator and $secondWordCancel in the denominator allows us to cancel out "$secondWordCancel".}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
-											+'{\\sign{&times;}}'
-											+'{\\css{\\frac{\\html{$secondNumAnswer}}{\\html{$secondDenAnswer}}}{blue-text}}'
-										+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }, {
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorThird}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$fourthImage}}}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{What is the third fraction (that equals 1 whole) that you need to multiply by?}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$$secondNumAnswer}}{\\html{$secondDenAnswer}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\select{$thirdNumAnswer}{$firstNumSelect}}{\\select{$thirdDenAnswer}{$firstDenSelect}}}'	
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{The purpose of the third fraction we multiply by is to cancel out the word "$thirdWordCancel" that we don\'t want as a part of the answer.  The fraction with $fourthWordCancel in the numerator and $thirdWordCancel in the denominator allows us to cancel out "$thirdWordCancel".}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$secondNumAnswer}}{\\html{$secondDenAnswer}}}'
-											+'{\\sign{&times;}}'
-											+'{\\css{\\frac{\\html{$thirdNumAnswer}}{\\html{$thirdDenAnswer}}}{blue-text}}'
-										+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }, {
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorThird}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorFourth}}{\\image{23.1-Volume-Weight-Measure/$fourthImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}}'
-										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$fourthImage}}'
-									+'}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$secondNumAnswer}}{\\html{$secondDenAnswer}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$thirdNumAnswer}}{\\html{$thirdDenAnswer}}}'
-											+'{\\sign{&equals;}}'
-											+'{\\input{$fourthAnswer}}'
-											+'{\\html{c}}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span>}}{\\html{<span class=blue-text>$denominatorStart</span>}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span class=line_through>$unitsSecond</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsStart</span>}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorThird</span> <span class=line_through>$unitsThird</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsSecond</span>}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorFourth $unitsFourth</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsThird</span>}}}'
-											+'{\\sign{&equals;}}'
-											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsFourth</span>}}'
-										+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }]
-                }]
-            },
-			twoStep: {
-                title: 'Converting Units of Volume',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
-									+'}',
-                        answer: '\\grp'
-									+'{\\input{$finalAnswer}}'
-									+'{\\html{$unitsThird}}'
-									+'{$modalChart}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": false,
-                            "workbook": true
-                        }
-                    }]
-                }, {
-                    title: 'Workbook',
-                    children: [{
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
-									+'}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{Write the given value as a fraction.}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}}{\\input{$denominatorStart}}}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true,
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-							   
-					}, {
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
-									+'}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{What is the first fraction (that equals 1 whole) that you need to multiply by?}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\select{$firstNumAnswer}{$firstNumSelect}}'
-											+'{\\select{$firstDenAnswer}{$firstDenSelect}}}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with $secondWordCancel in the numerator and $firstWordCancel in the denominator allows us to cancel out "$firstWordCancel".}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp'
-								+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
-								+'{\\sign{&times;}}'
-								+'{\\css{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}{blue-text}}'
-							+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }, {
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
-										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{What is the second fraction (that equals 1 whole) that you need to multiply by?}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\select{$secondNumAnswer}{$firstNumSelect}}{\\select{$secondDenAnswer}{$firstDenSelect}}}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "$secondWordCancel" that we don\'t want as a part of the answer.  The fraction with $thirdWordCancel in the numerator and $secondWordCancel in the denominator allows us to cancel out "$secondWordCancel".}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
-											+'{\\sign{&times;}}'
-											+'{\\css{\\frac{\\html{$secondNumAnswer}}{\\html{$secondDenAnswer}}}{blue-text}}'
-										+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }, {
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorThird}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}{\\grp{\\html{1}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}}'
-										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
-									+'}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$secondNumAnswer}}{\\html{$secondDenAnswer}}}'
-											+'{\\sign{&equals;}}'
-											+'{\\input{$finalAnswer}}'
-											+'{\\html{$unitsThird}}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span>}}{\\html{<span class=blue-text>$denominatorStart</span>}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span class=line_through>$unitsSecond</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsStart</span>}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>$secondNumAnswer</span>}}{\\html{<span class=blue-text>1</span> <span class=line_through>$unitsSecond</span>}}}'
-											+'{\\sign{&equals;}}'
-											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsThird</span>}}'
-										+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }]
-                }]
-            },
-			oneStep: {
+            oneStep: {
                 title: 'Converting Units of Volume',
                 children: [{
                     title: 'Main Answer',
@@ -521,6 +127,400 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span>$unitsSecond</span>}}{\\html{<span class=blue-text>$denominatorSecond</span> <span class=line_through>$unitsStart</span>}}}'
 											+'{\\sign{&equals;}}'
 											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsSecond</span>}}'
+										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }]
+                }]
+            },
+			twoStep: {
+                title: 'Converting Units of Volume',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\sign{&equals;}}'
+										+'{\\html{?}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
+									+'}',
+                        answer: '\\grp'
+									+'{\\input{$finalAnswer}}'
+									+'{\\html{$unitsThird}}'
+									+'{$modalChart}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\sign{&equals;}}'
+										+'{\\html{?}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
+									+'}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{Write the given value as a fraction.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}}{\\input{$denominatorStart}}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true,
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+							   
+					}, {
+                        problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\sign{&equals;}}'
+										+'{\\html{?}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
+									+'}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{What is the first fraction (that equals 1 whole) that you need to multiply by?}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\select{$firstNumAnswer}{$firstNumSelect}}'
+											+'{\\select{$firstDenAnswer}{$firstDenSelect}}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with $secondWordCancel in the numerator and $firstWordCancel in the denominator allows us to cancel out "$firstWordCancel".}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp'
+								+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+								+'{\\sign{&times;}}'
+								+'{\\css{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}{blue-text}}'
+							+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }, {
+                        problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
+										+'{\\sign{&times;}}'
+										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{$denominatorSecond}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
+										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{What is the second fraction (that equals 1 whole) that you need to multiply by?}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\select{$secondNumAnswer}{$firstNumSelect}}{\\select{$secondDenAnswer}{$firstDenSelect}}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "$secondWordCancel" that we don\'t want as a part of the answer.  The fraction with $thirdWordCancel in the numerator and $secondWordCancel in the denominator allows us to cancel out "$secondWordCancel".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
+											+'{\\sign{&times;}}'
+											+'{\\css{\\frac{\\html{$secondNumAnswer}}{\\html{$secondDenAnswer}}}{blue-text}}'
+										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }, {
+                        problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
+										+'{\\sign{&times;}}'
+										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{$denominatorSecond}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
+										+'{\\sign{&times;}}'
+										+'{\\frac{\\grp{\\html{$numeratorThird}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}{\\grp{\\html{$denominatorThird}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}}'
+										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
+									+'}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$secondNumAnswer}}{\\html{$secondDenAnswer}}}'
+											+'{\\sign{&equals;}}'
+											+'{\\input{$finalAnswer}}'
+											+'{\\html{$unitsThird}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span>}}{\\html{<span class=blue-text>$denominatorStart</span>}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span class=line_through>$unitsSecond</span>}}{\\html{<span class=blue-text>$denominatorSecond</span> <span class=line_through>$unitsStart</span>}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorThird $unitsThird</span>}}{\\html{<span class=blue-text>$denominatorThird</span> <span class=line_through>$unitsSecond</span>}}}'
+											+'{\\sign{&equals;}}'
+											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsThird</span>}}'
+										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }]
+                }]
+            },
+			threeStep: {
+                title: 'Converting Units of Volume',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\html{$initialAmount}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\sign{&equals;}}'
+										+'{\\html{?}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$fourthImage}}'
+									+'}',
+                        answer: '\\grp'
+									+'{\\input{$fourthAnswer}}'
+									+'{\\html{$unitsFourth}}'
+									+'{$modalChart}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\sign{&equals;}}'
+										+'{\\html{?}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$fourthImage}}'
+									+'}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{Write the given value as a fraction.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}}{\\input{$denominatorStart}}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true,
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+							   
+					}, {
+                        problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\sign{&equals;}}'
+										+'{\\html{?}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$fourthImage}}'
+									+'}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{What is the first fraction (that equals 1 whole) that you need to multiply by?}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\select{$firstNumAnswer}{$firstNumSelect}}'
+											+'{\\select{$firstDenAnswer}{$firstDenSelect}}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with $secondWordCancel in the numerator and $firstWordCancel in the denominator allows us to cancel out "$firstWordCancel".}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp'
+								+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+								+'{\\sign{&times;}}'
+								+'{\\css{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}{blue-text}}'
+							+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }, {
+                        problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
+										+'{\\sign{&times;}}'
+										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{$denominatorSecond}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
+										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$fourthImage}}}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{What is the second fraction (that equals 1 whole) that you need to multiply by?}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\select{$secondNumAnswer}{$firstNumSelect}}{\\select{$secondDenAnswer}{$firstDenSelect}}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "$secondWordCancel" that we don\'t want as a part of the answer.  The fraction with $thirdWordCancel in the numerator and $secondWordCancel in the denominator allows us to cancel out "$secondWordCancel".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
+											+'{\\sign{&times;}}'
+											+'{\\css{\\frac{\\html{$secondNumAnswer}}{\\html{$secondDenAnswer}}}{blue-text}}'
+										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }, {
+                        problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
+										+'{\\sign{&times;}}'
+										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{$denominatorSecond}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
+										+'{\\sign{&times;}}'
+										+'{\\frac{\\grp{\\html{$numeratorThird}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}{\\grp{\\html{$denominatorThird}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}}'
+										+'{\\sign{&equals;}}'
+										+'{\\html{?}}'
+										+'{\\image{23.1-Volume-Weight-Measure/$fourthImage}}}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{What is the third fraction (that equals 1 whole) that you need to multiply by?}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$$secondNumAnswer}}{\\html{$secondDenAnswer}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\select{$thirdNumAnswer}{$firstNumSelect}}{\\select{$thirdDenAnswer}{$firstDenSelect}}}'	
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{The purpose of the third fraction we multiply by is to cancel out the word "$thirdWordCancel" that we don\'t want as a part of the answer.  The fraction with $fourthWordCancel in the numerator and $thirdWordCancel in the denominator allows us to cancel out "$thirdWordCancel".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$secondNumAnswer}}{\\html{$secondDenAnswer}}}'
+											+'{\\sign{&times;}}'
+											+'{\\css{\\frac{\\html{$thirdNumAnswer}}{\\html{$thirdDenAnswer}}}{blue-text}}'
+										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }, {
+                        problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp'
+										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
+										+'{\\sign{&times;}}'
+										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{$denominatorSecond}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
+										+'{\\sign{&times;}}'
+										+'{\\frac{\\grp{\\html{$numeratorThird}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}{\\grp{\\html{$denominatorThird}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}}'
+										+'{\\sign{&times;}}'
+										+'{\\frac{\\grp{\\html{$numeratorFourth}}{\\image{23.1-Volume-Weight-Measure/$fourthImage}}}{\\grp{\\html{$denominatorFourth}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}}'
+										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$fourthImage}}'
+									+'}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$secondNumAnswer}}{\\html{$secondDenAnswer}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{$thirdNumAnswer}}{\\html{$thirdDenAnswer}}}'
+											+'{\\sign{&equals;}}'
+											+'{\\input{$fourthAnswer}}'
+											+'{\\html{c}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span>}}{\\html{<span class=blue-text>$denominatorStart</span>}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span class=line_through>$unitsSecond</span>}}{\\html{<span class=blue-text>$denominatorSecond</span> <span class=line_through>$unitsStart</span>}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorThird</span> <span class=line_through>$unitsThird</span>}}{\\html{<span class=blue-text>$denominatorThird</span> <span class=line_through>$unitsSecond</span>}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorFourth $unitsFourth</span>}}{\\html{<span class=blue-text>$denominatorFourth</span> <span class=line_through>$unitsThird</span>}}}'
+											+'{\\sign{&equals;}}'
+											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsFourth</span>}}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
@@ -673,8 +673,8 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstDenAnswer: '3 tsp',
 				finalAnswer: '4',
 				helpFinalAnswer: '4',
-				firstWordCancel: 'tsp',
-				secondWordCancel: 'tbs',
+				firstWordCancel: 'teaspoons',
+				secondWordCancel: 'tablespoons',
 				firstImage: 'TeaSpoon_01_46x65.png',
 				secondImage: 'Tablepoon_TeaSpoon_01_46x65.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
@@ -698,8 +698,8 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstDenAnswer: '1 gal',
 				finalAnswer: '20',
 				helpFinalAnswer: '20',
-				firstWordCancel: 'gal',
-				secondWordCancel: 'qts',
+				firstWordCancel: 'gallons',
+				secondWordCancel: 'quarts',
 				firstImage: 'gallon-01-56x70.png',
 				secondImage: 'quart-02-40x70.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
@@ -723,8 +723,8 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstDenAnswer: '1 c',
 				finalAnswer: '24',
 				helpFinalAnswer: '24',
-				firstWordCancel: 'c',
-				secondWordCancel: 'fl oz',
+				firstWordCancel: 'cups',
+				secondWordCancel: 'fluid ounces',
 				firstImage: 'cup-02-50x60.png',
 				secondImage: 'OZ_Shot_01-44x65.png',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
@@ -741,7 +741,9 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				numeratorStart: '3',
 				denominatorStart: '2',
 				numeratorSecond: '2000',
+				denominatorSecond: '1',
 				numeratorThird: '16',
+				denominatorThird: '1',
 				unitsStart: 'tons',
 				unitsSecond: 'lbs',
 				unitsThird: 'oz',
@@ -752,8 +754,8 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				finalAnswer: '48000',
 				helpFinalAnswer: '48,000',
 				firstWordCancel: 'tons',
-				secondWordCancel: 'lbs',
-				thirdWordCancel: 'oz',
+				secondWordCancel: 'pounds',
+				thirdWordCancel: 'ounces',
 				firstImage: 'Ton_01_40x50.png',
 				secondImage: 'Pound_02_40x60.png',
 				thirdImage: 'Ounce_01_V2_Large_40x60.png',
@@ -772,8 +774,11 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				numeratorStart: '3',
 				denominatorStart: '1',
 				numeratorSecond: '4',
+				denominatorSecond: '1',
 				numeratorThird: '2',
+				denominatorThird: '1',
 				numeratorFourth: '2',
+				denominatorFourth: '1',
 				unitsStart: 'gal',
 				unitsSecond: 'qt',
 				unitsThird: 'pt',
@@ -807,8 +812,11 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				numeratorStart: '1',
 				denominatorStart: '2',
 				numeratorSecond: '4',
+				denominatorSecond: '1',
 				numeratorThird: '2',
+				denominatorThird: '1',
 				numeratorFourth: '2',
+				denominatorFourth: '1',
 				unitsStart: 'gal',
 				unitsSecond: 'qt',
 				unitsThird: 'pt',
@@ -842,7 +850,9 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				numeratorStart: '2',
 				denominatorStart: '1',
 				numeratorSecond: '2',
+				denominatorSecond: '1',
 				numeratorThird: '2',
+				denominatorThird: '1',
 				unitsStart: 'qt',
 				unitsSecond: 'pt',
 				unitsThird: 'c',
@@ -872,7 +882,9 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				numeratorStart: '1',
 				denominatorStart: '2',
 				numeratorSecond: '2',
+				denominatorSecond: '1',
 				numeratorThird: '2',
+				denominatorThird: '1',
 				unitsStart: 'qt',
 				unitsSecond: 'pt',
 				unitsThird: 'c',
