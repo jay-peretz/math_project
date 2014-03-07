@@ -112,7 +112,7 @@ angular.module('mathSkills')
                     if ($scope.expected) {
                         // Get the numbers we are factoring.
                         $scope.numbers = parser.extractTag($scope.expected).args.map(Number);
-
+						console.log("JSON.stringify($scope.numbers)", JSON.stringify($scope.numbers));
                         // Get the modes of the numbers' prime factors.
                         $scope.primeFactors = modes($scope.numbers.map(numberUtils.primeFactors));
 						$scope.howManyPrimes = $scope.primeFactors.length;
