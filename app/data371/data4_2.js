@@ -91,16 +91,16 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
                     '}{Solve 15 <span class=bigger>\xF7</span> 3}{Solve 7 + 5}'),
 			template: 'first' },
 			// problem 6
-			{ problemStatement: '3 <span class=bigger>+</span> ( 3 <span class=margin-not-bigger>&bull;</span> 3 <span class=bigger>&divide;</span> 3 )', ordopsStatement: '3 + (3 * 3 / 3)', answer: '1',
+			{ problemStatement: '3 <span class=bigger>&divide;</span> ( 3 <span class=margin-not-bigger>&bull;</span> 3 <span class=bigger>&divide;</span> 3 )', ordopsStatement: '3 / (3 * 3 / 3)', answer: '1',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{3}}{\\btn{+}{F}{bigger}}{\\html{(}}{\\html{3}}{\\btn{\xB7}{T}{bigger}}{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\html{3}}{\\html{)}},' +
+						'\\grp{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\html{(}}{\\html{3}}{\\btn{\xB7}{T}{bigger}}{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\html{3}}{\\html{)}},' +
                         '\\input{9},' +
-                        '\\grp{\\html{3}}{\\btn{+}{F}{bigger}}{\\html{(}}{\\html{9}}{\\btn{\xF7}{T}{bigger}}{\\html{3}}{\\html{)}},' +
+                        '\\grp{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\html{(}}{\\html{9}}{\\btn{\xF7}{T}{bigger}}{\\html{3}}{\\html{)}},' +
                         '\\input{3},' +
-						'\\grp{\\html{3}}{\\btn{+}{T}{bigger}}{\\html{3}},' +
-                        '\\input{6},' +
-						'\\grp{\\html{6}},' +
-                    '}{Solve 3 <span class=bigger>\xB7</span> 3}{Solve 9 <span class=bigger>\xF7</span> 3}{Solve 3 + 3}'),
+						'\\grp{\\html{3}}{\\btn{\xF7}{T}{bigger}}{\\html{3}},' +
+                        '\\input{1},' +
+						'\\grp{\\html{1}},' +
+                    '}{Solve 3 <span class=bigger>\xB7</span> 3}{Solve 9 <span class=bigger>\xF7</span> 3}{Solve 3 <span class=bigger>\xF7</span> 3}'),
 			template: 'first' },
 			// problem 7
 			{ problemStatement: '15 <span class=bigger>&minus;</span> ( ( 7 <span class=bigger>&minus;</span> 4 ) <span class=margin-not-bigger>&bull;</span> 2 )', ordopsStatement: '15 - ((7 - 4) * 2)', answer: '9',
