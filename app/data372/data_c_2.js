@@ -5,10 +5,10 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
 			title: 'C.2 Greatest Common Factor',
    			path: 'C.2-greatest-common-factor',
             children: []
-        },
+			},
 	        template = {
             twoFractions: {
-                title: 'Greatest Common Factor',
+                title: '9.2 Find the LCM',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -73,6 +73,3 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
 
     return dataUtils.build(desc, template, data);
 }]);
-
-
-

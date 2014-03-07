@@ -6,10 +6,10 @@
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
         parserProvider.register('findlcm', {
-            directiveTemplate: '<ms-find-lcm expected={{expected}} label={{label}}></ms-find-lcm>'
+            directiveTemplate: '<ms-find-gcf expected={{expected}} label={{label}}></ms-find-gcf>'
         });
     }])
-    .directive('msFindLcm', ['numberUtils', 'panelGroupData', 'parser', '$timeout', function (numberUtils, panelGroupData, parser, $timeout) {
+    .directive('msFindGcf', ['numberUtils', 'panelGroupData', 'parser', '$timeout', function (numberUtils, panelGroupData, parser, $timeout) {
 		
         var count = function (val, arr) {
                 return arr.reduce(function (acc, cur) {
@@ -158,6 +158,6 @@ angular.module('mathSkills')
                 expected: '@',
                 label: '@'
             },
-            templateUrl: 'partials/directives/ms-find-lcm.html'
+            templateUrl: 'partials/directives/ms-find-gcf.html'
         };
     }]);
