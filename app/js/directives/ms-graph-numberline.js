@@ -87,7 +87,8 @@ angular.module('mathSkills')
 						}				
 				];	
 
-					$.plot("#placeholder", data, {
+					var placeholder = $("#placeholder");
+					var plot = $.plot("#placeholder", data, {
 					//$.plot("#placeholder", data, [graphdataIn], {
 						series: {
 							lines: { show: false },
@@ -149,6 +150,17 @@ angular.module('mathSkills')
 							}
 						},
 					});
+					
+					var o = plot.pointOffset({ x: -9.2, y: 1.5});
+
+					// Append it to the placeholder that Flot already uses for positioning			
+					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>A</div>");
+			
+					o = plot.pointOffset({ x: -3.2, y: 1.5});
+					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>B</div>");
+					
+					o = plot.pointOffset({ x: 5.8, y: 1.5});
+					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>C</div>");		
 												
 				});
 			},
