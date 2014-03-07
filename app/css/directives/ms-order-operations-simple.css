@@ -7,3 +7,6 @@
 .ms-order-ops-simple div.noShow {
 	visibility:hidden;
 }
+.ms-order-ops-simple input {
+    width: 40px;
+}

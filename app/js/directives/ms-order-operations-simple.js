@@ -180,8 +180,7 @@ angular.module('mathSkills')
                 expected: '@',
                 label: '@'
             },
-			template:   '<div class="alert alert-block alert-info">'+
-                                '{{instructions}}'+
+			template:   '<div class="alert alert-block alert-info" ng-bind-html-unsafe=instructions>'+
                             '</div>'+
                             '<span class=ms-order-ops-simple>'+
 							'<ms-expression expected={{currentExpression}}>'+

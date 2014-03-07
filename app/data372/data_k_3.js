@@ -78,7 +78,7 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
                         					+'\\input{+},' 
 											+'\\grp{\\html{30}}{\\btn{+}{T}{bigger}}{\\html{12}},' 
                         					+'\\input{42},' 
-                    					+'}{Enter an operator.}{Evaluate the operator..}'
+                    					+'}{Enter an operator.}{Evaluate the operator.}'
 									+'}{well}'
 									),
 			template: 'main'},
@@ -100,7 +100,7 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
 									 	+'{\\ordopssimple{' 
 											+'\\grp{\\html{<span class=bigger>-</span>25}}{\\btn{-}{T}{bigger}}{\\html{10}},' 
                         					+'\\input{-35},' 
-                    					+'}{Enter an operator.}{Evaluate the operator..}'
+                    					+'}{Enter an operator.}{Evaluate the operator.}'
 									+'}{well}'
 									),
 			template: 'main'},
@@ -111,7 +111,7 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
 									 	+'{\\ordopssimple{' 
 											+'\\grp{\\html{<span class=bigger>-</span>25}}{\\btn{-}{T}{bigger}}{\\html{10}},' 
                         					+'\\input{-35},' 
-                    					+'}{Enter an operator.}{Evaluate the operator..}'
+                    					+'}{Enter an operator.}{Evaluate the operator.}'
 									+'}{well}'
 									),
 			template: 'main'},
@@ -122,7 +122,7 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
 									 	+'{\\ordopssimple{' 
 											+'\\grp{\\html{<span class=bigger>-</span>25}}{\\btn{-}{T}{bigger}}{\\html{10}},' 
                         					+'\\input{-35},' 
-                    					+'}{Enter an operator.}{Evaluate the operator..}'
+                    					+'}{Enter an operator.}{Evaluate the operator.}'
 									+'}{well}'
 									),
 			template: 'main'},
@@ -133,7 +133,7 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
 									 	+'{\\ordopssimple{' 
 											+'\\grp{\\html{<span class=bigger>-</span>25}}{\\btn{-}{T}{bigger}}{\\html{10}},' 
                         					+'\\input{-35},' 
-                    					+'}{Enter an operator.}{Evaluate the operator..}'
+                    					+'}{Enter an operator.}{Evaluate the operator.}'
 									+'}{well}'
 									),
 			template: 'main'},
@@ -144,7 +144,7 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
 									 	+'{\\ordopssimple{' 
 											+'\\grp{\\html{<span class=bigger>-</span>25}}{\\btn{-}{T}{bigger}}{\\html{10}},' 
                         					+'\\input{-35},' 
-                    					+'}{Enter an operator.}{Evaluate the operator..}'
+                    					+'}{Enter an operator.}{Evaluate the operator.}'
 									+'}{well}'
 									),
 			template: 'main'},
@@ -155,7 +155,7 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
 									 	+'{\\ordopssimple{' 
 											+'\\grp{\\html{<span class=bigger>-</span>25}}{\\btn{-}{T}{bigger}}{\\html{10}},' 
                         					+'\\input{-35},' 
-                    					+'}{Enter an operator.}{Evaluate the operator..}'
+                    					+'}{Enter an operator.}{Evaluate the operator.}'
 									+'}{well}'
 									),
 			template: 'main'},
@@ -166,7 +166,7 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
 									 	+'{\\ordopssimple{' 
 											+'\\grp{\\html{<span class=bigger>-</span>25}}{\\btn{-}{T}{bigger}}{\\html{10}},' 
                         					+'\\input{-35},' 
-                    					+'}{Enter an operator.}{Evaluate the operator..}'
+                    					+'}{Enter an operator.}{Evaluate the operator.}'
 									+'}{well}'
 									),
 			template: 'main'},
