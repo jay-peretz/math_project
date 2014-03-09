@@ -1,33 +1,40 @@
 <div>
     <div class="alert alert-info">{{instructions}}</div>
-    <table class=factors>
-        <tr ng-repeat="step in completed" ng-class="borderIndexed($index)">
-        	<td>
-            </td>
-            <td class=divisor>
-                {{step.factor}}
-            </td>
-            <td class=dividend>
-                <span ng-repeat="number in step.numbers" class=factoring>{{number}}</span>
+    <table>
+    	<tr>
+        	<td ng-repeat='(key, value) in numberObjects'>
+            	{{key}}{{value.numbers}}
+                <table class=factors>
+                    <tr ng-repeat="step in completed" ng-class="borderIndexed($index)">
+                        <td>
+                        </td>
+                        <td class=divisor>
+                            {{step.factor}}
+                        </td>
+                        <td class=dividend>
+                            <span ng-repeat="number in step.numbers" class=factoring>{{number}}</span>
+                        </td>
+                    </tr>
+                    <tr ng-class="borderOrNot()">
+                        <td>
+                            <span ng-show="done">LCM</span><span ng-show="done" style="font-size:125%;"> &nbsp; =  &nbsp;</span>
+                        </td>
+                        <td class=divisor>
+                            <span>
+                                <ms-expression expected={{value.factorExp}} label={{factorExpLabel}}></ms-expression>
+                            </span>
+                            
+                        </td>
+                        <td class=dividend>
+                            <span ng-hide="done">
+                                <span ng-repeat="number in value.numbers" class=factoring>{{number}}</span>
+                            </span>
+                        </td>
+                    </tr>
+                    
+                </table>
             </td>
         </tr>
-        <tr ng-class="borderOrNot()">
-            <td>
-            	<span ng-show="done">LCM</span><span ng-show="done" style="font-size:125%;"> &nbsp; =  &nbsp;</span>
-            </td>
-            <td class=divisor>
-                <span>
-                    <ms-expression expected={{factorExp}} label={{factorExpLabel}}></ms-expression>
-                </span>
-                
-            </td>
-            <td class=dividend>
-                <span ng-hide="done">
-                    <span ng-repeat="number in numbers" class=factoring>{{number}}</span>
-                </span>
-            </td>
-        </tr>
-        
     </table>
 	
 </div>

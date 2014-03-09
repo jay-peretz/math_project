@@ -107,23 +107,35 @@ angular.module('mathSkills')
                 $scope.factorStep = true;
                 $scope.instructions = 'Factor each number down to 1.';
 				$scope.done = false;
+				$scope.numberObjects = {};
 
                 $scope.$watch('expected', function () {
+					
                     if ($scope.expected) {
-                        // Get the numbers we are factoring.
-                        $scope.numbers = parser.extractTag($scope.expected).args.map(Number);
-						console.log("JSON.stringify($scope.numbers)", JSON.stringify($scope.numbers));
-                        // Get the modes of the numbers' prime factors.
-                        $scope.primeFactors = modes($scope.numbers.map(numberUtils.primeFactors));
-						$scope.howManyPrimes = $scope.primeFactors.length;
-
-                        // Setup our input expression.
-                        $scope.factorExp = getFactorExp();
-
-                        // Compute the LCM.
-						$scope.lcmNumber = $scope.primeFactors.reduce(function (a, b) { return a * b; }, 1);
-                        focus();
+						$scope.allNumbers = parser.extractTag($scope.expected).args.map(Number);		
+						$scope.allNumbersLength = $scope.allNumbers.length;
+						$scope.allPrimeFactors = modes($scope.allNumbers.map(numberUtils.primeFactors));
+						$scope.lcmNumber = $scope.allPrimeFactors.reduce(function (a, b) { return a * b; }, 1);
+						for (var ii = 0, len = $scope.allNumbersLength; ii < len; ii += 1) {
+								// Get the numbers we are factoring.
+								$scope.numbers = [$scope.allNumbers[ii]];
+								// Get the modes of the numbers' prime factors.
+								$scope.primeFactors = modes($scope.numbers.map(numberUtils.primeFactors));
+								$scope.howManyPrimes = $scope.primeFactors.length;
+								// Setup our input expression.
+								$scope.factorExp = getFactorExp();
+								$scope.numberObjects['numbObj' + ii] = {};
+								$scope.numberObjects['numbObj' + ii].numbers = $scope.numbers;
+								$scope.numberObjects['numbObj' + ii].primeFactors = $scope.primeFactors;
+								$scope.numberObjects['numbObj' + ii].howManyPrimes = $scope.howManyPrimes;
+								$scope.numberObjects['numbObj' + ii].factorExp = $scope.factorExp;
+								
+								focus();
+						}
                     }
+					for (var ii = 0, len = $scope.allNumbers.length; ii < len; ii += 1) {
+						console.log("JSON.stringify($scope.numberObjects) is: ",JSON.stringify($scope.numberObjects));
+					}
                 });
 
                 $scope.$on('answer', function (e, data) {
