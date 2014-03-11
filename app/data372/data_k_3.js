@@ -248,6 +248,11 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
 			noDoubleNegs: '30 <span class=bigger>+</span> 12',
 			absNumber: '12',
 			template: 'rewriteSolveDblNeg'},
+			//problem 7
+			{ problemStatement: 'Find the sum of 6 and -14', buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span> 6 <span class=bigger>+</span> ( <span class=bigger>-</span>14 )', buttonValueB: 'T', buttonLabelB: '<span class=bigger>&nbsp;</span> 6 <span class=bigger>+</span> ( <span class=bigger>-</span>14 )', buttonValueC: 'F', buttonLabelC: '<span class=margin-narrow>&nbsp;</span>14 <span class=bigger>-</span> ( <span class=bigger>-</span>6 )', buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span> 6 <span class=bigger>+</span> ( 14 )',
+			answer: '-8',
+            labelCorrect: '<span class=bigger>&nbsp;</span> 6 <span class=bigger>+</span> ( <span class=bigger>-</span>14 )',
+			template: 'rewriteSolve'},
 			//problem 8
 			{ problemStatement: 'Find the difference of <span class=bigger>-</span>25 and 10', buttonValueA: 'F', buttonLabelA: '<span class=bigger>&nbsp;</span>25 <span class=bigger>-</span> 10', buttonValueB: 'F', buttonLabelB: '<span class=bigger>&nbsp;</span>10 <span class=bigger>-</span> 25', buttonValueC: 'T', buttonLabelC: '<span class=bigger>-</span>25 <span class=bigger>-</span> 10', buttonValueD: 'F', buttonLabelD: '<span class=bigger>-</span>25 <span class=bigger>-</span> (<span class=bigger>-</span>10)', answer: '-35',
             labelCorrect: '<span class=bigger>-</span>25 <span class=bigger>-</span> 10',

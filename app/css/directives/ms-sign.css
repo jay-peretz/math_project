@@ -2,6 +2,9 @@
     font-size: 125%;
     margin: 0 5px;
 }
+.margin-narrow{
+    margin: 0 3.5px;
+}
 .margin-not-bigger {
 	margin: 0 5px;
 }
