@@ -17,6 +17,34 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
             children: []
         },
 	        template = {
+	        	answerDirect: {
+					title: 'Combining Fractions and Mixed Numbers',
+					children: [{
+						title: 'Main Answer',
+						children: [{
+							problem: '\\row'
+							+'{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}'
+							+'{\\sign{$operation}}'
+							+'{\\frac{\\str{$secondNum}}{\\str{$secondDen}}',
+							answer: '\\grp{\\sign{=}}{\\input{$answerSign}}{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',
+							controls: {
+								"checkAnswer": true,
+								"help": '\\rowgrp'
+								+'{\\row{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}'
+								+'{\\sign{$operation}}'
+								+'{\\frac{\\str{$secondNum}}{\\str{$secondDen}}}'
+								+'{\\sign{ = }}'
+								+'{\\sign{$answerSign}}'
+								+'{\\frac{\\str{$answerNum}}{\\str{$answerDen}}}}'
+								+'{\\html{&nbsp;}}'
+								+'{css{\\row{\\str{Answer:  \xA0}}'
+								+'{\\sign{$answerSign}}'
+								+'{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}'
+								+'{help-answer-text}}'
+							}
+						}]
+					}]
+			   },
             twoFractions: {
                 title: 'Combining Fractions and Mixed Numbers',
                 children: [{
@@ -27,8 +55,12 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 							+'{\\sign{$firstSign}}'
 							+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 							+'{\\sign{$secondSign}}'
+							+'{\\html{$leftParen}}'
+							//+'{\\sign{$thirdSign}}'
 							+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+							+'{\\html{$rightParen}}'
 							+'{\\sign{=}}'
+							+'{\\sign{$answerSign}}'
 							+'{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}',
 						controls: {
 							"checkAnswer": true,
@@ -40,8 +72,12 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
                     title: 'Workbook',
                     children: [{
 						problem: '\\grp'
+									+'{\\sign{$firstSign}}'
 									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-									+'{\\sign{&minus;}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}'
+									+'{\\sign{$secondSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+									+'{\\html{$rightParen}}'
 								+'}',
 						answer: '\\rowgrp'
 									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
@@ -54,8 +90,12 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 						},
                     }, {
 						problem: '\\grp'
+									+'{\\sign{$firstSign}}'
 									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-									+'{\\sign{&minus;}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}'
+									+'{\\sign{$secondSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+									+'{\\html{$rightParen}}'
 								+'}',
 						answer: '\\css'
 								+'{\\rowgrp'
@@ -64,14 +104,17 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$answerDen}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Use the LCD to convert the fractions:}}'
-									+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-        										+'{\\sign{&minus;}}'
-        										+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'       								
+									+'{\\grp{\\sign{$firstSign}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+        										+'{\\sign{$secondSign}}'
+        										+'{\\html{$leftParen}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}{\\html{$rightParen}}}'       								
         							+'{\\html{&nbsp;}}'
 									+'{\\grp'
+        										+'{\\sign{$firstSign}}'
         										+'{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
-        										+'{\\sign{&minus;}}'
+        										+'{\\sign{$secondSign}}'
+        										+'{\\html{$leftParen}}'
         										+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
+        										+'{\\html{$rightParen}}'
         										+'}'
         									+'}{well}',
 						controls: {
@@ -80,8 +123,12 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 						}
                     }, {
 						problem: 'grp'
+									+'{\\sign{$firstSign}}'
 									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-									+'{\\sign{&minus;}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}'
+									+'{\\sign{$secondSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+									+'{\\html{$rightParen}}'
 								+'}',
 							answer: '\\css'
 									+'{\\rowgrp'
@@ -91,16 +138,16 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-											+'{\\sign{&minus;}}'											
-											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}}'
+										+'{\\grp{\\sign{$firstSign}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+        										+'{\\sign{$secondSign}}'
+        										+'{\\html{$leftParen}}{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}{\\html{$rightParen}}}'    
 										+'{\\html{&nbsp;}}'
-										+'{\\grp{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
-											+'{\\sign{&minus;}}'
+										+'{\\grp{\\sign{$firstSign}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{$secondSign}}'
 											+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{Subtract the numerators:}}'
-										+'{\\grp{\\frac{\\grp{\\fracstr{$firstAnswerNum}}{\\sign{&minus;}}{\\fracstr{$secondAnswerNum}}}{\\fracstr{$answerDen}}}{\\sign{=}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}'	
+										+'{\\grp\\{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$firstAnswerNum}}{\\sign{$secondSign}}{\\fracstr{$secondAnswerNum}}}{\\fracstr{$answerDen}}}{\\sign{=}}{\\input{$answerSign}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}'	
         									+'}{well}',
 						controls: {
 							"checkAnswer": true,
@@ -227,8 +274,12 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
             },         
         },
         data = [
+            //problem 1
+			{ firstNum: '7', firstDen: '15', secondNum: '11', secondDen: '15', operation: '&minus;', answerNum: '4', answerDen: '15', answerSign: '-', template: 'answerDirect' },            
             //problem 2
-            { firstNum: '1', firstDen: '3', secondNum: '4', secondDen: '5', firstAnswerNum: '5', secondAnswerNum: '4', differenceNum: '1', answerDen: '6', firstSign: '&minus;', secondSign: '+', thirdSign: '', template: 'twoFractions' },
+            { firstNum: '1', firstDen: '3', secondNum: '4', secondDen: '5', firstAnswerNum: '5', secondAnswerNum: '12', differenceNum: '7', answerDen: '15', firstSign: '&minus;', secondSign: '+', thirdSign: '', answerSign: '', leftParen: '', rightParen: '', template: 'twoFractions' },
+            //problem 3
+            //{ firstNum: '1', firstDen: '4', secondNum: '5', secondDen: '6', firstAnswerNum: '3', secondAnswerNum: '-10', differenceNum: '7', answerDen: '12', firstSign: '', secondSign: '+', thirdSign: '-', answerSign: ' ', leftParen: '(', rightParen: ')', template: 'twoFractions' },
  /*           { firstNum: '1', firstDen: '4', secondNum: '1', secondDen: '10', firstAnswerNum: '5', secondAnswerNum: '2', differenceNum: '3', answerDen: '20', template: 'twoFractions' },
 			{ firstNum: '7', firstDen: '8', secondNum: '5', secondDen: '12', firstAnswerNum: '21', secondAnswerNum: '10', differenceNum: '11', answerDen: '24', template: 'twoFractions' },
 			{ firstNum: '1', firstDen: '2', secondNum: '3', secondDen: '11', firstAnswerNum: '11', secondAnswerNum: '6', differenceNum: '5', answerDen: '22', template: 'twoFractions' },
