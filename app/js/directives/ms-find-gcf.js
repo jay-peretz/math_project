@@ -108,6 +108,7 @@ angular.module('mathSkills')
                 $scope.instructions = 'Factor each number down to 1.';
 				$scope.done = false;
 				$scope.numberObjects = {};
+				$scope.allDone = false;
 
                 $scope.$watch('expected', function () {
 					
@@ -129,6 +130,8 @@ angular.module('mathSkills')
 								$scope.numberObjects['numbObj' + ii].primeFactors = $scope.primeFactors;
 								$scope.numberObjects['numbObj' + ii].howManyPrimes = $scope.howManyPrimes;
 								$scope.numberObjects['numbObj' + ii].factorExp = $scope.factorExp;
+								$scope.numberObjects['numbObj' + ii].completed = [];
+								$scope.numberObjects['numbObj' + ii].done = false;
 								
 								focus();
 						}
@@ -139,7 +142,8 @@ angular.module('mathSkills')
                 });
 
                 $scope.$on('answer', function (e, data) {
-                    if (data.label !== 'lcm') {
+					console.log("answer data is: ",JSON.stringify(data)," $scope.numberObjects[data.label].primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) is: ",$scope.numberObjects[data.label].primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])));
+                    if ($scope.allDone === false) {
                         e.stopPropagation();
 						
 						if ($scope.primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) !== -1){
