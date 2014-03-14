@@ -122,8 +122,8 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
 			// { firstButton: 'F', secondButton: 'T', firstNumber: '-5', secondNumber: '5', startGraph: '-10', endGraph: '10', statement: 'LESS THAN', template: 'second', answerBtn: 'noAnswer' },
 			
 			{  //1 //15 from 2A.2
-                chart1: dataUtils.pre('\\graphnum{Title}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{500}{Side title}'),
-                chart2: dataUtils.pre('\\graphnum{Title}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{500}{Side title}'), 
+                chart1: dataUtils.pre('\\graphnum{Title}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{500}{Side title}{chart1}'),
+                chart2: dataUtils.pre('\\graphnum{Title}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{500}{Side title}{chart2}'), 
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'main', answerBtn: 'noAnswer',
                 //answertxt: 'There were approximately 590 deer counted in January and April.',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),

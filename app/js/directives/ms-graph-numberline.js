@@ -11,13 +11,16 @@ angular.module('mathSkills')
                 name: 'graphmaxy'
             },{
                 name: 'graphvertical'
+            },{
+                name: 'graphId'
             }],
             directiveTemplate: '<ms-graph-numberline expected={{expected}}></ms-graph-numberline>'
         });
     }])
   .directive('msGraphNumberline', [
 	'parser',
-	function (parser) {
+	'$timeout',
+	function (parser, $timeout) {
 		return {
 			restrict: 'E',
 			scope: {
@@ -63,11 +66,19 @@ angular.module('mathSkills')
 						graphmaxyIn = $scope.graphmaxy;
 					}
 				});
-								
+						
 				$scope.$watch('graphvertical', function () {
 					if (typeof $scope.graphvertical === "string") {
 						$scope.graphverticalIn = $scope.graphvertical;
 					}
+				});	
+					
+				$scope.$watch('graphId', function () {
+					if (typeof $scope.graphId === "string") {
+						$scope.graphIdIn = $scope.graphId;
+					}
+					
+					console.log("$scope.graphIdIn is: ",$scope.graphIdIn);
 						
 				var d1 = [[-9, 0]];
 				var d2 = [[6, 0]];
@@ -86,9 +97,9 @@ angular.module('mathSkills')
 						color: "#CC0000"
 						}				
 				];	
-
-					var placeholder = $("#placeholder");
-					var plot = $.plot("#placeholder", data, {
+				$timeout(function () {	
+					var placeholder = $('#'+ $scope.graphIdIn);
+					var plot = $.plot('#'+ $scope.graphIdIn, data, {
 					//$.plot("#placeholder", data, [graphdataIn], {
 						series: {
 							lines: { show: false },
@@ -161,7 +172,8 @@ angular.module('mathSkills')
 					
 					o = plot.pointOffset({ x: 5.8, y: 1.5});
 					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>C</div>");		
-												
+					
+				}, 0);
 				});
 			},
 			templateUrl: 'partials/directives/ms-graph-numberline.html'
