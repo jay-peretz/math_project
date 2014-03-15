@@ -142,7 +142,8 @@ angular.module('mathSkills')
                 });
 
                 $scope.$on('answer', function (e, data) {
-					console.log("answer data is: ",JSON.stringify(data)," $scope.numberObjects[data.label].primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) is: ",$scope.numberObjects[data.label].primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])));
+					console.log("answer data is: ",JSON.stringify(data))
+					console.log(" $scope.numberObjects[data.label].primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) is: ",$scope.numberObjects[data.label].primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])));
                     if ($scope.allDone === false) {
                         e.stopPropagation();
 						
