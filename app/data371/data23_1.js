@@ -531,6 +531,39 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
             }
         },
         data = [
+			{ // problem 1
+				problemText: '4 miles is how many feet?',
+				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
+				labelAnswer: 'mi',
+				firstNumSelect: '[\\"12 in\\", \\"3 ft\\", \\"1760 yd\\",  \\"1 mi\\"]',
+				firstDenSelect: '[\\"1 in\\", \\"1 ft\\", \\"1 yd\\",  \\"1 mi\\"]',
+				initialAmount: '4',
+				numeratorStart: '4',
+				denominatorStart: '1',
+				numeratorSecond: '1760',
+				denominatorSecond: '1',
+				numeratorThird: '3',
+				denominatorThird: '1',
+				unitsStart: 'mi',
+				unitsSecond: 'yd',
+				unitsThird: 'ft',
+				firstNumAnswer: '1760 yd',
+				firstDenAnswer: '1 mi',
+				secondNumAnswer: '3 ft',
+				secondDenAnswer: '1 yd',
+				finalAnswer: '21120',
+				helpFinalAnswer: '21,120',
+				firstWordCancel: 'mi',
+				secondWordCancel: 'yd',
+				thirdWordCancel: 'ft',
+				firstImage: 'mile.png',
+				secondImage: 'Yard_01_V2_48x67.png',
+				thirdImage: 'Foot_01_V2_48x67.png',
+				
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>1760 yd</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'twoStep' 
+			}
+			,
 			{ // problem 5
 				problemText: '3 tons is how many pounds?',
 				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
