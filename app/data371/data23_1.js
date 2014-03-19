@@ -83,7 +83,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-							+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with $secondWordCancel in the numerator and $firstWordCancel in the denominator allows us to cancel out "$firstWordCancel".}}'
+							+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with "$secondWordCancel" in the numerator and "$firstWordCancel" in the denominator allows us to cancel out "$firstWordCancel".}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\grp'
 								+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
@@ -173,7 +173,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Write the given value as a fraction.}}'
+										+'{\\html{Write the given value as a fraction. $descriptor}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}}{\\input{$denominatorStart}}}'
@@ -211,7 +211,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with $secondWordCancel in the numerator and $firstWordCancel in the denominator allows us to cancel out "$firstWordCancel".}}'
+							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with "$secondWordCancel" in the numerator and "$firstWordCancel" in the denominator allows us to cancel out "$firstWordCancel".}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\grp'
 								+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
@@ -246,7 +246,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "$secondWordCancel" that we don\'t want as a part of the answer.  The fraction with $thirdWordCancel in the numerator and $secondWordCancel in the denominator allows us to cancel out "$secondWordCancel".}}'
+										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "$secondWordCancel" that we don\'t want as a part of the answer.  The fraction with "$thirdWordCancel" in the numerator and "$secondWordCancel" in the denominator allows us to cancel out "$secondWordCancel".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
@@ -383,7 +383,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with $secondWordCancel in the numerator and $firstWordCancel in the denominator allows us to cancel out "$firstWordCancel".}}'
+							+'{\\html{The purpose of the first fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with "$secondWordCancel" in the numerator and "$firstWordCancel" in the denominator allows us to cancel out "$firstWordCancel".}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\grp'
 								+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
@@ -418,7 +418,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "$secondWordCancel" that we don\'t want as a part of the answer.  The fraction with $thirdWordCancel in the numerator and $secondWordCancel in the denominator allows us to cancel out "$secondWordCancel".}}'
+										+'{\\html{The purpose of the second fraction we multiply by is to cancel out the word "$secondWordCancel" that we don\'t want as a part of the answer.  The fraction with "$thirdWordCancel" in the numerator and "$secondWordCancel" in the denominator allows us to cancel out "$secondWordCancel".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
@@ -461,7 +461,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\html{The purpose of the third fraction we multiply by is to cancel out the word "$thirdWordCancel" that we don\'t want as a part of the answer.  The fraction with $fourthWordCancel in the numerator and $thirdWordCancel in the denominator allows us to cancel out "$thirdWordCancel".}}'
+										+'{\\html{The purpose of the third fraction we multiply by is to cancel out the word "$thirdWordCancel" that we don\'t want as a part of the answer.  The fraction with $fourthWordCancel in the numerator and "$thirdWordCancel" in the denominator allows us to cancel out "$thirdWordCancel".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
@@ -559,9 +559,84 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'mile.png',
 				secondImage: 'Yard_01_V2_48x67.png',
 				thirdImage: 'Foot_01_V2_48x67.png',
-				
+				descriptor: '',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>1760 yd</td><td>=</td><td>1 mi</td></tr></table>}'),
 				template: 'twoStep' 
+			}
+			,
+			{ // problem 2
+				problemText: '6 feet is how many inches?',
+				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
+				labelAnswer: 'ft',
+				firstNumSelect: '[\\"12 in\\", \\"3 ft\\", \\"1760 yd\\",  \\"1 mi\\"]',
+				firstDenSelect: '[\\"1 in\\", \\"1 ft\\", \\"1 yd\\",  \\"1 mi\\"]',
+				initialAmount: '6',
+				numeratorStart: '6',
+				denominatorStart: '1',
+				numeratorSecond: '12',
+				denominatorSecond: '1',
+				unitsStart: 'ft',
+				unitsSecond: 'in',
+				firstNumAnswer: '12 in',
+				firstDenAnswer: '1 ft',
+				finalAnswer: '72',
+				helpFinalAnswer: '72',
+				firstWordCancel: 'ft',
+				secondWordCancel: 'in',
+				firstImage: 'Foot_01_V2_48x67.png',
+				secondImage: 'Inches_01_V2_48x67.png',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>1760 yd</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'oneStep' 
+			}
+			,
+			{ // problem 3
+				problemText: '15 feet is how many yards?',
+				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
+				labelAnswer: 'ft',
+				firstNumSelect: '[\\"1 in\\", \\"1 ft\\", \\"1 yd\\",  \\"1 mi\\"]',
+				firstDenSelect: '[\\"12 in\\", \\"3 ft\\", \\"1760 yd\\",  \\"1 mi\\"]',
+				initialAmount: '15',
+				numeratorStart: '15',
+				denominatorStart: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '3',
+				unitsStart: 'ft',
+				unitsSecond: 'yd',
+				firstNumAnswer: '1 yd',
+				firstDenAnswer: '3 ft',
+				finalAnswer: '5',
+				helpFinalAnswer: '5',
+				firstWordCancel: 'ft',
+				secondWordCancel: 'yd',
+				firstImage: 'Foot_01_V2_48x67.png',
+				secondImage: 'Yard_01_V2_48x67.png',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>1760 yd</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'oneStep' 
+			}
+			,
+			{ // problem 4
+				problemText: '48 inches is how many feet?',
+				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
+				labelAnswer: 'in',
+				firstNumSelect: '[\\"1 in\\", \\"1 ft\\", \\"1 yd\\",  \\"1 mi\\"]',
+				firstDenSelect: '[\\"12 in\\", \\"3 ft\\", \\"1760 yd\\",  \\"1 mi\\"]',
+				initialAmount: '48',
+				numeratorStart: '48',
+				denominatorStart: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '12',
+				unitsStart: 'in',
+				unitsSecond: 'ft',
+				firstNumAnswer: '1 ft',
+				firstDenAnswer: '12 in',
+				finalAnswer: '4',
+				helpFinalAnswer: '4',
+				firstWordCancel: 'in',
+				secondWordCancel: 'ft',
+				firstImage: 'Inches_01_V2_48x67.png',
+				secondImage: 'Foot_01_V2_48x67.png',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>1760 yd</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'oneStep' 
 			}
 			,
 			{ // problem 5
@@ -764,6 +839,143 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				template: 'oneStep' 
 			}
 			,
+			{ // problem 17
+				problemText: '108 inches is how many yards?',
+				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
+				labelAnswer: 'in',
+				firstNumSelect: '[\\"1 in\\", \\"1 ft\\", \\"1 yd\\",  \\"1 mi\\"]',
+				firstDenSelect: '[\\"12 in\\", \\"3 ft\\", \\"1760 yd\\",  \\"1 mi\\"]',
+				initialAmount: '108',
+				numeratorStart: '108',
+				denominatorStart: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '12',
+				numeratorThird: '1',
+				denominatorThird: '3',
+				unitsStart: 'in',
+				unitsSecond: 'ft',
+				unitsThird: 'yd',
+				firstNumAnswer: '1 ft',
+				firstDenAnswer: '12 in',
+				secondNumAnswer: '1 yd',
+				secondDenAnswer: '3 ft',
+				finalAnswer: '3',
+				helpFinalAnswer: '3',
+				firstWordCancel: 'in',
+				secondWordCancel: 'ft',
+				thirdWordCancel: 'yd',
+				firstImage: 'Inches_01_V2_48x67.png',
+				secondImage: 'Foot_01_V2_48x67.png',
+				thirdImage: 'Yard_01_V2_48x67.png',
+				descriptor: '',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>1760 yd</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'twoStep' 
+			}
+			,
+			{ // problem 18
+				problemText: '90 inches is how many yards?',
+				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
+				labelAnswer: 'in',
+				firstNumSelect: '[\\"1 in\\", \\"1 ft\\", \\"1 yd\\",  \\"1 mi\\"]',
+				firstDenSelect: '[\\"12 in\\", \\"3 ft\\", \\"1760 yd\\",  \\"1 mi\\"]',
+				initialAmount: '90',
+				numeratorStart: '90',
+				denominatorStart: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '12',
+				numeratorThird: '1',
+				denominatorThird: '3',
+				unitsStart: 'in',
+				unitsSecond: 'ft',
+				unitsThird: 'yd',
+				firstNumAnswer: '1 ft',
+				firstDenAnswer: '12 in',
+				secondNumAnswer: '1 yd',
+				secondDenAnswer: '3 ft',
+				finalAnswer: '2.5',
+				helpFinalAnswer: '2.5',
+				firstWordCancel: 'in',
+				secondWordCancel: 'ft',
+				thirdWordCancel: 'yd',
+				firstImage: 'Inches_01_V2_48x67.png',
+				secondImage: 'Foot_01_V2_48x67.png',
+				thirdImage: 'Yard_01_V2_48x67.png',
+				descriptor: '',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>1760 yd</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'twoStep' 
+			}
+			,
+			{ //problem 19
+				problemText: '2 miles is how many inches?',
+				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
+				labelAnswer: 'mi',
+				firstNumSelect: '[\\"12 in\\", \\"3 ft\\", \\"1760 yd\\",  \\"1 mi\\"]',
+				firstDenSelect: '[\\"1 in\\", \\"1 ft\\", \\"1 yd\\",  \\"1 mi\\"]',
+				initialAmount: '2',
+				numeratorStart: '2',
+				denominatorStart: '1',
+				numeratorSecond: '1760',
+				denominatorSecond: '1',
+				numeratorThird: '3',
+				denominatorThird: '1',
+				numeratorFourth: '12',
+				denominatorFourth: '1',
+				unitsStart: 'mi',
+				unitsSecond: 'yd',
+				unitsThird: 'ft',
+				unitsFourth: 'in',
+				firstNumAnswer: '1760 yd',
+				firstDenAnswer: '1 mi',
+				secondNumAnswer: '3 ft',
+				secondDenAnswer: '1 yd',
+				thirdNumAnswer: '12 in',
+				thirdDenAnswer: '1 ft',
+				fourthAnswer: '126720',
+				helpFinalAnswer: '126,720',
+				firstWordCancel: 'mi',
+				secondWordCancel: 'yd',
+				thirdWordCancel: 'ft',
+				fourthWordCancel: 'in',
+				firstImage: 'mile.png',
+				secondImage: 'Yard_01_V2_48x67.png',
+				thirdImage: 'Foot_01_V2_48x67.png',
+				fourthImage: 'Inches_01_V2_48x67.png',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>1760 yd</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'threeStep' 
+			},
+			{ // problem 20
+				problemText: '10 yards is how many inches?',
+				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
+				labelAnswer: 'yd',
+				firstNumSelect: '[\\"12 in\\", \\"3 ft\\", \\"1760 yd\\",  \\"1 mi\\"]',
+				firstDenSelect: '[\\"1 in\\", \\"1 ft\\", \\"1 yd\\",  \\"1 mi\\"]',
+				initialAmount: '10',
+				numeratorStart: '10',
+				denominatorStart: '1',
+				numeratorSecond: '3',
+				denominatorSecond: '1',
+				numeratorThird: '12',
+				denominatorThird: '1',
+				unitsStart: 'yd',
+				unitsSecond: 'ft',
+				unitsThird: 'in',
+				firstNumAnswer: '3 ft',
+				firstDenAnswer: '1 yd',
+				secondNumAnswer: '12 in',
+				secondDenAnswer: '1 ft',
+				finalAnswer: '360',
+				helpFinalAnswer: '360',
+				firstWordCancel: 'yd',
+				secondWordCancel: 'ft',
+				thirdWordCancel: 'in',
+				firstImage: 'Yard_01_V2_48x67.png',
+				secondImage: 'Foot_01_V2_48x67.png',
+				thirdImage: 'Inches_01_V2_48x67.png',
+				descriptor: '',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>1760 yd</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'twoStep' 
+			}
+			,
 			{ // problem 21
 				problemText: '1.5 tons is how many ounces?',
 				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
@@ -771,8 +983,8 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstNumSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
 				firstDenSelect: '[\\"1 fl oz\\", \\"1 lbs\\", \\"1 ton\\"]',
 				initialAmount: '1.5',
-				numeratorStart: '3',
-				denominatorStart: '2',
+				numeratorStart: '1.5',
+				denominatorStart: '1',
 				numeratorSecond: '2000',
 				denominatorSecond: '1',
 				numeratorThird: '16',
@@ -792,7 +1004,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'Ton_01_40x50.png',
 				secondImage: 'Pound_02_40x60.png',
 				thirdImage: 'Ounce_01_V2_Large_40x60.png',
-				
+				descriptor: '<br>Use \\"1.5\\" in decimal form.',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
 				template: 'twoStep' 
 			}
@@ -825,7 +1037,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'Ton_01_40x50.png',
 				secondImage: 'Pound_02_40x60.png',
 				thirdImage: 'Ounce_01_V2_Large_40x60.png',
-				
+				descriptor: '',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
 				template: 'twoStep' 
 			},
@@ -857,7 +1069,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'Ounce_01_V2_Large_40x60.png',
 				secondImage: 'Pound_02_40x60.png',
 				thirdImage: 'Ton_01_40x50.png',
-				
+				descriptor: '',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
 				template: 'twoStep' 
 			}
@@ -890,7 +1102,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'Ounce_01_V2_Large_40x60.png',
 				secondImage: 'Pound_02_40x60.png',
 				thirdImage: 'Ton_01_40x50.png',
-				
+				descriptor: '',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
 				template: 'twoStep' 
 			}
@@ -999,6 +1211,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'quart-02-40x70.png',
 				secondImage: 'pint-01_50x70.png',
 				thirdImage: 'cup-02-50x60.png',
+				descriptor: '',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
 				template: 'twoStep' 
 			}
@@ -1031,6 +1244,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstImage: 'quart-02-40x70.png',
 				secondImage: 'pint-01_50x70.png',
 				thirdImage: 'cup-02-50x60.png',
+				descriptor: '',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbs</td></tr><tr><td>2 tbs</td><td>=</td><td>1 oz</td></tr><tr><td>8 oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
 				template: 'twoStep' 
 			}
