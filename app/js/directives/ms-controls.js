@@ -138,6 +138,9 @@ angular.module('mathSkills')
 								
 								$scope.fixBottomRight = function () {
 									if (typeof $scope.data.fixBottomRight !== "undefined" && $scope.data.fixBottomRight === true) {
+										var wt = $(window).scrollTop();
+										var wb = wt + $(window).height();
+										window.scrollTo(0, wb);
 										return "fixBottomRight span2";
 									} else {
 										return "";
