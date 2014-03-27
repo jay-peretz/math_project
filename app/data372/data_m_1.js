@@ -429,24 +429,28 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
                     }]
                 }]
             },
-
-			threeFractions: {
-                title: 'Subtracting Unlike Fractions',
+            // Three fractions with parenthesis
+            threeFractionsPar: {
+                title: 'Combining Fractions and Mixed Numbers',
                 children: [{
-                    title: 'Main Answer',
+                    title: 'twoFractions Answer',
                     children: [{
 						problem: '\\html{&nbsp;}',
 						answer: '\\grp'
+							+'{\\sign{$firstSign}}'
 							+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\sign{&minus;}}'
+							+'{\\sign{$secondSign}}'
+							+'{\\html{$leftParen}}'
+							//+'{\\sign{$thirdSign}}'
 							+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\sign{&minus;}}'
+							+'{\\html{$rightParen}}'
+							+'{\\sign{$forthSign}}'
+							+'{\\html{$leftParen}}'
+							+'{\\sign{$fifthSign}}'
 							+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
-							+'{\\html{&nbsp;}}'
+							+'{\\html{$rightParen}}'
 							+'{\\sign{=}}'
-							+'{\\html{&nbsp;}}'
+							+'{\\sign{$answerSign}}'
 							+'{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}',
 						controls: {
 							"checkAnswer": true,
@@ -458,12 +462,19 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
                     title: 'Workbook',
                     children: [{
 						problem: '\\grp'
+									+'{\\sign{$firstSign}}'
 									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-									+'{\\sign{&minus;}}'
+									+'{\\sign{$secondSign}}'
+									+'{\\html{$leftParen}}'
+									//+'{\\sign{$thirdSign}}'
 									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-									+'{\\sign{&minus;}}'
+									+'{\\html{$rightParen}}'
+									+'{\\sign{$forthSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\sign{$fifthSign}}'
 									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
-									+'{\\html{&nbsp;}}',
+									+'{\\html{$rightParen}}'
+								+'}',
 						answer: '\\rowgrp'
 									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
 									+'{\\html{&nbsp;}}'
@@ -475,68 +486,101 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 						},
                     }, {
 						problem: '\\grp'
+									+'{\\sign{$firstSign}}'
 									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-									+'{\\sign{&minus;}}'
+									+'{\\sign{$secondSign}}'
+									+'{\\html{$leftParen}}'
+									//+'{\\sign{$thirdSign}}'
 									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-									+'{\\sign{&minus;}}'
+									+'{\\html{$rightParen}}'
+									+'{\\sign{$forthSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\sign{$fifthSign}}'
 									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
-									+'{\\html{&nbsp;}}',
+									+'{\\html{$rightParen}}'
+								+'}',
 						answer: '\\css'
-							+'{\\rowgrp'
-									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\html{$answerDen}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\ins{Use the LCD to convert the fractions:}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-											+'{\\sign{&minus;}}'
-											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-											+'{\\sign{&minus;}}'
-											+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}}'
-											+'{\\html{&nbsp;}}'
-											+'{\\grp{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
-											+'{\\sign{&minus;}}'
-											+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
-											+'{\\sign{&minus;}}'
-											+'{\\frac{\\input{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}'
-    										+'{\\html{&nbsp;}}'
-								+'}{well}',
-						controls: {
-							"checkAnswer": true,
-							"help": true
-						}
-                    }, {
-						problem: '\\grp'
-									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-									+'{\\sign{&minus;}}'
-									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-									+'{\\sign{&minus;}}'
-									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
-									+'{\\html{&nbsp;}}',
-						answer: '\\css'					
 								+'{\\rowgrp'
 									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\html{$answerDen}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\html{Use the LCD to convert the fractions:}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-										+'{\\sign{&minus;}}'
-										+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-										+'{\\sign{&minus;}}'
-										+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
-										+'{\\sign{&minus;}}'
-										+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
-										+'{\\sign{&minus;}}'
-										+'{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\ins{Subtract the numerators:}}'
-									+'{\\grp{\\frac{\\grp{\\fracstr{$firstAnswerNum}}{\\sign{&minus;}}{\\fracstr{$secondAnswerNum}}{\\sign{&minus;}}{\\fracstr{$thirdAnswerNum}}}{\\fracstr{$answerDen}}}{\\sign{=}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}'	
-        								+'}{well}',
+									+'{\\ins{Use the LCD to convert the fractions:}}'
+									+'{\\grp{\\sign{$firstSign}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+        										+'{\\sign{$secondSign}}'
+        										+'{\\html{$leftParen}}'
+        										+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+        										+'{\\html{$rightParen}}' 
+        										+'{\\sign{$forthSign}}'
+												+'{\\html{$leftParen}}'
+												+'{\\sign{$fifthSign}}'
+												+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+												+'{\\html{$rightParen}}}'      								
+        							+'{\\html{&nbsp;}}'
+									+'{\\grp'
+        										+'{\\sign{$firstSign}}'
+        										+'{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+        										+'{\\sign{$secondSign}}'
+        										+'{\\html{$leftParen}}'
+        										+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
+        										+'{\\html{$rightParen}}'
+        										+'{\\sign{$forthSign}}'
+        										+'{\\html{$leftParen}}'
+        										+'{\\sign{$fifthSign}}'
+        										+'{\\frac{\\input{$thirdAnswerNum}}{\\fracstr{$answerDen}}}'
+        										+'{\\html{$rightParen}}'
+        										+'}'
+        									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						}
+                    }, {
+						problem: 'grp'
+									+'{\\sign{$firstSign}}'
+									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+									+'{\\sign{$secondSign}}'
+									+'{\\html{$leftParen}}'
+									//+'{\\sign{$thirdSign}}'
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+									+'{\\html{$rightParen}}'
+									+'{\\sign{$forthSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\sign{$fifthSign}}'
+									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+									+'{\\html{$rightParen}}'
+								+'}',
+							answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{$answerDen}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\sign{$firstSign}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+        										+'{\\sign{$secondSign}}'
+        										+'{\\html{$leftParen}}'
+        										+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+        										+'{\\html{$rightParen}}' 
+        										+'{\\sign{$forthSign}}'
+												+'{\\html{$leftParen}}'
+												+'{\\sign{$fifthSign}}'
+												+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+												+'{\\html{$rightParen}}}'    
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\sign{$firstSign}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{$secondSign}}'
+											+'{\\sign{$leftParen}}'
+											+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}{\\sign{$rightParen}}'
+											+'{\\sign{$forthSign}}'
+											+'{\\sign{$leftParen}}'
+											+'{\\sign{$fifthSign}}'
+											+'{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}{\\sign{$rightParen}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{$oper the numerators:}}'
+										+'{\\grp\\{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$firstAnswerNum}}{\\sign{$secondSign}}{\\sign{$leftParen}}{\\fracstr{$secondAnswerNum}}{\\sign{$rightParen}}{\\sign{$forthSign}}{\\sign{$leftParen}}{\\sign{$fifthSign}}{\\fracstr{$thirdAnswerNum}}{\\sign{$rightParen}}}{\\fracstr{$answerDen}}}{\\sign{=}}{\\input{$answerSign}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}'	
+        									+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true,
@@ -544,7 +588,228 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 						}
                     }]
                 }]
-            },         
+            }, 
+            // Three fractions with double negative
+            threeFracDblNeg: {
+                title: 'Combining Fractions and Mixed Numbers',
+                children: [{
+                    title: 'twoFractions Answer',
+                    children: [{
+						problem: '\\html{&nbsp;}',
+						answer: '\\grp'
+							+'{\\sign{$firstSign}}'
+							+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+							+'{\\sign{$secondSign}}'
+							+'{\\html{$leftParen}}'
+							+'{\\sign{$thirdSign}}'
+							+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+							+'{\\html{$rightParen}}'
+							+'{\\sign{$forthSign}}'
+							+'{\\html{$leftParen}}'
+							+'{\\sign{$fifthSign}}'
+							+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+							+'{\\html{$rightParen}}'
+							+'{\\sign{=}}'
+							+'{\\sign{$answerSign}}'
+							+'{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}',
+
+						controls: {
+							"checkAnswer": true,
+							"help": false,
+							"workbook": true
+						}
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+						problem: '\\grp'
+									+'{\\sign{$firstSign}}'
+									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+									+'{\\sign{$secondSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\sign{$thirdSign}}'
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+									+'{\\html{$rightParen}}'
+									+'{\\sign{$forthSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\sign{$fifthSign}}'
+									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+									+'{\\html{$rightParen}}'
+								+'}',
+						answer: '\\rowgrp'+
+									'{\\ins{Choose the expression that is rewritten correctly without any double negatives:}}'+
+									'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
+                                    '{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\html{\xA0$buttonLabelB}}}'+
+                                    '{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\html{\xA0$buttonLabelC}}}'+
+                                    '{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\html{\xA0$buttonLabelD}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{The minus sign in front of a parenthesis means to take the opposite sign of the negative $negFrac inside the parenthesis.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{The expression without double negatives is:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\row'
+											+'{\\sign{$sign1}}'
+											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+											+'{\\sign{$sign2}}'
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+											+'{\\sign{$sign3}}'
+											+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+											+'}'
+						},
+                    }, {
+                    	problem: '\\grp'
+									+'{\\sign{$firstSign}}'
+									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+									+'{\\sign{$secondSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\sign{$thirdSign}}'
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+									+'{\\html{$rightParen}}'
+									+'{\\sign{$forthSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\sign{$fifthSign}}'
+									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+									+'{\\html{$rightParen}}'
+								+'}',
+						answer: '\\css'
+								+'{\\rowgrp'
+									+'{\\html{The expression without double negatives is:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\row'
+											+'{\\sign{$sign1}}'
+											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+											+'{\\sign{$sign2}}'
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+											+'{\\sign{$sign3}}'
+											+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+										+'}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\input{$answerDen}}'
+								+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						},
+                    }, {
+						problem: '\\grp'
+									+'{\\sign{$firstSign}}'
+									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+									+'{\\sign{$secondSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\sign{$thirdSign}}'
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+									+'{\\html{$rightParen}}'
+									+'{\\sign{$forthSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\sign{$fifthSign}}'
+									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+									+'{\\html{$rightParen}}'
+								+'}',
+						answer: '\\css'
+								+'{\\rowgrp'
+									+'{\\html{The expression without double negatives is:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\row'
+											+'{\\sign{$sign1}}'
+											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+											+'{\\sign{$sign2}}'
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+											+'{\\sign{$sign3}}'
+											+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$answerDen}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Use the LCD to convert the fractions:}}'
+									+'{\\row'
+											+'{\\sign{$sign1}}'
+											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+											+'{\\sign{$sign2}}'
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+											+'{\\sign{$sign3}}'
+											+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+										+'}'   								
+        							+'{\\html{&nbsp;}}'
+									+'{\\grp'
+        										+'{\\sign{$sign1}}'
+        										+'{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+        										+'{\\sign{$sign2}}'
+        										+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
+        										+'{\\sign{$sign3}}'
+        										+'{\\frac{\\input{$thirdAnswerNum}}{\\fracstr{$answerDen}}}'
+        										+'}'
+        									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						}
+                    }, {
+						problem: 'grp'
+									+'{\\sign{$firstSign}}'
+									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+									+'{\\sign{$secondSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\sign{$thirdSign}}'
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+									+'{\\html{$rightParen}}'
+									+'{\\sign{$forthSign}}'
+									+'{\\html{$leftParen}}'
+									+'{\\sign{$fifthSign}}'
+									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+									+'{\\html{$rightParen}}'
+								+'}',
+							answer: '\\css'
+									+'{\\rowgrp'
+									+'{\\html{The expression without double negatives is:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\row'
+											+'{\\sign{$sign1}}'
+											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+											+'{\\sign{$sign2}}'
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+											+'{\\sign{$sign3}}'
+											+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{$answerDen}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\row'
+											+'{\\sign{$sign1}}'
+											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+											+'{\\sign{$sign2}}'
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+											+'{\\sign{$sign3}}'
+											+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+										+'}'    
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\sign{$sign1}}{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{$sign2}}'
+											+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{$sign3}}'
+											+'{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{$oper the numerators:}}'
+										+'{\\grp\\{\\frac{\\grp{sign{$sign1}}{\\fracstr{$firstAnswerNum}}{\\sign{$sign2}}{\\fracstr{$secondAnswerNum}}{\\sign{$sign3}}{\\fracstr{$thirdAnswerNum}}}{\\fracstr{$answerDen}}}{\\sign{=}}{\\input{$answerSign}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}'	
+        									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true,
+							"fixBottomRight": true
+						}
+                    }]
+                }]
+            },       
         },
         data = [
             //problem 1
@@ -567,17 +832,27 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
             buttonValueB: 'F', buttonLabelB: '<span class=bigger>&nbsp;</span>1/4 <span class=bigger>+</span> 5/6', 
             buttonValueC: 'T', buttonLabelC: '<span class=bigger>-</span>1/4 <span class=bigger>+</span> 5/6', 
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>1/4 <span class=bigger>-</span> 5/6' },
-            
-
-            //{ firstNum: '1', firstDen: '4', secondNum: '5', secondDen: '6', firstAnswerNum: '3', secondAnswerNum: '-10', differenceNum: '7', answerDen: '12', firstSign: '', secondSign: '+', thirdSign: '-', answerSign: ' ', leftParen: '(', rightParen: ')', template: 'twoFractions' },
- /*           { firstNum: '1', firstDen: '4', secondNum: '1', secondDen: '10', firstAnswerNum: '5', secondAnswerNum: '2', differenceNum: '3', answerDen: '20', template: 'twoFractions' },
-			{ firstNum: '7', firstDen: '8', secondNum: '5', secondDen: '12', firstAnswerNum: '21', secondAnswerNum: '10', differenceNum: '11', answerDen: '24', template: 'twoFractions' },
-			{ firstNum: '1', firstDen: '2', secondNum: '3', secondDen: '11', firstAnswerNum: '11', secondAnswerNum: '6', differenceNum: '5', answerDen: '22', template: 'twoFractions' },
-
-			{ firstNum: '7', firstDen: '8', secondNum: '1', secondDen: '\xA06\xA0', thirdNum: '2', thirdDen: '\xA03\xA0', firstAnswerNum: '21', secondAnswerNum: '4', thirdAnswerNum: '16', differenceNum: '1', answerDen: '24', template: 'threeFractions' },
-			{ firstNum: '9', firstDen: '5', secondNum: '3', secondDen: '\xA08\xA0', thirdNum: '1', thirdDen: '\xA02\xA0', firstAnswerNum: '72', secondAnswerNum: '15', thirdAnswerNum: '20', differenceNum: '37', answerDen: '40', template: 'threeFractions' },
-			{ firstNum: '11', firstDen: '14', secondNum: '2', secondDen: '7', thirdNum: '1', thirdDen: '4', firstAnswerNum: '22', secondAnswerNum: '8', thirdAnswerNum: '7', differenceNum: '7', answerDen: '28', template: 'threeFractions' }
-*/			
+             //problem 9
+            { firstNum: '2', firstDen: '5', secondNum: '3', secondDen: '8', firstAnswerNum: '16', secondAnswerNum: '15', differenceNum: '31', answerDen: '40', firstSign: '', secondSign: '&minus;', thirdSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', oper: 'Add', template: 'twoFracDblNeg', 
+            buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>2/5 <span class=bigger>-</span> 3/8', 
+            buttonValueB: 'T', buttonLabelB: '<span class=bigger>&nbsp;</span>2/5 <span class=bigger>+</span> 3/8', 
+            buttonValueC: 'F', buttonLabelC: '<span class=bigger>-</span>2/5 <span class=bigger>-</span> 3/8', 
+            buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>2/5 <span class=bigger>-</span> 3/8' },
+            //problem 10
+            { firstNum: '11', firstDen: '10', secondNum: '3', secondDen: '4', thirdNum: '2', thirdDen: '5', firstAnswerNum: '22', secondAnswerNum: '15', thirdAnswerNum: '8', differenceNum: '-1', answerDen: '20', firstSign: '', secondSign: '&minus;', thirdSign: '', forthSign: '+', fifthSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', oper: 'Add', template: 'threeFractionsPar' },
+            //problem 11
+            { firstNum: '6', firstDen: '7', secondNum: '3', secondDen: '14', thirdNum: '1', thirdDen: '4', firstAnswerNum: '24', secondAnswerNum: '6', thirdAnswerNum: '7', differenceNum: '25', answerDen: '28', firstSign: '', secondSign: '+', thirdSign: '&minus;', forthSign: '&minus;', fifthSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', negFrac: '1/4', oper: 'Subtract and add', sign1: '', sign2: '&minus;', sign3: '+',  template: 'threeFracDblNeg', 
+            buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>6/7 <span class=bigger>-</span> 3/14 <span class=bigger>+</span> 1/4', 
+            buttonValueB: 'F', buttonLabelB: '<span class=bigger>&nbsp;</span>6/7 <span class=bigger>+</span> 3/14 <span class=bigger>-</span> 1/4', 
+            buttonValueC: 'T', buttonLabelC: '<span class=bigger>&nbsp;</span>6/7 <span class=bigger>-</span> 3/14 <span class=bigger>+</span> 1/4', 
+            buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>6/7 <span class=bigger>+</span> 3/14 <span class=bigger>-</span> 1/4' },
+            //problem 12
+            { firstNum: '7', firstDen: '8', secondNum: '3', secondDen: '16', thirdNum: '2', thirdDen: '3', firstAnswerNum: '42', secondAnswerNum: '9', thirdAnswerNum: '32', differenceNum: '-1', answerDen: '48', firstSign: '&minus;', secondSign: '&minus;', thirdSign: '&minus;', forthSign: '+', fifthSign: '', answerSign: '', leftParen: '(', rightParen: ')', negFrac: '3/16', oper: 'Add and subtract', sign1: '&minus;', sign2: '+', sign3: '+', template: 'threeFracDblNeg', 
+            buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>7/8 <span class=bigger>-</span> 3/16 <span class=bigger>+</span> 2/3', 
+            buttonValueB: 'T', buttonLabelB: '<span class=bigger>-</span>7/8 <span class=bigger>+</span> 3/16 <span class=bigger>+</span> 2/3', 
+            buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>7/8 <span class=bigger>+</span> 3/16 <span class=bigger>+</span> 2/3', 
+            buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>7/8 <span class=bigger>+</span> 3/16 <span class=bigger>-</span> 2/3' },
+		
         ];
 
     return dataUtils.build(desc, template, data);
