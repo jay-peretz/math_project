@@ -27,9 +27,9 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                         answer: '\\css{'+
                                     '\\rowgrp'+
                                         '{\\ins{Identify each value on the number line:}}'+
-                                        '{\\grp{\\str{A = }}{\\input{$val1}}}'+
-                                        '{\\grp{\\str{B = }}{\\input{$val2}}}'+
-                                        '{\\grp{\\str{C = }}{\\input{$val3}}}'+
+                                        '{\\mixed{\\grp{\\str{A = }}{\\input{$val1}}}}'+
+                                        '{\\mixed{\\grp{\\str{B = }}{\\input{$val2}}}}'+
+                                        '{\\mixed{\\grp{\\str{C = }}{\\input{$val3}}}}'+
                                 '}{well}',
 						controls: {
 							"checkAnswer": true,
@@ -122,15 +122,18 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
 			// { firstButton: 'F', secondButton: 'T', firstNumber: '-5', secondNumber: '5', startGraph: '-10', endGraph: '10', statement: 'LESS THAN', template: 'second', answerBtn: 'noAnswer' },
 			
 			{  //1 //15 from 2A.2
-                chart1: dataUtils.pre('\\graphnum{Title}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{500}{Side title}{chart1}'),
-                chart2: dataUtils.pre('\\graphnum{Title}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{500}{Side title}{chart2}'), 
+                // chart1: dataUtils.pre('\\graphnum{Title}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{500}{Side title}{chart1}'),
+                // chart2: dataUtils.pre('\\graphnum{Title}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{500}{Side title}{chart2}'), 
+                chart1: dataUtils.pre('\\graphnum{-10}{10}{1}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{chart1}'),
+                chart2: dataUtils.pre('\\graphnum{-10}{10}{1}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{chart2}'), 
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'main', answerBtn: 'noAnswer',
                 //answertxt: 'There were approximately 590 deer counted in January and April.',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 Answer 1}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 Answer 2}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 Answer 3}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 Answer 4}}')
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 -1}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 2}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 1}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
+                val1: '-9', val2: '-3', val3: '6'
             },
 			/*{  //2 //16 from 2A.2
                 chart: dataUtils.pre('\\horgraph{Title of this graph}{[[0, "1965"], [2, "1965"], null, [0, "1985"], [3, "1985"], null, [0, "2005"], [11, "2005"], null, [0, "2025"],[22, "2025"]]}{Population of Country A}{[[0, "1962"], [3, "1962"], null, [0, "1982"], [5, "1982"], null, [0, "2002"], [9, "2002"], null, [0, "2022"],[18, "2022"]]}{Population Country A can Feed}{Years}{Number (in millions)}'), 

@@ -4,14 +4,18 @@ angular.module('mathSkills')
 	.config(['parserProvider', function (parserProvider) {
         parserProvider.register('graphnum', {
             argTemplates: [{
-                name: 'graphtitle'
+            	name: 'graphmin'
+            },{
+            	name: 'graphmax'
+            },{
+            	name: 'graphticksize'
             },{
                 name: 'graphdata'
             },{
-                name: 'graphmaxy'
-            },{
-                name: 'graphvertical'
-            },{
+            //     name: 'graphmaxy'
+            // },{
+            //     name: 'graphvertical'
+            // },{
                 name: 'graphId'
             }],
             directiveTemplate: '<ms-graph-numberline expected={{expected}}></ms-graph-numberline>'
@@ -31,16 +35,25 @@ angular.module('mathSkills')
 				$scope.answer = '';
                 $scope.controllerId = Math.random().toString();
 				$scope.answercorrect = "";
-				$scope.graphtitle = [];
-				$scope.graphTitleIn = "";
+				$scope.graphmin = [];
+				$scope.graphminIn = "";
+				$scope.graphmax = [];
+				$scope.graphmaxIn = "";
+				$scope.graphticksize = [];
+				$scope.graphticksizeIn = "";
+				//$scope.graphtitle = [];
+				//$scope.graphTitleIn = "";
 				$scope.graphdata = [];
-				$scope.graphvertical = [];
-				$scope.graphmaxy = [];
-				$scope.graphverticalIn = "";
+				// $scope.graphvertical = [];
+				// $scope.graphmaxy = [];
+				// $scope.graphverticalIn = "";
 				
 				var	graphdataIn = [],
-					graphverticalIn = [],
-					graphmaxyIn = [];
+					graphminIn = [],
+					graphmaxIn = [],
+					graphticksizeIn = [];
+					//graphverticalIn = [],
+					//graphmaxyIn = [];
 				
 			 // Extract the value for $scope.graphlinesIn
 				$scope.$watch('expected', function () {
@@ -49,9 +62,27 @@ angular.module('mathSkills')
 					}
 				});
 				
-				$scope.$watch('graphtitle', function () {
-					if (typeof $scope.graphtitle === "string") {
-						$scope.graphTitleIn = $scope.graphtitle;
+				// $scope.$watch('graphtitle', function () {
+				// 	if (typeof $scope.graphtitle === "string") {
+				// 		$scope.graphTitleIn = $scope.graphtitle;
+				// 	}
+				// });
+
+				$scope.$watch('graphmin', function () {
+					if (typeof $scope.graphmin === "string") {
+						graphminIn = $scope.graphmin;
+					}
+				});
+
+				$scope.$watch('graphmax', function () {
+					if (typeof $scope.graphmax === "string") {
+						graphmaxIn = $scope.graphmax;
+					}
+				});
+
+				$scope.$watch('graphticksize', function () {
+					if (typeof $scope.graphticksize === "string") {
+						graphticksizeIn = $scope.graphticksize;
 					}
 				});
 				
@@ -61,42 +92,43 @@ angular.module('mathSkills')
 					}
 				});
 				
-				$scope.$watch('graphmaxy', function () {
-					if (typeof $scope.graphmaxy === "string") {
-						graphmaxyIn = $scope.graphmaxy;
-					}
-				});
+				// $scope.$watch('graphmaxy', function () {
+				// 	if (typeof $scope.graphmaxy === "string") {
+				// 		graphmaxyIn = $scope.graphmaxy;
+				// 	}
+				// });
 						
-				$scope.$watch('graphvertical', function () {
-					if (typeof $scope.graphvertical === "string") {
-						$scope.graphverticalIn = $scope.graphvertical;
-					}
-				});	
+				// $scope.$watch('graphvertical', function () {
+				// 	if (typeof $scope.graphvertical === "string") {
+				// 		$scope.graphverticalIn = $scope.graphvertical;
+				// 	}
+				// });	
 					
 				$scope.$watch('graphId', function () {
 					if (typeof $scope.graphId === "string") {
 						$scope.graphIdIn = $scope.graphId;
 					}
 					
-					console.log("$scope.graphIdIn is: ",$scope.graphIdIn);
+				//	console.log("$scope.graphIdIn is: ",$scope.graphIdIn);
 						
-				var d1 = [[-9, 0]];
-				var d2 = [[6, 0]];
-				var d3 = [[-3, 0]];
+				var d1 = [-9, 0];
+				var d2 = [6, 0];
+				var d3 = [-3, 0];
 				var data = [
-					{ data: d1, 
+					{ data: [d1, d2, d3], 
 						points: { symbol: "circle"}, 
 						color: "#CC0000"
-						},
-					{ data: d2, 
-						points: { symbol: "circle" }, 
-						color: "#CC0000"
-						},
-					{ data: d3, 
-						points: { symbol: "circle" },
-						color: "#CC0000"
-						}				
-				];	
+						}
+					// { data: d2, 
+					// 	points: { symbol: "circle" }, 
+					// 	color: "#CC0000"
+					// 	},
+					// { data: d3, 
+					// 	points: { symbol: "circle" },
+					// 	color: "#CC0000"
+					// 	}				
+				];
+
 				$timeout(function () {	
 					var placeholder = $('#'+ $scope.graphIdIn);
 					var plot = $.plot('#'+ $scope.graphIdIn, data, {
@@ -126,9 +158,9 @@ angular.module('mathSkills')
 							    return res;
 							},					
 							//ticks: 10,
-							tickSize: 2,							
-							min: -10,
-							max: 10,
+							tickSize: graphticksizeIn,							
+							min: graphminIn,
+							max: graphmaxIn,
 							tickDecimals: 0
 						},
 						 yaxis: {
