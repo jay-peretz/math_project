@@ -312,9 +312,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 							"checkAnswer": true,
 							"help": '\\rowgrp'
 										+'{\\html{&nbsp;}}'
-										+'{\\html{The minus sign in front of a parenthesis means to take the opposite sign of the negative}}'
-										+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}' 
-										+'{\\html{inside the parenthesis.}}'
+										+'{\\html{The minus sign in front of a parenthesis means to take the opposite sign of the negative $negFrac inside the parenthesis.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\html{The expression without double negatives is:}}'
 										+'{\\html{&nbsp;}}'
@@ -827,13 +825,13 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
             //problem 7
             { firstNum: '2', firstDen: '3', secondNum: '1', secondDen: '6', firstAnswerNum: '4', secondAnswerNum: '-1', differenceNum: '-5', answerDen: '6', firstSign: '&minus;', secondSign: '+', thirdSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', oper: 'Add', template: 'twoFractionsPar' },
             //problem 8
-            { firstNum: '1', firstDen: '4', secondNum: '5', secondDen: '6', firstAnswerNum: '3', secondAnswerNum: '10', differenceNum: '7', answerDen: '12', firstSign: '&minus;', secondSign: '&minus;', thirdSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', oper: 'Add', template: 'twoFracDblNeg', 
+            { firstNum: '1', firstDen: '4', secondNum: '5', secondDen: '6', firstAnswerNum: '3', secondAnswerNum: '10', differenceNum: '7', answerDen: '12', firstSign: '&minus;', secondSign: '&minus;', thirdSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', negFrac: '5/6', oper: 'Add', template: 'twoFracDblNeg', 
             buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>1/4 <span class=bigger>-</span> 5/6', 
             buttonValueB: 'F', buttonLabelB: '<span class=bigger>&nbsp;</span>1/4 <span class=bigger>+</span> 5/6', 
             buttonValueC: 'T', buttonLabelC: '<span class=bigger>-</span>1/4 <span class=bigger>+</span> 5/6', 
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>1/4 <span class=bigger>-</span> 5/6' },
              //problem 9
-            { firstNum: '2', firstDen: '5', secondNum: '3', secondDen: '8', firstAnswerNum: '16', secondAnswerNum: '15', differenceNum: '31', answerDen: '40', firstSign: '', secondSign: '&minus;', thirdSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', oper: 'Add', template: 'twoFracDblNeg', 
+            { firstNum: '2', firstDen: '5', secondNum: '3', secondDen: '8', firstAnswerNum: '16', secondAnswerNum: '15', differenceNum: '31', answerDen: '40', firstSign: '', secondSign: '&minus;', thirdSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', negFrac: '3/8', oper: 'Add', template: 'twoFracDblNeg', 
             buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>2/5 <span class=bigger>-</span> 3/8', 
             buttonValueB: 'T', buttonLabelB: '<span class=bigger>&nbsp;</span>2/5 <span class=bigger>+</span> 3/8', 
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>-</span>2/5 <span class=bigger>-</span> 3/8', 
