@@ -12,8 +12,8 @@
 
 angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUtils) {
     var desc = {
-    		title: 'M.1 Combining Fractions and Mixed Numbers',
-    	    path: 'M.1-combining-fractions-and-mixed-numbers',
+    		title: 'M.1 Combining Fractions',
+    	    path: 'M.1-combining-fractions',
             children: []
         },
 	        template = {
@@ -346,7 +346,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\grp{\\input{$answerDen}}'
+									+'{\\grp{\\input{$answerDen}}}'
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
@@ -687,7 +687,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\grp{\\input{$answerDen}}'
+									+'{\\grp{\\input{$answerDen}}}'
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
@@ -821,7 +821,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
              //problem 5
             { firstNum: '4', firstDen: '9', secondNum: '1', secondDen: '3', firstAnswerNum: '4', secondAnswerNum: '3', differenceNum: '7', answerDen: '9', firstSign: '', secondSign: '+', thirdSign: '', answerSign: '', leftParen: '(', rightParen: ')', oper: 'Add', template: 'twoFractionsPar' },
             //problem 6
-            { firstNum: '5', firstDen: '12', secondNum: '2', secondDen: '3', firstAnswerNum: '-5', secondAnswerNum: '8', differenceNum: '-13', answerDen: '12', firstSign: '&minus;', secondSign: '&minus;', thirdSign: '', answerSign: '', leftParen: '(', rightParen: ')', oper: 'Subtract', template: 'twoFractionsPar' },
+            { firstNum: '5', firstDen: '12', secondNum: '2', secondDen: '3', firstAnswerNum: '5', secondAnswerNum: '8', differenceNum: '-13', answerDen: '12', firstSign: '&minus;', secondSign: '&minus;', thirdSign: '', answerSign: '', leftParen: '(', rightParen: ')', oper: 'Subtract', template: 'twoFractionsPar' },
             //problem 7
             { firstNum: '2', firstDen: '3', secondNum: '1', secondDen: '6', firstAnswerNum: '4', secondAnswerNum: '-1', differenceNum: '-5', answerDen: '6', firstSign: '&minus;', secondSign: '+', thirdSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', oper: 'Add', template: 'twoFractionsPar' },
             //problem 8
