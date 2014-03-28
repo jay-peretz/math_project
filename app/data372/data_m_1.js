@@ -386,7 +386,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						}
+						},
                     }, {
 						problem: 'grp'
 									+'{\\sign{$firstSign}}'
