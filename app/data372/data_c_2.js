@@ -24,7 +24,7 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
                     title: 'Workbook',
                     children: [{
                         problem: '\\str{Find the LCM of $firstDen and $secondDen.}',
-						answer: '\\findlcm{$firstDen}{$secondDen}',
+						answer: '\\findgcf{$firstDen}{$secondDen}',
 						controls: {
 							"checkAnswer": true,
 							"help": true

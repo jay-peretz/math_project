@@ -125,18 +125,18 @@ angular.module('mathSkills')
 								$scope.howManyPrimes = $scope.primeFactors.length;
 								// Setup our input expression.
 								$scope.factorExp = getFactorExp();
-								$scope.numberObjects['numbObj' + ii] = {};
-								$scope.numberObjects['numbObj' + ii].numbers = $scope.numbers;
-								$scope.numberObjects['numbObj' + ii].primeFactors = $scope.primeFactors;
-								$scope.numberObjects['numbObj' + ii].howManyPrimes = $scope.howManyPrimes;
-								$scope.numberObjects['numbObj' + ii].factorExp = $scope.factorExp;
-								$scope.numberObjects['numbObj' + ii].completed = [];
-								$scope.numberObjects['numbObj' + ii].done = false;
-								
+								$scope.numberObjects['numbObj' + ii] = {
+									numbers: $scope.numbers,
+									primeFactors: $scope.primeFactors,
+									howManyPrimes: $scope.howManyPrimes,
+									factorExp: $scope.factorExp,
+									completed: [],
+									done: false
+								};
 								focus();
 						}
                     }
-					for (var ii = 0, len = $scope.allNumbers.length; ii < len; ii += 1) {
+					for (var ii in $scope.allNumbers) {
 						console.log("JSON.stringify($scope.numberObjects) is: ",JSON.stringify($scope.numberObjects));
 					}
                 });
