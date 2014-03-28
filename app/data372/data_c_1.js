@@ -9,7 +9,7 @@ angular.module('mathSkills').value('data_c_1', {
             title: 'Main Answer',
             children: [{
                 problem: '\\str{Write the prime factorization of 143}',
-                answer: '\\grp{\\input{11}}{\\sign{·}}{\\input{13}}',
+                answer: '\\grp{\\input{11}}{\\sign{&bull;}{biggestnew}}{\\input{13}}',
                 controls: {
                     "checkAnswer": true,
                     "help": false,
@@ -33,7 +33,7 @@ angular.module('mathSkills').value('data_c_1', {
             title: 'Main Answer',
             children: [{
                 problem: '\\str{Write the prime factorization of 22}',
-                answer: '\\grp{\\input{2}}{\\sign{·}}{\\input{11}}',
+                answer: '\\grp{\\input{2}}{\\sign{*}}{\\input{11}}',
                 controls: {
                     "checkAnswer": true,
                     "help": false,
