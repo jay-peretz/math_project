@@ -5,7 +5,7 @@
 
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
-        parserProvider.register('findlcm', {
+        parserProvider.register('findgcf', {
             directiveTemplate: '<ms-find-gcf expected={{expected}} label={{label}}></ms-find-gcf>'
         });
     }])

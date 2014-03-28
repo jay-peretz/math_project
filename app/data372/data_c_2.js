@@ -59,7 +59,7 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
 			}
         },
         data = [
-            { firstNum: '1', firstDen: '2', secondNum: '2', secondDen: '4', answer: '4', template: 'twoFractions' },
+            { firstNum: '1', firstDen: '10', secondNum: '2', secondDen: '15', answer: '4', template: 'twoFractions' },
 			{ firstNum: '1', firstDen: '2', secondNum: '2', secondDen: '3', answer: '6', template: 'twoFractions' },
 			{ firstNum: '1', firstDen: '4', secondNum: '3', secondDen: '8', answer: '8', template: 'twoFractions' },
 			{ firstNum: '5', firstDen: '6', secondNum: '5', secondDen: '9', answer: '18', template: 'twoFractions' },
