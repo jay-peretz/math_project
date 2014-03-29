@@ -33,7 +33,7 @@ angular.module('mathSkills').value('data_c_1', {
             title: 'Main Answer',
             children: [{
                 problem: '\\str{Write the prime factorization of 22}',
-                answer: '\\grp{\\input{2}}{\\sign{*}}{\\input{11}}',
+                answer: '\\grp{\\input{2}}{\\sign{&bull;}{biggestnew}}{\\input{11}}',
                 controls: {
                     "checkAnswer": true,
                     "help": false,
@@ -57,7 +57,7 @@ angular.module('mathSkills').value('data_c_1', {
             title: 'Main Answer',
             children: [{
                 problem: '\\str{Write the prime factorization of 177}',
-                answer: '\\grp{\\input{3}}{\\sign{·}}{\\input{59}}',
+                answer: '\\grp{\\input{3}}{\\sign{&bull;}{biggestnew}}{\\input{59}}',
                 controls: {
                     "checkAnswer": true,
                     "help": false,
@@ -81,7 +81,7 @@ angular.module('mathSkills').value('data_c_1', {
             title: 'Main Answer',
             children: [{
                 problem: '\\str{Write the prime factorization of 105}',
-                answer: '\\grp{\\input{3}}{\\sign{·}}{\\input{5}}{\\sign{·}}{\\input{7}}',
+                answer: '\\grp{\\input{3}}{\\sign{&bull;}{biggestnew}}{\\input{5}}{\\sign{&bull;}{biggestnew}}{\\input{7}}',
                 controls: {
                     "checkAnswer": true,
                     "help": false,
@@ -105,7 +105,7 @@ angular.module('mathSkills').value('data_c_1', {
             title: 'Main Answer',
             children: [{
                 problem: '\\str{Write the prime factorization of 165}',
-                answer: '\\grp{\\input{3}}{\\sign{·}}{\\input{5}}{\\sign{·}}{\\input{11}}',
+                answer: '\\grp{\\input{3}}{\\sign{&bull;}{biggestnew}}{\\input{5}}{\\sign{&bull;}{biggestnew}}{\\input{11}}',
                 controls: {
                     "checkAnswer": true,
                     "help": false,
@@ -153,7 +153,7 @@ angular.module('mathSkills').value('data_c_1', {
             title: 'Main Answer',
             children: [{
                 problem: '\\str{Write the prime factorization of 200}',
-                answer: '\\grp{\\exp{\\input{2}}{\\input{3}}}{\\sign{·}}{\\exp{\\input{5}}{\\input{2}}}',
+                answer: '\\grp{\\exp{\\input{2}}{\\input{3}}}{\\sign{&bull;}{biggestnew}}{\\exp{\\input{5}}{\\input{2}}}',
                 controls: {
                     "checkAnswer": true,
                     "help": false,
@@ -177,7 +177,7 @@ angular.module('mathSkills').value('data_c_1', {
             title: 'Main Answer',
             children: [{
                 problem: '\\str{Write the prime factorization of 539}',
-                answer: '\\grp{\\exp{\\input{7}}{\\input{2}}}{\\sign{·}}{\\input{11}}',
+                answer: '\\grp{\\exp{\\input{7}}{\\input{2}}}{\\sign{&bull;}{biggestnew}}{\\input{11}}',
                 controls: {
                     "checkAnswer": true,
                     "help": false,
@@ -201,7 +201,7 @@ angular.module('mathSkills').value('data_c_1', {
             title: 'Main Answer',
             children: [{
                 problem: '\\str{Write the prime factorization of 63}',
-                answer: '\\grp{\\exp{\\input{3}}{\\input{2}}}{\\sign{·}}{\\input{7}}',
+                answer: '\\grp{\\exp{\\input{3}}{\\input{2}}}{\\sign{&bull;}{biggestnew}}{\\input{7}}',
                 controls: {
                     "checkAnswer": true,
                     "help": false,
@@ -225,7 +225,7 @@ angular.module('mathSkills').value('data_c_1', {
             title: 'Main Answer',
             children: [{
                 problem: '\\str{Write the prime factorization of 375}',
-                answer: '\\grp{\\input{3}}{\\sign{·}}{\\exp{\\input{5}}{\\input{3}}}',
+                answer: '\\grp{\\input{3}}{\\sign{&bull;}{biggestnew}}{\\exp{\\input{5}}{\\input{3}}}',
                 controls: {
                     "checkAnswer": true,
                     "help": false,

@@ -384,6 +384,142 @@ angular.module('mathSkills').service('data_g_3', ['dataUtils', function (dataUti
 					}]
 				}]
             },
+			second: {
+                title: 'Addition of Mixed Numbers',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+						problem: '',
+						answer: '\\grp'
+									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+									+'{\\sign{+}}'
+									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
+									+'{\\sign{=}}'
+									+'{\\mixed{\\input{$wholeanswer}}}',
+						controls: {
+								"checkAnswer": true,
+								"help": false,
+								"workbook": true
+						}
+					}]
+				}, {
+					title: 'Workbook',
+					children: [{
+						problem: '\\grp'
+									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+									+'{\\sign{+}}'
+									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+						answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\ins{Convert the mixed numbers to improper fractions:}}'
+										+'{\\grp'
+											+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+											+'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{+}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
+											+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\input{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\sign{+}}'
+											+'{\\frac{\\input{$numnew2}}{\\fracstr{$den2}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						},
+					}, {
+						problem: '\\grp'
+									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+									+'{\\sign{+}}'
+									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+						answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{Convert the mixed numbers to improper fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+											+'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{+}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
+											+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\sign{+}}'
+											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'	
+										+'{\\ins{Add the fractions:}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\str{$numlcd1}}'
+													+'{\\sign{+}}'
+													+'{\\str{$numlcd2}}'
+												+'}'
+												+'{\\fracstr{$answerDen}}'
+											+'}'
+											+'{\\sign{=}}'
+											+'{\\frac{\\input{$numanswer1}}{\\fracstr{$answerDen}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true,
+							"fixBottomRight": true
+						}
+					}, {
+						problem: '\\grp'
+									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+									+'{\\sign{+}}'
+									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}',
+						answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{Convert the mixed numbers to improper fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+											+'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\sign{+}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
+											+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\sign{+}}'
+											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Add the fractions:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\str{$numlcd1}}'
+													+'{\\sign{+}}'
+													+'{\\str{$numlcd2}}'
+												+'}'
+												+'{\\fracstr{$answerDen}}'
+											+'}'
+											+'{\\sign{=}}'
+											+'{\\frac{\\fracstr{$numanswer1}}{\\fracstr{$answerDen}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{Rewrite the answer as a mixed number with a proper fraction:}}'
+										+'{\\grp'
+											+'{\\frac{\\str{$numanswer1}}{\\str{$answerDen}}}'
+											+'{\\sign{ = }}'
+											+'{\\mixed{\\input{$wholeanswer}}}}'
+									+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true,
+							"fixBottomRight": true
+						}
+					}]
+				}]
+            },
 			third: {
                 title: 'Adding Mixed Numbers',
 				children: [{
@@ -1053,7 +1189,7 @@ angular.module('mathSkills').service('data_g_3', ['dataUtils', function (dataUti
 			// problem 1
             { whole1: 2, num1: 1, den1: 5, whole2: 3, num2: 2, den2: 5,wholeanswer: '5', numanswer1: 28, numanswer2: 3, answerDen: 5, numnew1: 11, numnew2: 17, numlcd1: 11, numlcd2: 17, template: 'first' },
 			// problem 2
-			{ whole1: 1, num1: 2, den1: 3, whole2: 2, num2: 1, den2: 3, wholeanswer: 4, numanswer1: 12, numanswer2: 0, answerDen: 3, numnew1: 5, numnew2: 7, numlcd1: 5, numlcd2: 7, template: 'first' },
+			{ whole1: 1, num1: 2, den1: 3, whole2: 2, num2: 1, den2: 3, wholeanswer: 4, numanswer1: 12, numanswer2: 0, answerDen: 3, numnew1: 5, numnew2: 7, numlcd1: 5, numlcd2: 7, template: 'second' },
 			// problem 3
 			{ whole1: 3, num1: 3, den1: 8, whole2: 3, num2: 7, den2: 8, wholeanswer1: 7, numanswer1: 58, numanswer2: 1, answerDen: 8, answer1Den: 4, numnew1: 27, numnew2: 31, numlcd1: 27, numlcd2: 31, template: 'fifth' },
 			// problem 4
