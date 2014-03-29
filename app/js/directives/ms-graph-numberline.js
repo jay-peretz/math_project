@@ -10,12 +10,10 @@ angular.module('mathSkills')
             },{
             	name: 'graphticksize'
             },{
-                name: 'graphdata'
+            //     name: 'graphdata'
+            // },{
+                name: 'graphdatapoints'
             },{
-            //     name: 'graphmaxy'
-            // },{
-            //     name: 'graphvertical'
-            // },{
                 name: 'graphId'
             }],
             directiveTemplate: '<ms-graph-numberline expected={{expected}}></ms-graph-numberline>'
@@ -41,18 +39,16 @@ angular.module('mathSkills')
 				$scope.graphmaxIn = "";
 				$scope.graphticksize = [];
 				$scope.graphticksizeIn = "";
-				//$scope.graphtitle = [];
-				//$scope.graphTitleIn = "";
-				$scope.graphdata = [];
-				// $scope.graphvertical = [];
-				// $scope.graphmaxy = [];
-				// $scope.graphverticalIn = "";
+				$scope.graphdatapoints = [];
+				$scope.graphdatapointsIn = "";
+				// $scope.graphdata = [];
+				// $scope.graphdataIn = [];
 				
-				var	graphdataIn = [],
-					graphminIn = [],
+				//var	graphdataIn = [],
+				var	graphminIn = [],
 					graphmaxIn = [],
-					graphticksizeIn = [];
-					//graphverticalIn = [],
+					graphticksizeIn = [],
+					graphdatapointsIn = [];
 					//graphmaxyIn = [];
 				
 			 // Extract the value for $scope.graphlinesIn
@@ -62,11 +58,6 @@ angular.module('mathSkills')
 					}
 				});
 				
-				// $scope.$watch('graphtitle', function () {
-				// 	if (typeof $scope.graphtitle === "string") {
-				// 		$scope.graphTitleIn = $scope.graphtitle;
-				// 	}
-				// });
 
 				$scope.$watch('graphmin', function () {
 					if (typeof $scope.graphmin === "string") {
@@ -86,23 +77,20 @@ angular.module('mathSkills')
 					}
 				});
 				
-				$scope.$watch('graphdata', function () {
-					if (typeof $scope.graphdata === "string") {
-						graphdataIn = JSON.parse($scope.graphdata);
-					}
-				});
-				
-				// $scope.$watch('graphmaxy', function () {
-				// 	if (typeof $scope.graphmaxy === "string") {
-				// 		graphmaxyIn = $scope.graphmaxy;
+				// $scope.$watch('graphdata', function () {
+				// 	if (typeof $scope.graphdata === "string") {
+				// 		graphdataIn = JSON.parse($scope.graphdata);
 				// 	}
 				// });
-						
-				// $scope.$watch('graphvertical', function () {
-				// 	if (typeof $scope.graphvertical === "string") {
-				// 		$scope.graphverticalIn = $scope.graphvertical;
-				// 	}
-				// });	
+
+				$scope.$watch('graphdatapoints', function () {
+					if (typeof $scope.graphdatapoints === "string") {
+						graphdatapointsIn = JSON.parse($scope.graphdatapoints);
+					}
+				});
+
+
+			
 					
 				$scope.$watch('graphId', function () {
 					if (typeof $scope.graphId === "string") {
@@ -111,22 +99,21 @@ angular.module('mathSkills')
 					
 				//	console.log("$scope.graphIdIn is: ",$scope.graphIdIn);
 						
-				var d1 = [-9, 0];
-				var d2 = [6, 0];
-				var d3 = [-3, 0];
+				//var p = { "name": "P", x: -5, y: 0};
+				//console.log(p);
+
+				// var d1 = [-9, 0];
+				// var d2 = [6, 0];
+				// var d3 = [-3, 0];
+				// var dataPoints = [[-9, 0], [6, 0], [-3, 0]];
+				// coordinates for the data points
+				var dataPoints = graphdatapointsIn;
 				var data = [
-					{ data: [d1, d2, d3], 
+					{ data: dataPoints, 
+					//{ data: [d1, d2, d3], 
 						points: { symbol: "circle"}, 
 						color: "#CC0000"
-						}
-					// { data: d2, 
-					// 	points: { symbol: "circle" }, 
-					// 	color: "#CC0000"
-					// 	},
-					// { data: d3, 
-					// 	points: { symbol: "circle" },
-					// 	color: "#CC0000"
-					// 	}				
+						}				
 				];
 
 				$timeout(function () {	
@@ -158,7 +145,8 @@ angular.module('mathSkills')
 							    return res;
 							},					
 							//ticks: 10,
-							tickSize: graphticksizeIn,							
+							//tickSize: graphticksizeIn,
+							tickSize: 1,								
 							min: graphminIn,
 							max: graphmaxIn,
 							tickDecimals: 0
@@ -177,10 +165,18 @@ angular.module('mathSkills')
 							//color: "#000", // color of the grid lines specified in xaxis
 							//backgroundColor: "#fff", 
 							//markings: [ { xaxis: { from: 0, to: 0 }, color: "#bb0000" } ],
+							// markings: function (axes) {
+							//     var markings = [];
+							//     for (var x = axes.xaxis.min + 1; x < axes.xaxis.max; x++)
+							//         markings.push({ xaxis: { from: x, to: x }, color: "#A0A0A0", lineWidth: 1 });
+							//     return markings;
+							// },
+
 							markings: function (axes) {
 							    var markings = [];
-							    for (var x = axes.xaxis.min + 1; x < axes.xaxis.max; x++)
-							        markings.push({ xaxis: { from: x, to: x }, color: "#A0A0A0", lineWidth: 1 });
+							    var increment = 2;
+							    for (var x = axes.xaxis.min * increment + 1; x < axes.xaxis.max * increment; x++)
+							        markings.push({ xaxis: { from: x/increment, to: x/increment }, color: "#A0A0A0", lineWidth: 1 });
 							    return markings;
 							},
 							backgroundColor: { colors: [ "#fff", "#F0F0F0", "#fff" ] },
@@ -194,6 +190,8 @@ angular.module('mathSkills')
 						},
 					});
 					
+					
+
 					var o = plot.pointOffset({ x: -9.2, y: 1.5});
 
 					// Append it to the placeholder that Flot already uses for positioning			
