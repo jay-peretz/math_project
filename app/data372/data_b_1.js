@@ -12,8 +12,10 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 				children: [{
 					title: 'Main Answer',
 					children: [{
-					problem: '\\rowgrp{\\html{$instructions}}',
-						answer: '\\rowgrp{\\row{$response}}',		
+						/*problem: '\\rowgrp{\\html{$instructions}}',
+						answer: '\\rowgrp{\\row{$response}}',	*/
+						problem: '\\rowgrp{\\html{$instructions}}',
+						answer: '$response',		
 						controls: {
 							"checkAnswer": true,
 							"help": '$help'
@@ -26,8 +28,10 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 				children: [{
 					title: 'Main Answer',
 					children: [{
-					problem: '\\rowgrp{\\html{$instructions}}{\\image{$imagefile}}',
-						answer: '\\rowgrp{\\row{$response}}',		
+						/*problem: '\\rowgrp{\\html{$instructions}}{\\image{$imagefile}}',
+						answer: '\\rowgrp{\\row{$response}}',	*/
+						problem: '\\rowgrp{\\html{$instructions}}{\\image{$imagefile}}',
+						answer: '$response',		
 						controls: {
 							"checkAnswer": true,
 							"help": '$help'
@@ -40,7 +44,11 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 				children: [{
 					title: 'Main Answer',
 					children: [{
-					problem: '\\rowgrp{\\\\row{\\html{$instructions}}}{\\row{$problem}}',
+						/*problem: '\\rowgrp{\\\\row{\\html{$instructions}}}{\\row{$problem}}',
+						// answer: '\\css{\\grp{\\grp{\\btn{True}{$buttonTrueValue}}}{{\\grp{\\html{&nbsp; &nbsp;}}}{\\btn{False}{$buttonFalseValue}}}}{margin-left-small}',
+						answer: '\\css{\\grp{\\btn{True}{$buttonTrueValue}}{\\btn{False}{$buttonFalseValue}}}{margin-left-small}',
+						*/
+						problem: '\\rowgrp{\\grp{\\html{$instructions}}}{\\grp{$problem}}',
 						// answer: '\\css{\\grp{\\grp{\\btn{True}{$buttonTrueValue}}}{{\\grp{\\html{&nbsp; &nbsp;}}}{\\btn{False}{$buttonFalseValue}}}}{margin-left-small}',
 						answer: '\\css{\\grp{\\btn{True}{$buttonTrueValue}}{\\btn{False}{$buttonFalseValue}}}{margin-left-small}',
 						controls: {
@@ -53,11 +61,22 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
         },
         data = [
 		//prob 1
-			{instructions: '<p>What fractional part of this figure is shaded?</p>',
+		
+			/*{instructions: '<p>What fractional part of this figure is shaded?</p>',
 			 imagefile: 'B.1/b-1-1.png',
 			response : '\\\\grp{\\\\frac{\\\\input{3}}{\\\\input{10}}}', 
 			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a PART OUT OF A WHOLE:}}}{\\\\row{\\\\css{\\\\frac{\\\\str{3}}{\\\\str{10}}}{help-answer-text}}}', 
 	    	template: 'imageproblem'
+			},*/
+		
+			{
+			  instructions: dataUtils.pre('<p>What fractional part of this figure is shaded?</p>'),
+			  imagefile: 'B.1/b-1-1.png',
+			  response : dataUtils.pre('\\grp{\\frac{\\input{3}}{\\input{10}}}'), 
+			  help: dataUtils.pre('\\rowgrp'
+					  				+'{\\grp{\\str{Set up a PART OUT OF A WHOLE:}}}'
+					  				+'{\\grp{\\css{\\frac{\\fracstr{3}}{\\fracstr{10}}}{help-answer-text}}}'), 
+	    	  template: 'imageproblem'
 			},
 		 //prob 2
 			{instructions: '<p>What fractional part of this figure is not shaded?</p>',
@@ -71,52 +90,89 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 			response : '\\\\grp{\\\\frac{\\\\input{42}}{\\\\input{121}}}',  
 			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{phone bill}}{\\\\str{cable bill + phone bill + utility bill}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{42}}{\\\\str{32 + 42 + 47}}}}{\\\\row{\\\\str{\xA0}}}{\\\\css{\\\\row{\\\\str{Ans: }}{\\\\frac{\\\\str{42}}{\\\\str{121}}}}{help-answer-text}}', 
 	    	template: 'wordproblem' },
-			//prob 4
+		//prob 4
 			{instructions: '<p>Sandra had 5 quarters, 3 dimes, and 6 pennies.</p><p>  What fraction of her coins were in quarters?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{5}}{\\\\input{14}}}', 
 			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{quarters}}{\\\\str{quarters + dimes + pennies}}}}{\\\\row{\\\\str{ \xA0}}}{\\\\row{\\\\frac{\\\\str{5}}{\\\\str{5 + 3 + 6}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\css{\\\\str{Ans: }}{help-answer-text}}{\\\\css{\\\\frac{\\\\str{5}}{\\\\str{14}}}{help-answer-text}}', 
 	    	template: 'wordproblem'
 			},
-			//prob 5
+		//prob 5
 			{instructions: '<p>Sandra had 5 quarters, 3 dimes, and 6 pennies.</p><p>  What fraction of her coins were in dimes and pennies?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{9}}{\\\\input{14}}}', 
 			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{dimes + pennies}}{\\\\str{quarters + dimes + pennies}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{3 + 6}}{\\\\str{5 + 3 + 6}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\css{\\\\str{Ans: }}{help-answer-text}}{\\\\css{\\\\frac{\\\\str{9}}{\\\\str{14}}}{help-answer-text}}', 
 	    	template: 'wordproblem'
 			},
-			//prob 6
-			{instructions: '<p>Sandra had 5 quarters, 3 dimes, and 6 pennies.</p><p>  What fraction of her total coin money was in dimes?</p>',
-			response : '\\\\grp{\\\\frac{\\\\input{30}}{\\\\input{161}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{(# of dimes * 10)}}{\\\\str{(# of quarters * 25) + (# of dimes * 10) + (# of pennies * 1)}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{(3 * 10)}}{\\\\str{(5 * 25) + (3 * 10) + (6 * 1)}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\str{\xA0}}}{\\\\css{\\\\row{\\\\str{Ans: }}{\\\\frac{\\\\str{30}}{\\\\str{161}}}}{help-answer-text}', 
+		//prob 6
+			
+			/*{instructions: '<p>Sandra had 5 quarters, 3 dimes, and 6 pennies.</p><p>  What fraction of her total coin money was in dimes?</p>',
+				response : '\\\\grp{\\\\frac{\\\\input{30}}{\\\\input{161}}}', 
+				help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{(# of dimes * 10)}}{\\\\str{(# of quarters * 25) + (# of dimes * 10) + (# of pennies * 1)}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{(3 * 10)}}{\\\\str{(5 * 25) + (3 * 10) + (6 * 1)}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\str{\xA0}}}{\\\\css{\\\\row{\\\\str{Ans: }}{\\\\frac{\\\\str{30}}{\\\\str{161}}}}{help-answer-text}', 
+		    	template: 'wordproblem'
+				},*/
+			
+			{instructions: dataUtils.pre('<p>Sandra had 5 quarters, 3 dimes, and 6 pennies.</p><p>  What fraction of her total coin money was in dimes?</p>'),
+			response : dataUtils.pre('\\grp{\\frac{\\input{30}}{\\input{161}}}'), 
+			help: dataUtils.pre('\\rowgrp'
+								+'{\\html{The problem can be expressed as:}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\grp{\\frac{\\fracstr{(# of dimes * 10)}}'
+								+'{\\fracstr{(# of quarters * 25) + (# of dimes * 10) + (# of pennies * 1)}}}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\grp{\\frac{\\fracstr{(3 * 10)}}{\\fracstr{(5 * 25) + (3 * 10) + (6 * 1)}}}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\html{&nbsp;}}'
+								+'{\\css{\\grp{\\str{Ans: }}{\\frac{\\str{30}}{\\str{161}}}}{help-answer-text}'), 
 	    	template: 'wordproblem'
 			},
-			//prob 7
+		//prob 7
 			{instructions: '<p>A child had a set of building blocks that consisted of 10 red blocks, 5 green blocks, and 7 white blocks. All of these blocks were put into a bag.</p><p>If a block was randomly chosen, what is the probability of choosing a red block?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{[5,10]}}{\\\\input{[11,22]}}}', 
 			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{red blocks}}{\\\\str{red blocks + green blocks + white blocks}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{10}}{\\\\str{10 + 5 + 7}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{10}}{\\\\str{22}}}}{\\\\row{\\\\str{\xA0}}}{\\\\css{\\\\row{\\\\str{Ans: }}{\\\\frac{\\\\str{5}}{\\\\str{11}}}}{help-answer-text}}', 
 	    	template: 'wordproblem'
 			},
-			//prob 8
+		//prob 8
 			{instructions: '<p>A child had a set of building blocks that consisted of 10 red blocks, 5 green blocks, and 7 white blocks. All of these blocks were put into a bag.</p><p>If a block was randomly chosen, what is the probability of choosing a red or white block?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{17}}{\\\\input{22}}}', 
 			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{red blocks + white blocks}}{\\\\str{red blocks + green blocks + white blocks}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{10 + 7}}{\\\\str{10 + 5 + 7}}}}{\\\\row{\\\\str{\xA0}}{\\\\css{\\\\row{\\\\str{Ans: }}{\\\\frac{\\\\str{17}}{\\\\str{22}}}}{help-answer-text}}', 
 	    	template: 'wordproblem'
 			},
-			//prob 9
+		//prob 9
 			{instructions: '<p>In a bag with 30 pieces of candy, 10 pieces have walnuts and 7 pieces have almonds.</p><p> What is the probability of picking a piece of candy that has neither walnuts nor almonds?</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{13}}{\\\\input{30}}}', 
 			help: '\\\\rowgrp{\\\\row{\\\\str{The problem can be expressed as:}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{all pieces - (walnut + almonds)}}{\\\\str{all pieces}}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\frac{\\\\str{30 - (10 + 7)}}{\\\\str{30}}}}{\\\\row{\\\\str{\xA0}}}{\\\\css{\\\\row{\\\\str{Ans: }}{\\\\frac{\\\\str{13}}{\\\\str{30}}}}{help-answer-text}}', 
 	    	template: 'wordproblem'
 			},
-			//prob 10
-			{instructions: '<p>True or False:</p>',
+		//prob 10
+			
+			/*{instructions: '<p>True or False:</p>',
 			problem: '\\\\grp{\\\\frac{\\\\str{3}}{\\\\str{4}}}{\\\\str{ = }}{\\\\frac{\\\\str{12}}{\\\\str{16}}}',
 		   //   problem: 
 			 buttonTrueValue: 'T', 
 			 buttonFalseValue: 'F',
 			help: '\\\\rowgrp{\\\\row{\\\\css{\\\\str{True}}{help-answer-text}}}{\\\\row{\\\\str{The fractions are equal because the cross-products are equal:}}}{\\\\row{\\\\str{3 * 16 = 48}}}{\\\\row{\\\\str{and}}}{\\\\row{\\\\str{ 4 * 12 = 48}}}', 
 	    	template: 'trueorfalse'
-			},
-			//prob 11
+			},*/
+			
+			{instructions: dataUtils.pre('<p>True or False:</p>'),
+			 problem: dataUtils.pre('\\grp'
+							+'{\\frac{\\fracstr{3}}{\\fracstr{4}}}'
+							+'{\\sign{=}}'
+							+'{\\frac{\\fracstr{12}}{\\fracstr{16}}}'),
+			 buttonTrueValue: 'T', 
+			 buttonFalseValue: 'F',
+			 help: dataUtils.pre('\\rowgrp'
+				 	+'{\\grp{\\css{\\str{True}}{help-answer-text}}}'
+				 	+'{\\html{&nbsp;}}'
+				 	+'{\\grp{\\html{The fractions are equal because the cross-products are equal:}}}'
+				 	+'{\\html{&nbsp;}}'
+				 	+'{\\grp{\\html{3 * 16 = 48}}}'
+				 	+'{\\html{&nbsp;}}'
+				 	+'{\\grp{\\html{and}}}'
+				 	+'{\\html{&nbsp;}}'
+				 	+'{\\grp{\\html{ 4 * 12 = 48}}}'), 
+			 template: 'trueorfalse'
+				},
+		//prob 11
 			{instructions: '<p>True or False:</p>',
 			problem: '\\\\grp{\\\\frac{\\\\str{0.25}}{\\\\str{4}}}{\\\\str{ = }}{\\\\frac{\\\\str{0.3}}{\\\\str{4.8}}}',
 		   //   problem: 
