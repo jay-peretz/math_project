@@ -127,9 +127,17 @@ angular.module('mathSkills')
 								}
 						},
 						xaxis: {
+							show: true,
+							position: "bottom",
 							color: null, // color of the axis
 							tickColor: null,
-							font: null,
+							font: {
+							    size: 14,
+							    lineHeight: 18,
+							    weight: "bold",
+							    family: "sans-serif",
+							    color: "#545454"
+							},
 							ticks: function tickGenerator(axis) {
 							    var res = [], i = axis.min;
 							    do {
@@ -145,20 +153,33 @@ angular.module('mathSkills')
 							//tickSize: 1,								
 							min: graphminIn,
 							max: graphmaxIn,
-							tickDecimals: 0
+							tickDecimals: 0,
+							autoscaleMargin: null,
+							labelWidth: 20,
+    						labelHeight: 10,
+    						reserveSpace: true
+
+
 						},
 						 yaxis: {
+						 	show: true,
+						 	position: "left",
 						 	color: "#606060",
 						 	ticks: 1, 
+						 	tickSize: 1,
 						 	min: -0.5, 
-						 	max: 0.5 
+						 	max: 0.5,
+						 	tickDecimals: 0,
+						 	autoscaleMargin: null,
+						 	labelWidth: 20,
+    						labelHeight: 10,
+    						reserveSpace: true
 						 	},
 						 
 						 grid: {
-							show:
-							 true,
-							margin: { left: 20 },
-
+							show: true,
+							margin: { left: 30 },
+							labelMargin: 10,
 							markings: function (axes) {
 							    var markings = [];
 							    var increment = graphincrementIn;
@@ -169,23 +190,23 @@ angular.module('mathSkills')
 							backgroundColor: { colors: [ "#fff", "#F0F0F0", "#fff" ] },
 							hoverable: true,
 							borderWidth: {
-							top: 0,
-							right: 0,
-							bottom: 0,
-							left: 0
+								top: 0,
+								right: 0,
+								bottom: 0,
+								left: 0
 							}
 						},
 					});
 					
 					// point offsets for X, Y, Z coordinates
-					var o = plot.pointOffset({ x: graphdatapointsIn[0][0] - 0.2, y: graphdatapointsIn[0][1] + 1.5});
+					var o = plot.pointOffset({ x: graphdatapointsIn[0][0], y: graphdatapointsIn[0][1] + 1.5});
 					// Append it to the placeholder that Flot already uses for positioning			
-					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>X</div>");
+					placeholder.append("<div style='position:absolute;left: " + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>X</div>");
 			
-					o = plot.pointOffset({ x: graphdatapointsIn[1][0] - 0.2, y: graphdatapointsIn[1][1] + 1.5});
+					o = plot.pointOffset({ x: graphdatapointsIn[1][0], y: graphdatapointsIn[1][1] + 1.5});
 					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>Y</div>");
 					
-					o = plot.pointOffset({ x: graphdatapointsIn[2][0] - 0.2, y: graphdatapointsIn[2][1] + 1.5});
+					o = plot.pointOffset({ x: graphdatapointsIn[2][0], y: graphdatapointsIn[2][1] + 1.5});
 					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>Z</div>");		
 					
 				}, 0);
