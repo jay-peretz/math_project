@@ -10,8 +10,8 @@ angular.module('mathSkills')
             },{
             	name: 'graphticksize'
             },{
-            //     name: 'graphdata'
-            // },{
+                name: 'graphincrement'
+            },{
                 name: 'graphdatapoints'
             },{
                 name: 'graphId'
@@ -39,17 +39,17 @@ angular.module('mathSkills')
 				$scope.graphmaxIn = "";
 				$scope.graphticksize = [];
 				$scope.graphticksizeIn = "";
+				$scope.graphincrement = [];
+				$scope.graphincrementIn = "";
 				$scope.graphdatapoints = [];
 				$scope.graphdatapointsIn = "";
-				// $scope.graphdata = [];
-				// $scope.graphdataIn = [];
 				
-				//var	graphdataIn = [],
+
 				var	graphminIn = [],
 					graphmaxIn = [],
 					graphticksizeIn = [],
+					graphincrementIn = [],
 					graphdatapointsIn = [];
-					//graphmaxyIn = [];
 				
 			 // Extract the value for $scope.graphlinesIn
 				$scope.$watch('expected', function () {
@@ -76,6 +76,12 @@ angular.module('mathSkills')
 						graphticksizeIn = $scope.graphticksize;
 					}
 				});
+
+				$scope.$watch('graphincrement', function () {
+					if (typeof $scope.graphincrement === "string") {
+						graphincrementIn = $scope.graphincrement;
+					}
+				});
 				
 				// $scope.$watch('graphdata', function () {
 				// 	if (typeof $scope.graphdata === "string") {
@@ -88,8 +94,6 @@ angular.module('mathSkills')
 						graphdatapointsIn = JSON.parse($scope.graphdatapoints);
 					}
 				});
-
-
 			
 					
 				$scope.$watch('graphId', function () {
@@ -98,13 +102,7 @@ angular.module('mathSkills')
 					}
 					
 				//	console.log("$scope.graphIdIn is: ",$scope.graphIdIn);
-						
-				//var p = { "name": "P", x: -5, y: 0};
-				//console.log(p);
 
-				// var d1 = [-9, 0];
-				// var d2 = [6, 0];
-				// var d3 = [-3, 0];
 				// var dataPoints = [[-9, 0], [6, 0], [-3, 0]];
 				// coordinates for the data points
 				var dataPoints = graphdatapointsIn;
@@ -118,7 +116,8 @@ angular.module('mathSkills')
 
 				$timeout(function () {	
 					var placeholder = $('#'+ $scope.graphIdIn);
-					var plot = $.plot('#'+ $scope.graphIdIn, data, {
+					var plot = $.plot(placeholder, data, {
+					//var plot = $.plot('#'+ $scope.graphIdIn, data, {
 					//$.plot("#placeholder", data, [graphdataIn], {
 						series: {
 							lines: { show: false },
@@ -131,8 +130,6 @@ angular.module('mathSkills')
 							color: null, // color of the axis
 							tickColor: null,
 							font: null,
-							//tickLength: 10,	
-							//alignTicksWithAxis: 1,
 							ticks: function tickGenerator(axis) {
 							    var res = [], i = axis.min;
 							    do {
@@ -144,9 +141,8 @@ angular.module('mathSkills')
 							    } while (v < axis.max);
 							    return res;
 							},					
-							//ticks: 10,
-							//tickSize: graphticksizeIn,
-							tickSize: 1,								
+							tickSize: graphticksizeIn,
+							//tickSize: 1,								
 							min: graphminIn,
 							max: graphmaxIn,
 							tickDecimals: 0
@@ -162,19 +158,10 @@ angular.module('mathSkills')
 							show:
 							 true,
 							margin: { left: 20 },
-							//color: "#000", // color of the grid lines specified in xaxis
-							//backgroundColor: "#fff", 
-							//markings: [ { xaxis: { from: 0, to: 0 }, color: "#bb0000" } ],
-							// markings: function (axes) {
-							//     var markings = [];
-							//     for (var x = axes.xaxis.min + 1; x < axes.xaxis.max; x++)
-							//         markings.push({ xaxis: { from: x, to: x }, color: "#A0A0A0", lineWidth: 1 });
-							//     return markings;
-							// },
 
 							markings: function (axes) {
 							    var markings = [];
-							    var increment = 2;
+							    var increment = graphincrementIn;
 							    for (var x = axes.xaxis.min * increment + 1; x < axes.xaxis.max * increment; x++)
 							        markings.push({ xaxis: { from: x/increment, to: x/increment }, color: "#A0A0A0", lineWidth: 1 });
 							    return markings;
@@ -190,18 +177,16 @@ angular.module('mathSkills')
 						},
 					});
 					
-					
-
-					var o = plot.pointOffset({ x: -9.2, y: 1.5});
-
+					// point offsets for X, Y, Z coordinates
+					var o = plot.pointOffset({ x: graphdatapointsIn[0][0] - 0.2, y: graphdatapointsIn[0][1] + 1.5});
 					// Append it to the placeholder that Flot already uses for positioning			
-					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>A</div>");
+					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>X</div>");
 			
-					o = plot.pointOffset({ x: -3.2, y: 1.5});
-					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>B</div>");
+					o = plot.pointOffset({ x: graphdatapointsIn[1][0] - 0.2, y: graphdatapointsIn[1][1] + 1.5});
+					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>Y</div>");
 					
-					o = plot.pointOffset({ x: 5.8, y: 1.5});
-					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>C</div>");		
+					o = plot.pointOffset({ x: graphdatapointsIn[2][0] - 0.2, y: graphdatapointsIn[2][1] + 1.5});
+					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>Z</div>");		
 					
 				}, 0);
 				});

@@ -27,65 +27,18 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                         answer: '\\css{'+
                                     '\\rowgrp'+
                                         '{\\ins{Identify each value on the number line:}}'+
-                                        '{\\grp{\\str{A = }}{\\input{$val1}}}'+
-                                        '{\\grp{\\str{B = }}{\\input{$val2}}}'+
-                                        '{\\grp{\\str{C = }}{\\input{$val3}}}'+
+                                        '{\\grp{\\str{X = }}{\\input{$val1}}}'+
+                                        '{\\grp{\\str{Y = }}{\\input{$val2}}}'+
+                                        '{\\grp{\\str{Z = }}{\\input{$val3}}}'+
                                 '}{well}',
 						controls: {
 							"checkAnswer": true,
+                            //"nextProblem": true,
 							"help": true
 						}
 					}]
                 }]
             },
-            /*main: {
-                title: 'Change a Percent to a Fraction (Directly)',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-						+'{\\str{Change this percent into a decimal:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}}',
-						answer: '\\grp{\\input{$decimal}}',		
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\percentarrows{$decimalPercent}{0.01}{percent}{decimal}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\css{\\str{Answer:  $decimal}}{help-answer-text}}'
-						}
-					}, {
-						problem: '\\rowgrp'
-						+'{\\grp{\\str{Change this percent into a decimal:}}}'
-						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}}',
-						answer: '\\css{\\rowgrp'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\str{$decimalPercent}}{\\str{%}}{\\sign{=}}{\\str{$decimal}}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\html{&nbsp;}}'
-						+'{css{\\str{Change the decimal into a fraction:}}{alert alert-info}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}}}{well}',
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\str{The decimal $decimal is converted by stating the decimal number out loud.  Use the appropriate place value:}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\str{$decimal}}'
-							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\str{"$outLoud"}}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp{\\str{or: \xA0}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\str{Reduce whenever possible.}}'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\grp{\\str{Answer: \xA0 \xA0}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}{help-answer-text}}'
-						}
-					}]
-                }]
-            },*/
         },
 	        /*template = {
             second: {
@@ -119,15 +72,12 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
        
        
         data = [
-			// { firstButton: 'F', secondButton: 'T', firstNumber: '-5', secondNumber: '5', startGraph: '-10', endGraph: '10', statement: 'LESS THAN', template: 'second', answerBtn: 'noAnswer' },
 			
-			{  //1 //15 from 2A.2
-                // chart1: dataUtils.pre('\\graphnum{Title}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{500}{Side title}{chart1}'),
-                // chart2: dataUtils.pre('\\graphnum{Title}{[ ["January", 220], ["April", 370], ["July", 445], ["October", 300]]}{500}{Side title}{chart2}'), 
-                chart1: dataUtils.pre('\\graphnum{-10}{10}{1}{ [[-9, 0], [6, 0], [-3, 0]] }{chart1}'),
-                chart2: dataUtils.pre('\\graphnum{-10}{10}{1}{ [[-9, 0], [6, 0], [-3, 0]] }{chart2}'), 
+			//problem 1
+            {   
+                chart1: dataUtils.pre('\\graphnum{-10}{10}{2}{1}{ [[-9, 0], [-3, 0], [6, 0]] }{chart1}'),
+                chart2: dataUtils.pre('\\graphnum{-10}{10}{2}{1}{ [[-9, 0], [-3, 0], [6, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'main', answerBtn: 'noAnswer',
-                //answertxt: 'There were approximately 590 deer counted in January and April.',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
                 button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 -1}}'),
                 button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 2}}'),
