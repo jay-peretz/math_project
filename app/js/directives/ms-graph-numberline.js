@@ -207,7 +207,26 @@ angular.module('mathSkills')
 					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>Y</div>");
 					
 					o = plot.pointOffset({ x: graphdatapointsIn[2][0], y: graphdatapointsIn[2][1] + 1.5});
-					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>Z</div>");		
+					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>Z</div>");
+					
+					$("div #problem .tab-pane").each(function(ii,tabPanel) {
+						if (ii !== 0) {
+							
+							var jj = ii + 1;
+							$("#step-" + jj + " .flot-x-axis div.tickLabel").each(function(i,ele) {
+								ele = $(ele);	
+								ele.css("top", "50px"); 
+							});
+							
+							$("#step-" + jj + " .flot-x-axis div").css("marginLeft", "-10px");
+							
+							$("#step-" + jj + " .flot-y-axis div.tickLabel").each(function(i,ele) {
+								ele = $(ele);	
+								ele.css("top", "16px"); 
+								ele.css("left", "40px");
+							});
+						}
+					});
 					
 				}, 0);
 				});
