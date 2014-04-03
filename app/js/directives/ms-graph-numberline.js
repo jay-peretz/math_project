@@ -200,14 +200,20 @@ angular.module('mathSkills')
 					
 					// point offsets for X, Y, Z coordinates
 					var o = plot.pointOffset({ x: graphdatapointsIn[0][0], y: graphdatapointsIn[0][1] + 1.5});
-					// Append it to the placeholder that Flot already uses for positioning			
-					placeholder.append("<div style='position:absolute;left: " + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>X</div>");
+					// var to center the letter over the point
+					var offset = o.left - 5; 
+					// Append it to the placeholder that Flot already uses for positioning							
+					placeholder.append("<div id='pointX' style='position:absolute;left:" + offset +  "px;top:" + o.top + "px;color:#666;font-size:larger'>X</div>");
+
+					//placeholder.append("<div style='position:absolute;left: " + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>X</div>");
 			
 					o = plot.pointOffset({ x: graphdatapointsIn[1][0], y: graphdatapointsIn[1][1] + 1.5});
-					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>Y</div>");
+					offset = o.left - 5;
+					placeholder.append("<div style='position:absolute;left:" + offset + "px;top:" + o.top + "px;color:#666;font-size:larger'>Y</div>");
 					
 					o = plot.pointOffset({ x: graphdatapointsIn[2][0], y: graphdatapointsIn[2][1] + 1.5});
-					placeholder.append("<div style='position:absolute;left:" + o.left + "px;top:" + o.top + "px;color:#666;font-size:larger'>Z</div>");
+					offset = o.left - 5;
+					placeholder.append("<div style='position:absolute;left:" + offset + "px;top:" + o.top + "px;color:#666;font-size:larger'>Z</div>");
 					
 					$("div #problem .tab-pane").each(function(ii,tabPanel) {
 						if (ii !== 0) {
