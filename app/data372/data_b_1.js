@@ -192,13 +192,13 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 			{instructions: '<p>Write a ratio of unshaded to shaded parts in the figure below.</p>',
 			 imagefile: 'B.1/b-1-13.png',
 			response : '\\\\grp{\\\\frac{\\\\input{3}}{\\\\input{5}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{3 parts are shaded. 5 parts are unshaded.}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\str{The ratio is: }}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\css{\\\\frac{\\\\str{3 parts shaded}}{\\\\str{5 parts unshaded}}}{help-answer-text}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{5 parts are shaded. 3 parts are unshaded.}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\str{The ratio is: }}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\css{\\\\frac{\\\\str{5 parts shaded}}{\\\\str{3 parts unshaded}}}{help-answer-text}}}', 
 	    	template: 'imageproblem'
 			},
 			//prob 14
 			{instructions: '<p>When 12 children were offered ice cream or cake for dessert, 5 kids chose cake and 7 chose ice cream. </p><p>Write a ratio of kids that chose ice cream to those who chose cake.</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{7}}{\\\\input{5}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a ratio:}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\css{\\\\frac{\\\\str{7  kids chose cake}}{\\\\str{5  kids ice cream}}}{help-answer-text}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a ratio:}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\css{\\\\frac{\\\\str{5  kids chose cake}}{\\\\str{7  kids ice cream}}}{help-answer-text}}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 15
