@@ -505,7 +505,122 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
 						}
                     }]
                 }]
-            }          
+            },
+            threeFractionsSimp: {
+                title: 'Subtracting Unlike Fractions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\html{&nbsp;}',
+						answer: '\\grp'
+							+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\sign{&minus;}}'
+							+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\sign{&minus;}}'
+							+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\sign{=}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\frac{\\input{$finalAnsNum}}{\\input{$finalAnsDen}}',
+						controls: {
+							"checkAnswer": true,
+							"help": false,
+							"workbook": true
+						}
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+						problem: '\\grp'
+									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+									+'{\\sign{&minus;}}'
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+									+'{\\sign{&minus;}}'
+									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+									+'{\\html{&nbsp;}}',
+						answer: '\\rowgrp'
+									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\input{$answerDen}}'
+								+'}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						},
+                    }, {
+						problem: '\\grp'
+									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+									+'{\\sign{&minus;}}'
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+									+'{\\sign{&minus;}}'
+									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+									+'{\\html{&nbsp;}}',
+						answer: '\\css'
+							+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$answerDen}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Use the LCD to convert the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+											+'{\\sign{&minus;}}'
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+											+'{\\sign{&minus;}}'
+											+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\grp{\\frac{\\input{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{&minus;}}'
+											+'{\\frac{\\input{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
+											+'{\\sign{&minus;}}'
+											+'{\\frac{\\input{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}'
+    										+'{\\html{&nbsp;}}'
+								+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						}
+                    }, {
+						problem: '\\grp'
+									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+									+'{\\sign{&minus;}}'
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+									+'{\\sign{&minus;}}'
+									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
+									+'{\\html{&nbsp;}}',
+						answer: '\\css'					
+								+'{\\rowgrp'
+									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{$answerDen}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\html{Use the LCD to convert the fractions:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+										+'{\\sign{&minus;}}'
+										+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+										+'{\\sign{&minus;}}'
+										+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\grp{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}'
+										+'{\\sign{&minus;}}'
+										+'{\\frac{\\fracstr{$secondAnswerNum}}{\\fracstr{$answerDen}}}'
+										+'{\\sign{&minus;}}'
+										+'{\\frac{\\fracstr{$thirdAnswerNum}}{\\fracstr{$answerDen}}}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\ins{Subtract the numerators and simplify the fraction if necessary:}}'
+									+'{\\grp{\\frac{\\grp{\\fracstr{$firstAnswerNum}}{\\sign{&minus;}}{\\fracstr{$secondAnswerNum}}{\\sign{&minus;}}{\\fracstr{$thirdAnswerNum}}}{\\fracstr{$answerDen}}}{\\sign{=}}{\\frac{\\input{$finalAnsNum}}{\\input{$finalAnsDen}}}}'	
+        								+'}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true,
+							"fixBottomRight": true
+						}
+                    }]
+                }]
+            }         
         },
         data = [
             { firstNum: '5', firstDen: '6', secondNum: '2', secondDen: '3', firstAnswerNum: '5', secondAnswerNum: '4', differenceNum: '1', answerDen: '6', template: 'twoFractions' },
@@ -517,7 +632,7 @@ angular.module('mathSkills').service('data_h_2', ['dataUtils', function (dataUti
 			{ firstNum: '7', firstDen: '8', secondNum: '1', secondDen: '\xA06\xA0', thirdNum: '2', thirdDen: '\xA03\xA0', firstAnswerNum: '21', secondAnswerNum: '4', thirdAnswerNum: '16', differenceNum: '1', answerDen: '24', template: 'threeFractions' },
 			{ firstNum: '9', firstDen: '5', secondNum: '3', secondDen: '\xA08\xA0', thirdNum: '1', thirdDen: '\xA02\xA0', firstAnswerNum: '72', secondAnswerNum: '15', thirdAnswerNum: '20', differenceNum: '37', answerDen: '40', template: 'threeFractions' },
 			{ firstNum: '4', firstDen: '5', secondNum: '1', secondDen: '2', thirdNum: '3', thirdDen: '10', firstAnswerNum: '8', secondAnswerNum: '5', thirdAnswerNum: '3', differenceNum: '0', answerDen: '10', wholeanswer: '0', template: 'threeFractionsWhole' },
-			{ firstNum: '11', firstDen: '14', secondNum: '2', secondDen: '7', thirdNum: '1', thirdDen: '4', firstAnswerNum: '22', secondAnswerNum: '8', thirdAnswerNum: '7', differenceNum: '7', answerDen: '28', template: 'threeFractions' }
+			{ firstNum: '11', firstDen: '14', secondNum: '2', secondDen: '7', thirdNum: '1', thirdDen: '4', firstAnswerNum: '22', secondAnswerNum: '8', thirdAnswerNum: '7', differenceNum: '7', answerDen: '28', finalAnsNum: '1', finalAnsDen: '4', template: 'threeFractionsSimp' }
 			
         ];
 
