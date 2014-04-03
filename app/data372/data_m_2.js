@@ -2,13 +2,13 @@
 
 angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUtils) {
     var desc = {
-			title: 'M.2 Adding Fractions and Mixed Numbers',
-			path: 'M.2-adding-fractions-and-mixed-numbers',
+			title: 'M.2 Combining Mixed Numbers',
+			path: 'M.2-combining-mixed-numbers',
             children: []
         },
         template = {
             main: {
-                title: 'Adding Fractions and Mixed Numbers',
+                title: 'Combining Mixed Numbers',
 				children: [{
 					title: 'Main Answer',
 					children: [{
