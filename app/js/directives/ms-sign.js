@@ -14,20 +14,14 @@ angular.module('mathSkills')
                 controller: function ($scope, $element) {
                     var sign, cssClass;
                     $scope.$watch('expected', function () {
-                        if ($scope.expected){
-                            sign = parser.extractTag($scope.expected).args[0];
-							console.log("parser.extractTag($scope.expected).args[0]   ", parser.extractTag($scope.expected).args[0]);
-							
-                            $scope.templateStr = "\\css{\\html{" + sign + "}}{bigger}";
-                        }
-						if (parser.extractTag($scope.expected).args[1] != 'undefined')
+						sign = parser.extractTag($scope.expected).args[0];
+						if (typeof parser.extractTag($scope.expected).args[1] !== 'undefined')
 						{
-						 cssClass = parser.extractTag($scope.expected).args[1];
-						$scope.templateStr = "\\css{\\html{" + sign + "}}{" + cssClass + "}";
-						console.log("parser.extractTag($scope.expected).args[1]   ", parser.extractTag($scope.expected).args[1]);
+							 cssClass = parser.extractTag($scope.expected).args[1];
+							$scope.templateStr = "\\css{\\html{" + sign + "}}{" + cssClass + "}";
+						} else {
+							$scope.templateStr = "\\css{\\html{" + sign + "}}{bigger}";
 						}
-						
-						
                     });
                 },
                 restrict: 'E',
