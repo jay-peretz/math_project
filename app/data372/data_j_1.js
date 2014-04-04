@@ -71,6 +71,37 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
 					}]
                 }]
             },
+			dynamic: {
+                title: 'Charts and Bar Graphs', 
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                        problem:'\\pan{12}{11}{$chart1}',
+                        answer: '\\css{'+
+                                    '\\rowgrp'+
+                                        '{\\ins{$question}}'+
+                                        '{$answerIn}'+
+                                '}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                },{
+						problem:'\\pan{12}{11}{$chart2}', 
+                        answer: '\\css{'+
+                                    '\\rowgrp'+
+                                        '{\\ins{Identify each value on the number line:}}'+
+                                        '{\\grp{\\str{A = }}{\\input{$val1}}}'+
+                                        '{\\grp{\\str{B = }}{\\input{$val2}}}'+
+                                        '{\\grp{\\str{C = }}{\\input{$val3}}}'+
+                                '}{well}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						}
+					}]
+                }]
+            }
         },
 	        /*template = {
             second: {
@@ -166,7 +197,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 val1: '-2.5', val2: '-0.75', val3: '1.25'
             },
           //problem 6
-            {   
+            /*{   
                 chart1: dataUtils.pre('\\numberline{-10}{10}{1}{1}'),
                 chart2: dataUtils.pre('\\numberline{-10}{10}{1}{1}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'interactiveNumberline', answerBtn: 'noAnswer',
@@ -175,6 +206,16 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 2}}'),
                 button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 1}}'),
                 button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
+                val1: '-9', val2: '-3', val3: '6'
+            },*/
+			//problem 6
+            {   
+                chart1: dataUtils.pre('\\numberline{-10}{10}{1}{ [[-9, 0], [6, 0], [-3, 0]] }{chart1}'),
+                chart2: dataUtils.pre('\\numberline{-10}{10}{1}{ [[-9, 0], [6, 0], [-3, 0]] }{chart2}'), 
+                question: 'What\'s up, Doc?', template: 'dynamic', answerBtn: 'noAnswer',
+                //answertxt: 'There were approximately 590 deer counted in January and April.',
+                answerIn: dataUtils.pre('\\rowgrp{\\input{$$input1}}'),
+				input1: 'wabbit',
                 val1: '-9', val2: '-3', val3: '6'
             },
         ];
