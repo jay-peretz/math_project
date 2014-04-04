@@ -2061,7 +2061,7 @@ angular.module('mathSkills').service('data_h_3', ['dataUtils', function (dataUti
             // problem 8
             { whole1: 3, num1: 2, den1: '\xA03\xA0', whole2: 1, num2: 1, den2: 4, whole3: 2, num3: '', den3: '', den4: 1, wholeanswer1: '', numanswer1: 5, answerDen: 12, numnew1: 11, numnew2: 5, numnew3: 2, numanswer2: 5, numlcd1: 44, numlcd2: 15, numlcd3: 24, template: 'fourth' },
             // problem 9
-            { whole1: 5, num1: 4, den1: '\xA09\xA0', whole2: 1, num2: 1, den2: 3, whole3: 2, num3: 5, den3: '\xA06\xA0', wholeanswer1: 6, numanswer1: 119, answerDen: 18, numnew1: 49, numnew2: 4, numnew3: 17, numanswer2: 11, numlcd1: 98, numlcd2: 24, numlcd3: 51, secondSign: '+', template: 'third' },
+            { whole1: 5, num1: 4, den1: '\xA09\xA0', whole2: 1, num2: 1, den2: 3, whole3: 2, num3: 5, den3: '\xA06\xA0', wholeanswer1: 6, numanswer1: 125, answerDen: 18, numnew1: 49, numnew2: 4, numnew3: 17, numanswer2: 17, numlcd1: 98, numlcd2: 24, numlcd3: 51, secondSign: '+', template: 'third' },
             // problem 10
             { whole1: 5, num1: 1, den1: '\xA04\xA0', whole2: 1, num2: 3, den2: 8, whole3: 2, num3: 5, den3: '\xA016\xA0', wholeanswer1: 1, numanswer1: 25, answerDen: 16, numnew1: 21, numnew2: 11, numnew3: 37, numanswer2: 9, numlcd1: 84, numlcd2: 22, numlcd3: 37, secondSign: '-', template: 'third' },
         ];
