@@ -134,7 +134,7 @@ angular.module('mathSkills')
 							font: {
 							    size: 14,
 							    lineHeight: 18,
-							    weight: "bold",
+							    weight: "normal",
 							    family: "sans-serif",
 							    color: "#545454"
 							},
@@ -218,13 +218,8 @@ angular.module('mathSkills')
 					$("div #problem .tab-pane").each(function(ii,tabPanel) {
 						if (ii !== 0) {
 							
-							var jj = ii + 1;
-							$("#step-" + jj + " .flot-x-axis div.tickLabel").each(function(i,ele) {
-								ele = $(ele);	
-								ele.css("top", "50px"); 
-							});
-							
-							$("#step-" + jj + " .flot-x-axis div").css("marginLeft", "-10px");
+							var jj = ii + 1;							
+							$("#step-" + jj + " .flot-x-axis div").css("marginLeft", "-5px");
 							
 							$("#step-" + jj + " .flot-y-axis div.tickLabel").each(function(i,ele) {
 								ele = $(ele);	
