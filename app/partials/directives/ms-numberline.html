@@ -1,134 +1,38 @@
-<style>
+<style type="text/css">
+
 #container{
-	width:50%;
-	margin:auto;
-	margin-top:4em;
+	padding:2em 1em;
+	margin-left:2em;
+	width:60%;
 }
-span {
-   position:absolute;
-   margin-top:-.6em;
-   font-size:1em;
+#container li {
+   position:relative;
+   list-style-type:none;  
+}
+#numid > li{
+	position:absolute;
+    margin-top:.6em; 
+    font-size:.7em;  
+}
+#tickid > li{
+   position:absolute; 
+   margin-top: -.93em; 
    color:#A09696;
    z-index:-1;
    margin-left:-.23em; 
 }
-label {
-   position:absolute;
-   margin-top:1.5em;
-   font-size:.7em;
-}
+
+/* Slider bar */
 .ui-slider-horizontal {
-	 height: 0em; 
-	 /* background-color: #8e8d8d;  
-	 box-shadow: inset 0 1px 5px 0px rgba(0, 0, 0, .5),   
-	                     0 1px 0 0px rgba(250, 250, 250, .5); */  
-}
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-	/*border: 0; 
-	background: url(img/down-arrow.png) 50% 50% no-repeat; */
-	/* background-image:none; */
- 	height:.6em;
-	width:.6em;
-	margin-left:-.4em;
-   	border-radius: 50%; 
-    border: solid .1em #CC0000;
-  
-}
- .ui-widget-content .ui-state-hover,.ui-slider a:focus  {
- 	margin-top:-.2em;
- 	margin-left:-.5em;
- 	height:.8em;
-	width:.8em;
-	background: -moz-radial-gradient(circle, #FFF, #CC0000); 
-	background: -webkit-gradient(radial, center center, 0, center center, 460, from(#FFF), to(#CC0000)); 
+	 height: .1em; 
+	 background: -webkit-gradient(radial, center center, 0, center center, 460, from(#FFF), to(#CC0000)); 
 	background: -webkit-radial-gradient(circle, #FFF, #CC0000);  
-	background: -ms-radial-gradient(circle, #FFF, #CC0000); 	
-	background: -o-radial-gradient(circle, #FFF, #CC0000); 
-}
-.ui-slider a {
-	outline:none;
-} 
-.negativeNumMarginLeft{
-	margin-left:-.7em;
-}
-.positiveNumMarginLeft{
-	margin-left:-.3em;
-}
-.slider-tip {
-    position:absolute;
-    top:-.2em;
-}
-.tooltip {
-    position: absolute;
-    z-index: 1020;
-    display: block;
-    padding: 5px;
-    font-size: .5em;
-    visibility: visible;
-    margin-top: -3em;
-    /* bottom:120%; */
-    /* margin-left: -1em;  */
-}
-
-.tooltip .tooltip-arrow {
-    bottom: 0;
-    left: 50%;
-    margin-left: -5px;
-    border-top: 5px solid #959CA0;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    position: absolute;
-    width: 0;
-    height: 0;
-}
-
-.tooltip-inner {
-    max-width: 200px;
-    padding: 3px 8px;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    background-color: #959CA0;
-    -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-            border-radius: 4px;
-}
-
-
-</style> 
-
-<div id="container"></div> 
-
-<div style="width:200px;height:120px;">  
-	<!-- Displays current value of slider Handles -->
-	 <span id="valA">A -: {{num.valA}}</span><br>
-	 <span id="valB">B -: {{num.valB}}</span><br>
-	 <span id="valC">C -: {{num.valC}}</span><br><br><br>
-</div>
-
-
-<!--<style type="text/css">
-
-li>span {
-   position:absolute;
-   margin-top:-2em;
-   font-size:1em;
-   color:#A09696;
-   z-index:-1;
-   margin-left:-.23em; 
-}
-li {
-   position:absolute;
-  /*  margin-top:1.5em; */
-   font-size:.7em;
-   list-style-type:none;
-}
-.ui-slider-horizontal {
-	 height: 0em; 
-	 /* background-color: #8e8d8d;  
-	 box-shadow: inset 0 1px 5px 0px rgba(0, 0, 0, .5),   
+	/* background-color: #8e8d8d;  */ 
+	  /* box-shadow: inset 0 1px 5px 0px rgba(0, 0, 0, .5),   
 	                     0 1px 0 0px rgba(250, 250, 250, .5); */  
 }
+
+/* Handles */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
 	/*border: 0; 
 	background: url(img/down-arrow.png) 50% 50% no-repeat; */
@@ -161,77 +65,51 @@ li {
 .positiveNumMarginLeft{
 	margin-left:-.3em;
 }
-.tooltip {
-    position: absolute;
-    z-index: 1020;
-    display: block;
-    padding: 5px;
-    font-size: .5em;
-    visibility: visible;
-    margin-top: -3em;
-    /* bottom:120%; */
-    /* margin-left: -1em;  */
+
+a[title]:after {
+	
+  content: attr(title);
+  padding:.2em;
+  font-size:.8em;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top:-3.5em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px 0px 4px #222;
+  -webkit-box-shadow: 0px 0px 4px #222;
+  box-shadow: 0px 0px 4px #222;
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #cccccc));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
 }
-
-.tooltip .tooltip-arrow {
-    bottom: 0;
-    left: 65%;
-    margin-left: -5px;
-    border-top: 5px solid #959CA0;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    position: absolute;
-    width: 0;
-    height: 0;
-    margin-bottom:-2px;
-}
-
-.tooltip-inner {
-    max-width: 200px;
-    padding: 3px 8px;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    background-color: #959CA0;
-    -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-            border-radius: 4px;
-}
-
-</style>-->
-
-<!--<div ms-numberline ng-controller="numberController">
-		 <ul ng-repeat="row in tickArray">
-			<li style= "left:{{row.leftPosition +'%'}}" ><span >|</span></li>
+</style>
+<div id="container">	
+	<div class="numberline">
+		 <ul id="tickid" ng-repeat="row in tickArray">
+			<li style= "left:{{row.leftPosition +'%'}}" >|</li>
 		 </ul>
 		 
-		 <ul ng-repeat="row in numArray">
+		 <ul id="numid" ng-repeat="row in numArray">
 			<li class='{{row.className}}' style= "left:{{row.leftPosition +'%'}}" >{{row.val}}</li>
 		 </ul>
-		 
-		 <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"> 
-		 		<span class="tooltip">
-					<span class="tooltip-arrow"></span>
-					<span class="tooltip-inner"> A </span>
-				</span>
-		 </a>
-		  <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 50%;">
-		 		<span class="tooltip">
-					<span class="tooltip-arrow"></span>
-					<span class="tooltip-inner"> B </span>
-				</span>
-		 </a>
-		 <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;">
-		 		<span class="tooltip">
-					<span class="tooltip-arrow"></span>
-					<span class="tooltip-inner"> C </span>
-				</span>
-		 </a> 
+		 <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;" title="X"> </a>
+		 <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 50%;" title="Y"></a>
+		 <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;" title="Z"></a>   
 	</div>
+	 
+</div>
+
+<!-- <br><br><br>
+Displays current value of slider Handles
+	 <label ng-model="num.valA">A -: {{num.valA}}</label>
+	 <label ng-model="num.valB">B -: {{num.valB}}</label>
+	 <label ng-model="num.valC">C -: {{num.valC}}</label>	 
+	 </div>  -->
 	
-	
-	<br><br>  -->
-	<!-- Displays current value of slider Handles -->
-	<!-- <label ng-model="num.valA">A -: {{num.valA}}</label><br>
-	 <label ng-model="num.valB">B -: {{num.valB}}</label><br>
-	 <label ng-model="num.valC">C -: {{num.valC}}</label>-->

@@ -40,11 +40,11 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 }]
             },
             interactiveNumberline: {
-                title: 'Charts and Bar Graphs', 
+           	 title: 'Charts and Bar Graphs', 
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem:'\\pan{12}{11}{$chart1}',
+                        problem:'\\pan{12}{11}{$numberline1}',
                         answer: '\\css{'+
                                     '\\rowgrp'+
                                         '{\\ins{$question}}'+
@@ -55,13 +55,17 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                             "help": true
                         }
                 },{
-						problem:'\\pan{12}{11}{$chart2}', 
+						problem:'\\pan{12}{11}{$numberline1}', 
                         answer: '\\css{'+
                                     '\\rowgrp'+
-                                        '{\\ins{Identify each value on the number line:}}'+
-                                        '{\\grp{\\str{X = }}{\\input{$val1}}}'+
-                                        '{\\grp{\\str{Y = }}{\\input{$val2}}}'+
-                                        '{\\grp{\\str{Z = }}{\\input{$val3}}}'+
+                                        '{\\ins{Plot the given values directly on the number line:}}'+
+                                        '{\\grp{\\str{X = -7}}}'+
+                                        '{\\html{&nbsp;}}'+
+                                        '{\\grp{\\str{Y = 2}}}'+
+                                        '{\\html{&nbsp;}}'+
+                                        '{\\grp{\\str{Z = 10}}}'+
+                                        '{\\html{&nbsp;}}'+
+                                        '{\\grp{\\str{Plotting Instruction: To plot (locate) the given values on the displayed number line, simply move the mouse pointer to that location, then click once.}}}'+
                                 '}{well}',
 						controls: {
 							"checkAnswer": true,
@@ -70,7 +74,8 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
 						}
 					}]
                 }]
-            },
+           },
+      // },
 			dynamic: {
                 title: 'Charts and Bar Graphs', 
                 children: [{
@@ -197,9 +202,9 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 val1: '-2.5', val2: '-0.75', val3: '1.25'
             },
           //problem 6
-            /*{   
-                chart1: dataUtils.pre('\\numberline{-10}{10}{1}{1}'),
-                chart2: dataUtils.pre('\\numberline{-10}{10}{1}{1}'),
+            {   
+            	numberline1: dataUtils.pre('\\numberline{-12}{12}{1}{3}'),
+            	//numberline2: dataUtils.pre('\\numberline{-12}{12}{1}{3}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'interactiveNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
                 button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 -1}}'),
@@ -207,8 +212,8 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 1}}'),
                 button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
                 val1: '-9', val2: '-3', val3: '6'
-            },*/
-			//problem 6
+            },
+			/*//problem 6
             {   
                 chart1: dataUtils.pre('\\numberline{-10}{10}{1}{ [[-9, 0], [6, 0], [-3, 0]] }{chart1}'),
                 chart2: dataUtils.pre('\\numberline{-10}{10}{1}{ [[-9, 0], [6, 0], [-3, 0]] }{chart2}'), 
@@ -217,7 +222,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 answerIn: dataUtils.pre('\\rowgrp{\\input{$$input1}}'),
 				input1: 'wabbit',
                 val1: '-9', val2: '-3', val3: '6'
-            },
+            },*/
         ];
 
 	return dataUtils.build(desc, template, data);

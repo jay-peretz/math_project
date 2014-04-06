@@ -1,4 +1,170 @@
 'use strict';
+
+angular.module('mathSkills') 
+	.config(['parserProvider', function (parserProvider) {
+        parserProvider.register('numberline', {
+            argTemplates: [{
+            	name: 'minval'
+            },{
+            	name: 'maxval'
+            },{
+            	name: 'stepval'
+            },{
+                name: 'incrementval'
+            }],
+            directiveTemplate: '<ms-numberline expected={{expected}}></ms-numberline>'
+        });
+    }])
+  .directive('msNumberline', [
+	'parser',
+	'$timeout',
+	function (parser, $timeout) {
+		return {
+			restrict: 'E',
+			scope: {
+				expected: '@',
+				label: '@'
+			},
+			controller: function ($scope, $element) {
+				$scope.num = {
+                        valA:'', 
+                        valB:'',  
+                        valC:''
+                    };
+               	
+                    $scope.numArray = [];
+                    $scope.tickArray = [];
+                    
+					$scope.$watch('expected', function () {
+						if ($scope.expected) {
+							parser.parse($scope.expected, { scope: $scope });
+						}
+					});	
+					$scope.$watch('minval', function () {
+						if (typeof $scope.minval === "string") {
+							$scope.min = parseInt($scope.minval);
+							 console.log("$scope.min from inside watch: " + $scope.min);
+						}
+					});
+					 $scope.$watch('maxval', function () {
+		                  if (typeof $scope.maxval === "string") {
+		                	  $scope.max = parseInt($scope.maxval);
+		                	  console.log("$scope.max from inside watch: " + $scope.max);
+		                  }
+		              });
+	                  $scope.$watch('stepval', function () {
+		                  if (typeof $scope.stepval === "string") {
+		                	  $scope.step = parseFloat($scope.stepval);
+		                	  console.log("$scope.step from inside watch: " + $scope.step);
+		                  }
+		              });
+	                  $scope.$watch('incrementval', function () {
+		                  if (typeof $scope.incrementval === "string") {
+		                	  $scope.increment = parseInt($scope.incrementval);
+		                	  console.log("$scope.increment from inside watch: " + $scope.increment);
+		                  }
+		              });
+
+					$timeout(function(){
+                    $('.numberline').slider({
+                        min: $scope.min,
+                        max: $scope.max,
+                        step:$scope.step,
+                        animate:true,
+                        values: [$scope.min,0,$scope.max],
+                        change: function( event, ui ) {
+                            $scope.num.valA = ui.values[0];
+                            $scope.num.valB = ui.values[1];
+                            $scope.num.valC = ui.values[2];
+                           //$scope.$apply();
+                            console.log("scope.num.valA "+ $scope.num.valA + " scope.num.valB  " + $scope.num.valB + " scope.num.valC  " + $scope.num.valC);
+                        }
+                    }) //end of slider method
+                
+                    .each(function() {
+
+                        var increment=$scope.increment;
+                        // Get the options for this slider
+                        var opt = $(this).data().uiSlider.options;
+
+                        var numOfSections = opt.max - opt.min;
+                        var numOfSmallUnits = 0;
+                        var ticks=0;
+                        var j = opt.min;
+                        var k = opt.min;
+
+                        if(opt.step>0 && opt.step<1)
+                        {
+                            if(opt.step === .5)
+                                ticks=2;
+                            else if(opt.step === .25)
+                                ticks=4;
+                            else if(opt.step === .2)
+                                ticks=5;
+                            else if(opt.step === .1)
+                                ticks=10;
+
+                            numOfSmallUnits=numOfSections*ticks;
+
+                            for (var i = 0; i <= numOfSections; i++)
+                            {
+                                if(j === k)
+                                {
+                                    if(j < 0)
+                                        $scope.numArray.push({val:j,
+                                            leftPosition:i/numOfSections*100,
+                                            className:'negativeNumMarginLeft'});
+                                    else
+                                        $scope.numArray.push({val:j,
+                                            leftPosition:i/numOfSections*100,
+                                            className:'positiveNumMarginLeft'});
+
+                                    k = k+increment;
+                                    j = j+1;
+                                }
+                            }
+
+                            for(var m = 0; m <= numOfSmallUnits; m++)
+                            {
+                                $scope.tickArray.push({
+                                    leftPosition:m/numOfSmallUnits*100
+                                });
+                            }
+                        }
+                        else if(opt.step >= 1)
+                        {
+                            for (var i = 0; i <= numOfSections; i++)
+                            {
+                                if(j === k)
+                                {
+                                    if(j < 0)
+                                        $scope.numArray.push({val:j,
+                                            leftPosition:i/numOfSections*100,
+                                            className:'negativeNumMarginLeft'});
+                                    else
+                                        $scope.numArray.push({val:j,
+                                            leftPosition:i/numOfSections*100,
+                                            className:'positiveNumMarginLeft'});
+
+                                    k = k+increment;
+                                }
+                                $scope.tickArray.push({
+                                    leftPosition:i/numOfSections*100
+                                });
+                                j = j+1;
+                            }
+                        }
+
+                    });//end of each method
+					}, 0);
+                }, // end of controller
+                
+                templateUrl : 'partials/directives/ms-numberline.html' 
+            }; // end return
+        }]);
+
+
+/*'use strict';
 	
 angular.module('mathSkills') 
 	.config(['parserProvider', function (parserProvider) {
@@ -56,7 +222,7 @@ angular.module('mathSkills')
 						valB:'',
 						valC:'',
 					};
-						/*------- Change values here to reflect diffrent values in numberline ------ */
+						/*------- Change values here to reflect diffrent values in numberline ------ 
 						$scope.min=-3;
 						$scope.max=3;
 						$scope.step=.2;
@@ -170,7 +336,7 @@ angular.module('mathSkills')
 							   for (var i = 0; i <= numOfSections; i++) 
 								  {
 									  if(j === k){
-										  /*------- Displays numbers below numberline ------ */
+										  /*------- Displays numbers below numberline ------ 
 										  if(j<0)
 											el1 = $('<label>'+j+'</label>').css('left', i/numOfSections*100+'%').addClass('negativeNumMarginLeft');
 										  else
@@ -180,7 +346,7 @@ angular.module('mathSkills')
 										j = j+1;
 									  }
 								  }
-								  /*--------- Displays tickmark or linemark over numberline------  */
+								  //--------- Displays tickmark or linemark over numberline------  
 								  for(var m = 0; m <= smallUnits; m++){
 									  el2 = $('<span>'+'|'+'</span>').css('left', m/smallUnits*100+'%');
 									  $( this ).append(el2); 
@@ -191,7 +357,7 @@ angular.module('mathSkills')
 								  for (var i = 0; i <= numOfSections; i++) 
 								  {
 									  if(j === k){
-										  /*-------- Displays numbers below numberline---------  */
+										  //-------- Displays numbers below numberline---------  
 										  if(j<0)
 											el1 = $('<label>'+j+'</label>').css('left', i/numOfSections*100+'%').addClass('negativeNumMarginLeft');
 										  else
@@ -199,13 +365,13 @@ angular.module('mathSkills')
 										$( this ).append(el1);
 										k = k+increment;
 									  }
-									  /* Displays tickmark or linemark over numberline  */
+									  // Displays tickmark or linemark over numberline  
 									  el2 = $('<span>'+'|'+'</span>').css('left', i/numOfSections*100+'%');
 									  $( this ).append(el2); 
 									  j = j+1;
 								  }
 							  }
-						  /* Displays tooltip over the handles by adding bootstrap classes to each handle  */
+						  // Displays tooltip over the handles by adding bootstrap classes to each handle  
 						  $('.ui-slider-handle:first').html('<div class="tooltip top slider-tip"><div class="tooltip-arrow"></div><div class="tooltip-inner">' + 'A' + '</div></div>');
 						  $('.ui-slider-handle:nth-child(2)').html('<div class="tooltip top slider-tip"><div class="tooltip-arrow"></div><div class="tooltip-inner">' + 'B' + '</div></div>');
 						  $('.ui-slider-handle:last').html('<div class="tooltip top slider-tip"><div class="tooltip-arrow"></div><div class="tooltip-inner">' + 'C' + '</div></div>');      
@@ -362,139 +528,3 @@ angular.module('mathSkills')
 
 
 
-/*'use strict';
-global angular 
-	
-angular.module('mathSkills') 
-	.config(['parserProvider', function (parserProvider) {
-        parserProvider.register('numberline', {
-            argTemplates: [{
-                name: 'firstnumber'
-            },{
-                name: 'secondnumber'
-            },{
-                name: 'graphminimum'
-            },{
-                name: 'graphmaximum'
-            }],
-            directiveTemplate: '<ms-numberline expected={{expected}}></ms-numberline>'
-        });
-    }])
-  .directive('msNumberline', [
-	'parser',
-	function (parser) {
-		return {
-			restrict: 'E',
-			scope: {
-				expected: '@',
-				label: '@'
-			},
-			controller: function ($scope, $element) {
-                $scope.controllerId = Math.random().toString();
-				$scope.answer = '';
-				$scope.numberLineArray = [];
-                $scope.controllerId = Math.random().toString();
-				var numberFirst = [],
-					numberSecond = [],
-					//graphminimum = [], -unused
-					//graphmaximum = [], -unused
-					minimumGraph = [],
-					maximumGraph = [],
-					numberLineArray = [],
-					numberFirst = 0,
-					numberSecond = 1;
-					
-				numberLineArray[0] = [];
-				numberLineArray[1] = [];
-				numberLineArray[2] = [];
-					
-
-			 // Extract the value/s for $scope.firstnumber & $scope.secondnumber
-				$scope.$watch('expected', function () {
-					if ($scope.expected) {
-						parser.parse($scope.expected, { scope: $scope });
-					}
-				});
-				
-				$scope.$watch('firstnumber', function () {
-					if (typeof $scope.firstnumber === "string") {
-						numberFirst = $scope.firstnumber;
-					}
-				});
-				
-				$scope.$watch('secondnumber', function () {
-					if (typeof $scope.secondnumber === "string") {
-						numberSecond = $scope.secondnumber;
-					}
-				});
-								
-				$scope.$watch('graphminimum', function () {
-					if (typeof $scope.graphminimum === "string") {
-						minimumGraph = $scope.graphminimum;
-					}
-				});
-				
-				$scope.$watch('graphmaximum', function () {
-					if (typeof $scope.graphmaximum === "string") {
-						maximumGraph = $scope.graphmaximum;
-						
-						
-						// below number line display 
-						for (var ii = minimumGraph, jj = 0; ii <= maximumGraph; ii++) {
-								if ((ii != numberFirst)&&(ii != numberSecond)) {
-									numberLineArray[1][jj] = "\xA0"+ii+"\xA0";
-									numberLineArray[0][jj] = "\xA0"+"\xA0"+"|";
-								} else {
-									if (ii == numberFirst) {
-										numberLineArray[2][jj] = "\xA0"+"x"+"\xA0";
-										numberLineArray[1][jj] = "\xA0"+ii+"\xA0";
-										numberLineArray[0][jj] = "\xA0"+"\xA0"+"|";
-									} else if (ii == numberSecond) {
-										numberLineArray[2][jj] = "\xA0"+"x"+"\xA0";
-										numberLineArray[1][jj] = "\xA0"+ii+"\xA0";
-										numberLineArray[0][jj] = "\xA0"+"\xA0"+"|";
-									}
-								}
-								jj++;
-						}
-							
-						$scope.numberLineArray = numberLineArray.slice();	
-					}
-				});
-                
-                // handle check answer event for parent scope "always correct".
-                    $scope.$on('checkAnswer', function () {
-                        $scope.$emit('answer', {
-                            result: 'correct',
-                            expected: $scope.expected,
-                            answer: $scope.expected,
-                            label: $scope.label
-                        });
-                    });
-    
-                    $scope.$on('checkFocus', function (e) {
-                        // If this event has not been marked as ignored.
-                        if (e.defaultPrevented === false) {
-                            // handle check focus event for parent scope.
-                            // comparewholesgraph cannot have focus/tab, fire a notFocused event.
-                            $scope.$emit('notFocused', {
-                                controllerId: $scope.controllerId
-                            });
-                        }
-                    });
-    
-                    $scope.$on('checkHelp', function (e) {
-                        // If this event has not been marked as ignored.
-                        if (e.defaultPrevented === false) {
-                            // handle check help event for parent scope.
-                            // comparewholesgraph does not use help, fire a notHelped event.
-                            $scope.$emit('notHelped', {
-                                controllerId: $scope.controllerId
-                            }); 
-                        }
-                    });
-                    
-			},
-			templateUrl: 'partials/directives/ms-comparewholesgraph.html'
-		};
-	}]);*/
