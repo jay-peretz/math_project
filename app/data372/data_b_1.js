@@ -196,9 +196,9 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 	    	template: 'imageproblem'
 			},
 			//prob 14
-			{instructions: '<p>When 12 children were offered ice cream or cake for dessert, 5 kids chose cake and 7 chose ice cream. </p><p>Write a ratio of kids that chose ice cream to those who chose cake.</p>',
+			{instructions: '<p>When 12 children were offered ice cream or cake for dessert, 7 kids chose ice cream and 5 kids chose cake. </p><p>Write a ratio of kids that chose ice cream to those who chose cake.</p>',
 			response : '\\\\grp{\\\\frac{\\\\input{7}}{\\\\input{5}}}', 
-			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a ratio:}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\css{\\\\frac{\\\\str{5  kids chose cake}}{\\\\str{7  kids ice cream}}}{help-answer-text}}}', 
+			help: '\\\\rowgrp{\\\\row{\\\\str{Set up a ratio:}}}{\\\\row{\\\\str{\xA0}}}{\\\\row{\\\\css{\\\\frac{\\\\str{7 kids ice cream}}{\\\\str{5 kids cake}}}{help-answer-text}}}', 
 	    	template: 'wordproblem'
 			},
 			//prob 15
