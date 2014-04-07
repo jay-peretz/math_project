@@ -1,9 +1,9 @@
 /*global angular */
 
-angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUtils) {
+angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUtils) {
     var desc = {
-			title: '23.1 Converting Units of Volume',
-            path: '23.1-converting-units-of-volume',
+			title: '23.2 Converting Compound Units of Volume',
+            path: '23.2-converting-compound-units-of-volume',
             children: []
         },
         template = {
@@ -16,19 +16,19 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\html{$initialAmount &nbsp; $unitsStart / $unitsPer}}'
 										+'{\\sign{&equals;}}'
-										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$secondImage}}'
+										+'{\\html{? &nbsp; $unitsSecond / $unitsPer}}'
 									+'}',
                         answer: '\\grp'
 									+'{\\input{$finalAnswer}}'
-									+'{\\html{$unitsSecond}}'
-									+'{$modalChart}',
+									+'{\\html{$unitsSecond / $unitsPer}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
-                            "workbook": true
+                            "workbook": true,
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
                         }
                     }]
                 }, {
@@ -38,17 +38,16 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\html{$initialAmount &nbsp; $unitsStart / $unitsPer}}'
 										+'{\\sign{&equals;}}'
-										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$secondImage}}'
+										+'{\\html{? &nbsp; $unitsSecond / $unitsPer}}'
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
 										+'{\\html{Write the given value as a fraction.$descriptor}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}}{\\input{$denominatorStart}}}'
+											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}}{\\grp{\\input{$denominatorStart}}{\\select{$unitsPer}{$perSelect}}}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -60,24 +59,38 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                         }
 							   
 					}, {
-                        problem: '\\rowgrp'
+                       problem: '\\rowgrp'
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\html{$initialAmount &nbsp; $unitsStart / $unitsPer}}'
 										+'{\\sign{&equals;}}'
-										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$secondImage}}'
+										+'{\\html{? &nbsp; $unitsSecond / $unitsPer}}'
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
 										+'{\\html{What is the fraction (that equals 1 whole) that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\html{$initialAmount}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
+												+'}'
+												+'{\\grp'
+													+'{\\html{1}}{\\html{&nbsp;}}{\\html{$unitsPer}}'
+												+'}'
+											+'}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\select{$firstNumAnswer}{$firstNumSelect}}'
-											+'{\\select{$firstDenAnswer}{$firstDenSelect}}}'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\select{$firstNumAnswer}{$unitSelect}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\select{$secondLabelAnswer}{$labelSelect}}'
+												+'}'
+												+'{\\grp'
+													+'{\\select{$firstDenAnswer}{$unitSelect}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}'
+												+'}'
+											+'}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -86,9 +99,16 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 							+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with "$secondWordCancel" in the numerator and "$firstWordCancel" in the denominator allows us to cancel out "$firstWordCancel".}}'
 							+'{\\html{&nbsp;}}'
 							+'{\\grp'
-								+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+								+'{\\frac'
+									+'{\\html{$initialAmount &nbsp; $unitsStart}}'
+									+'{\\html{1 &nbsp; $unitsPer}}'
+								+'}'
 								+'{\\sign{&times;}}'
-								+'{\\css{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}{blue-text}}'
+								+'{\\frac'
+									+'{\\html{$firstNumAnswer &nbsp $secondLabelAnswer}}'
+									+'{\\html{$firstDenAnswer &nbsp; $labelAnswer}}'
+								+'}'
+							+'}'
 							+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
@@ -99,22 +119,27 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{$denominatorSecond}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
-										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}'
+										+'{\\html{$initialAmount &nbsp; $unitsStart / $unitsPer}}'
+										+'{\\sign{&equals;}}'
+										+'{\\html{? &nbsp; $unitsSecond / $unitsPer}}'
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
 										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
+											+'{\\frac'
+												+'{\\html{$initialAmount &nbsp; $unitsStart}}'
+												+'{\\html{1 &nbsp; $unitsPer}}'
+											+'}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
+											+'{\\frac'
+												+'{\\html{$firstNumAnswer &nbsp $secondLabelAnswer}}'
+												+'{\\html{$firstDenAnswer &nbsp; $labelAnswer}}'
+											+'}'
 											+'{\\sign{&equals;}}'
 											+'{\\input{$finalAnswer}}'
-											+'{\\html{$unitsSecond}}'
+											+'{\\html{$unitsSecond / $unitsPer}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -122,11 +147,11 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                             "help": '\\rowgrp'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span>}}{\\html{<span class=blue-text>$denominatorStart</span>}}}'
+											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span>}}{\\html{<span class=blue-text>$denominatorStart</span><span class=blue-text> $unitsPer</span>}}}'
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span>$unitsSecond</span>}}{\\html{<span class=blue-text>$denominatorSecond</span> <span class=line_through>$unitsStart</span>}}}'
 											+'{\\sign{&equals;}}'
-											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsSecond</span>}}'
+											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsSecond / $unitsPer</span>}}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
@@ -204,8 +229,8 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\select{$firstNumAnswer}{$firstNumSelect}}'
-											+'{\\select{$firstDenAnswer}{$firstDenSelect}}}'
+											+'{\\frac{\\select{$firstNumAnswer}{$unitSelect}}'
+											+'{\\select{$firstDenAnswer}{$unitSelect}}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -240,7 +265,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\select{$secondNumAnswer}{$firstNumSelect}}{\\select{$secondDenAnswer}{$firstDenSelect}}}'
+											+'{\\frac{\\select{$secondNumAnswer}{$unitSelect}}{\\select{$secondDenAnswer}{$unitSelect}}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -376,8 +401,8 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\select{$firstNumAnswer}{$firstNumSelect}}'
-											+'{\\select{$firstDenAnswer}{$firstDenSelect}}}'
+											+'{\\frac{\\select{$firstNumAnswer}{$unitSelect}}'
+											+'{\\select{$firstDenAnswer}{$unitSelect}}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -412,7 +437,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\select{$secondNumAnswer}{$firstNumSelect}}{\\select{$secondDenAnswer}{$firstDenSelect}}}'
+											+'{\\frac{\\select{$secondNumAnswer}{$unitSelect}}{\\select{$secondDenAnswer}{$unitSelect}}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -455,7 +480,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{$$secondNumAnswer}}{\\html{$secondDenAnswer}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\select{$thirdNumAnswer}{$firstNumSelect}}{\\select{$thirdDenAnswer}{$firstDenSelect}}}'	
+											+'{\\frac{\\select{$thirdNumAnswer}{$unitSelect}}{\\select{$thirdDenAnswer}{$unitSelect}}}'	
 										+'}'
 									+'}{well}',
                         controls: {
@@ -532,32 +557,31 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
         },
         data = [
 			{ // problem 1
-				problemText: '4 miles is how many feet?',
+				problemText: 'Write the given rate in fractional form:',
 				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
 				labelAnswer: 'mi',
-				firstNumSelect: '[\\"12 in\\", \\"3 ft\\", \\"5,280 ft\\",  \\"1 mi\\"]',
-				firstDenSelect: '[\\"1 in\\", \\"1 ft\\", \\"1 yd\\",  \\"1 mi\\"]',
-				initialAmount: '4',
-				numeratorStart: '4',
+				secondLabelAnswer: 'ft',
+				unitSelect: '[\\"12\\", \\"3\\", \\"5,280\\",  \\"1\\"]',
+				perSelect: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
+				initialAmount: '40',
+				numeratorStart: '40',
 				denominatorStart: '1',
 				numeratorSecond: '5,280',
 				denominatorSecond: '1',
 				unitsStart: 'mi',
 				unitsSecond: 'ft',
-				firstNumAnswer: '5,280 ft',
-				firstDenAnswer: '1 mi',
-				finalAnswer: '21120',
-				helpFinalAnswer: '21,120',
+				unitsPer: 'hr',
+				firstNumAnswer: '5,280',
+				firstDenAnswer: '1',
+				finalAnswer: '211200',
+				helpFinalAnswer: '211,200',
 				firstWordCancel: 'miles',
 				secondWordCancel: 'feet',
-				descriptor: '',
-				firstImage: 'mile.png',
-				secondImage: 'Foot_01_V2_48x67.png',
 				descriptor: '',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
 				template: 'oneStep' 
 			}
-			,
+			/*,
 			{ // problem 2
 				problemText: '6 feet is how many inches?',
 				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
@@ -1655,7 +1679,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				descriptor: '',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>60 sec</td><td>=</td><td>1 min</td></tr><tr><td>60 min</td><td>=</td><td>1 hr</td></tr><tr><td>24 hr</td><td>=</td><td>1 day</td><tr><td>7 days</td><td>=</td><td>1 wk</td></tr></table>}'),
 				template: 'threeStep' 
-			}
+			}*/
         ];
 
     return dataUtils.build(desc, template, data);
