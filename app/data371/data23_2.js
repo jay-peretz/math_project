@@ -47,7 +47,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 										+'{\\html{Write the given value as a fraction.$descriptor}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}}{\\grp{\\input{$denominatorStart}}{\\select{$unitsPer}{$perSelect}}}}'
+											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$unitsStart}{$labelSelect}}}{\\grp{\\input{$denominatorStart}}{\\html{&nbsp;}}{\\select{$unitsPer}{$perSelect}}}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -85,10 +85,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 												+'{\\grp'
 													+'{\\select{$firstNumAnswer}{$unitSelect}}'
 													+'{\\html{&nbsp;}}'
-													+'{\\select{$secondLabelAnswer}{$labelSelect}}'
+													+'{\\select{$unitsSecond}{$labelSelect}}'
 												+'}'
 												+'{\\grp'
-													+'{\\select{$firstDenAnswer}{$unitSelect}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}'
+													+'{\\select{$firstDenAnswer}{$unitSelect}}{\\html{&nbsp;}}{\\select{$unitsStart}{$labelSelect}}'
 												+'}'
 											+'}'
 										+'}'
@@ -105,8 +105,8 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 								+'}'
 								+'{\\sign{&times;}}'
 								+'{\\frac'
-									+'{\\html{$firstNumAnswer &nbsp $secondLabelAnswer}}'
-									+'{\\html{$firstDenAnswer &nbsp; $labelAnswer}}'
+									+'{\\html{$firstNumAnswer &nbsp $unitsSecond}}'
+									+'{\\html{$firstDenAnswer &nbsp; $unitsStart}}'
 								+'}'
 							+'}'
 							+'}',
@@ -134,8 +134,8 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\html{$firstNumAnswer &nbsp $secondLabelAnswer}}'
-												+'{\\html{$firstDenAnswer &nbsp; $labelAnswer}}'
+												+'{\\html{$firstNumAnswer &nbsp $unitsSecond}}'
+												+'{\\html{$firstDenAnswer &nbsp; $unitsStart}}'
 											+'}'
 											+'{\\sign{&equals;}}'
 											+'{\\input{$finalAnswer}}'
@@ -200,7 +200,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 										+'{\\html{Write the given value as a fraction.$descriptor}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$labelAnswer}{$labelSelect}}}{\\grp{\\input{$denominatorStart}}{\\select{$firstDenAnswer}{$perSelectTwo}}}}'
+											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$unitsStart}{$labelSelect}}}{\\grp{\\input{$denominatorStart}}{\\html{&nbsp;}}{\\select{$firstDenAnswer}{$perSelectTwo}}}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -434,7 +434,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$firstDenAnswer" that we don\'t want as a part of the answer.  The fraction with "$firstDenAnswer" in the numerator and "$unitsPer" in the denominator allows us to cancel out "$firstDenAnswer".}}'
+										+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$fourthWordCancel" that we don\'t want as a part of the answer.  The fraction with "$fourthWordCancel" in the numerator and "$perWordCancel" in the denominator allows us to cancel out "$fourthWordCancel".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
@@ -558,49 +558,45 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'}{well}',
                         controls: {
                             "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$firstDenAnswer" that we don\'t want as a part of the answer.  The fraction with "$firstDenAnswer" in the numerator and "$unitsPer" in the denominator allows us to cancel out "$firstDenAnswer".}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac'
-												+'{\\html{<span class=blue-text>$initialAmount</span> <span class=line_through>$unitsStart</span>}}'
-												+'{\\html{<span class=blue-text>$denominatorStart</span> <span class=line_through>$firstDenAnswer</span>}}'
+                            "help": '\\grp'
+										+'{\\frac'
+											+'{\\html{<span class=blue-text>$initialAmount</span> <span class=line_through>$unitsStart</span>}}'
+											+'{\\html{<span class=blue-text>$denominatorStart</span> <span class=line_through>$firstDenAnswer</span>}}'
+										+'}'
+										+'{\\sign{&times;}}'
+										+'{\\frac'
+											+'{\\grp'
+												+'{\\html{<span class=blue-text>$numeratorSecond</span> <span class=line_through>$unitsSecond</span>}}'
 											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{<span class=blue-text>$numeratorSecond</span> <span class=line_through>$unitsSecond</span>}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{<span class=blue-text>$denominatorSecond</span> <span class=line_through>$unitsStart</span>}}'
-												+'}'
+											+'{\\grp'
+												+'{\\html{<span class=blue-text>$denominatorSecond</span> <span class=line_through>$unitsStart</span>}}'
 											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{<span class=blue-text>$numeratorThird</span> <span class=line_through>$unitsThird</span>}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{<span class=blue-text>$denominatorThird</span> <span class=line_through>$unitsSecond</span>}}'
-												+'}'
+										+'}'
+										+'{\\sign{&times;}}'
+										+'{\\frac'
+											+'{\\grp'
+												+'{\\html{<span class=blue-text>$numeratorThird $unitsThird</span>}}'
 											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{<span class=blue-text>$numeratorFourth</span> <span class=line_through>$firstDenAnswer</span>}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{<span class=blue-text>$denominatorFourth $unitsPer</span>}}'
-												+'}'
+											+'{\\grp'
+												+'{\\html{<span class=blue-text>$denominatorThird</span> <span class=line_through>$unitsSecond</span>}}'
 											+'}'
-											+'{\\sign{&equals;}}'
-											+'{\\css'
-												+'{\\grp'
-													+'{\\html{$finalAnswer}}'
-													+'{\\html{$unitsThird / $unitsPer}}'
-												+'}'
-											+'{blue-text}}'
-										+'}',
+										+'}'
+										+'{\\sign{&times;}}'
+										+'{\\frac'
+											+'{\\grp'
+												+'{\\html{<span class=blue-text>$numeratorFourth</span> <span class=line_through>$firstDenAnswer</span>}}'
+											+'}'
+											+'{\\grp'
+												+'{\\html{<span class=blue-text>$denominatorFourth $unitsPer</span>}}'
+											+'}'
+										+'}'
+										+'{\\sign{&equals;}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\html{$helpFinalAnswer}}'
+												+'{\\html{$unitsThird / $unitsPer}}'
+											+'}'
+										+'{blue-text}}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
 							
@@ -613,8 +609,6 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 			{ // problem 1
 				problemText: 'Write the given rate in fractional form:',
 				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
-				labelAnswer: 'mi',
-				secondLabelAnswer: 'ft',
 				unitSelect: '[\\"12\\", \\"3\\", \\"5,280\\",  \\"1\\"]',
 				perSelect: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
 				initialAmount: '40',
@@ -639,7 +633,6 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
             { //problem 10
 				problemText: 'Write the given rate in fractional form:',
 				labelSelect: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
-				labelAnswer: 'gal',
 				unitSelect: '[ \\"1\\", \\"2\\", \\"3\\", \\"4\\", \\"8\\", \\"16\\"]',
 				
 				perSelectOne: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
@@ -671,8 +664,18 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				secondWordCancel: 'quarts',
 				thirdWordCancel: 'pints',
 				fourthWordCancel: 'pounds',
+				perWordCancel: 'ounces',
 				finalAnswer: '1',
-				modalChart: dataUtils.pre('\\html{<table><th colspan="2">Equivalence Table</th><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table></td><td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table></td></tr></table>}'),
+				helpFinalAnswer: '1',
+				modalChart: dataUtils.pre('\\html{'
+										  +'<table>'
+										  	+'<th colspan="2">Equivalence Table</th>'
+												+'<tr><td>&nbsp;</td><td>&nbsp;</td></tr>'
+												+'<tr>'
+													+'<td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table></td>'
+													+'<td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table></td>'
+												+'</tr>'
+										+'</table>}'),
 				template: 'threeStep' 
 			}
         ];
