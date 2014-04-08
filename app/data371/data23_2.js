@@ -672,7 +672,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				thirdWordCancel: 'pints',
 				fourthWordCancel: 'pounds',
 				finalAnswer: '1',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table><th colspan="2">Equivalence Table</th><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table></td><td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table></td></tr></table>}'),
 				template: 'threeStep' 
 			}
         ];
