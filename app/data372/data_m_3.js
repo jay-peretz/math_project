@@ -246,8 +246,8 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\row'
-											+'{\\html{Answer: }}'
-											+'{\\mixed{\\input{$wAns}}{\\frac{\\input{$wAnsNum}}{\\input{$wAnsDen}}}}'
+											+'{\\html{Answer:&nbsp;}}'
+											+'{\\mixed{\\input{$wAns}}{\\frac{\\input{$wNumAns}}{\\input{$wDenAns}}}}'
 										+'}',
 
 						controls: {
