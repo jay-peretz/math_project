@@ -7,52 +7,7 @@ angular.module('mathSkills').service('data_k_2', ['dataUtils', function (dataUti
             children: []
         },
 	        template = {
-			// first template, single number, no sign inside parenthesis expression
-            first: {
-                title: 'Evaluate Signed Expressions',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-						+'{\\html{Evaluate:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{$outerSign}}{\\html{(}}{html{$absNumber}}{\\html{)}}}',
-						answer: '\\input{$answer}',
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\html{$firstHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{"<span class=bigger>$outerSign</span>"&nbsp; $secondHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\html{answer:  $textAnswer}}{help-answer-text}}'
-						}
-					}]
-				}]
-			},
-			// second template, single number, has a sign inside parenthesis expression
-			second: {
-                title: 'Evaluate Signed Expressions',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-						+'{\\html{Evaluate:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{$outerSign}}{\\html{(}}{\\sign{$innerSign}}{html{$absNumber}}{\\html{)}}}',
-						answer: '\\input{$answer}',
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\html{$firstHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{"<span class=bigger>$outerSign</span>"&nbsp; $secondHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\html{answer:  $textAnswer}}{help-answer-text}}'
-						}
-					}]
-				}]
-			},
+
 			// third template, two number operation, no parenthetical expression
 			third: {
                 title: 'Evaluate Signed Expressions',
