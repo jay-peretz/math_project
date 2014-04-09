@@ -10,7 +10,11 @@ angular.module('mathSkills')
             },{
             	name: 'stepval'
             },{
-                name: 'incrementval'
+                name: 'plotX'
+            },{
+                name: 'plotY'
+            },{
+                 name: 'plotZ'
             }],
             directiveTemplate: '<ms-numberline expected={{expected}}></ms-numberline>'
         });
@@ -43,25 +47,34 @@ angular.module('mathSkills')
 					$scope.$watch('minval', function () {
 						if (typeof $scope.minval === "string") {
 							$scope.min = parseInt($scope.minval);
-							 console.log("$scope.min from inside watch: " + $scope.min);
 						}
 					});
 					 $scope.$watch('maxval', function () {
 		                  if (typeof $scope.maxval === "string") {
 		                	  $scope.max = parseInt($scope.maxval);
-		                	  console.log("$scope.max from inside watch: " + $scope.max);
-		                  }
+		                 }
 		              });
 	                  $scope.$watch('stepval', function () {
 		                  if (typeof $scope.stepval === "string") {
 		                	  $scope.step = parseFloat($scope.stepval);
-		                	  console.log("$scope.step from inside watch: " + $scope.step);
+		                }
+		              });
+	                  $scope.$watch('plotX', function () {
+		                  if (typeof $scope.plotX === "string") {
+		                	  $scope.plotX = parseFloat($scope.plotX);
+		                	  //console.log("$scope.plotX from inside watch: " + $scope.plotX);
 		                  }
 		              });
-	                  $scope.$watch('incrementval', function () {
-		                  if (typeof $scope.incrementval === "string") {
-		                	  $scope.increment = parseInt($scope.incrementval);
-		                	  console.log("$scope.increment from inside watch: " + $scope.increment);
+	                  $scope.$watch('plotY', function () {
+		                  if (typeof $scope.plotY === "string") {
+		                	  $scope.plotY = parseFloat($scope.plotY);
+		                	  //console.log("$scope.plotY from inside watch: " + $scope.plotY);
+		                  }
+		              });
+	                  $scope.$watch('plotZ', function () {
+		                  if (typeof $scope.plotZ === "string") {
+		                	  $scope.plotZ = parseFloat($scope.plotZ);
+		                	  //console.log("$scope.plotZ from inside watch: " + $scope.plotZ);
 		                  }
 		              });
 
@@ -82,35 +95,22 @@ angular.module('mathSkills')
                     }) //end of slider method
                 
                     .each(function() {
-
-                        var increment=$scope.increment;
-                        // Get the options for this slider
+                    	// Get the options for this slider
                         var opt = $(this).data().uiSlider.options;
 
                         var numOfSections = opt.max - opt.min;
                         var numOfSmallUnits = 0;
                         var ticks=0;
                         var j = opt.min;
-                        var k = opt.min;
-
+                        
                         if(opt.step>0 && opt.step<1)
                         {
-                            if(opt.step === .5)
-                                ticks=2;
-                            else if(opt.step === .25)
-                                ticks=4;
-                            else if(opt.step === .2)
-                                ticks=5;
-                            else if(opt.step === .1)
-                                ticks=10;
-
+                            ticks = 1/$scope.step;
                             numOfSmallUnits=numOfSections*ticks;
 
                             for (var i = 0; i <= numOfSections; i++)
                             {
-                                if(j === k)
-                                {
-                                    if(j < 0)
+                                 if(j < 0)
                                         $scope.numArray.push({val:j,
                                             leftPosition:i/numOfSections*100,
                                             className:'negativeNumMarginLeft'});
@@ -119,9 +119,7 @@ angular.module('mathSkills')
                                             leftPosition:i/numOfSections*100,
                                             className:'positiveNumMarginLeft'});
 
-                                    k = k+increment;
                                     j = j+1;
-                                }
                             }
 
                             for(var m = 0; m <= numOfSmallUnits; m++)
@@ -132,12 +130,11 @@ angular.module('mathSkills')
                             }
                         }
                         else if(opt.step >= 1)
-                        {
+                        {	
+                        	numOfSections = numOfSections/$scope.step;
                             for (var i = 0; i <= numOfSections; i++)
                             {
-                                if(j === k)
-                                {
-                                    if(j < 0)
+                            		if(j < 0)
                                         $scope.numArray.push({val:j,
                                             leftPosition:i/numOfSections*100,
                                             className:'negativeNumMarginLeft'});
@@ -146,17 +143,49 @@ angular.module('mathSkills')
                                             leftPosition:i/numOfSections*100,
                                             className:'positiveNumMarginLeft'});
 
-                                    k = k+increment;
-                                }
                                 $scope.tickArray.push({
                                     leftPosition:i/numOfSections*100
                                 });
-                                j = j+1;
+                                j = j+$scope.step;
                             }
                         }
 
                     });//end of each method
-					}, 0);
+                    
+                    $scope.$on('checkAnswer', function () {
+                        /*$scope.$emit('answer', {
+                            result: 'correct',
+                            expected: $scope.expected,
+                            answer: $scope.expected,
+                            label: $scope.label
+                        });*/
+                    	if($scope.num.valA !== plotX )
+      						$scope.errorclassX="error";
+      					
+      					if($scope.num.valB !== plotY )
+      						$scope.errorclassY="error";
+      				
+      					if($scope.num.valC !== plotZ )
+      						$scope.errorclassZ="error";
+                    });
+    
+                   
+    
+                    $scope.$on('checkHelp', function (e) {
+                       /* // If this event has not been marked as ignored.
+                        if (e.defaultPrevented === false) {
+                            // handle check help event for parent scope.
+                            // comparewholesgraph does not use help, fire a notHelped event.
+                            $scope.$emit('notHelped', {
+                                controllerId: $scope.controllerId
+                            }); 
+                        }*/
+                    	$(".numberline").slider('values',0, $scope.plotX);
+            			$(".numberline").slider('values',1, $scope.plotY);
+            			$(".numberline").slider('values',2, $scope.plotZ);
+                    });
+                    
+					}, 0);//end of timeout 
                 }, // end of controller
                 
                 templateUrl : 'partials/directives/ms-numberline.html' 
