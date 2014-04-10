@@ -44,7 +44,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem:'\\pan{12}{11}{$numberline1}',
+                        problem:'\\pan{12}{11}{$chart1}',
                         answer: '\\css{'+
                                     '\\rowgrp'+
                                         '{\\ins{$question}}'+
@@ -55,18 +55,21 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                             "help": true
                         }
                 },{
-						problem:'\\pan{12}{11}{$numberline2}', 
-                        answer: '\\css{'+
-                                    '\\rowgrp'+
-                                        '{\\ins{Plot the given values directly on the number line:}}'+
-                                        '{\\grp{\\str{X = $plotX}}}'+
-                                        '{\\html{&nbsp;}}'+
-                                        '{\\grp{\\str{Y = $plotY}}}'+
-                                        '{\\html{&nbsp;}}'+
-                                        '{\\grp{\\str{Z = $plotZ}}}'+
-                                        '{\\html{&nbsp;}}'+
-                                        '{\\grp{\\str{Plotting Instruction: To plot (locate) the given values on the displayed number line, simply move the mouse pointer to that location, then click once.}}}'+
-                                '}{well}',
+						problem:'\\pan{12}{11}', 
+                        answer: '\\rowgrp'+
+									'{$numberline2}'+
+									'{\\html{&nbsp;}}'+
+									'{\\css{'+
+										'\\rowgrp'+
+											'{\\ins{Plot the given values directly on the number line:}}'+
+											'{\\grp{\\str{X = $plotX}}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\grp{\\str{Y = $plotY}}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\grp{\\str{Z = $plotZ}}}'+
+											'{\\html{&nbsp;}}'+
+											'{\\grp{\\str{Plotting Instruction: To plot (locate) the given values on the displayed number line, simply move the mouse pointer to that location, then click once.}}}'+
+									'}{well}}',
 						controls: {
 							"checkAnswer": true,
                             //"nextProblem": true,
@@ -203,7 +206,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
             },
           //problem 6
             {   
-            	numberline1: dataUtils.pre('\\numberline{-50}{50}{10}{-30}{10}{40}'),
+            	chart1: dataUtils.pre('\\graphnum{-50}{50}{10}{0}{ [[-30, 0], [10, 0], [40, 0]] }{chart1}'),
             	numberline2: dataUtils.pre('\\numberline{-50}{50}{10}{-30}{10}{40}'),
             	question: 'What is the increment (the distance between any two consecutive ticks) on this numberline?', template: 'interactiveNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),

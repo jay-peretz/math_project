@@ -90,7 +90,7 @@ angular.module('mathSkills')
                             $scope.num.valB = ui.values[1];
                             $scope.num.valC = ui.values[2];
                            //$scope.$apply();
-                            console.log("scope.num.valA "+ $scope.num.valA + " scope.num.valB  " + $scope.num.valB + " scope.num.valC  " + $scope.num.valC);
+                            //console.log("scope.num.valA "+ $scope.num.valA + " scope.num.valB  " + $scope.num.valB + " scope.num.valC  " + $scope.num.valC);
                         }
                     }) //end of slider method
                 
