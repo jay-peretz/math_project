@@ -77,8 +77,10 @@ angular.module('mathSkills')
 		                	  //console.log("$scope.plotZ from inside watch: " + $scope.plotZ);
 		                  }
 		              });
-
+					  
 					$timeout(function(){
+					
+					$scope.expectedValue = '\\grp{\\input{x' +  $scope.plotX + 'y' + $scope.plotY + 'z' + $scope.plotZ + '}}';
                     $('.numberline').slider({
                         min: $scope.min,
                         max: $scope.max,
@@ -89,6 +91,7 @@ angular.module('mathSkills')
                             $scope.num.valA = ui.values[0];
                             $scope.num.valB = ui.values[1];
                             $scope.num.valC = ui.values[2];
+							$("ms-expression .numberlineValue input").val('x' + $scope.num.valA + 'y' + $scope.num.valB + 'z' + $scope.num.valC);
                            //$scope.$apply();
                             //console.log("scope.num.valA "+ $scope.num.valA + " scope.num.valB  " + $scope.num.valB + " scope.num.valC  " + $scope.num.valC);
                         }
@@ -152,21 +155,22 @@ angular.module('mathSkills')
 
                     });//end of each method
                     
-                    $scope.$on('checkAnswer', function () {
+                    $scope.$on('answer', function (e, data) {
+						console.log("answer data is: ",JSON.stringify(data));
                         /*$scope.$emit('answer', {
                             result: 'correct',
                             expected: $scope.expected,
                             answer: $scope.expected,
                             label: $scope.label
                         });*/
-                    	if($scope.num.valA !== plotX )
+                    	/*if($scope.num.valA !== $scope.plotX )
       						$scope.errorclassX="error";
       					
-      					if($scope.num.valB !== plotY )
+      					if($scope.num.valB !== $scope.plotY )
       						$scope.errorclassY="error";
       				
-      					if($scope.num.valC !== plotZ )
-      						$scope.errorclassZ="error";
+      					if($scope.num.valC !== $scope.plotZ )
+      						$scope.errorclassZ="error";*/
                     });
     
                    
