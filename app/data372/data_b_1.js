@@ -165,11 +165,11 @@ angular.module('mathSkills').service('data_b_1', ['dataUtils', function (dataUti
 				 	+'{\\html{&nbsp;}}'
 				 	+'{\\grp{\\html{The fractions are equal because the cross-products are equal:}}}'
 				 	+'{\\html{&nbsp;}}'
-				 	+'{\\grp{\\html{3 * 16 = 48}}}'
+				 	+'{\\grp{\\str{3 * 16 = 48}}}'
 				 	+'{\\html{&nbsp;}}'
 				 	+'{\\grp{\\html{and}}}'
 				 	+'{\\html{&nbsp;}}'
-				 	+'{\\grp{\\html{ 4 * 12 = 48}}}'), 
+				 	+'{\\grp{\\str{ 4 * 12 = 48}}}'), 
 			 template: 'trueorfalse'
 				},
 		//prob 11

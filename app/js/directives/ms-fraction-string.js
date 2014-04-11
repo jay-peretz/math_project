@@ -19,7 +19,10 @@ angular.module('mathSkills')
                     // Extract the value and sent size event.
                     $scope.$watch('expected', function () {
                         if($scope.expected) {
+						
                             $scope.string = $scope.expected.slice(9, $scope.expected.length - 1); 
+							
+							
                             // directiveUtils.size($scope, [$scope.string], 10, 5);    
                         }
                     });
@@ -62,7 +65,7 @@ angular.module('mathSkills')
                     expected: '@', 
                     label: '@'
                 },
-                template: '<span>{{string}}</span>'
+			    template: '<span ng-bind-html-unsafe= "string | enlargeOps"}}</span>'
             };
         }
     ]);
