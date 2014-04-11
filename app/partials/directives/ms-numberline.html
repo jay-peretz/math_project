@@ -87,8 +87,8 @@ a[title]:after {
 }
 .error{
 	display: block;
-	height: 1.2em;
-	width: 1.2em;
+	height: 1em;
+	width: 1em;
 	border-radius: 50%;
 	margin-top: -.25em;
 	margin-left: -.1em;
@@ -99,7 +99,7 @@ a[title]:after {
 }
 </style>
 <div id="container">	
-	<div class="numberline">
+	<div id='{{numberlineId}}'>
 		 <ul id="tickid" ng-repeat="row in tickArray">
 			<li style= "left:{{row.leftPosition +'%'}}" >|</li>
 		 </ul>
@@ -113,7 +113,9 @@ a[title]:after {
 	</div>
 	 
 </div>
-<div class=numberlineInputs>
+<!-- <div>{{answerHelp}}</div> -->
+<!-- <div class=numberlineInputs  ng-switch on="answerHelp"> -->
+<div class=numberlineInputs  >
 	<ms-expression class=numberlineValue expected={{expectedValue}}></ms-expression>
     expectedValue is: {{expectedValue}}
 </div>

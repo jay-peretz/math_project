@@ -44,12 +44,18 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                        problem:'\\pan{12}{11}{$chart1}',
-                        answer: '\\css{'+
-                                    '\\rowgrp'+
-                                        '{\\ins{$question}}'+
-                                        '{$answerIn}'+
-                                '}{well}',
+                        problem:'\\pan{12}{11}{$numberline1}',
+                        answer:'\\rowgrp'+
+								
+								'{\\html{&nbsp;}}'+
+								'{\\css{'+
+									'\\rowgrp'+
+		                                        '{\\ins{$question}}'+
+		                                        '{\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 -10}}}'+
+		                                        '{\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 .5}}}'+
+		                                        '{\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 10}}}'+
+		                                        '{\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 1}}}'+
+		                                '}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -146,14 +152,15 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
             },
           //problem 6
             {   
-            	chart1: dataUtils.pre('\\graphnum{-50}{50}{10}{0}{ [[-30, 0], [10, 0], [40, 0]] }{chart1}'),
-            	numberline2: dataUtils.pre('\\numberline{-50}{50}{10}{-30}{10}{40}'),
+            	//chart1: dataUtils.pre('\\graphnum{-50}{50}{10}{0}{ [[-30, 0], [10, 0], [40, 0]] }{chart1}'),
+            	numberline1: dataUtils.pre('\\numberline{-50}{50}{10}{-30}{10}{40}{numberline1}'),
+            	numberline2: dataUtils.pre('\\numberline{-50}{50}{10}{-30}{10}{40}{numberline2}'),
             	question: 'What is the increment (the distance between any two consecutive ticks) on this numberline?', template: 'interactiveNumberline',
-                answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 -10}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 .5}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 10}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 1}}'),
+//                answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
+//                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 -10}}'),
+//                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 .5}}'),
+//                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 10}}'),
+//                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 1}}'),
                 plotX: '-30', plotY: '10', plotZ: '40'
             },
 			

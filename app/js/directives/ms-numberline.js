@@ -14,8 +14,10 @@ angular.module('mathSkills')
             },{
                 name: 'plotY'
             },{
-                 name: 'plotZ'
-            }],
+                name: 'plotZ'
+            },{
+                name: 'numberlineId'
+           }],
             directiveTemplate: '<ms-numberline expected={{expected}}></ms-numberline>'
         });
     }])
@@ -77,15 +79,22 @@ angular.module('mathSkills')
 		                	  //console.log("$scope.plotZ from inside watch: " + $scope.plotZ);
 		                  }
 		              });
+	                  $scope.$watch('numberlineId', function () {
+		                  if (typeof $scope.numberlineId === "string") {
+		                	  $scope.numberlineId = $scope.numberlineId;
+		                	 }
+		              });
 					  
 					$timeout(function(){
 					
 					$scope.expectedValue = '\\grp{\\input{x' +  $scope.plotX + 'y' + $scope.plotY + 'z' + $scope.plotZ + '}}';
-                    $('.numberline').slider({
+					//console.log("$scope.expectedValue shruti", $scope.expectedValue);
+					$('#'+ $scope.numberlineId).slider({
                         min: $scope.min,
                         max: $scope.max,
                         step:$scope.step,
                         animate:true,
+                        //disabled:true,
                         values: [$scope.min,0,$scope.max],
                         change: function( event, ui ) {
                             $scope.num.valA = ui.values[0];
@@ -154,7 +163,7 @@ angular.module('mathSkills')
                         }
 
                     });//end of each method
-                    
+                    //$scope.answerHelp=false;
                     $scope.$on('answer', function (e, data) {
 						console.log("answer data is: ",JSON.stringify(data));
                         /*$scope.$emit('answer', {
@@ -163,14 +172,20 @@ angular.module('mathSkills')
                             answer: $scope.expected,
                             label: $scope.label
                         });*/
-                    	/*if($scope.num.valA !== $scope.plotX )
+						 //e.stopPropagation();
+                    	if($scope.num.valA !== $scope.plotX )
       						$scope.errorclassX="error";
       					
       					if($scope.num.valB !== $scope.plotY )
       						$scope.errorclassY="error";
       				
       					if($scope.num.valC !== $scope.plotZ )
-      						$scope.errorclassZ="error";*/
+      						$scope.errorclassZ="error";
+      					$timeout(function(){
+      						$scope.errorclassX="";
+      						$scope.errorclassY="";
+      						$scope.errorclassZ="";
+      					}, 1500);
                     });
     
                    
@@ -184,9 +199,10 @@ angular.module('mathSkills')
                                 controllerId: $scope.controllerId
                             }); 
                         }*/
-                    	$(".numberline").slider('values',0, $scope.plotX);
-            			$(".numberline").slider('values',1, $scope.plotY);
-            			$(".numberline").slider('values',2, $scope.plotZ);
+                   
+                    	$('#'+ $scope.numberlineId).slider('values',0, $scope.plotX);
+            			$('#'+ $scope.numberlineId).slider('values',1, $scope.plotY);
+            			$('#'+ $scope.numberlineId).slider('values',2, $scope.plotZ);
                     });
                     
 					}, 0);//end of timeout 
