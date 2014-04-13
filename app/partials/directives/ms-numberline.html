@@ -3,7 +3,7 @@
 #container{
 	padding:2em 1em;
 	margin-left:2em;
-	width:60%;
+	width:400px;
 }
 #container li {
    position:relative;
@@ -94,7 +94,17 @@ a[title]:after {
 	margin-left: -.1em;
 	background: #b94a48;
 }
+.success{
+	display: block;
+	height: 1em;
+	width: 1em;
+	border-radius: 50%;
+	margin-top: -.25em;
+	margin-left: -.1em;
+	background: #51a351;
+}
 .numberlineInputs{
+	height: 20px;
 	visibility: hidden;
 }
 </style>
@@ -113,12 +123,11 @@ a[title]:after {
 	</div>
 	 
 </div>
-<!-- <div>{{answerHelp}}</div> -->
-<!-- <div class=numberlineInputs  ng-switch on="answerHelp"> -->
-<!-- <div class=numberlineInputs  >
-	<ms-expression class=numberlineValue expected={{expectedValue}}></ms-expression>
-    expectedValue is: {{expectedValue}}
-</div> -->
+
+<div class=numberlineInputs  >
+	<!-- expected value input tag here to generate answer event, value is ignored -->
+	<ms-expression class=numberlineValue expected="\\input{x}"></ms-expression>
+</div>
 
 <!-- <br><br><br>
 Displays current value of slider Handles

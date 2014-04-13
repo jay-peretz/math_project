@@ -38,6 +38,7 @@ angular.module('mathSkills')
                             },
                             ckeckAnswerBtn = function () {
                                  if (problemData.getData('answerBtn') === undefined) {
+									 // stepwiseNextProblem present, answerBtn not
 									 if ($scope.stepwiseNextProblem === true) {
 										$scope.answerButtonText = 'Next Problem';
 									 } else {
@@ -45,7 +46,12 @@ angular.module('mathSkills')
 									 }
                                      $scope.hasCheckAnswer = true;
                                  } else {
-                                     anwserbtn(problemData.getData('answerBtn'));
+									 // stepwiseNextProblem and answerBtn present
+									 if ($scope.stepwiseNextProblem === 'Check Answer') {										
+										 $scope.answerButtonText = 'Check Answer';
+									 } else {
+                                         anwserbtn(problemData.getData('answerBtn'));
+									 }
                                  }
                             };
 
@@ -110,10 +116,10 @@ angular.module('mathSkills')
                                 }
 								
 								// $scope.stepwiseNextProblem === true, "Next Problem" text on button.
-								if (typeof $scope.data.stepwiseNextProblem !== "undefined" && $scope.data.stepwiseNextProblem === true) {
-                                	$scope.stepwiseNextProblem = true;
+								if (typeof $scope.data.stepwiseNextProblem !== "undefined" && ($scope.data.stepwiseNextProblem === true || $scope.data.stepwiseNextProblem === 'Check Answer')) {
 									// add stepwiseNextProblem to problemData to pass to ms-feedback.js
-									problemData.addData(true, 'stepwiseNextProblem');
+									problemData.addData($scope.data.stepwiseNextProblem, 'stepwiseNextProblem');
+									$scope.stepwiseNextProblem = $scope.data.stepwiseNextProblem;
 								} else {
 									$scope.stepwiseNextProblem = false;
 								}

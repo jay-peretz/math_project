@@ -45,17 +45,14 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                         problem:'\\pan{12}{11}{$numberline1}',
-                        answer:'\\rowgrp'+
-								
-								'{\\html{&nbsp;}}'+
-								'{\\css{'+
-									'\\rowgrp'+
+                        answer: '\\css'+
+									'{\\rowgrp'+
 		                                        '{\\ins{$question}}'+
 		                                        '{\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 -10}}}'+
 		                                        '{\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 .5}}}'+
 		                                        '{\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 10}}}'+
 		                                        '{\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 1}}}'+
-		                                '}{well}',
+		                            '}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": true
@@ -63,6 +60,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 },{
 						problem:'\\pan{12}{11}', 
                         answer: '\\rowgrp'+
+									'{\\html{&nbsp;}}'+
 									'{$numberline2}'+
 									'{\\html{&nbsp;}}'+
 									'{\\css{'+
@@ -78,8 +76,8 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
 									'}{well}}',
 						controls: {
 							"checkAnswer": true,
-                            //"nextProblem": true,
-							"help": true
+							"help": true,
+							"stepwiseNextProblem": "Check Answer"
 						}
 					}]
                 }]
@@ -154,8 +152,9 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
             {   
             	//chart1: dataUtils.pre('\\graphnum{-50}{50}{10}{0}{ [[-30, 0], [10, 0], [40, 0]] }{chart1}'),
             	numberline1: dataUtils.pre('\\numberline{-50}{50}{10}{-30}{10}{40}{numberline1}'),
-            	numberline2: dataUtils.pre('\\numberline{-50}{50}{10}{-30}{10}{40}{numberline2}'),
+            	numberline2: dataUtils.pre('\\numberline{-50}{50}{10}{-30}{10}{40}{numberline2}{true}'),
             	question: 'What is the increment (the distance between any two consecutive ticks) on this numberline?', template: 'interactiveNumberline',
+				answerBtn: 'noAnswer',
 //                answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
 //                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 -10}}'),
 //                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 .5}}'),
