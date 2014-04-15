@@ -267,6 +267,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 
     
     	return dataUtils.build(desc, template, data, shuffle);
+		//return dataUtils.build(desc, template, data);
 		
 	
 }]);

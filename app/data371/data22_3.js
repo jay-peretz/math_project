@@ -741,16 +741,15 @@ angular.module('mathSkills').service('data22_3', ['dataUtils', function (dataUti
         ],
 		// shuffle specifics still to go
 		shuffle = [
-					{ problems: [1,5,9,13], total: 2},
-					{ problems: [14,18,22,26], total: 2},
-					{ problems: [19,27,31,35], total: 2},
-					{ problems: [4,12,16,20,24], total: 2},
-					{ problems: [2,3,6,7,10,11,15,17,21,23,25,29,30,33,34], total: 3},
-					{ problems: [8,28,32,36], total: 1}
+					{ problems: [1,5,9,29,33,37], total: 2},
+					{ problems: [10,14,22,26,30], total: 2},
+					{ problems: [3,19,35,39], total: 2},
+					{ problems: [4,8,12], total: 1},
+					{ problems: [24,28,32], total: 1},
+					{ problems: [2,6,7,11,13,15,16,17,18,21,23,25,27,31,34,38], total: 3},
+					{ problems: [20,36,40], total: 1}
 			];
 
-	    
-	    	//return dataUtils.build(desc, template, data, shuffle);
-			return dataUtils.build(desc, template, data);
-			
+			return dataUtils.build(desc, template, data, shuffle);
+			//return dataUtils.build(desc, template, data);
 	}]);
