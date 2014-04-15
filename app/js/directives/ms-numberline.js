@@ -18,8 +18,10 @@ angular.module('mathSkills')
             },{
                 name: 'numberlineId'
            	},{
+                name: 'draggable'
+            },{
                 name: 'helpSwitch'
-           }],
+            }],
             directiveTemplate: '<ms-numberline expected={{expected}}></ms-numberline>'
         });
     }])
@@ -66,19 +68,16 @@ angular.module('mathSkills')
 	                  $scope.$watch('plotX', function () {
 		                  if (typeof $scope.plotX === "string") {
 		                	  $scope.plotX = parseFloat($scope.plotX);
-		                	  //console.log("$scope.plotX from inside watch: " + $scope.plotX);
-		                  }
+		                }
 		              });
 	                  $scope.$watch('plotY', function () {
 		                  if (typeof $scope.plotY === "string") {
 		                	  $scope.plotY = parseFloat($scope.plotY);
-		                	  //console.log("$scope.plotY from inside watch: " + $scope.plotY);
 		                  }
 		              });
 	                  $scope.$watch('plotZ', function () {
 		                  if (typeof $scope.plotZ === "string") {
 		                	  $scope.plotZ = parseFloat($scope.plotZ);
-		                	  //console.log("$scope.plotZ from inside watch: " + $scope.plotZ);
 		                  }
 		              });
 	                  $scope.$watch('numberlineId', function () {
@@ -93,15 +92,20 @@ angular.module('mathSkills')
 							  $scope.helpSwitchIn = false;
 						  }
 		              });
+					  $scope.$watch('draggable', function () {
+		                  if (typeof $scope.draggable === "string") {
+		                	  $scope.draggableIn = $scope.draggable;
+		               	 }
+		              });
 					  
 					$timeout(function(){
+						
 						
 						$('#'+ $scope.numberlineId).slider({
 							min: $scope.min,
 							max: $scope.max,
 							step:$scope.step,
 							animate:true,
-							//disabled:true,
 							values: [$scope.min,0,$scope.max],
 							change: function( event, ui ) {
 								$scope.num.valA = ui.values[0];
@@ -109,8 +113,12 @@ angular.module('mathSkills')
 								$scope.num.valC = ui.values[2];
 							   //$scope.$apply();
 								//console.log("scope.num.valA "+ $scope.num.valA + " scope.num.valB  " + $scope.num.valB + " scope.num.valC  " + $scope.num.valC);
+							},
+							slide:function(){
+								if($scope.draggableIn === "false")
+									return false;
 							}
-						}) //end of slider method
+						}) 
 					
 						.each(function() {
 							// Get the options for this slider
@@ -168,8 +176,8 @@ angular.module('mathSkills')
 								}
 							}
 	
-						});//end of each method
-					}, 0);//end of timeout 
+						});
+					}, 0); 
 					
                      $scope.$on('answer', function (e, data) {
 						
@@ -178,9 +186,8 @@ angular.module('mathSkills')
           					$scope.errorclassX="success";
           					$scope.errorclassY="success";
           					$scope.errorclassZ="success";	
-								
-						} else {
-						
+							} 
+						else {
                             e.preventDefault();
 							
 							if($scope.num.valA !== $scope.plotX ) {
@@ -212,23 +219,14 @@ angular.module('mathSkills')
                    
     
                     $scope.$on('checkHelp', function (e) {
-                       /* // If this event has not been marked as ignored.
-                        if (e.defaultPrevented === false) {
-                            // handle check help event for parent scope.
-                            // comparewholesgraph does not use help, fire a notHelped event.
-                            $scope.$emit('notHelped', {
-                                controllerId: $scope.controllerId
-                            }); 
-                        }*/
-                   	
-						$('#'+ $scope.numberlineId).slider('values',0, $scope.plotX);
+                       $('#'+ $scope.numberlineId).slider('values',0, $scope.plotX);
 						$('#'+ $scope.numberlineId).slider('values',1, $scope.plotY);
 						$('#'+ $scope.numberlineId).slider('values',2, $scope.plotZ);
 						
                     });
                     
-                }, // end of controller
+                }, 
                 
                 templateUrl : 'partials/directives/ms-numberline.html' 
-            }; // end return
+            }; 
         }]);

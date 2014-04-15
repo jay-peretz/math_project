@@ -31,10 +31,7 @@
 
 /* Handles */
 .ui-slider-horizontal .ui-state-default {
-	/*border: 0; 
-	background: url(img/down-arrow.png) 50% 50% no-repeat; */
-	/* background-image:none; */
- 	height:.6em;
+	height:.6em;
 	width:.6em;
 	margin-left:-.4em;
    	border-radius: 50%; 
@@ -86,30 +83,43 @@ a[title]:after {
   background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
 }
 .error{
+	border: solid 2px #A64341;
 	display: block;
-	height: 1em;
-	width: 1em;
+	height: .8em;
+	width: .8em;
 	border-radius: 50%;
 	margin-top: -.25em;
 	margin-left: -.1em;
-	background: #b94a48;
+	background: -moz-radial-gradient(circle, #F0B2B2, #b94a48); 
+	background: -webkit-gradient(radial, center center, 0, center center, 460, from(#F0B2B2), to(#b94a48)); 
+	background: -webkit-radial-gradient(circle, #F0B2B2, #b94a48);  
+	background: -ms-radial-gradient(circle, #F0B2B2, #b94a48); 	
+	background: -o-radial-gradient(circle, #F0B2B2, #b94a48);  
 }
 .success{
+	border: solid 2px #004A00;
 	display: block;
-	height: 1em;
-	width: 1em;
+	height: .8em;
+	width: .8em;
 	border-radius: 50%;
 	margin-top: -.25em;
 	margin-left: -.1em;
-	background: #51a351;
+	background: -moz-radial-gradient(circle, #85B185, #005C00); 
+	background: -webkit-gradient(radial, center center, 0, center center, 460, from(#85B185), to(#005C00)); 
+	background: -webkit-radial-gradient(circle, #85B185, #005C00);  
+	background: -ms-radial-gradient(circle, #85B185, #005C00); 	
+	background: -o-radial-gradient(circle, #85B185, #005C00); 
 }
 .numberlineInputs{
 	height: 20px;
 	visibility: hidden;
 }
+.enlarge{
+	width:150%;
+}
 </style>
 <div id="container">	
-	<div id='{{numberlineId}}'>
+	<div id='{{numberlineId}}' class="enlarge" >
 		 <ul id="tickid" ng-repeat="row in tickArray">
 			<li style= "left:{{row.leftPosition +'%'}}" >|</li>
 		 </ul>
@@ -129,10 +139,5 @@ a[title]:after {
 	<ms-expression class=numberlineValue expected="\\input{x}"></ms-expression>
 </div>
 
-<!-- <br><br><br>
-Displays current value of slider Handles
-	 <label ng-model="num.valA">A -: {{num.valA}}</label>
-	 <label ng-model="num.valB">B -: {{num.valB}}</label>
-	 <label ng-model="num.valC">C -: {{num.valC}}</label>	 
-	 </div>  -->
+
 	
