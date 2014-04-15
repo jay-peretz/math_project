@@ -495,6 +495,7 @@ angular.module('mathSkills').service('data22_4', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
 							"workbook": false,
+							"fixHelpControls": true,
                             "help": '\\rowgrp'+
                             '{\\html{Find the amount of the $firstDescriptor:}}'+
 							'{\\html{&nbsp;}}'+
