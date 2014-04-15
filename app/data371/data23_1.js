@@ -504,7 +504,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 											+'{\\frac{\\html{$thirdNumAnswer}}{\\html{$thirdDenAnswer}}}'
 											+'{\\sign{&equals;}}'
 											+'{\\input{$fourthAnswer}}'
-											+'{\\html{c}}'
+											+'{\\html{$unitsFourth}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -1262,8 +1262,8 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				firstDenAnswer: '1 hr',
 				secondNumAnswer: '60 sec',
 				secondDenAnswer: '1 min',
-				finalAnswer: '2520',
-				helpFinalAnswer: '2,520',
+				finalAnswer: '25200',
+				helpFinalAnswer: '25,200',
 				firstWordCancel: 'hours',
 				secondWordCancel: 'minutes',
 				thirdWordCancel: 'seconds',
