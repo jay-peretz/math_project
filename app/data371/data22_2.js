@@ -17,6 +17,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 						answer: '\\grp{\\str{$}}{\\css{\\inputcash{$answer}}{width200px}}',
 						controls: {
 							"checkAnswer": true,
+							"fixHelpControls": true,
 							"help": '\\rowgrp'
 							+'{\\html{&nbsp;}}'
 							+'{\\html{$helpFirst}}'

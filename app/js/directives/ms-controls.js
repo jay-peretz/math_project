@@ -54,6 +54,13 @@ angular.module('mathSkills')
 									 }
                                  }
                             };
+						
+						// variable to say whether help panel is displayed or not
+						$scope.$watch('helpshow', function (showOrNo) {
+								if (showOrNo) {
+									$scope.hasHelpData = true;
+								}
+						});
 
                         $scope.$watch('data', function () {
 
@@ -65,6 +72,18 @@ angular.module('mathSkills')
 
                                 // Parse it.
                                 $scope.data = JSON.parse($scope.data); 
+								
+								// fixHelpControls property in controls adds class
+								if (typeof $scope.data.fixHelpControls === "undefined") {
+									$scope.fixHelpClass = "span3";
+								} else {
+									$scope.fixHelpClass = "fixHelpControls span2";
+								}
+								// $scope.hasHelpData is true if showHelpPanel is true
+								if ($scope.hasHelpData === true) {
+									// changes help button label to "Next Problem"
+									$scope.data = {nextProblem: true};
+								}
 
                                 // Setup the hasHelp variable which shows/hides the help button.
                                 $scope.hasHelp = $scope.data.help;
@@ -169,7 +188,8 @@ angular.module('mathSkills')
                 ],
                 restrict: 'E',
                 scope: {
-                    data: '@'
+                    data: '@',
+					helpshow: '@'
                 },
                 templateUrl: 'partials/directives/ms-controls.html'
             };

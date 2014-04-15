@@ -29,6 +29,13 @@ body {
 	margin-right:20px;
 }
 
+.fixHelpControls {
+	position:fixed;
+	top:400;
+	right:0;
+	margin-right:50px;
+}
+
 .equivalence-table th {
 	color: #069;
 	font-size: 105%;

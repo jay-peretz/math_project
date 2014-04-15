@@ -16,7 +16,7 @@
             <span ng-show=showHelpPanel class="{{helpPanelClass}}">
                 <div>
                     <ms-expression expected={{helpExpression}} class=span9></ms-expression>
-                    <ms-controls data='{ "nextProblem": true }' class=span3></ms-controls>
+                    <ms-controls data={{controls}} helpshow="{{showHelpPanel}}" class='ng-class:fixHelpClass'></ms-controls>
                 </div>
             </span>
             
