@@ -56,8 +56,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-								+'}',
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}',
 						answer: '\\rowgrp'+
 									'{\\ins{Choose the correct math translation for the problem expression:}}'+
 									'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
@@ -67,18 +66,6 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-							// "help": '\\rowgrp'
-							// 			+'{\\html{&nbsp;}}'
-							// 			+'{\\html{The minus sign in front of a parenthesis means to take the opposite sign of the negative $negFrac inside the parenthesis.}}'
-							// 			+'{\\html{&nbsp;}}'
-							// 			+'{\\html{The expression without double negatives is:}}'
-							// 			+'{\\html{&nbsp;}}'
-							// 			+'{\\row'
-							// 				+'{\\sign{$firstSign}}'
-							// 				+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-							// 				+'{\\sign{+}}'
-							// 				+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-							// 				+'}'
 						},
                     }, {
                     	problem: '\\row'
@@ -87,8 +74,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-								+'}',
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -118,8 +104,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-								+'}',
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -170,8 +155,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-								+'}',
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}',
 							answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
@@ -259,8 +243,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
-									+'}',
+											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
 						answer: '\\rowgrp'+
 									'{\\ins{Choose the correct math translation for the problem expression:}}'+
 									'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
@@ -278,8 +261,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
-									+'}',
+											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -317,8 +299,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
-									+'}',
+											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -359,8 +340,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
-									+'}',
+											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -424,8 +404,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
-									+'}',
+											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
 							answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
@@ -494,8 +473,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
-									+'}',
+											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
 							answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
@@ -606,8 +584,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
-									+'}',
+											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}',
 						answer: '\\rowgrp'+
 									'{\\ins{Choose the correct math translation for the problem expression:}}'+
 									'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
@@ -625,8 +602,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
-									+'}',
+											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -660,8 +636,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
-									+'}',
+											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -698,8 +673,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
-									+'}',
+											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -755,8 +729,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
-									+'}',
+											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}',
 							answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
@@ -817,8 +790,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$thirdSign}}'
-											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
-									+'}',
+											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}',
 							answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
@@ -922,8 +894,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\frac{\\fracstr{$firstProbNum}}{\\fracstr{$firstProbDen}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$firstSign}}'
-											+'{\\frac{\\fracstr{$secondProbNum}}{\\fracstr{$secondProbDen}}}'
-								+'}',
+											+'{\\frac{\\fracstr{$secondProbNum}}{\\fracstr{$secondProbDen}}}',
 						answer: '\\rowgrp'+
 									'{\\ins{Choose the correct math translation for the problem expression:}}'+
 									'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
@@ -941,8 +912,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\frac{\\fracstr{$firstProbNum}}{\\fracstr{$firstProbDen}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$firstSign}}'
-											+'{\\frac{\\fracstr{$secondProbNum}}{\\fracstr{$secondProbDen}}}'
-								+'}',
+											+'{\\frac{\\fracstr{$secondProbNum}}{\\fracstr{$secondProbDen}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -988,8 +958,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\frac{\\fracstr{$firstProbNum}}{\\fracstr{$firstProbDen}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$firstSign}}'
-											+'{\\frac{\\fracstr{$secondProbNum}}{\\fracstr{$secondProbDen}}}'
-								+'}',
+											+'{\\frac{\\fracstr{$secondProbNum}}{\\fracstr{$secondProbDen}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -1027,8 +996,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\frac{\\fracstr{$firstProbNum}}{\\fracstr{$firstProbDen}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$firstSign}}'
-											+'{\\frac{\\fracstr{$secondProbNum}}{\\fracstr{$secondProbDen}}}'
-								+'}',
+											+'{\\frac{\\fracstr{$secondProbNum}}{\\fracstr{$secondProbDen}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -1082,8 +1050,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\frac{\\fracstr{$firstProbNum}}{\\fracstr{$firstProbDen}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$firstSign}}'
-											+'{\\frac{\\fracstr{$secondProbNum}}{\\fracstr{$secondProbDen}}}'
-								+'}',
+											+'{\\frac{\\fracstr{$secondProbNum}}{\\fracstr{$secondProbDen}}}',
 							answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
@@ -1174,8 +1141,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$firstSign}}'
-											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}'
-									+'}',
+											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}',
 						answer: '\\rowgrp'+
 									'{\\ins{Choose the correct math translation for the problem expression:}}'+
 									'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
@@ -1193,8 +1159,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$firstSign}}'
-											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}'
-									+'}',
+											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -1226,8 +1191,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$firstSign}}'
-											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}'
-									+'}',
+											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -1259,8 +1223,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$firstSign}}'
-											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}'
-									+'}',
+											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -1295,8 +1258,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$firstSign}}'
-											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}'
-									+'}',
+											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
@@ -1348,8 +1310,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$firstSign}}'
-											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}'
-									+'}',
+											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}',
 							answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
@@ -1406,8 +1367,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
 											+'{\\html{$probExpr2}}'
 											+'{\\sign{$firstSign}}'
-											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}'
-									+'}',
+											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}',
 							answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
