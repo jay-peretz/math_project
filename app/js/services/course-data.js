@@ -26,6 +26,7 @@ angular.module('mathSkills.services')
         'data21_1', 'data21_2', 'data21_3', 'data21_4',
         'data22_1', 'data22_2', 'data22_3', 'data22_4',
 		'data23_1', 'data23_2',
+		'data25_1',
         function (
             data1_1, data1_2, data1_3, data1_4, data1_5,
             data2_1, data2A_1, data2A_2,
@@ -49,7 +50,8 @@ angular.module('mathSkills.services')
             data20_1, data20_2, data20_3,
             data21_1, data21_2, data21_3, data21_4,
             data22_1, data22_2, data22_3, data22_4,
-			data23_1, data23_2
+			data23_1, data23_2,
+			data25_1
         ) {
             var course = {
                 title: 'GENERAL ARITHMETIC',
@@ -104,7 +106,8 @@ angular.module('mathSkills.services')
                     title: '6 Measurements',
                     path: 'measurements',
                     children: [
-                        data23_1, data23_2
+                        data23_1, data23_2,
+						data25_1
                     ]
                 }]
             };

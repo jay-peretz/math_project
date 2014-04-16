@@ -17,6 +17,20 @@ body {
 	font-size:125%;
 }
 
+.conversion-table {
+	text-align:center;
+	border-collapse:collapse;
+}
+
+.conversion-table th, .conversion-table td{
+	padding:8px;
+	border:1px solid #333333
+}
+
+.modal-body .conversion-table {
+	margin-left:80px;
+}
+
 .equivalence-table {
 	text-align:center;
 	margin-left:80px;
