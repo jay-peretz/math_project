@@ -42,7 +42,7 @@ template = {
 						+'{\\html{Evaluate:}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\sign{$firstSign}}{html{$firstAbsNumber}}{html{$firstText}}{\\str{ *}}{html{$secondAbsNumber}}{html{$secondText}}{html{$secondExp}}}',
-						answer: '\\grp{\\input{$ans}}{\\html{&bull;}}{\\exp{\\input{$tex}}{\\input{$exp}}}',
+						answer: '\\grp{\\input{$ans}}{\\exp{\\input{$tex}}{\\input{$exp}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -68,6 +68,55 @@ template = {
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{html{$firstLeftparan}}{\\sign{$firstSign}}{html{$firstAbsNumber}}{html{$firstText}}{html{$firstExp}}{html{$secondText}}{html{$firstRightparan}}{html{$secondLeftparan}}{\\sign{$secondSign}}{html{$secondAbsNumber}}{html{$thirdText}}{html{$secondExp}}{html{$fourthText}}{html{$secondRightparan}}}',
 						answer: '\\input{$answer}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\html{$firstHelp}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\html{$secondHelp}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\html{$thirdHelp}}'
+							+'{\\html{&nbsp;}}'
+							+'{css{\\html{answer:  $textAnswer}}{help-answer-text}}'
+						}
+					}]
+				}]
+			},
+			// fourth template, two number operation, no sign inside 2nd term parenthetical expression
+			fourthexp: {
+                title: 'Evaluate Signed Expressions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+						+'{\\html{Evaluate:}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{html{$firstLeftparan}}{\\sign{$firstSign}}{html{$firstAbsNumber}}{html{$firstText}}{html{$firstExp}}{html{$secondText}}{html{$firstRightparan}}{html{$secondLeftparan}}{\\sign{$secondSign}}{html{$secondAbsNumber}}{html{$thirdText}}{html{$secondExp}}{html{$fourthText}}{html{$secondRightparan}}}',
+						answer: '\\grp{\\input{$ans}}{\\exp{\\input{$firsttex}}{\\input{$firstexp}}}{\\exp{\\input{$secondtex}}{\\input{$secondexp}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\html{$firstHelp}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\html{$secondHelp}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\html{$thirdHelp}}'
+							+'{\\html{&nbsp;}}'
+							+'{css{\\html{answer:  $textAnswer}}{help-answer-text}}'
+						}
+					}]
+				}]
+			},
+			fifthexp: {
+                title: 'Evaluate Signed Expressions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+						+'{\\html{Evaluate:}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp{html{$firstLeftparan}}{\\sign{$firstSign}}{html{$firstAbsNumber}}{html{$firstText}}{html{$firstExp}}{html{$secondText}}{html{$firstRightparan}}{html{$secondLeftparan}}{\\sign{$secondSign}}{html{$secondAbsNumber}}{html{$thirdText}}{html{$secondExp}}{html{$fourthText}}{html{$secondRightparan}}}',
+						answer: '\\grp{\\input{$ans}}{\\exp{\\input{$firsttex}}{\\input{$firstexp}}}{\\input{$secondtex}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -140,11 +189,11 @@ template = {
 			// problem 3
 			{ firstSign: '-', secondSign: '', firstAbsNumber: '2', secondAbsNumber: '7', firstText: 'y', secondText: 'y',firstExp:'', secondExp: '<sup>2</sup>', firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstSign $$firstAbsNumber * $$secondAbsNumber = -14 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable together&nbsp;( follow the exponent rule - multiplication of same bases --& and add exponents) :', thirdHelp: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y * y<sup>2</sup> = y<sup>3</sup>', textAnswer: ' &nbsp; -14y<sup>3</sup>', ans: '-14', tex:'y', exp: '3', template: 'thirdexp' },
 			// problem 4
-			{ firstSign: '-', secondSign: '-', firstAbsNumber: '3', secondAbsNumber: '4', firstText: 'x', secondText: 'y', thirdText: 'x', fourthText: 'y', firstExp:'<sup>4</sup>', secondExp: '<sup>2</sup>', firstLeftparan: '(', secondLeftparan: '(',firstRightparan: ')',secondRightparan: ')',firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstSign $$firstAbsNumber * $$secondSign $$secondAbsNumber = 12 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable together&nbsp;( follow the exponent rule - multiplication of same bases --& and add exponents) :', thirdHelp: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x<sup>4</sup> * x<sup>2</sup> = x<sup>6</sup> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y * y = y<sup>2</sup>', answer: '12x6y2', textAnswer: ' &nbsp; 12x<sup>6</sup>y<sup>2</sup>', template: 'fourth' },
+			{ firstSign: '-', secondSign: '-', firstAbsNumber: '3', secondAbsNumber: '4', firstText: 'x', secondText: 'y', thirdText: 'x', fourthText: 'y', firstExp:'<sup>4</sup>', secondExp: '<sup>2</sup>', firstLeftparan: '(', secondLeftparan: '(',firstRightparan: ')',secondRightparan: ')',firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstSign $$firstAbsNumber * $$secondSign $$secondAbsNumber = 12 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable together&nbsp;( follow the exponent rule - multiplication of same bases --& and add exponents) :', thirdHelp: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x<sup>4</sup> * x<sup>2</sup> = x<sup>6</sup> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y * y = y<sup>2</sup>', textAnswer: ' &nbsp; 12x<sup>6</sup>y<sup>2</sup>', ans: '12', firsttex:'x', firstexp: '6', secondtex:'y', secondexp: '2', template: 'fourthexp' },
 			// problem 5
-			{ firstSign: '-', secondSign: '', firstAbsNumber: '6', secondAbsNumber: '3', firstText: '', secondText: '', thirdText: 'm', fourthText: 'n', firstExp:'', secondExp: '<sup>2</sup>', firstLeftparan: '(', secondLeftparan: '(',firstRightparan: ')',secondRightparan: ')',firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstSign $$firstAbsNumber * $$secondSign$$secondAbsNumber = -18 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable together&nbsp;( follow the exponent rule - multiplication of same bases --& and add exponents) :', thirdHelp: 'The variable <span class=underline>m</span> has no other <span class=underline>m</span> to multiply by. The variable <span class=underline>n</span> has no other <span class=underline>n</span> to multiply by. The m<sup>2</sup> and the n remain a part of the multiplication (-18 * m<sup>2</sup> * n). ', answer: '-18m2n', textAnswer: ' &nbsp; -18m<sup>2</sup> n', template: 'fourth' },
+			{ firstSign: '-', secondSign: '', firstAbsNumber: '6', secondAbsNumber: '3', firstText: '', secondText: '', thirdText: 'm', fourthText: 'n', firstExp:'', secondExp: '<sup>2</sup>', firstLeftparan: '(', secondLeftparan: '(',firstRightparan: ')',secondRightparan: ')',firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstSign $$firstAbsNumber * $$secondSign$$secondAbsNumber = -18 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable together&nbsp;( follow the exponent rule - multiplication of same bases --& and add exponents) :', thirdHelp: 'The variable <span class=underline>m</span> has no other <span class=underline>m</span> to multiply by. The variable <span class=underline>n</span> has no other <span class=underline>n</span> to multiply by. The m<sup>2</sup> and the n remain a part of the multiplication (-18 * m<sup>2</sup> * n). ', textAnswer: ' &nbsp; -18m<sup>2</sup> n', ans: '-18', firsttex:'m', firstexp: '2', secondtex:'n', template: 'fifthexp' },
 			// problem 6
-			{ firstSign: '-', secondSign: '', firstAbsNumber: '2', secondAbsNumber: '5', firstText: 'x', secondText: '', thirdText: 'x', fourthText: 'y', firstExp:'<sup>3</sup>', secondExp: '', firstLeftparan: '', secondLeftparan: '(',firstRightparan: '',secondRightparan: ')',firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstSign $$firstAbsNumber * $$secondSign$$secondAbsNumber = -10 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable together&nbsp;( follow the exponent rule - multiplication of same bases --& and add exponents) :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x<sup>3</sup> * x = x<sup>4</sup> ', thirdHelp: 'The variable <span class=underline>y</span> has no other <span class=underline>y</span> to multiply by. The y remains a part of the multiplication (-10 * x<sup>4</sup> * y). ', answer: '-10x4y', textAnswer: ' &nbsp; -10x<sup>4</sup>y', template: 'fourth' },
+			{ firstSign: '-', secondSign: '', firstAbsNumber: '2', secondAbsNumber: '5', firstText: 'x', secondText: '', thirdText: 'x', fourthText: 'y', firstExp:'<sup>3</sup>', secondExp: '', firstLeftparan: '', secondLeftparan: '(',firstRightparan: '',secondRightparan: ')',firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstSign $$firstAbsNumber * $$secondSign$$secondAbsNumber = -10 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable together&nbsp;( follow the exponent rule - multiplication of same bases --& and add exponents) :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x<sup>3</sup> * x = x<sup>4</sup> ', thirdHelp: 'The variable <span class=underline>y</span> has no other <span class=underline>y</span> to multiply by. The y remains a part of the multiplication (-10 * x<sup>4</sup> * y). ', textAnswer: ' &nbsp; -10x<sup>4</sup>y', ans: '-10', firsttex:'x', firstexp: '4', secondtex:'y', template: 'fifthexp'},
 			// problem 7
 			{ firstSign: '-', secondSign: '', firstAbsNumber: '2', secondAbsNumber: '15', firstText: '/ 5', secondText: '', thirdText: 'a', fourthText: '', firstExp:'', secondExp: '<sup>2</sup>', firstLeftparan: '(', secondLeftparan: '(',firstRightparan: ')',secondRightparan: ')',firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstSign $$firstAbsNumber/5 * $$secondAbsNumber = -6<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable together&nbsp;( follow the exponent rule - multiplication of same bases --& and add exponents) :', thirdHelp: 'The variable <span class=underline>a</span> has no other <span class=underline>a</span> to multiply by. The a<sup>2</sup> remains a part of the multiplication (-6 * a<sup>2</sup>). ', answer: '-6a2', textAnswer: ' &nbsp; -6a<sup>2</sup>', template: 'fourth' },
 			// problem 8
