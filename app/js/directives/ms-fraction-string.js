@@ -65,7 +65,7 @@ angular.module('mathSkills')
                     expected: '@', 
                     label: '@'
                 },
-			    template: '<span ng-bind-html-unsafe= "string | enlargeOps"}}</span>'
+			    template: '<span ng-bind-html-unsafe= "string | enlargeOps"></span>'
             };
         }
     ]);
