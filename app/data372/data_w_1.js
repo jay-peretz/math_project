@@ -118,7 +118,7 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
 			answer: dataUtils.pre('\\rowgrp{$$button1}{$$button2}'),
             button1: dataUtils.pre('\\grp{\\btn{A}{T}{marg}}{\\str{Like}}'),
             button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{Unlike}}'),
-			template: 'second',
+			template: 'second', answerBtn: 'noAnswer',
 			help: dataUtils.pre('{\\rowgrp{\\html{Like terms must have <span class=underline>identical</span> variable(s) and the exact same exponent raised above any specific variable(s). It does not matter what the coefficients are.}}{\\html{&nbsp;}}{\\html{6x and -3x are \"like\" terms because they both have an \"x\" as their only variable(s) and a degree of one (there is an identical exponent of 1 above each x). }}') },
 				
 			// problem 10
@@ -126,7 +126,7 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
 			answer: dataUtils.pre('\\rowgrp{$$button1}{$$button2}'),
             button1: dataUtils.pre('\\grp{\\btn{A}{T}{marg}}{\\str{Like}}'),
             button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{Unlike}}'),
-			template: 'second',
+			template: 'second', answerBtn: 'noAnswer',
 			help: dataUtils.pre('{\\rowgrp{\\html{Like terms must have <span class=underline>identical</span> variable(s) and the exact same exponent raised above any specific variable(s). It does not matter what the coefficients are.}}{\\html{&nbsp;}}{\\html{12ab<sup>2</sup> and 1.6ab<sup>2</sup> are \"like\" terms because they both have an \"ab\" as their only variable(s) and a degree of 3 (there is an exponent of 1 above each a and an exponent of 2 above each b). }}') },
 					
 			// problem 11
@@ -134,7 +134,7 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
 			answer: dataUtils.pre('\\rowgrp{$$button1}{$$button2}'),
             button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{Like}}'),
             button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{Unlike}}'),
-			template: 'second',
+			template: 'second', answerBtn: 'noAnswer',
 			help: dataUtils.pre('{\\rowgrp{\\html{Like terms must have <span class=underline>identical</span> variable(s) and the exact same exponent raised above any specific variable(s). It does not matter what the coefficients are.}}{\\html{&nbsp;}}{\\frac{\\fracstr{2m}}{\\fracstr{3}}}{\\html{and 4mn are \"unlike\" terms because they do <span class=underline>not</span> have identical variable(s). The first term has only an m; the second term has an m <span class=underline>and</span> an n. }}') },
 					
 			// problem 12
@@ -142,7 +142,7 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
 			answer: dataUtils.pre('\\rowgrp{$$button1}{$$button2}'),
             button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{Like}}'),
             button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{Unlike}}'),
-			template: 'second',
+			template: 'second', answerBtn: 'noAnswer',
 			help: dataUtils.pre('{\\rowgrp{\\html{Like terms must have <span class=underline>identical</span> variable(s) and the exact same exponent raised above any specific variable(s). It does not matter what the coefficients are.}}{\\html{&nbsp;}}{\\html{14x<sup>2</sup>y<sup>3</sup> and -7x<sup>3</sup>y<sup>3</sup>are \"unlike\" terms because they do not have the exact same exponents raised above each specific variable(s). The first term has an exponent of 2 above the x; the second term has an exponent of 3 above the x.}}') },				
 			];
 
