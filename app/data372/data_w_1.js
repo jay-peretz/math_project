@@ -101,7 +101,8 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
 			val2: dataUtils.pre('\\input{x}'),
 			val3: dataUtils.pre('\\input{3}'),
 			template: 'first',
-			help: dataUtils.pre('\\rowgrp{\\grp{\\html{For the term of}}{\\frac{\\fracstr{x}}{\\fracstr{7}}}{\\html{:}}}{\\html{&nbsp;}}{\\html{Because there is an \"invisible\" 1 in front of the x, the term}}{\\frac{\\fracstr{x}}{\\fracstr{7}}}{\\html{can also be written as }}{\\frac{\\fracstr{1}}{\\fracstr{7}}}{\\html{ * x. The variable of x also has an \"invisible\" exponent of 1. Therefore:}}')},
+			help: dataUtils.pre('\\rowgrp{\\grp{\\html{For the term of}}{\\frac{\\fracstr{x}}{\\fracstr{7}}}{\\html{:}}}{\\html{&nbsp;}}{\\html{Because there is an \"invisible\" 1 in front of the x, the term}}{\\frac{\\fracstr{x}}{\\fracstr{7}}}{\\html{can also be written as }}{\\grp{\\frac{\\fracstr{1}}{\\fracstr{7}}}{\\html{ * &nbsp;x}}}{\\html{The variable of x also has an \"invisible\" exponent of 1. Therefore:}}{\\grp{\\frac{\\fracstr{1}}{\\fracstr{7}}}{\\html{*}}{\\exp{\\html{x}}{\\html{1}}}}')
+			},
 					
 			
 				
@@ -135,7 +136,7 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
             button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{Like}}'),
             button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{Unlike}}'),
 			template: 'second', answerBtn: 'noAnswer',
-			help: dataUtils.pre('{\\rowgrp{\\html{Like terms must have <span class=underline>identical</span> variable(s) and the exact same exponent raised above any specific variable(s). It does not matter what the coefficients are.}}{\\html{&nbsp;}}{\\frac{\\fracstr{2m}}{\\fracstr{3}}}{\\html{and 4mn are \"unlike\" terms because they do <span class=underline>not</span> have identical variable(s). The first term has only an m; the second term has an m <span class=underline>and</span> an n. }}') },
+			help: dataUtils.pre('{\\rowgrp{\\html{Like terms must have <span class=underline>identical</span> variable(s) and the exact same exponent raised above any specific variable(s). It does not matter what the coefficients are.}}{\\grp{\\html{&nbsp;}}{\\frac{\\fracstr{2m}}{\\fracstr{3}}}{\\html{and &nbsp;4mn}}}{\\html{are \"unlike\" terms because they do <span class=underline>not</span> have identical variable(s). The first term has only an m; the second term has an m <span class=underline>and</span> an n. }}') },
 					
 			// problem 12
 			{prob: dataUtils.pre('{\\rowgrp{\\grp{\\html{Are the following terms \"like\" terms or \"unlike\" terms? }}}{\\html{&nbsp;}}{\\grp{\\html{14x<sup>2</sup>y<sup>3</sup> and -7x<sup>3</sup>y<sup>3</sup>}}}'),
