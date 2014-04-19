@@ -15,7 +15,6 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 						problem: '\\image{$illustration}',
                         answer: '\\grp'
 									+'{\\input{$finalAnswer}}'
-									+'{\\html{$unitsAnswer}}'
 									+'{\\exposelect{$unitsPower}{$unitsSelect}}',
                         controls: {
                             "checkAnswer": true,
@@ -45,7 +44,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 				illustration: 'S.1/rectangle7x11.jpg',
 				unitsAnswer: 'ft',
 				unitsPower: ' ',
-				unitsSelect: '[\\" \\",\\"2\\",\\"3\\"]',
+				unitsSelect: '[\\"ft\\",\\"ft&sup2;\\",\\"ft&sup3\\"]',
 				identifyShape: 'rectangle',
                 formula: 'P = 2(L) + 2(W)',
 				substitution: 'P = 2(11) + 2(7)',

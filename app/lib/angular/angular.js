@@ -14633,7 +14633,7 @@ var selectDirective = ['$compile', '$parse', function($compile,   $parse) {
                   (element = optionTemplate.clone())
                       .val(option.id)
                       .attr('selected', option.selected)
-                      .text(option.label);
+                      .html(option.label);
                 }
 
                 existingOptions.push(existingOption = {
