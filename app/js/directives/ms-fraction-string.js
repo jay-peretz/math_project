@@ -11,7 +11,8 @@ angular.module('mathSkills')
     .directive('msFractionString', [
         'parser',
         'directiveUtils',
-        function (parser, directiveUtils) {
+		'problemData',
+        function (parser, directiveUtils, problemData) {
             return {
                 controller: function ($scope, $element, $filter) {
                     $scope.controllerId = Math.random().toString();
@@ -19,11 +20,15 @@ angular.module('mathSkills')
                     // Extract the value and sent size event.
                     $scope.$watch('expected', function () {
                         if($scope.expected) {
-						
-                            $scope.string = $scope.expected.slice(9, $scope.expected.length - 1); 
-							
-							
-                            // directiveUtils.size($scope, [$scope.string], 10, 5);    
+                            //$scope.display = parser.extractTag($scope.expected).args[0].length === 0;
+                            $scope.string = parser.extractTag($scope.expected).args[0];
+                            
+                            if ($scope.string && $scope.string[0] === '[') {
+                                var possibleAnswers = JSON.parse($scope.string);
+                                problemData.getIndex().then(function (index) {
+                                    $scope.string = possibleAnswers[index];
+                                });
+                            }
                         }
                     });
                      

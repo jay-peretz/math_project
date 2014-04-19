@@ -26,7 +26,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
                     children: [{
 						problem: '\\html{&nbsp;}',
 						answer: '\\rowgrp'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
@@ -35,7 +35,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
 											+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\html{Answer: }}'
 											+'{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}'
 										+'}',
@@ -49,7 +49,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
                 }, {
                     title: 'Workbook',
                     children: [{
-						problem: '\\row'
+						problem: '\\grp'
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
@@ -67,7 +67,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						},
                     }, {
-                    	problem: '\\row'
+                    	problem: '\\grp'
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
@@ -78,7 +78,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 												+'{\\sign{$secondSign}}'
@@ -97,7 +97,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
                     }, {
-						problem: '\\row'
+						problem: '\\grp'
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
@@ -108,7 +108,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 												+'{\\sign{$secondSign}}'
@@ -123,7 +123,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{$answerDen}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Use the LCD to convert the fractions:}}'
-									+'{\\row'
+									+'{\\grp'
 											+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 												+'{\\sign{$secondSign}}'
@@ -148,7 +148,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
                     }, {
-						problem: '\\row'
+						problem: '\\grp'
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
@@ -159,7 +159,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 												+'{\\sign{$secondSign}}'
@@ -175,7 +175,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{$secondSign}}'
@@ -213,7 +213,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
                     children: [{
 						problem: '\\html{&nbsp;}',
 						answer: '\\rowgrp'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
@@ -222,7 +222,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\html{Answer:&nbsp;}}'
 											+'{\\mixed{\\input{$wAns}}{\\frac{\\input{$wNumAns}}{\\input{$wDenAns}}}}'
 										+'}',
@@ -236,7 +236,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
                 }, {
                     title: 'Workbook', 
                     children: [{
-						problem: '\\row' // step 1
+						problem: '\\grp' // step 1
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
@@ -254,7 +254,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						},
 					}, { // step 2
-                    	problem: '\\row' 
+                    	problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
@@ -265,7 +265,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{$secondSign}}'
@@ -292,7 +292,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
                     }, { // step 3
-                    	problem: '\\row' 
+                    	problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
@@ -303,7 +303,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{$secondSign}}'
@@ -315,7 +315,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{Convert mixed numbers above into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\row'
+									+'{\\grp'
 											+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{$secondSign}}'
@@ -333,7 +333,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
                     }, { // step 4
-						problem: '\\row' 
+						problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
@@ -344,7 +344,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{$secondSign}}'
@@ -356,7 +356,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{Convert mixed numbers above into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\row'
+									+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{$secondSign}}'
@@ -371,7 +371,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{$lcd}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Use the LCD to convert the fractions:}}'
-									+'{\\row'
+									+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{$secondSign}}'
@@ -397,7 +397,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"fixBottomRight": true
 						}
                     }, { // step 5
-						problem: '\\row' 
+						problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
@@ -408,7 +408,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{$secondSign}}'
@@ -420,7 +420,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{Convert mixed numbers above into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\row'
+									+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{$secondSign}}'
@@ -436,7 +436,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 											+'{\\sign{$secondSign}}'
@@ -446,7 +446,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\html{$rightParen}}'
 										+'}'    
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$answN1}}{\\fracstr{$lcd}}}'
 											+'{\\sign{$secondSign}}'
@@ -466,7 +466,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"fixBottomRight": true
 							}
 						}, { // step 6
-						problem: '\\row' 
+						problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
@@ -477,7 +477,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{$secondSign}}'
@@ -489,7 +489,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{Convert mixed numbers above into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\row'
+									+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{$secondSign}}'
@@ -505,7 +505,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 											+'{\\sign{$secondSign}}'
@@ -515,7 +515,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\html{$rightParen}}'
 										+'}'    
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$answN1}}{\\fracstr{$lcd}}}'
 											+'{\\sign{$secondSign}}'
@@ -554,7 +554,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
                     children: [{
 						problem: '\\html{&nbsp;}',
 						answer: '\\rowgrp'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
@@ -563,7 +563,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\html{Answer:&nbsp;}}'
 											+'{\\mixed{\\input{$wAns}}{\\frac{\\input{$wNumAns}}{\\input{$wDenAns}}}}'
 										+'}',
@@ -577,7 +577,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
                 }, {
                     title: 'Workbook', 
                     children: [{
-						problem: '\\row' // step 1
+						problem: '\\grp' // step 1
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
@@ -595,7 +595,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
 					}, { // step 2
-                    	problem: '\\row' 
+                    	problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
@@ -606,7 +606,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{$secondSign}}'
@@ -629,7 +629,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
                     }, { // step 3
-                    	problem: '\\row' 
+                    	problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
@@ -640,7 +640,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{$secondSign}}'
@@ -650,7 +650,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{Convert mixed numbers above into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\row'
+									+'{\\grp'
 											+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{$secondSign}}'
@@ -666,7 +666,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
                     }, { // step 4
-						problem: '\\row' 
+						problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
@@ -677,7 +677,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{$secondSign}}'
@@ -687,7 +687,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{Convert mixed numbers above into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\row'
+									+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{$secondSign}}'
@@ -700,7 +700,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{$lcd}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Use the LCD to convert the fractions:}}'
-									+'{\\row'
+									+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{$secondSign}}'
@@ -722,7 +722,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"fixBottomRight": true
 						}
                     }, { // step 5
-						problem: '\\row' 
+						problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
@@ -733,7 +733,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{$secondSign}}'
@@ -743,7 +743,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{Convert mixed numbers above into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\row'
+									+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{$secondSign}}'
@@ -757,7 +757,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 											+'{\\sign{$secondSign}}'
@@ -765,7 +765,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\frac{\\fracstr{$imprN2}}{\\fracstr{$d2}}}'
 										+'}'    
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$answN1}}{\\fracstr{$lcd}}}'
 											+'{\\sign{$secondSign}}'
@@ -783,7 +783,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"fixBottomRight": true
 							}
 						}, { // step 6
-						problem: '\\row' 
+						problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$firstSign}}'
 											+'{\\mixed{\\str{$w2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
@@ -794,7 +794,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{$secondSign}}'
@@ -804,7 +804,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{Convert mixed numbers above into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\row'
+									+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{$secondSign}}'
@@ -818,7 +818,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 											+'{\\sign{$secondSign}}'
@@ -826,7 +826,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\frac{\\fracstr{$imprN2}}{\\fracstr{$d2}}}'
 										+'}'    
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$answN1}}{\\fracstr{$lcd}}}'
 											+'{\\sign{$secondSign}}'
@@ -864,7 +864,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
                     children: [{
 						problem: '\\html{&nbsp;}',
 						answer: '\\rowgrp'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\frac{\\fracstr{$firstProbNum}}{\\fracstr{$firstProbDen}}}'
@@ -873,7 +873,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\frac{\\fracstr{$secondProbNum}}{\\fracstr{$secondProbDen}}}'
 											+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\html{Answer: }}'
 											+'{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}'
 										+'}',
@@ -887,7 +887,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
                 }, {
                     title: 'Workbook',
                     children: [{ // step 1
-						problem: '\\row'
+						problem: '\\grp'
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\frac{\\fracstr{$firstProbNum}}{\\fracstr{$firstProbDen}}}'
@@ -905,7 +905,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						},
                     }, { // step 2
-                    	problem: '\\row'
+                    	problem: '\\grp'
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\frac{\\fracstr{$firstProbNum}}{\\fracstr{$firstProbDen}}}'
@@ -916,7 +916,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 												+'{\\sign{$secondSign}}'
@@ -939,7 +939,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
                     }, { // step 3
-                    	problem: '\\row'
+                    	problem: '\\grp'
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\frac{\\fracstr{$firstProbNum}}{\\fracstr{$firstProbDen}}}'
@@ -950,7 +950,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 												+'{\\sign{$secondSign}}'
@@ -962,7 +962,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{The expression without double negatives is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{+}}'
@@ -977,7 +977,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
                     }, { // step 4
-						problem: '\\row' 
+						problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\frac{\\fracstr{$firstProbNum}}{\\fracstr{$firstProbDen}}}'
@@ -988,7 +988,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 												+'{\\sign{$secondSign}}'
@@ -1000,7 +1000,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{The expression without double negatives is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{+}}'
@@ -1012,7 +1012,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{$answerDen}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Use the LCD to convert the fractions:}}'
-									+'{\\row'
+									+'{\\grp'
 											+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 												+'{\\sign{+}}'
@@ -1031,7 +1031,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
                     }, { // step 5
-						problem: '\\row'
+						problem: '\\grp'
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\frac{\\fracstr{$firstProbNum}}{\\fracstr{$firstProbDen}}}'
@@ -1042,7 +1042,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 												+'{\\sign{$secondSign}}'
@@ -1054,7 +1054,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\html{The expression without double negatives is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{+}}'
@@ -1067,7 +1067,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{+}}'
@@ -1099,7 +1099,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
                     children: [{
 						problem: '\\html{&nbsp;}',
 						answer: '\\rowgrp'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
@@ -1108,7 +1108,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											+'{\\mixed{\\str{$probw2}}{\\frac{\\fracstr{$probn2}}{\\fracstr{$probd2}}}}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\html{Answer:&nbsp;}}'
 											+'{\\mixed{\\input{$wAns}}{\\frac{\\input{$wNumAns}}{\\input{$wDenAns}}}}'
 										+'}',
@@ -1122,7 +1122,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
                 }, {
                     title: 'Workbook', 
                     children: [{
-						problem: '\\row' // step 1
+						problem: '\\grp' // step 1
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
@@ -1140,7 +1140,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
 					}, { // step 2
-                    	problem: '\\row' 
+                    	problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
@@ -1151,7 +1151,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{$secondSign}}'
@@ -1172,7 +1172,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
 					}, { // step 3
-                    	problem: '\\row' 
+                    	problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
@@ -1183,7 +1183,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{+}}'
@@ -1204,7 +1204,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
                     }, { // step 4
-                    	problem: '\\row' 
+                    	problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
@@ -1215,7 +1215,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{+}}'
@@ -1224,7 +1224,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{Convert mixed numbers above into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\row'
+									+'{\\grp'
 											+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{+}}'
@@ -1239,7 +1239,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"help": true
 						}
                     }, { // step 5
-						problem: '\\row' 
+						problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
@@ -1250,7 +1250,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 								+'{\\rowgrp'
 									+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{+}}'
@@ -1259,7 +1259,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{Convert mixed numbers above into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\row'
+									+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{+}}'
@@ -1271,7 +1271,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{$lcd}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Use the LCD to convert the fractions:}}'
-									+'{\\row'
+									+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{+}}'
@@ -1291,7 +1291,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"fixBottomRight": true
 						}
                     }, { // step 6
-						problem: '\\row' 
+						problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
@@ -1302,7 +1302,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{+}}'
@@ -1311,7 +1311,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{Convert mixed numbers above into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\row'
+									+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{+}}'
@@ -1324,14 +1324,14 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 											+'{\\sign{+}}'
 											+'{\\frac{\\fracstr{$imprN2}}{\\fracstr{$d2}}}'
 										+'}'    
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$answN1}}{\\fracstr{$lcd}}}'
 											+'{\\sign{+}}'
@@ -1348,7 +1348,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"fixBottomRight": true
 							}
 						}, { // step 7
-						problem: '\\row' 
+						problem: '\\grp' 
 										+'{\\html{$probExpr1}}'
 											+'{\\sign{$thirdSign}}'
 											+'{\\mixed{\\str{$probw1}}{\\frac{\\fracstr{$probn1}}{\\fracstr{$probd1}}}}'
@@ -1359,7 +1359,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\rowgrp'
 										+'{\\html{The correct translated expression is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\mixed{\\str{$w1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 												+'{\\sign{+}}'
@@ -1368,7 +1368,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\html{Convert mixed numbers above into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\row'
+									+'{\\grp'
 												+'{\\sign{$firstSign}}'
 												+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 												+'{\\sign{+}}'
@@ -1381,14 +1381,14 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$imprN1}}{\\fracstr{$d1}}}'
 											+'{\\sign{+}}'
 											+'{\\frac{\\fracstr{$imprN2}}{\\fracstr{$d2}}}'
 										+'}'    
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$answN1}}{\\fracstr{$lcd}}}'
 											+'{\\sign{+}}'
