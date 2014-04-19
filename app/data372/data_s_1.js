@@ -15,7 +15,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 						problem: '\\image{$illustration}',
                         answer: '\\grp'
 									+'{\\input{$finalAnswer}}'
-									+'{\\exposelect{$unitsPower}{$unitsSelect}}',
+									+'{\\select{$unitsPower}{$unitsSelect}{widthFixed120}}',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'

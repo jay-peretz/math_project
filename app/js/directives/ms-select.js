@@ -17,7 +17,8 @@ angular.module('mathSkills')
             restrict: 'E',
             scope: {
                 expected: '@',
-                label: '@'
+                label: '@',
+				width: '@'
             },
             controller: function ($scope, $element) {
 
@@ -29,8 +30,15 @@ angular.module('mathSkills')
                         $scope.answer = '';
                         $scope.myargs = parser.extractTag($scope.expected).args;
                         $scope.answercorrect = $scope.myargs[0]; 
-                        $scope.optionsarray = $scope.myargs[1]; 
-
+                        $scope.optionsarray = $scope.myargs[1];
+						$scope.selectWidthClass = function () {
+							if (typeof $scope.myargs[2] !== undefined) {
+								return $scope.myargs[2];
+							} else {
+								return "";
+							}
+						}
+						
                         //turn answer string-arrays into array
                         if (typeof $scope.answercorrect === "string" && $scope.answercorrect[0] === "[") {
                             $scope.answercorrect = JSON.parse($scope.answercorrect);
@@ -173,6 +181,6 @@ angular.module('mathSkills')
                 });
 
             },
-            template: '<div class="control-group {{class}}"><label><span>{{label}}</span><select style="width:{{width}}; margin:0;" ng-model="answer" ng-options="value for value in optionsarray"> <option value="">-- choose --</option></select></label></div>'
+            template: '<div class="control-group {{class}}"><label><span>{{label}}</span><select style="width:{{width}}; margin:0;" ng-class="selectWidthClass()" ng-model="answer" ng-options="value for value in optionsarray"> <option value="">-- choose --</option></select></label></div>'
         };
     }]);
