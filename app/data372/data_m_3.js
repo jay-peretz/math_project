@@ -37,7 +37,6 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\row'
 											+'{\\html{Answer: }}'
-											//+'{\\sign{=}}'
 											+'{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}'
 										+'}',
 
@@ -96,7 +95,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						},
+						}
                     }, {
 						problem: '\\row'
 										+'{\\html{$probExpr1}}'
@@ -147,7 +146,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						},
+						}
                     }, {
 						problem: '\\row'
 										+'{\\html{$probExpr1}}'
@@ -196,7 +195,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{$oper the numerators:}}'
-										+'{\\grp\\{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$firstAnswerNum}}{\\sign{$secondSign}}{\\html{$leftParen}}{\\sign{$thirdSign}}{\\fracstr{$secondAnswerNum}}{\\html{$rightParen}}}{\\fracstr{$answerDen}}}{\\sign{=}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}'	
+										+'{\\grp{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$firstAnswerNum}}{\\sign{$secondSign}}{\\html{$leftParen}}{\\sign{$thirdSign}}{\\fracstr{$secondAnswerNum}}{\\html{$rightParen}}}{\\fracstr{$answerDen}}}{\\sign{=}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}'	
         									+'}{well}',
 						controls: {
 							"checkAnswer": true,
@@ -291,7 +290,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						},
+						}
                     }, { // step 3
                     	problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -332,7 +331,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						},
+						}
                     }, { // step 4
 						problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -396,7 +395,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"checkAnswer": true,
 							"help": true,
 							"fixBottomRight": true
-						},
+						}
                     }, { // step 5
 						problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -459,13 +458,13 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{$oper the numerators:}}'
-										+'{\\grp\\{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$answN1}}{\\sign{$secondSign}}{\\html{$leftParen}}{\\sign{$thirdSign}}{\\fracstr{$answN2}}{\\html{$rightParen}}}{\\fracstr{$lcd}}}{\\sign{=}}{\\frac{\\input{$answNum}}{\\input{$lcd}}}}'	
+										+'{\\grp{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$answN1}}{\\sign{$secondSign}}{\\html{$leftParen}}{\\sign{$thirdSign}}{\\fracstr{$answN2}}{\\html{$rightParen}}}{\\fracstr{$lcd}}}{\\sign{=}}{\\frac{\\input{$answNum}}{\\input{$lcd}}}}'	
         									+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true,
 							"fixBottomRight": true
-						},
+							}
 						}, { // step 6
 						problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -529,7 +528,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\html{$oper the numerators:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\grp\\{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$answN1}}{\\sign{$secondSign}}{\\html{$leftParen}}{\\sign{$thirdSign}}{\\fracstr{$answN2}}{\\html{$rightParen}}}{\\fracstr{$lcd}}}{\\sign{=}}{\\frac{\\fracstr{$answNum}}{\\fracstr{$lcd}}}}'
+										+'{\\grp{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$answN1}}{\\sign{$secondSign}}{\\html{$leftParen}}{\\sign{$thirdSign}}{\\fracstr{$answN2}}{\\html{$rightParen}}}{\\fracstr{$lcd}}}{\\sign{=}}{\\frac{\\fracstr{$answNum}}{\\fracstr{$lcd}}}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{Rewrite the answer as a mixed number with a proper fraction:}}'
 										+'{\\grp'
@@ -543,7 +542,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"checkAnswer": true,
 							"help": true,
 							"fixBottomRight": true
-						},
+						}
                     }]
                 }]
             },
@@ -594,7 +593,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						},
+						}
 					}, { // step 2
                     	problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -628,7 +627,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						},
+						}
                     }, { // step 3
                     	problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -665,7 +664,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						},
+						}
                     }, { // step 4
 						problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -721,7 +720,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"checkAnswer": true,
 							"help": true,
 							"fixBottomRight": true
-						},
+						}
                     }, { // step 5
 						problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -776,13 +775,13 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{$oper the numerators:}}'
-										+'{\\grp\\{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$answN1}}{\\sign{$secondSign}}{\\html{$leftParen}}{\\sign{$thirdSign}}{\\fracstr{$answN2}}{\\html{$rightParen}}}{\\fracstr{$lcd}}}{\\sign{=}}{\\frac{\\input{$answNum}}{\\input{$lcd}}}}'	
+										+'{\\grp{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$answN1}}{\\sign{$secondSign}}{\\html{$leftParen}}{\\sign{$thirdSign}}{\\fracstr{$answN2}}{\\html{$rightParen}}}{\\fracstr{$lcd}}}{\\sign{=}}{\\frac{\\input{$answNum}}{\\input{$lcd}}}}'	
         									+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true,
 							"fixBottomRight": true
-						},
+							}
 						}, { // step 6
 						problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -838,7 +837,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\html{$oper the numerators:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\grp\\{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$answN1}}{\\sign{$secondSign}}{\\sign{$thirdSign}}{\\fracstr{$answN2}}}{\\fracstr{$lcd}}}{\\sign{=}}{\\frac{\\fracstr{$answNum}}{\\fracstr{$lcd}}}}'
+										+'{\\grp{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$answN1}}{\\sign{$secondSign}}{\\sign{$thirdSign}}{\\fracstr{$answN2}}}{\\fracstr{$lcd}}}{\\sign{=}}{\\frac{\\fracstr{$answNum}}{\\fracstr{$lcd}}}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{Rewrite the mixed number answer with a proper and simplified fraction:}}'
 										+'{\\grp'
@@ -852,7 +851,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"checkAnswer": true,
 							"help": true,
 							"fixBottomRight": true
-						},
+						}
                     }]
                 }]
             },
@@ -938,19 +937,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-							// "help": '\\rowgrp'
-							// 			+'{\\html{&nbsp;}}'
-							// 			+'{\\html{The minus sign in front of a parenthesis means to take the opposite sign of the negative $negFrac inside the parenthesis.}}'
-							// 			+'{\\html{&nbsp;}}'
-							// 			+'{\\html{The expression without double negatives is:}}'
-							// 			+'{\\html{&nbsp;}}'
-							// 			+'{\\row'
-							// 				+'{\\sign{$firstSign}}'
-							// 				+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-							// 				+'{\\sign{+}}'
-							// 				+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-							// 				+'}'
-						},
+						}
                     }, { // step 3
                     	problem: '\\row'
 										+'{\\html{$probExpr1}}'
@@ -988,7 +975,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						},
+						}
                     }, { // step 4
 						problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -1042,7 +1029,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						},
+						}
                     }, { // step 5
 						problem: '\\row'
 										+'{\\html{$probExpr1}}'
@@ -1094,7 +1081,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{$oper the numerators:}}'
-										+'{\\grp\\{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$firstAnswerNum}}{\\sign{+}}{\\fracstr{$secondAnswerNum}}}{\\fracstr{$answerDen}}}{\\sign{=}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}'	
+										+'{\\grp{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$firstAnswerNum}}{\\sign{+}}{\\fracstr{$secondAnswerNum}}}{\\fracstr{$answerDen}}}{\\sign{=}}{\\frac{\\input{$differenceNum}}{\\input{$answerDen}}}}'	
         									+'}{well}',
 						controls: {
 							"checkAnswer": true,
@@ -1151,7 +1138,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						},
+						}
 					}, { // step 2
                     	problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -1183,7 +1170,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						},
+						}
 					}, { // step 3
                     	problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -1215,7 +1202,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						},
+						}
                     }, { // step 4
                     	problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -1250,7 +1237,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true
-						},
+						}
                     }, { // step 5
 						problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -1302,7 +1289,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"checkAnswer": true,
 							"help": true,
 							"fixBottomRight": true
-						},
+						}
                     }, { // step 6
 						problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -1353,13 +1340,13 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 											
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{$oper the numerators:}}'
-										+'{\\grp\\{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$answN1}}{\\sign{+}}{\\fracstr{$answN2}}}{\\fracstr{$lcd}}}{\\sign{=}}{\\frac{\\input{$answNum}}{\\input{$lcd}}}}'	
+										+'{\\grp{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$answN1}}{\\sign{+}}{\\fracstr{$answN2}}}{\\fracstr{$lcd}}}{\\sign{=}}{\\frac{\\input{$answNum}}{\\input{$lcd}}}}'	
         									+'}{well}',
 						controls: {
 							"checkAnswer": true,
 							"help": true,
 							"fixBottomRight": true
-						},
+							}
 						}, { // step 7
 						problem: '\\row' 
 										+'{\\html{$probExpr1}}'
@@ -1411,7 +1398,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\html{$oper the numerators:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\grp\\{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$answN1}}{\\sign{+}}{\\fracstr{$answN2}}}{\\fracstr{$lcd}}}{\\sign{=}}{\\frac{\\fracstr{$answNum}}{\\fracstr{$lcd}}}}'
+										+'{\\grp{\\frac{\\grp{sign{$firstSign}}{\\fracstr{$answN1}}{\\sign{+}}{\\fracstr{$answN2}}}{\\fracstr{$lcd}}}{\\sign{=}}{\\frac{\\fracstr{$answNum}}{\\fracstr{$lcd}}}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{Simplify fraction and rewrite the answer as a mixed number with a proper fraction:}}'
 										+'{\\grp'
@@ -1425,10 +1412,10 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 							"checkAnswer": true,
 							"help": true,
 							"fixBottomRight": true
-						},
+						}
                     }]
                 }]
-            },
+            }
       
         },
         data = [
