@@ -43,7 +43,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 			{ // problem 1
 				illustration: 'S.1/rectangle7x11.jpg',
 				unitsAnswer: 'ft',
-				unitsPower: ' ',
+				unitsPower: 'ft',
 				unitsSelect: '[\\"ft\\",\\"ft&sup2;\\",\\"ft&sup3\\"]',
 				identifyShape: 'rectangle',
                 formula: 'P = 2(L) + 2(W)',
