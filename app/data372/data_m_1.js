@@ -22,7 +22,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 					children: [{
 						title: 'Main Answer',
 						children: [{
-							problem: '\\row'
+							problem: '\\grp'
 							+'{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}'
 							+'{\\sign{$operation}}'
 							+'{\\frac{\\str{$secondNum}}{\\str{$secondDen}}',
@@ -30,14 +30,14 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 							controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
-								+'{\\row{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}'
+								+'{\\grp{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}'
 								+'{\\sign{$operation}}'
 								+'{\\frac{\\str{$secondNum}}{\\str{$secondDen}}}'
 								+'{\\sign{ = }}'
 								+'{\\sign{$answerSign}}'
 								+'{\\frac{\\str{$answerNum}}{\\str{$answerDen}}}}'
 								+'{\\html{&nbsp;}}'
-								+'{css{\\row{\\str{Answer:  \xA0}}'
+								+'{css{\\grp{\\str{Answer:  \xA0}}'
 								+'{\\sign{$answerSign}}'
 								+'{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}'
 								+'{help-answer-text}}'
@@ -74,8 +74,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\sign{$firstSign}}'
 									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 									+'{\\sign{$secondSign}}'
-									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-								+'}',
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}',
 						answer: '\\rowgrp'
 									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
 									+'{\\html{&nbsp;}}'
@@ -90,8 +89,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\sign{$firstSign}}'
 									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 									+'{\\sign{$secondSign}}'
-									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-								+'}',
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
@@ -119,8 +117,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\sign{$firstSign}}'
 									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 									+'{\\sign{$secondSign}}'
-									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-								+'}',
+									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}',
 							answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
@@ -182,8 +179,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$thirdSign}}'
 									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 						answer: '\\rowgrp'
 									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
 									+'{\\html{&nbsp;}}'
@@ -201,8 +197,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$thirdSign}}'
 									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
@@ -235,8 +230,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$thirdSign}}'
 									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 							answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
@@ -300,8 +294,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$thirdSign}}'
 									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 						answer: '\\rowgrp'+
 									'{\\ins{Choose the expression that is rewritten correctly without any double negatives:}}'+
 									'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
@@ -316,7 +309,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\html{The expression without double negatives is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{+}}'
@@ -331,13 +324,12 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$thirdSign}}'
 									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The expression without double negatives is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{+}}'
@@ -360,8 +352,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$thirdSign}}'
 									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
@@ -369,7 +360,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$answerDen}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Use the LCD to convert the fractions:}}'
-									+'{\\row'
+									+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{+}}'
@@ -388,15 +379,14 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 							"help": true
 						},
                     }, {
-						problem: 'grp'
+						problem: '\\grp'
 									+'{\\sign{$firstSign}}'
 									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 									+'{\\sign{$secondSign}}'
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$thirdSign}}'
 									+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 							answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
@@ -405,7 +395,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$firstSign}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{+}}'
@@ -471,8 +461,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$fifthSign}}'
 									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 						answer: '\\rowgrp'
 									+'{\\ins{Determine the lowest common denominator (LCD) of the fractions:}}'
 									+'{\\html{&nbsp;}}'
@@ -495,8 +484,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$fifthSign}}'
 									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
@@ -534,7 +522,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 							"help": true
 						}
                     }, {
-						problem: 'grp'
+						problem: '\\grp'
 									+'{\\sign{$firstSign}}'
 									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 									+'{\\sign{$secondSign}}'
@@ -546,8 +534,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$fifthSign}}'
 									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 							answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Determine the lowest common denominator (LCD) of the fractions:}}'
@@ -632,8 +619,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$fifthSign}}'
 									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 						answer: '\\rowgrp'+
 									'{\\ins{Choose the expression that is rewritten correctly without any double negatives:}}'+
 									'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
@@ -648,7 +634,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\html{The expression without double negatives is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$sign1}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{$sign2}}'
@@ -670,13 +656,12 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$fifthSign}}'
 									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The expression without double negatives is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$sign1}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{$sign2}}'
@@ -706,13 +691,12 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$fifthSign}}'
 									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 						answer: '\\css'
 								+'{\\rowgrp'
 									+'{\\html{The expression without double negatives is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$sign1}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{$sign2}}'
@@ -726,7 +710,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$answerDen}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\ins{Use the LCD to convert the fractions:}}'
-									+'{\\row'
+									+'{\\grp'
 											+'{\\sign{$sign1}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{$sign2}}'
@@ -749,7 +733,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 							"help": true
 						}
                     }, {
-						problem: 'grp'
+						problem: '\\grp'
 									+'{\\sign{$firstSign}}'
 									+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 									+'{\\sign{$secondSign}}'
@@ -761,13 +745,12 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 									+'{\\html{$leftParen}}'
 									+'{\\sign{$fifthSign}}'
 									+'{\\frac{\\fracstr{$thirdNum}}{\\fracstr{$thirdDen}}}'
-									+'{\\html{$rightParen}}'
-								+'}',
+									+'{\\html{$rightParen}}',
 							answer: '\\css'
 									+'{\\rowgrp'
 									+'{\\html{The expression without double negatives is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$sign1}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{$sign2}}'
@@ -782,7 +765,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
+										+'{\\grp'
 											+'{\\sign{$sign1}}'
 											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 											+'{\\sign{$sign2}}'
