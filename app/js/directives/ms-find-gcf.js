@@ -48,11 +48,19 @@ angular.module('mathSkills')
             controller: ['$scope', function ($scope) {
 				$scope.factorExpLabel = "";
 				$scope.controllerId = Math.random().toString();
-                var getFactorExp = function () {
-                        return '\\input{[' + $scope.primeFactors.join(',') + ']}';
+                var getFactorExp = function (dataLabel) {
+						if (typeof dataLabel !== "undefined") {
+                        	return '\\input{[' + $scope.numberObjects[dataLabel].primeFactors.join(',') + ']}';
+						} else {
+							return '\\input{[' + $scope.primeFactors.join(',') + ']}';
+						}
                     },
-                    getFactoredExp = function () {
-                        return '\\grp{\\input{' + $scope.numbers.join('}}{\\input{') + '}}';
+                    getFactoredExp = function (dataLabel) {
+						if (typeof dataLabel !== "undefined") {
+							return '\\grp{\\input{' + $scope.numberObjects[dataLabel].numbers.join('}}{\\input{') + '}}';
+						} else {
+                        	return '\\grp{\\input{' + $scope.numbers.join('}}{\\input{') + '}}';
+						}
                     },
                     extractArg = function (tag) {
                         return parser.extractTag(tag).args[0];
@@ -60,20 +68,38 @@ angular.module('mathSkills')
                     divideIfDivisible = function (divisor, dividend) {
                         return dividend % divisor === 0 ? dividend / divisor : dividend;
                     },
-                    saveState = function (factor) {
-                        $scope.completed.push({
-                            factor: factor,
-                            numbers: angular.copy($scope.numbers)
-                        });
+                    saveState = function (factor, dataLabel) {
+						if (typeof dataLabel !== "undefined") {
+							$scope.numberObjects[dataLabel].completed.push({
+								factor: factor,
+								numbers: angular.copy($scope.numberObjects[dataLabel].numbers)
+							});
+						} else {
+							$scope.completed.push({
+								factor: factor,
+								numbers: angular.copy($scope.numbers)
+							});
+						}
                     },
-					saveFinalState = function () {
-                        $scope.completed.push({
-                            factor: "",
-                            numbers: angular.copy($scope.numbers)
-                        });
+					saveFinalState = function (dataLabel) {
+						if (typeof dataLabel !== "undefined") {
+							$scope.numberObjects[dataLabel].completed.push({
+								factor: "",
+								numbers: angular.copy($scope.numberObjects[dataLabel].numbers)
+							});
+						} else {
+							$scope.completed.push({
+								factor: "",
+								numbers: angular.copy($scope.numbers)
+							});
+						}
                     },
                     setUpFactored = function (factor) {
-                        $scope.numbers = $scope.numbers.map(divideIfDivisible.bind(null, +factor));
+						if (typeof dataLabel !== "undefined") {
+                        	$scope.numberObjects[dataLabel].numbers = $scope.numberObjects[dataLabel].numbers.map(divideIfDivisible.bind(null, +factor));
+						} else {
+							$scope.numbers = $scope.numbers.map(divideIfDivisible.bind(null, +factor));
+						}
                     },
                     remove = function (val, arr) {
                         var ii = arr.indexOf(val);
@@ -108,6 +134,7 @@ angular.module('mathSkills')
                 $scope.instructions = 'Factor each number down to 1.';
 				$scope.done = false;
 				$scope.numberObjects = {};
+				$scope.numberObjectsArray = [];
 				$scope.allDone = false;
 
                 $scope.$watch('expected', function () {
@@ -136,37 +163,44 @@ angular.module('mathSkills')
 								focus();
 						}
                     }
-					for (var ii in $scope.allNumbers) {
-						console.log("JSON.stringify($scope.numberObjects) is: ",JSON.stringify($scope.numberObjects));
-					}
                 });
 
                 $scope.$on('answer', function (e, data) {
 					console.log("answer data is: ",JSON.stringify(data))
-					console.log(" $scope.numberObjects[data.label].primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) is: ",$scope.numberObjects[data.label].primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])));
+					
+					$scope.allDone = true;
+					for (var numObj in $scope.numberObjects) {
+						if ($scope.numberObjects[numObj].done === false) {
+							$scope.allDone = false;
+						}
+					}
+					console.log("$scope.allDone is: ",$scope.allDone);
                     if ($scope.allDone === false) {
                         e.stopPropagation();
 						
-						if ($scope.primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) !== -1){
+						if ($scope.numberObjects[data.label].primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) !== -1){
 								var factor = extractArg(data.answer);
-								saveState(factor);
-								setUpFactored(factor);
-								if ($scope.primeFactors.length > 1) {
-										remove(+factor, $scope.primeFactors);
-										$scope.factorExp = getFactorExp();
-										$scope.factoredExp = getFactoredExp();
+								saveState(factor,data.label);
+								setUpFactored(factor,data.label);
+								if ($scope.numberObjects[data.label].primeFactors.length > 1) {
+										remove(+factor, $scope.numberObjects[data.label].primeFactors);
+										$scope.numberObjects[data.label].factorExp = getFactorExp(data.label);
+										$scope.numberObjects[data.label].factoredExp = getFactoredExp(data.label);
 										$scope.factorExpLabel = "";
-								} else {
-										$scope.factorExpLabel = "lcm";
-										$scope.done = true;
-										remove(+factor, $scope.primeFactors);
-										saveFinalState();
+								}/* else {
+										$scope.numberObjects[data.label].factorExpLabel = "lcm";
+										$scope.numberObjects[data.label].done = true;
+										remove(+factor, $scope.numberObjects[data.label].primeFactors);
+										saveFinalState(data.label);
 										$scope.factorExp = '\\input{' + $scope.lcmNumber + '}';
-										$scope.instructions = 'Now multiply the factors together to find the LCM.';  
-								}
+										$scope.instructions = 'Now multiply the factors together to find the LCM.';
+										console.log("2 JSON.stringify($scope.numberObjects["+data.label+"]) is: ",JSON.stringify($scope.numberObjects[data.label]));
+								}*/
 							focus();
-						}
-                    }
+						} 
+                    } else {
+						$scope.instructions = 'Now multiply the factors together to find the LCM.';
+					}
 					
                 });
             }],

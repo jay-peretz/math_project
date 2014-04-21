@@ -5,7 +5,7 @@
         	<td ng-repeat='(key, value) in numberObjects'>
             	{{key}}{{value.numbers}}
                 <table class=factors>
-                    <tr ng-repeat="step in completed" ng-class="borderIndexed($index)">
+                    <tr ng-repeat="step in value.completed" ng-class="borderIndexed($index)">
                         <td>
                         </td>
                         <td class=divisor>
