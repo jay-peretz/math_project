@@ -7,13 +7,13 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
             children: []
 			},
 	        template = {
-            twoFractions: {
-                title: '9.2 Find the LCM',
+            gcfTwoNumbers: {
+                title: '9.2 Find the GCF',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						 problem: '\\row{\\str{Find the LCM of \xA0}}{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}{\\str{\xA0 and \xA0}}{\\frac{\\str{$secondNum}}{\\str{$secondDen}}}',
-						answer: '\\input{$answer}',
+						 problem: '\\html{Find the GCF of $firstNumber and $secondNumber.}',
+						answer: '\\grp{\\input{$answer}}',
 						controls: {
 							"checkAnswer": true,
 							"help": false,
@@ -23,8 +23,8 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\str{Find the LCM of $firstDen and $secondDen.}',
-						answer: '\\findgcf{$firstDen}{$secondDen}',
+                        problem: '\\html{Find the GCF of $firstNumber and $secondNumber.}',
+						answer: '\\findgcf{$firstNumber}{$secondNumber}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
@@ -32,13 +32,13 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
                     }]
                }]
 			},
-			threeFractions: {
-                title: '9.2 Find the LCM',
+			gcfThreeNumbers: {
+                title: '9.2 Find the GCF',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						 problem: '\\row{\\str{Find the LCM of \xA0}}{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}{\\str{, \xA0}}{\\frac{\\str{$secondNum}}{\\str{$secondDen}}}{\\str{\xA0 and \xA0}}{\\frac{\\str{$thirdNum}}{\\str{$thirdDen}}}',
-						answer: '\\input{$answer}',
+						 problem: '\\html{Find the GCF of $firstNumber, $secondNumber and $thirdNumber.}',
+						answer: '\\grp{\\input{$answer}}',
 						controls: {
 							"checkAnswer": true,
 							"help": false,
@@ -48,8 +48,8 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
                 }, {
                     title: 'Workbook',
                     children: [{
-                        problem: '\\str{Find the LCM of $firstDen, $secondDen and $thirdDen.}',
-						answer: '\\findlcm{$firstDen}{$secondDen}{$thirdDen}',
+						problem:'\\pan{12}{11}{\\html{Find the GCF of $firstNumber, $secondNumber and $thirdNumber.}}',
+						answer: '\\findgcf{$firstNumber}{$secondNumber}{$thirdNumber}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
@@ -59,16 +59,9 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
 			}
         },
         data = [
-            { firstNum: '1', firstDen: '10', secondNum: '2', secondDen: '15', answer: '4', template: 'twoFractions' },
-			{ firstNum: '1', firstDen: '2', secondNum: '2', secondDen: '3', answer: '6', template: 'twoFractions' },
-			{ firstNum: '1', firstDen: '4', secondNum: '3', secondDen: '8', answer: '8', template: 'twoFractions' },
-			{ firstNum: '5', firstDen: '6', secondNum: '5', secondDen: '9', answer: '18', template: 'twoFractions' },
-			{ firstNum: '2', firstDen: '3', secondNum: '1', secondDen: '10', answer: '30', template: 'twoFractions' },
-			{ firstNum: '3', firstDen: '4', secondNum: '1', secondDen: '6', answer: '12', template: 'twoFractions' },
-			{ firstNum: '3', firstDen: '4', secondNum: '7', secondDen: '8', thirdNum: '5', thirdDen: '6', answer: '24', template: 'threeFractions' },
-			{ firstNum: '1', firstDen: '4', secondNum: '1', secondDen: '6', thirdNum: '2', thirdDen: '3', answer: '12', template: 'threeFractions' },
-			{ firstNum: '1', firstDen: '6', secondNum: '7', secondDen: '10', thirdNum: '3', thirdDen: '5', answer: '30', template: 'threeFractions' },
-			{ firstNum: '1', firstDen: '4', secondNum: '2', secondDen: '5', thirdNum: '5', thirdDen: '7', answer: '140', template: 'threeFractions' },
+            { firstNumber: '10', secondNumber: '15', answer: '5', template: 'gcfTwoNumbers' },
+			
+			{ firstNumber: '12', secondNumber: '18', thirdNumber: '36', answer: '6', template: 'gcfThreeNumbers' },
         ];
 
     return dataUtils.build(desc, template, data);
