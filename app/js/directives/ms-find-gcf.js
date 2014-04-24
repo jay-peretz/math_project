@@ -1,7 +1,7 @@
 'use strict';
 /*global angular */
 
-// \findgcf{2}{12}
+// \findgcf{x}{2}{12} where x is the correct gcf for all subsequent parameters (numbers) 
 
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
@@ -99,7 +99,6 @@ angular.module('mathSkills')
 								factor: "",
 								numbers: angular.copy($scope.numberObjects[dataLabel].numbers)
 							});
-							console.log("JSON.stringify($scope.numberObjects["+dataLabel+"].completed) is: ",JSON.stringify($scope.numberObjects[dataLabel].completed));
 						} else {
 							$scope.completed.push({
 								factor: "",
@@ -133,7 +132,6 @@ angular.module('mathSkills')
 						}
 					};
 					$scope.borderIndexed = function (index, dataLabel) {
-						console.log("dataLabel is: ",dataLabel);
 						if (index === $scope.numberObjects[dataLabel].howManyPrimes) {
 							return ('noborder');
 						} else {
@@ -202,7 +200,7 @@ angular.module('mathSkills')
 						
 						if ($scope.allCorrect === true) {	
 							for (var numObj in $scope.numberObjects) {
-								//console.log("$scope.numberObjects["+numObj+"].primeFactors.indexOf(Number(parser.extractTag($scope.numberObjects[numObj].currentAnswerData[0].answer).args[0]))is: ",$scope.numberObjects[numObj].primeFactors.indexOf(Number(parser.extractTag($scope.numberObjects[numObj].currentAnswerData[0].answer).args[0])));
+								
 								if ($scope.numberObjects[numObj].primeFactors.indexOf(Number(parser.extractTag($scope.numberObjects[numObj].currentAnswerData[0].answer).args[0])) !== -1){
 										var factor = extractArg($scope.numberObjects[numObj].currentAnswerData[0].answer);
 										saveState(factor,numObj);
