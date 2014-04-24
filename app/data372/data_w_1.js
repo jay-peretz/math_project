@@ -7,9 +7,8 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
             children: []
         },
         template = {
-			// first template, integers operation
 			first: {
-                title: 'Evaluate Signed Expressions',
+                title: 'Simplifying Expressions',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -60,7 +59,7 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
 			val2: dataUtils.pre('\\input{m}'),
 			val3: dataUtils.pre('\\input{5}'),
 			template: 'first',
-			help: dataUtils.pre('\\rowgrp{\\html{For the term of -4m<sup>5</sup> :}}{\\html{&nbsp;}}{\\html{The coefficient: -4}}{\\html{&nbsp;}}{\\html{The variable(s): m}}{\\html{&nbsp;}}{\\html{The degree: 5}}') },
+			help: dataUtils.pre('\\rowgrp{\\html{For the term of &minus;4m<sup>5</sup> :}}{\\html{&nbsp;}}{\\html{The coefficient: &minus;4}}{\\html{&nbsp;}}{\\html{The variable(s): m}}{\\html{&nbsp;}}{\\html{The degree: 5}}') },
 													
 			// problem 3
 			{prob: dataUtils.pre('\\rowgrp{\\grp{\\html{Identify the coefficient, the variable(s), and the degree of the following term: }}}{\\html{&nbsp;}}{\\grp{\\html{6.25x<sup>2</sup>}}}{\\html{&nbsp;}}{\\grp{\\html{If there is no variable, write \"none\".}}}'),
@@ -76,7 +75,7 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
 			val2: dataUtils.pre('\\input{y}'),
 			val3: dataUtils.pre('\\input{1}'),
 			template: 'first',
-			help: dataUtils.pre('\\rowgrp{\\grp{\\html{For the term of}}{\\frac{\\fracstr{3y}}{\\fracstr{4}}}{\\html{:}}}{\\html{&nbsp;}}{\\grp{\\html{The variable of y has an \"invisible\" exponent of 1; therefore:}}}{\\html{&nbsp;}}{\\grp{\\html{The coefficient:}}{\\frac{\\fracstr{3y}}{\\fracstr{4}}}}{\\html{&nbsp;}}{\\html{The variable(s): y}}{\\html{&nbsp;}}{\\html{The degree: 1}}'),
+			help: dataUtils.pre('\\rowgrp{\\grp{\\html{For the term of <sup>3y</sup>&#8260;<sub>4</sub> :}}}{\\html{&nbsp;}}{\\grp{\\html{The variable of y has an \"invisible\" exponent of 1; therefore:}}}{\\html{&nbsp;}}{\\grp{\\html{The coefficient: <sup>3</sup>&#8260;<sub>4</sub>}}}{\\html{&nbsp;}}{\\html{The variable(s): y}}{\\html{&nbsp;}}{\\html{The degree: 1}}'),
 			},
 		
 			// problem 5
@@ -85,7 +84,7 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
 			val2: dataUtils.pre('\\input{a}'),
 			val3: dataUtils.pre('\\input{1}'),
 			template: 'first',
-			help: dataUtils.pre('\\rowgrp{\\grp{\\html{For the term of}}{\\frac{\\fracstr{-3a}}{\\fracstr{5}}}{\\html{:}}}{\\html{&nbsp;}}{\\grp{\\html{The variable of a has an \"invisible\" exponent of 1; therefore:}}}{\\html{&nbsp;}}{\\grp{\\html{The coefficient:}}{\\frac{\\fracstr{-3}}{\\fracstr{5}}}}{\\html{&nbsp;}}{\\html{The variable(s): a}}{\\html{&nbsp;}}{\\html{The degree: 1}}')},
+			help: dataUtils.pre('\\rowgrp{\\grp{\\html{For the term of <sup>&minus;3a</sup>&#8260;<sub>5</sub> :}}}{\\html{&nbsp;}}{\\grp{\\html{The variable of a has an \"invisible\" exponent of 1; therefore:}}}{\\html{&nbsp;}}{\\grp{\\html{The coefficient: <sup>&minus;3</sup>&#8260;<sub>5</sub>}}}{\\html{&nbsp;}}{\\html{The variable(s): a}}{\\html{&nbsp;}}{\\html{The degree: 1}}')},
 			
 			// problem 6
 			{prob: dataUtils.pre('\\rowgrp{\\grp{\\html{Identify the coefficient, the variable(s), and the degree of the following term: }}}{\\html{&nbsp;}}{\\grp{\\html{8}}}{\\html{&nbsp;}}{\\grp{\\html{If there is no variable, write \"none\".}}}'),
@@ -93,7 +92,7 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
 			val2: dataUtils.pre('\\input{none}'),
 			val3: dataUtils.pre('\\input{0}'),	
 			template: 'first',
-			help: dataUtils.pre('\\rowgrp{\\html{For the term of 8 :}}{\\html{&nbsp;}}{\\html{8 can also be written as 8x<sup>0</sup> because x<sup>0</sup> equals 1. 8*x<sup>0</sup> is the same as 8*1, which equals 8; therefore:}}{\\html{&nbsp;}}{\\html{The coefficient: 8}}{\\html{&nbsp;}}{\\html{The variable(s): none}}{\\html{&nbsp;}}{\\html{The degree: 0}}') },
+			help: dataUtils.pre('\\rowgrp{\\html{For the term of 8 :}}{\\html{&nbsp;}}{\\html{8 can also be written as 8x<sup>0</sup> because x<sup>0</sup> equals 1.}}{\\html{8 <font size = 4>&bull;</font> x<sup>0</sup> is the same as 8 <font size = 4>&bull;</font> 1, which equals 8; therefore:}}{\\html{&nbsp;}}{\\html{The coefficient: 8}}{\\html{&nbsp;}}{\\html{The variable(s): none}}{\\html{&nbsp;}}{\\html{The degree: 0}}') },
 			
 			// problem 7
 			{prob: dataUtils.pre('\\rowgrp{\\grp{\\html{Identify the coefficient, the variable(s), and the degree of the following term: }}}{\\html{&nbsp;}}{\\grp{\\frac{\\fracstr{x}}{\\fracstr{7}}}}{\\html{&nbsp;}}{\\grp{\\html{If there is no variable, write \"none\".}}}'),
@@ -101,18 +100,16 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
 			val2: dataUtils.pre('\\input{x}'),
 			val3: dataUtils.pre('\\input{3}'),
 			template: 'first',
-			help: dataUtils.pre('\\rowgrp{\\grp{\\html{For the term of }}{\\frac{\\fracstr{x}}{\\fracstr{7}}}{\\html{:}}}{\\html{&nbsp;}}{\\html{Because there is an \"invisible\" 1 in front of the x, the term <sup>x</sup>&#8260;<sub>7</sub> can also be written as <sup>1</sup>&#8260;<sub>7</sub> * &nbsp;x.  The variable of x also has an \"invisible\" exponent of 1. Therefore:}}{\\html{&nbsp;}}{\\html{The coefficient: <sup>1</sup>&#8260;<sub>7</sub>}}{\\html{&nbsp;}}{\\html{The variable:  x}}{\\html{&nbsp;}}{\\html{The degree:  3}}')
+			help: dataUtils.pre('\\rowgrp{\\grp{\\html{For the term of <sup>x</sup>&#8260;<sub>7</sub> :}}}{\\html{&nbsp;}}{\\html{Because there is an \"invisible\" 1 in front of the x, the term <sup>x</sup>&#8260;<sub>7</sub> can also be written as <sup>1</sup>&#8260;<sub>7</sub> <font size = 4>&bull;</font> &nbsp;x.  The variable of x also has an \"invisible\" exponent of 1. Therefore:}}{\\html{&nbsp;}}{\\html{The coefficient: <sup>1</sup>&#8260;<sub>7</sub>}}{\\html{&nbsp;}}{\\html{The variable:  x}}{\\html{&nbsp;}}{\\html{The degree:  3}}')
 			},
-					
 			
-				
 			// problem 8
 			{prob: dataUtils.pre('\\rowgrp{\\grp{\\html{Identify the coefficient, the variable(s), and the degree of the following term: }}}{\\html{&nbsp;}}{\\grp{\\html{-6ab<sup>2</sup>}}}{\\html{&nbsp;}}{\\grp{\\html{If there is no variable, write \"none\".}}}'),
 			val1: dataUtils.pre('\\input{-6}'), 
 			val2: dataUtils.pre('\\input{ab}'),
 			val3: dataUtils.pre('\\input{3}'),	
 			template: 'first',
-			help: dataUtils.pre('\\rowgrp{\\html{For the term of -6ab<sup>2</sup> :}}{\\html{&nbsp;}}{\\html{Because there are two variables, the exponents above a and b are <span class=underline>added together</span> to get the degree. The exponent above the a is 1, and the exponent above b is 2; therefore: }}{\\html{&nbsp;}}{\\html{The coefficient: -6}}{\\html{&nbsp;}}{\\html{The variable(s): ab}}{\\html{&nbsp;}}{\\html{The degree: 3}}') },
+			help: dataUtils.pre('\\rowgrp{\\html{For the term of &minus;6ab<sup>2</sup> :}}{\\html{&nbsp;}}{\\html{Because there are two variables, the exponents above a and b are <span class=underline>added together</span> to get the degree. The exponent above the a is 1, and the exponent above b is 2; therefore: }}{\\html{&nbsp;}}{\\html{The coefficient: &minus;6}}{\\html{&nbsp;}}{\\html{The variable(s): ab}}{\\html{&nbsp;}}{\\html{The degree: 3}}') },
 			
 			// problem 9
 			{prob: dataUtils.pre('{\\rowgrp{\\grp{\\html{Are the following terms \"like\" terms or \"unlike\" terms? }}}{\\html{&nbsp;}}{\\grp{\\html{6x and -3x}}}'),
@@ -120,7 +117,7 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
             button1: dataUtils.pre('\\grp{\\btn{A}{T}{marg}}{\\str{Like}}'),
             button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{Unlike}}'),
 			template: 'second', answerBtn: 'noAnswer',
-			help: dataUtils.pre('{\\rowgrp{\\html{Like terms must have <span class=underline>identical</span> variable(s) and the exact same exponent raised above any specific variable(s). It does not matter what the coefficients are.}}{\\html{&nbsp;}}{\\html{6x and -3x are \"like\" terms because they both have an \"x\" as their only variable(s) and a degree of one (there is an identical exponent of 1 above each x). }}') },
+			help: dataUtils.pre('{\\rowgrp{\\html{Like terms must have <span class=underline>identical</span> variable(s) and the exact same exponent raised above any specific variable(s). It does not matter what the coefficients are.}}{\\html{&nbsp;}}{\\html{6x and &minus;3x are \"like\" terms because they both have an \"x\" as their only variable(s) and a degree of one (there is an identical exponent of 1 above each x). }}') },
 				
 			// problem 10
 			{prob: dataUtils.pre('{\\rowgrp{\\grp{\\html{Are the following terms \"like\" terms or \"unlike\" terms? }}}{\\html{&nbsp;}}{\\grp{\\html{12ab<sup>2</sup> and 1.6ab<sup>2</sup>}}}'),
@@ -144,7 +141,7 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
             button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{Like}}'),
             button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{Unlike}}'),
 			template: 'second', answerBtn: 'noAnswer',
-			help: dataUtils.pre('{\\rowgrp{\\html{Like terms must have <span class=underline>identical</span> variable(s) and the exact same exponent raised above any specific variable(s). It does not matter what the coefficients are.}}{\\html{&nbsp;}}{\\html{14x<sup>2</sup>y<sup>3</sup> and -7x<sup>3</sup>y<sup>3</sup>are \"unlike\" terms because they do not have the exact same exponents raised above each specific variable(s). The first term has an exponent of 2 above the x; the second term has an exponent of 3 above the x.}}') },				
+			help: dataUtils.pre('{\\rowgrp{\\html{Like terms must have <span class=underline>identical</span> variable(s) and the exact same exponent raised above any specific variable(s). It does not matter what the coefficients are.}}{\\html{&nbsp;}}{\\html{14x<sup>2</sup>y<sup>3</sup> and &minus;7x<sup>3</sup>y<sup>3</sup>are \"unlike\" terms because they do not have the exact same exponents raised above each specific variable(s). The first term has an exponent of 2 above the x; the second term has an exponent of 3 above the x.}}') },				
 			];
 
 	return dataUtils.build(desc, template, data);
