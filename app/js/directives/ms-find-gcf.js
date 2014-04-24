@@ -99,6 +99,7 @@ angular.module('mathSkills')
 								factor: "",
 								numbers: angular.copy($scope.numberObjects[dataLabel].numbers)
 							});
+							console.log("JSON.stringify($scope.numberObjects["+dataLabel+"].completed) is: ",JSON.stringify($scope.numberObjects[dataLabel].completed));
 						} else {
 							$scope.completed.push({
 								factor: "",
@@ -124,15 +125,16 @@ angular.module('mathSkills')
                             $scope.$broadcast('checkFocus');
                         }, 0);
                     };
-					$scope.borderOrNot = function () {
-						if ($scope.factorExpLabel === "gcf") {
+					$scope.borderOrNot = function (dataLabel) {
+						if ($scope.numberObjects[dataLabel].factorExpLabel === "gcf") {
 							return ('noborder');
 						} else {
 							return ('');
 						}
 					};
-					$scope.borderIndexed = function (index) {
-						if (index === $scope.howManyPrimes) {
+					$scope.borderIndexed = function (index, dataLabel) {
+						console.log("dataLabel is: ",dataLabel);
+						if (index === $scope.numberObjects[dataLabel].howManyPrimes) {
 							return ('noborder');
 						} else {
 							return ('');
@@ -152,7 +154,8 @@ angular.module('mathSkills')
                 $scope.$watch('expected', function () {
 					
                     if ($scope.expected) {
-						$scope.allNumbers = parser.extractTag($scope.expected).args.map(Number);		
+						$scope.allNumbers = parser.extractTag($scope.expected).args.map(Number);
+						$scope.answerNumber = $scope.allNumbers.shift();
 						$scope.allNumbersLength = $scope.allNumbers.length;
 						$scope.allPrimeFactors = modes($scope.allNumbers.map(numberUtils.primeFactors));
 						$scope.gcfNumber = $scope.allPrimeFactors.pop();
@@ -187,7 +190,7 @@ angular.module('mathSkills')
 					}
 					
                     if ($scope.allDone === false) {
-						// copy the answer data object into a property of the object property associated with each of the numbers submitted with the tag ($scope.numberObjects.numObj0, $scope.numberObjects.numObj1, etc.)
+						// copy the answer data object into a property of the object associated with each of the numbers submitted with the tag ($scope.numberObjects.numObj0, $scope.numberObjects.numObj1, etc.)
 						$scope.numberObjects[data.label].currentAnswerData[0] = angular.copy(data);
 						$scope.allCorrect = true;
 						for (var numObj in $scope.numberObjects) {
@@ -199,6 +202,7 @@ angular.module('mathSkills')
 						
 						if ($scope.allCorrect === true) {	
 							for (var numObj in $scope.numberObjects) {
+								//console.log("$scope.numberObjects["+numObj+"].primeFactors.indexOf(Number(parser.extractTag($scope.numberObjects[numObj].currentAnswerData[0].answer).args[0]))is: ",$scope.numberObjects[numObj].primeFactors.indexOf(Number(parser.extractTag($scope.numberObjects[numObj].currentAnswerData[0].answer).args[0])));
 								if ($scope.numberObjects[numObj].primeFactors.indexOf(Number(parser.extractTag($scope.numberObjects[numObj].currentAnswerData[0].answer).args[0])) !== -1){
 										var factor = extractArg($scope.numberObjects[numObj].currentAnswerData[0].answer);
 										saveState(factor,numObj);
@@ -213,7 +217,8 @@ angular.module('mathSkills')
 												$scope.numberObjects[numObj].done = true;
 												remove(+factor, $scope.numberObjects[numObj].primeFactors);
 												saveFinalState(numObj);
-												$scope.numberObjects[numObj].factorExp = '';
+												$scope.numberObjects[numObj].factorExp = "\\html{&nbsp;}"; 
+												$scope.numberObjects[numObj].numbers = ""; 
 										}
 									focus();
 								} 
@@ -226,7 +231,7 @@ angular.module('mathSkills')
 							}
 						}
 						if ($scope.allDone === true) {
-							$scope.doneExp = '\\input{' + $scope.gcfNumber + '}';
+							$scope.doneExp = '\\input{' + $scope.answerNumber + '}';
 							$scope.instructions = 'Now enter the greatest common factor:';
 						}
                     } 

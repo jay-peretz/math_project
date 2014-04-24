@@ -24,7 +24,7 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
                     title: 'Workbook',
                     children: [{
                         problem: '\\html{Find the GCF of $firstNumber and $secondNumber.}',
-						answer: '\\findgcf{$firstNumber}{$secondNumber}',
+						answer: '\\findgcf{$answer}{$firstNumber}{$secondNumber}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
@@ -49,7 +49,7 @@ angular.module('mathSkills').service('data_c_2', ['dataUtils', function (dataUti
                     title: 'Workbook',
                     children: [{
 						problem:'\\pan{12}{11}{\\html{Find the GCF of $firstNumber, $secondNumber and $thirdNumber.}}',
-						answer: '\\findgcf{$firstNumber}{$secondNumber}{$thirdNumber}',
+						answer: '\\findgcf{$answer}{$firstNumber}{$secondNumber}{$thirdNumber}',
 						controls: {
 							"checkAnswer": true,
 							"help": true
