@@ -1,7 +1,7 @@
 'use strict';
 /*global angular */
 
-// \findlcm{2}{12}
+// \findgcf{x}{2}{12} where x is the correct gcf for all subsequent parameters (numbers) 
 
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
@@ -48,11 +48,31 @@ angular.module('mathSkills')
             controller: ['$scope', function ($scope) {
 				$scope.factorExpLabel = "";
 				$scope.controllerId = Math.random().toString();
-                var getFactorExp = function () {
-                        return '\\input{[' + $scope.primeFactors.join(',') + ']}';
+                var getFactorExp = function (dataLabel) {
+						var finalString;
+						if (typeof dataLabel !== "undefined") {
+							if ($scope.numberObjects[dataLabel].primeFactors.length > 1) {
+								finalString = '\\input{[' + $scope.numberObjects[dataLabel].primeFactors.join(',') + ']}';
+							} else {
+								finalString = '\\input{' + $scope.numberObjects[dataLabel].primeFactors + '}';
+							}
+						} else {
+							if ($scope.primeFactors.length > 1) {
+								finalString = '\\input{[' + $scope.primeFactors.join(',') + ']}';
+							} else {
+								finalString = '\\input{' + $scope.primeFactors + '}';
+							}
+						}
+						return finalString;
                     },
-                    getFactoredExp = function () {
-                        return '\\grp{\\input{' + $scope.numbers.join('}}{\\input{') + '}}';
+                    getFactoredExp = function (dataLabel) {
+						var getFinalString;
+						if (typeof dataLabel !== "undefined") {
+							getFinalString = '\\grp{\\input{' + $scope.numberObjects[dataLabel].numbers.join('}}{\\input{') + '}}';
+						} else {
+                        	getFinalString = '\\grp{\\input{' + $scope.numbers.join('}}{\\input{') + '}}';
+						};
+						return getFinalString;
                     },
                     extractArg = function (tag) {
                         return parser.extractTag(tag).args[0];
@@ -60,20 +80,38 @@ angular.module('mathSkills')
                     divideIfDivisible = function (divisor, dividend) {
                         return dividend % divisor === 0 ? dividend / divisor : dividend;
                     },
-                    saveState = function (factor) {
-                        $scope.completed.push({
-                            factor: factor,
-                            numbers: angular.copy($scope.numbers)
-                        });
+                    saveState = function (factor, dataLabel) {
+						if (typeof dataLabel !== "undefined") {
+							$scope.numberObjects[dataLabel].completed.push({
+								factor: factor,
+								numbers: angular.copy($scope.numberObjects[dataLabel].numbers)
+							});
+						} else {
+							$scope.completed.push({
+								factor: factor,
+								numbers: angular.copy($scope.numbers)
+							});
+						}
                     },
-					saveFinalState = function () {
-                        $scope.completed.push({
-                            factor: "",
-                            numbers: angular.copy($scope.numbers)
-                        });
+					saveFinalState = function (dataLabel) {
+						if (typeof dataLabel !== "undefined") {
+							$scope.numberObjects[dataLabel].completed.push({
+								factor: "",
+								numbers: angular.copy($scope.numberObjects[dataLabel].numbers)
+							});
+						} else {
+							$scope.completed.push({
+								factor: "",
+								numbers: angular.copy($scope.numbers)
+							});
+						}
                     },
-                    setUpFactored = function (factor) {
-                        $scope.numbers = $scope.numbers.map(divideIfDivisible.bind(null, +factor));
+                    setUpFactored = function (factor, dataLabel) {
+						if (typeof dataLabel !== "undefined") {
+                        	$scope.numberObjects[dataLabel].numbers = $scope.numberObjects[dataLabel].numbers.map(divideIfDivisible.bind(null, +factor));
+						} else {
+							$scope.numbers = $scope.numbers.map(divideIfDivisible.bind(null, +factor));
+						}
                     },
                     remove = function (val, arr) {
                         var ii = arr.indexOf(val);
@@ -86,15 +124,15 @@ angular.module('mathSkills')
                             $scope.$broadcast('checkFocus');
                         }, 0);
                     };
-					$scope.borderOrNot = function () {
-						if ($scope.factorExpLabel === "lcm") {
+					$scope.borderOrNot = function (dataLabel) {
+						if ($scope.numberObjects[dataLabel].factorExpLabel === "gcf") {
 							return ('noborder');
 						} else {
 							return ('');
 						}
 					};
-					$scope.borderIndexed = function (index) {
-						if (index === $scope.howManyPrimes) {
+					$scope.borderIndexed = function (index, dataLabel) {
+						if (index === $scope.numberObjects[dataLabel].howManyPrimes) {
 							return ('noborder');
 						} else {
 							return ('');
@@ -108,15 +146,17 @@ angular.module('mathSkills')
                 $scope.instructions = 'Factor each number down to 1.';
 				$scope.done = false;
 				$scope.numberObjects = {};
+				$scope.numberObjectsArray = [];
 				$scope.allDone = false;
 
                 $scope.$watch('expected', function () {
 					
                     if ($scope.expected) {
-						$scope.allNumbers = parser.extractTag($scope.expected).args.map(Number);		
+						$scope.allNumbers = parser.extractTag($scope.expected).args.map(Number);
+						$scope.answerNumber = $scope.allNumbers.shift();
 						$scope.allNumbersLength = $scope.allNumbers.length;
 						$scope.allPrimeFactors = modes($scope.allNumbers.map(numberUtils.primeFactors));
-						$scope.lcmNumber = $scope.allPrimeFactors.reduce(function (a, b) { return a * b; }, 1);
+						$scope.gcfNumber = $scope.allPrimeFactors.pop();
 						for (var ii = 0, len = $scope.allNumbersLength; ii < len; ii += 1) {
 								// Get the numbers we are factoring.
 								$scope.numbers = [$scope.allNumbers[ii]];
@@ -125,48 +165,74 @@ angular.module('mathSkills')
 								$scope.howManyPrimes = $scope.primeFactors.length;
 								// Setup our input expression.
 								$scope.factorExp = getFactorExp();
+								// set up an object property of $scope.numberObjects for each number submitted in the tag
 								$scope.numberObjects['numbObj' + ii] = {
 									numbers: $scope.numbers,
 									primeFactors: $scope.primeFactors,
 									howManyPrimes: $scope.howManyPrimes,
 									factorExp: $scope.factorExp,
 									completed: [],
+									currentAnswerData: [{result:"incorrect"}],
 									done: false
 								};
 								focus();
 						}
                     }
-					for (var ii in $scope.allNumbers) {
-						console.log("JSON.stringify($scope.numberObjects) is: ",JSON.stringify($scope.numberObjects));
-					}
                 });
 
                 $scope.$on('answer', function (e, data) {
-					console.log("answer data is: ",JSON.stringify(data))
-					console.log(" $scope.numberObjects[data.label].primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) is: ",$scope.numberObjects[data.label].primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])));
+					//console.log("answer data is: ",JSON.stringify(data))
+					
+					if (data.label !== "finalGcf") {
+						e.stopPropagation();
+					}
+					
                     if ($scope.allDone === false) {
-                        e.stopPropagation();
-						
-						if ($scope.primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) !== -1){
-								var factor = extractArg(data.answer);
-								saveState(factor);
-								setUpFactored(factor);
-								if ($scope.primeFactors.length > 1) {
-										remove(+factor, $scope.primeFactors);
-										$scope.factorExp = getFactorExp();
-										$scope.factoredExp = getFactoredExp();
-										$scope.factorExpLabel = "";
-								} else {
-										$scope.factorExpLabel = "lcm";
-										$scope.done = true;
-										remove(+factor, $scope.primeFactors);
-										saveFinalState();
-										$scope.factorExp = '\\input{' + $scope.lcmNumber + '}';
-										$scope.instructions = 'Now multiply the factors together to find the LCM.';  
-								}
-							focus();
+						// copy the answer data object into a property of the object associated with each of the numbers submitted with the tag ($scope.numberObjects.numObj0, $scope.numberObjects.numObj1, etc.)
+						$scope.numberObjects[data.label].currentAnswerData[0] = angular.copy(data);
+						$scope.allCorrect = true;
+						for (var numObj in $scope.numberObjects) {
+							// for all numbers, check the value of the answer data result
+							if ($scope.numberObjects[numObj].currentAnswerData[0].result === "incorrect") {
+								$scope.allCorrect = false;
+							}
 						}
-                    }
+						
+						if ($scope.allCorrect === true) {	
+							for (var numObj in $scope.numberObjects) {
+								
+								if ($scope.numberObjects[numObj].primeFactors.indexOf(Number(parser.extractTag($scope.numberObjects[numObj].currentAnswerData[0].answer).args[0])) !== -1){
+										var factor = extractArg($scope.numberObjects[numObj].currentAnswerData[0].answer);
+										saveState(factor,numObj);
+										setUpFactored(factor,numObj);
+										if ($scope.numberObjects[numObj].primeFactors.length > 1) {
+												remove(+factor, $scope.numberObjects[numObj].primeFactors);
+												$scope.numberObjects[numObj].factorExp = getFactorExp(numObj);
+												$scope.numberObjects[numObj].factoredExp = getFactoredExp(numObj);
+												$scope.factorExpLabel = "";
+										} else {
+												$scope.numberObjects[numObj].factorExpLabel = "gcf";
+												$scope.numberObjects[numObj].done = true;
+												remove(+factor, $scope.numberObjects[numObj].primeFactors);
+												saveFinalState(numObj);
+												$scope.numberObjects[numObj].factorExp = "\\html{&nbsp;}"; 
+												$scope.numberObjects[numObj].numbers = ""; 
+										}
+									focus();
+								} 
+							}
+						} 
+						$scope.allDone = true;
+						for (var numObj in $scope.numberObjects) {
+							if ($scope.numberObjects[numObj].done === false) {
+								$scope.allDone = false;
+							}
+						}
+						if ($scope.allDone === true) {
+							$scope.doneExp = '\\input{' + $scope.answerNumber + '}';
+							$scope.instructions = 'Now enter the greatest common factor:';
+						}
+                    } 
 					
                 });
             }],
