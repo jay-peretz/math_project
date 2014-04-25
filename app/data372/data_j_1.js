@@ -122,7 +122,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 1}}'),
                 button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 5}}'),
                 button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 0.5}}'),
-                val1: '-1.8', val2: '-0.4', val3: '1.2'
+                val1: '-1.8', val2: '0.4', val3: '1.2'
             },
             //problem 4
             {   
