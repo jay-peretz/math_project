@@ -6,10 +6,10 @@ angular.module('mathSkills').filter('enlargeOps', function () {
             input.replace(/[\*\/]/g, function (char) {
                 switch (char) {
                     case '*': return '<span class=bigger>&bull;</span>';
-					case 'x': return '\xB7';
-                    case '/': return '÷';
-					case '+': return '\x2B';
-					case '-': return '\x2D';
+					case 'x': return '<span class=bigger>&bull;</span>';
+                    case '/': return '<span class=bigger>&divide;</span>';
+					case '+': return '<span class=bigger>&#43;</span>';
+					case '-': return '<span class=bigger>&#45;</span>';
                 }
             }) :
             input;

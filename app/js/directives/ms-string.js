@@ -69,7 +69,7 @@ angular.module('mathSkills')
                     expected: '@', 
                     label: '@'
                 },
-                template: '<span ng-hide="display" ng-bind-html-unsafe= "string | enlargeOps | commas"></span>'
+                template: '<span ng-hide="display" ng-bind-html-unsafe= "string | commas | enlargeOps "></span>'
             };
         }
     ]);

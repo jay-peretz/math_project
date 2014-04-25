@@ -733,7 +733,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 												+'{\\fracstr{$answerDen}}'
 											+'}'
 											+'{\\sign{=}}'
-											+'{\\frac{\\input{$numanswer1}}{\\fracstr{$answerDen}}}'
+											+'{\\frac{\\input{$numanswer1}}{\\input{$answerDen}}}'
 										+'}'
 										+'{\\html{&nbsp;}}'
 									+'}{well}',
@@ -1126,7 +1126,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 												+'{\\fracstr{$answerDen}}'
 											+'}'
 											+'{\\sign{=}}'
-											+'{\\frac{\\input{$numanswer1}}{\\fracstr{$answerDen}}}'
+											+'{\\frac{\\input{$numanswer1}}{\\input{$answerDen}}}'
 										+'}'
 										+'{\\html{&nbsp;}}'
 									+'}{well}',
@@ -1919,7 +1919,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\grp'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\str{$numlcd1}}'
+													+'{\\html{$numlcd1}}'
 													+'{\\sign{-}}'
 													+'{\\str{$numlcd2}}'
 												+'}'
@@ -1979,7 +1979,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\grp'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\str{$numlcd1}}'
+													+'{\\html{$numlcd1}}'
 													+'{\\sign{-}}'
 													+'{\\str{$numlcd2}}'
 												+'}'
@@ -1991,7 +1991,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{Rewrite the answer as a mixed number with a proper fraction:}}'
 										+'{\\grp'
-											+'{\\frac{\\str{$numanswer1}}{\\str{$answerDen}}}'
+											+'{\\frac{\\html{$numanswer1}}{\\html{$answerDen}}}'
 											+'{\\sign{ = }}'
 											+'{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}}'
 									+'}{well}',
@@ -2030,7 +2030,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 			// problem 8
 			{ whole1: 12, num1: 1, den1: 2, whole2: 20, num2: 1, den2: 3,wholeanswer: '-7', numanswer1: -47, numanswer2: 5, answerDen: 6, numnew1: 25, numnew2: 61, numlcd1: 75, numlcd2: 122, firstSign: ' ', template: 'main' },
 			// problem 9
-			{ whole1: 10, num1: 2, den1: 5, whole2: 8, num2: 1, den2: 4,wholeanswer: '-18', numanswer1: -373, numanswer2: 13, answerDen: 20, numnew1: -52, numnew2: 33, numlcd1: -208, numlcd2: 165, firstSign: '-', secondSign: '+', thirdSign: '-',template: 'tenth' },
+			{ whole1: 10, num1: 2, den1: 5, whole2: 8, num2: 1, den2: 4, wholeanswer: '-18', numanswer1: -373, numanswer2: 13, answerDen: 20, numnew1: -52, numnew2: 33, numlcd1: -208, numlcd2: 165, firstSign: '-', secondSign: '+', thirdSign: '-',template: 'tenth' },
 			// problem 10
 			{ whole1: 3, num1: 1, den1: '\xA02\xA0', whole2: 1, num2: 1, den2: 4, whole3: 2, num3: 2, den3: '\xA03\xA0', wholeanswer1: -4, numanswer1: -59, answerDen: 12, answer1Den: 12, numnew1: 7, numnew2: 5, numnew3: 8, numanswer2: 11, numlcd1: 42, numlcd2: 15, numlcd3: 32,firstSign: '-', secondSign: '-', thirdSign: '-', fourthSign: '+', fifthSign: '-', sign1: '-', sign2: '+' , sign3: '-', negFrac: '1 1/4', template: 'threeFracDblNeg', 
 			buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>3 1/2 <span class=bigger>-</span> 1 1/4 <span class=bigger>+</span>2 2/3', 
@@ -2038,7 +2038,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>3 1/2 <span class=bigger>-</span> 1 1/4 <span class=bigger>+</span>2 2/3', 
             buttonValueD: 'T', buttonLabelD: '<span class=bigger>-</span>3 1/2 <span class=bigger>+</span> 1 1/4 <span class=bigger>-</span>2 2/3' },
 			// problem 11
-			{ whole1: 1, num1: 1, den1: '\xA05\xA0', whole2: 3, num2: 1, den2: 10, whole3: 2, num3: 1, den3: '\xA02\xA0', wholeanswer1: -4, numanswer1: -44, answerDen: 10, answer1Den: 5, numnew1: 6, numnew2:31, numnew3: 5, numanswer2: 2, numlcd1: 12, numlcd2: 31, numlcd3: 25,firstSign: '-', secondSign: '+', thirdSign: '', fourthSign: '-', fifthSign: '-', sign1: '-', sign2: '+' , sign3: '+', negFrac: '2 1/2', template: 'threeFracDblNeg', 
+			{ whole1: 1, num1: 1, den1: '\xA05\xA0', whole2: 3, num2: 1, den2: 10, whole3: 2, num3: 1, den3: '\xA02\xA0', wholeanswer1: 4, numanswer1: 44, answerDen: 10, answer1Den: 5, numnew1: 6, numnew2:31, numnew3: 5, numanswer2: 2, numlcd1: 12, numlcd2: 31, numlcd3: 25,firstSign: '-', secondSign: '+', thirdSign: '', fourthSign: '-', fifthSign: '-', sign1: '-', sign2: '+' , sign3: '+', negFrac: '2 1/2', template: 'threeFracDblNeg', 
 			buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>1 1/5 <span class=bigger>-</span>3 1/10 <span class=bigger>+</span>2 1/2', 
             buttonValueB: 'T', buttonLabelB: '<span class=bigger>-</span>1 1/5 <span class=bigger>+</span>3 1/10 <span class=bigger>+</span>2 1/2', 
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>1 1/5 <span class=bigger>+</span>3 1/10 <span class=bigger>+</span>2 1/2', 
