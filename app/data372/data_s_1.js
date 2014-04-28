@@ -103,7 +103,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
         },
         data = [
 			{ // problem 1
-				illustration: 'S.1/rectangle7x11.jpg',
+				illustration: 'S.1/Rectangle_L7ft_W11ft.jpg',
 				unitsAnswer: 'ft',
 				unitsPower: 'ft',
 				unitsSelect: '[\\"ft\\",\\"ft&sup2;\\",\\"ft&sup3\\"]',
@@ -118,7 +118,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 2
-				illustration: '',
+				illustration: 'S.1/Rectangle_L22ft_W20ft.jpg',
 				unitsAnswer: 'ft',
 				unitsPower: 'ft',
 				unitsSelect: '[\\"ft\\",\\"ft&sup2;\\",\\"ft&sup3\\"]',
@@ -131,9 +131,9 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 				helpAnswer: '84',
 				template: 'twoStepSolution' 
 			}
-			,
+			/*,
 			{ // problem 3
-				illustration: '',
+				illustration: 'S.1/',
 				unitsAnswer: 'in',
 				unitsPower: 'in',
 				unitsSelect: '[\\"in\\",\\"in&sup2;\\",\\"in&sup3\\"]',
@@ -145,10 +145,10 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 				finalAnswer: dataUtils.pre('\\input{23.3}'),
 				helpAnswer: '23.3',
 				template: 'twoStepSolution' 
-			}
+			}*/
 			,
 			{ // problem 4
-				illustration: '',
+				illustration: 'S.1/Rectangle_L10.8in_W12.5in.jpg',
 				unitsAnswer: 'in',
 				unitsPower: 'in',
 				unitsSelect: '[\\"in\\",\\"in&sup2;\\",\\"in&sup3\\"]',
@@ -163,7 +163,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 5
-				illustration: '',
+				illustration: 'S.1/Rectangle_L14m_W14m.jpg',
 				unitsAnswer: 'm',
 				unitsPower: 'm',
 				unitsSelect: '[\\"m\\",\\"m&sup2;\\",\\"m&sup3\\"]',
@@ -177,7 +177,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 6
-				illustration: '',
+				illustration: 'S.1/Rectangle_L32m_W32m.jpg',
 				unitsAnswer: 'm',
 				unitsPower: 'm',
 				unitsSelect: '[\\"m\\",\\"m&sup2;\\",\\"m&sup3\\"]',
@@ -191,7 +191,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 7
-				illustration: '',
+				illustration: 'S.1/Rectangle_L8_3-5cm_W12_1-2cm.jpg',
 				unitsAnswer: 'cm',
 				unitsPower: 'cm',
 				unitsSelect: '[\\"cm\\",\\"cm&sup2;\\",\\"cm&sup3\\"]',
@@ -207,7 +207,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 8
-				illustration: '',
+				illustration: 'S.1/Rectangle_L18_1-2yd_W5_1-3yd.jpg',
 				unitsAnswer: 'yd',
 				unitsPower: 'yd',
 				unitsSelect: '[\\"yd\\",\\"yd&sup2;\\",\\"yd&sup3\\"]',
@@ -223,7 +223,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 9
-				illustration: '',
+				illustration: 'S.1/Tri_12x15x9in.jpg',
 				unitsAnswer: 'in',
 				unitsPower: 'in',
 				unitsSelect: '[\\"in\\",\\"in&sup2;\\",\\"in&sup3\\"]',
@@ -237,7 +237,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 10
-				illustration: '',
+				illustration: 'S.1/Tri_24x22x17ft.jpg',
 				unitsAnswer: 'ft',
 				unitsPower: 'ft',
 				unitsSelect: '[\\"ft\\",\\"ft&sup2;\\",\\"ft&sup3\\"]',
@@ -251,7 +251,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 11
-				illustration: '',
+				illustration: 'S.1/Tri_8x8x20cm.jpg',
 				unitsAnswer: 'cm',
 				unitsPower: 'cm',
 				unitsSelect: '[\\"cm\\",\\"cm&sup2;\\",\\"cm&sup3\\"]',
@@ -265,7 +265,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 12
-				illustration: '',
+				illustration: 'S.1/Tri_4-8x3x3m.jpg',
 				unitsAnswer: 'm',
 				unitsPower: 'm',
 				unitsSelect: '[\\"m\\",\\"m&sup2;\\",\\"m&sup3\\"]',
@@ -279,7 +279,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 13
-				illustration: '',
+				illustration: 'S.1/Tri_18-34x20-49x23-5in.jpg',
 				unitsAnswer: 'in',
 				unitsPower: 'in',
 				unitsSelect: '[\\"in\\",\\"in&sup2;\\",\\"in&sup3\\"]',
@@ -291,9 +291,9 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 				helpAnswer: '62.33',
 				template: 'oneStepSolution' 
 			}
-			,
+			/*,
 			{ // problem 14
-				illustration: '',
+				illustration: 'S.1/',
 				unitsAnswer: 'in',
 				unitsPower: 'in',
 				unitsSelect: '[\\"in\\",\\"in&sup2;\\",\\"in&sup3\\"]',
@@ -305,10 +305,10 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 				finalAnswer: dataUtils.pre('\\input{31.165}'),
 				helpAnswer: '31.165',
 				template: 'oneStepSolution' 
-			}
+			}*/
 			,
 			{ // problem 15
-				illustration: '',
+				illustration: 'S.1/Tri_7_1-8x11_1-2x7_3-4in.jpg',
 				unitsAnswer: 'in',
 				unitsPower: 'in',
 				unitsSelect: '[\\"in\\",\\"in&sup2;\\",\\"in&sup3\\"]',
@@ -322,7 +322,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 16
-				illustration: '',
+				illustration: 'S.1/Tri_9_3-5x7_1-5x12ft.jpg',
 				unitsAnswer: 'ft',
 				unitsPower: 'ft',
 				unitsSelect: '[\\"ft\\",\\"ft&sup2;\\",\\"ft&sup3\\"]',
