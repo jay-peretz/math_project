@@ -95,8 +95,7 @@ template = {
 			secondText: '',
 			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
-										+'{\\html{<span class = bigger>$$firstSign</span> $$firstAbsNumber $$firstText}}'
-										+'{\\html{<span class = bigger>$$secondSign</span>$$secondAbsNumber $$secondText}}'
+										+'{\\fracstr{3m}}{\\fracstr{4}'
 									+'}'
 								),
 			ans: dataUtils.pre('\\grp'
