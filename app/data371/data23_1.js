@@ -1656,7 +1656,20 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>60 sec</td><td>=</td><td>1 min</td></tr><tr><td>60 min</td><td>=</td><td>1 hr</td></tr><tr><td>24 hr</td><td>=</td><td>1 day</td><tr><td>7 days</td><td>=</td><td>1 wk</td></tr></table>}'),
 				template: 'threeStep' 
 			}
-        ];
+        ],
+		shuffle = [
+				{ problems: [1,2,5,6], total: 1},
+				{ problems: [11,12,15,16], total: 1},
+				{ problems: [3,4,13,14], total: 1},
+				{ problems: [7,8,9,10], total: 1},
+				{ problems: [19,20,21,22], total: 1},
+				{ problems: [17,18,23,24], total: 1},
+				{ problems: [25,27,33,34], total: 1},
+				{ problems: [26,28,31,32,35], total: 1},
+				{ problems: [29,30,36], total: 1},
+				{ problems: [37], total: 1}
+		];
 
-    return dataUtils.build(desc, template, data);
+    
+    	return dataUtils.build(desc, template, data, shuffle);
 }]);
