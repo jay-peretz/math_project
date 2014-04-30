@@ -131,9 +131,9 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 				helpAnswer: '84',
 				template: 'twoStepSolution' 
 			}
-			/*,
+			,
 			{ // problem 3
-				illustration: 'S.1/',
+				illustration: 'S.1/Rectangle_L5.4in_W6.25in.jpg',
 				unitsAnswer: 'in',
 				unitsPower: 'in',
 				unitsSelect: '[\\"in\\",\\"in&sup2;\\",\\"in&sup3\\"]',
@@ -145,7 +145,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 				finalAnswer: dataUtils.pre('\\input{23.3}'),
 				helpAnswer: '23.3',
 				template: 'twoStepSolution' 
-			}*/
+			}
 			,
 			{ // problem 4
 				illustration: 'S.1/Rectangle_L10.8in_W12.5in.jpg',
@@ -291,9 +291,9 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 				helpAnswer: '62.33',
 				template: 'oneStepSolution' 
 			}
-			/*,
+			,
 			{ // problem 14
-				illustration: 'S.1/',
+				illustration: 'S.1/Triangle_9.17inx10.245inx11.75in.jpg',
 				unitsAnswer: 'in',
 				unitsPower: 'in',
 				unitsSelect: '[\\"in\\",\\"in&sup2;\\",\\"in&sup3\\"]',
@@ -305,7 +305,7 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 				finalAnswer: dataUtils.pre('\\input{31.165}'),
 				helpAnswer: '31.165',
 				template: 'oneStepSolution' 
-			}*/
+			}
 			,
 			{ // problem 15
 				illustration: 'S.1/Tri_7_1-8x11_1-2x7_3-4in.jpg',
