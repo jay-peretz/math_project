@@ -79,8 +79,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 										+'{\\fracstr{7m}}{\\fracstr{8}}}'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{We can only combine \"like terms.\"}}{\\html{&nbsp;}}'
-					+'{\\grp{\\frac{\\str{3m}}{\\str{4}}}{\\html{and}} }'
-					
+					+'{\\grp{\\frac{\\str{3m}}{\\str{4}}}{\\html{and}}{\\frac{\\str{7m}}{\\str{8}}}{\\html{are like terms because they are}}}'
+					+'{\\html{both m terms.}}'
 					+'{\\html{&nbsp;}}{\\html{Combine the coefficients: 7 + 5 = 12}}'
 					+'{\\html{&nbsp;}}{\\html{The term 2xy stays the same. There is no other xy term. }}'),
 			template: 'first', textAnswer: '12x + 2xy'},
