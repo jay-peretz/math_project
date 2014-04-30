@@ -79,7 +79,9 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
 				children: [{
 					title: 'Main Answer',
 					children: [{
-						problem: '\\html{$problemStatement}',
+						problem: '\\html{$problemStatement<br><br>'+
+									'Choose the correct math translation for the expression:'+
+									'}',
 						answer: '\\btngrp'+
 									'{\\rowgrp'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
