@@ -34,6 +34,26 @@ template = {
 						}
 					}]
 				}]
+			},
+			exampleToBeRemoved: {
+                title: 'Buttons with horizontal fractions in labels',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\html{<h4>example of horizontal fractions in button labels</h4>}',
+						answer: '\\btngrp'+
+									'{\\rowgrp'+
+										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+									'}',
+						controls: {
+							"checkAnswer": true,
+							"help": true
+						}
+					}]
+				}]
 			}
         },
         data = [
@@ -147,6 +167,21 @@ template = {
 			expoAnswer: '5',
 			secondAnswer: '',
 			template: 'simple'
+			}
+			,
+			{ //problem 5- example only, to be removed
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\frac{\\fracstr{4}}{\\fracstr{5}}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('mixed{\\fracstr{1}}{\\frac{\\fracstr{4}}{\\fracstr{5}}}'),
+				buttonValueC: 'T',
+				buttonLabelC: dataUtils.pre('\\grp'
+												+'{\\frac{\\fracstr{4}}{\\fracstr{5}}}'
+												+'{\\sign{+}}'
+												+'{\\frac{\\fracstr{3}}{\\fracstr{5}}}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\frac{\\fracstr{1}}{\\fracstr{2}}'),
+				template: 'exampleToBeRemoved'
 			}
 			
         ];
