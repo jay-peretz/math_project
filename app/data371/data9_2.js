@@ -12,7 +12,7 @@ angular.module('mathSkills').service('data9_2', ['dataUtils', function (dataUtil
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						 problem: '\\row{\\str{Find the LCM of \xA0}}{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}{\\str{\xA0 and \xA0}}{\\frac{\\str{$secondNum}}{\\str{$secondDen}}}',
+						 problem: '\\str{Find the LCM of $firstDen and $secondDen.}',
 						answer: '\\input{$answer}',
 						controls: {
 							"checkAnswer": true,
@@ -37,7 +37,7 @@ angular.module('mathSkills').service('data9_2', ['dataUtils', function (dataUtil
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						 problem: '\\row{\\str{Find the LCM of \xA0}}{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}{\\str{, \xA0}}{\\frac{\\str{$secondNum}}{\\str{$secondDen}}}{\\str{\xA0 and \xA0}}{\\frac{\\str{$thirdNum}}{\\str{$thirdDen}}}',
+						 problem: '\\str{Find the LCM of $firstDen, $secondDen and $thirdDen.}',
 						answer: '\\input{$answer}',
 						controls: {
 							"checkAnswer": true,
