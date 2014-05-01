@@ -1,6 +1,9 @@
 ms-fraction > table {
     margin: 0 7px;
 }
+.fracNoMargin ms-fraction > table {
+	margin: 0 1px;
+}
 .fraction td{
 	text-align:center;
 } 
