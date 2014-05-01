@@ -40,8 +40,11 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 									'{\\rowgrp'+
 									'{\\ins{Choose the right answer:}}'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+										'{\\html{&nbsp;}}'+
 										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+										'{\\html{&nbsp;}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+										'{\\html{&nbsp;}}'+
 										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
 									'}',
                        controls: {
@@ -150,9 +153,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>6x<sup>3</sup>y<sup>3</sup>', 
             buttonValueD: 'T', buttonLabelD: '<span class=bigger>-</span>12xy'},
 			
-			// problem 7 First, we must get rid of the double negative.
-//- (-3x/10) becomes + 3x/10
-
+			// problem 7 
 			{prob: dataUtils.pre('\\grp'
 									+'{\\frac'
 										+'{\\fracstr{2x}}{\\fracstr{5}}}'
@@ -190,37 +191,45 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 				buttonLabelD: dataUtils.pre('\\frac{\\fracstr{19x}}{\\fracstr{20}}'),
 			},
 			
-			// problem 8
-			{prob: dataUtils.pre('\\html{(&minus;3mn<sup>2</sup> + 3m &minus; 2) + (2mn<sup>2</sup> + 3m + 2)}'),
+			// problem 8 – (4m2 – 2m + 3)
+			{prob: dataUtils.pre('\\html{&minus;(4m<sup>2</sup> &minus; 2m + 3)'),
 			help: dataUtils.pre('\\rowgrp'
-					+'{\\html{We can only combine \"like terms.\"}}{\\html{&nbsp;}}'
-					+'{\\html{&minus;3mn<sup>2</sup> and 2mn<sup>2</sup> are like terms because they are both mn<sup>2</sup> terms.}}'
-					+'{\\html{Combine the coefficients: &minus;3 + 2 = &minus;1}}'
-					+'{\\html{&nbsp;}}{\\html{3m and 3m are like terms because they are both m<sup>1</sup> terms.}}'
-					+'{\\html{Combine the coefficients: 3 + 3 = 6 }}'
-					+'{\\html{&nbsp;}}{\\html{&minus;2 and 2 are like terms because they are both terms without variables.}}'
-					+'{\\html{Combine the coefficients: &minus;2 + 2 = 0 }}'),
-			template: 'first', textAnswer: '&minus;mn<sup>2</sup> + 6m'},
+					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
+					+'{\\html{&nbsp;}}{\\html{&minus; (4m <sup>2</sup> &minus;  2m + 3) becomes  &minus; 4m <sup>2</sup> + 2m - 3}}{\\html{&nbsp;}}'
+					+'{\\html{There are no like terms, so this is the answer.}}'
+					),
+			template: 'first', textAnswer: '&minus;4m<sup>2</sup> + 2m &minus; 3', 
+			buttonValueA: 'T', buttonLabelA: '<span class=bigger>-</span>4m<sup>2</sup> + 2m &minus; 3', 
+            buttonValueB: 'F', buttonLabelB: '<span class=bigger>-</span>2m<sup>2</sup> &minus; 3', 
+            buttonValueC: 'F', buttonLabelC: '<span class=bigger>-</span>4m<sup>2</sup> &minus; 2m + 3', 
+            buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>2m<sup>2</sup> &minus; 3'},
 			
-			// problem 9
-			{prob: dataUtils.pre('\\grp{\\frac{\\fracstr{\\html{10}}}{\\fracstr{3}}}'),
+			// problem 9 
+			{prob: dataUtils.pre('\\html{&minus;(&minus; 5x<sup>3</sup> + 3x<sup>2</sup> &minus; y - 5)'),
 			help: dataUtils.pre('\\rowgrp'
-					+'{\\html{We can only combine \"like terms.\"}}{\\html{&nbsp;}}'
-					+'{\\html{<sup>x<sup>2</sup></sup>&#8260;<sub>5</sub> and <sup>2x<sup>2</sup></sup>&#8260;<sub>5</sub> are like terms because they are both x<sup>2</sup> terms.}}'
-					+'{\\html{Combine the coefficients: <sup>1</sup>&#8260;<sub>5</sub> + <sup>2</sup>&#8260;<sub>5</sub> = <sup>3</sup>&#8260;<sub>5</sub>}}'
-					+'{\\html{&nbsp;}}{\\html{<sup>&minus;2y</sup>&#8260;<sub>3</sub> and <sup>y</sup>&#8260;<sub>2</sub> are like terms because they are both y<sup>1</sup> terms.}}'
-					+'{\\html{Combine the coefficients: <sup>&minus;2</sup>&#8260;<sub>3</sub> + (<sup>&minus;1</sup>&#8260;<sub>2</sub>)  = <sup>&minus;7</sup>&#8260;<sub>6</sub>  }}'),
-			template: 'first', textAnswer: '<sup>3x<sup>2</sup></sup>&#8260;<sub>5</sub> &minus; <sup>7y</sup>&#8260;<sub>6</sub>'},
+					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
+					+'{\\html{&nbsp;}}{\\html{&minus; (&minus; 5x<sup>3</sup> + 3x<sup>2</sup> &minus; y &minus; 5) becomes  5x<sup>3</sup> &minus; 3x<sup>2</sup> + y + 5}}{\\html{&nbsp;}}'
+					+'{\\html{There are no like terms, so this is the answer.}}'
+					),
+			template: 'first', textAnswer: '5x<sup>3</sup> &minus; 3x<sup>2</sup> + y + 5', 
+			buttonValueA: 'F', buttonLabelA: '<span class=bigger>&nbsp;</span>5x<sup>3</sup> &minus; 3x<sup>2</sup> &minus; y &minus; 5', 
+            buttonValueB: 'F', buttonLabelB: '<span class=bigger>&nbsp;</span>2x<sup>5</sup> + y + 5', 
+            buttonValueC: 'T', buttonLabelC: '<span class=bigger>&nbsp;</span>5x<sup>3</sup> &minus; 3x<sup>2</sup> + y + 5', 
+            buttonValueD: 'F', buttonLabelD: '<span class=bigger>-</span>5x<sup>3</sup> + 3x<sup>2</sup> + y + 5'},
 			
-			// problem 10
-			{prob: dataUtils.pre('\\grp{\\frac{\\fracstr{\\html{10}}}{\\fracstr{3}}}'),
+			// problem 10 
+			{prob: dataUtils.pre('\\html{14n &minus; (3n &minus; 7)'),
 			help: dataUtils.pre('\\rowgrp'
-					+'{\\html{We can only combine \"like terms.\"}}{\\html{&nbsp;}}'
-					+'{\\html{<sup>a<sup>2</sup></sup>&#8260;<sub>4</sub> and <sup>&minus;a<sup>2</sup></sup>&#8260;<sub>4</sub> are like terms because they are both a<sup>2</sup> terms.}}'
-					+'{\\html{Combine the coefficients: <sup>1</sup>&#8260;<sub>4</sub> + (<sup>&minus;1</sup>&#8260;<sub>4</sub>) = 0}}'
-					+'{\\html{&nbsp;}}{\\html{<sup>&minus;3a</sup>&#8260;<sub>4</sub> and <sup>2a</sup>&#8260;<sub>5</sub> are like terms because they are both a<sup>1</sup> terms.}}'
-					+'{\\html{Combine the coefficients: <sup>&minus;3</sup>&#8260;<sub>4</sub> + <sup>2</sup>&#8260;<sub>5</sub>  = <sup>&minus;7</sup>&#8260;<sub>20</sub>  }}'),
-			template: 'first', textAnswer: '<sup>&minus;7a</sup>&#8260;<sub>20</sub> '},
+					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
+					+'{\\html{&nbsp;}}{\\html{&minus; (3n &minus; 7 ) becomes  &minus; 3n + 7 )}}'
+					+'{\\html{&nbsp;}}{\\html{14n &minus; (3n &minus; 7 ) becomes  14n &minus; 3n + 7 )}}{\\html{&nbsp;}}'
+					+'{\\html{\“14n\” and \“-3n\” are like terms because they are both \“n\” terms. Together they equal 11n.}}'
+					),
+			template: 'first', textAnswer: '11n + 7', 
+			buttonValueA: 'F', buttonLabelA: '<span class=bigger>&nbsp;</span>11n &minus; 7', 
+            buttonValueB: 'T', buttonLabelB: '<span class=bigger>&nbsp;</span>11n + 7', 
+            buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>18n', 
+            buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>42n<sup>2</sup> &minus; 98n'},
 			];
 
 	return dataUtils.build(desc, template, data);
