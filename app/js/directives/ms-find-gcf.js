@@ -193,10 +193,9 @@ angular.module('mathSkills')
 
                 $scope.$on('answer', function (e, data) {
 					//console.log("answer data is: ",JSON.stringify(data))
+					// numbObjPlusOne is element of $scope.numberObjects that's next
 					var numbObjNumber = data.label.substr(-1),
 						numbObjPlusOne = 'numbObj' + (+numbObjNumber + 1);
-						
-						
 					
 					if (data.label !== "finalGcf") {
 						e.stopPropagation();
@@ -221,8 +220,7 @@ angular.module('mathSkills')
 									saveFinalState(data.label);
 									$scope.numberObjects[data.label].factorExp = "\\html{&nbsp;}"; 
 									//set up input for next GCF number, if one exists
-									if (typeof $scope.numberObjects[numbObjPlusOne] !== "undefined") {
-										console.log("JSON.stringify($scope.numberObjects["+numbObjPlusOne+"]) is: ",JSON.stringify($scope.numberObjects[numbObjPlusOne]));
+									if (typeof $scope.numberObjects[numbObjPlusOne] !== "undefined") {		
 										if ($scope.numberObjects[numbObjPlusOne].primeFactors.length > 1) {
 											$scope.numberObjects[numbObjPlusOne].factorExp =  '\\input{[' + $scope.primeFactors.join(',') + ']}';
 										} else {

@@ -1,7 +1,7 @@
-<div style="float:left;">
+<div class=floatLeft>
     <div class="alert alert-info">{{instructions}}</div>
     
-    <div ng-repeat='(key, value) in numberObjects' style="float:left;">
+    <div ng-repeat='(key, value) in numberObjects' class=floatLeft>
         <!--{{key}}{{value.numbers}}-->
         <table class=factors>
             <tr ng-repeat="step in value.completed" ng-class="borderIndexed($index, key)">
@@ -33,8 +33,8 @@
         </table>
     </div>
     <div ng-show="allDone">
-        <div style="float:left;">
-            <span style="float:left;">GCF</span><span class=bigger style="float:left;"> &nbsp; =  &nbsp;</span><span style="float:left;"><ms-expression expected={{doneExp}} label="finalGcf"></ms-expression></span> 
+        <div class=floatLeft>
+            <span class=floatLeft>GCF</span><span class="bigger floatLeft"> &nbsp; =  &nbsp;</span><span class=floatLeft><ms-expression expected={{doneExp}} label="finalGcf"></ms-expression></span> 
         </div>
     </div>
 	

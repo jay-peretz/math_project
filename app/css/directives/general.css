@@ -112,6 +112,10 @@ div.fakeButton {
 
 }
 
+.floatLeft {
+	float:left;
+}
+
 .help-answer-text {
 	display:block;	
 	margin-left:50px;
