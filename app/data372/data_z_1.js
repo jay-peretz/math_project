@@ -30,7 +30,7 @@ template = {
 								+'{margin-left-small}'
 							+'}'
 							+'{\\html{&nbsp;}}'
-							+'{css{\\html{Answer:  $helpAnswer}}{help-answer-text}}'
+							+'{css{\\html{Answer: &nbsp;$helpAnswer}}{help-answer-text}}'
 						}
 					}]
 				}]
@@ -135,7 +135,8 @@ template = {
 			secondText: '',
 			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
-										+'{\\fracstr{3m}}{\\fracstr{4}'
+										+'{\\html{<span class = bigger>$$firstSign</span> $$firstAbsNumber $$firstText}}'
+										+'{\\html{<span class = bigger>$$secondSign</span>$$secondAbsNumber $$secondText}}'
 									+'}'
 								),
 			ans: dataUtils.pre('\\grp'
@@ -236,7 +237,7 @@ template = {
 						),
 			secondHelp: '$firstHelpQuoted is not divided by any other $thirdHelpQuoted variable.<br>$firstHelpQuoted stays the same<br><br>$fourthHelpQuoted is in the numerator and $fourthHelpQuoted is in the denominator.  The larger degree is in the numerator, so the $fourthHelpQuoted base will end up in the numerator.<br>$secondHelpQuoted <span class=bigger>=</span> y<sup> 2<span class=bigger>-</span>1</sup> or y<sup>1</sup>.',
 			firstHelpQuoted: '\\"x<sup>4</sup>\\"',
-			secondHelpQuoted: '\\"y<sup>2</sup>\\" <span class=bigger>\xF7</span> \\"y\\"',
+			secondHelpQuoted: '\\"y<sup>2</sup> <span class=bigger>\xF7</span> y\\"',
 			thirdHelpQuoted: '\\"x\\"',
 			fourthHelpQuoted: '\\"y\\"',
 			textAnswer: 'x', 
@@ -274,8 +275,8 @@ template = {
 			firstHelpQuoted: '\\"x<sup>2</sup>\\"',
 			secondHelpQuoted: '\\"x<sup>3</sup>\\"',
 			thirdHelpQuoted: '\\"x\\"',
-			fourthHelpQuoted: '\\"x<sup>3</sup>\\" <span class=bigger>\xF7</span> \\"x<sup>2</sup>\\"',
-			fifthHelpQuoted: '\\"y<sup>2</sup>\\" <span class=bigger>\xF7</span> \\"y<sup>2</sup>\\"',
+			fourthHelpQuoted: '\\"x<sup>3</sup> <span class=bigger>\xF7</span> x<sup>2</sup>\\"',
+			fifthHelpQuoted: '\\"y<sup>2</sup> <span class=bigger>\xF7</span> y<sup>2</sup>\\"',
 			sixthHelpQuoted: '\\"y<sup>2</sup>\\"',
 			helpAnswer:	dataUtils.pre('{\\frac'
 										+'{\\html{<span class=bigger>-</span>$$thirdAnswer}}'
@@ -296,7 +297,7 @@ template = {
 			firstAbsNumber: '4', 
 			secondAbsNumber: '7', 
 			firstText: 'a<sup>3</sup>b', 
-			secondText: 'a<sup>2</sup>b',
+			secondText: 'ab<sup>2</sup>',
 			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
 										+'{\\html{<span class = bigger>$$firstSign</span> $$firstAbsNumber $$firstText}}'
@@ -312,7 +313,7 @@ template = {
 											+'{\\html{7}}'
 									+'}'
 						),
-			secondHelp: '$firstHelpQuoted is in the numerator and $secondHelpQuoted is in the denominator.  The larger degree is in the numerator, so the $secondHelpQuoted base will end up in the numerator.<br>$thirdHelpQuoted <span class=bigger>=</span> a<sup> 3<span class=bigger>-</span>1</sup> or a<sup>2</sup>.<br><br>$fourthHelpQuoted is in the numerator and $fifthHelpQuoted is in the denominator.  The larger degree is in the denominator so the $fourthHelpQuoted base will end up in the denominator.  $sixthHelpQuoted<span class=bigger>=</span> b<sup> 2<span class=bigger>-</span>1</sup> or b<sup>1.',
+			secondHelp: '$firstHelpQuoted is in the numerator and $secondHelpQuoted is in the denominator.  The larger degree is in the numerator, so the $secondHelpQuoted base will end up in the numerator.<br>$thirdHelpQuoted <span class=bigger>=</span> a<sup> 3<span class=bigger>-</span>1</sup> or a<sup>2</sup>.<br><br>$fourthHelpQuoted is in the numerator and $fifthHelpQuoted is in the denominator.  The larger degree is in the denominator so the $fourthHelpQuoted base will end up in the denominator.<br>  $sixthHelpQuoted<span class=bigger>=</span> b<sup> 2<span class=bigger>-</span>1</sup> or b<sup>1.',
 			firstHelpQuoted: '\\"a<sup>3</sup>\\"',
 			secondHelpQuoted: '\\"a\\"',
 			thirdHelpQuoted: '\\"a<sup>3</sup> <span class=bigger>\xF7</span> a\\"',
@@ -354,7 +355,7 @@ template = {
 											+'{\\html{3}}'
 									+'}'
 						),
-			secondHelp: '$firstHelpQuoted <span class=bigger>=</span> m<sup> 2<span class=bigger>-</span>2</sup> or m<sup>0</sup> (which equals 1). The $secondHelpQuoted variables cancel out each other.<br><br>$thirdHelpQuoted is not divided by any other $fourthHelpQuoted variable.<br>$thirdHelpQuoted stays the same.',
+			secondHelp: '$firstHelpQuoted <span class=bigger>=</span> m<sup> 2<span class=bigger>-</span>2</sup> or m<sup>0</sup> (which equals 1).<br>The $secondHelpQuoted variables cancel out each other.<br><br>$thirdHelpQuoted is not divided by any other $fourthHelpQuoted variable.<br>$thirdHelpQuoted stays the same.',
 			firstHelpQuoted: '\\"m<sup>2</sup> <span class=bigger>\xF7</span> m<sup>2</sup>\\"',
 			secondHelpQuoted: '\\"m\\"',
 			thirdHelpQuoted: '\\"n<sup>2</sup>\\"',
@@ -394,7 +395,7 @@ template = {
 											+'{\\html{2}}'
 									+'}'
 						),
-			secondHelp: '$firstHelpQuoted <span class=bigger>=</span> x<sup> 1 - 1</sup> or x<sup>0</sup> (which equals 1). The $secondHelpQuoted variables cancel out each other.<br><br>$thirdHelpQuoted is in the numerator and $fourthHelpQuoted is in the denominator.  The larger degree is in the denominator so the $thirdHelpQuoted base will end up in the denominator.<br>$fifthHelpQuoted <span class=bigger>=</span> y<sup> 2 - 1</sup> or y<sup>1</sup>.<br><br>$sixthHelpQuoted is not divided by any other $sixthHelpQuoted variable.  $sixthHelpQuoted stays the same.',
+			secondHelp: '$firstHelpQuoted <span class=bigger>=</span> x<sup> 1 - 1</sup> or x<sup>0</sup> (which equals 1).<br>The $secondHelpQuoted variables cancel out each other.<br><br>$thirdHelpQuoted is in the numerator and $fourthHelpQuoted is in the denominator.  The larger degree is in the denominator so the $thirdHelpQuoted base will end up in the denominator.<br>$fifthHelpQuoted <span class=bigger>=</span> y<sup> 2 - 1</sup> or y<sup>1</sup>.<br><br>$sixthHelpQuoted is not divided by any other $sixthHelpQuoted variable.<br>$sixthHelpQuoted stays the same.',
 			firstHelpQuoted: '\\"x <span class=bigger>\xF7</span> x\\"',
 			secondHelpQuoted: '\\"x\\"',
 			thirdHelpQuoted: '\\"y\\"',
