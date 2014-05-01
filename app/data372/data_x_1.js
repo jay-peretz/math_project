@@ -25,6 +25,32 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 								+'{$help}'
 								+'{\\html{&nbsp;}}'
 								+'{css{\\html{Answer:  $textAnswer}}{help-answer-text}}'
+								}
+						}]
+					}]
+				},
+       
+		second: {
+                title: 'Subtraction of Monomials and Polynomials',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '$prob',
+						answer: '\\btngrp'+
+									'{\\rowgrp'+
+									'{\\ins{Choose the right answer:}}'+
+										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+									'}',
+                       controls: {
+                    	   "checkAnswer": true,
+                    	   "help": '\\rowgrp'
+								+'{$help}'
+								+'{\\html{&nbsp;}}'
+								
+								+'{css{\\grp{\\html{Answer: }}$textAnswer}{help-answer-text}}'
 							}
 						}]
 					}]
@@ -81,41 +107,88 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 					+'{\\html{We can only combine \"like terms.\"}}{\\html{&nbsp;}}'
 					+'{\\grp{\\frac{\\str{3m}}{\\str{4}}}{\\html{and}}{\\frac{\\str{7m}}{\\str{8}}}{\\html{are like terms because they are}}}'
 					+'{\\html{both m terms.}}'
-					+'{\\html{&nbsp;}}{\\html{Combine the coefficients: 7 + 5 = 12}}'
-					+'{\\html{&nbsp;}}{\\html{The term 2xy stays the same. There is no other xy term. }}'),
-			template: 'first', textAnswer: '12x + 2xy'},
-			
-			// problem 5
-			{prob: dataUtils.pre('\\html{(&minus;2m<sup>2</sup> + m) + (&minus;3m<sup>2</sup> + m)}'),
+					+'{\\html{&nbsp;}}{\\html{Combine the coefficients:}}'
+					+'{\\grp{\\frac{\\str{3m}}{\\str{4}}}{\\html{ &minus; }}{\\frac{\\str{7m}}{\\str{8}}}{\\html{=}}{\\html{ &minus; }}{\\frac{\\str{1m}}{\\str{8}}}}'),
+			template: 'second', 
+			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp'
+				+'{\\sign{-}}{\\frac{\\html{m}}{\\str{8}}}'
+				+'}'),
+				buttonValueA: 'T',
+				buttonLabelA: dataUtils.pre('\\frac{\\fracstr{-m}}{\\fracstr{8}}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\frac{\\fracstr{-13m}}{\\fracstr{8}}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\frac{\\fracstr{13m}}{\\fracstr{8}}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\frac{\\fracstr{8}}{\\fracstr{m}}'),
+			},
+			// problem 5 
+			{prob: dataUtils.pre('\\html{&minus;8r &minus;(&minus;3r)&minus;2r}'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{We can only combine \"like terms.\"}}{\\html{&nbsp;}}'
-					+'{\\html{&minus;2m<sup>2</sup> and &minus;3m<sup>2</sup> are like terms because they are both m<sup>2</sup> terms.}}'
-					+'{\\html{Combine the coefficients: &minus;2 + (&minus;3) = &minus;5}}'
-					+'{\\html{&nbsp;}}{\\html{m and m are like terms because they are both m<sup>1</sup> terms.}}'
-					+'{\\html{Combine the coefficients: 1 + 1 = 2 }}'),
-			template: 'first', textAnswer: '&minus;5m<sup>2</sup> + 2m'},
+					+'{\\html{First, we must get rid of the double negative.}}'
+					+'{\\html{&minus; (&minus; 3r) becomes + 3r}}'
+					+'{\\html{&nbsp;}}{\\html{&minus; 8r &minus; (&minus; 3r) &minus; 2r  becomes  &minus; 8r + 3r &minus;2r}}'
+					+'{\\html{&nbsp;}}{\\html{\"&minus; 8r\" and \"3r\" and \"&minus; 2r\" are like terms because they are both r terms.}}'
+					+'{\\html{&nbsp;}}{\\html{Combine the coefficients: &minus; 8 + 3 &minus; 2  =  &minus;7}}'
+					),
+			template: 'first', textAnswer: '&minus;7r', buttonValueA: 'F', buttonLabelA: '<span class=bigger></span>13r', 
+            buttonValueB: 'T', buttonLabelB: '<span class=bigger>-</span>7r', 
+            buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>3r', 
+            buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>9r'},
 			
 			// problem 6
-			{prob: dataUtils.pre('\\html{(4ab<sup>2</sup> + 3ab) + (&minus;2ab<sup>2</sup> + 2ab)}'),
+			{prob: dataUtils.pre('\\html{&minus;2xy +(&minus;7xy)&minus; (3xy)}'),
 			help: dataUtils.pre('\\rowgrp'
-					+'{\\html{We can only combine \"like terms.\"}}{\\html{&nbsp;}}'
-					+'{\\html{4ab<sup>2</sup> and &minus;2ab<sup>2</sup> are like terms because they are both ab<sup>2</sup> terms.}}'
-					+'{\\html{Combine the coefficients: 4 + (&minus;2) = 2}}'
-					+'{\\html{&nbsp;}}{\\html{3ab and 2ab are like terms because they are both ab terms.}}'
-					+'{\\html{Combine the coefficients: 3 + 2 = 5 }}'),
-			template: 'first', textAnswer: '2ab<sup>2</sup> + 5ab'},
+					+'{\\html{We can only combine \"like terms.\"}}'
+					+'{\\html{&nbsp;}}{\\html{\"&minus; 2xy\" and \"&minus; 7xy\" and \"&minus; 3xy\" are like terms }}'
+					+'{\\html{because they are both xy terms.}}'
+					+'{\\html{&nbsp;}}{\\html{Combine the coefficients: &minus; 2 &minus; 7 &minus; 3  =  &minus;12}}'
+					),
+			template: 'first', textAnswer: '&minus;12xy', buttonValueA: 'F', buttonLabelA: '<span class=bigger>&nbsp;</span>2xy', 
+            buttonValueB: 'F', buttonLabelB: '<span class=bigger>&nbsp;</span>6xy', 
+            buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>6x<sup>3</sup>y<sup>3</sup>', 
+            buttonValueD: 'T', buttonLabelD: '<span class=bigger>-</span>12xy'},
 			
-			// problem 7
-			{prob: dataUtils.pre('\\html{(6m + 2n + 3) + (&minus;4m &minus; 2n &minus; 1)}'),
+			// problem 7 First, we must get rid of the double negative.
+//- (-3x/10) becomes + 3x/10
+
+			{prob: dataUtils.pre('\\grp'
+									+'{\\frac'
+										+'{\\fracstr{2x}}{\\fracstr{5}}}'
+									+'{\\sign{+}}'
+									+'{\\frac'
+										+'{\\fracstr{x}}{\\fracstr{4}}}'
+										+'{\\sign{-}}'
+										+'{\\html{(}}'
+									+'{\\frac'
+										+'{\\fracstr{-3x}}{\\fracstr{10}}}'
+										+'{\\html{)}}'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{We can only combine \"like terms.\"}}{\\html{&nbsp;}}'
-					+'{\\html{6m and -4m are like terms because they are both m<sup>1</sup> terms.}}'
-					+'{\\html{Combine the coefficients: 6 + (&minus;4) = 2}}'
-					+'{\\html{&nbsp;}}{\\html{2n and &minus;2n are like terms because they are both n<sup>1</sup> terms.}}'
-					+'{\\html{Combine the coefficients: 2 + (&minus;2) = 0 }}'
-					+'{\\html{&nbsp;}}{\\html{3 and &minus;1 are like terms because they are both terms without variables.}}'
-					+'{\\html{Combine the coefficients: 3 + (&minus;1) = 2 }}'),
-			template: 'first', textAnswer: '2m + 2'},
+					+'{\\html{First, we must get rid of the double negative.}}'
+			         +'{\\grp{\\sign{-}}{\\html{(}}{\\html{&minus;}}{\\frac{\\str{3x}}{\\str{10}}}{\\html{)}}{\\html{becomes}}{\\frac{\\str{3x}}{\\str{10}}}}'
+					 +'{\\html{&nbsp;}}'
+					+'{\\grp{\\sign{-}}{\\frac{\\str{2x}}{\\str{5}}}{\\sign{+}}{\\frac{\\str{x}}{\\str{4}}}{\\sign{-}}{\\html{(}}{\\html{&minus;}}{\\frac{\\str{3x}}{\\str{10}}}{\\html{)}}{\\html{becomes}}{\\sign{-}}{\\frac{\\str{2x}}{\\str{5}}}{\\sign{+}}{\\frac{\\str{x}}{\\str{4}}}{\\sign{+}}{\\frac{\\str{3x}}{\\str{10}}}}'
+					  +'{\\html{&nbsp;}}'
+					 +'{\\grp{\\html{\"}}{\\sign{-}}{\\frac{\\str{2x}}{\\str{5}}}{\\html{"\ and}}{\\html{\"}}{\\frac{\\str{x}}{\\str{4}}}{\\html{"\    and}}{\\html{\"}}{\\frac{\\str{3x}}{\\str{10}}}{\\html{\" are like terms }}}'
+					+'{\\html{because they are all x terms.}}'
+					+'{\\html{&nbsp;}}{\\html{Combine the coefficients: }}'
+					+'{\\grp{\\sign{-}}{\\frac{\\str{2}}{\\str{5}}}{\\sign{+}}{\\frac{\\str{1}}{\\str{4}}}{\\sign{+}}{\\frac{\\str{3}}{\\str{10}}}{\\html{=}}{\\frac{\\str{3}}{\\str{20}}}}'
+					),
+			template: 'second', 
+			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp'
+				+'{\\frac{\\html{3x}}{\\str{20}}}'
+				+'}'),
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\frac{\\fracstr{2x}}{\\fracstr{19}}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\frac{\\fracstr{7x}}{\\fracstr{20}}'),
+				buttonValueC: 'T',
+				buttonLabelC: dataUtils.pre('\\frac{\\fracstr{3x}}{\\fracstr{20}}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\frac{\\fracstr{19x}}{\\fracstr{20}}'),
+			},
 			
 			// problem 8
 			{prob: dataUtils.pre('\\html{(&minus;3mn<sup>2</sup> + 3m &minus; 2) + (2mn<sup>2</sup> + 3m + 2)}'),
