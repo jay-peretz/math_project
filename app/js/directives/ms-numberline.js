@@ -160,6 +160,7 @@ angular.module('mathSkills')
 								numOfSections = numOfSections/$scope.step;
 								for (var i = 0; i <= numOfSections; i++)
 								{
+									if(i%2===0){
 										if(j < 0)
 											$scope.numArray.push({val:j,
 												leftPosition:i/numOfSections*100,
@@ -168,6 +169,12 @@ angular.module('mathSkills')
 											$scope.numArray.push({val:j,
 												leftPosition:i/numOfSections*100,
 												className:'positiveNumMarginLeft'});
+									}
+									else{
+										$scope.numArray.push({val:'',
+											leftPosition:i/numOfSections*100,
+											className:''});
+									}
 	
 									$scope.tickArray.push({
 										leftPosition:i/numOfSections*100
