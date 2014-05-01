@@ -202,7 +202,7 @@ angular.module('mathSkills')
 					}
 					
                     if ($scope.allDone === false) {
-						console.log("parser.extractTag(data.answer) is: ",Number(parser.extractTag(data.answer).args[0]));
+						//console.log("parser.extractTag(data.answer) is: ",Number(parser.extractTag(data.answer).args[0]));
 						if ($scope.numberObjects[data.label].primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) !== -1){
 							var factor = extractArg(data.answer);
 							saveState(factor,data.label);
