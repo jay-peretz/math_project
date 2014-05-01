@@ -1,44 +1,41 @@
-<div>
+<div style="float:left;">
     <div class="alert alert-info">{{instructions}}</div>
-    <table>
-    	<tr>
-        	<td ng-repeat='(key, value) in numberObjects'>
-            	<!--{{key}}{{value.numbers}}-->
-                <table class=factors>
-                    <tr ng-repeat="step in value.completed" ng-class="borderIndexed($index, key)">
-                        <td>
-                        </td>
-                        <td class=divisor>
-                            {{step.factor}}
-                        </td>
-                        <td class=dividend>
-                            <span ng-repeat="number in step.numbers" class=factoring>{{number}}</span>
-                        </td>
-                    </tr>
-                    <tr ng-class="borderOrNot(key)" ng-hide="allDone">
-                        <td>
-                           <span>&nbsp;</span>
-                        </td>
-                        <td class=divisor>
-                            <span>
-                                <ms-expression expected={{value.factorExp}} label={{key}}></ms-expression>
-                            </span>
-                            
-                        </td>
-                        <td class=dividend>
-                            <span ng-hide="done">
-                                <span ng-repeat="number in value.numbers" class=factoring>{{number}}</span>
-                            </span>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr ng-show="allDone">
-        	<td style="float:left;">
-            	<span style="float:left;">GCF</span><span class=bigger style="float:left;"> &nbsp; =  &nbsp;</span><span style="float:left;"><ms-expression expected={{doneExp}} label="finalGcf"></ms-expression></span> 
-            </td>
-        </tr>
-    </table>
+    
+    <div ng-repeat='(key, value) in numberObjects' style="float:left;">
+        <!--{{key}}{{value.numbers}}-->
+        <table class=factors>
+            <tr ng-repeat="step in value.completed" ng-class="borderIndexed($index, key)">
+                <td>
+                </td>
+                <td class=divisor>
+                    {{step.factor}}
+                </td>
+                <td class=dividend>
+                    <span ng-repeat="number in step.numbers" class=factoring>{{number}}</span>
+                </td>
+            </tr>
+            <tr ng-class="borderOrNot(key)" ng-hide="allDone">
+                <td>
+                   <span>&nbsp;</span>
+                </td>
+                <td class=divisor>
+                    <span>
+                        <ms-expression expected={{value.factorExp}} label={{key}}></ms-expression>
+                    </span>
+                    
+                </td>
+                <td class=dividend>
+                    <span ng-hide="done">
+                        <span ng-repeat="number in value.numbers" class=factoring>{{number}}</span>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div ng-show="allDone">
+        <div style="float:left;">
+            <span style="float:left;">GCF</span><span class=bigger style="float:left;"> &nbsp; =  &nbsp;</span><span style="float:left;"><ms-expression expected={{doneExp}} label="finalGcf"></ms-expression></span> 
+        </div>
+    </div>
 	
 </div>
