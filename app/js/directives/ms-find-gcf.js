@@ -50,18 +50,26 @@ angular.module('mathSkills')
 				$scope.controllerId = Math.random().toString();
                 var getFactorExp = function (dataLabel) {
 						var finalString;
-						if (typeof dataLabel !== "undefined") {
-							if ($scope.numberObjects[dataLabel].primeFactors.length > 1) {
-								finalString = '\\input{[' + $scope.numberObjects[dataLabel].primeFactors.join(',') + ']}';
-							} else {
-								finalString = '\\input{' + $scope.numberObjects[dataLabel].primeFactors + '}';
-							}
-						} else {
-							if ($scope.primeFactors.length > 1) {
-								finalString = '\\input{[' + $scope.primeFactors.join(',') + ']}';
-							} else {
-								finalString = '\\input{' + $scope.primeFactors + '}';
-							}
+						switch (true) {
+							// to begin, the first gcf table display has an input
+							case (typeof dataLabel !== "undefined" && dataLabel === "active"):
+								if ($scope.primeFactors.length > 1) {
+									finalString = '\\input{[' + $scope.primeFactors.join(',') + ']}';
+								} else {
+									finalString = '\\input{' + $scope.primeFactors + '}';
+								}
+								break;
+							case (typeof dataLabel !== "undefined" && dataLabel !== "active"):
+								if ($scope.numberObjects[dataLabel].primeFactors.length > 1) {
+									finalString = '\\input{[' + $scope.numberObjects[dataLabel].primeFactors.join(',') + ']}';
+								} else {
+									finalString = '\\input{' + $scope.numberObjects[dataLabel].primeFactors + '}';
+								}
+								break;
+							// to begin, only the first gcf table display has an input
+							case (typeof dataLabel === "undefined"):
+								finalString = '\\html{&nbsp;}';
+								break;
 						}
 						return finalString;
                     },
@@ -164,7 +172,11 @@ angular.module('mathSkills')
 								$scope.primeFactors = modes($scope.numbers.map(numberUtils.primeFactors));
 								$scope.howManyPrimes = $scope.primeFactors.length;
 								// Setup our input expression.
-								$scope.factorExp = getFactorExp();
+								if (ii === 0) {
+									$scope.factorExp = getFactorExp('active');
+								} else {
+									$scope.factorExp = getFactorExp();
+								}
 								// set up an object property of $scope.numberObjects for each number submitted in the tag
 								$scope.numberObjects['numbObj' + ii] = {
 									numbers: $scope.numbers,
@@ -172,7 +184,6 @@ angular.module('mathSkills')
 									howManyPrimes: $scope.howManyPrimes,
 									factorExp: $scope.factorExp,
 									completed: [],
-									currentAnswerData: [{result:"incorrect"}],
 									done: false
 								};
 								focus();
@@ -182,46 +193,47 @@ angular.module('mathSkills')
 
                 $scope.$on('answer', function (e, data) {
 					//console.log("answer data is: ",JSON.stringify(data))
+					var numbObjNumber = data.label.substr(-1),
+						numbObjPlusOne = 'numbObj' + (+numbObjNumber + 1);
+						
+						
 					
 					if (data.label !== "finalGcf") {
 						e.stopPropagation();
 					}
 					
                     if ($scope.allDone === false) {
-						// copy the answer data object into a property of the object associated with each of the numbers submitted with the tag ($scope.numberObjects.numObj0, $scope.numberObjects.numObj1, etc.)
-						$scope.numberObjects[data.label].currentAnswerData[0] = angular.copy(data);
-						$scope.allCorrect = true;
-						for (var numObj in $scope.numberObjects) {
-							// for all numbers, check the value of the answer data result
-							if ($scope.numberObjects[numObj].currentAnswerData[0].result === "incorrect") {
-								$scope.allCorrect = false;
-							}
-						}
-						
-						if ($scope.allCorrect === true) {	
-							for (var numObj in $scope.numberObjects) {
-								
-								if ($scope.numberObjects[numObj].primeFactors.indexOf(Number(parser.extractTag($scope.numberObjects[numObj].currentAnswerData[0].answer).args[0])) !== -1){
-										var factor = extractArg($scope.numberObjects[numObj].currentAnswerData[0].answer);
-										saveState(factor,numObj);
-										setUpFactored(factor,numObj);
-										if ($scope.numberObjects[numObj].primeFactors.length > 1) {
-												remove(+factor, $scope.numberObjects[numObj].primeFactors);
-												$scope.numberObjects[numObj].factorExp = getFactorExp(numObj);
-												$scope.numberObjects[numObj].factoredExp = getFactoredExp(numObj);
-												$scope.factorExpLabel = "";
+						console.log("parser.extractTag(data.answer) is: ",Number(parser.extractTag(data.answer).args[0]));
+						if ($scope.numberObjects[data.label].primeFactors.indexOf(Number(parser.extractTag(data.answer).args[0])) !== -1){
+							var factor = extractArg(data.answer);
+							saveState(factor,data.label);
+							setUpFactored(factor,data.label);
+							if ($scope.numberObjects[data.label].primeFactors.length > 1) {
+									remove(+factor, $scope.numberObjects[data.label].primeFactors);
+									$scope.numberObjects[data.label].factorExp = getFactorExp(data.label);
+									$scope.numberObjects[data.label].factoredExp = getFactoredExp(data.label);
+									$scope.factorExpLabel = "";
+							} else {
+									$scope.numberObjects[data.label].factorExpLabel = "gcf";
+									$scope.numberObjects[data.label].done = true;
+									
+									remove(+factor, $scope.numberObjects[data.label].primeFactors);
+									saveFinalState(data.label);
+									$scope.numberObjects[data.label].factorExp = "\\html{&nbsp;}"; 
+									//set up input for next GCF number, if one exists
+									if (typeof $scope.numberObjects[numbObjPlusOne] !== "undefined") {
+										console.log("JSON.stringify($scope.numberObjects["+numbObjPlusOne+"]) is: ",JSON.stringify($scope.numberObjects[numbObjPlusOne]));
+										if ($scope.numberObjects[numbObjPlusOne].primeFactors.length > 1) {
+											$scope.numberObjects[numbObjPlusOne].factorExp =  '\\input{[' + $scope.primeFactors.join(',') + ']}';
 										} else {
-												$scope.numberObjects[numObj].factorExpLabel = "gcf";
-												$scope.numberObjects[numObj].done = true;
-												remove(+factor, $scope.numberObjects[numObj].primeFactors);
-												saveFinalState(numObj);
-												$scope.numberObjects[numObj].factorExp = "\\html{&nbsp;}"; 
-												$scope.numberObjects[numObj].numbers = ""; 
+											$scope.numberObjects[numbObjPlusOne].factorExp =  '\\input{' + $scope.primeFactors + '}';
 										}
-									focus();
-								} 
+									}
+									$scope.numberObjects[data.label].numbers = ""; 
 							}
+							focus();
 						} 
+												
 						$scope.allDone = true;
 						for (var numObj in $scope.numberObjects) {
 							if ($scope.numberObjects[numObj].done === false) {
