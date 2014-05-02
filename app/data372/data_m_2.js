@@ -1444,12 +1444,16 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 								+'{\\html{(}}{\\sign{$thirdSign}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}{\\html{)}}'
 								+'{\\sign{$fourthSign}}'
 								+'{\\html{(}}{\\sign{$fifthSign}}{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}{\\html{)}}',
-						answer: '\\rowgrp'+
-									'{\\ins{Choose the expression that is rewritten correctly without any double negatives:}}'+
-									'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
-                                    '{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\html{\xA0$buttonLabelB}}}'+
-                                    '{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\html{\xA0$buttonLabelC}}}'+
-                                    '{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\html{\xA0$buttonLabelD}}}',
+						answer: '\\btngrp'+
+									'{\\rowgrp'+
+										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+									'}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -2033,12 +2037,78 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 			{ whole1: 10, num1: 2, den1: 5, whole2: 8, num2: 1, den2: 4, wholeanswer: '-18', numanswer1: -373, numanswer2: 13, answerDen: 20, numnew1: -52, numnew2: 33, numlcd1: -208, numlcd2: 165, firstSign: '-', secondSign: '+', thirdSign: '-',template: 'tenth' },
 			// problem 10
 			{ whole1: 3, num1: 1, den1: '\xA02\xA0', whole2: 1, num2: 1, den2: 4, whole3: 2, num3: 2, den3: '\xA03\xA0', wholeanswer1: -4, numanswer1: -59, answerDen: 12, answer1Den: 12, numnew1: 7, numnew2: 5, numnew3: 8, numanswer2: 11, numlcd1: 42, numlcd2: 15, numlcd3: 32,firstSign: '-', secondSign: '-', thirdSign: '-', fourthSign: '+', fifthSign: '-', sign1: '-', sign2: '+' , sign3: '-', negFrac: '1 1/4', template: 'threeFracDblNeg', 
-			buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>3 1/2 <span class=bigger>-</span> 1 1/4 <span class=bigger>+</span>2 2/3', 
-            buttonValueB: 'F', buttonLabelB: '<span class=bigger>&nbsp;</span>3 1/2 <span class=bigger>+</span> 1 1/4 <span class=bigger>-</span>2 2/3', 
-            buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>3 1/2 <span class=bigger>-</span> 1 1/4 <span class=bigger>+</span>2 2/3', 
-            buttonValueD: 'T', buttonLabelD: '<span class=bigger>-</span>3 1/2 <span class=bigger>+</span> 1 1/4 <span class=bigger>-</span>2 2/3' },
+			buttonValueA: 'T',
+				buttonLabelA: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{-3}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
+												+'{\\sign{-}}'
+												+'{\\mixed{\\fracstr{1}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{4}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{2}}'
+												+'{\\frac{\\fracstr{2}}{\\fracstr{3}}}}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{3}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{1}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{4}}}}'
+												+'{\\sign{-}}'
+												+'{\\mixed{\\fracstr{2}}'
+												+'{\\frac{\\fracstr{2}}{\\fracstr{3}}}}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{3}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
+												+'{\\sign{-}}'
+												+'{\\mixed{\\fracstr{1}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{4}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{2}}'
+												+'{\\frac{\\fracstr{2}}{\\fracstr{3}}}}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{-3}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{1}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{4}}}}'
+												+'{\\sign{-}}'
+												+'{\\mixed{\\fracstr{2}}'
+												+'{\\frac{\\fracstr{2}}{\\fracstr{3}}}}'),
+			 },
 			// problem 11
 			{ whole1: 1, num1: 1, den1: '\xA05\xA0', whole2: 3, num2: 1, den2: 10, whole3: 2, num3: 1, den3: '\xA02\xA0', wholeanswer1: 4, numanswer1: 44, answerDen: 10, answer1Den: 5, numnew1: 6, numnew2:31, numnew3: 5, numanswer2: 2, numlcd1: 12, numlcd2: 31, numlcd3: 25,firstSign: '-', secondSign: '+', thirdSign: '', fourthSign: '-', fifthSign: '-', sign1: '-', sign2: '+' , sign3: '+', negFrac: '2 1/2', template: 'threeFracDblNeg', 
+			buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{-1}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{5}}}}'
+												+'{\\sign{-}}'
+												+'{\\mixed{\\fracstr{3}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'),
+				buttonValueB: 'T',
+				buttonLabelB: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{-1}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{5}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{3}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{1}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{5}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{3}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{1}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{5}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{3}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'),
+			
 			buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>1 1/5 <span class=bigger>-</span>3 1/10 <span class=bigger>+</span>2 1/2', 
             buttonValueB: 'T', buttonLabelB: '<span class=bigger>-</span>1 1/5 <span class=bigger>+</span>3 1/10 <span class=bigger>+</span>2 1/2', 
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>1 1/5 <span class=bigger>+</span>3 1/10 <span class=bigger>+</span>2 1/2', 

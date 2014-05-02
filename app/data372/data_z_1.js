@@ -460,7 +460,7 @@ template = {
 				buttonValueA: 'F',
 				buttonLabelA: dataUtils.pre('\\frac{\\fracstr{4}}{\\fracstr{5}}'),
 				buttonValueB: 'F',
-				buttonLabelB: dataUtils.pre('mixed{\\fracstr{1}}{\\frac{\\fracstr{4}}{\\fracstr{5}}}'),
+				buttonLabelB: dataUtils.pre('\\mixed{\\fracstr{1}}{\\frac{\\fracstr{4}}{\\fracstr{5}}}'),
 				buttonValueC: 'T',
 				buttonLabelC: dataUtils.pre('\\grp'
 												+'{\\frac{\\fracstr{4}}{\\fracstr{5}}}'
