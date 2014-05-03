@@ -1,9 +1,9 @@
 /*global angular */
 
 angular.module('mathSkills').value('data_s_3', {
-    title: 'S.1 Circumference of Circles',
-    path: 'S.1-circumference-of-circles',
+    title: 'S.3 Area of Rectangles, Squares and Triangles',
+    path: 'S.3-area-of-rectangles-squares-and-triangles',
     children: [{
-        title: 'Circumference of Circles',
+        title: 'Area of Rectangles, Squares and Triangles',
         children: [] }]
 });

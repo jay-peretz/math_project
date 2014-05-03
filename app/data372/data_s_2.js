@@ -1,9 +1,9 @@
 /*global angular */
 
 angular.module('mathSkills').value('data_s_2', {
-    title: 'S.1 Perimeter of Triangles',
-    path: 'S.1-perimeter-of-triangles',
+    title: 'S.2 Circumference of Circles',
+    path: 'S.2-circumference-of-circles',
     children: [{
-        title: 'Perimeter of Triangles',
+        title: 'Circumference of Circles',
         children: [] }]
 });

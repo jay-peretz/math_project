@@ -1,9 +1,9 @@
 /*global angular */
 
 angular.module('mathSkills').value('data_s_4', {
-    title: 'S.2 Area of Rectangles',
-    path: 'S.2-area-of-rectangles',
+    title: 'S.4 Area of Circles',
+    path: 'S.4-area-of-circles',
     children: [{
-        title: 'Area of Rectangles',
+        title: 'Area of Circles',
         children: [] }]
 });

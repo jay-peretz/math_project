@@ -2,13 +2,13 @@
 
 angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUtils) {
     var desc = {
-			title: 'S.1 Perimeter of Rectangles',
-    		path: 's.1-perimeter-of-rectangles',
+			title: 'S.1 Perimeter of Rectangles, Squares and Triangles',
+    		path: 's.1-perimeter-of-rectangles-squares-and-triangles',
             children: []
         },
         template = {
             oneStepSolution: {
-                title: 'Perimeter of Rectangles',
+                title: 'Perimeter of Rectangles, Squares and Triangles',
                 children: [{
                     title: 'Main Answer',
                     children: [{
