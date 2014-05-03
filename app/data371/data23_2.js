@@ -82,14 +82,8 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\grp'
-													+'{\\select{$firstNumAnswer}{$unitSelect}}'
-													+'{\\html{&nbsp;}}'
-													+'{\\select{$unitsSecond}{$labelSelect}}'
-												+'}'
-												+'{\\grp'
-													+'{\\select{$firstDenAnswer}{$unitSelect}}{\\html{&nbsp;}}{\\select{$unitsStart}{$labelSelect}}'
-												+'}'
+												+'{\\select{$numEqFrac}{$numSelect}}'
+												+'{\\select{$denEqFrac}{$denSelect}}'
 											+'}'
 										+'}'
 									+'}{well}',
@@ -233,14 +227,8 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\grp'
-													+'{\\select{$firstNumAnswer}{$unitSelect}}'
-													+'{\\html{&nbsp;}}'
-													+'{\\select{$unitsQuestionPer}{$perSelect}}'
-												+'}'
-												+'{\\grp'
-													+'{\\select{$firstDenAnswer}{$unitSelect}}{\\html{&nbsp;}}{\\select{$unitsAnswerPer}{$perSelect}}'
-												+'}'
+												+'{\\select{$numEqFrac}{$numSelect}}'
+												+'{\\select{$denEqFrac}{$denSelect}}'
 											+'}'
 										+'}'
 									+'}{well}',
@@ -386,7 +374,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{What is the fraction (that equals 1 whole) that you need to multiply by?}}'
+										+'{\\html{There are two fractions that you will need to multiply by to solve this problem. What is the listed fraction that is one of the fractions that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
@@ -399,14 +387,8 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\grp'
-													+'{\\select{$numeratorSecond}{$unitSelect}}'
-													+'{\\html{&nbsp;}}'
-													+'{\\select{$unitsSecond}{$perSelectOne}}'
-												+'}'
-												+'{\\grp'
-													+'{\\select{$denominatorSecond}{$unitSelect}}{\\html{&nbsp;}}{\\select{$unitsStart}{$perSelectOne}}'
-												+'}'
+												+'{\\select{$numEqFrac}{$numSelect}}'
+												+'{\\select{$denEqFrac}{$denSelect}}'
 											+'}'
 										+'}'
 									+'}{well}',
@@ -456,7 +438,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{What is the next fraction (that equals 1 whole) that you need to multiply by?}}'
+										+'{\\html{is the second fraction that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
@@ -478,14 +460,8 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\grp'
-													+'{\\select{$numeratorThird}{$unitSelect}}'
-													+'{\\html{&nbsp;}}'
-													+'{\\select{$thirdNumAnswer}{$perSelectTwo}}'
-												+'}'
-												+'{\\grp'
-													+'{\\select{$denominatorThird}{$unitSelect}}{\\html{&nbsp;}}{\\select{$thirdDenAnswer}{$perSelectTwo}}'
-												+'}'
+												+'{\\select{$num2ndEqFrac}{$num2ndSelect}}'
+												+'{\\select{$den2ndEqFrac}{$den2ndSelect}}'
 											+'}'
 										+'}'
 									+'}{well}',
@@ -688,7 +664,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{What is the fraction (that equals 1 whole) that you need to multiply by?}}'
+										+'{\\html{There are three fractions that you will need to multiply by to solve this problem. What is the listed fraction that is one of the fractions that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
@@ -701,14 +677,8 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\grp'
-													+'{\\select{$numeratorSecond}{$unitSelect}}'
-													+'{\\html{&nbsp;}}'
-													+'{\\select{$unitsSecond}{$perSelectOne}}'
-												+'}'
-												+'{\\grp'
-													+'{\\select{$denominatorSecond}{$unitSelect}}{\\html{&nbsp;}}{\\select{$unitsStart}{$perSelectOne}}'
-												+'}'
+												+'{\\select{$numEqFrac}{$numSelect}}'
+												+'{\\select{$denEqFrac}{$denSelect}}'
 											+'}'
 										+'}'
 									+'}{well}',
@@ -758,7 +728,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{What is the next fraction (that equals 1 whole) that you need to multiply by?}}'
+										+'{\\html{What is a second fraction that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
@@ -780,14 +750,8 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\grp'
-													+'{\\select{$numeratorThird}{$unitSelect}}'
-													+'{\\html{&nbsp;}}'
-													+'{\\select{$unitsThird}{$perSelectOne}}'
-												+'}'
-												+'{\\grp'
-													+'{\\select{$denominatorThird}{$unitSelect}}{\\html{&nbsp;}}{\\select{$unitsSecond}{$perSelectOne}}'
-												+'}'
+												+'{\\select{$num2ndEqFrac}{$num2ndSelect}}'
+												+'{\\select{$den2ndEqFrac}{$den2ndSelect}}'
 											+'}'
 										+'}'
 									+'}{well}',
@@ -855,7 +819,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{What is the next fraction (that equals 1 whole) that you need to multiply by?}}'
+										+'{\\html{What is a third fraction that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
@@ -886,14 +850,8 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\grp'
-													+'{\\select{$numeratorFourth}{$unitSelect}}'
-													+'{\\html{&nbsp;}}'
-													+'{\\select{$unitsFourth}{$perSelectTwo}}'
-												+'}'
-												+'{\\grp'
-													+'{\\select{$denominatorFourth}{$unitSelect}}{\\html{&nbsp;}}{\\select{$unitsPer}{$perSelectTwo}}'
-												+'}'
+												+'{\\select{$num3rdEqFrac}{$num3rdSelect}}'
+												+'{\\select{$den3rdEqFrac}{$den3rdSelect}}'
 											+'}'
 										+'}'
 									+'}{well}',
@@ -1087,6 +1045,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				unitsPer: 'hr',
 				firstNumAnswer: '5,280',
 				firstDenAnswer: '1',
+				numEqFrac: '5280 ft',
+				numSelect: '[\\"1 hr\\", \\"5280 ft\\", \\"1 mi\\", \\"60 min\\"]',
+				denEqFrac: '1 mi',
+				denSelect: '[\\"60 min\\", \\"1 mi\\", \\"5280 ft\\", \\"1 hr\\"]',
 				finalAnswer: '211200',
 				helpFinalAnswer: '211,200',
 				firstWordCancel: 'miles',
@@ -1111,6 +1073,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				firstNumAnswer: '1',
 				firstDenAnswer: '60',
 				finalAnswer: '0.33',
+				numEqFrac: '1 hr',
+				numSelect: '[\\"1 hr\\", \\"$1\\", \\"1 min\\", \\"60 min\\"]',
+				denEqFrac: '60 min',
+				denSelect: '[\\"60 min\\", \\"1 min\\", \\"$20\\", \\"1 hr\\"]',
 				helpFinalAnswer: '0.33',
 				firstWordCancel: 'hours',
 				secondWordCancel: 'minutes',
@@ -1134,6 +1100,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				unitsPer: 'c',
 				firstNumAnswer: '1',
 				firstDenAnswer: '16',
+				numEqFrac: '1 1b',
+				numSelect: '[\\"1 pt\\", \\"1 1b\\", \\"16 oz\\", \\"2 cups\\"]',
+				denEqFrac: '60 min',
+				denSelect: '[\\"2 cups\\", \\"16 oz\\", \\"1 lb\\", \\"1 pt\\"]',
 				finalAnswer: '0.5',
 				helpFinalAnswer: '0.5',
 				firstWordCancel: 'ounces',
@@ -1158,6 +1128,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				unitsPer: 'hr',
 				firstNumAnswer: '1',
 				firstDenAnswer: '5,280',
+				numEqFrac: '1 mi',
+				numSelect: '[\\"5280 ft\\", \\"1 hr\\", \\"60 min\\", \\"1 mi\\"]',
+				denEqFrac: '5280 ft',
+				denSelect: '[\\"1 mi\\", \\"60 min\\", \\"1 hr\\", \\"5280 ft\\"]',
 				finalAnswer: '0.25',
 				helpFinalAnswer: '0.25',
 				firstWordCancel: 'feet',
@@ -1180,6 +1154,10 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				unitsAnswerPer: 'hr',
 				firstNumAnswer: '60',
 				firstDenAnswer: '1',
+				numEqFrac: '60 min',
+				numSelect: '[\\"1 hr\\", \\"60 min\\", \\"1 min\\", \\"$65\\"]',
+				denEqFrac: '1 hr',
+				denSelect: '[\\"60 min\\", \\"1 hr\\", \\"$0.65\\", \\"1 day\\"]',
 				finalAnswer: '39',
 				helpFinalAnswer: '39',
 				firstWordCancel: 'minutes',
@@ -1216,6 +1194,14 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				secondWordCancel: 'quarts',
 				thirdWordCancel: 'hours',
 				perWordCancel: 'minutes',
+				numEqFrac: '4 qt',
+				numSelect: '[\\"1 gal\\", \\"24 hr\\", \\"4 qt\\", \\"1 day\\"]',
+				denEqFrac: '1 gal',
+				denSelect: '[\\"4 qt\\", \\"1 day\\", \\"1 gal\\", \\"24 hr\\"]',
+				num2ndEqFrac: '1 hr',
+				num2ndSelect: '[\\"60 min\\", \\"1 hr\\", \\"24 hr\\", \\"1 day\\"]',
+				den2ndEqFrac: '60 min',
+				den2ndSelect: '[\\"1 hr\\", \\"60 min\\", \\"1 day\\", \\"24 hr\\"]',
 				finalAnswer: '6.7',
 				helpFinalAnswer: '6.7',
 				descriptor: '<br>Round the answer to the nearest tenth of a quart.',
@@ -1257,6 +1243,14 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				secondWordCancel: 'gallons',
 				thirdWordCancel: 'minutes',
 				perWordCancel: 'hours',
+				numEqFrac: '1 gal',
+				numSelect: '[\\"1 gal\\", \\"1 min\\", \\"4 qt\\", \\"60 min\\"]',
+				denEqFrac: '4 qt',
+				denSelect: '[\\"4 qt\\", \\"1 qt\\", \\"1 gal\\", \\"1 hr\\"]',
+				num2ndEqFrac: '60 min',
+				num2ndSelect: '[\\"1 min\\", \\"4 qt\\", \\"1 hr\\", \\"60 min\\"]',
+				den2ndEqFrac: '1 hr',
+				den2ndSelect: '[\\"60 sec\\", \\"1 gal\\", \\"60 min\\", \\"1 hr\\"]',
 				finalAnswer: '75',
 				helpFinalAnswer: '75',
 				descriptor: '',
@@ -1298,6 +1292,14 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				secondWordCancel: 'feet',
 				thirdWordCancel: 'seconds',
 				perWordCancel: 'minutes',
+				numEqFrac: '1 ft',
+				numSelect: '[\\"60 sec\\", \\"1 min\\", \\"1 ft\\", \\"12 in\\"]',
+				denEqFrac: '12 in',
+				denSelect: '[\\"1 in\\", \\"60 sec\\", \\"12 in\\", \\"1 ft\\"]',
+				num2ndEqFrac: '60 sec',
+				num2ndSelect: '[\\"1 hr\\", \\"1 sec\\", \\"1 min\\", \\"60 sec\\"]',
+				den2ndEqFrac: '1 min',
+				den2ndSelect: '[\\"60 min\\", \\"6 in\\", \\"60 sec\\", \\"1 min\\"]',
 				finalAnswer: '30',
 				helpFinalAnswer: '30',
 				descriptor: '',
@@ -1339,6 +1341,14 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				secondWordCancel: 'teaspoons',
 				thirdWordCancel: 'pints',
 				perWordCancel: 'cups',
+				numEqFrac: '3 tsp',
+				numSelect: '[\\"3 tsp\\", \\"1 tbsp\\", \\"8 fl oz\\", \\"1 cup\\"]',
+				denEqFrac: '1 tbsp',
+				denSelect: '[\\"1 tbsp\\", \\"3 tsp\\", \\"1 cup\\", \\"8 fl oz\\"]',
+				num2ndEqFrac: '1 pt',
+				num2ndSelect: '[\\"1 cup\\", \\"8 fl oz\\", \\"1 pt\\", \\"2 cups\\"]',
+				den2ndEqFrac: '2 cups',
+				den2ndSelect: '[\\"8 fl oz\\", \\"1 cup\\", \\"2 cups\\", \\"1 pt\\"]',
 				finalAnswer: '3',
 				helpFinalAnswer: '3',
 				descriptor: '',
@@ -1380,6 +1390,18 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				thirdWordCancel: 'pints',
 				fourthWordCancel: 'pounds',
 				perWordCancel: 'ounces',
+				numEqFrac: '4 qt',
+				numSelect: '[\\"1 gal\\", \\"4 qt\\", \\"1 qt\\", \\"16 oz\\"]',
+				denEqFrac: '1 gal',
+				denSelect: '[\\"4 qt\\", \\"1 gal\\", \\"16 oz\\", \\"1 lb\\"]',
+				num2ndEqFrac: '2 pt',
+				num2ndSelect: '[\\"1 lb\\", \\"4 qt\\", \\"1 qt\\", \\"2 pt\\"]',
+				den2ndEqFrac: '1 qt',
+				den2ndSelect: '[\\"4 qt\\", \\"16 oz\\", \\"2 pt\\", \\"1 qt\\"]',
+				num3rdEqFrac: '1 lb',
+				num3rdSelect: '[\\"1 lb\\", \\"16 oz\\", \\"4 qt\\", \\"1 pt\\"]',
+				den3rdEqFrac: '16 oz',
+				den3rdSelect: '[\\"16 oz\\", \\"1 lb\\", \\"1 gal\\", \\"2 cups\\"]',
 				finalAnswer: '1',
 				helpFinalAnswer: '1',
 				descriptor: '',
