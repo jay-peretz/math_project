@@ -1420,20 +1420,20 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
         },
         data = [
             //problem 1
-         { firstNum: '3', firstDen: '5', secondNum: '9', secondDen: '10', firstAnswerNum: '6', secondAnswerNum: '9', differenceNum: '-3', answerDen: '10', firstSign: '', secondSign: '+', thirdSign: '-', answerSign: '&minus;', leftParen: '(', rightParen: ')', probExpr1: 'Find the sum of', probExpr2: '&nbsp;&nbsp;and&nbsp;&nbsp;', oper: 'Add', template: 'firstTempl', 
+         { firstNum: '3', firstDen: '5', secondNum: '9', secondDen: '10', firstAnswerNum: '6', secondAnswerNum: '9', differenceNum: '-3', answerDen: '10', firstSign: '', secondSign: '+', thirdSign: '&minus;', answerSign: '&minus;', leftParen: '(', rightParen: ')', probExpr1: 'Find the sum of', probExpr2: 'and', oper: 'Add', template: 'firstTempl', 
             buttonValueA: 'F', buttonLabelA: '<span class=bigger>&nbsp;</span>3/5 <span class=bigger>+</span>(9/10)', 
             buttonValueB: 'T', buttonLabelB: '<span class=bigger>&nbsp;</span>3/5 <span class=bigger>+</span>(- 9/10)', 
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>9/10 <span class=bigger>+</span>(3/5)', 
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>3/5 <span class=bigger>-</span>(- 9/10)' },
             //problem 2
-            { firstNum: '3', firstDen: '8', secondNum: '2', secondDen: '5', firstAnswerNum: '15', secondAnswerNum: '16', differenceNum: '-31', answerDen: '40', firstSign: '-', secondSign: '-', thirdSign: '', answerSign: '&minus;', leftParen: '', rightParen: '', probExpr1: 'Find the difference of&nbsp;&nbsp;', probExpr2: 'and', oper: 'Subtract', template: 'firstTempl', 
+            { firstNum: '3', firstDen: '8', secondNum: '2', secondDen: '5', firstAnswerNum: '15', secondAnswerNum: '16', differenceNum: '-31', answerDen: '40', firstSign: '&minus;', secondSign: '&minus;', thirdSign: '', answerSign: '&minus;', leftParen: '', rightParen: '', probExpr1: 'Find the difference of&nbsp;&nbsp;', probExpr2: 'and', oper: 'Subtract', template: 'firstTempl', 
             buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>3/8 <span class=bigger>-</span>(- 2/5)', 
             buttonValueB: 'F', buttonLabelB: '<span class=bigger>-</span>3/8 <span class=bigger>+</span>2/5', 
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>2/5 <span class=bigger>-</span>(- 3/8)', 
             buttonValueD: 'T', buttonLabelD: '<span class=bigger>-</span>3/8 <span class=bigger>-</span>2/5' },
 
             //problem 3
-            { firstProbNum: '3', firstProbDen: '4', secondProbNum: '5', secondProbDen: '6', firstNum: '3', firstDen: '4', secondNum: '5', secondDen: '6', firstAnswerNum: '9', secondAnswerNum: '10', differenceNum: '1', answerDen: '12', firstSign: '-', secondSign: '-', thirdSign: '-', answerSign: '&minus;', leftParen: '(', rightParen: ')', probExpr1: 'Find the difference of&nbsp;&nbsp;', probExpr2: '&nbsp;and&nbsp;&nbsp;', oper: 'Add', template: 'thirdTempl', 
+            { firstProbNum: '3', firstProbDen: '4', secondProbNum: '5', secondProbDen: '6', firstNum: '3', firstDen: '4', secondNum: '5', secondDen: '6', firstAnswerNum: '9', secondAnswerNum: '10', differenceNum: '1', answerDen: '12', firstSign: '&minus;', secondSign: '&minus;', thirdSign: '&minus;', answerSign: '&minus;', leftParen: '(', rightParen: ')', probExpr1: 'Find the difference of&nbsp;&nbsp;', probExpr2: '&nbsp;and&nbsp;&nbsp;', oper: 'Add', template: 'thirdTempl', 
             buttonValueA: 'T', buttonLabelA: '<span class=bigger>-</span>3/4 <span class=bigger>-</span>(- 5/6)', 
             buttonValueB: 'F', buttonLabelB: '<span class=bigger>-</span>3/4 <span class=bigger>-</span>(5/6)', 
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>-</span>3/4 <span class=bigger>-</span>5/6', 
@@ -1446,7 +1446,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
         	},
 
 			//problem 4
-			{ firstProbNum: '1', firstProbDen: '3', secondProbNum: '2', secondProbDen: '7', firstNum: '2', firstDen: '7', secondNum: '1', secondDen: '3', firstAnswerNum: '6', secondAnswerNum: '7', differenceNum: '13', answerDen: '21', firstSign: '', secondSign: '-', thirdSign: '-', answerSign: '&minus;', leftParen: '(', rightParen: ')', probExpr1: 'Subtract&nbsp;&nbsp;', probExpr2: 'from', oper: 'Add', template: 'thirdTempl', 
+			{ firstProbNum: '1', firstProbDen: '3', secondProbNum: '2', secondProbDen: '7', firstNum: '2', firstDen: '7', secondNum: '1', secondDen: '3', firstAnswerNum: '6', secondAnswerNum: '7', differenceNum: '13', answerDen: '21', firstSign: '', secondSign: '&minus;', thirdSign: '&minus;', answerSign: '&minus;', leftParen: '(', rightParen: ')', probExpr1: 'Subtract&nbsp;&nbsp;', probExpr2: 'from', oper: 'Add', template: 'thirdTempl', 
             buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>1/3 <span class=bigger>-</span>2/7', 
             buttonValueB: 'T', buttonLabelB: '<span class=bigger>&nbsp;</span>2/7 <span class=bigger>-</span>(- 1/3)', 
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>2/7 <span class=bigger>-</span>1/3', 
@@ -1460,7 +1460,7 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 
             //problem 5
             { probw1: '2', probn1: '5', probd1: '12', probw2: '1', probn2: '1', probd2: '4', w1: '1', n1: '1', d1: '4', w2: '2', n2: '5', d2: '12',imprN1: '5', imprN2: '29', answN1: '15', answN2: '29', lcd: '12', answNum: '14', wAns: '1', wNumAns: '1', wDenAns: '6',
-				firstSign: '-', secondSign: '-', thirdSign: '-', answerSign: '&minus;', leftParen: '(', rightParen: ')', probExpr1: 'Subtract&nbsp;&nbsp;', probExpr2: '&nbsp;from&nbsp;&nbsp;', oper: 'Add', template: 'fourthTempl', 
+				firstSign: '&minus;', secondSign: '&minus;', thirdSign: '&minus;', answerSign: '&minus;', leftParen: '(', rightParen: ')', probExpr1: 'Subtract&nbsp;&nbsp;', probExpr2: '&nbsp;from&nbsp;&nbsp;', oper: 'Add', template: 'fourthTempl', 
             buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>2 &nbsp;5/12 <span class=bigger>-</span>(- 1 &nbsp;1/4)', 
             buttonValueB: 'F', buttonLabelB: '<span class=bigger>-</span>2 &nbsp;5/12 <span class=bigger>-</span>(1 &nbsp;1/4)', 
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>-</span>1 &nbsp;1/4 <span class=bigger>-</span>(2 &nbsp;5/12)', 
@@ -1473,14 +1473,14 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 			
             //problem 6
 			{ w1: '2', n1: '1', d1: '5', w2: '3', n2: '2', d2: '3', imprN1: '11', imprN2: '11', answN1: '33', answN2: '55', lcd: '15', answNum: '-22', wAns: '-1', wNumAns: '7', wDenAns: '15',
-				firstSign: '', secondSign: '-', thirdSign: '', answerSign: '&minus;', leftParen: '', rightParen: '', probExpr1: 'Find the difference of', probExpr2: 'and', oper: 'Subtract', template: 'secondTempl', 
+				firstSign: '', secondSign: '&minus;', thirdSign: '', answerSign: '&minus;', leftParen: '', rightParen: '', probExpr1: 'Find the difference of', probExpr2: 'and', oper: 'Subtract', template: 'secondTempl', 
             buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>2 1/5 <span class=bigger>+</span>3 2/3', 
             buttonValueB: 'T', buttonLabelB: '<span class=bigger>&nbsp;</span>2 1/5 <span class=bigger>-</span>3 2/3', 
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>3 2/3 <span class=bigger>-</span>2 1/5', 
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>2 1/5 <span class=bigger>-</span>(- 3 2/3)' },
             //problem 7
             { w1: '1', n1: '5', d1: '6', w2: '2', n2: '5', d2: '8', imprN1: '11', imprN2: '21', answN1: '44', answN2: '63', lcd: '24', answNum: '-107', wAns: '-4', wNumAns: '11', wDenAns: '24',
-				firstSign: '-', secondSign: '+', thirdSign: '-', answerSign: '&minus;', leftParen: '(', rightParen: ')', probExpr1: 'Find the sum of&nbsp;&nbsp;', probExpr2: '&nbsp;and&nbsp;&nbsp;', oper: 'Add', template: 'secondTempl', 
+				firstSign: '&minus;', secondSign: '+', thirdSign: '&minus;', answerSign: '&minus;', leftParen: '(', rightParen: ')', probExpr1: 'Find the sum of&nbsp;&nbsp;', probExpr2: 'and', oper: 'Add', template: 'secondTempl', 
             buttonValueA: 'T', buttonLabelA: '<span class=bigger>-</span>1 5/6 <span class=bigger>+</span>(- 2 5/8)', 
             buttonValueB: 'F', buttonLabelB: '<span class=bigger>-</span>1 5/6 <span class=bigger>+</span>2 5/8', 
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>2 5/8 <span class=bigger>-</span>(- 1 5/6)', 
@@ -1488,8 +1488,18 @@ angular.module('mathSkills').service('data_m_3', ['dataUtils', function (dataUti
 
 
             //problem 8
-			{ w1: '1', n1: '1', d1: '2', w2: '3', n2: '3', d2: '10', imprN1: '3', imprN2: '33', answN1: '15', answN2: '33', lcd: '10', answNum: '-18', wAns: '-1', wNumAns: '4', wDenAns: '5',
-				firstSign: '', secondSign: '-', thirdSign: '', answerSign: '&minus;', leftParen: '', rightParen: '', probExpr1: 'Subtract', probExpr2: 'from', oper: 'Subtract', template: 'secondTemplRev', 
+			// buttonLabelA: dataUtils.pre('\\ordopssimple{\\grp{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{\xB7}{T}{huge}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}'), 
+
+			// { w1: '1', n1: '1', d1: '2', w2: '3', n2: '3', d2: '10', imprN1: '3', imprN2: '33', answN1: '15', answN2: '33', lcd: '10', answNum: '-18', wAns: '-1', wNumAns: '4', wDenAns: '5',
+			// 	firstSign: '', secondSign: '&minus;', thirdSign: '', answerSign: '&minus;', leftParen: '', rightParen: '', probExpr1: 'Subtract', probExpr2: 'from', oper: 'Subtract', template: 'secondTemplRev', 
+   //          buttonValueA: 'F', 
+   //          buttonLabelA: dataUtils.pre('\\ordopssimple{\\grp{\\frac{\\fracstr{2}}{\\fracstr{4}}}}'), 
+   //          buttonValueB: 'F', buttonLabelB: '<span class=bigger>-</span>1 1/2 <span class=bigger>-</span>3 3/10', 
+   //          buttonValueC: 'T', buttonLabelC: '<span class=bigger>&nbsp;</span>1 1/2 <span class=bigger>-</span>3 3/10', 
+   //          buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>3 3/10 <span class=bigger>-</span>(- 3 2/3)' },
+
+            { w1: '1', n1: '1', d1: '2', w2: '3', n2: '3', d2: '10', imprN1: '3', imprN2: '33', answN1: '15', answN2: '33', lcd: '10', answNum: '-18', wAns: '-1', wNumAns: '4', wDenAns: '5',
+				firstSign: '', secondSign: '&minus;', thirdSign: '', answerSign: '&minus;', leftParen: '', rightParen: '', probExpr1: 'Subtract', probExpr2: 'from', oper: 'Subtract', template: 'secondTemplRev', 
             buttonValueA: 'F', buttonLabelA: '<span class=bigger>&nbsp;</span>3 3/10 <span class=bigger>-</span>1 1/2', 
             buttonValueB: 'F', buttonLabelB: '<span class=bigger>-</span>1 1/2 <span class=bigger>-</span>3 3/10', 
             buttonValueC: 'T', buttonLabelC: '<span class=bigger>&nbsp;</span>1 1/2 <span class=bigger>-</span>3 3/10', 
