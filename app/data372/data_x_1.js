@@ -173,7 +173,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 					+'{\\grp{\\sign{-}}{\\frac{\\str{2x}}{\\str{5}}}{\\sign{+}}{\\frac{\\str{x}}{\\str{4}}}{\\sign{-}}{\\html{(}}{\\html{&minus;}}{\\frac{\\str{3x}}{\\str{10}}}{\\html{)}}{\\html{becomes}}{\\sign{-}}{\\frac{\\str{2x}}{\\str{5}}}{\\sign{+}}{\\frac{\\str{x}}{\\str{4}}}{\\sign{+}}{\\frac{\\str{3x}}{\\str{10}}}}'
 					  +'{\\html{&nbsp;}}'
 					 +'{\\grp{\\html{\"}}{\\sign{-}}{\\frac{\\str{2x}}{\\str{5}}}{\\html{"\ and}}{\\html{\"}}{\\frac{\\str{x}}{\\str{4}}}{\\html{"\    and}}{\\html{\"}}{\\frac{\\str{3x}}{\\str{10}}}{\\html{\" are like terms }}}'
-					+'{\\html{because they are all x terms.}}'
+					+'{\\html{because they are all \"x\" terms.}}'
 					+'{\\html{&nbsp;}}{\\html{Combine the coefficients: }}'
 					+'{\\grp{\\sign{-}}{\\frac{\\str{2}}{\\str{5}}}{\\sign{+}}{\\frac{\\str{1}}{\\str{4}}}{\\sign{+}}{\\frac{\\str{3}}{\\str{10}}}{\\html{=}}{\\frac{\\str{3}}{\\str{20}}}}'
 					),
@@ -205,7 +205,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>2m<sup>2</sup> &minus; 3'},
 			
 			// problem 9 
-			{prob: dataUtils.pre('\\html{&minus;(&minus; 5x<sup>3</sup> + 3x<sup>2</sup> &minus; y - 5)'),
+			{prob: dataUtils.pre('\\html{&minus;(&minus; 5x<sup>3</sup> + 3x<sup>2</sup> &minus; y &minus; 5)'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
 					+'{\\html{&nbsp;}}{\\html{&minus; (&minus; 5x<sup>3</sup> + 3x<sup>2</sup> &minus; y &minus; 5) becomes  5x<sup>3</sup> &minus; 3x<sup>2</sup> + y + 5}}{\\html{&nbsp;}}'
@@ -221,8 +221,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 			{prob: dataUtils.pre('\\html{14n &minus; (3n &minus; 7)'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
-					+'{\\html{&nbsp;}}{\\html{&minus; (3n &minus; 7 ) becomes  &minus; 3n + 7 )}}'
-					+'{\\html{&nbsp;}}{\\html{14n &minus; (3n &minus; 7 ) becomes  14n &minus; 3n + 7 )}}{\\html{&nbsp;}}'
+					+'{\\html{&nbsp;}}{\\html{&minus; (3n &minus; 7 ) becomes  &minus; 3n + 7 }}'
+					+'{\\html{&nbsp;}}{\\html{14n &minus; (3n &minus; 7 ) becomes  14n &minus; 3n + 7 }}{\\html{&nbsp;}}'
 					+'{\\html{\“14n\” and \“-3n\” are like terms because they are both \“n\” terms. Together they equal 11n.}}'
 					),
 			template: 'first', textAnswer: '11n + 7', 
@@ -235,10 +235,10 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 			{prob: dataUtils.pre('\\html{(4x <sup>2</sup> &minus; 4x) &minus; (6x <sup>2</sup> + 2x)'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
-					+'{\\html{&nbsp;}}{\\html{&minus; (6x <sup>2</sup> + 2x ) becomes  &minus; 6x &minus; 2x }}'
-					+'{\\html{&nbsp;}}{\\html{(4x <sup>2</sup> &minus; 4x) &minus; (6x <sup>2</sup> + 2x) becomes  (4x <sup>2</sup> &minus; 4x) &minus; 6x &minus; 2x}}{\\html{&nbsp;}}'
-					+'{\\html{\“4x <sup>2</sup>\” and \“-6x <sup>2</sup>\” are like terms because they are both \“x\” terms. Together they equal -2x <sup>2</sup>.}}'
-					+'{\\html{&nbsp;}}{\\html{\“-4x \” and \“-2x\” are like terms because they are both \“x\” terms. Together they equal -6x.}}'
+					+'{\\html{&nbsp;}}{\\html{&minus; (6x <sup>2</sup> + 2x ) becomes  &minus; 6x <sup>2</sup> &minus; 2x }}'
+					+'{\\html{&nbsp;}}{\\html{(4x <sup>2</sup> &minus; 4x) &minus; (6x <sup>2</sup> + 2x) becomes  (4x <sup>2</sup> &minus; 4x) &minus; 6x<sup>2</sup> &minus; 2x}}{\\html{&nbsp;}}'
+					+'{\\html{\“4x <sup>2</sup>\” and \“&minus;6x <sup>2</sup>\” are like terms because they are both \“x\” terms. Together they equal &minus;2x <sup>2</sup>.}}'
+					+'{\\html{&nbsp;}}{\\html{\“&minus;4x \” and \“&minus;2x\” are like terms because they are both \“x\” terms. Together they equal &minus;6x.}}'
 					),
 			template: 'first', textAnswer: '&minus; 2x <sup>2</sup>  &minus; 6x', 
 			buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>2x <sup>2</sup> &minus; 2x', 
@@ -261,15 +261,15 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>-</span>7m <sup>2</sup> n<sup>2</sup> &minus; 2n<sup>2</sup>', 
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>3mn &minus; 2n'},
 			
-			//problem 13 (-7xy + 7y) – (3xy - 3x + 3y)
+			//problem 13 
 			{prob: dataUtils.pre('\\html{(&minus; 7xy + 7y) &minus; (3xy &minus; 3x + 3y)'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
 					+'{\\html{&nbsp;}}{\\html{&minus; (3xy &minus; 3x + 3y) becomes  &minus; 3xy + 3x &minus; 3y }}'
-					+'{\\html{&nbsp;}}{\\html{(&minus; 7xy + 7y) &minus; (3xy &minus; 3x + 3y) becomes  &minus; 7xy + 7y) &minus; 3xy + 3x &minus; 3y }}{\\html{&nbsp;}}'
-					+'{\\html{\“-7xy\” and \“-3xy\” are like terms because they are both \“xy\” terms. Together they equal -10xy .}}'
+					+'{\\html{&nbsp;}}{\\html{(&minus; 7xy + 7y) &minus; (3xy &minus; 3x + 3y) becomes  (&minus; 7xy + 7y) &minus; 3xy + 3x &minus; 3y }}{\\html{&nbsp;}}'
+					+'{\\html{\“&minus;7xy\” and \“&minus;3xy\” are like terms because they are both \“xy\” terms. Together they equal &minus;10xy .}}'
 					+'{\\html{&nbsp;}}{\\html{\“3x\” is the only \“x\” term; it will stay the same.}}'
-					+'{\\html{&nbsp;}}{\\html{\“7y \” and \“-3y\” are like terms because they are both \“y\” terms. Together they equal 4y.}}'
+					+'{\\html{&nbsp;}}{\\html{\“7y \” and \“&minus;3y\” are like terms because they are both \“y\” terms. Together they equal 4y.}}'
 					),
 			template: 'first', textAnswer: '&minus; 10xy + 3x + 4y', 
 			buttonValueA: 'T', buttonLabelA: '<span class=bigger>-</span>10xy + 3x + 4y', 
@@ -302,7 +302,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 					 +'{\\html{&nbsp;}}'
 					  +'{\\html{&nbsp;}}'
 					 +'{\\grp{\\html{\"}}{\\frac{\\str{4m <sup>2}}{\\str{5}}}{\\html{\and}}{\\html{\"}}{\\sign{-}}{\\frac{\\str{2m<sup>2}}{\\str{3}}}{\\html{\" are like terms }}}'
-					+'{\\grp{\\html{because they are all m <sup>2</sup> terms.}}{\\html{Together they equal}}{\\frac{\\fracstr{2m <sup>2}}{\\fracstr{15}}}}'					 
+					+'{\\grp{\\html{because they are both m <sup>2</sup> terms.}}{\\html{Together they equal}}{\\frac{\\fracstr{2m <sup>2}}{\\fracstr{15}}}}'					 
 					+'{\\html{&nbsp;}}'
 					 +'{\\grp{\\html{\"}}{\\frac{\\str{1 }}{\\str{3}}}{\\html{\and}}{\\html{\"}}{\\sign{-}}{\\frac{\\str{3}}{\\str{4}}}{\\html{\" are like terms}}}'
 					 +'{\\grp{\\html{because they are both have no variable. Together they equal}}{\\frac{\\fracstr{-13 }}{\\fracstr{12}}}}'	
@@ -366,10 +366,10 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 					 +'{\\html{&nbsp;}}'
 					  +'{\\html{&nbsp;}}'
 					 +'{\\grp{\\html{\"}}{\\frac{\\str{a }}{\\str{2}}}{\\html{\and}}{\\html{\"}}{\\sign{-}}{\\frac{\\str{3a}}{\\str{5}}}{\\html{\" are like terms }}}'
-					+'{\\grp{\\html{because they are all \"a\" terms.}}{\\html{Together they equal}}{\\sign{-}}{\\frac{\\fracstr{a }}{\\fracstr{10}}}}'					 
+					+'{\\grp{\\html{because they are both \"a\" terms.}}{\\html{Together they equal}}{\\sign{-}}{\\frac{\\fracstr{a }}{\\fracstr{10}}}}'					 
 					+'{\\html{&nbsp;}}'
 					  +'{\\grp{\\html{\"}}{\\sign{-}}{\\frac{\\str{2b }}{\\str{3}}}{\\html{\and}}{\\html{\"}}{\\frac{\\str{b}}{\\str{7}}}{\\html{\" are like terms }}}'
-					+'{\\grp{\\html{because they are all \"b\" terms.}}{\\html{Together they equal}}{\\sign{-}}{\\frac{\\fracstr{11b }}{\\fracstr{21}}}}'					 
+					+'{\\grp{\\html{because they are both \"b\" terms.}}{\\html{Together they equal}}{\\sign{-}}{\\frac{\\fracstr{11b }}{\\fracstr{21}}}}'					 
 					+'{\\html{&nbsp;}}'	
 					 					
 					),
