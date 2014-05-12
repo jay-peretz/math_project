@@ -1163,12 +1163,16 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 								+'{\\sign{$firstSign}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 								+'{\\sign{$secondSign}}'
 								+'{\\html{(}}{\\sign{$thirdSign}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}{\\html{)}}',
-						answer: '\\rowgrp'+
-									'{\\ins{Choose the expression that is rewritten correctly without any double negatives:}}'+
-									'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
-                                    '{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\html{\xA0$buttonLabelB}}}'+
-                                    '{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\html{\xA0$buttonLabelC}}}'+
-                                    '{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\html{\xA0$buttonLabelD}}}',
+						answer: '\\btngrp'+
+									'{\\rowgrp'+
+										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+										'{\\html{&nbsp;}}'+
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+									'}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -2021,16 +2025,74 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 			{ whole1: 3, num1: 1, den1: 6, whole2: 2, num2: 3, den2: 5, numanswer1: 17, numanswer2: 17, answerDen: 30, numnew1: 19, numnew2: 13, numlcd1: 95, numlcd2: 78, wholeanswer: '',firstSign: '', secondSign: '-',leftParen: '(', rightParen: ')', template: 'fourth' },
 			// problem 6
 			{ whole1: 7, num1: 1, den1: 2, whole2: 4, num2: 3, den2: 4,wholeanswer: '-2', numanswer1: -11, numanswer2: 3, answerDen: 4, numnew1: -15, numnew2: 19, numlcd1: -30, numlcd2: 19, firstSign: '-', secondSign: '-', thirdSign: '-', negFrac: '4 3/4' ,template: 'twoFracDblNeg',
-			buttonValueA: 'T', buttonLabelA: '<span class=bigger>-</span>7 1/2 <span class=bigger>+</span> 4 3/4', 
-            buttonValueB: 'F', buttonLabelB: '<span class=bigger>&nbsp;</span>7 1/2 <span class=bigger>+</span> 4 3/4', 
-            buttonValueC: 'F', buttonLabelC: '<span class=bigger>-</span>7 1/2 <span class=bigger>-</span> 4 3/4', 
-            buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>7 1/2<span class=bigger>-</span> 4 3/4'			},
+			buttonValueA: 'T',
+				buttonLabelA: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{-7}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{4}}'
+												+'{\\frac{\\fracstr{3}}{\\fracstr{4}}}}'
+												),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{7}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{4}}'
+												+'{\\frac{\\fracstr{3}}{\\fracstr{4}}}}'
+												),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{-7}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
+												+'{\\sign{-}}'
+												+'{\\mixed{\\fracstr{4}}'
+												+'{\\frac{\\fracstr{3}}{\\fracstr{4}}}}'
+												),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{7}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
+												+'{\\sign{-}}'
+												+'{\\mixed{\\fracstr{4}}'
+												+'{\\frac{\\fracstr{3}}{\\fracstr{4}}}}'
+												),
+			
+						},
 			// problem 7
 			{ whole1: 1, num1: 2, den1: 9, whole2: 5, num2: 1, den2: 3,wholeanswer: '6', numanswer1: 59, numanswer2: 5, answerDen: 9, numnew1: 11, numnew2: 16, numlcd1: 11, numlcd2: 48, firstSign: '', secondSign: '-', thirdSign: '-', negFrac: '5 1/3' ,template: 'twoFracDblNeg',
-			buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span><span class=bigger>1</span> 2/9<span class=bigger>-</span> <span class=bigger>5</span> 1/3', 
-            buttonValueB: 'T', buttonLabelB: '<span class=bigger>&nbsp;</span><span class=bigger>1</span> 2/9 <span class=bigger>+</span> <span class=bigger>5</span> 1/3', 
-            buttonValueC: 'F', buttonLabelC: '<span class=bigger>-</span><span class=bigger>1</span> 2/9 <span class=bigger>+</span> <span class=bigger>5</span> 1/3', 
-            buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span><span class=bigger>1</span> 2/9<span class=bigger>-</span> <span class=bigger>5</span> 1/3'			},
+			buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{-1}}'
+												+'{\\frac{\\fracstr{2}}{\\fracstr{9}}}}'
+												+'{\\sign{-}}'
+												+'{\\mixed{\\fracstr{5}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{3}}}}'
+												),
+				buttonValueB: 'T',
+				buttonLabelB: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{1}}'
+												+'{\\frac{\\fracstr{2}}{\\fracstr{9}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{5}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{3}}}}'
+												),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{-1}}'
+												+'{\\frac{\\fracstr{2}}{\\fracstr{9}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{5}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{3}}}}'
+												),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\grp'
+												+'{\\mixed{\\fracstr{1}}'
+												+'{\\frac{\\fracstr{2}}{\\fracstr{9}}}}'
+												+'{\\sign{-}}'
+												+'{\\mixed{\\fracstr{5}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{3}}}}'
+												),		},
 			// problem 8
 			{ whole1: 12, num1: 1, den1: 2, whole2: 20, num2: 1, den2: 3,wholeanswer: '-7', numanswer1: -47, numanswer2: 5, answerDen: 6, numnew1: 25, numnew2: 61, numlcd1: 75, numlcd2: 122, firstSign: ' ', template: 'main' },
 			// problem 9
@@ -2086,33 +2148,42 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 												+'{\\frac{\\fracstr{1}}{\\fracstr{5}}}}'
 												+'{\\sign{-}}'
 												+'{\\mixed{\\fracstr{3}}'
-												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'),
+												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{2}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'),
 				buttonValueB: 'T',
 				buttonLabelB: dataUtils.pre('\\grp'
 												+'{\\mixed{\\fracstr{-1}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{5}}}}'
 												+'{\\sign{+}}'
 												+'{\\mixed{\\fracstr{3}}'
-												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'),
+												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{2}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'),
 				buttonValueC: 'F',
 				buttonLabelC: dataUtils.pre('\\grp'
 												+'{\\mixed{\\fracstr{1}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{5}}}}'
 												+'{\\sign{+}}'
 												+'{\\mixed{\\fracstr{3}}'
-												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'),
+												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'
+												+'{\\sign{+}}'
+												+'{\\mixed{\\fracstr{2}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'),
 				buttonValueD: 'F',
 				buttonLabelD: dataUtils.pre('\\grp'
 												+'{\\mixed{\\fracstr{1}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{5}}}}'
 												+'{\\sign{+}}'
 												+'{\\mixed{\\fracstr{3}}'
-												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'),
+												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'
+												+'{\\sign{-}}'
+												+'{\\mixed{\\fracstr{2}}'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'),
 			
-			buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>1 1/5 <span class=bigger>-</span>3 1/10 <span class=bigger>+</span>2 1/2', 
-            buttonValueB: 'T', buttonLabelB: '<span class=bigger>-</span>1 1/5 <span class=bigger>+</span>3 1/10 <span class=bigger>+</span>2 1/2', 
-            buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>1 1/5 <span class=bigger>+</span>3 1/10 <span class=bigger>+</span>2 1/2', 
-            buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>1 1/5 <span class=bigger>+</span>3 1/10 <span class=bigger>-</span>2 1/2' },
+			},
 			// problem 12
 			{ whole1: 1, num1: 3, den1: '\xA08\xA0', whole2: 1, num2: 1, den2: 6, whole3: 2, num3: 3, den3: '\xA04\xA0', wholeanswer1: 5, numanswer1: 5, answerDen: 24, numnew1: 11, numnew2:7, numnew3: 11, numanswer2: 5, numlcd1: 33, numlcd2: 28, numlcd3: 66, sign1: '-', sign2: '-' , sign3: '+', negFrac: '2 1/2', template: 'third' }
         ];
