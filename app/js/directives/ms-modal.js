@@ -11,6 +11,11 @@ angular.module('mathSkills')
                     function ($rootScope, $scope) {
                         $rootScope.$on('showModalText', function (e, data) {
                             $scope.modalText = data.modalText;
+							if (typeof data.modalClass !== "undefined") {
+								$scope.modalClass = data.modalClass;
+							} else {
+								$scope.modalClass = "modalUpperRight";
+							}
 							$("#indexModal").modal({  
 							  //backdrop: false  
 							});
@@ -23,7 +28,7 @@ angular.module('mathSkills')
                     label: '@'
                 },
                 template: '<div>'+
-								'<div id="indexModal" class="modal hide fade in" role="dialog" aria-hidden="true" data-backdrop="false" ng-show=showModal>'+  
+								'<div id="indexModal" class="modal hide" role="dialog" aria-hidden="true" data-backdrop="false" ng-show=showModal ng-class=modalClass>'+  
 									'<div class="modal-body">'+  
 									'<ms-expression expected={{modalText}}></ms-expression>'+
 									'</div>'+ 

@@ -12,7 +12,6 @@
 @import 'directives/ms-group.css';
 @import 'directives/ms-input.css';
 @import 'directives/ms-image.css';
-@import 'directives/ms-modal.css';
 @import 'directives/ms-order-operations.css';
 @import 'directives/ms-order-operations-simple.css';
 @import 'directives/ms-placevalue.css';
@@ -55,6 +54,15 @@
 .control-group.error select,
 .control-group.error textarea {
     background: rgb(185, 74, 72);
+}
+
+.modalUpperRight{
+	top: 20%;
+    left: 74%; 
+}
+.modalMiddleLeft {
+    top: 50%;
+	left:20%;
 }
 
 /* Animations */

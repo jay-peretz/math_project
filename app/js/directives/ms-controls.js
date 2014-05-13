@@ -152,9 +152,16 @@ angular.module('mathSkills')
 									problemData.addData(true, 'modalText');
 									
 									$scope.openModal = function () {
-										$scope.$emit('showModalText', {
-                                            modalText: $scope.data.modalText
-                                        });
+										if (typeof $scope.data.modalClass !== "undefined") {
+											$scope.$emit('showModalText', {
+												modalText: $scope.data.modalText,
+												modalClass: $scope.data.modalClass
+											});
+										} else {
+											$scope.$emit('showModalText', {
+												modalText: $scope.data.modalText
+											});
+										}
 									};
 								
 								} else {
