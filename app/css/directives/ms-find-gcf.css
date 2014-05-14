@@ -11,7 +11,7 @@ ms-find-gcf .noborder .dividend {
     border: none;
 }
 ms-find-gcf .divisor {
-    padding: 10px 20px 0 0;
+    padding: 10px 0 0 0;
 }
 ms-find-gcf input {
     width: 40px;
