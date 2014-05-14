@@ -3,7 +3,7 @@
 angular.module('mathSkills').filter('enlargeOps', function () {
     return function (input) {
         return typeof input === 'string' ?
-            input.replace(/[\*\/]/g, function (char) {
+            input.replace(/[\*\/\+\-\x]/g, function (char) {
                 switch (char) {
                     case '*': return '<span class=bigger>&bull;</span>';
 					case 'x': return '<span class=bigger>&bull;</span>';

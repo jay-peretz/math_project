@@ -1165,6 +1165,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 								+'{\\html{(}}{\\sign{$thirdSign}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}{\\html{)}}',
 						answer: '\\btngrp'+
 									'{\\rowgrp'+
+									'{\\ins{Choose the expression that is rewritten correctly without any double negatives:}}'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 										'{\\html{&nbsp;}}'+
 										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
@@ -1450,6 +1451,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 								+'{\\html{(}}{\\sign{$fifthSign}}{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}{\\html{)}}',
 						answer: '\\btngrp'+
 									'{\\rowgrp'+
+									'{\\ins{Choose the expression that is rewritten correctly without any double negatives:}}'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 										'{\\html{&nbsp;}}'+
 										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
@@ -2099,7 +2101,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 			{ whole1: 10, num1: 2, den1: 5, whole2: 8, num2: 1, den2: 4, wholeanswer: '-18', numanswer1: -373, numanswer2: 13, answerDen: 20, numnew1: -52, numnew2: 33, numlcd1: -208, numlcd2: 165, firstSign: '-', secondSign: '+', thirdSign: '-',template: 'tenth' },
 			// problem 10
 			{ whole1: 3, num1: 1, den1: '\xA02\xA0', whole2: 1, num2: 1, den2: 4, whole3: 2, num3: 2, den3: '\xA03\xA0', wholeanswer1: -4, numanswer1: -59, answerDen: 12, answer1Den: 12, numnew1: 7, numnew2: 5, numnew3: 8, numanswer2: 11, numlcd1: 42, numlcd2: 15, numlcd3: 32,firstSign: '-', secondSign: '-', thirdSign: '-', fourthSign: '+', fifthSign: '-', sign1: '-', sign2: '+' , sign3: '-', negFrac: '1 1/4', template: 'threeFracDblNeg', 
-			buttonValueA: 'T',
+			buttonValueA: 'F',
 				buttonLabelA: dataUtils.pre('\\grp'
 												+'{\\mixed{\\fracstr{-3}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
@@ -2129,7 +2131,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 												+'{\\sign{+}}'
 												+'{\\mixed{\\fracstr{2}}'
 												+'{\\frac{\\fracstr{2}}{\\fracstr{3}}}}'),
-				buttonValueD: 'F',
+				buttonValueD: 'T',
 				buttonLabelD: dataUtils.pre('\\grp'
 												+'{\\mixed{\\fracstr{-3}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
