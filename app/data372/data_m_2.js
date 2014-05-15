@@ -1163,8 +1163,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 								+'{\\sign{$firstSign}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 								+'{\\sign{$secondSign}}'
 								+'{\\html{(}}{\\sign{$thirdSign}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}{\\html{)}}',
-						answer: '\\btngrp'+
-									'{\\rowgrp'+
+						answer: '\\rowgrp'+
 									'{\\ins{Choose the expression that is rewritten correctly without any double negatives:}}'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 										'{\\html{&nbsp;}}'+
@@ -1172,8 +1171,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										'{\\html{&nbsp;}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
 										'{\\html{&nbsp;}}'+
-										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
-									'}',
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -1449,8 +1447,8 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 								+'{\\html{(}}{\\sign{$thirdSign}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}{\\html{)}}'
 								+'{\\sign{$fourthSign}}'
 								+'{\\html{(}}{\\sign{$fifthSign}}{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}{\\html{)}}',
-						answer: '\\btngrp'+
-									'{\\rowgrp'+
+						answer: 
+									'\\rowgrp'+
 									'{\\ins{Choose the expression that is rewritten correctly without any double negatives:}}'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 										'{\\html{&nbsp;}}'+
@@ -1458,8 +1456,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										'{\\html{&nbsp;}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
 										'{\\html{&nbsp;}}'+
-										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
-									'}',
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'

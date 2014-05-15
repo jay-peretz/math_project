@@ -36,8 +36,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '$prob',
-						answer: '\\btngrp'+
-									'{\\rowgrp'+
+						answer: '\\rowgrp'+
 									'{\\ins{Choose the right answer:}}'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 										'{\\html{&nbsp;}}'+
@@ -45,8 +44,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 										'{\\html{&nbsp;}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
 										'{\\html{&nbsp;}}'+
-										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
-									'}',
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}',
                        controls: {
                     	   "checkAnswer": true,
                     	   "help": '\\rowgrp'
