@@ -98,9 +98,9 @@ angular.module('mathSkills').service('data_w_1', ['dataUtils', function (dataUti
 			{prob: dataUtils.pre('\\rowgrp{\\grp{\\html{Identify the coefficient, the variable(s), and the degree of the following term: }}}{\\html{&nbsp;}}{\\grp{\\frac{\\fracstr{x}}{\\fracstr{7}}}}{\\html{&nbsp;}}{\\grp{\\html{If there is no variable, write \"none\".}}}'),
 			val1: dataUtils.pre('\\frac{\\input{1}}{\\input{7}}'), 
 			val2: dataUtils.pre('\\input{x}'),
-			val3: dataUtils.pre('\\input{3}'),
+			val3: dataUtils.pre('\\input{1}'),
 			template: 'first',
-			help: dataUtils.pre('\\rowgrp{\\grp{\\html{For the term of }}{\\frac{\\fracstr{x}}{\\fracstr{7}}}{\\html{:}}}{\\html{&nbsp;}}{\\html{Because there is an \"invisible\" 1 in front of the x, the term <sup>x</sup>&#8260;<sub>7</sub> can also be written as <sup>1</sup>&#8260;<sub>7</sub> * &nbsp;x.  The variable of x also has an \"invisible\" exponent of 1. Therefore:}}{\\html{&nbsp;}}{\\grp{\\html{The coefficient:}}{\\frac{\\fracstr{1}}{\\fracstr{7}}}}{\\html{&nbsp;}}{\\html{The variable:  x}}{\\html{&nbsp;}}{\\html{The degree:  3}}')
+			help: dataUtils.pre('\\rowgrp{\\grp{\\html{For the term of }}{\\frac{\\fracstr{x}}{\\fracstr{7}}}{\\html{:}}}{\\html{&nbsp;}}{\\html{Because there is an \"invisible\" 1 in front of the x, the term <sup>x</sup>&#8260;<sub>7</sub> can also be written as <sup>1</sup>&#8260;<sub>7</sub> <font size = 4>&bull;</font> x.  The variable of x also has an \"invisible\" exponent of 1. Therefore:}}{\\html{&nbsp;}}{\\grp{\\html{The coefficient:}}{\\frac{\\fracstr{1}}{\\fracstr{7}}}}{\\html{&nbsp;}}{\\html{The variable:  x}}{\\html{&nbsp;}}{\\html{The degree:  3}}')
 			},
 			
 			// problem 8
