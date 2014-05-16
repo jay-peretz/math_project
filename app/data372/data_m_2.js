@@ -1201,6 +1201,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 											+'{\\html{(}}'
 											+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}{\\html{)}}'
 										+'}'
+										+'{\\html{&nbsp;}}'
 										+'{\\ins{Convert the mixed numbers to improper fractions:}}'
 										+'{\\grp'
 										+'{\\sign{$firstSign}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
