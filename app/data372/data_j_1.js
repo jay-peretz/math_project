@@ -227,7 +227,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
                 button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 0.2}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{\xA0 \xA0 3}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{\xA0 \xA0 2}}'),
                 button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 1}}'),
                 button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
                 val1: '-1', val2: '-11', val3: '3'
@@ -258,15 +258,15 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
             },
             //problem 15
             {   
-                chart1: dataUtils.pre('\\graphnum{-3}{3}{1}{4}{ [[-0.5, 0], [0.875, 0], [-2.875, 0]] }{chart1}'),
-                chart2: dataUtils.pre('\\graphnum{-3}{3}{1}{4}{ [[-0.5, 0], [0.875, 0], [-2.875, 0]] }{chart2}'),
+                chart1: dataUtils.pre('\\graphnum{-3}{3}{1}{4}{ [[-0.5, 0], [1.25, 0], [-2.5, 0]] }{chart1}'),
+                chart2: dataUtils.pre('\\graphnum{-3}{3}{1}{4}{ [[-0.5, 0], [1.25, 0], [-2.5, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
                 button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 1.25}}'),
                 button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 -0.5}}'),
                 button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
                 button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{\xA0 \xA0 0.25}}'),
-                val1: '-0.5', val2: '0.875', val3: '-2.875'
+                val1: '-0.5', val2: '1.25', val3: '-2.5'
             },
           //problem 16
             {   
