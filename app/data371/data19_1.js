@@ -22,7 +22,7 @@ angular.module('mathSkills').service('data19_1', ['dataUtils', function (dataUti
 							"checkAnswer": true,
 							"help": '\\rowgrp'
 							+'{\\row{\\frac{\\str{$fractionNum}}{\\str{$fractionDen}}}'
-							+'{\\css{\\html{&times;}}{bigger}}{\\str{\xA0 100}}'
+							+'{\\css{\\html{&bull;}}{bigger}}{\\str{\xA0 100}}'
 							+'{\\sign{\xA0 = \xA0}}'
 							+'{\\str{$answerPercent}}{\\str{%}}}'
 							+'{\\row{\\html{&nbsp;}}}'
