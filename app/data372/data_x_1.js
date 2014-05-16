@@ -74,7 +74,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 			{prob: dataUtils.pre('\\html{&minus;5x &minus; 7x}'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{We can only combine \"like terms.\"}}{\\html{&nbsp;}}'
-					+'{\\html{\"5x\" and \"-7x\" are like terms because they are both x<sup>1</sup> terms.}}'
+					+'{\\html{\"-5x\" and \"-7x\" are like terms because they are both x<sup>1</sup> terms.}}'
 					+'{\\html{&nbsp;}}{\\html{Combine the coefficients: &minus;5 &minus; 7 = &minus;12}}'),
 			template: 'first', textAnswer: '&minus;12x', buttonValueA: 'T', buttonLabelA: '<span class=bigger>-</span>12x', 
             buttonValueB: 'F', buttonLabelB: '<span class=bigger>&nbsp;</span>12x', 
@@ -139,7 +139,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>9r'},
 			
 			// problem 6
-			{prob: dataUtils.pre('\\html{&minus;2xy +(&minus;7xy)&minus; (3xy)}'),
+			{prob: dataUtils.pre('\\html{&minus;2xy + (&minus;7xy) &minus; (3xy)}'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{We can only combine \"like terms.\"}}'
 					+'{\\html{&nbsp;}}{\\html{\"&minus; 2xy\" and \"&minus; 7xy\" and \"&minus; 3xy\" are like terms }}'
@@ -235,7 +235,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
 					+'{\\html{&nbsp;}}{\\html{&minus; (6x <sup>2</sup> + 2x ) becomes  &minus; 6x <sup>2</sup> &minus; 2x }}'
 					+'{\\html{&nbsp;}}{\\html{(4x <sup>2</sup> &minus; 4x) &minus; (6x <sup>2</sup> + 2x) becomes  (4x <sup>2</sup> &minus; 4x) &minus; 6x<sup>2</sup> &minus; 2x}}{\\html{&nbsp;}}'
-					+'{\\html{\“4x <sup>2</sup>\” and \“&minus;6x <sup>2</sup>\” are like terms because they are both \“x\” terms. Together they equal &minus;2x <sup>2</sup>.}}'
+					+'{\\html{\“4x <sup>2</sup>\” and \“&minus;6x <sup>2</sup>\” are like terms because they are both \“x<sup>2</sup>\” terms. Together they equal &minus;2x <sup>2</sup>.}}'
 					+'{\\html{&nbsp;}}{\\html{\“&minus;4x \” and \“&minus;2x\” are like terms because they are both \“x\” terms. Together they equal &minus;6x.}}'
 					),
 			template: 'first', textAnswer: '&minus; 2x <sup>2</sup>  &minus; 6x', 
@@ -303,7 +303,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 					+'{\\grp{\\html{because they are both m <sup>2</sup> terms.}}{\\html{Together they equal}}{\\frac{\\fracstr{2m <sup>2}}{\\fracstr{15}}}}'					 
 					+'{\\html{&nbsp;}}'
 					 +'{\\grp{\\html{\"}}{\\frac{\\str{1 }}{\\str{3}}}{\\html{\and}}{\\html{\"}}{\\sign{-}}{\\frac{\\str{3}}{\\str{4}}}{\\html{\" are like terms}}}'
-					 +'{\\grp{\\html{because they are both have no variable. Together they equal}}{\\frac{\\fracstr{-13 }}{\\fracstr{12}}}}'	
+					 +'{\\grp{\\html{because they both have no variable. Together they equal}}{\\frac{\\fracstr{-13 }}{\\fracstr{12}}}}'	
 					 					
 					),
 			template: 'second', 
