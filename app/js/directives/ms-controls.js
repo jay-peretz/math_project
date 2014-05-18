@@ -185,6 +185,8 @@ angular.module('mathSkills')
                         $scope.$on('setAnswerBtn', function (e, data, flag) {
 							if ($scope.stepwiseNextProblem === true) {
                                      data = 'Next Problem';
+							} else if ($scope.stepwiseNextProblem === "Check Answer") {
+								 	 data = 'Check Answer';
 							}
                             anwserbtn(data);
                             /*if(flag !== false) {

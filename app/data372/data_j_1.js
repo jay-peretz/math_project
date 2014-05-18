@@ -34,7 +34,8 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
                             //"nextProblem": true,
-							"help": true
+							"help": true,
+							"stepwiseNextProblem": "Check Answer"
 						}
 					}]
                 }]
