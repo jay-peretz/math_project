@@ -2,6 +2,7 @@
 
 angular.module('mathSkills').filter('enlargeOps', function () {
     return function (input) {
+		// regex \.(?=\d) is a decimal/period with look-ahead for next-character digit
         return typeof input === 'string' ?
             input.replace(/[\*\/\+\-\=]/g, function (char) {
                 switch (char) {
@@ -12,7 +13,7 @@ angular.module('mathSkills').filter('enlargeOps', function () {
 					case '-': return '<span class=bigger>&#45;</span>';
 					case '=': return '<span class=bigger>=</span>';
                 }
-            }) :
+            }).replace(/\.(?=\d)/g,'<span class=decimalNoPadding>.</span>') :
             input;
     };
 });
