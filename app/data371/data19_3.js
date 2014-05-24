@@ -180,7 +180,7 @@ angular.module('mathSkills').service('data19_3', ['dataUtils', function (dataUti
 			// problem 2
             { decimalPercent: '44', answerNum: '11', answerDen: '25', helpNum: '44', helpDen: '100', template: 'main' },	
 			// problem 3
-            { decimalPercent: '35', answerNum: '7', answerDen: '25', helpNum: '35', helpDen: '100', template: 'main' },
+            { decimalPercent: '35', answerNum: '7', answerDen: '20', helpNum: '35', helpDen: '100', template: 'main' },
 			// problem 4
             { problemWhole: '83', problemNum: '1', problemDen: '3', answerNum: '5', answerDen: '6', helpNum: '250', helpDen: '300', template: 'second' },
 			// problem 5

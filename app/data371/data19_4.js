@@ -153,7 +153,7 @@ angular.module('mathSkills').service('data19_4', ['dataUtils', function (dataUti
 			// problem 7
 			{ problemWhole: '12', problemNum: '1', problemDen: '2', decimalPercent: '12.5', decimal: '0.125',  answerNum: '1', answerDen: '8', helpNum: '125', helpDen: '1000', outLoud: 'one hundred twenty-five thousandths', template: 'second' },
 			// problem 8
-			{ problemWhole: '&nbsp;', problemNum: '7', problemDen: '8', decimalPercent: '0.875', decimal: '0.00875',  answerNum: '7', answerDen: '800', helpNum: '875', helpDen: '100000', outLoud: 'eight hundred seventy-five hundred-thousandths', template: 'second' },
+			{ problemWhole: '20', problemNum: '7', problemDen: '10', decimalPercent: '20.7', decimal: '0.207',  answerNum: '207', answerDen: '1000', helpNum: '207', helpDen: '1000', outLoud: 'two hundred seven thousandths', template: 'second' },
 			// problem 9
 			{ problemWhole: '&nbsp;', problemNum: '2', problemDen: '5', decimalPercent: '0.4', decimal: '0.004',  answerNum: '1', answerDen: '250', helpNum: '4', helpDen: '1000', outLoud: 'four thousandths', template: 'second' },
 			// problem 10
