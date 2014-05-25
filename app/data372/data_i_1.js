@@ -2,54 +2,129 @@
 
 angular.module('mathSkills').service('data_i_1', ['dataUtils', function (dataUtils) {
     var desc = {
-            title: 'I.1 Fractions to Decimals | Decimals to Fractions',
-            path: 'I.1-fractions-decimals',
+            title: 'I.1 Conversions Between Decimals & Fractions/Mixed Numbers',
+            path: 'I.1-conversions-between-decimals-and-fractions-or-mixed-numbers',
             children: []
         },
         template = {
-            ftd: {
-				title: 'Change Fractions to Decimals',
-				children: [{
-					title: 'Main Answer',
-					children: [{
-						problem: '\\rowgrp{\\row{\\str{Change \xA0}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{\\str{\xA0 to a decimal;}}}{\\row{\\str{\xA0}}}{\\row{\\str{Round to the hundredths place if necessary.}}}',
-						answer: '\\input{$dec}',
+			equivFracValueReduce: {
+                title: 'Conversions Between Decimals & Fractions/Mixed Numbers',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                         problem: '\\rowgrp{\\grp{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\grp{\\str{$decimal}}}',
+						answer: '\\mixed{\\input{$answerWhole}}{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\row{\\str{$n1}}{\\str{\xA0 divided by \xA0}}{\\str{$d1}}{\\str{\xA0 equals \xA0}}{\\str{$udec ...}}}{\\row{\\str{$udec ...}}{\\str{ rounded to the hundredths place  }}{\\str{\xA0 equals \xA0}}{\\str{$dec}}}{\\row{\\str{\xA0}}}{\\css{\\row{\\str{Answer:  $dec}}}{help-answer-text help-answer-margin-right}}}}'
-		
+							"help": '\\rowgrp'
+							+'{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}'
+							+'{\\grp{\\mixed{\\str{$helpWhole}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}'
+							+'{\\sign{\xA0 \xA0 = \xA0 \xA0}}'
+							+'{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}'
+							+'{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
+							+'{css{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}{help-answer-text-tight}}'
+                		}
+                    }]
+                }]
+            },
+			equivFracValueNoReduce: {
+                title: 'Conversions Between Decimals & Fractions/Mixed Numbers',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                         problem: '\\rowgrp{\\grp{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\grp{\\str{$decimal}}}',
+						answer: '\\mixed{\\input{$answerWhole}}{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}'
+							+'{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}'
+							+'{\\html{&nbsp;}}'
+							+'{css{\\grp{\\str{Answer: \xA0 \xA0}}{\\mixed{\\str{$answerWhole}}{\\frac{\\fracstr{$answerNum}}{\\fracstr{$answerDen}}}}}{help-answer-text}}'
+                		}
+                    }]
+                }]
+            },
+			equivDecValueProper: {
+                title: 'Conversions Between Decimals & Fractions/Mixed Numbers',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+									+'{\\str{Write the equivalent decimal value of this fraction$roundText:}}'
+									+'{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}',
+						answer: '\\grp{\\input{$answerDecimal}}',						
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+										+'{\\str{Divide the numerator of the fraction by the denominator.}}'
+										+'{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}'
+										+'{\\grp'
+											+'{\\str{the fraction \xA0}}'
+											+'{\\frac{\\str{$fractionNum}}{\\str{$fractionDen}}}'
+											+'{\\str{\xA0 means \xA0 $fractionNum }}'
+											+'{\\sign{\xF7}}'
+											+'{\\str{\xA0 $fractionDen}}'
+										+'}'
+										+'{\\str{$additionalRoundText}}'
+										+'{\\css{\\str{\xA0 Answer: \xA0 $answerDecimal}}{help-answer-text}}'
 						}
-            }]
-        }]
-    },
-	dtf: {
-        title: 'Change Decimals to Fractions',
-        children: [{
-            title: 'Main Answer',
-            children: [{
-                problem: '\\rowgrp{\\row{\\str{What is the fraction of this decimal (reduced to lowest terms)?}}}{\\row{\\str{$udec}}}',
-                answer: '\\frac{\\input{$n1}}{\\input{$d1}}',
-                controls: {
-                    "checkAnswer": true,
-                    "help": '\\rowgrp{\\row{\\str{Write the place value name as a fraction;}}}{\\row{\\str{reduce if necessary.}}}{\\row{\\str{\xA0}}}{\\row{\\frac{\\fracstr{$un1}}{\\fracstr{$ud1}}}{\\str{ \xA0 \xA0 = \xA0 \xA0 }}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}{css{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}{help-answer-text-tight}}}'
-                }
-            }]
-        }]
-    }
-	},
+                    }]
+                }]
+            },
+			equivDecValueImproper: {
+                title: 'Conversions Between Decimals & Fractions/Mixed Numbers',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+									+'{\\str{Write the equivalent decimal value of this fraction$roundText:}}'
+									+'{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}',
+						answer: '\\grp{\\input{$answerDecimal}}',						
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+										+'{\\str{Divide the numerator of the fraction by the denominator.}}'
+										+'{\\grp'
+											+'{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}'
+											+'{\\sign{\xA0 \xA0 = \xA0 \xA0}}'
+											+'{\\frac{\\fracstr{$helpNum}}{\\fracstr{$fractionDen}}}'
+										+'}'
+										+'{\\grp'
+											+'{\\str{the fraction \xA0}}'
+											+'{\\frac{\\fracstr{$helpNum}}{\\fracstr{$fractionDen}}}'
+											+'{\\str{\xA0 means \xA0 $helpNum / \xA0 $fractionDen}}'
+										+'}'
+										+'{\\str{$additionalRoundText}}'
+										+'{\\css{\\str{\xA0 Answer: \xA0 $answerDecimal}}{help-answer-text}}'
+						}
+                    }]
+                }]
+            }
+        },
         data = [
-            { n1: 6, d1: 9, dec: .67, udec: .666, template: 'ftd'},
-			{ n1: 3, d1: 9, dec: .33, udec: .333, template: 'ftd'},
-            { n1: 1, d1: 5, dec: .2, udec: .2, template: 'ftd'},
-			{ n1: 1, d1: 8, dec: .13, udec: .125, template: 'ftd'},
-			{ n1: 5, d1: 12, dec: .42, udec: .41666, template: 'ftd'},
-			{ n1: 17, d1: 25,  udec: .68, un1: 68, ud1: 100, template: 'dtf'},
-			{ n1: 23, d1: 50,  udec: .455, un1: 46, ud1: 100, template: 'dtf'},
-			{ n1: 37, d1: 100,  udec: .37, un1: 37, ud1: 100, template: 'dtf'},
-			{ n1: 12, d1: 50,  udec: .236, un1: 24, ud1: 100, template: 'dtf'},
-			{ n1: 4, d1: 5,  udec: .796, un1: 80, ud1: 100, template: 'dtf'}
-			         
+			// problem 1
+            { decimal: '0.3', answerWhole: '', answerNum: 3, answerDen: 10, helpWhole: '', helpNum: 3, helpDen: 10, template: 'equivFracValueNoReduce' },
+			// problem 2
+            { decimal: '0.48', answerWhole: "", answerNum: 12, answerDen: 25, helpWhole: "", helpNum: 48, helpDen: 100, template: 'equivFracValueReduce' },
+			// problem 3
+            { decimal: '0.005', answerWhole: '', answerNum: 1, answerDen: 200, helpWhole: '', helpNum: 5, helpDen: 1000, template: 'equivFracValueReduce' },
+			// problem 4
+            { decimal: '8.25', answerWhole: 8, answerNum: 1, answerDen: 4, helpWhole: 8, helpNum: 25, helpDen: 100, template: 'equivFracValueReduce' },
+			// problem 5
+            { decimal: '20.375', answerWhole: 20, answerNum: 3, answerDen: 8, helpWhole: 20, helpNum: 375, helpDen: 1000, template: 'equivFracValueReduce' },
+			// problem 6
+           	{ fractionWhole: '', fractionNum: '4', fractionDen: '5', answerDecimal: '0.8', roundText: '', additionalRoundText: '', template: 'equivDecValueProper' },
+			// problem 7
+			{ fractionWhole: '', fractionNum: '2', fractionDen: '3', answerDecimal: '0.67', roundText: ' (round the decimal answer to the hundredths place)', additionalRoundText: '<br>2 / 3 = .666... <br><br>Rounding .666... to the hundredths place:<br><br>', template: 'equivDecValueProper' },
+			// problem 8
+			{ fractionWhole: '', fractionNum: '7', fractionDen: '8', answerDecimal: '0.875', roundText: '', additionalRoundText: '', template: 'equivDecValueProper' },
+			// problem 9
+            { fractionWhole: '5', fractionNum: '3', fractionDen: '4', helpNum: '23', answerDecimal: '5.75', roundText: '', additionalRoundText: '', template: 'equivDecValueImproper' },
+			// problem 10
+            { fractionWhole: '4', fractionNum: '5', fractionDen: '6', helpNum: '29',  answerDecimal: '4.83', roundText: ' (round the decimal answer to the hundredths place)', additionalRoundText: 'Rounding 4.833... to the hundredths place:<br><br>', template: 'equivDecValueImproper' }
         ];
-
+		
     return dataUtils.build(desc, template, data);
+	
 }]);
