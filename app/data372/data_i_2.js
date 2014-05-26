@@ -185,7 +185,7 @@ angular.module('mathSkills').service('data_i_2', ['dataUtils', function (dataUti
 			// problem 11
 			{ startNumber: '165', decimalPercent: '1.65', template: 'percentToDecimal'  },
 			// problem 12
-			{ startNumber: '100', decimalPercent: '[\\"1\\",\\"1.0\\"]', template: 'percentToDecimal'  },
+			{ startNumber: '100', decimalPercent: '1', template: 'percentToDecimal'  },
 			// problem 13
             { decimalPercent: '12.5', decimal: '0.125', answerNum: '1', answerDen: '8', helpNum: '125', helpDen: '1000', outLoud: 'one hundred twenty-five thousandths', template: 'percentToFraction' },
 			// problem 14
