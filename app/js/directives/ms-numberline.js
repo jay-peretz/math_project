@@ -190,37 +190,40 @@ angular.module('mathSkills')
 						
 						if($scope.num.valA === $scope.plotX && $scope.num.valB === $scope.plotY && $scope.num.valC === $scope.plotZ ){
 							data.result = "correct";
-          					$scope.errorclassX="success";
-          					$scope.errorclassY="success";
-          					$scope.errorclassZ="success";	
+          					$scope.statusClassX="success";
+          					$scope.statusClassY="success";
+          					$scope.statusClassZ="success";	
 							} 
 						else {
                             e.preventDefault();
 							
 							if($scope.num.valA !== $scope.plotX ) {
-          						$scope.errorclassX="error";
+          						$scope.statusClassX="error";
 							} else {
-								$scope.errorclassX="success";
+								$scope.statusClassX="success";
 							}
           					
           					if($scope.num.valB !== $scope.plotY ) {
-          						$scope.errorclassY="error";
+          						$scope.statusClassY="error";
 							} else {
-								$scope.errorclassY="success";
+								$scope.statusClassY="success";
 							}	
           				
           					if($scope.num.valC !== $scope.plotZ ) {
-          						$scope.errorclassZ="error";
+          						$scope.statusClassZ="error";
 							} else {
-								$scope.errorclassZ="success";
+								$scope.statusClassZ="success";
 							}
 								
 						}
 						$timeout(function(){
-							$scope.errorclassX="";
-							$scope.errorclassY="";
-							$scope.errorclassZ="";
-						},1000);
+							if($scope.statusClassX !== "success")
+								$scope.statusClassX = "";
+							if($scope.statusClassY !== "success")
+								$scope.statusClassY = "";
+							if($scope.statusClassZ !== "success")
+								$scope.statusClassZ = "";
+						},1200);
 						
                     });
                    
