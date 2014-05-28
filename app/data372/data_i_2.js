@@ -2,7 +2,7 @@
 
 angular.module('mathSkills').service('data_i_2', ['dataUtils', function (dataUtils) {
     var desc = {
-            title: 'I.2 Conversions Between Percents & Decimals',
+            title: 'I.2 Conversions Between Percents and Decimals',
             path: 'i.2-conversions-between-percents-and-decimals',
             children: []
         },
