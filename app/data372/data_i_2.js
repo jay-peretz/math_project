@@ -2,8 +2,8 @@
 
 angular.module('mathSkills').service('data_i_2', ['dataUtils', function (dataUtils) {
     var desc = {
-            title: 'I.2 Decimals to Percent | Percent to Decimals',
-            path: 'I.2-decimals-percent',
+            title: 'I.2 Conversions Between Percents & Decimals',
+            path: 'i.2-conversions-between-percents-and-decimals',
             children: []
         },
         template = {

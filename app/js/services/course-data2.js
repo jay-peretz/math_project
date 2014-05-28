@@ -4,7 +4,7 @@
 angular.module('mathSkills.services')
     .service('courseData', [
         'data_a_1', 'data_b_1','data_c_1','data_c_2','data_d_1','data_e_1','data_e_2','data_e_3','data_e_4',
-		'data_f_1', 'data_g_1','data_g_2','data_g_3','data_h_1','data_h_2','data_i_1','data_i_2','data_i_3',
+		'data_f_1', 'data_g_1','data_g_2','data_g_3','data_h_1','data_h_2','data_i_1','data_i_2','data_i_3','data_i_4',
 		'data_k_1', 'data_k_2','data_k_3','data_l_1','data_l_2','data_m_1','data_m_2','data_m_3','data_n_1',
 		'data_j_1', 'data_o_1_1', 'data_o_2_1', 'data_o_2_2', 'data_p_1', 'data_q_1','data_r_1',
 		'data_s_1', 'data_s_2', 'data_s_3', 'data_s_4',
@@ -13,7 +13,7 @@ angular.module('mathSkills.services')
 		'data_aa_2',  'data_bb_1',  'data_cc_1',  'data_dd_1',  'data_dd_2',   'data_ee_1',
         function (
             data_a_1, data_b_1, data_c_1, data_c_2, data_d_1, data_e_1, data_e_2, data_e_3, data_e_4,
-			data_f_1, data_g_1, data_g_2, data_g_3, data_h_1, data_h_2, data_i_1, data_i_2,data_i_3,
+			data_f_1, data_g_1, data_g_2, data_g_3, data_h_1, data_h_2, data_i_1, data_i_2,data_i_3,data_i_4,
 			data_k_1, data_k_2, data_k_3, data_l_1, data_l_2, data_m_1, data_m_2, data_m_3, data_n_1,
 			data_j_1, data_o_1_1,data_o_2_1,data_o_2_2, data_p_1,data_q_1,data_r_1,
 			data_s_1,data_s_2,data_s_3,data_s_4,
@@ -27,7 +27,7 @@ angular.module('mathSkills.services')
                     path: 'review-arithmetic',
                     children: [
                         data_a_1,  data_b_1, data_c_1, data_c_2, data_d_1, data_e_1, data_e_2, data_e_3, data_e_4,
-						data_f_1, data_g_1, data_g_2, data_g_3, data_h_1, data_h_2, data_i_1, data_i_2,data_i_3
+						data_f_1, data_g_1, data_g_2, data_g_3, data_h_1, data_h_2, data_i_1, data_i_2,data_i_3,data_i_4
                     ]
                 }, {
                     title: '2 Signed Numbers',

@@ -1,6 +1,9 @@
 ms-group td {
     padding: 0 5px;
 }
+.padLastZero ms-group td:last-child {
+    padding: 0;
+}
 ms-group ms-mixed-number td {
     padding: 0px;
 }
