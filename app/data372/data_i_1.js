@@ -2,7 +2,7 @@
 
 angular.module('mathSkills').service('data_i_1', ['dataUtils', function (dataUtils) {
     var desc = {
-            title: 'I.1 Conversions Between Decimals & Fractions/Mixed Numbers',
+            title: 'I.1 Conversions Between Decimals & Fractions or Mixed Numbers',
             path: 'I.1-conversions-between-decimals-and-fractions-or-mixed-numbers',
             children: []
         },
