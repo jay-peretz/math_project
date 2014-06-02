@@ -13,19 +13,23 @@ angular.module('mathSkills').service('data_i_3', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-						+'{\\grp{\\str{Change the fraction to a percent (directly):}}}'
-						+'{\\grp{\\html{&nbsp;}}}'
-						+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}',
+									+'{\\str{Change the fraction to a percent (directly):}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}',
 						answer: '\\grp{\\input{$answerPercent}}{\\str{%}}',	
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\grp{\\frac{\\str{$fractionNum}}{\\str{$fractionDen}}}'
-							+'{\\css{\\html{&bull;}}{bigger}}{\\str{\xA0 100}}'
-							+'{\\sign{\xA0 = \xA0}}'
-							+'{\\html{$answerPercent}}{\\str{%}}}'
-							+'{\\grp{\\html{&nbsp;}}}'
-							+'{\\grp{\\css{\\html{\xA0 Answer: \xA0 $answerPercent %}}{help-answer-text}}}'
+										+'{\\grp'
+											+'{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}'
+											+'{\\sign{&bull;}}'
+											+'{\\str{\xA0 100}}'
+											+'{\\sign{\xA0 = \xA0}}'
+											+'{\\html{$answerPercent}}'
+											+'{\\str{%}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css{\\html{\xA0 Answer: \xA0 $answerPercent %}}{help-answer-text}}'
 						}
 					}]
                 }]
@@ -78,13 +82,14 @@ angular.module('mathSkills').service('data_i_3', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}'
-							+'{\\html{ \xA0 &bull; \xA0 }}'
-							+'{\\frac{\\fracstr{100}}{\\fracstr{1}}}'
-							+'{\\sign{ \xA0 = \xA0 }}'
-							+'{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{\\str{%}}}'
-							+'{\\grp{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
-							+'{css{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
+										+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}'
+										+'{\\html{ \xA0 &bull; \xA0 }}'
+										+'{\\frac{\\fracstr{100}}{\\fracstr{1}}}'
+										+'{\\sign{ \xA0 = \xA0 }}'
+										+'{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{\\str{%}}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{css{\\str{Answer: \xA0 \xA0}}{help-answer-text}}'
+										+'{css{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{help-answer-text-tight}}{css{\\str{%}}{help-answer-text-tight}}}'
 						}
 						
 					}, {
@@ -98,7 +103,7 @@ angular.module('mathSkills').service('data_i_3', ['dataUtils', function (dataUti
 						+'{\\str{%}}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\html{&nbsp;}}'
-						+'{css{\\str{Change the mixed number percentage to a decimal percentage (round the decimal to the tenths place):}}{alert alert-info}}'
+						+'{css{\\str{Change the mixed number percentage to a decimal percentage$roundText:}}{alert alert-info}}'
 						+'{\\html{&nbsp;}}'
 						+'{\\grp{\\input{$percentDecimal}}{\\str{%}}}}{well}',
 						
@@ -110,6 +115,7 @@ angular.module('mathSkills').service('data_i_3', ['dataUtils', function (dataUti
 							+'{\\frac{\\fracstr{100}}{\\fracstr{1}}}'
 							+'{\\sign{ \xA0 = \xA0 }}'
 							+'{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{\\str{%}}}'
+							+'{\\html{&nbsp;}}'
 							+'{\\grp{\\mixed{\\html{$answerFractionWhole}}{\\frac{\\fracstr{$answerFractionNum}}{\\fracstr{$answerFractionDen}}}}{\\str{%}}'
 							+'{\\sign{ \xA0 = \xA0 }}'
 							+'{\\str{$percentDecimal}}{\\str{% (rounded to the nearest tenth)}}}'
@@ -242,9 +248,9 @@ angular.module('mathSkills').service('data_i_3', ['dataUtils', function (dataUti
 			// problem 5
 			{ fractionWhole: '', fractionNum: '1', fractionDen: '6', answerWhole: '16', answerNum: '2', answerDen: '3', template: 'second' },
 			// problem 6
-			{ fractionWhole: '&nbsp;', fractionNum: '5', fractionDen: '8', answerFractionWhole: '62', answerFractionNum: '1', answerFractionDen: '2', percentDecimal: '62.5', template: 'third' },
+			{ fractionWhole: '&nbsp;', fractionNum: '5', fractionDen: '8', answerFractionWhole: '62', answerFractionNum: '1', answerFractionDen: '2', percentDecimal: '62.5', roundText: '', template: 'third' },
 			// problem 7
-			{ fractionWhole: '', fractionNum: '9', fractionDen: '7', answerFractionWhole: '128', answerFractionNum: '4', answerFractionDen: '7', percentDecimal: '128.6', template: 'third' },
+			{ fractionWhole: '', fractionNum: '9', fractionDen: '7', answerFractionWhole: '128', answerFractionNum: '4', answerFractionDen: '7', percentDecimal: '128.6', roundText: ' (round the decimal to the tenths place)', template: 'third' },
 			// problem 8
 			{decimalPercent: '82', answerNum: '41', answerDen: '50', helpNum: '82', helpDen: '100', template: 'fourth'  },
 			// problem 9
