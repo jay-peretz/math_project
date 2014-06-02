@@ -171,7 +171,7 @@ angular.module('mathSkills').service('data_y_2', ['dataUtils', function (dataUti
 			
 			
 			// problem 8
-			{prob: dataUtils.pre('{\\grp{\\frac{\\str{2}}{\\str{3}}}{\\html{(}}{\\sign{-}}{html{12a<sup>2</sup>}}{\\sign{+}}{\\html{6a}}{\\sign{-}}{\\html{18}}{\\html{)}}}'),
+			{prob: dataUtils.pre('{\\grp{\\frac{\\str{2}}{\\str{3}}}{\\html{(}}{html{12a<sup>2</sup>}}{\\sign{+}}{\\html{6a}}{\\sign{-}}{\\html{18}}{\\html{)}}}'),
 			answer: '8a2+4a-12', 
 			textAnswer: ' &nbsp; 8a<sup>2</sup> + 4a - 12', 
 			template: 'first',
