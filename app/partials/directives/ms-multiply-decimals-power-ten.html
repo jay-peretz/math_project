@@ -3,6 +3,7 @@
 	font-size:150%;
 	padding:0px;
 }
+/* styling of move-left arrowheads works in \\row but not \\grp tag */
 </style>
 
 	<span>
@@ -38,5 +39,5 @@
             </tr>	
 		</table>
 	</span>
-    <span ng-hide="hideInstructions" class='text_align_left'>{{helpInstructions}}</span>
+    <span ng-hide="hideInstructions" class='text_align_left' ng-bind-html-unsafe=helpInstructions|enlargeOps></span>
 

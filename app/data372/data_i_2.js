@@ -51,12 +51,13 @@ angular.module('mathSkills').service('data_i_2', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}'
-							+'{\\grp{\\html{$answer}}{\\str{%}}'
-							+'{\\sign{\xA0 \xA0 = \xA0 \xA0}}'
-							+'{\\mixed{\\str{$finalWhole}}{\\frac{\\fracstr{$finalNum}}{\\fracstr{$finalDen}}}}{\\str{%}}}'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\grp{\\str{Answer: \xA0 \xA0}}{\\mixed{\\str{$finalWhole}}{\\frac{\\fracstr{$finalNum}}{\\fracstr{$finalDen}}}}{\\str{%}}}{help-answer-text}}'
+										+'{\\str{Write the decimal place value as the denominator of the fraction:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp{\\html{$answer}}{\\str{%}}'
+										+'{\\sign{\xA0 \xA0 = \xA0 \xA0}}'
+										+'{\\mixed{\\str{$finalWhole}}{\\frac{\\fracstr{$finalNum}}{\\fracstr{$finalDen}}}}{\\str{%}}}'
+										+'{\\html{&nbsp;}}'
+										+'{css{\\grp{\\str{Answer: \xA0 \xA0}}{\\mixed{\\str{$finalWhole}}{\\frac{\\fracstr{$finalNum}}{\\fracstr{$finalDen}}}}{\\str{%}}}{help-answer-text}}'
 						}
                     }]
                 }]
@@ -88,7 +89,8 @@ angular.module('mathSkills').service('data_i_2', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\css{\\str{Write the decimal place value as the denominator of the fraction:}}{label_like}}'
+							+'{\\str{Write the decimal place value as the denominator of the fraction:}}'
+							+'{\\html{&nbsp;}}'
 							+'{\\grp{\\html{$answer}}{\\str{%}}'
 							+'{\\sign{\xA0 \xA0 = \xA0 \xA0}}'
 							+'{\\mixed{\\str{$finalWhole}}{\\frac{\\fracstr{$helpNum}}{\\fracstr{$helpDen}}}}{\\str{%}}}'
@@ -107,7 +109,15 @@ angular.module('mathSkills').service('data_i_2', ['dataUtils', function (dataUti
 						answer: '\\grp{\\input{$decimalPercent}}',
 						controls: {
 							"checkAnswer": true,
-							"help": '\\rowgrp{\\row{\\percentarrows{$startNumber}{0.01}{percent}{decimal}}{\\css{\\str{Answer:  $decimalPercent}}{help-answer-text help-answer-margin-right}}}'
+							"help": '\\rowgrp'
+										+'{\\row'
+											+'{\\percentarrows{$startNumber}{0.01}{percent}{decimal}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css'
+											+'{\\str{Answer:  $decimalPercent}}'
+											+'{help-answer-text help-answer-margin-right}'
+										+'}'
 						}
                     }]
                 }]
