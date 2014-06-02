@@ -12,7 +12,10 @@ angular.module('mathSkills').service('data_i_1', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                         problem: '\\rowgrp{\\grp{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\grp{\\str{$decimal}}}',
+                         problem: '\\rowgrp'
+									+'{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\str{$decimal}}',
 						answer: '\\mixed{\\input{$answerWhole}}{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',
 						controls: {
 							"checkAnswer": true,
@@ -33,7 +36,10 @@ angular.module('mathSkills').service('data_i_1', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-                         problem: '\\rowgrp{\\grp{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}}{\\grp{\\str{$decimal}}}',
+                         problem: '\\rowgrp'
+						 				+'{\\str{Write the equivalent fractional value (reduced to lowest terms) of this decimal:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$decimal}}',
 						answer: '\\mixed{\\input{$answerWhole}}{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',
 						controls: {
 							"checkAnswer": true,
@@ -54,6 +60,7 @@ angular.module('mathSkills').service('data_i_1', ['dataUtils', function (dataUti
                     children: [{
 						problem: '\\rowgrp'
 									+'{\\str{Write the equivalent decimal value of this fraction$roundText:}}'
+									+'{\\html{&nbsp;}}'
 									+'{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}',
 						answer: '\\grp{\\input{$answerDecimal}}',						
 						controls: {
@@ -83,6 +90,7 @@ angular.module('mathSkills').service('data_i_1', ['dataUtils', function (dataUti
                     children: [{
 						problem: '\\rowgrp'
 									+'{\\str{Write the equivalent decimal value of this fraction$roundText:}}'
+									+'{\\html{&nbsp;}}'
 									+'{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}',
 						answer: '\\grp{\\input{$answerDecimal}}',						
 						controls: {
