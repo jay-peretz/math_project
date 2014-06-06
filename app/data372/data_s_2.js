@@ -198,6 +198,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				template: 'informationalAnswer' 
 			},    
 			{ // problem 5
+				questionDesc: dataUtils.pre('\\str{Solve for the circumference. <br>Use 3.14 for &pi;.}'),
 				illustration: 'S.2/Circle_d_20cm_v2.jpg',
 				unitsAnswer: 'cm',
 				unitsPower: 'cm',
@@ -208,9 +209,10 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				lineOneSolve: 'P = 62.8',
 				finalAnswer: dataUtils.pre('\\input{62.8}'),
 				helpAnswer: '62.8',
-				template: 'withoutQuestionDesc' 
+				template: 'questionWithDescription' 
 			},
 			{ // problem 6
+				questionDesc: dataUtils.pre('\\str{Solve for the circumference. <br>Use 3.14 for &pi;.}'),
 				illustration: 'S.2/Circle_d_32in_v2.jpg',
 				unitsAnswer: 'in',
 				unitsPower: 'in',
@@ -221,9 +223,10 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				lineOneSolve: 'P = 100.48',
 				finalAnswer: dataUtils.pre('\\input{100.48}'),
 				helpAnswer: '100.48',
-				template: 'withoutQuestionDesc' 
+				template: 'questionWithDescription' 
 			},
 			{ // problem 7
+				questionDesc: dataUtils.pre('\\str{Solve for the circumference. <br>Use 3.14 for &pi;.}'),
 				illustration: 'S.2/Circle_r_18m_v2.jpg',
 				unitsAnswer: 'm',
 				unitsPower: 'm',
@@ -234,9 +237,10 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				lineOneSolve: 'P = 113.04',
 				finalAnswer: dataUtils.pre('\\input{113.04}'),
 				helpAnswer: '113.04',
-				template: 'withoutQuestionDesc' 
+				template: 'questionWithDescription' 
 			},
 			{ // problem 8
+				questionDesc: dataUtils.pre('\\str{Solve for the circumference. <br>Use 3.14 for &pi;.}'),
 				illustration: 'S.2/Circle_r_8yds_v2.jpg',
 				unitsAnswer: 'yd',
 				unitsPower: 'yd',
@@ -247,10 +251,10 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				lineOneSolve: 'P = 50.24',
 				finalAnswer: dataUtils.pre('\\input{50.24}'),
 				helpAnswer: '50.24',
-				template: 'withoutQuestionDesc' 
+				template: 'questionWithDescription' 
 			},
 			{ // problem 9
-				questionDesc: dataUtils.pre('\\html{Round answer to the nearest whole.}'),
+				questionDesc: dataUtils.pre('\\str{Solve for the circumference. <br>Use 3.14 for &pi;. Round answer to the nearest whole.}'),
 				illustration: 'S.2/Circle_d_6-3ft_v2.jpg',
 				unitsAnswer: 'ft',
 				unitsPower: 'ft',
@@ -265,7 +269,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				template: 'questionWithDescription' 
 			},
 			{ // problem 10
-				questionDesc: dataUtils.pre('\\html{Round answer to the tenths place.}'),
+				questionDesc: dataUtils.pre('\\str{Solve for the circumference. <br>Use 3.14 for &pi;. Round answer to the tenths place.}'),
 				illustration: 'S.2/Circle_r_13-09ft_v2.jpg',
 				unitsAnswer: 'ft',
 				unitsPower: 'ft',
@@ -280,7 +284,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				template: 'questionWithDescription' 
 			},
 			{ // problem 11
-				questionDesc: dataUtils.pre('\\html{Give the answer as a mixed number.}'),
+				questionDesc: dataUtils.pre('\\html{Solve for the circumference. <br>Use <sup>22</sup>/<sub>7</sub> for &pi;. Give the answer as a mixed number.}'),
 				illustration: 'S.2/Circle_r_6_1-2in_v2.jpg',
 				unitsAnswer: 'in',
 				unitsPower: 'in',
@@ -295,7 +299,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				template: 'questionWithDescription' 
 			},
 			{ // problem 12
-				questionDesc: dataUtils.pre('\\html{Give the answer as a mixed number.}'),
+				questionDesc: dataUtils.pre('\\html{Solve for the circumference. <br>Use <sup>22</sup>/<sub>7</sub> for &pi;. Give the answer as a mixed number.}'),
 				illustration: 'S.2/Circle_r_3_1-3miles_v2.jpg',
 				unitsAnswer: 'mi',
 				unitsPower: 'mi',
@@ -310,7 +314,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				template: 'questionWithDescription' 
 			},
 			{ // problem 13
-				questionDesc: dataUtils.pre('\\html{Give the answer as a mixed number.}'),
+				questionDesc: dataUtils.pre('\\html{Solve for the circumference. <br>Use <sup>22</sup>/<sub>7</sub> for &pi;. Give the answer as a mixed number.}'),
 				illustration: 'S.2/Circle_d_8_2-5cm_v2.jpg',
 				unitsAnswer: 'cm',
 				unitsPower: 'cm',
@@ -325,7 +329,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				template: 'questionWithDescription' 
 			},
 			{ // problem 14
-				questionDesc: dataUtils.pre('\\html{Give the answer as a mixed number.}'),
+				questionDesc: dataUtils.pre('\\html{Solve for the circumference. <br>Use <sup>22</sup>/<sub>7</sub> for &pi;. Give the answer as a mixed number.}'),
 				illustration: 'S.2/Circle_d_4_1-2m_v2.jpg',
 				unitsAnswer: 'm',
 				unitsPower: 'm',
@@ -340,8 +344,8 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				template: 'questionWithDescription' 
 			},
 			{ // problem 15
-				questionDesc: dataUtils.pre('\\html{Give the answer as a mixed number.}'),
-				illustration: 'S.2/Circle_d_8_2-5cm_v2.jpg',
+				questionDesc: dataUtils.pre('\\html{Solve for the circumference. <br>Use <sup>22</sup>/<sub>7</sub> for &pi;. Give the answer as a mixed number.}'),
+				illustration: 'S.2/Circle_r_8_2-5cm_v2.jpg',
 				unitsAnswer: 'cm',
 				unitsPower: 'cm',
 				unitsSelect: '[\\"cm\\",\\"cm&sup2;\\",\\"cm&sup3;\\"]',
