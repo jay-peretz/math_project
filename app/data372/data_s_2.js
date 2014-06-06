@@ -107,12 +107,44 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
                         }
                     }]
                 }]
+            },
+			informationalNoImageAnswer: {
+                title: 'Circumference of Circles',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+									+'{$questionDesc}',
+                        answer: '\\grp'
+									+'{$finalAnswer}'
+									+'{\\select{$unitsPower}{$unitsSelect}{widthFixed120}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{$line1}'
+										+'{\\html{&nbsp;}}'
+										+'{$line2}'
+										+'{\\html{&nbsp;}}'
+										+'{$line3}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{$line4}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\html{Answer: &nbsp;}}'
+												+'{\\html{$helpAnswer}}'
+												+'{\\html{$unitsAnswer}}'
+											+'}'
+											+'{help-answer-text}'
+										+'}'
+                        }
+                    }]
+                }]
             }
         },
         data = [
 			{ // problem 1
 				questionDesc: dataUtils.pre('\\html{If the diameter of a circle is 12 feet, what is the radius?}'),
-				illustration: '',
 				unitsAnswer: 'ft',
 				unitsPower: 'ft',
 				unitsSelect: '[\\"ft\\",\\"ft&sup2;\\",\\"ft&sup3;\\"]',
@@ -122,11 +154,10 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				line4: '<sup>1</sup>&#8260;<sub>2</sub> <font size = 4>&bull;</font> 12 = 6',
 				finalAnswer: dataUtils.pre('\\input{6}'),
 				helpAnswer: '6',
-				template: 'informationalAnswer' 
+				template: 'informationalNoImageAnswer' 
 			}, 
 			{ // problem 2
 				questionDesc: dataUtils.pre('\\html{If the radius of a circle is 8.5 feet, what is the diameter?}'),
-				illustration: '',
 				unitsAnswer: 'ft',
 				unitsPower: 'ft',
 				unitsSelect: '[\\"ft\\",\\"ft&sup2;\\",\\"ft&sup3;\\"]',
@@ -136,11 +167,11 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				line4: '8.5 <font size = 4>&bull;</font> 2 = 17',
 				finalAnswer: dataUtils.pre('\\input{17}'),
 				helpAnswer: '17',
-				template: 'informationalAnswer' 
+				template: 'informationalNoImageAnswer' 
 			}, 
 			{ // problem 3
 				questionDesc: dataUtils.pre('\\html{What is the radius of this circle?}'),
-				illustration: '',
+				illustration: 'S.2/Circle_d_7_1-2m_v2.jpg',
 				unitsAnswer: 'meters',
 				unitsPower: 'm',
 				unitsSelect: '[\\"m\\",\\"m&sup2;\\",\\"m&sup3;\\"]',
@@ -154,7 +185,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 			}, 
 			{ // problem 4
 				questionDesc: dataUtils.pre('\\html{What is the diameter of this circle?}'),
-				illustration: '',
+				illustration: 'S.2/Circle_r_5_3-4in_v2.jpg',
 				unitsAnswer: 'inches',
 				unitsPower: 'm',
 				unitsSelect: '[\\"m\\",\\"m&sup2;\\",\\"m&sup3;\\"]',
@@ -167,7 +198,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				template: 'informationalAnswer' 
 			},    
 			{ // problem 5
-				illustration: '',
+				illustration: 'S.2/Circle_d_20cm_v2.jpg',
 				unitsAnswer: 'cm',
 				unitsPower: 'cm',
 				unitsSelect: '[\\"cm\\",\\"cm&sup2;\\",\\"cm&sup3;\\"]',
@@ -180,7 +211,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				template: 'withoutQuestionDesc' 
 			},
 			{ // problem 6
-				illustration: '',
+				illustration: 'S.2/Circle_d_32in_v2.jpg',
 				unitsAnswer: 'in',
 				unitsPower: 'in',
 				unitsSelect: '[\\"in\\",\\"in&sup2;\\",\\"in&sup3;\\"]',
@@ -193,7 +224,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				template: 'withoutQuestionDesc' 
 			},
 			{ // problem 7
-				illustration: '',
+				illustration: 'S.2/Circle_r_18m_v2.jpg',
 				unitsAnswer: 'm',
 				unitsPower: 'm',
 				unitsSelect: '[\\"m\\",\\"m&sup2;\\",\\"m&sup3;\\"]',
@@ -206,7 +237,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 				template: 'withoutQuestionDesc' 
 			},
 			{ // problem 8
-				illustration: '',
+				illustration: 'S.2/Circle_r_8yds_v2.jpg',
 				unitsAnswer: 'yd',
 				unitsPower: 'yd',
 				unitsSelect: '[\\"yd\\",\\"yd&sup2;\\",\\"yd&sup3;\\"]',
@@ -220,7 +251,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 			},
 			{ // problem 9
 				questionDesc: dataUtils.pre('\\html{Round answer to the nearest whole.}'),
-				illustration: '',
+				illustration: 'S.2/Circle_d_6-3ft_v2.jpg',
 				unitsAnswer: 'ft',
 				unitsPower: 'ft',
 				unitsSelect: '[\\"ft\\",\\"ft&sup2;\\",\\"ft&sup3;\\"]',
@@ -235,7 +266,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 			},
 			{ // problem 10
 				questionDesc: dataUtils.pre('\\html{Round answer to the tenths place.}'),
-				illustration: '',
+				illustration: 'S.2/Circle_r_13-09ft_v2.jpg',
 				unitsAnswer: 'ft',
 				unitsPower: 'ft',
 				unitsSelect: '[\\"ft\\",\\"ft&sup2;\\",\\"ft&sup3;\\"]',
@@ -250,7 +281,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 			},
 			{ // problem 11
 				questionDesc: dataUtils.pre('\\html{Give the answer as a mixed number.}'),
-				illustration: '',
+				illustration: 'S.2/Circle_r_6_1-2in_v2.jpg',
 				unitsAnswer: 'in',
 				unitsPower: 'in',
 				unitsSelect: '[\\"in\\",\\"in&sup2;\\",\\"in&sup3;\\"]',
@@ -265,7 +296,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 			},
 			{ // problem 12
 				questionDesc: dataUtils.pre('\\html{Give the answer as a mixed number.}'),
-				illustration: '',
+				illustration: 'S.2/Circle_r_3_1-3miles_v2.jpg',
 				unitsAnswer: 'mi',
 				unitsPower: 'mi',
 				unitsSelect: '[\\"mi\\",\\"mi&sup2;\\",\\"mi&sup3;\\"]',
@@ -280,7 +311,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 			},
 			{ // problem 13
 				questionDesc: dataUtils.pre('\\html{Give the answer as a mixed number.}'),
-				illustration: '',
+				illustration: 'S.2/Circle_d_8_2-5cm_v2.jpg',
 				unitsAnswer: 'cm',
 				unitsPower: 'cm',
 				unitsSelect: '[\\"cm\\",\\"cm&sup2;\\",\\"cm&sup3;\\"]',
@@ -295,7 +326,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 			},
 			{ // problem 14
 				questionDesc: dataUtils.pre('\\html{Give the answer as a mixed number.}'),
-				illustration: '',
+				illustration: 'S.2/Circle_d_4_1-2m_v2.jpg',
 				unitsAnswer: 'm',
 				unitsPower: 'm',
 				unitsSelect: '[\\"m\\",\\"m&sup2;\\",\\"m&sup3;\\"]',
@@ -310,7 +341,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 			},
 			{ // problem 15
 				questionDesc: dataUtils.pre('\\html{Give the answer as a mixed number.}'),
-				illustration: '',
+				illustration: 'S.2/Circle_d_8_2-5cm_v2.jpg',
 				unitsAnswer: 'cm',
 				unitsPower: 'cm',
 				unitsSelect: '[\\"cm\\",\\"cm&sup2;\\",\\"cm&sup3;\\"]',
