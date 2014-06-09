@@ -13,9 +13,7 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-									+'{$questionDesc}'
-									+'{\\html{&nbsp;}}'
-									+'{\\image{$illustration}}',
+									+'{$questionDesc}',
                         answer: '\\grp'
 									+'{$finalAnswer}'
 									+'{\\select{$unitsPower}{$unitsSelect}{widthFixed120}}',
@@ -148,8 +146,8 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
 				template: 'informationalAnswer' 
 			}, 
 			{ // problem 3
-				questionDesc: '',
-				illustration: '',
+				questionDesc: 'Solve for the area. Use 3.14 for &pi;',
+				illustration: 'S.2/Circle_d_20cm_v2.jpg',
 				unitsAnswer: 'cm<sup>2</sup>',
 				unitsPower: 'cm&sup2;',
 				unitsSelect: '[\\"cm\\",\\"cm&sup2;\\",\\"cm&sup3\\"]',
@@ -165,13 +163,13 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
 				template: 'topDescrQuestion'  
 			}, 
 			{ // problem 4
-				questionDesc: '',
-				illustration: '',
+				questionDesc: 'Solve for the area. Use 3.14 for &pi;',
+				illustration: 'S.2/Circle_d_32in_v2.jpg',
 				unitsAnswer: 'in<sup>2</sup>',
 				unitsPower: 'in&sup2;',
 				unitsSelect: '[\\"in\\",\\"in&sup2;\\",\\"in&sup3\\"]',
 				identifyShape: 'Circle',
-				topDescr: 'The diameter is 32 in. Therefore, the radius is 16 cm.',
+				topDescr: 'The diameter is 32 in. Therefore, the radius is 16 in.',
                 formula: 'A = &pi; <font size = 4>&bull;</font> r<sup>2</sup>',
 				substitution: 'A = 3.14 <font size = 4>&bull;</font> 16<sup>2</sup>',
 				lineOneSolve: 'A = 3.14 <font size = 4>&bull;</font> 256',
@@ -182,8 +180,8 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
 				template: 'topDescrQuestion' 
 			},    
 			{ // problem 5
-				questionDesc: 'Round answer to the nearest whole.',
-				illustration: '',
+				questionDesc: 'Solve for the area. Use 3.14 for &pi;. Round answer to the nearest whole.',
+				illustration: 'S.2/Circle_r_18m_v2.jpg',
 				unitsAnswer: 'm<sup>2</sup>',
 				unitsPower: 'm&sup2;',
 				unitsSelect: '[\\"m\\",\\"m&sup2;\\",\\"m&sup3\\"]',
@@ -199,11 +197,11 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
 				template: 'btmDescrQuestion'  
 			},
 			{ // problem 6
-				questionDesc: 'Round answer to the nearest whole.',
-				illustration: '',
-				unitsAnswer: 'm<sup>2</sup>',
-				unitsPower: 'm&sup2;',
-				unitsSelect: '[\\"m\\",\\"m&sup2;\\",\\"m&sup3\\"]',
+				questionDesc: 'Solve for the area. Use 3.14 for &pi;. Round answer to the nearest whole.',
+				illustration: 'S.2/Circle_r_8yds_v2.jpg',
+				unitsAnswer: 'yd<sup>2</sup>',
+				unitsPower: 'yd&sup2;',
+				unitsSelect: '[\\"yd\\",\\"yd&sup2;\\",\\"yd&sup3\\"]',
 				identifyShape: 'Circle',
 				topDescr: '',
                 formula: 'A = &pi; <font size = 4>&bull;</font> r<sup>2</sup>',
@@ -216,8 +214,8 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
 				template: 'btmDescrQuestion' 
 			},
 			{ // problem 7
-				questionDesc: 'Round answer to the nearest whole.',
-				illustration: '',
+				questionDesc: 'Solve for the area. Use 3.14 for &pi;. Round answer to the nearest whole.',
+				illustration: 'S.2/Circle_d_6-3ft_v2.jpg',
 				unitsAnswer: 'ft<sup>2</sup>',
 				unitsPower: 'ft&sup2;',
 				unitsSelect: '[\\"ft\\",\\"ft&sup2;\\",\\"ft&sup3\\"]',
@@ -233,8 +231,8 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
 				template: 'topDescrQuestion' 
 			},
 			{ // problem 8
-				questionDesc: 'Round answer to the nearest whole.',
-				illustration: '',
+				questionDesc: 'Solve for the area. Use 3.14 for &pi;. Round answer to the nearest whole.',
+				illustration: 'S.2/Circle_r_13-09ft_v2.jpg',
 				unitsAnswer: 'ft<sup>2</sup>',
 				unitsPower: 'ft&sup2;',
 				unitsSelect: '[\\"ft\\",\\"ft&sup2;\\",\\"ft&sup3\\"]',
@@ -250,8 +248,8 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
 				template: 'btmDescrQuestion' 
 			},
 			{ // problem 9
-				questionDesc: 'Give the answer as a mixed number.',
-				illustration: '',
+				questionDesc: 'Solve for the area. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;. Give the answer as a mixed number.',
+				illustration: 'S.2/Circle_r_6_1-2in_v2.jpg',
 				unitsAnswer: 'in<sup>2</sup>',
 				unitsPower: 'in&sup2;',
 				unitsSelect: '[\\"in\\",\\"in&sup2;\\",\\"in&sup3\\"]',
@@ -268,8 +266,8 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
 				template: 'btmDescrQuestion' 
 			},
 			{ // problem 10
-				questionDesc: 'Give the answer as a mixed number.',
-				illustration: '',
+				questionDesc: 'Solve for the area. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;. Give the answer as a mixed number.',
+				illustration: 'S.2/Circle_r_3_1-3miles_v2.jpg',
 				unitsAnswer: 'mi<sup>2</sup>',
 				unitsPower: 'mi&sup2;',
 				unitsSelect: '[\\"mi\\",\\"mi&sup2;\\",\\"mi&sup3\\"]',
@@ -285,13 +283,13 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
 				template: 'btmDescrQuestion' 
 			},
 			{ // problem 11
-				questionDesc: 'Give the answer as a mixed number.',
-				illustration: '',
+				questionDesc: 'Solve for the area. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;. Give the answer as a mixed number.',
+				illustration: 'S.2/Circle_d_8_2-5cm_v2.jpg',
 				unitsAnswer: 'cm<sup>2</sup>',
 				unitsPower: 'cm&sup2;',
 				unitsSelect: '[\\"cm\\",\\"cm&sup2;\\",\\"cm&sup3\\"]',
 				identifyShape: 'Circle',
-				topDescr: 'The diameter is 8 <sup>2</sup>&#8260;<sub>5</sub> ft. Therefore, the radius is 4 <sup>1</sup>&#8260;<sub>5</sub> ft.',
+				topDescr: 'The diameter is 8 <sup>2</sup>&#8260;<sub>5</sub> cm. Therefore, the radius is 4 <sup>1</sup>&#8260;<sub>5</sub> cm.',
                 formula: 'A = &pi; <font size = 4>&bull;</font> r<sup>2</sup>',
 				substitution: 'A = <sup>22</sup>&#8260;<sub>7</sub> <font size = 4>&bull;</font> (4 <sup>1</sup>&#8260;<sub>5</sub>)<sup>2</sup>',
 				lineOneSolve: 'A = <sup>22</sup>&#8260;<sub>7</sub> <font size = 4>&bull;</font> 17 <sup>16</sup>&#8260;<sub>25</sub>',
@@ -302,13 +300,13 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
 				template: 'topDescrQuestion'  
 			},
 			{ // problem 12
-				questionDesc: 'Give the answer as a mixed number.',
-				illustration: '',
+				questionDesc: 'Solve for the area. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;. Give the answer as a mixed number.',
+				illustration: 'S.2/Circle_d_4_1-2m_v2.jpg',
 				unitsAnswer: 'm<sup>2</sup>',
 				unitsPower: 'm&sup2;',
 				unitsSelect: '[\\"m\\",\\"m&sup2;\\",\\"m&sup3\\"]',
 				identifyShape: 'Circle',
-				topDescr: 'The diameter is 4 <sup>1</sup>&#8260;<sub>2</sub> ft. Therefore, the radius is 2 <sup>1</sup>&#8260;<sub>4</sub> ft.',
+				topDescr: 'The diameter is 4 <sup>1</sup>&#8260;<sub>2</sub> m. Therefore, the radius is 2 <sup>1</sup>&#8260;<sub>4</sub> m.',
                 formula: 'A = &pi; <font size = 4>&bull;</font> r<sup>2</sup>',
 				substitution: 'A = <sup>22</sup>&#8260;<sub>7</sub> <font size = 4>&bull;</font> (2 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup>',
 				lineOneSolve: 'A = <sup>22</sup>&#8260;<sub>7</sub> <font size = 4>&bull;</font> 5 <sup>1</sup>&#8260;<sub>16</sub>',
