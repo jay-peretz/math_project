@@ -15,17 +15,13 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 						problem: '\\rowgrp'
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\frac{\\fracstr{$initialNumAmount$unitsStart}}{\\fracstr{$initialDenAmount$unitsPer}}}',
+									+'{\\frac{\\html{$initialNumAmount$unitsStart}}{\\fracstr{$initialDenAmount$unitsPer}}}',
                         answer: '\\grp'
-									+'{\\sign{&equals;}}'
 									+'{\\input{$answer}}'
 									+'$fractionAnswer',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\html{Every fraction is a division problem (the top value divided by the bottom value).}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\html{Any value divided by itself equals 1 whole.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\str{$helpText}}'
 										+'{\\html{&nbsp;}}'
@@ -208,7 +204,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Write the given value as a fraction.$descriptor}}'
+										+'{\\html{Write the given value as a fraction.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\frac'
 											+'{\\grp{\\html{$dollarSign}}{\\html{&nbsp;}}{\\input{$numeratorStart}}{\\html{&nbsp;}}}'
@@ -228,7 +224,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{What is the fraction (that equals 1 whole) that you need to multiply by?}}'
+										+'{\\html{From the given options, choose the fraction (that equals 1 whole) to multiply by:}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
@@ -1086,8 +1082,10 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				unitsStart: '',
 				unitsPer: '',
 				fractionAnswer: '',
-				helpText: 'In this case, $$initialNumAmount / $$initialDenAmount  = 1',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				helpText: 'Every fraction is a division problem (the top value divided by the bottom value).<br><br>'
+				+'Any value divided by itself equals 1 whole.<br><br>'
+				+'In this case, $$initialNumAmount / $$initialDenAmount  = 1',
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'simpleConversion' 
 			},
 				// problem 2
@@ -1098,18 +1096,67 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				initialDenAmount: '1000',
 				unitsStart: ' meter',
 				unitsPer: ' millimeters',
-				fractionAnswer: dataUtils.pre('{\\frac'
+				fractionAnswer: '',
+				/*fractionAnswer: dataUtils.pre('{\\frac'
 										+'{\\html{$$unitsStart}}'
 										+'{\\html{$$unitsPer}}'
 									+'}'
-						),
-				helpText: 'In this case, 1 meter (the numerator) is exactly the same value as 1000 millimeters (the denominator). Therefore:<br>1 meter / 1000 millimeters  = 1',
+						),*/
+				helpText: 'Every fraction is a division problem (the top value divided by the bottom value).<br><br>'
+				+'Any value divided by itself equals 1 whole.<br><br>'
+				+'In this case, 1 meter (the numerator) is exactly the same value as 1000 millimeters (the denominator). Therefore:<br><br>1 meter / 1000 millimeters  = 1',
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				template: 'simpleConversion' 
+			},
+				// problem 3
+			{
+				problemText: 'What is the value of this fraction:',
+				answer: '1',
+				initialNumAmount: '0.01',
+				initialDenAmount: '1',
+				unitsStart: ' hectogram',
+				unitsPer: ' gram',
+				fractionAnswer: '',
+				helpText: 'Every fraction is a division problem (the top value divided by the bottom value).<br><br>'
+				+'Any value divided by itself equals 1 whole.<br><br>'
+				+'In this case, 0.01 hectograms (the numerator) is exactly the same value as 1 gram (the denominator). Therefore:<br><br>0.01 hectograms / 1 gram  = 1',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
 				template: 'simpleConversion' 
 			},
+				// problem 4
+			{
+				problemText: 'What is the value of this fraction:',
+				answer: '1',
+				initialNumAmount: '1',
+				initialDenAmount: '10',
+				unitsStart: ' dL',
+				unitsPer: ' cL',
+				fractionAnswer: '',
+				helpText: 'Every fraction is a division problem (the top value divided by the bottom value).<br><br>'
+				+'Any value divided by itself equals 1 whole.<br><br>'
+				+'In this case, 1 dL (the numerator) is exactly the same value as 10 cL (the denominator).  Therefore:<br><br>1 dL / 10 cL  = 1',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'simpleConversion' 
+			},
+				// problem 5
+			{
+				problemText: 'Solve:',
+				answer: '4',
+				initialNumAmount: '4 * 1',
+				initialDenAmount: '0.001',
+				unitsStart: ' m',
+				unitsPer: ' km',
+				fractionAnswer: '',
+				helpText: 'Since 1 m is exactly the same as 0.001 km, we know that the fraction of 1 m/0.001 km is equal to 1 whole.<br><br>'
+						 +'Therefore: 4 * 1 m / 0.001 km is the same as 4 * 1',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'simpleConversion' 
+			},
+			
 			{ // problem 13
-				problemText: '1 centimeter of cloth costs $0.06. How much would 3 meters of the cloth cost?',
+				problemText: '1 centimeter of cloth costs $0.06.<br>How much would 3 meters of the cloth cost?',
 				problemAmount: '3',
+				descriptor: '',
 				perSelect: '[\\"cm\\", \\"m\\", \\"\\"]',
 				initialAmount: '0.06',
 				numeratorStart: '0.06',

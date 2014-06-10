@@ -11,7 +11,11 @@
         <link rel=stylesheet href=lib/jquery-ui/jquery-ui-1.10.4.custom/css/smoothness/jquery-ui.css>
         
 <script src=lib/jquery/jquery-1.11.0.min.js></script> 
-<script src=lib/flot/jquery.flot.js></script>              
+<script src=lib/flot/jquery.flot.js></script>  
+<script src=lib/angular/angular.js></script>        
+<script src=js/mathSkills.js></script>  
+<script src=js/services/mathSkills.services.js></script>  
+<script src=js/services/course-data2.js></script>               
 <script>
     
 /*
@@ -39,8 +43,6 @@ value:a("$provide","value"),constant:a("$provide","constant","unshift"),filter:a
             'lib/jquery-ui/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js',
 			'lib/bootstrap/bootstrap.min.js',
 			'lib/flot/jquery.flot.categories.js',
-			'js/mathSkills.js',
-			'js/services/mathSkills.services.js',
 			'data372/data_a_1.js',
 			'data372/data_b_1.js',
 			'data372/data_c_1.js',
@@ -96,7 +98,6 @@ value:a("$provide","value"),constant:a("$provide","constant","unshift"),filter:a
 			'data372/data_dd_1.js',
 			'data372/data_dd_2.js',
 			'data372/data_ee_1.js',
-			'js/services/course-data2.js',
 			'js/controllers/feedback.js',
 			'js/controllers/home.js',
 			'js/controllers/problem.js',
@@ -215,7 +216,7 @@ value:a("$provide","value"),constant:a("$provide","constant","unshift"),filter:a
         ], function() {
           // when all is done, execute bootstrap angular application
           //debugger;
-          angular.bootstrap(document, ['mathSkills']);
+          angular.bootstrap(document, ['mathSkills','mathSkills.services']);
         })
       </script>
     </head>
