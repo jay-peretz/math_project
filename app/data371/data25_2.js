@@ -7,7 +7,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
             children: []
         },
         template = {
-            oneStep: {
+			simpleConversion: {
                 title: 'Converting English Compound Units Using Dimensional Analysis',
                 children: [{
                     title: 'Main Answer',
@@ -15,18 +15,46 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 						problem: '\\rowgrp'
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $unitsPer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsSecond / $unitsPer}}'
-									+'}',
+									+'{\\frac{\\fracstr{$initialNumAmount$unitsStart}}{\\fracstr{$initialDenAmount$unitsPer}}}',
                         answer: '\\grp'
-									+'{\\input{$finalAnswer}}'
-									+'{\\html{$unitsSecond / $unitsPer}}',
+									+'{\\sign{&equals;}}'
+									+'{\\input{$answer}}'
+									+'$fractionAnswer',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{Every fraction is a division problem (the top value divided by the bottom value).}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Any value divided by itself equals 1 whole.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$helpText}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css'
+											+'{\\html{Answer:  $answer}}'
+											+'{help-answer-text}'
+										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+                        }
+                    }]
+                }]
+			},
+            oneStep: {
+                title: 'Converting English Compound Units Using Dimensional Analysis',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+									+'{\\html{$problemText}}',
+                        answer: '\\grp'
+									+'{\\sign{&equals;}}'
+									+'{\\html{$prefixAnswer}}'
+									+'{\\input{$answer}}'
+									+'$fractionAnswer',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
-                            "workbook": true,
+							"workbook": true,
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
                         }
@@ -160,16 +188,10 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$dollarSign$initialAmount / $unitsQuestionPer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{$dollarSign ? / $unitsAnswerPer}}'
-									+'}',
+									+'{\\html{$problemText}}',
                         answer: '\\grp'
 									+'{\\css{\\html{$dollarSign}}{bigger}}'
-									+'{\\input{$finalAnswer}}'
+									+'{\\inputcash{$finalAnswer}}'
 									+'{\\html{ $unitsAnswerPer}}',
                         controls: {
                             "checkAnswer": true,
@@ -183,13 +205,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                     title: 'Workbook',
                     children: [{
                         problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$dollarSign$initialAmount / $unitsQuestionPer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{$dollarSign ? / $unitsAnswerPer}}'
-									+'}',
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
 										+'{\\html{Write the given value as a fraction.$descriptor}}'
@@ -209,13 +225,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 							   
 					}, {
                        problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$dollarSign$initialAmount / $unitsQuestionPer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{$dollarSign ? / $unitsAnswerPer}}'
-									+'}',
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
 										+'{\\html{What is the fraction (that equals 1 whole) that you need to multiply by?}}'
@@ -261,16 +271,10 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                         }
                     }, {
                        problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$dollarSign$initialAmount / $unitsQuestionPer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{$dollarSign ? / $unitsAnswerPer}}'
-									+'}',
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Multiply the fractions (remember to cancel out words).$descriptor}}'
+										+'{\\html{What is the price per $thirdStepUnit?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
@@ -290,7 +294,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\sign{&equals;}}'
 											+'{\\css{\\html{$dollarSign}}{bigger}}'
-											+'{\\input{$finalAnswer}}'
+											+'{\\inputcash{$helpFinalAnswer}}'
 											+'{\\html{ $unitsAnswerPer}}'
 										+'}'
 									+'}{well}',
@@ -305,6 +309,49 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 											+'{\\sign{&equals;}}'
 											+'{\\html{<span class=blue-text>$dollarSign $helpFinalAnswer/ $unitsAnswerPer</span>}}'
 										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }, {
+                       problem: '\\rowgrp'
+									+'{\\html{$problemText}}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\grp{\\html{$dollarSign}}{\\html{&nbsp;}}{\\html{$numeratorStart}}{\\html{&nbsp;}}}'
+												+'{\\grp{\\html{$denominatorStart}}{\\html{&nbsp;}}{\\html{$unitsQuestionPer}}}'
+											+'}'
+											+'{\\sign{&times;}}'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\html{$firstNumAnswer}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsQuestionPer}}'
+												+'}'
+												+'{\\grp'
+													+'{\\html{$firstDenAnswer}}{\\html{&nbsp;}}{\\html{$unitsAnswerPer}}'
+												+'}'
+											+'}'
+											+'{\\sign{&equals;}}'
+											+'{\\css{\\html{$dollarSign}}{bigger}}'
+											+'{\\html{$helpFinalAnswer}}'
+											+'{\\html{/ $unitsAnswerPer}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{How much would $problemAmount $thirdStepUnits cost?}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css{\\html{$dollarSign}}{bigger}}'
+											+'{\\inputcash{$finalAnswer}}'
+											+'{\\html{ $finalUnitsAnswerPer}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true,
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
 							
@@ -1030,32 +1077,62 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
             }
         },
         data = [
-			{ // problem 1
-				problemText: 'Write the given rate in fractional form:',
-				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
-				unitSelect: '[\\"1\\", \\"12\\", \\"3\\", \\"5,280\\"]',
-				perSelect: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
-				initialAmount: '40',
-				numeratorStart: '40',
-				denominatorStart: '1',
-				numeratorSecond: '5,280',
-				denominatorSecond: '1',
-				unitsStart: 'mi',
-				unitsSecond: 'ft',
-				unitsPer: 'hr',
-				firstNumAnswer: '5,280',
-				firstDenAnswer: '1',
-				numEqFrac: '5280 ft',
-				numSelect: '[\\"1 hr\\", \\"5280 ft\\", \\"1 mi\\", \\"60 min\\"]',
-				denEqFrac: '1 mi',
-				denSelect: '[\\"60 min\\", \\"1 mi\\", \\"5280 ft\\", \\"1 hr\\"]',
-				finalAnswer: '211200',
-				helpFinalAnswer: '211,200',
-				firstWordCancel: 'miles',
-				secondWordCancel: 'feet',
-				descriptor: '',
+				// problem 1
+			{
+				problemText: 'What is the value of this fraction:',
+				answer: '1',
+				initialNumAmount: '3',
+				initialDenAmount: '3',
+				unitsStart: '',
+				unitsPer: '',
+				fractionAnswer: '',
+				helpText: 'In this case, $$initialNumAmount / $$initialDenAmount  = 1',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
-				template: 'oneStep' 
+				template: 'simpleConversion' 
+			},
+				// problem 2
+			{
+				problemText: 'What is the value of this fraction:',
+				answer: '1',
+				initialNumAmount: '1',
+				initialDenAmount: '1000',
+				unitsStart: ' meter',
+				unitsPer: ' millimeters',
+				fractionAnswer: dataUtils.pre('{\\frac'
+										+'{\\html{$$unitsStart}}'
+										+'{\\html{$$unitsPer}}'
+									+'}'
+						),
+				helpText: 'In this case, 1 meter (the numerator) is exactly the same value as 1000 millimeters (the denominator). Therefore:<br>1 meter / 1000 millimeters  = 1',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'simpleConversion' 
+			},
+			{ // problem 13
+				problemText: '1 centimeter of cloth costs $0.06. How much would 3 meters of the cloth cost?',
+				problemAmount: '3',
+				perSelect: '[\\"cm\\", \\"m\\", \\"\\"]',
+				initialAmount: '0.06',
+				numeratorStart: '0.06',
+				denominatorStart: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '1',
+				dollarSign: '$',
+				unitsQuestionPer: 'cm',
+				unitsAnswerPer: 'm',
+				firstNumAnswer: '100',
+				firstDenAnswer: '1',
+				thirdStepUnit: 'meter',
+				finalAnswer: '18.00',
+				finalUnitsAnswerPer: '',
+				numEqFrac: '100 cm',
+				numSelect: '[\\"100 cm\\", \\"1 cm\\", \\"1 m\\", \\"100 m\\"]',
+				denEqFrac: '1 m',
+				denSelect: '[\\"100 m\\", \\"1 m\\", \\"100 cm\\", \\"1 cm\\"]',
+				helpFinalAnswer: '6.00',
+				firstWordCancel: 'cm',
+				secondWordCancel: 'm',
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				template: 'dollarOneStep' 
 			}
 			,
 			{ // problem 2
