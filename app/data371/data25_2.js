@@ -15,7 +15,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 						problem: '\\rowgrp'
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\frac{\\html{$initialNumAmount$unitsStart}}{\\fracstr{$initialDenAmount$unitsPer}}}',
+									+'{\\frac{\\fracstr{$initialNumAmount$unitsStart}}{\\fracstr{$initialDenAmount$unitsPer}}}',
                         answer: '\\grp'
 									+'{\\input{$answer}}'
 									+'$fractionAnswer',
@@ -1147,12 +1147,23 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				unitsStart: ' m',
 				unitsPer: ' km',
 				fractionAnswer: '',
-				helpText: 'Since 1 m is exactly the same as 0.001 km, we know that the fraction of 1 m/0.001 km is equal to 1 whole.<br><br>'
-						 +'Therefore: 4 * 1 m / 0.001 km is the same as 4 * 1',
+				helpText: 'Since 1 m is exactly the same as 0.001 km, we know that the fraction of 1 m/0.001 km is equal to 1 whole.<sup>3</sup>&#8260;<sub>5</sub><br>Therefore:<br><br>4 * 1 m / 0.001 km is the same as 4 * 1',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
 				template: 'simpleConversion' 
 			},
-			
+				// problem 6
+			{
+				problemText: 'Solve:',
+				answer: '4',
+				initialNumAmount: '<sup>3</sup>&#8260;<sub>5</sub>',
+				initialDenAmount: '1',
+				unitsStart: ' * 100 cg',
+				unitsPer: ' g',
+				fractionAnswer: '',
+				helpText: 'Since 100 cg is exactly the same as 1 g, we know that the fraction of 100 cg/1 g is equal to 1 whole.<br>Therefore:<br><br><sup>3</sup>&#8260;<sub>5</sub> * 100 cg/1 g is the same as <sup>3</sup>&#8260;<sub>5</sub> * 1',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'simpleConversion' 
+			},
 			{ // problem 13
 				problemText: '1 centimeter of cloth costs $0.06.<br>How much would 3 meters of the cloth cost?',
 				problemAmount: '3',
