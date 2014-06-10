@@ -16,9 +16,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\frac{\\fracstr{$initialNumAmount$unitsStart}}{\\fracstr{$initialDenAmount$unitsPer}}}',
-                        answer: '\\grp'
-									+'{\\input{$answer}}'
-									+'$fractionAnswer',
+                        answer: '$fractionAnswer',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
@@ -27,6 +25,40 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\css'
 											+'{\\html{Answer:  $answer}}'
+											+'{help-answer-text}'
+										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+                        }
+                    }]
+                }]
+			},
+			simpleFractional: {
+                title: 'Converting English Compound Units Using Dimensional Analysis',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+									+'{\\html{$problemText}}',
+                        answer: '\\frac'
+									+'{\\fracstr{$initialNumAmount$unitsStart}}'
+									+'{\\grp'
+										+'{\\input{$answer}}'
+										+'{\\str{$unitsPer}}'
+									+'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$helpText}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\frac'
+											+'{\\fracstr{$initialNumAmount $unitsStart}}'
+											+'{\\fracstr{$answer $unitsPer}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css'
+											+'{\\html{Answer:  $answer $unitsPer}}'
 											+'{help-answer-text}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
@@ -1081,7 +1113,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				initialDenAmount: '3',
 				unitsStart: '',
 				unitsPer: '',
-				fractionAnswer: '',
+				fractionAnswer: dataUtils.pre('\\grp'
+									+'{\\input{$$answer}}'
+						),
 				helpText: 'Every fraction is a division problem (the top value divided by the bottom value).<br><br>'
 				+'Any value divided by itself equals 1 whole.<br><br>'
 				+'In this case, $$initialNumAmount / $$initialDenAmount  = 1',
@@ -1096,12 +1130,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				initialDenAmount: '1000',
 				unitsStart: ' meter',
 				unitsPer: ' millimeters',
-				fractionAnswer: '',
-				/*fractionAnswer: dataUtils.pre('{\\frac'
-										+'{\\html{$$unitsStart}}'
-										+'{\\html{$$unitsPer}}'
-									+'}'
-						),*/
+				fractionAnswer: dataUtils.pre('\\grp'
+									+'{\\input{$$answer}}'
+						),
 				helpText: 'Every fraction is a division problem (the top value divided by the bottom value).<br><br>'
 				+'Any value divided by itself equals 1 whole.<br><br>'
 				+'In this case, 1 meter (the numerator) is exactly the same value as 1000 millimeters (the denominator). Therefore:<br><br>1 meter / 1000 millimeters  = 1',
@@ -1116,7 +1147,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				initialDenAmount: '1',
 				unitsStart: ' hectogram',
 				unitsPer: ' gram',
-				fractionAnswer: '',
+				fractionAnswer: dataUtils.pre('\\grp'
+									+'{\\input{$$answer}}'
+						),
 				helpText: 'Every fraction is a division problem (the top value divided by the bottom value).<br><br>'
 				+'Any value divided by itself equals 1 whole.<br><br>'
 				+'In this case, 0.01 hectograms (the numerator) is exactly the same value as 1 gram (the denominator). Therefore:<br><br>0.01 hectograms / 1 gram  = 1',
@@ -1131,7 +1164,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				initialDenAmount: '10',
 				unitsStart: ' dL',
 				unitsPer: ' cL',
-				fractionAnswer: '',
+				fractionAnswer: dataUtils.pre('\\grp'
+									+'{\\input{$$answer}}'
+						),
 				helpText: 'Every fraction is a division problem (the top value divided by the bottom value).<br><br>'
 				+'Any value divided by itself equals 1 whole.<br><br>'
 				+'In this case, 1 dL (the numerator) is exactly the same value as 10 cL (the denominator).  Therefore:<br><br>1 dL / 10 cL  = 1',
@@ -1146,7 +1181,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				initialDenAmount: '0.001',
 				unitsStart: ' m',
 				unitsPer: ' km',
-				fractionAnswer: '',
+				fractionAnswer: dataUtils.pre('\\grp'
+									+'{\\input{$$answer}}'
+						),
 				helpText: 'Since 1 m is exactly the same as 0.001 km, we know that the fraction of 1 m/0.001 km is equal to 1 whole.<sup>3</sup>&#8260;<sub>5</sub><br>Therefore:<br><br>4 * 1 m / 0.001 km is the same as 4 * 1',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
 				template: 'simpleConversion' 
@@ -1154,15 +1191,108 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				// problem 6
 			{
 				problemText: 'Solve:',
-				answer: '4',
-				initialNumAmount: '<sup>3</sup>&#8260;<sub>5</sub>',
+				answer: '<sup>3</sup>&#8260;<sub>5</sub>',
+				initialNumAmount: '&nbsp;<sup>3</sup>&#8260;<sub>5</sub>',
 				initialDenAmount: '1',
 				unitsStart: ' * 100 cg',
 				unitsPer: ' g',
-				fractionAnswer: '',
-				helpText: 'Since 100 cg is exactly the same as 1 g, we know that the fraction of 100 cg/1 g is equal to 1 whole.<br>Therefore:<br><br><sup>3</sup>&#8260;<sub>5</sub> * 100 cg/1 g is the same as <sup>3</sup>&#8260;<sub>5</sub> * 1',
+				fractionAnswer: dataUtils.pre('\\frac'
+										+'{\\input{3}}'
+										+'{\\input{5}}'
+						),
+				helpText: 'Since 100 cg is exactly the same as 1 g, we know that the fraction of 100 cg/1 g is equal to 1 whole.<br>Therefore:<br><br><sup>3</sup>&#8260;<sub>5</sub> * 100 cg/1 g is the same as &nbsp;<sup>3</sup>&#8260;<sub>5</sub> * 1',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
 				template: 'simpleConversion' 
+			},
+				// problem 7
+			{
+				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
+				answer: '1000',
+				initialNumAmount: '1',
+				unitsStart: ' km',
+				unitsPer: ' m',
+				fractionAnswer: dataUtils.pre('\\grp'
+									+'{\\input{$$answer}}'
+									+'{\\html{$$unitsPer}}'
+						),
+				helpText: '1 km = 1000 m.<br><br>Therefore, the fraction that equals 1 whole would be:',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'simpleFractional' 
+			},
+				// problem 8
+			{
+				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
+				answer: '1000',
+				initialNumAmount: '1',
+				unitsStart: ' g',
+				unitsPer: ' mg',
+				fractionAnswer: dataUtils.pre('\\grp'
+									+'{\\input{$$answer}}'
+									+'{\\html{$$unitsPer}}'
+						),
+				helpText: '1 g = 1000 mg. <br><br>Therefore, the fraction that equals 1 whole would be:',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'simpleFractional' 
+			},
+			// problem 9
+			{
+				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
+				answer: '0.001',
+				initialNumAmount: '1',
+				unitsStart: ' mm',
+				unitsPer: ' m',
+				fractionAnswer: dataUtils.pre('\\grp'
+									+'{\\input{$$answer}}'
+									+'{\\html{$$unitsPer}}'
+						),
+				helpText: '1 mm = 0.001 m.<br><br>Therefore, the fraction that equals 1 whole would be:',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'simpleFractional' 
+			},
+			// problem 10
+			{
+				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
+				answer: '0.01',
+				initialNumAmount: '1',
+				unitsStart: ' cL',
+				unitsPer: ' L',
+				fractionAnswer: dataUtils.pre('\\grp'
+									+'{\\input{$$answer}}'
+									+'{\\html{$$unitsPer}}'
+						),
+				helpText: '1 cL = 0.01 L.<br><br>Therefore, the fraction that equals 1 whole would be:',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'simpleFractional' 
+			},
+			// problem 11
+			{
+				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
+				answer: '1',
+				initialNumAmount: '0.01',
+				unitsStart: ' daL',
+				unitsPer: ' dL',
+				fractionAnswer: dataUtils.pre('\\grp'
+									+'{\\input{$$answer}}'
+									+'{\\html{$$unitsPer}}'
+						),
+				helpText: '0.01 daL = 1 dL.<br><br>Therefore, the fraction that equals 1 whole would be:',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'simpleFractional' 
+			},
+			// problem 12
+			{
+				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
+				answer: '1',
+				initialNumAmount: '0.0001',
+				unitsStart: ' hg',
+				unitsPer: ' cg',
+				fractionAnswer: dataUtils.pre('\\grp'
+									+'{\\input{$$answer}}'
+									+'{\\html{$$unitsPer}}'
+						),
+				helpText: '0.0001 hg = 1 cg.<br><br>Therefore, the fraction that equals 1 whole would be:',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'simpleFractional' 
 			},
 			{ // problem 13
 				problemText: '1 centimeter of cloth costs $0.06.<br>How much would 3 meters of the cloth cost?',
@@ -1193,7 +1323,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				template: 'dollarOneStep' 
 			}
 			,
-			{ // problem 2
+			/*{ // problem 2
 				problemText: 'Write the given rate in fractional form.',
 				unitSelect: '[\\"1\\", \\"7\\", \\"24\\", \\"60\\"]',
 				perSelect: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
@@ -1550,7 +1680,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'</tr>'
 										+'</table>}'),
 				template: 'threeStep' 
-			}
+			}*/
         ];
 
     return dataUtils.build(desc, template, data);
