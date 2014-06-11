@@ -67,7 +67,208 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                     }]
                 }]
 			},
-            oneStep: {
+			dollarOneStep: {
+                title: 'Converting Units of Volume',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+									+'{\\html{$problemText}}',
+                        answer: '\\grp'
+									+'{\\css{\\html{$dollarSign}}{bigger}}'
+									+'{\\inputcash{$finalAnswer}}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true,
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                        problem: '\\rowgrp'
+									+'{\\html{$problemText}}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{Write the given value as a fraction.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\frac'
+											+'{\\grp'
+												+'{\\html{$dollarSign}}'
+												+'{\\html{&nbsp;}}'
+												+'{\\input{$delta}}'
+												+'{\\html{&nbsp;}}'
+											+'}'
+											+'{\\grp'
+												+'{\\input{$epsilon}}'
+												+'{\\html{&nbsp;}}'
+												+'{\\select{$unitsQuestionPer}{$perSelect}}'
+											+'}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true,
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+							   
+					}, {
+                       problem: '\\rowgrp'
+									+'{\\html{$problemText}}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{From the given options, choose the fraction (that equals 1 whole) to multiply by:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\html{$$dollarSign}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$$delta}}'
+													+'{\\html{&nbsp;}}'
+												+'}'
+												+'{\\grp'
+													+'{\\html{$$epsilon}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$$unitsQuestionPer}}'
+												+'}'
+											+'}'
+											+'{\\sign{&times;}}'
+											+'{\\frac'
+												+'{\\select{$numEqFrac}{$numSelect}}'
+												+'{\\select{$denEqFrac}{$denSelect}}'
+											+'}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with "$firstWordCancel" in the numerator and "$secondWordCancel" in the denominator allows us to cancel out "$firstWordCancel".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\grp{\\html{$dollarSign}}{\\html{&nbsp;}}{\\html{$delta}}{\\html{&nbsp;}}}'
+												+'{\\grp{\\html{$epsilon}}{\\html{&nbsp;}}{\\html{$unitsQuestionPer}}}'
+											+'}'
+											+'{\\sign{&times;}}'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\html{$firstNumAnswer}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsQuestionPer}}'
+												+'}'
+												+'{\\grp'
+													+'{\\html{$firstDenAnswer}}{\\html{&nbsp;}}{\\html{$unitsAnswerPer}}'
+												+'}'
+											+'}'
+										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }, {
+                       problem: '\\rowgrp'
+									+'{\\html{$problemText}}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{What is the price per $thirdStepUnit?}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\html{$$dollarSign}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$$delta}}'
+													+'{\\html{&nbsp;}}'
+												+'}'
+												+'{\\grp'
+													+'{\\html{$$epsilon}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$$unitsQuestionPer}}'
+												+'}'
+											+'}'
+											+'{\\sign{&times;}}'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\html{$firstNumAnswer}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsQuestionPer}}'
+												+'}'
+												+'{\\grp'
+													+'{\\html{$firstDenAnswer}}{\\html{&nbsp;}}{\\html{$unitsAnswerPer}}'
+												+'}'
+											+'}'
+											+'{\\sign{&equals;}}'
+											+'{\\css{\\html{$dollarSign}}{bigger}}'
+											+'{\\inputcash{$helpFinalAnswer}}'
+											+'{\\html{<span class=bigger>/</span> $unitsAnswerPer}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac{\\html{<span class=blue-text>$dollarSign $delta</span>}}{\\html{<span class=blue-text>$epsilon</span><span class=line_through> $unitsQuestionPer</span>}}}'
+											+'{\\sign{&times;}}'
+											+'{\\frac{\\html{<span class=blue-text>$firstNumAnswer</span> <span class=line_through>$unitsQuestionPer</span>}}{\\html{<span class=blue-text>$denominatorSecond $unitsAnswerPer</span>}}}'
+											+'{\\sign{&equals;}}'
+											+'{\\html{<span class=blue-text>$dollarSign $helpFinalAnswer / $unitsAnswerPer</span>}}'
+										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }, {
+                       problem: '\\rowgrp'
+									+'{\\html{$problemText}}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\grp{\\html{$dollarSign}}{\\html{&nbsp;}}{\\html{$delta}}{\\html{&nbsp;}}}'
+												+'{\\grp{\\html{$epsilon}}{\\html{&nbsp;}}{\\html{$unitsQuestionPer}}}'
+											+'}'
+											+'{\\sign{&times;}}'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\html{$firstNumAnswer}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsQuestionPer}}'
+												+'}'
+												+'{\\grp'
+													+'{\\html{$firstDenAnswer}}{\\html{&nbsp;}}{\\html{$unitsAnswerPer}}'
+												+'}'
+											+'}'
+											+'{\\sign{&equals;}}'
+											+'{\\css{\\html{$dollarSign}}{bigger}}'
+											+'{\\html{$helpFinalAnswer}}'
+											+'{\\html{/ $unitsAnswerPer}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{How much would $problemAmount $thirdStepUnits cost?}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css{\\html{$dollarSign}}{bigger}}'
+											+'{\\inputcash{$finalAnswer}}'
+										+'}'
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true,
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }]
+                }]
+            },
+			/*oneStep: {
                 title: 'Converting English Compound Units Using Dimensional Analysis',
                 children: [{
                     title: 'Main Answer',
@@ -203,183 +404,6 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 											+'{\\sign{&equals;}}'
 											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsSecond / $unitsPer</span>}}'
 										+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }]
-                }]
-            },
-			dollarOneStep: {
-                title: 'Converting Units of Volume',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-									+'{\\html{$problemText}}',
-                        answer: '\\grp'
-									+'{\\css{\\html{$dollarSign}}{bigger}}'
-									+'{\\inputcash{$finalAnswer}}'
-									+'{\\html{ $unitsAnswerPer}}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": false,
-                            "workbook": true,
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-                        }
-                    }]
-                }, {
-                    title: 'Workbook',
-                    children: [{
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText}}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{Write the given value as a fraction.}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\frac'
-											+'{\\grp{\\html{$dollarSign}}{\\html{&nbsp;}}{\\input{$numeratorStart}}{\\html{&nbsp;}}}'
-											+'{\\grp{\\input{$denominatorStart}}{\\html{&nbsp;}}{\\select{$unitsQuestionPer}{$perSelect}}}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true,
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-							   
-					}, {
-                       problem: '\\rowgrp'
-									+'{\\html{$problemText}}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{From the given options, choose the fraction (that equals 1 whole) to multiply by:}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac'
-												+'{\\grp{\\html{$dollarSign}}{\\html{&nbsp;}}{\\html{$numeratorStart}}{\\html{&nbsp;}}}'
-												+'{\\grp{\\html{$denominatorStart}}{\\html{&nbsp;}}{\\html{$unitsQuestionPer}}}'
-											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\select{$numEqFrac}{$numSelect}}'
-												+'{\\select{$denEqFrac}{$denSelect}}'
-											+'}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with "$firstWordCancel" in the numerator and "$secondWordCancel" in the denominator allows us to cancel out "$firstWordCancel".}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac'
-												+'{\\grp{\\html{$dollarSign}}{\\html{&nbsp;}}{\\html{$numeratorStart}}{\\html{&nbsp;}}}'
-												+'{\\grp{\\html{$denominatorStart}}{\\html{&nbsp;}}{\\html{$unitsQuestionPer}}}'
-											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$firstNumAnswer}}'
-													+'{\\html{&nbsp;}}'
-													+'{\\html{$unitsQuestionPer}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{$firstDenAnswer}}{\\html{&nbsp;}}{\\html{$unitsAnswerPer}}'
-												+'}'
-											+'}'
-										+'}'
-							+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }, {
-                       problem: '\\rowgrp'
-									+'{\\html{$problemText}}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{What is the price per $thirdStepUnit?}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac'
-												+'{\\grp{\\html{$dollarSign}}{\\html{&nbsp;}}{\\html{$numeratorStart}}{\\html{&nbsp;}}}'
-												+'{\\grp{\\html{$denominatorStart}}{\\html{&nbsp;}}{\\html{$unitsQuestionPer}}}'
-											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$firstNumAnswer}}'
-													+'{\\html{&nbsp;}}'
-													+'{\\html{$unitsQuestionPer}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{$firstDenAnswer}}{\\html{&nbsp;}}{\\html{$unitsAnswerPer}}'
-												+'}'
-											+'}'
-											+'{\\sign{&equals;}}'
-											+'{\\css{\\html{$dollarSign}}{bigger}}'
-											+'{\\inputcash{$helpFinalAnswer}}'
-											+'{\\html{ $unitsAnswerPer}}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{<span class=blue-text>$dollarSign $numeratorStart</span>}}{\\html{<span class=blue-text>$denominatorStart</span><span class=line_through> $unitsQuestionPer</span>}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>$firstNumAnswer</span> <span class=line_through>$unitsQuestionPer</span>}}{\\html{<span class=blue-text>$denominatorSecond $unitsAnswerPer</span>}}}'
-											+'{\\sign{&equals;}}'
-											+'{\\html{<span class=blue-text>$dollarSign $helpFinalAnswer/ $unitsAnswerPer</span>}}'
-										+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }, {
-                       problem: '\\rowgrp'
-									+'{\\html{$problemText}}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac'
-												+'{\\grp{\\html{$dollarSign}}{\\html{&nbsp;}}{\\html{$numeratorStart}}{\\html{&nbsp;}}}'
-												+'{\\grp{\\html{$denominatorStart}}{\\html{&nbsp;}}{\\html{$unitsQuestionPer}}}'
-											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$firstNumAnswer}}'
-													+'{\\html{&nbsp;}}'
-													+'{\\html{$unitsQuestionPer}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{$firstDenAnswer}}{\\html{&nbsp;}}{\\html{$unitsAnswerPer}}'
-												+'}'
-											+'}'
-											+'{\\sign{&equals;}}'
-											+'{\\css{\\html{$dollarSign}}{bigger}}'
-											+'{\\html{$helpFinalAnswer}}'
-											+'{\\html{/ $unitsAnswerPer}}'
-										+'}'
-										+'{\\html{&nbsp;}}'
-										+'{\\ins{How much would $problemAmount $thirdStepUnits cost?}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\css{\\html{$dollarSign}}{bigger}}'
-											+'{\\inputcash{$finalAnswer}}'
-											+'{\\html{ $finalUnitsAnswerPer}}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true,
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
 							
@@ -1102,7 +1126,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                         }
                     }]
                 }]
-            }
+            }*/
         },
         data = [
 				// problem 1
@@ -1298,11 +1322,10 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				problemText: '1 centimeter of cloth costs $0.06.<br>How much would 3 meters of the cloth cost?',
 				problemAmount: '3',
 				descriptor: '',
-				perSelect: '[\\"cm\\", \\"m\\", \\"\\"]',
+				perSelect: '[\\"cm\\", \\"m\\"]',
 				initialAmount: '0.06',
-				numeratorStart: '0.06',
-				denominatorStart: '1',
-				numeratorSecond: '1',
+				delta: '0.06',
+				epsilon: '1',
 				denominatorSecond: '1',
 				dollarSign: '$',
 				unitsQuestionPer: 'cm',
@@ -1312,13 +1335,126 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				thirdStepUnit: 'meter',
 				finalAnswer: '18.00',
 				finalUnitsAnswerPer: '',
-				numEqFrac: '100 cm',
-				numSelect: '[\\"100 cm\\", \\"1 cm\\", \\"1 m\\", \\"100 m\\"]',
-				denEqFrac: '1 m',
-				denSelect: '[\\"100 m\\", \\"1 m\\", \\"100 cm\\", \\"1 cm\\"]',
+				numEqFrac: '1 L',
+				numSelect: '[\\"1000 kL\\", \\"1 L\\"]',
+				denEqFrac: '1000 kL',
+				denSelect: '[\\"1000 kL\\", \\"1 L\\"]',
 				helpFinalAnswer: '6.00',
 				firstWordCancel: 'cm',
 				secondWordCancel: 'm',
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				template: 'dollarOneStep' 
+			}
+			,
+			{ // problem 14
+				problemText: 'A kiloliter of juice costs $1,250. How much would two liters of the juice cost?',
+				problemAmount: '2',
+				descriptor: '',
+				perSelect: '[\\"kL\\", \\"L\\"]',
+				initialAmount: '1',
+				delta: '1250',
+				epsilon: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '1000',
+				dollarSign: '$',
+				unitsQuestionPer: 'kL',
+				unitsAnswerPer: 'L',
+				firstNumAnswer: '1',
+				firstDenAnswer: '1000',
+				thirdStepUnit: 'liter',
+				finalAnswer: '2.50',
+				finalUnitsAnswerPer: '',
+				numEqFrac: '1 kL',
+				numSelect: '[\\"1 kL\\", \\"1000 L\\"]',
+				denEqFrac: '1000 L',
+				denSelect: '[\\"1 kL\\", \\"1000 L\\"]',
+				helpFinalAnswer: '1.25',
+				firstWordCancel: 'kL',
+				secondWordCancel: 'L',
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				template: 'dollarOneStep' 
+			}
+			,
+			{ // problem 15
+				problemText: 'Gas costs $1.10 per liter. How much would it cost to buy 5 hectoliters?',
+				problemAmount: '5',
+				descriptor: '',
+				perSelect: '[\\"hL\\", \\"dL\\", \\"L\\"]',
+				initialAmount: '1',
+				delta: '1.10',
+				epsilon: '1',
+				denominatorSecond: '0.01',
+				dollarSign: '$',
+				unitsQuestionPer: 'L',
+				unitsAnswerPer: 'hL',
+				firstNumAnswer: '1',
+				firstDenAnswer: '0.01',
+				thirdStepUnit: 'hectoliters',
+				finalAnswer: '550',
+				finalUnitsAnswerPer: 'hL',
+				numEqFrac: '1 L',
+				numSelect: '[\\"0.01 hL\\", \\"0.1 dL\\", \\"1 L\\"]',
+				denEqFrac: '0.01 hL',
+				denSelect: '[\\"0.01 hL\\", \\"0.1 dL\\", \\"1 L\\"]',
+				helpFinalAnswer: '110',
+				firstWordCancel: 'L',
+				secondWordCancel: 'hL',
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				template: 'dollarOneStep' 
+			}
+			,
+			{ // problem 16
+				problemText: 'A kilometer of wire costs $145. How much would 250 meters cost?',
+				problemAmount: '250',
+				descriptor: '',
+				perSelect: '[\\"kM\\", \\"hM\\", \\"dM\\", \\"m\\"]',
+				initialAmount: '1',
+				delta: '145',
+				epsilon: '1',
+				denominatorSecond: '1',
+				dollarSign: '$',
+				unitsQuestionPer: 'kM',
+				unitsAnswerPer: 'm',
+				firstNumAnswer: '0.001',
+				firstDenAnswer: '1',
+				thirdStepUnit: 'meter',
+				finalAnswer: '36.25',
+				finalUnitsAnswerPer: 'm',
+				numEqFrac: '0.001 kM',
+				numSelect: '[\\"0.001 kM\\", \\"0.01 hM\\", \\"0.1 dM\\", \\"m\\"]',
+				denEqFrac: '1 m',
+				denSelect: '[\\"0.001 kM\\", \\"0.01 hM\\", \\"0.1 dM\\", \\"1 m\\"]',
+				helpFinalAnswer: '0.145',
+				firstWordCancel: 'kM',
+				secondWordCancel: 'm',
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				template: 'dollarOneStep' 
+			}
+			,
+			{ // problem 17
+				problemText: '50 milligrams of medication costs $8. How much would 20 grams cost?',
+				problemAmount: '20',
+				descriptor: '',
+				perSelect: '[\\"g\\", \\"dG\\", \\"hG\\", \\"mG\\"]',
+				initialAmount: '1',
+				delta: '8',
+				epsilon: '50',
+				denominatorSecond: '0.001',
+				dollarSign: '$',
+				unitsQuestionPer: 'mG',
+				unitsAnswerPer: 'g',
+				firstNumAnswer: '1',
+				firstDenAnswer: '0.001',
+				thirdStepUnit: 'gram',
+				finalAnswer: '3200',
+				finalUnitsAnswerPer: 'g',
+				numEqFrac: '1 mG',
+				numSelect: '[\\"0.001 g\\", \\"0.01 dG\\", \\"0.1 hG\\", \\"1 mG\\"]',
+				denEqFrac: '0.001 g',
+				denSelect: '[\\"0.001 g\\", \\"0.01 dG\\", \\"0.1 hG\\", \\"1 mG\\"]',
+				helpFinalAnswer: '160',
+				firstWordCancel: 'mG',
+				secondWordCancel: 'g',
 				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'dollarOneStep' 
 			}
