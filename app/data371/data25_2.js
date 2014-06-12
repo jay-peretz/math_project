@@ -40,25 +40,17 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                     children: [{
 						problem: '\\rowgrp'
 									+'{\\html{$problemText}}',
-                        answer: '\\frac'
-									+'{\\fracstr{$initialNumAmount$unitsStart}}'
-									+'{\\grp'
-										+'{\\input{$answer}}'
-										+'{\\str{$unitsPer}}'
-									+'}',
+                        answer: '$fractionAnswer',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
 										+'{\\html{&nbsp;}}'
 										+'{\\str{$helpText}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\frac'
-											+'{\\fracstr{$initialNumAmount $unitsStart}}'
-											+'{\\fracstr{$answer $unitsPer}}'
-										+'}'
+										+'{$fractionHelp}'
 										+'{\\html{&nbsp;}}'
 										+'{\\css'
-											+'{\\html{Answer:  $answer $unitsPer}}'
+											+'{\\str{Answer:  $answer}}'
 											+'{help-answer-text}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
@@ -1235,10 +1227,20 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				initialNumAmount: '1',
 				unitsStart: ' km',
 				unitsPer: ' m',
-				fractionAnswer: dataUtils.pre('\\grp'
-									+'{\\input{$$answer}}'
-									+'{\\html{$$unitsPer}}'
-						),
+				fractionAnswer: dataUtils.pre('\\frac'
+												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
+												+'{\\grp'
+													+'{\\input{$$answer}}'
+													+'{\\str{$$unitsPer}}'
+												+'}'
+								),
+				fractionHelp: dataUtils.pre('\\frac'
+												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
+												+'{\\grp'
+													+'{\\html{$$answer}}'
+													+'{\\str{$$unitsPer}}'
+												+'}'
+								),
 				helpText: '1 km = 1000 m.<br><br>Therefore, the fraction that equals 1 whole would be:',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
 				template: 'simpleFractional' 
@@ -1250,10 +1252,20 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				initialNumAmount: '1',
 				unitsStart: ' g',
 				unitsPer: ' mg',
-				fractionAnswer: dataUtils.pre('\\grp'
-									+'{\\input{$$answer}}'
-									+'{\\html{$$unitsPer}}'
-						),
+				fractionAnswer: dataUtils.pre('\\frac'
+												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
+												+'{\\grp'
+													+'{\\input{$$answer}}'
+													+'{\\str{$$unitsPer}}'
+												+'}'
+								),
+				fractionHelp: dataUtils.pre('\\frac'
+												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
+												+'{\\grp'
+													+'{\\html{$$answer}}'
+													+'{\\str{$$unitsPer}}'
+												+'}'
+								),
 				helpText: '1 g = 1000 mg. <br><br>Therefore, the fraction that equals 1 whole would be:',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
 				template: 'simpleFractional' 
@@ -1265,10 +1277,20 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				initialNumAmount: '1',
 				unitsStart: ' mm',
 				unitsPer: ' m',
-				fractionAnswer: dataUtils.pre('\\grp'
-									+'{\\input{$$answer}}'
-									+'{\\html{$$unitsPer}}'
-						),
+				fractionAnswer: dataUtils.pre('\\frac'
+												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
+												+'{\\grp'
+													+'{\\input{$$answer}}'
+													+'{\\str{$$unitsPer}}'
+												+'}'
+								),
+				fractionHelp: dataUtils.pre('\\frac'
+												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
+												+'{\\grp'
+													+'{\\html{$$answer}}'
+													+'{\\str{$$unitsPer}}'
+												+'}'
+								),
 				helpText: '1 mm = 0.001 m.<br><br>Therefore, the fraction that equals 1 whole would be:',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
 				template: 'simpleFractional' 
@@ -1280,10 +1302,20 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				initialNumAmount: '1',
 				unitsStart: ' cL',
 				unitsPer: ' L',
-				fractionAnswer: dataUtils.pre('\\grp'
-									+'{\\input{$$answer}}'
-									+'{\\html{$$unitsPer}}'
-						),
+				fractionAnswer: dataUtils.pre('\\frac'
+												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
+												+'{\\grp'
+													+'{\\input{$$answer}}'
+													+'{\\str{$$unitsPer}}'
+												+'}'
+								),
+				fractionHelp: dataUtils.pre('\\frac'
+												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
+												+'{\\grp'
+													+'{\\html{$$answer}}'
+													+'{\\str{$$unitsPer}}'
+												+'}'
+								),
 				helpText: '1 cL = 0.01 L.<br><br>Therefore, the fraction that equals 1 whole would be:',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
 				template: 'simpleFractional' 
@@ -1291,14 +1323,24 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			// problem 11
 			{
 				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
-				answer: '1',
-				initialNumAmount: '0.01',
-				unitsStart: ' daL',
-				unitsPer: ' dL',
-				fractionAnswer: dataUtils.pre('\\grp'
-									+'{\\input{$$answer}}'
-									+'{\\html{$$unitsPer}}'
-						),
+				answer: '0.01',
+				initialNumAmount: '1',
+				unitsStart: ' dL',
+				unitsPer: ' daL',
+				fractionAnswer: dataUtils.pre('\\frac'
+												+'{\\grp'
+													+'{\\input{$$answer}}'
+													+'{\\str{$$unitsPer}}'
+												+'}'
+												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
+								),
+				fractionHelp: dataUtils.pre('\\frac'
+												+'{\\grp'
+													+'{\\str{$$answer}}'
+													+'{\\str{$$unitsPer}}'
+												+'}'
+												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
+								),
 				helpText: '0.01 daL = 1 dL.<br><br>Therefore, the fraction that equals 1 whole would be:',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
 				template: 'simpleFractional' 
@@ -1306,14 +1348,24 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			// problem 12
 			{
 				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
-				answer: '1',
-				initialNumAmount: '0.0001',
-				unitsStart: ' hg',
-				unitsPer: ' cg',
-				fractionAnswer: dataUtils.pre('\\grp'
-									+'{\\input{$$answer}}'
-									+'{\\html{$$unitsPer}}'
-						),
+				answer: '0.0001',
+				initialNumAmount: '1',
+				unitsStart: ' cg',
+				unitsPer: ' hg',
+				fractionAnswer: dataUtils.pre('\\frac'
+												+'{\\grp'
+													+'{\\input{$$answer}}'
+													+'{\\str{$$unitsPer}}'
+												+'}'
+												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
+								),
+				fractionHelp: dataUtils.pre('\\frac'
+												+'{\\grp'
+													+'{\\str{$$answer}}'
+													+'{\\str{$$unitsPer}}'
+												+'}'
+												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
+								),
 				helpText: '0.0001 hg = 1 cg.<br><br>Therefore, the fraction that equals 1 whole would be:',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
 				template: 'simpleFractional' 
