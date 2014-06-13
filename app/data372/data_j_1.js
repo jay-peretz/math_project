@@ -421,5 +421,19 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
             },
         ];
 
-	return dataUtils.build(desc, template, data);
+	shuffle = [
+		{ problems: [1,2,3], total: 1},
+		{ problems: [4,5,6], total: 1},
+		{ problems: [7,8,9], total: 1},
+		{ problems: [10,11,12], total: 1},
+		{ problems: [13,14,15], total: 1},
+		{ problems: [17,21,28], total: 1},
+		{ problems: [18,22,24], total: 1},
+		{ problems: [16,20,25], total: 1},
+		{ problems: [19,27,30], total: 1},
+		{ problems: [23,26,29], total: 1},
+		];    
+    	return dataUtils.build(desc, template, data, shuffle);
+		
+	//return dataUtils.build(desc, template, data);
 }]);
