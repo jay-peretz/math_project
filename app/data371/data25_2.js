@@ -219,12 +219,12 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 											+'{\\sign{&times;}}'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\html{$firstNumAnswer}}'
+													+'{\\html{$numDecimal}}'
 													+'{\\html{&nbsp;}}'
 													+'{\\html{$unitsQuestionPer}}'
 												+'}'
 												+'{\\grp'
-													+'{\\html{$firstDenAnswer}}{\\html{&nbsp;}}{\\html{$unitsAnswerPer}}'
+													+'{\\html{$denDecimal}}{\\html{&nbsp;}}{\\html{$denUnitFrac}}'
 												+'}'
 											+'}'
 										+'}',
@@ -237,7 +237,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{What is the price per $thirdStepUnit?}}'
+										+'{\\html{What is the price per $unitsAnswerPer?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
@@ -256,18 +256,18 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 											+'{\\sign{&times;}}'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\html{$firstNumAnswer}}'
+													+'{\\html{$numDecimal}}'
 													+'{\\html{&nbsp;}}'
 													+'{\\html{$unitsQuestionPer}}'
 												+'}'
 												+'{\\grp'
-													+'{\\html{$firstDenAnswer}}{\\html{&nbsp;}}{\\html{$unitsAnswerPer}}'
+													+'{\\html{$denDecimal}}{\\html{&nbsp;}}{\\html{$denUnitFrac}}'
 												+'}'
 											+'}'
 											+'{\\sign{&equals;}}'
 											+'{\\css{\\html{$dollarSign}}{bigger}}'
 											+'{\\inputcash{$helpFinalAnswer}}'
-											+'{\\html{<span class=bigger>/</span> $unitsAnswerPer}}'
+											+'{\\html{<span class=bigger>/</span> $denUnitFrac}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -277,9 +277,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 										+'{\\grp'
 											+'{\\frac{\\html{<span class=blue-text>$dollarSign $delta</span>}}{\\html{<span class=blue-text>$epsilon</span><span class=line_through> $unitsQuestionPer</span>}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>$firstNumAnswer</span> <span class=line_through>$unitsQuestionPer</span>}}{\\html{<span class=blue-text>$denominatorSecond $unitsAnswerPer</span>}}}'
+											+'{\\frac{\\html{<span class=blue-text>$numDecimal</span> <span class=line_through>$unitsQuestionPer</span>}}{\\html{<span class=blue-text>$denominatorSecond $denUnitFrac</span>}}}'
 											+'{\\sign{&equals;}}'
-											+'{\\html{<span class=blue-text>$dollarSign $helpFinalAnswer / $unitsAnswerPer</span>}}'
+											+'{\\html{<span class=blue-text>$dollarSign $helpFinalAnswer / $denUnitFrac</span>}}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
@@ -299,21 +299,21 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 											+'{\\sign{&times;}}'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\html{$firstNumAnswer}}'
+													+'{\\html{$numDecimal}}'
 													+'{\\html{&nbsp;}}'
 													+'{\\html{$unitsQuestionPer}}'
 												+'}'
 												+'{\\grp'
-													+'{\\html{$firstDenAnswer}}{\\html{&nbsp;}}{\\html{$unitsAnswerPer}}'
+													+'{\\html{$denDecimal}}{\\html{&nbsp;}}{\\html{$denUnitFrac}}'
 												+'}'
 											+'}'
 											+'{\\sign{&equals;}}'
 											+'{\\css{\\html{$dollarSign}}{bigger}}'
 											+'{\\html{$helpFinalAnswer}}'
-											+'{\\html{/ $unitsAnswerPer}}'
+											+'{\\html{/ $denUnitFrac}}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\ins{How much would $problemAmount $thirdStepUnits cost?}}'
+										+'{\\ins{How much would $problemAmount $fourthProblemPer cost?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css{\\html{$dollarSign}}{bigger}}'
@@ -330,165 +330,16 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                     }]
                 }]
             },
-			/*oneStep: {
-                title: 'Converting English Compound Units Using Dimensional Analysis',
+			quantityOneStep: {
+                title: 'Converting Units of Volume',
                 children: [{
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
 									+'{\\html{$problemText}}',
                         answer: '\\grp'
-									+'{\\sign{&equals;}}'
-									+'{\\html{$prefixAnswer}}'
-									+'{\\input{$answer}}'
-									+'$fractionAnswer',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": false,
-							"workbook": true,
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-                        }
-                    }]
-                }, {
-                    title: 'Workbook',
-                    children: [{
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $unitsPer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsSecond / $unitsPer}}'
-									+'}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{Write the given value as a fraction.$descriptor}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$unitsStart}{$labelSelect}}}{\\grp{\\input{$denominatorStart}}{\\html{&nbsp;}}{\\select{$unitsPer}{$perSelect}}}}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": true,
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-							   
-					}, {
-                       problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $unitsPer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsSecond / $unitsPer}}'
-									+'}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{What is the fraction (that equals 1 whole) that you need to multiply by?}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$initialAmount}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{1}}{\\html{&nbsp;}}{\\html{$unitsPer}}'
-												+'}'
-											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\select{$numUnitFrac}{$numSelect}}'
-												+'{\\select{$denUnitFrac}{$denSelect}}'
-											+'}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-							+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with "$secondWordCancel" in the numerator and "$firstWordCancel" in the denominator allows us to cancel out "$firstWordCancel".}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp'
-								+'{\\frac'
-									+'{\\html{$initialAmount &nbsp; $unitsStart}}'
-									+'{\\html{1 &nbsp; $unitsPer}}'
-								+'}'
-								+'{\\sign{&times;}}'
-								+'{\\frac'
-									+'{\\html{$firstNumAnswer &nbsp $unitsSecond}}'
-									+'{\\html{$firstDenAnswer &nbsp; $unitsStart}}'
-								+'}'
-							+'}'
-							+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }, {
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $unitsPer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsSecond / $unitsPer}}'
-									+'}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac'
-												+'{\\html{$initialAmount &nbsp; $unitsStart}}'
-												+'{\\html{1 &nbsp; $unitsPer}}'
-											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\html{$firstNumAnswer &nbsp $unitsSecond}}'
-												+'{\\html{$firstDenAnswer &nbsp; $unitsStart}}'
-											+'}'
-											+'{\\sign{&equals;}}'
-											+'{\\input{$finalAnswer}}'
-											+'{\\html{$unitsSecond / $unitsPer}}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorStart</span> <span class=line_through>$unitsStart</span>}}{\\html{<span class=blue-text>$denominatorStart</span><span class=blue-text> $unitsPer</span>}}}'
-											+'{\\sign{&times;}}'
-											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond $unitsSecond</span>}}{\\html{<span class=blue-text>$denominatorSecond</span> <span class=line_through>$unitsStart</span>}}}'
-											+'{\\sign{&equals;}}'
-											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsSecond / $unitsPer</span>}}'
-										+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }]
-                }]
-            },
-			twoStep: {
-                title: 'Converting Units of Volume',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $firstDenAnswer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsThird / $unitsPer}}'
-									+'}',
-                        answer: '\\grp'
 									+'{\\input{$finalAnswer}}'
-									+'{\\html{$unitsThird / $unitsPer}}',
+									+'{\\html{$unitsAnswerPer}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -501,19 +352,22 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                     title: 'Workbook',
                     children: [{
                         problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $firstDenAnswer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsThird / $unitsPer}}'
-									+'}',
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Write the given value as a fraction.$descriptor}}'
+										+'{\\html{Write the given value as a fraction.}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$unitsStart}{$perSelectOne}}}{\\grp{\\input{$denominatorStart}}{\\html{&nbsp;}}{\\select{$firstDenAnswer}{$perSelectTwo}}}}'
+										+'{\\frac'
+											+'{\\grp'
+												+'{\\input{$delta}}'
+												+'{\\html{&nbsp;}}'
+												+'{\\select{$unitsQuestionPer}{$perSelect}}'
+											+'}'
+											+'{\\grp'
+												+'{\\input{$epsilon}}'
+												+'{\\html{&nbsp;}}'
+												+'{\\select{$unitsPer}{$conversionToSelect}}'
+											+'}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -526,236 +380,200 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 							   
 					}, {
                        problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $firstDenAnswer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsThird / $unitsPer}}'
-									+'}',
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{There are two fractions that you will need to multiply by to solve this problem. What is the listed fraction that is one of the fractions that you need to multiply by?}}'
+										+'{\\html{Enter decimals and units for the fraction (that equals 1 whole) to multiply by. Use the number 1 as the decimal in either the numerator or denominator.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\html{$initialAmount}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
+													+'{\\html{$delta}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsQuestionPer}}'
 												+'}'
 												+'{\\grp'
-													+'{\\html{$denominatorStart}}{\\html{&nbsp;}}{\\html{$firstDenAnswer}}'
+													+'{\\html{$epsilon}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsPer}}'
 												+'}'
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\select{$numUnitFrac}{$numSelect}}'
-												+'{\\select{$denUnitFrac}{$denSelect}}'
+												+'{\\grp'
+													+'{\\input{$numDecimal}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\select{$numUnitFrac}{$numSelect}}'
+												+'}'
+												+'{\\grp'
+													+'{\\input{$denDecimal}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\select{$denUnitFrac}{$denSelect}}'
+												+'}'
 											+'}'
+											+'{\\html{&nbsp;&nbsp;&nbsp;&nbsp; <span class=hugeAndThin>(</span> example: }}'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\html{$firstExample}}'
+												+'}'
+												+'{\\grp'
+													+'{\\html{$secondExample}}'
+												+'}'
+											+'}'
+											+'{\\html{<span class=hugeAndThin>)</span>}}'
 										+'}'
 									+'}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-							+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with "$secondWordCancel" in the numerator and "$firstWordCancel" in the denominator allows us to cancel out "$firstWordCancel".}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp'
-								+'{\\frac'
-									+'{\\html{$initialAmount &nbsp; $unitsStart}}'
-									+'{\\html{$denominatorStart &nbsp; $firstDenAnswer}}'
-								+'}'
-								+'{\\sign{&times;}}'
-								+'{\\css'
-									+'{\\frac'
-										+'{\\grp'
-											+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-										+'}'
-										+'{\\grp'
-											+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-										+'}'
-									+'}'
-								+'{blue-text}}'
-							+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }, {
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $firstDenAnswer}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-											+'}'
-										+'}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsThird / $unitsPer}}'
-									+'}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{is the second fraction that you need to multiply by?}}'
+										+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with "$firstWordCancel" in the denominator and "$secondWordCancel" in the numerator allows us to cancel out "$firstWordCancel".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\html{$initialAmount}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
+													+'{\\html{$delta}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsQuestionPer}}'
 												+'}'
 												+'{\\grp'
-													+'{\\html{$denominatorStart}}{\\html{&nbsp;}}{\\html{$firstDenAnswer}}'
+													+'{\\html{$epsilon}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsPer}}'
 												+'}'
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
+													+'{\\html{$numDecimal}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$numUnitFrac}}'
 												+'}'
 												+'{\\grp'
-													+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
+													+'{\\html{$denDecimal}}{\\html{&nbsp;}}{\\html{$denUnitFrac}}'
 												+'}'
 											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\select{$num2ndEqFrac}{$num2ndSelect}}'
-												+'{\\select{$den2ndEqFrac}{$den2ndSelect}}'
-											+'}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$thirdWordCancel" that we don\'t want as a part of the answer.  The fraction with "$thirdWordCancel" in the numerator and "$perWordCancel" in the denominator allows us to cancel out "$thirdWordCancel".}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac'
-												+'{\\html{$initialAmount &nbsp; $unitsStart}}'
-												+'{\\html{$denominatorStart &nbsp; $firstDenAnswer}}'
-											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-												+'}'
-											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\css'
-												+'{\\frac'
-													+'{\\grp'
-														+'{\\html{$numeratorThird}}{\\html{&nbsp;}}{\\html{$thirdNumAnswer}}'
-													+'}'
-													+'{\\grp'
-														+'{\\html{$denominatorThird}}{\\html{&nbsp;}}{\\html{$thirdDenAnswer}}'
-													+'}'
-												+'}'
-											+'{blue-text}}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
 							
                         }
                     }, {
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $firstDenAnswer}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-											+'}'
-										+'}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{$numeratorThird}}{\\html{&nbsp;}}{\\html{$thirdNumAnswer}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{$denominatorThird}}{\\html{&nbsp;}}{\\html{$thirdDenAnswer}}'
-											+'}'
-										+'}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsSecond / $unitsPer}}'
-									+'}',
+                       problem: '\\rowgrp'
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Multiply the fractions (remember to cancel out words).$descriptor}}'
+										+'{\\html{$statementTwo}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\html{$initialAmount}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
+													+'{\\html{$delta}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsQuestionPer}}'
 												+'}'
 												+'{\\grp'
-													+'{\\html{$denominatorStart}}{\\html{&nbsp;}}{\\html{$firstDenAnswer}}'
-												+'}'
-											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
+													+'{\\html{$epsilon}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsPer}}'
 												+'}'
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\html{$numeratorThird}}{\\html{&nbsp;}}{\\html{$thirdNumAnswer}}'
+													+'{\\html{$numDecimal}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$numUnitFrac}}'
 												+'}'
 												+'{\\grp'
-													+'{\\html{$denominatorThird}}{\\html{&nbsp;}}{\\html{$thirdDenAnswer}}'
+													+'{\\html{$denDecimal}}{\\html{&nbsp;}}{\\html{$denUnitFrac}}'
 												+'}'
 											+'}'
 											+'{\\sign{&equals;}}'
-											+'{\\input{$finalAnswer}}'
-											+'{\\html{$unitsSecond / $unitsPer}}'
+											+'{\\input{$helpFinalAnswer}}'
+											+'{\\html{$numUnitFrac <span class=bigger>/</span> $unitsPer}}'
 										+'}'
 									+'}{well}',
                         controls: {
                             "checkAnswer": true,
-                            "help": '\\grp'
-										+'{\\frac'
-											+'{\\html{<span class=blue-text>$initialAmount</span> <span class=line_through>$unitsStart</span>}}'
-											+'{\\html{<span class=blue-text>$denominatorStart</span> <span class=line_through>$firstDenAnswer</span>}}'
+                            "help": '\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\html{<span class=blue-text>$delta</span>}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{<span class=line_through>$unitsQuestionPer</span>}}'
+												+'}'
+												+'{\\grp'
+													+'{\\html{<span class=blue-text>$epsilon</span>}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{<span class=blue-text>$unitsPer</span>}}'
+												+'}'
+											+'}'
+											+'{\\sign{&times;}}'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\html{<span class=blue-text>$numDecimal</span>}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{<span class=blue-text>$numUnitFrac</span>}}'
+												+'}'
+												+'{\\grp'
+													+'{\\html{<span class=blue-text>$denDecimal</span>}}{\\html{&nbsp;}}{\\html{<span class=line_through>$denUnitFrac</span>}}'
+												+'}'
+											+'}'
+											+'{\\sign{&equals;}}'
+											
+											+'{\\html{<span class=blue-text>$helpFinalAnswer $numUnitFrac <span class=bigger>/</span> $unitsPer</span>}}'
+										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }, {
+                       problem: '\\rowgrp'
+									+'{\\html{$problemText}}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\html{$delta}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsQuestionPer}}'
+												+'}'
+												+'{\\grp'
+													+'{\\html{$epsilon}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsPer}}'
+												+'}'
+											+'}'
+											+'{\\sign{&times;}}'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\html{$numDecimal}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$numUnitFrac}}'
+												+'}'
+												+'{\\grp'
+													+'{\\html{$denDecimal}}{\\html{&nbsp;}}{\\html{$denUnitFrac}}'
+												+'}'
+											+'}'
+											+'{\\sign{&equals;}}'
+											+'{\\html{$helpFinalAnswer}}'
+											+'{\\html{$numUnitFrac <span class=bigger>/</span> $unitsPer}}'
 										+'}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{<span class=blue-text>$numeratorSecond $unitsSecond</span>}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{<span class=blue-text>$denominatorSecond</span> <span class=line_through>$unitsStart</span>}}'
-											+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{$instructionThird}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\input{$finalAnswer}}'
+											+'{\\html{$unitsAnswerPer}}'
 										+'}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{<span class=blue-text>$numeratorThird</span> <span class=line_through>$thirdNumAnswer</span>}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{<span class=blue-text>$denominatorThird $thirdDenAnswer</span>}}'
-											+'}'
-										+'}'
-										+'{\\sign{&equals;}}'
-										+'{\\css'
-											+'{\\grp'
-												+'{\\html{$helpFinalAnswer}}'
-												+'{\\html{$unitsSecond / $unitsPer}}'
-											+'}'
-										+'{blue-text}}',
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true,
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
 							
@@ -763,22 +581,16 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                     }]
                 }]
             },
-			threeStep: {
+			quantityTwoStep: {
                 title: 'Converting Units of Volume',
                 children: [{
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $firstDenAnswer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsThird / $unitsPer}}'
-									+'}',
+									+'{\\html{$problemText}}',
                         answer: '\\grp'
 									+'{\\input{$finalAnswer}}'
-									+'{\\html{$unitsThird / $unitsPer}}',
+									+'{\\html{$unitsAnswerPer}}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -791,19 +603,22 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                     title: 'Workbook',
                     children: [{
                         problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $firstDenAnswer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsThird / $unitsPer}}'
-									+'}',
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Write the given value as a fraction.$descriptor}}'
+										+'{\\html{Write the given value as a fraction.}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$unitsStart}{$perSelectOne}}}{\\grp{\\input{$denominatorStart}}{\\html{&nbsp;}}{\\select{$firstDenAnswer}{$perSelectTwo}}}}'
+										+'{\\frac'
+											+'{\\grp'
+												+'{\\input{$delta}}'
+												+'{\\html{&nbsp;}}'
+												+'{\\select{$unitsQuestionPer}{$perSelect}}'
+											+'}'
+											+'{\\grp'
+												+'{\\input{$epsilon}}'
+												+'{\\html{&nbsp;}}'
+												+'{\\select{$unitsPer}{$conversionToSelect}}'
+											+'}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -816,379 +631,235 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 							   
 					}, {
                        problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $firstDenAnswer}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsThird / $unitsPer}}'
-									+'}',
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{There are three fractions that you will need to multiply by to solve this problem. What is the listed fraction that is one of the fractions that you need to multiply by?}}'
+										+'{\\html{Enter decimals and units for the $typeFraction fraction (that equals 1 whole) to multiply by. Use the number 1 as the decimal in either the numerator or denominator.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\html{$initialAmount}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
+													+'{\\html{$delta}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsQuestionPer}}'
 												+'}'
 												+'{\\grp'
-													+'{\\html{$denominatorStart}}{\\html{&nbsp;}}{\\html{$firstDenAnswer}}'
+													+'{\\html{$epsilon}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsPer}}'
 												+'}'
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\select{$numUnitFrac}{$numSelect}}'
-												+'{\\select{$denUnitFrac}{$denSelect}}'
+												+'{\\grp'
+													+'{\\input{$numDecimal}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\select{$numUnitFrac}{$numSelect}}'
+												+'}'
+												+'{\\grp'
+													+'{\\input{$denDecimal}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\select{$denUnitFrac}{$denSelect}}'
+												+'}'
 											+'}'
 										+'}'
 									+'}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-							+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with "$secondWordCancel" in the numerator and "$firstWordCancel" in the denominator allows us to cancel out "$firstWordCancel".}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\grp'
-								+'{\\frac'
-									+'{\\html{$initialAmount &nbsp; $unitsStart}}'
-									+'{\\html{$denominatorStart &nbsp; $firstDenAnswer}}'
-								+'}'
-								+'{\\sign{&times;}}'
-								+'{\\css'
-									+'{\\frac'
-										+'{\\grp'
-											+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-										+'}'
-										+'{\\grp'
-											+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-										+'}'
-									+'}'
-								+'{blue-text}}'
-							+'}',
-							"modalButton": "\\html{Equivalence Chart}",
-							"modalText": '$modalChart'
-							
-                        }
-                    }, {
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $firstDenAnswer}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-											+'}'
-										+'}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsThird / $unitsPer}}'
-									+'}',
-                        answer: '\\pan{12}{11}'
-									+'{\\rowgrp'
-										+'{\\html{What is a second fraction that you need to multiply by?}}'
+										+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$firstWordCancel" that we don\'t want as a part of the answer.  The fraction with "$firstWordCancel" in the denominator and "$secondWordCancel" in the numerator allows us to cancel out "$firstWordCancel".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\html{$initialAmount}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
+													+'{\\html{$delta}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsQuestionPer}}'
 												+'}'
 												+'{\\grp'
-													+'{\\html{$denominatorStart}}{\\html{&nbsp;}}{\\html{$firstDenAnswer}}'
+													+'{\\html{$epsilon}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsPer}}'
 												+'}'
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
+													+'{\\html{$numDecimal}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$numUnitFrac}}'
 												+'}'
 												+'{\\grp'
-													+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
+													+'{\\html{$denDecimal}}{\\html{&nbsp;}}{\\html{$denUnitFrac}}'
 												+'}'
 											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\select{$num2ndEqFrac}{$num2ndSelect}}'
-												+'{\\select{$den2ndEqFrac}{$den2ndSelect}}'
-											+'}'
-										+'}'
-									+'}{well}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$secondWordCancel" that we don\'t want as a part of the answer.  The fraction with "$thirdWordCancel" in the numerator and "$secondWordCancel" in the denominator allows us to cancel out "$secondWordCancel".}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\frac'
-												+'{\\html{$initialAmount &nbsp; $unitsStart}}'
-												+'{\\html{$denominatorStart &nbsp; $firstDenAnswer}}'
-											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-												+'}'
-											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\css'
-												+'{\\frac'
-													+'{\\grp'
-														+'{\\html{$numeratorThird}}{\\html{&nbsp;}}{\\html{$unitsThird}}'
-													+'}'
-													+'{\\grp'
-														+'{\\html{$denominatorThird}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-													+'}'
-												+'}'
-											+'{blue-text}}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
 							
                         }
                     }, {
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $firstDenAnswer}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-											+'}'
-										+'}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{$numeratorThird}}{\\html{&nbsp;}}{\\html{$unitsThird}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{$denominatorThird}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-											+'}'
-										+'}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsThird / $unitsPer}}'
-									+'}',
+                       problem: '\\rowgrp'
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{What is a third fraction that you need to multiply by?}}'
+										+'{\\html{Enter amounts and units for the fraction (that equals 1 whole) to multiply by. Use the number 1 as the decimal in either the numerator or denominator.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\html{$initialAmount}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
+													+'{\\html{$delta}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsQuestionPer}}'
 												+'}'
 												+'{\\grp'
-													+'{\\html{$denominatorStart}}{\\html{&nbsp;}}{\\html{$firstDenAnswer}}'
+													+'{\\html{$epsilon}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\html{$unitsPer}}'
 												+'}'
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-												+'}'
+												+'{\\html{$numDecimal $numUnitFrac}}'
+												+'{\\html{$denDecimal $denUnitFrac}}'
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
 												+'{\\grp'
-													+'{\\html{$numeratorThird}}{\\html{&nbsp;}}{\\html{$unitsThird}}'
+													+'{\\input{$numThirdStep}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\select{$numThirdUnit}{$numThirdSelect}}'
 												+'}'
 												+'{\\grp'
-													+'{\\html{$denominatorThird}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
+													+'{\\input{$denThirdStep}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\select{$denThirdUnit}{$denThirdSelect}}'
 												+'}'
-											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\select{$num3rdEqFrac}{$num3rdSelect}}'
-												+'{\\select{$den3rdEqFrac}{$den3rdSelect}}'
 											+'}'
 										+'}'
 									+'}{well}',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$fourthWordCancel" that we don\'t want as a part of the answer.  The fraction with "$fourthWordCancel" in the numerator and "$perWordCancel" in the denominator allows us to cancel out "$fourthWordCancel".}}'
+										+'{\\html{The purpose of the fraction we multiply by is to cancel out the word "$thirdWordCancel" that we don\'t want as a part of the answer.  The fraction with "$thirdWordCancel" in the numerator and "$fourthWordCancel" in the denominator allows us to cancel out "$thirdWordCancel".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
-												+'{\\html{$initialAmount &nbsp; $unitsStart}}'
-												+'{\\html{$denominatorStart &nbsp; $firstDenAnswer}}'
+												+'{\\html{$delta $unitsQuestionPer}}'
+												+'{\\html{$epsilon  $unitsPer}}'
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-												+'}'
+												+'{\\html{$numDecimal $numUnitFrac}}'
+												+'{\\html{$denDecimal $denUnitFrac}}'
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$numeratorThird}}{\\html{&nbsp;}}{\\html{$unitsThird}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{$denominatorThird}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-												+'}'
+												+'{\\html{$numThirdStep $numThirdUnit}}'
+												+'{\\html{$denThirdStep $denThirdUnit}}'
 											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\css'
-												+'{\\frac'
-													+'{\\grp'
-														+'{\\html{$numeratorFourth}}{\\html{&nbsp;}}{\\html{$firstDenAnswer}}'
-													+'}'
-													+'{\\grp'
-														+'{\\html{$denominatorFourth}}{\\html{&nbsp;}}{\\html{$unitsPer}}'
-													+'}'
-												+'}'
-											+'{blue-text}}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
 							
                         }
                     }, {
-                        problem: '\\rowgrp'
-									+'{\\html{$problemText$descriptor}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount &nbsp; $unitsStart / $firstDenAnswer}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-											+'}'
-										+'}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{$numeratorThird}}{\\html{&nbsp;}}{\\html{$unitsThird}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{$denominatorThird}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-											+'}'
-										+'}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{$numeratorFourth}}{\\html{&nbsp;}}{\\html{$firstDenAnswer}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{$denominatorFourth}}{\\html{&nbsp;}}{\\html{$unitsPer}}'
-											+'}'
-										+'}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{? &nbsp; $unitsThird / $unitsPer}}'
-									+'}',
+                       problem: '\\rowgrp'
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
+										+'{\\html{$statementTwo}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$initialAmount}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{$denominatorStart}}{\\html{&nbsp;}}{\\html{$firstDenAnswer}}'
-												+'}'
+												+'{\\html{$delta $unitsQuestionPer}}'
+												+'{\\html{$epsilon $unitsPer}}'
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$numeratorSecond}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{$denominatorSecond}}{\\html{&nbsp;}}{\\html{$unitsStart}}'
-												+'}'
+												+'{\\html{$numDecimal $numUnitFrac}}'
+												+'{\\html{$denDecimal $denUnitFrac}}'
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$numeratorThird}}{\\html{&nbsp;}}{\\html{$unitsThird}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{$denominatorThird}}{\\html{&nbsp;}}{\\html{$unitsSecond}}'
-												+'}'
-											+'}'
-											+'{\\sign{&times;}}'
-											+'{\\frac'
-												+'{\\grp'
-													+'{\\html{$numeratorFourth}}{\\html{&nbsp;}}{\\html{$firstDenAnswer}}'
-												+'}'
-												+'{\\grp'
-													+'{\\html{$denominatorFourth}}{\\html{&nbsp;}}{\\html{$unitsPer}}'
-												+'}'
+												+'{\\html{$numThirdStep $numThirdUnit}}'
+												+'{\\html{$denThirdStep $denThirdUnit}}'
 											+'}'
 											+'{\\sign{&equals;}}'
-											+'{\\input{$finalAnswer}}'
-											+'{\\html{$unitsThird / $unitsPer}}'
+											+'{\\input{$helpFinalAnswer}}'
+											+'{\\html{$numUnitFrac <span class=bigger>/</span> $denThirdUnit}}'
 										+'}'
 									+'}{well}',
                         controls: {
                             "checkAnswer": true,
-                            "help": '\\grp'
-										+'{\\frac'
-											+'{\\html{<span class=blue-text>$initialAmount</span> <span class=line_through>$unitsStart</span>}}'
-											+'{\\html{<span class=blue-text>$denominatorStart</span> <span class=line_through>$firstDenAnswer</span>}}'
+                            "help": '\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\html{<span class=blue-text>$delta</span> <span class=line_through>$unitsQuestionPer</span>}}'
+												+'{\\html{<span class=blue-text>$epsilon</span> <span class=line_through>$unitsPer</span>}}'
+											+'}'
+											+'{\\sign{&times;}}'
+											+'{\\frac'
+												+'{\\html{<span class=blue-text>$numDecimal $numUnitFrac</span>}}'
+												+'{\\html{<span class=blue-text>$denDecimal</span> <span class=line_through>$denUnitFrac</span>}}'
+											+'}'
+											+'{\\sign{&times;}}'
+											+'{\\frac'
+												+'{\\html{<span class=blue-text>$numThirdStep</span> <span class=line_through>$numThirdUnit</span>}}'
+												+'{\\html{<span class=blue-text>$denThirdStep $denThirdUnit</span>}}'
+											+'}'
+											+'{\\sign{&equals;}}'
+											
+											+'{\\html{<span class=blue-text>$helpFinalAnswer $numUnitFrac <span class=bigger>/</span> $denThirdUnit</span>}}'
+										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+							
+                        }
+                    }, {
+                       problem: '\\rowgrp'
+									+'{\\html{$problemText}}',
+                        answer: '\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\html{$delta $unitsQuestionPer}}'
+												+'{\\html{$epsilon $unitsPer}}'
+											+'}'
+											+'{\\sign{&times;}}'
+											+'{\\frac'
+												+'{\\html{$numDecimal $numUnitFrac}}'
+												+'{\\html{$denDecimal $denUnitFrac}}'
+											+'}'
+											+'{\\sign{&times;}}'
+											+'{\\frac'
+												+'{\\html{$numThirdStep $numThirdUnit}}'
+												+'{\\html{$denThirdStep $denThirdUnit}}'
+											+'}'
+											+'{\\sign{&equals;}}'
+											+'{\\html{$helpFinalAnswer}}'
+											+'{\\html{$numUnitFrac <span class=bigger>/</span> $denThirdUnit}}'
 										+'}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{<span class=blue-text>$numeratorSecond</span> <span class=line_through>$unitsSecond</span>}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{<span class=blue-text>$denominatorSecond</span> <span class=line_through>$unitsStart</span>}}'
-											+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\ins{$instructionThird}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\input{$finalAnswer}}'
+											+'{\\html{$unitsAnswerPer}}'
 										+'}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{<span class=blue-text>$numeratorThird $unitsThird</span>}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{<span class=blue-text>$denominatorThird</span> <span class=line_through>$unitsSecond</span>}}'
-											+'}'
-										+'}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{<span class=blue-text>$numeratorFourth</span> <span class=line_through>$firstDenAnswer</span>}}'
-											+'}'
-											+'{\\grp'
-												+'{\\html{<span class=blue-text>$denominatorFourth $unitsPer</span>}}'
-											+'}'
-										+'}'
-										+'{\\sign{&equals;}}'
-										+'{\\css'
-											+'{\\grp'
-												+'{\\html{$helpFinalAnswer}}'
-												+'{\\html{$unitsThird / $unitsPer}}'
-											+'}'
-										+'{blue-text}}',
+									+'}{well}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true,
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
 							
                         }
                     }]
                 }]
-            }*/
+            },
         },
         data = [
 				// problem 1
@@ -1487,12 +1158,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				denominatorSecond: '1',
 				dollarSign: '$',
 				unitsQuestionPer: 'cm',
-				unitsAnswerPer: 'm',
-				firstNumAnswer: '100',
-				firstDenAnswer: '1',
-				thirdStepUnit: 'meter',
+				unitsAnswerPer: 'meter',
+				fourthProblemPer: 'meters',
 				finalAnswer: '18.00',
-				finalUnitsAnswerPer: '',
 				numDecimal: '100',
 				denDecimal: '1',
 				numUnitFrac: 'cm',
@@ -1519,11 +1187,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				dollarSign: '$',
 				unitsQuestionPer: 'kL',
 				unitsAnswerPer: 'L',
-				firstNumAnswer: '1',
-				firstDenAnswer: '1000',
+				fourthProblemPer: 'liters',
 				thirdStepUnit: 'liter',
 				finalAnswer: '2.50',
-				finalUnitsAnswerPer: '',
 				numDecimal: '1',
 				denDecimal: '1000',
 				numUnitFrac: 'kL',
@@ -1549,18 +1215,16 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				dollarSign: '$',
 				unitsQuestionPer: 'L',
 				unitsAnswerPer: 'hL',
-				firstNumAnswer: '1',
-				firstDenAnswer: '0.01',
+				fourthProblemPer: 'hectoliters',
 				thirdStepUnit: 'hectoliters',
-				finalAnswer: '550',
-				finalUnitsAnswerPer: 'hL',
+				finalAnswer: '550.00',
 				numDecimal: '1',
 				denDecimal: '0.01',
 				numUnitFrac: 'L',
 				numSelect: '[\\"hL\\", \\"L\\"]',
 				denUnitFrac: 'hL',
 				denSelect: '[\\"hL\\", \\"L\\"]',
-				helpFinalAnswer: '110',
+				helpFinalAnswer: '110.00',
 				firstWordCancel: 'L',
 				secondWordCancel: 'hL',
 				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
@@ -1579,11 +1243,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				dollarSign: '$',
 				unitsQuestionPer: 'kM',
 				unitsAnswerPer: 'm',
-				firstNumAnswer: '1',
-				firstDenAnswer: '1000',
+				fourthProblemPer: 'meters',
 				thirdStepUnit: 'meter',
 				finalAnswer: '36.25',
-				finalUnitsAnswerPer: 'm',
 				numDecimal: '1',
 				denDecimal: '1000',
 				numUnitFrac: 'kM',
@@ -1609,382 +1271,189 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				dollarSign: '$',
 				unitsQuestionPer: 'mG',
 				unitsAnswerPer: 'g',
-				firstNumAnswer: '1000',
-				firstDenAnswer: '1',
+				fourthProblemPer: 'grams',
 				thirdStepUnit: 'gram',
-				finalAnswer: '3200',
-				finalUnitsAnswerPer: 'g',
+				finalAnswer: '3200.00',
 				numDecimal: '1000',
 				denDecimal: '1',
 				numUnitFrac: 'mG',
 				numSelect: '[\\"g\\", \\"mG\\"]',
 				denUnitFrac: 'g',
 				denSelect: '[\\"g\\", \\"mG\\"]',
-				helpFinalAnswer: '160',
+				helpFinalAnswer: '160.00',
 				firstWordCancel: 'mG',
 				secondWordCancel: 'g',
 				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'dollarOneStep' 
 			}
 			,
-			/*{ // problem 2
-				problemText: 'Write the given rate in fractional form.',
-				unitSelect: '[\\"1\\", \\"7\\", \\"24\\", \\"60\\"]',
-				perSelect: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
+			{ // problem 18
+				problemText: 'The recipe calls for 20 centigrams of sweetener for every liter of juice. How many grams of sweetener would you need if you used six liters of juice?',
+				statementTwo: 'How many grams of sweetener per liter are needed?',
+				instructionThird: 'How many grams of sweetener would be needed for six liters of juice?',
+				problemAmount: '20',
+				descriptor: '',
+				perSelect: '[\\"cg\\", \\"g\\"]',
+				conversionToSelect: '[\\"cL\\", \\"L\\"]',
 				initialAmount: '20',
-				numeratorStart: '20',
-				denominatorStart: '1',
-				numeratorSecond: '1',
-				denominatorSecond: '60',
-				dollarSign: '$',
-				unitsQuestionPer: 'hr',
-				unitsAnswerPer: 'min',
-				firstNumAnswer: '1',
-				firstDenAnswer: '60',
-				finalAnswer: '0.33',
-				numUnitFrac: '1 hr',
-				numSelect: '[\\"1 hr\\", \\"$1\\", \\"1 min\\", \\"60 min\\"]',
-				denUnitFrac: '60 min',
-				denSelect: '[\\"60 min\\", \\"1 min\\", \\"$20\\", \\"1 hr\\"]',
-				helpFinalAnswer: '0.33',
-				firstWordCancel: 'hours',
-				secondWordCancel: 'minutes',
-				descriptor: '<br>Round to the nearest cent.',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>60 sec</td><td>=</td><td>1 min</td></tr><tr><td>60 min</td><td>=</td><td>1 hr</td></tr><tr><td>24 hr</td><td>=</td><td>1 day</td><tr><td>7 days</td><td>=</td><td>1 wk</td></tr></table>}'),
-				template: 'dollarOneStep' 
-			}
-			,
-			{ // problem 3
-				problemText: 'Write the given rate in fractional form:',
-				labelSelect: '[\\"oz\\", \\"lb\\", \\"ton\\"]',
-				unitSelect: '[\\"1\\", \\"2\\", \\"3\\", \\"4\\", \\"8\\", \\"16\\", \\"2000\\"]',
-				perSelect: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
-				initialAmount: '8',
-				numeratorStart: '8',
-				denominatorStart: '1',
-				numeratorSecond: '1',
-				denominatorSecond: '16',
-				unitsStart: 'oz',
-				unitsSecond: 'lb',
-				unitsPer: 'c',
-				firstNumAnswer: '1',
-				firstDenAnswer: '16',
-				numUnitFrac: '1 1b',
-				numSelect: '[\\"1 pt\\", \\"1 1b\\", \\"16 oz\\", \\"2 cups\\"]',
-				denUnitFrac: '60 min',
-				denSelect: '[\\"2 cups\\", \\"16 oz\\", \\"1 lb\\", \\"1 pt\\"]',
-				finalAnswer: '0.5',
-				helpFinalAnswer: '0.5',
-				firstWordCancel: 'ounces',
-				secondWordCancel: 'pounds',
-				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
-				template: 'oneStep' 
-			}
-			,
-			{ // problem 4
-				problemText: 'Write the given rate in fractional form:',
-				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
-				unitSelect: '[\\"1\\", \\"12\\", \\"3\\", \\"5,280\\"]',
-				perSelect: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
-				initialAmount: '1320',
-				numeratorStart: '1320',
-				denominatorStart: '1',
-				numeratorSecond: '1',
-				denominatorSecond: '5,280',
-				unitsStart: 'ft',
-				unitsSecond: 'mi',
-				unitsPer: 'hr',
-				firstNumAnswer: '1',
-				firstDenAnswer: '5,280',
-				numUnitFrac: '1 mi',
-				numSelect: '[\\"5280 ft\\", \\"1 hr\\", \\"60 min\\", \\"1 mi\\"]',
-				denUnitFrac: '5280 ft',
-				denSelect: '[\\"1 mi\\", \\"60 min\\", \\"1 hr\\", \\"5280 ft\\"]',
-				finalAnswer: '0.25',
-				helpFinalAnswer: '0.25',
-				firstWordCancel: 'feet',
-				secondWordCancel: 'miles',
-				descriptor: '',
+				delta: '20',
+				epsilon: '1',
+				denominatorSecond: '1',
+				unitsQuestionPer: 'cg',
+				unitsAnswerPer: 'grams',
+				unitsPer: 'L',
+				firstExample: '0.001 m',
+				secondExample: '1 mm',
+				thirdStepUnit: 'gram',
+				finalAnswer: '1.2',
+				numDecimal: '0.01',
+				denDecimal: '1',
+				numUnitFrac: 'g',
+				numSelect: '[\\"g\\", \\"cg\\"]',
+				denUnitFrac: 'cg',
+				denSelect: '[\\"g\\", \\"cg\\"]',
+				helpFinalAnswer: '0.2',
+				firstWordCancel: 'cg',
+				secondWordCancel: 'g',
 				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
-				template: 'oneStep' 
-			},
-			{ // problem 5
-				problemText: 'Write the given rate in fractional form.',
-				unitSelect: '[\\"1\\", \\"7\\", \\"24\\", \\"60\\"]',
-				perSelect: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
-				initialAmount: '0.65',
-				numeratorStart: '0.65',
-				denominatorStart: '1',
-				numeratorSecond: '60',
+				template: 'quantityOneStep' 
+			} 
+			,
+			{ // problem 19
+				problemText: 'The chickens ate 40 grams of food in one day. How many decigrams of food do they eat in seven days?',
+				statementTwo: 'How many decigrams of food do the chickens eat per day?',
+				instructionThird: 'How many decigrams of food do the chickens eat in seven days?',
+				problemAmount: '40',
+				descriptor: '',
+				perSelect: '[\\"g\\", \\"hg\\"]',
+				conversionToSelect: '[\\"day\\", \\"week\\"]',
+				initialAmount: '40',
+				delta: '40',
+				epsilon: '1',
 				denominatorSecond: '1',
-				dollarSign: '$',
-				unitsQuestionPer: 'min',
-				unitsAnswerPer: 'hr',
-				firstNumAnswer: '60',
-				firstDenAnswer: '1',
-				numUnitFrac: '60 min',
-				numSelect: '[\\"1 hr\\", \\"60 min\\", \\"1 min\\", \\"$65\\"]',
-				denUnitFrac: '1 hr',
-				denSelect: '[\\"60 min\\", \\"1 hr\\", \\"$0.65\\", \\"1 day\\"]',
-				finalAnswer: '39',
-				helpFinalAnswer: '39',
-				firstWordCancel: 'minutes',
-				secondWordCancel: 'hours',
-				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>60 sec</td><td>=</td><td>1 min</td></tr><tr><td>60 min</td><td>=</td><td>1 hr</td></tr><tr><td>24 hr</td><td>=</td><td>1 day</td><tr><td>7 days</td><td>=</td><td>1 wk</td></tr></table>}'),
-				template: 'dollarOneStep' 
-			},
-			{ //problem 6
-				problemText: 'Write the given rate in fractional form.',
-				labelSelect: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
-				unitSelect: '[ \\"1\\", \\"2\\", \\"3\\", \\"4\\", \\"8\\", \\"16\\", \\"60\\"]',
-				
-				perSelectOne: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
-				perSelectTwo: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
-				initialAmount: '100',
-				numeratorStart: '100',
-				denominatorStart: '1',
-				numeratorSecond: '4',
-				denominatorSecond: '1',
-				numeratorThird: '1',
-				denominatorThird: '60',
-				unitsStart: 'gal',
-				unitsSecond: 'qt',
-				unitsThird: 'qt',
-				unitsPer: 'min',
-				firstNumAnswer: 'gal',
-				firstDenAnswer: 'hr',
-				secondNumAnswer: 'qt',
-				secondDenAnswer: 'gal',
-				thirdNumAnswer: 'hr',
-				thirdDenAnswer: 'min',
-				firstWordCancel: 'gallons',
-				secondWordCancel: 'quarts',
-				thirdWordCancel: 'hours',
-				perWordCancel: 'minutes',
-				numUnitFrac: '4 qt',
-				numSelect: '[\\"1 gal\\", \\"24 hr\\", \\"4 qt\\", \\"1 day\\"]',
-				denUnitFrac: '1 gal',
-				denSelect: '[\\"4 qt\\", \\"1 day\\", \\"1 gal\\", \\"24 hr\\"]',
-				num2ndEqFrac: '1 hr',
-				num2ndSelect: '[\\"60 min\\", \\"1 hr\\", \\"24 hr\\", \\"1 day\\"]',
-				den2ndEqFrac: '60 min',
-				den2ndSelect: '[\\"1 hr\\", \\"60 min\\", \\"1 day\\", \\"24 hr\\"]',
-				finalAnswer: '6.7',
-				helpFinalAnswer: '6.7',
-				descriptor: '<br>Round the answer to the nearest tenth of a quart.',
-				modalChart: dataUtils.pre('\\html{'
-										  +'<table>'
-										  	+'<th colspan="2">Equivalence Table</th>'
-												+'<tr><td>&nbsp;</td><td>&nbsp;</td></tr>'
-												+'<tr>'
-													+'<td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table></td>'
-													+'<td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>60 sec</td><td>=</td><td>1 min</td></tr><tr><td>60 min</td><td>=</td><td>1 hr</td></tr><tr><td>24 hr</td><td>=</td><td>1 day</td><tr><td>7 days</td><td>=</td><td>1 wk</td></tr></table></td>'
-												+'</tr>'
-										+'</table>}'),
-				template: 'twoStep' 
-			},
-			{ //problem 7
-				problemText: 'Write the given rate in fractional form.',
-				unitSelect: '[ \\"1\\", \\"2\\", \\"3\\", \\"4\\", \\"8\\", \\"16\\", \\"60\\"]',
-				
-				perSelectOne: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
-				perSelectTwo: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
-				initialAmount: '5',
-				numeratorStart: '5',
-				denominatorStart: '1',
-				numeratorSecond: '1',
-				denominatorSecond: '4',
-				numeratorThird: '60',
-				denominatorThird: '1',
-				unitsStart: 'qt',
-				unitsSecond: 'gal',
-				unitsThird: 'gal',
-				unitsPer: 'hr',
-				firstNumAnswer: 'qt',
-				firstDenAnswer: 'min',
-				secondNumAnswer: 'gal',
-				secondDenAnswer: 'qt',
-				thirdNumAnswer: 'min',
-				thirdDenAnswer: 'hr',
-				firstWordCancel: 'quarts',
-				secondWordCancel: 'gallons',
-				thirdWordCancel: 'minutes',
-				perWordCancel: 'hours',
-				numUnitFrac: '1 gal',
-				numSelect: '[\\"1 gal\\", \\"1 min\\", \\"4 qt\\", \\"60 min\\"]',
-				denUnitFrac: '4 qt',
-				denSelect: '[\\"4 qt\\", \\"1 qt\\", \\"1 gal\\", \\"1 hr\\"]',
-				num2ndEqFrac: '60 min',
-				num2ndSelect: '[\\"1 min\\", \\"4 qt\\", \\"1 hr\\", \\"60 min\\"]',
-				den2ndEqFrac: '1 hr',
-				den2ndSelect: '[\\"60 sec\\", \\"1 gal\\", \\"60 min\\", \\"1 hr\\"]',
-				finalAnswer: '75',
-				helpFinalAnswer: '75',
-				descriptor: '',
-				modalChart: dataUtils.pre('\\html{'
-										  +'<table>'
-										  	+'<th colspan="2">Equivalence Table</th>'
-												+'<tr><td>&nbsp;</td><td>&nbsp;</td></tr>'
-												+'<tr>'
-													+'<td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table></td>'
-													+'<td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>60 sec</td><td>=</td><td>1 min</td></tr><tr><td>60 min</td><td>=</td><td>1 hr</td></tr><tr><td>24 hr</td><td>=</td><td>1 day</td><tr><td>7 days</td><td>=</td><td>1 wk</td></tr></table></td>'
-												+'</tr>'
-										+'</table>}'),
-				template: 'twoStep' 
-			},
-			{ //problem 8
-				problemText: 'Write the given rate in fractional form.',
-				unitSelect: '[ \\"1\\", \\"2\\", \\"3\\", \\"7\\", \\"12\\", \\"24\\", \\"60\\", \\"5,280\\"]',
-				
-				perSelectOne: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
-				perSelectTwo: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
-				initialAmount: '6',
-				numeratorStart: '6',
-				denominatorStart: '1',
-				numeratorSecond: '1',
-				denominatorSecond: '12',
-				numeratorThird: '60',
-				denominatorThird: '1',
-				unitsStart: 'in',
-				unitsSecond: 'ft',
-				unitsThird: 'ft',
-				unitsPer: 'min',
-				firstNumAnswer: 'in',
-				firstDenAnswer: 'sec',
-				secondNumAnswer: 'ft',
-				secondDenAnswer: 'in',
-				thirdNumAnswer: 'sec',
-				thirdDenAnswer: 'min',
-				firstWordCancel: 'inches',
-				secondWordCancel: 'feet',
-				thirdWordCancel: 'seconds',
-				perWordCancel: 'minutes',
-				numUnitFrac: '1 ft',
-				numSelect: '[\\"60 sec\\", \\"1 min\\", \\"1 ft\\", \\"12 in\\"]',
-				denUnitFrac: '12 in',
-				denSelect: '[\\"1 in\\", \\"60 sec\\", \\"12 in\\", \\"1 ft\\"]',
-				num2ndEqFrac: '60 sec',
-				num2ndSelect: '[\\"1 hr\\", \\"1 sec\\", \\"1 min\\", \\"60 sec\\"]',
-				den2ndEqFrac: '1 min',
-				den2ndSelect: '[\\"60 min\\", \\"6 in\\", \\"60 sec\\", \\"1 min\\"]',
-				finalAnswer: '30',
-				helpFinalAnswer: '30',
-				descriptor: '',
-				modalChart: dataUtils.pre('\\html{'
-										  +'<table>'
-										  	+'<th colspan="2">Equivalence Table</th>'
-												+'<tr><td>&nbsp;</td><td>&nbsp;</td></tr>'
-												+'<tr>'
-													+'<td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table></td>'
-													+'<td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>60 sec</td><td>=</td><td>1 min</td></tr><tr><td>60 min</td><td>=</td><td>1 hr</td></tr><tr><td>24 hr</td><td>=</td><td>1 day</td><tr><td>7 days</td><td>=</td><td>1 wk</td></tr></table></td>'
-												+'</tr>'
-										+'</table>}'),
-				template: 'twoStep' 
-			},
-			{ //problem 9
-				problemText: 'Write the given rate in fractional form.',
-				unitSelect: '[ \\"1\\", \\"2\\", \\"3\\", \\"4\\", \\"8\\"]',
-				
-				perSelectOne: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
-				perSelectTwo: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
-				initialAmount: '2',
-				numeratorStart: '2',
-				denominatorStart: '1',
-				numeratorSecond: '3',
-				denominatorSecond: '1',
-				numeratorThird: '1',
-				denominatorThird: '2',
-				unitsStart: 'tbsp',
-				unitsSecond: 'tsp',
-				unitsThird: 'tsp',
-				unitsPer: 'c',
-				firstNumAnswer: 'tbsp',
-				firstDenAnswer: 'pt',
-				secondNumAnswer: 'tsp',
-				secondDenAnswer: 'tbsp',
-				thirdNumAnswer: 'pt',
-				thirdDenAnswer: 'c',
-				firstWordCancel: 'tablespoons',
-				secondWordCancel: 'teaspoons',
-				thirdWordCancel: 'pints',
-				perWordCancel: 'cups',
-				numUnitFrac: '3 tsp',
-				numSelect: '[\\"3 tsp\\", \\"1 tbsp\\", \\"8 fl oz\\", \\"1 cup\\"]',
-				denUnitFrac: '1 tbsp',
-				denSelect: '[\\"1 tbsp\\", \\"3 tsp\\", \\"1 cup\\", \\"8 fl oz\\"]',
-				num2ndEqFrac: '1 pt',
-				num2ndSelect: '[\\"1 cup\\", \\"8 fl oz\\", \\"1 pt\\", \\"2 cups\\"]',
-				den2ndEqFrac: '2 cups',
-				den2ndSelect: '[\\"8 fl oz\\", \\"1 cup\\", \\"2 cups\\", \\"1 pt\\"]',
-				finalAnswer: '3',
-				helpFinalAnswer: '3',
-				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
-				template: 'twoStep' 
+				unitsQuestionPer: 'g',
+				unitsAnswerPer: 'dg',
+				unitsPer: 'day',
+				firstExample: '1000 mm',
+				secondExample: '1 mm',
+				finalAnswer: '2800',
+				numDecimal: '10',
+				denDecimal: '1',
+				numUnitFrac: 'dg',
+				numSelect: '[\\"g\\", \\"dg\\"]',
+				denUnitFrac: 'g',
+				denSelect: '[\\"g\\", \\"dg\\"]',
+				helpFinalAnswer: '400',
+				firstWordCancel: 'g',
+				secondWordCancel: 'dg',
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				template: 'quantityOneStep' 
 			}
 			,
-            { //problem 10
-				problemText: 'Write the given rate in fractional form:',
-				unitSelect: '[ \\"1\\", \\"2\\", \\"3\\", \\"4\\", \\"8\\", \\"16\\"]',
-				
-				perSelectOne: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
-				perSelectTwo: '[\\"oz\\", \\"lb\\", \\"ton\\"]',
-				initialAmount: '2',
-				numeratorStart: '2',
-				denominatorStart: '1',
-				numeratorSecond: '4',
-				denominatorSecond: '1',
-				numeratorThird: '2',
-				denominatorThird: '1',
-				numeratorFourth: '1',
-				denominatorFourth: '16',
-				unitsStart: 'gal',
-				unitsSecond: 'qt',
-				unitsThird: 'pt',
-				unitsFourth: 'lb',
-				unitsPer: 'oz',
-				firstNumAnswer: 'gal',
-				firstDenAnswer: 'lb',
-				secondNumAnswer: 'qt',
-				secondDenAnswer: 'gal',
-				thirdNumAnswer: 'pt',
-				thirdDenAnswer: 'qt',
-				fourthNumAnswer: 'lb',
-				fourthDenAnswer: 'oz',
-				helpFinalAnswer: 'oz',
-				firstWordCancel: 'gallons',
-				secondWordCancel: 'quarts',
-				thirdWordCancel: 'pints',
-				fourthWordCancel: 'pounds',
-				perWordCancel: 'ounces',
-				numUnitFrac: '4 qt',
-				numSelect: '[\\"1 gal\\", \\"4 qt\\", \\"1 qt\\", \\"16 oz\\"]',
-				denUnitFrac: '1 gal',
-				denSelect: '[\\"4 qt\\", \\"1 gal\\", \\"16 oz\\", \\"1 lb\\"]',
-				num2ndEqFrac: '2 pt',
-				num2ndSelect: '[\\"1 lb\\", \\"4 qt\\", \\"1 qt\\", \\"2 pt\\"]',
-				den2ndEqFrac: '1 qt',
-				den2ndSelect: '[\\"4 qt\\", \\"16 oz\\", \\"2 pt\\", \\"1 qt\\"]',
-				num3rdEqFrac: '1 lb',
-				num3rdSelect: '[\\"1 lb\\", \\"16 oz\\", \\"4 qt\\", \\"1 pt\\"]',
-				den3rdEqFrac: '16 oz',
-				den3rdSelect: '[\\"16 oz\\", \\"1 lb\\", \\"1 gal\\", \\"2 cups\\"]',
-				finalAnswer: '1',
-				helpFinalAnswer: '1',
+			{ // problem 20
+				problemText: 'A hectometer of fishing line costs $5. How much would 10 kilometers cost?',
+				problemAmount: '10',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{'
-										  +'<table>'
-										  	+'<th colspan="2">Equivalence Table</th>'
-												+'<tr><td>&nbsp;</td><td>&nbsp;</td></tr>'
-												+'<tr>'
-													+'<td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table></td>'
-													+'<td><table class=equivalence-table><tr style="border-bottom: 1px solid black;"><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table></td>'
-												+'</tr>'
-										+'</table>}'),
-				template: 'threeStep' 
-			}*/
+				perSelect: '[\\"hm\\", \\"m\\"]',
+				initialAmount: '1',
+				delta: '5',
+				epsilon: '1',
+				denominatorSecond: '0.1',
+				dollarSign: '$',
+				unitsQuestionPer: 'hm',
+				unitsAnswerPer: 'km',
+				fourthProblemPer: 'kilometers',
+				finalAnswer: '500.00',
+				numDecimal: '1',
+				denDecimal: '0.1',
+				numUnitFrac: 'hm',
+				numSelect: '[\\"hm\\", \\"km\\"]',
+				denUnitFrac: 'km',
+				denSelect: '[\\"hm\\", \\"km\\"]',
+				helpFinalAnswer: '50.00',
+				firstWordCancel: 'hm',
+				secondWordCancel: 'km',
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				template: 'dollarOneStep' 
+			}
+			,
+			{ // problem 21
+				problemText: 'Three liters of water flow through a pipe in 1 minute. At that rate, how many centiliters flow through the pipe in three hours?',
+				statementTwo: 'How many centiliters of water flow through the pipe in one hour?',
+				instructionThird: 'How many centiliters of water flow through the pipe in three hours?',
+				typeFraction: 'volume',
+				problemAmount: '3',
+				descriptor: 'volume',
+				perSelect: '[\\"cL\\", \\"L\\"]',
+				conversionToSelect: '[\\"min\\", \\"hr\\"]',
+				initialAmount: '3',
+				delta: '3',
+				epsilon: '1',
+				denominatorSecond: '1',
+				unitsQuestionPer: 'L',
+				unitsAnswerPer: 'cL',
+				unitsPer: 'min',
+				unitsSecondPer: 'hr',
+				finalAnswer: '54000',
+				numDecimal: '100',
+				denDecimal: '1',
+				numUnitFrac: 'cL',
+				numSelect: '[\\"cL\\", \\"L\\"]',
+				denUnitFrac: 'L',
+				denSelect: '[\\"cL\\", \\"L\\"]',
+				numThirdStep: '60',
+				denThirdStep: '1',
+				numThirdUnit: 'min',
+				numThirdSelect: '[\\"min\\", \\"hr\\"]',
+				denThirdUnit: 'hr',
+				denThirdSelect: '[\\"min\\", \\"hr\\"]',
+				helpFinalAnswer: '18000',
+				firstWordCancel: 'L',
+				secondWordCancel: 'cL',
+				thirdWordCancel: 'min',
+				fourthWordCancel: 'hr',
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				template: 'quantityTwoStep' 
+			}
+			,
+			{ // problem 22
+				problemText: 'You ran 1.5 meters in one second. At this rate, how many kilometers could you run in forty-five minutes?',
+				statementTwo: 'How many kilometers could you run in one minute?',
+				instructionThird: 'How many kilometers could you run in forty-five minutes?',
+				typeFraction: 'distance',
+				problemAmount: '1.5',
+				descriptor: '',
+				perSelect: '[\\"m\\", \\"km\\"]',
+				conversionToSelect: '[\\"sec\\", \\"min\\"]',
+				initialAmount: '1.5',
+				delta: '1.5',
+				epsilon: '1',
+				denominatorSecond: '1',
+				unitsQuestionPer: 'm',
+				unitsAnswerPer: 'km',
+				unitsPer: 'sec',
+				unitsSecondPer: 'min',
+				finalAnswer: '4.05',
+				numDecimal: '1',
+				denDecimal: '1000',
+				numUnitFrac: 'km',
+				numSelect: '[\\"m\\", \\"km\\"]',
+				denUnitFrac: 'm',
+				denSelect: '[\\"m\\", \\"km\\"]',
+				numThirdStep: '60',
+				denThirdStep: '1',
+				numThirdUnit: 'sec',
+				numThirdSelect: '[\\"sec\\", \\"min\\"]',
+				denThirdUnit: 'min',
+				denThirdSelect: '[\\"sec\\", \\"min\\"]',
+				helpFinalAnswer: '0.09',
+				firstWordCancel: 'm',
+				secondWordCancel: 'km',
+				thirdWordCancel: 'sec',
+				fourthWordCancel: 'min',
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				template: 'quantityTwoStep' 
+			}
         ];
 
     return dataUtils.build(desc, template, data);
