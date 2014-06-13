@@ -246,6 +246,11 @@ button.btn.btn-.huge {
 .huge {
 	font-size:175%;
 }
+.hugeAndThin {
+	font-size:175%;
+	font-weight:100;
+	font-family:"Open Sans"
+}
 .underline {
 	text-decoration:underline;
 }

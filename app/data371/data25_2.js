@@ -15,16 +15,68 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 						problem: '\\rowgrp'
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\frac{\\fracstr{$initialNumAmount$unitsStart}}{\\fracstr{$initialDenAmount$unitsPer}}}',
+									+'{$fractionQuestion}',
                         answer: '$fractionAnswer',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{$helpText}}'
+										+'{\\html{Every fraction is a division problem (the top value divided by the bottom value).}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Any value divided by itself equals 1 whole.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\html{In this case, }}'
+											+'{$fractionQuestion}'
+											+'{\\sign{=}}'
+											+'{\\html{1}}'
+										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\css'
 											+'{\\html{Answer:  $answer}}'
+											+'{help-answer-text}'
+										+'}',
+							"modalButton": "\\html{Equivalence Chart}",
+							"modalText": '$modalChart'
+                        }
+                    }]
+                }]
+			},
+			simpleMultFracConversion: {
+                title: 'Converting English Compound Units Using Dimensional Analysis',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{$fractionQuestion}',
+                        answer: '$fractionAnswer',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{Since $initialNumAmount $unitsStart is exactly the same as $initialDenAmount $unitsPer, we know that the fraction of:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\frac'
+											+'{\\fracstr{$$initialNumAmount $$unitsStart}}'
+											+'{\\fracstr{$$initialDenAmount $$unitsPer}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{ is equal to 1 whole. Therefore:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{$fractionQuestion}'
+											+'{\\str{ is the same as }}'
+											+'{$helpFractionAnswer}'
+											+'{\\str{ * 1}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\html{Answer: }}'
+												+'{$helpFractionAnswer}'
+											+'}'
 											+'{help-answer-text}'
 										+'}',
 							"modalButton": "\\html{Equivalence Chart}",
@@ -113,7 +165,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{From the given options, choose the fraction (that equals 1 whole) to multiply by:}}'
+										+'{\\html{Enter decimals and units for the fraction (that equals 1 whole) to multiply by. Use the number 1 as the decimal in either the numerator or denominator.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
@@ -131,9 +183,27 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\select{$numEqFrac}{$numSelect}}'
-												+'{\\select{$denEqFrac}{$denSelect}}'
+												+'{\\grp'
+													+'{\\input{$numDecimal}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\select{$numUnitFrac}{$numSelect}}'
+												+'}'
+												+'{\\grp'
+													+'{\\input{$denDecimal}}'
+													+'{\\html{&nbsp;}}'
+													+'{\\select{$denUnitFrac}{$denSelect}}'
+												+'}'
 											+'}'
+											+'{\\html{&nbsp;&nbsp;&nbsp;&nbsp; <span class=hugeAndThin>(</span> example: }}'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\html{1000 mm}}'
+												+'}'
+												+'{\\grp'
+													+'{\\html{1 m}}'
+												+'}'
+											+'}'
+											+'{\\html{<span class=hugeAndThin>)</span>}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -331,8 +401,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\select{$numEqFrac}{$numSelect}}'
-												+'{\\select{$denEqFrac}{$denSelect}}'
+												+'{\\select{$numUnitFrac}{$numSelect}}'
+												+'{\\select{$denUnitFrac}{$denSelect}}'
 											+'}'
 										+'}'
 									+'}{well}',
@@ -478,8 +548,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\select{$numEqFrac}{$numSelect}}'
-												+'{\\select{$denEqFrac}{$denSelect}}'
+												+'{\\select{$numUnitFrac}{$numSelect}}'
+												+'{\\select{$denUnitFrac}{$denSelect}}'
 											+'}'
 										+'}'
 									+'}{well}',
@@ -768,8 +838,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\sign{&times;}}'
 											+'{\\frac'
-												+'{\\select{$numEqFrac}{$numSelect}}'
-												+'{\\select{$denEqFrac}{$denSelect}}'
+												+'{\\select{$numUnitFrac}{$numSelect}}'
+												+'{\\select{$denUnitFrac}{$denSelect}}'
 											+'}'
 										+'}'
 									+'}{well}',
@@ -1129,12 +1199,14 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				initialDenAmount: '3',
 				unitsStart: '',
 				unitsPer: '',
+				fractionQuestion: dataUtils.pre(
+							'\\frac'
+								+'{\\fracstr{$$initialNumAmount}}'
+								+'{\\fracstr{$$initialDenAmount}}'
+						),
 				fractionAnswer: dataUtils.pre('\\grp'
 									+'{\\input{$$answer}}'
 						),
-				helpText: 'Every fraction is a division problem (the top value divided by the bottom value).<br><br>'
-				+'Any value divided by itself equals 1 whole.<br><br>'
-				+'In this case, $$initialNumAmount / $$initialDenAmount  = 1',
 				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'simpleConversion' 
 			},
@@ -1144,14 +1216,16 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				answer: '1',
 				initialNumAmount: '1',
 				initialDenAmount: '1000',
-				unitsStart: ' meter',
-				unitsPer: ' millimeters',
+				unitsStart: 'meter',
+				unitsPer: 'millimeters',
+				fractionQuestion: dataUtils.pre(
+							'\\frac'
+								+'{\\fracstr{$$initialNumAmount $$unitsStart}}'
+								+'{\\fracstr{$$initialDenAmount $$unitsPer}}'
+						),
 				fractionAnswer: dataUtils.pre('\\grp'
 									+'{\\input{$$answer}}'
 						),
-				helpText: 'Every fraction is a division problem (the top value divided by the bottom value).<br><br>'
-				+'Any value divided by itself equals 1 whole.<br><br>'
-				+'In this case, 1 meter (the numerator) is exactly the same value as 1000 millimeters (the denominator). Therefore:<br><br>1 meter / 1000 millimeters  = 1',
 				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'simpleConversion' 
 			},
@@ -1161,15 +1235,17 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				answer: '1',
 				initialNumAmount: '0.01',
 				initialDenAmount: '1',
-				unitsStart: ' hectogram',
-				unitsPer: ' gram',
+				unitsStart: 'hectogram',
+				unitsPer: 'gram',
+				fractionQuestion: dataUtils.pre(
+							'\\frac'
+								+'{\\fracstr{$$initialNumAmount $$unitsStart}}'
+								+'{\\fracstr{$$initialDenAmount $$unitsPer}}'
+						),
 				fractionAnswer: dataUtils.pre('\\grp'
 									+'{\\input{$$answer}}'
 						),
-				helpText: 'Every fraction is a division problem (the top value divided by the bottom value).<br><br>'
-				+'Any value divided by itself equals 1 whole.<br><br>'
-				+'In this case, 0.01 hectograms (the numerator) is exactly the same value as 1 gram (the denominator). Therefore:<br><br>0.01 hectograms / 1 gram  = 1',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'simpleConversion' 
 			},
 				// problem 4
@@ -1178,47 +1254,77 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				answer: '1',
 				initialNumAmount: '1',
 				initialDenAmount: '10',
-				unitsStart: ' dL',
-				unitsPer: ' cL',
+				unitsStart: 'dL',
+				unitsPer: 'cL',
+				fractionQuestion: dataUtils.pre(
+							'\\frac'
+								+'{\\fracstr{$$initialNumAmount $$unitsStart}}'
+								+'{\\fracstr{$$initialDenAmount $$unitsPer}}'
+						),
 				fractionAnswer: dataUtils.pre('\\grp'
 									+'{\\input{$$answer}}'
 						),
-				helpText: 'Every fraction is a division problem (the top value divided by the bottom value).<br><br>'
-				+'Any value divided by itself equals 1 whole.<br><br>'
-				+'In this case, 1 dL (the numerator) is exactly the same value as 10 cL (the denominator).  Therefore:<br><br>1 dL / 10 cL  = 1',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'simpleConversion' 
 			},
 				// problem 5
 			{
 				problemText: 'Solve:',
 				answer: '4',
-				initialNumAmount: '4 * 1',
+				initialNumAmount: '1',
 				initialDenAmount: '0.001',
-				unitsStart: ' m',
-				unitsPer: ' km',
+				unitsStart: 'm',
+				unitsPer: 'km',
+				fractionQuestion: dataUtils.pre('\\grp'
+									+'{\\html{4}}'
+									+'{\\str{*}}'
+									+'{\\frac'
+										+'{\\fracstr{$$initialNumAmount $$unitsStart}}'
+										+'{\\fracstr{$$initialDenAmount $$unitsPer}}'
+									+'}'
+						),
 				fractionAnswer: dataUtils.pre('\\grp'
 									+'{\\input{$$answer}}'
 						),
+				helpFractionAnswer: dataUtils.pre('\\grp'
+									+'{\\str{$$answer}}'
+						),
 				helpText: 'Since 1 m is exactly the same as 0.001 km, we know that the fraction of 1 m/0.001 km is equal to 1 whole.<sup>3</sup>&#8260;<sub>5</sub><br>Therefore:<br><br>4 * 1 m / 0.001 km is the same as 4 * 1',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
-				template: 'simpleConversion' 
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				template: 'simpleMultFracConversion' 
 			},
 				// problem 6
 			{
 				problemText: 'Solve:',
 				answer: '<sup>3</sup>&#8260;<sub>5</sub>',
-				initialNumAmount: '&nbsp;<sup>3</sup>&#8260;<sub>5</sub>',
+				multiplierNumAmount: '3',
+				multiplierDenAmount: '5',
+				initialNumAmount: '100',
 				initialDenAmount: '1',
-				unitsStart: ' * 100 cg',
-				unitsPer: ' g',
+				unitsStart: 'cg',
+				unitsPer: 'g',
+				fractionQuestion: dataUtils.pre('\\grp'
+									+'{\\frac'
+										+'{\\fracstr{$$multiplierNumAmount}}'
+										+'{\\fracstr{$$multiplierDenAmount}}'
+									+'}'
+									+'{\\str{*}}'
+									+'{\\frac'
+										+'{\\fracstr{$$initialNumAmount $$unitsStart}}'
+										+'{\\fracstr{$$initialDenAmount $$unitsPer}}'
+									+'}'
+						),
 				fractionAnswer: dataUtils.pre('\\frac'
 										+'{\\input{3}}'
 										+'{\\input{5}}'
 						),
+				helpFractionAnswer: dataUtils.pre('\\frac'
+										+'{\\fracstr{3}}'
+										+'{\\fracstr{5}}'
+						),
 				helpText: 'Since 100 cg is exactly the same as 1 g, we know that the fraction of 100 cg/1 g is equal to 1 whole.<br>Therefore:<br><br><sup>3</sup>&#8260;<sub>5</sub> * 100 cg/1 g is the same as &nbsp;<sup>3</sup>&#8260;<sub>5</sub> * 1',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
-				template: 'simpleConversion' 
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				template: 'simpleMultFracConversion' 
 			},
 				// problem 7
 			{
@@ -1242,7 +1348,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 								),
 				helpText: '1 km = 1000 m.<br><br>Therefore, the fraction that equals 1 whole would be:',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'simpleFractional' 
 			},
 				// problem 8
@@ -1267,7 +1373,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 								),
 				helpText: '1 g = 1000 mg. <br><br>Therefore, the fraction that equals 1 whole would be:',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'simpleFractional' 
 			},
 			// problem 9
@@ -1292,7 +1398,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 								),
 				helpText: '1 mm = 0.001 m.<br><br>Therefore, the fraction that equals 1 whole would be:',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'simpleFractional' 
 			},
 			// problem 10
@@ -1317,7 +1423,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 								),
 				helpText: '1 cL = 0.01 L.<br><br>Therefore, the fraction that equals 1 whole would be:',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'simpleFractional' 
 			},
 			// problem 11
@@ -1342,7 +1448,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
 								),
 				helpText: '0.01 daL = 1 dL.<br><br>Therefore, the fraction that equals 1 whole would be:',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'simpleFractional' 
 			},
 			// problem 12
@@ -1367,7 +1473,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
 								),
 				helpText: '0.0001 hg = 1 cg.<br><br>Therefore, the fraction that equals 1 whole would be:',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'simpleFractional' 
 			},
 			{ // problem 13
@@ -1387,10 +1493,12 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				thirdStepUnit: 'meter',
 				finalAnswer: '18.00',
 				finalUnitsAnswerPer: '',
-				numEqFrac: '1 L',
-				numSelect: '[\\"1000 kL\\", \\"1 L\\"]',
-				denEqFrac: '1000 kL',
-				denSelect: '[\\"1000 kL\\", \\"1 L\\"]',
+				numDecimal: '100',
+				denDecimal: '1',
+				numUnitFrac: 'cm',
+				numSelect: '[\\"cm\\", \\"m\\"]',
+				denUnitFrac: 'm',
+				denSelect: '[\\"cm\\", \\"m\\"]',
 				helpFinalAnswer: '6.00',
 				firstWordCancel: 'cm',
 				secondWordCancel: 'm',
@@ -1416,10 +1524,12 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				thirdStepUnit: 'liter',
 				finalAnswer: '2.50',
 				finalUnitsAnswerPer: '',
-				numEqFrac: '1 kL',
-				numSelect: '[\\"1 kL\\", \\"1000 L\\"]',
-				denEqFrac: '1000 L',
-				denSelect: '[\\"1 kL\\", \\"1000 L\\"]',
+				numDecimal: '1',
+				denDecimal: '1000',
+				numUnitFrac: 'kL',
+				numSelect: '[\\"kL\\", \\"L\\"]',
+				denUnitFrac: 'L',
+				denSelect: '[\\"kL\\", \\"L\\"]',
 				helpFinalAnswer: '1.25',
 				firstWordCancel: 'kL',
 				secondWordCancel: 'L',
@@ -1444,10 +1554,12 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				thirdStepUnit: 'hectoliters',
 				finalAnswer: '550',
 				finalUnitsAnswerPer: 'hL',
-				numEqFrac: '1 L',
-				numSelect: '[\\"0.01 hL\\", \\"0.1 dL\\", \\"1 L\\"]',
-				denEqFrac: '0.01 hL',
-				denSelect: '[\\"0.01 hL\\", \\"0.1 dL\\", \\"1 L\\"]',
+				numDecimal: '1',
+				denDecimal: '0.01',
+				numUnitFrac: 'L',
+				numSelect: '[\\"hL\\", \\"L\\"]',
+				denUnitFrac: 'hL',
+				denSelect: '[\\"hL\\", \\"L\\"]',
 				helpFinalAnswer: '110',
 				firstWordCancel: 'L',
 				secondWordCancel: 'hL',
@@ -1463,19 +1575,21 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				initialAmount: '1',
 				delta: '145',
 				epsilon: '1',
-				denominatorSecond: '1',
+				denominatorSecond: '1000',
 				dollarSign: '$',
 				unitsQuestionPer: 'kM',
 				unitsAnswerPer: 'm',
-				firstNumAnswer: '0.001',
-				firstDenAnswer: '1',
+				firstNumAnswer: '1',
+				firstDenAnswer: '1000',
 				thirdStepUnit: 'meter',
 				finalAnswer: '36.25',
 				finalUnitsAnswerPer: 'm',
-				numEqFrac: '0.001 kM',
-				numSelect: '[\\"0.001 kM\\", \\"0.01 hM\\", \\"0.1 dM\\", \\"m\\"]',
-				denEqFrac: '1 m',
-				denSelect: '[\\"0.001 kM\\", \\"0.01 hM\\", \\"0.1 dM\\", \\"1 m\\"]',
+				numDecimal: '1',
+				denDecimal: '1000',
+				numUnitFrac: 'kM',
+				numSelect: '[\\"kM\\", \\"m\\"]',
+				denUnitFrac: 'm',
+				denSelect: '[\\"kM\\", \\"m\\"]',
 				helpFinalAnswer: '0.145',
 				firstWordCancel: 'kM',
 				secondWordCancel: 'm',
@@ -1491,19 +1605,21 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				initialAmount: '1',
 				delta: '8',
 				epsilon: '50',
-				denominatorSecond: '0.001',
+				denominatorSecond: '1',
 				dollarSign: '$',
 				unitsQuestionPer: 'mG',
 				unitsAnswerPer: 'g',
-				firstNumAnswer: '1',
-				firstDenAnswer: '0.001',
+				firstNumAnswer: '1000',
+				firstDenAnswer: '1',
 				thirdStepUnit: 'gram',
 				finalAnswer: '3200',
 				finalUnitsAnswerPer: 'g',
-				numEqFrac: '1 mG',
-				numSelect: '[\\"0.001 g\\", \\"0.01 dG\\", \\"0.1 hG\\", \\"1 mG\\"]',
-				denEqFrac: '0.001 g',
-				denSelect: '[\\"0.001 g\\", \\"0.01 dG\\", \\"0.1 hG\\", \\"1 mG\\"]',
+				numDecimal: '1000',
+				denDecimal: '1',
+				numUnitFrac: 'mG',
+				numSelect: '[\\"g\\", \\"mG\\"]',
+				denUnitFrac: 'g',
+				denSelect: '[\\"g\\", \\"mG\\"]',
 				helpFinalAnswer: '160',
 				firstWordCancel: 'mG',
 				secondWordCancel: 'g',
@@ -1526,9 +1642,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				firstNumAnswer: '1',
 				firstDenAnswer: '60',
 				finalAnswer: '0.33',
-				numEqFrac: '1 hr',
+				numUnitFrac: '1 hr',
 				numSelect: '[\\"1 hr\\", \\"$1\\", \\"1 min\\", \\"60 min\\"]',
-				denEqFrac: '60 min',
+				denUnitFrac: '60 min',
 				denSelect: '[\\"60 min\\", \\"1 min\\", \\"$20\\", \\"1 hr\\"]',
 				helpFinalAnswer: '0.33',
 				firstWordCancel: 'hours',
@@ -1553,9 +1669,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				unitsPer: 'c',
 				firstNumAnswer: '1',
 				firstDenAnswer: '16',
-				numEqFrac: '1 1b',
+				numUnitFrac: '1 1b',
 				numSelect: '[\\"1 pt\\", \\"1 1b\\", \\"16 oz\\", \\"2 cups\\"]',
-				denEqFrac: '60 min',
+				denUnitFrac: '60 min',
 				denSelect: '[\\"2 cups\\", \\"16 oz\\", \\"1 lb\\", \\"1 pt\\"]',
 				finalAnswer: '0.5',
 				helpFinalAnswer: '0.5',
@@ -1581,16 +1697,16 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				unitsPer: 'hr',
 				firstNumAnswer: '1',
 				firstDenAnswer: '5,280',
-				numEqFrac: '1 mi',
+				numUnitFrac: '1 mi',
 				numSelect: '[\\"5280 ft\\", \\"1 hr\\", \\"60 min\\", \\"1 mi\\"]',
-				denEqFrac: '5280 ft',
+				denUnitFrac: '5280 ft',
 				denSelect: '[\\"1 mi\\", \\"60 min\\", \\"1 hr\\", \\"5280 ft\\"]',
 				finalAnswer: '0.25',
 				helpFinalAnswer: '0.25',
 				firstWordCancel: 'feet',
 				secondWordCancel: 'miles',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(h)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'oneStep' 
 			},
 			{ // problem 5
@@ -1607,9 +1723,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				unitsAnswerPer: 'hr',
 				firstNumAnswer: '60',
 				firstDenAnswer: '1',
-				numEqFrac: '60 min',
+				numUnitFrac: '60 min',
 				numSelect: '[\\"1 hr\\", \\"60 min\\", \\"1 min\\", \\"$65\\"]',
-				denEqFrac: '1 hr',
+				denUnitFrac: '1 hr',
 				denSelect: '[\\"60 min\\", \\"1 hr\\", \\"$0.65\\", \\"1 day\\"]',
 				finalAnswer: '39',
 				helpFinalAnswer: '39',
@@ -1647,9 +1763,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				secondWordCancel: 'quarts',
 				thirdWordCancel: 'hours',
 				perWordCancel: 'minutes',
-				numEqFrac: '4 qt',
+				numUnitFrac: '4 qt',
 				numSelect: '[\\"1 gal\\", \\"24 hr\\", \\"4 qt\\", \\"1 day\\"]',
-				denEqFrac: '1 gal',
+				denUnitFrac: '1 gal',
 				denSelect: '[\\"4 qt\\", \\"1 day\\", \\"1 gal\\", \\"24 hr\\"]',
 				num2ndEqFrac: '1 hr',
 				num2ndSelect: '[\\"60 min\\", \\"1 hr\\", \\"24 hr\\", \\"1 day\\"]',
@@ -1696,9 +1812,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				secondWordCancel: 'gallons',
 				thirdWordCancel: 'minutes',
 				perWordCancel: 'hours',
-				numEqFrac: '1 gal',
+				numUnitFrac: '1 gal',
 				numSelect: '[\\"1 gal\\", \\"1 min\\", \\"4 qt\\", \\"60 min\\"]',
-				denEqFrac: '4 qt',
+				denUnitFrac: '4 qt',
 				denSelect: '[\\"4 qt\\", \\"1 qt\\", \\"1 gal\\", \\"1 hr\\"]',
 				num2ndEqFrac: '60 min',
 				num2ndSelect: '[\\"1 min\\", \\"4 qt\\", \\"1 hr\\", \\"60 min\\"]',
@@ -1745,9 +1861,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				secondWordCancel: 'feet',
 				thirdWordCancel: 'seconds',
 				perWordCancel: 'minutes',
-				numEqFrac: '1 ft',
+				numUnitFrac: '1 ft',
 				numSelect: '[\\"60 sec\\", \\"1 min\\", \\"1 ft\\", \\"12 in\\"]',
-				denEqFrac: '12 in',
+				denUnitFrac: '12 in',
 				denSelect: '[\\"1 in\\", \\"60 sec\\", \\"12 in\\", \\"1 ft\\"]',
 				num2ndEqFrac: '60 sec',
 				num2ndSelect: '[\\"1 hr\\", \\"1 sec\\", \\"1 min\\", \\"60 sec\\"]',
@@ -1794,9 +1910,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				secondWordCancel: 'teaspoons',
 				thirdWordCancel: 'pints',
 				perWordCancel: 'cups',
-				numEqFrac: '3 tsp',
+				numUnitFrac: '3 tsp',
 				numSelect: '[\\"3 tsp\\", \\"1 tbsp\\", \\"8 fl oz\\", \\"1 cup\\"]',
-				denEqFrac: '1 tbsp',
+				denUnitFrac: '1 tbsp',
 				denSelect: '[\\"1 tbsp\\", \\"3 tsp\\", \\"1 cup\\", \\"8 fl oz\\"]',
 				num2ndEqFrac: '1 pt',
 				num2ndSelect: '[\\"1 cup\\", \\"8 fl oz\\", \\"1 pt\\", \\"2 cups\\"]',
@@ -1843,9 +1959,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				thirdWordCancel: 'pints',
 				fourthWordCancel: 'pounds',
 				perWordCancel: 'ounces',
-				numEqFrac: '4 qt',
+				numUnitFrac: '4 qt',
 				numSelect: '[\\"1 gal\\", \\"4 qt\\", \\"1 qt\\", \\"16 oz\\"]',
-				denEqFrac: '1 gal',
+				denUnitFrac: '1 gal',
 				denSelect: '[\\"4 qt\\", \\"1 gal\\", \\"16 oz\\", \\"1 lb\\"]',
 				num2ndEqFrac: '2 pt',
 				num2ndSelect: '[\\"1 lb\\", \\"4 qt\\", \\"1 qt\\", \\"2 pt\\"]',
