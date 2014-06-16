@@ -22,11 +22,13 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 					children: [{
 						title: 'Main Answer',
 						children: [{
-							problem: '\\grp'
-							+'{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}'
-							+'{\\sign{$operation}}'
-							+'{\\frac{\\str{$secondNum}}{\\str{$secondDen}}',
-								answer: '\\grp{\\sign{=}}{\\mixed{\\input{$answerSign}}{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}',
+							problem: '',
+								answer: '\\grp'
+											+'{\\frac{\\str{$firstNum}}{\\str{$firstDen}}}'
+											+'{\\sign{$operation}}'
+											+'{\\frac{\\str{$secondNum}}{\\str{$secondDen}}}'
+											+'{\\sign{=}}'
+											+'{\\mixed{\\input{$answerSign}}{\\frac{\\input{$answerNum}}{\\input{$answerDen}}}}',
 							controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
