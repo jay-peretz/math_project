@@ -37,7 +37,74 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
 						}
 					}]
 				}]
-			}	
+			},
+			fractions: {
+                title: 'Order of Operations with Fractions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                         problem: '\\rowgrp'+
+                                	'{\\str{Solve:}}' +
+									'{\\html{&nbsp;}}' +
+                                	'{$prob}',
+                        answer: '$ans',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                         problem: '\\rowgrp'+
+                                	'{\\str{Solve:}}' +
+									'{\\html{&nbsp;}}' +
+                                	'{$prob}',
+                        answer: '$wb',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true
+                        }
+                    }]
+                }]
+            },
+			// fractionsWide not currently in use- for more than 5 operands
+			fractionsWide: {
+                title: 'Order of Operations with Fractions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+                         problem: '\\rowgrp'+
+                                	'{\\str{Solve:}}' +
+									'{\\html{&nbsp;}}' +
+                                	'{$prob}',
+                        answer: '\\pan{6}{6}{'
+									+'$ans'
+								+'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": false,
+                            "workbook": true
+                        }
+                    }]
+                }, {
+                    title: 'Workbook',
+                    children: [{
+                         problem: '\\rowgrp'+
+                                	'{\\str{Solve:}}' +
+									'{\\html{&nbsp;}}' +
+                                	'{$prob}',
+                        answer: '\\pan{12}{11}'+
+									'{$wb}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": true,
+							"fixBottomRight": true
+                        }
+                    }]
+                }]
+            }
         },
         data = [
 			// problem 1
@@ -176,6 +243,178 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
 						'\\grp{\\str{9}},' +
                     '}{Solve <span class=bigger>-</span>15<span class=bigger>&divide;</span><span class=bigger>-</span>3}{Solve 5 <span class=bigger>-</span> ( <span class=bigger>-</span>6 )}{Solve 11 <span class=bigger>+</span>( <span class=bigger>-</span>2 )}'),
 			template: 'first' },
+			// problem 13
+			{
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{-3}}{\\fracstr{5}}}{\\str{*}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\sign{-}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}'),
+                ans: dataUtils.pre('\\frac{\\input{-29}}{\\input{30}}'),
+                wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\frac{\\fracstr{-3}}{\\fracstr{5}}}{\\btn{&bull;}{T}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{2}}{\\fracstr{3}}},'+
+                        '\\frac{\\input{-3}}{\\input{10}},' +
+                        '\\grp{\\frac{\\fracstr{-3}}{\\fracstr{10}}}{\\btn{-}{T}{bigger}}{\\frac{\\fracstr{2}}{\\fracstr{3}}},' +
+                        '\\frac{\\input{-29}}{\\input{30}},' +
+						'\\grp{\\frac{\\fracstr{-29}}{\\fracstr{30}}}' +
+                    '}{Evaluate the operator (simplify any fractions).}'),
+                template: 'fractions'
+            },
+			// problem 14
+			{
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\str{/}}{\\str{(}}{\\frac{\\fracstr{-4}}{\\fracstr{5}}}{\\str{)}}{\\sign{-}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}'),
+                ans: dataUtils.pre('\\frac{\\input{-29}}{\\input{30}}'),
+                wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\btn{&divide;}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-4}}{\\fracstr{5}}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{3}}},'+
+                        '\\frac{\\input{-1}}{\\input{2}},' +
+                        '\\grp{\\str{(}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{)}}{\\btn{-}{T}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{3}}},' +
+                        '\\frac{\\input{-5}}{\\input{6}},' +
+						'\\grp{\\frac{\\fracstr{-5}}{\\fracstr{6}}}' +
+                    '}{Evaluate the operator (simplify any fractions).}'),
+                template: 'fractions'
+            },
+			// problem 15
+			{
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{1}}{\\fracstr{8}}}{\\str{-}}{\\frac{\\fracstr{3}}{\\fracstr{8}}}{\\str{/}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}'),
+                ans: dataUtils.pre('\\frac{\\input{-11}}{\\input{8}}'),
+                wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\frac{\\fracstr{1}}{\\fracstr{8}}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{3}}{\\fracstr{8}}}{\\btn{&divide;}{T}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{4}}},'+
+                        '\\frac{\\input{3}}{\\input{2}},' +
+                        '\\grp{\\frac{\\fracstr{1}}{\\fracstr{8}}}{\\btn{-}{T}{bigger}}{\\frac{\\fracstr{3}}{\\fracstr{2}}},' +
+                        '\\frac{\\input{-11}}{\\input{8}},' +
+						'\\grp{\\frac{\\fracstr{-11}}{\\fracstr{8}}}' +
+                    '}{Evaluate the operator (simplify any fractions).}'),
+                template: 'fractions'
+            },
+			// problem 16
+			{
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{-1}}{\\fracstr{5}}}{\\str{+}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{5}}}{\\str{)}}{\\str{*}}{\\str{(}}{\\frac{\\fracstr{-5}}{\\fracstr{6}}}{\\str{)}}'),
+                ans: dataUtils.pre('\\frac{\\input{3}}{\\input{10}}'),
+                wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\frac{\\fracstr{-1}}{\\fracstr{5}}}{\\btn{+}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{5}}}{\\str{)}}{\\btn{&bull;}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-5}}{\\fracstr{6}}}{\\str{)}},'+
+                        '\\frac{\\input{1}}{\\input{2}},' +
+                        '\\grp{\\frac{\\fracstr{-1}}{\\fracstr{5}}}{\\btn{+}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\str{)}},' +
+                        '\\frac{\\input{3}}{\\input{10}},' +
+						'\\grp{\\frac{\\fracstr{3}}{\\fracstr{10}}}' +
+                    '}{Evaluate the operator (simplify any fractions).}'),
+                template: 'fractions'
+            },
+			// problem 17
+			{
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{-1}}{\\fracstr{8}}}{\\str{-}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{8}}}{\\str{)}}{\\str{*}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}'),
+                ans: dataUtils.pre('\\grp{\\input{0}}'),
+                wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\frac{\\fracstr{-1}}{\\fracstr{8}}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{8}}}{\\str{)}}{\\btn{&bull;}{T}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{3}}},'+
+                        '\\frac{\\input{-1}}{\\input{8}},' +
+                        '\\grp{\\frac{\\fracstr{-1}}{\\fracstr{8}}}{\\btn{-}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-1}}{\\fracstr{8}}}{\\str{)}},' +
+                        '\\grp{\\input{0}},' +
+						'\\grp{\\str{0}}' +
+                    '}{Evaluate the operator (simplify any fractions).}'),
+                template: 'fractions'
+            },
+			// problem 18
+			{
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{3}}{\\fracstr{4}}}{\\str{-}}{\\str{(}}{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\str{)}}{\\str{/}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}'),
+                ans: dataUtils.pre('\\frac{\\input{27}}{\\input{20}}'),
+                wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\frac{\\fracstr{3}}{\\fracstr{4}}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\str{)}}{\\btn{&divide;}{T}{bigger}}{\\frac{\\fracstr{2}}{\\fracstr{3}}},'+
+                        '\\frac{\\input{-3}}{\\input{5}},' +
+                        '\\grp{\\frac{\\fracstr{3}}{\\fracstr{4}}}{\\btn{-}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{5}}}{\\str{)}},' +
+                        '\\frac{\\input{27}}{\\input{20}},' +
+						'\\grp{\\frac{\\str{27}}{\\str{20}}}' +
+                    '}{Evaluate the operator (simplify any fractions).}'),
+                template: 'fractions'
+            },
+			// problem 19
+			{
+                prob: dataUtils.pre('\\grp{\\str{8}}{\\str{-}}{\\str{(}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{-}}{\\frac{\\fracstr{3}}{\\fracstr{4}}}{\\str{*}}{\\str{-2}}{\\str{)}}'),
+                ans: dataUtils.pre('\\grp{\\input{7}}'),
+                wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\str{8}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{3}}{\\fracstr{4}}}{\\btn{&bull;}{T}{bigger}}{\\str{-2}}{\\str{)}},'+
+                        '\\frac{\\input{-3}}{\\input{2}},' +
+                        '\\grp{\\str{8}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\btn{-}{T}{bigger}}{\\frac{\\fracstr{-3}}{\\fracstr{2}}}{\\str{)}},' +
+						'\\grp{\\input{1}},' +
+                        '\\grp{\\str{8}}{\\btn{-}{T}{bigger}}{\\str{(}}{\\str{1}}{\\str{)}},' +
+                        '\\grp{\\input{7}},' +
+						'\\grp{\\str{7}}' +
+                    '}{Evaluate the operator (simplify any fractions).}'),
+                template: 'fractions'
+            },
+			// problem 20
+			{
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{-}}{\\str{(}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\str{-}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\str{/}}{\\frac{\\fracstr{2}}{\\fracstr{7}}}{\\str{)}}'),
+                ans: dataUtils.pre('\\grp{\\frac{\\input{-7}}{\\input{24}}}'),
+                wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\btn{&divide;}{T}{bigger}}{\\frac{\\fracstr{2}}{\\fracstr{7}}}{\\str{)}},'+
+                        '\\frac{\\input{7}}{\\input{8}},' +
+                        '\\grp{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{-}{T}{bigger}}{\\frac{\\fracstr{7}}{\\fracstr{8}}}{\\str{)}},' +
+						'\\frac{\\input{-5}}{\\input{24}},' +
+                        '\\grp{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\btn{-}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-5}}{\\fracstr{24}}}{\\str{)}},' +
+                        '\\frac{\\input{-7}}{\\input{24}},' +
+						'\\grp{\\frac{\\fracstr{-7}}{\\fracstr{24}}}' +
+                    '}{Evaluate the operator (simplify any fractions).}'),
+                template: 'fractions'
+            },
+			// problem 21
+			{
+                prob: dataUtils.pre('\\grp{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\str{)}}{\\str{-}}{\\str{(}}{\\frac{\\fracstr{-1}}{\\fracstr{4}}}{\\str{)}}{\\str{&nbsp; * &nbsp;}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{5}}}}{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}'),
+                ans: dataUtils.pre('\\css{\\frac{\\input{-17}}{\\input{20}}}{}'),
+                wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-1}}{\\fracstr{4}}}{\\str{)}}{\\btn{&bull;}{T}{bigger}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{5}}}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{2}}{\\fracstr{5}}},' +
+                        '\\frac{\\input{-3}}{\\input{10}},' +
+                        '\\grp{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\str{)}}{\\btn{-}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{10}}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{2}}{\\fracstr{5}}},' +
+						'\\frac{\\input{-9}}{\\input{20}},' +
+                        '\\grp{\\str{(}}{\\frac{\\fracstr{-9}}{\\fracstr{20}}}{\\str{)}}{\\btn{-}{T}{bigger}}{\\frac{\\fracstr{2}}{\\fracstr{5}}},' +
+                        '\\frac{\\input{-17}}{\\input{20}},' +
+						'\\grp{\\frac{\\fracstr{-17}}{\\fracstr{20}}}' +
+                    '}{Evaluate the operator (simplify any fractions).}'),
+                template: 'fractions'
+            },
+			// problem 22
+			{
+                prob: dataUtils.pre('\\grp{\\mixed{\\fracstr{-2}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\str{+}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}{\\str{/}}{\\mixed{\\fracstr{-1}}{\\frac{\\fracstr{1}}{\\fracstr{9}}}}{\\str{+}}{\\frac{\\fracstr{7}}{\\fracstr{10}}}'),
+                ans: dataUtils.pre('\\css{\\frac{\\input{-51}}{\\input{20}}}{}'),
+                wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\mixed{\\fracstr{-2}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}{\\btn{&bull;}{T}{bigger}}{\\mixed{\\fracstr{-1}}{\\frac{\\fracstr{1}}{\\fracstr{9}}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{7}}{\\fracstr{10}}},' +
+                        '\\frac{\\input{-3}}{\\input{4}},' +
+                        '\\grp{\\mixed{\\fracstr{-2}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{7}}{\\fracstr{10}}},' +
+						'\\mixed{\\input{-3}}{\\frac{\\input{1}}{\\input{4}}},' +
+                        '\\grp{\\mixed{\\fracstr{-3}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{7}}{\\fracstr{10}}},' +
+                        '\\frac{\\input{-51}}{\\input{20}},' +
+						'\\grp{\\frac{\\fracstr{-51}}{\\fracstr{20}}}' +
+                    '}{Evaluate the operator (simplify any fractions).}'),
+                template: 'fractions'
+            },
+			// problem 23
+			{
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\str{&nbsp; * &nbsp;}}{\\str{[}}{\\str{2}}{\\str{&nbsp; * &nbsp;}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\str{+}}{\\str{3}}{\\str{/}}{\\str{-5}}{\\str{)}}{\\str{]}}'),
+                ans: dataUtils.pre('\\css{\\frac{\\input{27}}{\\input{25}}}{}'),
+                wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\btn{&bull;}{F}{bigger}}{\\str{[}}{\\str{2}}{\\btn{&bull;}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\btn{+}{F}{bigger}}{\\str{3}}{\\btn{&divide;}{T}{bigger}}{\\str{-5}}{\\str{)}}{\\str{]}},' +
+                        '\\frac{\\input{-3}}{\\input{5}},' +
+                        '\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\btn{&bull;}{F}{bigger}}{\\str{[}}{\\str{2}}{\\btn{&bull;}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{-3}}{\\fracstr{5}}}{\\str{)}}{\\str{]}},' +
+						'\\frac{\\input{-27}}{\\input{20}},' +
+						 '\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\btn{&bull;}{F}{bigger}}{\\str{[}}{\\str{2}}{\\btn{&bull;}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-27}}{\\fracstr{20}}}{\\str{)}}{\\str{]}},' +
+						'\\frac{\\input{-27}}{\\input{10}},' +
+                        '\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\btn{&bull;}{T}{bigger}}{\\str{[}}{\\frac{\\fracstr{-27}}{\\fracstr{10}}}{\\str{]}},' +
+                        '\\frac{\\input{27}}{\\input{25}},' +
+						'\\grp{\\frac{\\fracstr{27}}{\\fracstr{25}}}' +
+                    '}{Evaluate the operator (simplify any fractions).}'),
+                template: 'fractions'
+            },
+			// problem 24
+			{
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\str{/}}{\\str{[}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\str{/}}{\\str{(}}{\\frac{\\fracstr{-7}}{\\fracstr{8}}}{\\str{+}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{&nbsp; * &nbsp;}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{)}}{\\str{]}}'),
+                ans: dataUtils.pre('\\frac{\\input{-25}}{\\input{32}}'),
+                wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&divide;}{F}{bigger}}{\\str{[}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\btn{&divide;}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-7}}{\\fracstr{8}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\btn{&bull;}{T}{bigger}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{)}}{\\str{]}},' +
+                        '\\frac{\\input{1}}{\\input{4}},' +
+                        '\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&divide;}{F}{bigger}}{\\str{[}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\btn{&divide;}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-7}}{\\fracstr{8}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\str{)}}{\\str{]}},' +
+						'\\frac{\\input{-5}}{\\input{8}},' +
+						 '\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&divide;}{F}{bigger}}{\\str{[}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\btn{&divide;}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-5}}{\\fracstr{8}}}{\\str{)}}{\\str{]}},' +
+						'\\frac{\\input{-16}}{\\input{25}},' +
+                        '\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&divide;}{T}{bigger}}{\\str{[}}{\\frac{\\fracstr{-16}}{\\fracstr{25}}}{\\str{]}},' +
+                        '\\frac{\\input{-25}}{\\input{32}},' +
+						'\\grp{\\frac{\\fracstr{-25}}{\\fracstr{32}}}' +
+                    '}{Evaluate the operator (simplify any fractions).}'),
+                template: 'fractions'
+            },
         ];
 
 	return dataUtils.build(desc, template, data);
