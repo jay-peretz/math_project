@@ -81,7 +81,7 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 						problem: '\\rowgrp'
 									+'{$questionDesc}'
 									+'{\\html{&nbsp;}}'
-									+'{\\image{$illustration}}',
+									+'{\\image{$illustration}{$imageAlt}{$imageWidth}{$imageHeight}}',
                         answer: '\\grp'
 									+'{$finalAnswer}'
 									+'{\\select{$unitsPower}{$unitsSelect}{widthFixed120}}',
@@ -172,6 +172,9 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 			{ // problem 3
 				questionDesc: dataUtils.pre('\\html{What is the radius of this circle?}'),
 				illustration: 'S.2/Circle_d_7_1-2m_v2.jpg',
+				imageAlt: 'circle',
+				imageWidth: '',
+				imageHeight: '',
 				unitsAnswer: 'meters',
 				unitsPower: 'm',
 				unitsSelect: '[\\"m\\",\\"m&sup2;\\",\\"m&sup3;\\"]',
@@ -186,6 +189,9 @@ angular.module('mathSkills').service('data_s_2', ['dataUtils', function (dataUti
 			{ // problem 4
 				questionDesc: dataUtils.pre('\\html{What is the diameter of this circle?}'),
 				illustration: 'S.2/Circle_r_5_3-4in_v2.jpg',
+				imageAlt: 'circle',
+				imageWidth: '247px',
+				imageHeight: '250px',
 				unitsAnswer: 'inches',
 				unitsPower: 'm',
 				unitsSelect: '[\\"m\\",\\"m&sup2;\\",\\"m&sup3;\\"]',

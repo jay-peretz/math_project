@@ -13,15 +13,35 @@ angular.module('mathSkills')
         function (parser, $compile) {
             return {
                 controller: function ($scope, $element) {
-					var imagePath;
+					var imagePath,
+						imageAlt,
+						imageWidth,
+						imageHeight;
 					
                     $scope.controllerId = Math.random().toString();
                     
                      // Extract the value and sent size event.
                     $scope.$watch('expected', function () {
                         if($scope.expected) {
-                            imagePath = $scope.expected.slice(7, $scope.expected.length - 1); 
-							$scope.image = '<img src="img/math_project_images/'+imagePath+'">';
+							imagePath = parser.extractTag($scope.expected).args[0];		
+							$scope.image = '<img src="img/math_project_images/'+imagePath+'" ';
+							if (typeof parser.extractTag($scope.expected).args[1] !== "undefined") {
+								imageAlt = parser.extractTag($scope.expected).args[1];
+								$scope.image += ' alt ='+imageAlt+' ';
+							}
+							if (typeof parser.extractTag($scope.expected).args[2] !== "undefined") {
+								imageWidth = parser.extractTag($scope.expected).args[2];
+								$scope.image += ' width ='+imageWidth+' ';
+							}
+							if (typeof parser.extractTag($scope.expected).args[3] !== "undefined") {
+								imageHeight = parser.extractTag($scope.expected).args[3];
+								$scope.image += ' height ='+imageHeight+' ';
+							}
+							if (typeof parser.extractTag($scope.expected).args[2] !== "undefined" && typeof parser.extractTag($scope.expected).args[3] !== "undefined") {
+								$scope.image += ' style="width:'+imageWidth+'; height:'+imageHeight+';" ';
+							}
+							
+							$scope.image += '>';
                         }
                     });
                      
