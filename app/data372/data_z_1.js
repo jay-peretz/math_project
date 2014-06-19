@@ -15,22 +15,31 @@ template = {
                     title: 'Main Answer',
                     children: [{
 						problem: '$prob',
-						answer: '$ans',
+						answer: '\\btngrp'+
+										'{\\css' +
+											'{\\rowgrp'+
+												'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+												'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+												'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+												'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+											'}'+
+											'{tdButtonHeight}'+
+										'}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
 							+'{\\str{When dividing terms we:}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{(1) reduce the coefficients: &nbsp;&nbsp;&nbsp;&nbsp; <span class=bigger>$firstSign</span>$firstAbsNumber <span class=bigger>\xf7</span> <span class=bigger>$secondSign</span>$secondAbsNumber <span class=bigger>=</span> <span class=bigger>$thirdSign</span>$firstHelp}}'
-							+'{\\html{&nbsp;}}'
+							+'{\\str{&nbsp;}}'
+							+'{\\str{(1) reduce the coefficients: &nbsp;&nbsp;&nbsp;&nbsp; $firstSign$firstAbsNumber /$secondSign$secondAbsNumber = $thirdSign$firstHelp}}'
+							+'{\\str{&nbsp;}}'
 							+'{\\str{(2) simplify variables by following the rule for division of same bases (subtract exponents):}}'
-							+'{\\html{&nbsp;}}'
+							+'{\\str{&nbsp;}}'
 							+'{css'
-								+'{\\html{$secondHelp}}'
+								+'{\\str{$secondHelp}}'
 								+'{margin-left-small}'
 							+'}'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\html{Answer: &nbsp;$helpAnswer}}{help-answer-text}}'
+							+'{\\str{&nbsp;}}'
+							+'{css{\\str{Answer: &nbsp;$helpAnswer}}{help-answer-text}}'
 						}
 					}]
 				}]
@@ -43,30 +52,39 @@ template = {
                     title: 'Main Answer',
                     children: [{
 						problem: '$prob',
-						answer: '$ans',
+						answer: '\\btngrp'+
+										'{\\css' +
+											'{\\rowgrp'+
+												'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+												'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+												'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+												'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+											'}'+
+											'{tdButtonHeight}'+
+										'}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
 							+'{\\str{When dividing terms we:}}'
-							+'{\\html{&nbsp;}}'
+							+'{\\str{&nbsp;}}'
 							+'{\\grp'
-								+'{\\html{(1) reduce the coefficients: &nbsp;&nbsp;&nbsp;&nbsp; <span class=bigger>$firstSign</span>$firstAbsNumber <span class=bigger>\xf7</span> <span class=bigger>$secondSign</span>$secondAbsNumber <span class=bigger>=</span> <span class=bigger-not-margin>$thirdSign</span>}}'
+								+'{\\str{(1) reduce the coefficients: &nbsp;&nbsp;&nbsp;&nbsp; $firstSign$firstAbsNumber / $secondSign$secondAbsNumber = $thirdSign}}'
 								+'{\\css'
 									+'$firstHelp'
 									+'{fracNoMargin}'
 								+'}'	
 							+'}'
-							+'{\\html{&nbsp;}}'
+							+'{\\str{&nbsp;}}'
 							+'{\\str{(2) simplify variables by following the rule for division of same bases (subtract exponents):}}'
-							+'{\\html{&nbsp;}}'
+							+'{\\str{&nbsp;}}'
 							+'{css'
-								+'{\\html{$secondHelp}}'
+								+'{\\str{$secondHelp}}'
 								+'{margin-left-small}'
 							+'}'
-							+'{\\html{&nbsp;}}'
+							+'{\\str{&nbsp;}}'
 							+'{css'
 								+'{\\grp'
-									+'{\\html{Answer: }}'
+									+'{\\str{Answer: }}'
 									+'$helpAnswer'
 								+'}'
 								+'{help-answer-text}'
@@ -74,27 +92,7 @@ template = {
 						}
 					}]
 				}]
-			}/*,
-			exampleToBeRemoved: {
-                title: 'Buttons with horizontal fractions in labels',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\html{<h4>example of horizontal fractions in button labels</h4>}',
-						answer: '\\btngrp'+
-									'{\\rowgrp'+
-										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
-										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
-										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
-									'}',
-						controls: {
-							"checkAnswer": true,
-							"help": true
-						}
-					}]
-				}]
-			}*/
+			}
         },
         data = [
 			{ // problem 1
@@ -103,23 +101,31 @@ template = {
 			thirdSign: '',
 			firstAbsNumber: '4', 
 			secondAbsNumber: '2', 
-			firstText: 'm&sup2;', 
+			firstText: 'm<sup>2</sup>', 
 			secondText: '',
 			secondExp: '',
 			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
-										+'{\\html{<span class = bigger>$$firstSign</span> $$firstAbsNumber $$firstText}}'
-										+'{\\html{<span class = bigger>$$secondSign</span>$$secondAbsNumber $$secondText}}'
+										+'{\\str{$$firstSign $$firstAbsNumber $$firstText}}'
+										+'{\\str{$$secondSign $$secondAbsNumber $$secondText}}'
 									+'}'
 								),
-			ans: dataUtils.pre('\\grp'
-									+'{exp{\\input{$$textAnswer}}{\\input{$$expoAnswer}}}'				   
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 2m<sup>4</sup>}'),
+			buttonValueB: 'T',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 2m<sup>2</sup>}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 2}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\frac'
+										+'{\\str{2}}'
+										+'{\\str{&nbsp; m<sup>2</sup> &nbsp;}}'
 								),
 			firstHelp: '4', 
 			secondHelp: '$expoHelpQuoted is not divided by any other $helpQuoted variable.<br>$helpQuoted stays the same',
 			helpQuoted: '\\"m\\"',
-			expoHelpQuoted: '\\"m&sup2;\\"',
-			helpAnswer: '2m&sup2;', 
+			expoHelpQuoted: '\\"m<sup>2</sup>\\"',
+			helpAnswer: '2m<sup>2</sup>', 
 			textAnswer: '2m', 
 			expoAnswer: '2',
 			template: 'simple'
@@ -135,12 +141,23 @@ template = {
 			secondText: '',
 			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
-										+'{\\html{<span class = bigger>$$firstSign</span> $$firstAbsNumber $$firstText}}'
-										+'{\\html{<span class = bigger>$$secondSign</span>$$secondAbsNumber $$secondText}}'
+										+'{\\str{$$firstSign$$firstAbsNumber $$firstText}}'
+										+'{\\str{$$secondSign$$secondAbsNumber $$secondText}}'
 									+'}'
 								),
-			ans: dataUtils.pre('\\grp'
-									+'{\\input{$$textAnswer}}'				   
+			buttonValueA: 'T',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; -2ab}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; -2}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; ab &nbsp;}}'
+										+'{\\str{2}}'
+								),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; -ab &nbsp;}}'
+										+'{\\str{2}}'
 								),
 			firstHelp: '2', 
 			secondHelp: '$firstHelpQuoted is not divided by any other $firstHelpQuoted variable.<br>$firstHelpQuoted stays the same<br><br>$secondHelpQuoted is not divided by any other $secondHelpQuoted variable.<br>$secondHelpQuoted stays the same',
@@ -157,23 +174,30 @@ template = {
 			thirdSign: '',
 			firstAbsNumber: '10', 
 			secondAbsNumber: '2', 
-			firstText: 'm&sup2n', 
+			firstText: 'm<sup>2</sup>n', 
 			secondText: '',
 			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
-										+'{\\html{<span class = bigger>$$firstSign</span> $$firstAbsNumber $$firstText}}'
-										+'{\\html{<span class = bigger>$$secondSign</span>$$secondAbsNumber $$secondText}}'
+										+'{\\str{$$firstSign $$firstAbsNumber $$firstText}}'
+										+'{\\str{$$secondSign$$secondAbsNumber $$secondText}}'
 									+'}'
 								),
-			ans: dataUtils.pre('\\grp'
-							   		+'{exp{\\input{$$textAnswer}}{\\input{$$expoAnswer}}}'				
-									+'{\\input{$$secondAnswer}}'				   
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; -5m<sup>2</sup>n}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; m<sup>2</sup>n &nbsp;}}'
+										+'{\\str{5}}'
 								),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 5}'),
+			buttonValueD: 'T',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 5m<sup>2</sup>n &nbsp;}'),
 			firstHelp: '5', 
 			secondHelp: '$firstHelpQuoted is not divided by any other $firstHelpQuoted variable.<br>$firstHelpQuoted stays the same<br><br>$secondHelpQuoted is not divided by any other $secondHelpQuoted variable.<br>$secondHelpQuoted stays the same',
 			firstHelpQuoted: '\\"m\\"',
 			secondHelpQuoted: '\\"n\\"',
-			helpAnswer: '5m&sup2;n', 
+			helpAnswer: '5m<sup>2</sup>n', 
 			textAnswer: '5m', 
 			expoAnswer: '2',
 			secondAnswer: 'n',
@@ -190,12 +214,23 @@ template = {
 			secondText: 'a',
 			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
-										+'{\\html{<span class = bigger>$$firstSign</span> $$firstAbsNumber $$firstText}}'
-										+'{\\html{<span class = bigger>$$secondSign</span>$$secondAbsNumber $$secondText}}'
+										+'{\\str{$$firstSign $$firstAbsNumber $$firstText}}'
+										+'{\\str{$$secondSign$$secondAbsNumber $$secondText}}'
 									+'}'
 								),
-			ans: dataUtils.pre('\\grp'
-							   		+'{exp{\\input{$$textAnswer}}{\\input{$$expoAnswer}}}'						   
+			buttonValueA: 'T',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; -3b<sup>5</sup>}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; -b<sup>5</sup> &nbsp;}}'
+										+'{\\str{3}}'
+								),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; -2}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; -ab &nbsp;}}'
+										+'{\\str{2}}'
 								),
 			firstHelp: '3', 
 			secondHelp: '$firstHelpQuoted divided by $firstHelpQuoted = a<sup>1-1</sup> or a<sup>0</sup> (which equals 1)<br>the $firstHelpQuoted variables cancel each other out<br><br>$secondHelpQuoted is not divided by any other $thirdHelpQuoted variable.<br>$secondHelpQuoted stays the same',
@@ -219,25 +254,38 @@ template = {
 			secondText: 'y',
 			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
-										+'{\\html{<span class = bigger>$$firstSign</span> $$firstAbsNumber $$firstText}}'
-										+'{\\html{<span class = bigger>$$secondSign</span>$$secondAbsNumber $$secondText}}'
+										+'{\\str{$$firstSign $$firstAbsNumber $$firstText}}'
+										+'{\\str{$$secondSign$$secondAbsNumber $$secondText}}'
 									+'}'
 								),
-			ans: dataUtils.pre('\\frac'
-							   		+'{\\grp'
-										+'{exp{\\input{[$$textAnswer,1$$textAnswer]}}{\\input{$$expoAnswer}}}'
-										+'{\\input{$$secondAnswer}}'
-									+'}'
-									+'{\\input{$$thirdAnswer}}'
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; x<sup>4</sup> &nbsp;}}'
+										+'{\\str{5y}}'
+								),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; 5y &nbsp;}}'
+										+'{\\str{x<sup>4</sup>}}'
+								),
+			buttonValueC: 'T',
+			buttonLabelC: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; x<sup>4</sup>y &nbsp;}}'
+										+'{\\str{5}}'
+								),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; 5x<sup>4</sup> &nbsp;}}'
+										+'{\\str{y}}'
 								),
 			firstHelp: dataUtils.pre('{\\frac'
-											+'{\\html{1}}'
-											+'{\\html{5}}'
+											+'{\\str{1}}'
+											+'{\\str{5}}'
 									+'}'
 						),
-			secondHelp: '$firstHelpQuoted is not divided by any other $thirdHelpQuoted variable.<br>$firstHelpQuoted stays the same<br><br>$fourthHelpQuoted is in the numerator and $fourthHelpQuoted is in the denominator.  The larger degree is in the numerator, so the $fourthHelpQuoted base will end up in the numerator.<br>$secondHelpQuoted <span class=bigger>=</span> y<sup> 2<span class=bigger>-</span>1</sup> or y<sup>1</sup>.',
+			secondHelp: '$firstHelpQuoted is not divided by any other $thirdHelpQuoted variable.<br>$firstHelpQuoted stays the same<br><br>$fourthHelpQuoted is in the numerator and $fourthHelpQuoted is in the denominator.  The larger degree is in the numerator, so the $fourthHelpQuoted base will end up in the numerator.<br>$secondHelpQuoted = y<sup> 2-1</sup> or y<sup>1</sup>.',
 			firstHelpQuoted: '\\"x<sup>4</sup>\\"',
-			secondHelpQuoted: '\\"y<sup>2</sup> <span class=bigger>\xF7</span> y\\"',
+			secondHelpQuoted: '\\"y<sup>2</sup> / y\\"',
 			thirdHelpQuoted: '\\"x\\"',
 			fourthHelpQuoted: '\\"y\\"',
 			textAnswer: 'x', 
@@ -245,8 +293,8 @@ template = {
 			secondAnswer: 'y',
 			thirdAnswer: '5',
 			helpAnswer:	dataUtils.pre('{\\frac'
-										+'{\\html{x<sup>4</sup>y}}'
-										+'{\\html{$$thirdAnswer}}'
+										+'{\\str{x<sup>4</sup>y}}'
+										+'{\\str{$$thirdAnswer}}'
 									+'}'
 						),
 			template: 'fractionCoefficient'
@@ -262,25 +310,35 @@ template = {
 			secondText: 'x<sup>3</sup>y<sup>2</sup>',
 			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
-										+'{\\html{<span class = bigger>$$firstSign</span> $$firstAbsNumber $$firstText}}'
-										+'{\\html{<span class = bigger>$$secondSign</span>$$secondAbsNumber $$secondText}}'
+										+'{\\str{$$firstSign $$firstAbsNumber $$firstText}}'
+										+'{\\str{$$secondSign$$secondAbsNumber $$secondText}}'
 									+'}'
 								),
-			ans: dataUtils.pre('\\frac'
-									+'{\\input{$$textAnswer}}'
-									+'{\\input{$$secondAnswer}}'
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 54x<sup>5</sup>y<sup>4</sup>}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{-6x}'),
+			buttonValueC: 'T',
+			buttonLabelC: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; x<sup>4</sup>y &nbsp;}}'
+										+'{\\str{5}}'
 								),
-			firstHelp: dataUtils.pre('{\\html{6}}'),
-			secondHelp: '$firstHelpQuoted is in the numerator and $secondHelpQuoted is in the denominator.  The larger degree is in the denominator, so the $thirdHelpQuoted base will end up in the denominator.<br>$fourthHelpQuoted <span class=bigger>=</span> x<sup> 3<span class=bigger>-</span>2</sup> or x<sup>1</sup>.<br><br>$fifthHelpQuoted <span class=bigger>=</span> y<sup> 2<span class=bigger>-</span>2</sup> or y<sup>0</sup> (which equals 1).  The $sixthHelpQuoted variables cancel out each other.',
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; -6y &nbsp;}}'
+										+'{\\str{x<sup>5</sup>}}'
+								),
+			firstHelp: dataUtils.pre('{\\str{6}}'),
+			secondHelp: '$firstHelpQuoted is in the numerator and $secondHelpQuoted is in the denominator.  The larger degree is in the denominator, so the $thirdHelpQuoted base will end up in the denominator.<br>$fourthHelpQuoted = x<sup> 3-2</sup> or x<sup>1</sup>.<br><br>$fifthHelpQuoted = y<sup> 2-2</sup> or y<sup>0</sup> (which equals 1).  The $sixthHelpQuoted variables cancel out each other.',
 			firstHelpQuoted: '\\"x<sup>2</sup>\\"',
 			secondHelpQuoted: '\\"x<sup>3</sup>\\"',
 			thirdHelpQuoted: '\\"x\\"',
-			fourthHelpQuoted: '\\"x<sup>3</sup> <span class=bigger>\xF7</span> x<sup>2</sup>\\"',
-			fifthHelpQuoted: '\\"y<sup>2</sup> <span class=bigger>\xF7</span> y<sup>2</sup>\\"',
+			fourthHelpQuoted: '\\"x<sup>3</sup> / x<sup>2</sup>\\"',
+			fifthHelpQuoted: '\\"y<sup>2</sup> / y<sup>2</sup>\\"',
 			sixthHelpQuoted: '\\"y<sup>2</sup>\\"',
 			helpAnswer:	dataUtils.pre('{\\frac'
-										+'{\\html{<span class=bigger>-</span>$$thirdAnswer}}'
-										+'{\\html{$$secondAnswer}}'
+										+'{\\str{-$$thirdAnswer}}'
+										+'{\\str{$$secondAnswer}}'
 									+'}'
 						),
 			textAnswer: '-6', 
@@ -300,29 +358,45 @@ template = {
 			secondText: 'ab<sup>2</sup>',
 			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
-										+'{\\html{<span class = bigger>$$firstSign</span> $$firstAbsNumber $$firstText}}'
-										+'{\\html{<span class = bigger>$$secondSign</span>$$secondAbsNumber $$secondText}}'
+										+'{\\str{$$firstSign $$firstAbsNumber $$firstText}}'
+										+'{\\str{$$secondSign$$secondAbsNumber $$secondText}}'
 									+'}'
 								),
-			ans: dataUtils.pre('\\frac'
-									+'{\\exp{\\input{$$textAnswer}}{\\input{$$expoAnswer}}}'
-									+'{\\input{$$secondAnswer}}'
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; 4a<sup>3</sup>b<sup>2</sup> &nbsp;}}'
+										+'{\\str{7}}'
+								),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; 7a<sup>4</sup> &nbsp;}}'
+										+'{\\str{4b<sup>3</sup>}}'
+								),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; 11a<sup>2</sup> &nbsp;}}'
+										+'{\\str{b}}'
+								),
+			buttonValueD: 'T',
+			buttonLabelD: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; 4a<sup>2</sup> &nbsp;}}'
+										+'{\\str{7b}}'
 								),
 			firstHelp: dataUtils.pre('{\\frac'
-											+'{\\html{4}}'
-											+'{\\html{7}}'
+											+'{\\str{4}}'
+											+'{\\str{7}}'
 									+'}'
 						),
-			secondHelp: '$firstHelpQuoted is in the numerator and $secondHelpQuoted is in the denominator.  The larger degree is in the numerator, so the $secondHelpQuoted base will end up in the numerator.<br>$thirdHelpQuoted <span class=bigger>=</span> a<sup> 3<span class=bigger>-</span>1</sup> or a<sup>2</sup>.<br><br>$fourthHelpQuoted is in the numerator and $fifthHelpQuoted is in the denominator.  The larger degree is in the denominator so the $fourthHelpQuoted base will end up in the denominator.<br>  $sixthHelpQuoted<span class=bigger>=</span> b<sup> 2<span class=bigger>-</span>1</sup> or b<sup>1.',
+			secondHelp: '$firstHelpQuoted is in the numerator and $secondHelpQuoted is in the denominator.  The larger degree is in the numerator, so the $secondHelpQuoted base will end up in the numerator.<br>$thirdHelpQuoted = a<sup> 3-1</sup> or a<sup>2</sup>.<br><br>$fourthHelpQuoted is in the numerator and $fifthHelpQuoted is in the denominator.  The larger degree is in the denominator so the $fourthHelpQuoted base will end up in the denominator.<br>  $sixthHelpQuoted= b<sup> 2-1</sup> or b<sup>1.',
 			firstHelpQuoted: '\\"a<sup>3</sup>\\"',
 			secondHelpQuoted: '\\"a\\"',
-			thirdHelpQuoted: '\\"a<sup>3</sup> <span class=bigger>\xF7</span> a\\"',
+			thirdHelpQuoted: '\\"a<sup>3</sup> / a\\"',
 			fourthHelpQuoted: '\\"b\\"',
 			fifthHelpQuoted: '\\"b<sup>2</sup>\\"',
-			sixthHelpQuoted: '\\"b<sup>2</sup> <span class=bigger>\xF7</span> b\\"',
+			sixthHelpQuoted: '\\"b<sup>2</sup> / b\\"',
 			helpAnswer:	dataUtils.pre('{\\frac'
-										+'{\\html{$$thirdAnswer}}'
-										+'{\\html{$$secondAnswer}}'
+										+'{\\str{$$thirdAnswer}}'
+										+'{\\str{$$secondAnswer}}'
 									+'}'
 						),
 			textAnswer: '4a', 
@@ -342,33 +416,43 @@ template = {
 			secondText: 'm<sup>2</sup>',
 			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
-										+'{\\html{<span class = bigger>$$firstSign</span> $$firstAbsNumber $$firstText}}'
-										+'{\\html{<span class = bigger>$$secondSign</span>$$secondAbsNumber $$secondText}}'
+										+'{\\str{$$firstSign $$firstAbsNumber $$firstText}}'
+										+'{\\str{$$secondSign$$secondAbsNumber $$secondText}}'
 									+'}'
 								),
-			ans: dataUtils.pre('\\frac'
-									+'{\\exp{\\input{$$textAnswer}}{\\input{2}}}'
-									+'{\\input{$$secondAnswer}}'
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; -3n<sup>2</sup>}'),
+			buttonValueB: 'T',
+			buttonLabelB: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; -n<sup>2</sup> &nbsp;}}'
+										+'{\\str{3}}'
 								),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; -1 &nbsp;}}'
+										+'{\\str{3}}'
+								),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; -3m<sup>4</sup>n<sup>2</sup>}'),
 			firstHelp: dataUtils.pre('{\\frac'
-											+'{\\html{1}}'
-											+'{\\html{3}}'
+											+'{\\str{1}}'
+											+'{\\str{3}}'
 									+'}'
 						),
-			secondHelp: '$firstHelpQuoted <span class=bigger>=</span> m<sup> 2<span class=bigger>-</span>2</sup> or m<sup>0</sup> (which equals 1).<br>The $secondHelpQuoted variables cancel out each other.<br><br>$thirdHelpQuoted is not divided by any other $fourthHelpQuoted variable.<br>$thirdHelpQuoted stays the same.',
-			firstHelpQuoted: '\\"m<sup>2</sup> <span class=bigger>\xF7</span> m<sup>2</sup>\\"',
+			secondHelp: '$firstHelpQuoted = m<sup> 2-2</sup> or m<sup>0</sup> (which equals 1).<br>The $secondHelpQuoted variables cancel out each other.<br><br>$thirdHelpQuoted is not divided by any other $fourthHelpQuoted variable.<br>$thirdHelpQuoted stays the same.',
+			firstHelpQuoted: '\\"m<sup>2</sup> / m<sup>2</sup>\\"',
 			secondHelpQuoted: '\\"m\\"',
 			thirdHelpQuoted: '\\"n<sup>2</sup>\\"',
 			fourthHelpQuoted: '\\"n\\"',
 			helpAnswer:	dataUtils.pre('{\\frac'
-										+'{\\html{$$thirdAnswer}}'
-										+'{\\html{$$secondAnswer}}'
+										+'{\\str{$$thirdAnswer}}'
+										+'{\\str{$$secondAnswer}}'
 									+'}'
 						),
 			textAnswer: '[-n,-1n]', 
 			expoAnswer: '2',
 			secondAnswer: '3',
-			thirdAnswer: '<span class=bigger>-</span>n<sup>2</sup>',
+			thirdAnswer: '-n<sup>2</sup>',
 			template: 'fractionCoefficient'
 			}
 			,
@@ -382,29 +466,45 @@ template = {
 			secondText: 'xy<sup>2</sup>',
 			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
-										+'{\\html{<span class = bigger>$$firstSign</span> $$firstAbsNumber $$firstText}}'
-										+'{\\html{<span class = bigger>$$secondSign</span>$$secondAbsNumber $$secondText}}'
+										+'{\\str{$$firstSign $$firstAbsNumber $$firstText}}'
+										+'{\\str{$$secondSign$$secondAbsNumber $$secondText}}'
 									+'}'
 								),
-			ans: dataUtils.pre('\\frac'
-									+'{\\input{$$textAnswer}}'
-									+'{\\input{$$secondAnswer}}'
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; x<sup>4</sup> &nbsp;}}'
+										+'{\\str{5y}}'
+								),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; -5z &nbsp;}}'
+										+'{\\str{2y}}'
+								),
+			buttonValueC: 'T',
+			buttonLabelC: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; 5y &nbsp;}}'
+										+'{\\str{2}}'
+								),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; 5z &nbsp;}}'
+										+'{\\str{2y}}'
 								),
 			firstHelp: dataUtils.pre('{\\frac'
-											+'{\\html{5}}'
-											+'{\\html{2}}'
+											+'{\\str{5z}}'
+											+'{\\str{2xy}}'
 									+'}'
 						),
-			secondHelp: '$firstHelpQuoted <span class=bigger>=</span> x<sup> 1 - 1</sup> or x<sup>0</sup> (which equals 1).<br>The $secondHelpQuoted variables cancel out each other.<br><br>$thirdHelpQuoted is in the numerator and $fourthHelpQuoted is in the denominator.  The larger degree is in the denominator so the $thirdHelpQuoted base will end up in the denominator.<br>$fifthHelpQuoted <span class=bigger>=</span> y<sup> 2 - 1</sup> or y<sup>1</sup>.<br><br>$sixthHelpQuoted is not divided by any other $sixthHelpQuoted variable.<br>$sixthHelpQuoted stays the same.',
-			firstHelpQuoted: '\\"x <span class=bigger>\xF7</span> x\\"',
+			secondHelp: '$firstHelpQuoted = x<sup> 1 - 1</sup> or x<sup>0</sup> (which equals 1).<br>The $secondHelpQuoted variables cancel out each other.<br><br>$thirdHelpQuoted is in the numerator and $fourthHelpQuoted is in the denominator.  The larger degree is in the denominator so the $thirdHelpQuoted base will end up in the denominator.<br>$fifthHelpQuoted = y<sup> 2 - 1</sup> or y<sup>1</sup>.<br><br>$sixthHelpQuoted is not divided by any other $sixthHelpQuoted variable.<br>$sixthHelpQuoted stays the same.',
+			firstHelpQuoted: '\\"x / x\\"',
 			secondHelpQuoted: '\\"x\\"',
 			thirdHelpQuoted: '\\"y\\"',
 			fourthHelpQuoted: '\\"y<sup>2</sup>\\"',
-			fifthHelpQuoted: '\\"y<sup>2</sup> <span class=bigger>\xF7</span> y\\"',
+			fifthHelpQuoted: '\\"y<sup>2</sup> / y\\"',
 			sixthHelpQuoted: '\\"z\\"',
 			helpAnswer:	dataUtils.pre('{\\frac'
-										+'{\\html{$$thirdAnswer}}'
-										+'{\\html{$$secondAnswer}}'
+										+'{\\str{$$thirdAnswer}}'
+										+'{\\str{$$secondAnswer}}'
 									+'}'
 						),
 			textAnswer: '5z', 
@@ -424,35 +524,48 @@ template = {
 			secondText: 'a<sup>2</sup>bc',
 			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
-										+'{\\html{<span class = bigger>$$firstSign</span> $$firstAbsNumber $$firstText}}'
-										+'{\\html{<span class = bigger>$$secondSign</span>$$secondAbsNumber $$secondText}}'
+										+'{\\str{$$firstSign $$firstAbsNumber $$firstText}}'
+										+'{\\str{$$secondSign$$secondAbsNumber $$secondText}}'
 									+'}'
 								),
-			ans: dataUtils.pre('\\frac'
-									+'{\\input{$$textAnswer}}'
-									+'{\\input{$$secondAnswer}}'
+			buttonValueA: 'T',
+			buttonLabelA: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; -11 &nbsp;}}'
+										+'{\\str{2}}'
 								),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; -11bc &nbsp;}}'
+										+'{\\str{2}}'
+								),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\frac'
+										+'{\\str{&nbsp; -11a<sup>2</sup> &nbsp;}}'
+										+'{\\str{bc}}'
+								),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 88a<sup>2</sup>bc}'),
 			firstHelp: dataUtils.pre('{\\frac'
-											+'{\\html{11}}'
-											+'{\\html{2}}'
+											+'{\\str{11}}'
+											+'{\\str{2}}'
 									+'}'
 						),
-			secondHelp: '$firstHelpQuoted <span class=bigger>=</span> a<sup> 2<span class=bigger>-</span>2</sup> or a<sup>0</sup> (which equals 1).<br>The $secondHelpQuoted variables cancel out each other.<br><br>$thirdHelpQuoted <span class=bigger>=</span> b<sup> 1<span class=bigger>-</span>1</sup> or b<sup>0</sup> (which equals 1).<br>The $fourthHelpQuoted variables cancel out each other.<br><br>$fifthHelpQuoted <span class=bigger>=</span> c<sup> 1<span class=bigger>-</span>1</sup> or c<sup>0</sup> (which equals 1).<br>The $sixthHelpQuoted variables cancel out each other.',
-			firstHelpQuoted: '\\"a<sup>2</sup> <span class=bigger>\xF7</span> a<sup>2</sup>\\"',
+			secondHelp: '$firstHelpQuoted = a<sup> 2-2</sup> or a<sup>0</sup> (which equals 1).<br>The $secondHelpQuoted variables cancel out each other.<br><br>$thirdHelpQuoted = b<sup> 1-1</sup> or b<sup>0</sup> (which equals 1).<br>The $fourthHelpQuoted variables cancel out each other.<br><br>$fifthHelpQuoted = c<sup> 1-1</sup> or c<sup>0</sup> (which equals 1).<br>The $sixthHelpQuoted variables cancel out each other.',
+			firstHelpQuoted: '\\"a<sup>2</sup> / a<sup>2</sup>\\"',
 			secondHelpQuoted: '\\"a\\"',
-			thirdHelpQuoted: '\\"b <span class=bigger>\xF7</span> b\\"',
+			thirdHelpQuoted: '\\"b / b\\"',
 			fourthHelpQuoted: '\\"b\\"',
-			fifthHelpQuoted: '\\"c <span class=bigger>\xF7</span> c\\"',
+			fifthHelpQuoted: '\\"c / c\\"',
 			sixthHelpQuoted: '\\"c\\"',
 			helpAnswer:	dataUtils.pre('{\\frac'
-										+'{\\html{$$thirdAnswer}}'
-										+'{\\html{$$secondAnswer}}'
+										+'{\\str{$$thirdAnswer}}'
+										+'{\\str{$$secondAnswer}}'
 									+'}'
 						),
 			textAnswer: '-11', 
 			expoAnswer: '',
 			secondAnswer: '2',
-			thirdAnswer: '<span class=bigger>-</span>11',
+			thirdAnswer: '-11',
 			template: 'fractionCoefficient'
 			}
 			/*,
