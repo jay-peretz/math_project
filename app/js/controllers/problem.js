@@ -30,7 +30,14 @@ angular.module('mathSkills')
                 if (+$routeParams.problemNumber + 1 <= numberOfProblems) {
                     newPath += '/' + (+$routeParams.problemNumber + 1);
                 } else {
-                    newPath = $location.path().split('/').slice(0, -2).join('/'); //+= '/all/feedback';
+					console.log('JSON.stringify($scope.problem.children[0]) is: ',JSON.stringify($scope.problem.children[0]));
+					console.log('JSON.stringify($scope.problem.children[0]).search("provideFeedback":true) is: ',JSON.stringify($scope.problem.children[0]).search('"provideFeedback":true'));
+					
+					if (JSON.stringify($scope.problem.children[0]).search('"provideFeedback":true') === -1) {
+                    	newPath = $location.path().split('/').slice(0, -2).join('/');
+					} else {
+					    newPath += '/all/feedback';
+					}
                 }
 
                 // Change the path after a short delay.
