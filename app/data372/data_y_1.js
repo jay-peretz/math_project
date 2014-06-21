@@ -7,227 +7,292 @@ var desc = {
     children: []
 },
 template = {
-
-			// third template, two number operation, no parenthetical expression
-			third: {
+			main: {
                 title: 'Evaluate Signed Expressions',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\rowgrp'
-						+'{\\html{Evaluate:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{$firstSign}}{html{$firstAbsNumber}}{html{$firstText}}{\\str{ *}}{html{$secondAbsNumber}}{html{$secondText}}{html{$secondExp}}}',
-						answer: '\\input{$ans}',
+						problem: '$problem',
+						answer: '\\btngrp'+
+									'{\\rowgrp'+
+										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+									'}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\html{$firstHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$secondHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$thirdHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\html{answer: $textAnswer}}{help-answer-text}}'
+										+'{\\html{When multiplying terms, multiply:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\str{(1) the coefficients together: &nbsp; }}'
+											+'$firstHelp'
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{(1) the coefficients }}'
+												+'{hiddenSpace}'
+											+'}'
+											+'{\\str{and}}'
+										+'}'
+										+'{\\html{(2) the same variable(s) together&nbsp;( follow the exponent rule - multiplication of same bases -- add exponents) :}}'
+										+'{\\html{&nbsp;}}'
+										+'$thirdHelp'
+										+'{\\html{&nbsp;}}'
+										+'{css{\\html{answer:  &nbsp; $answer}}{help-answer-text}}'
 						}
 					}]
 				}]
 			},
-			thirdexp: {
+			fractional: {
                 title: 'Evaluate Signed Expressions',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\rowgrp'
-						+'{\\html{Evaluate:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{$firstSign}}{html{$firstAbsNumber}}{html{$firstText}}{\\str{ *}}{html{$secondAbsNumber}}{html{$secondText}}{html{$secondExp}}}',
-						answer: '\\grp{\\input{$ans}}{\\exp{\\input{$tex}}{\\input{$exp}}}',
+						problem: '$problem',
+						answer: '\\btngrp'+
+									'{\\css' +
+										'{\\rowgrp'+
+											'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+											'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+											'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+											'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+										'}'+
+										'{tdButtonHeight}'+
+									'}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
-							+'{\\html{$firstHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$secondHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$thirdHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\html{answer:  $textAnswer}}{help-answer-text}}'
+										+'{\\html{When multiplying terms, multiply:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\str{(1) the coefficients together: &nbsp; }}'
+											+'{$firstHelp}'
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{(1) the coefficients }}'
+												+'{hiddenSpace}'
+											+'}'
+											+'{\\str{and}}'
+										+'}'
+										+'{\\html{(2) the same variable(s) together&nbsp;( follow the exponent rule - multiplication of same bases -- add exponents) :}}'
+										+'{\\html{&nbsp;}}'
+										+'$thirdHelp'
+										+'{\\html{&nbsp;}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\html{answer:  &nbsp;}}'						                                            	+'$answer'
+											+'}'
+											+'{help-answer-text}'
+										+'}'
 						}
 					}]
 				}]
-			},
-			// fourth template, two number operation, no sign inside 2nd term parenthetical expression
-			fourth: {
-                title: 'Evaluate Signed Expressions',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-						+'{\\html{Evaluate:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{html{$firstLeftparan}}{\\sign{$firstSign}}{\\frac{\\html{$firstNum}}{\\html{$firstDen}}}{html{$firstText}}{html{$firstExp}}{html{$secondText}}{html{$firstRightparan}}{html{$secondLeftparan}}{\\sign{$secondSign}}{\\frac{\\html{$secondNum}}{\\html{$secondDen}}}{html{$thirdText}}{html{$secondExp}}{html{$fourthText}}{html{$secondRightparan}}}',
-						answer: '\\grp{\\mixed{\\frac{\\input{$ansnum}}{\\input{$ansden}}}}{\\exp{\\input{$oneText}}{\\input{$oneExp}}}{\\input{$twoText}}',
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\html{$firstHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$secondHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$thirdHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\html{answer:  $textAnswer}}{help-answer-text}}'
-						}
-					}]
-				}]
-			},
-		
-			fourthexp: {
-                title: 'Evaluate Signed Expressions',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-						+'{\\html{Evaluate:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{html{$firstLeftparan}}{\\sign{$firstSign}}{html{$firstAbsNumber}}{html{$firstText}}{html{$firstExp}}{html{$secondText}}{html{$firstRightparan}}{html{$secondLeftparan}}{\\sign{$secondSign}}{html{$secondAbsNumber}}{html{$thirdText}}{html{$secondExp}}{html{$fourthText}}{html{$secondRightparan}}}',
-						answer: '\\grp{\\input{$ans}}{\\exp{\\input{$firsttex}}{\\input{$firstexp}}}{\\exp{\\input{$secondtex}}{\\input{$secondexp}}}',
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\html{$firstHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$secondHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$thirdHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\html{answer:  $textAnswer}}{help-answer-text}}'
-						}
-					}]
-				}]
-			},
-			fifthexp: {
-                title: 'Evaluate Signed Expressions',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-						+'{\\html{Evaluate:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{html{$firstLeftparan}}{\\sign{$firstSign}}{html{$firstAbsNumber}}{html{$firstText}}{html{$firstExp}}{html{$secondText}}{html{$firstRightparan}}{html{$secondLeftparan}}{\\sign{$secondSign}}{html{$secondAbsNumber}}{html{$thirdText}}{html{$secondExp}}{html{$fourthText}}{html{$secondRightparan}}}',
-						answer: '\\grp{\\input{$ans}}{\\exp{\\input{$firsttex}}{\\input{$firstexp}}}{\\input{$secondtex}}',
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\html{$firstHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$secondHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$thirdHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\html{answer:  $textAnswer}}{help-answer-text}}'
-						}
-					}]
-				}]
-			},
-			
-			// fifth template, two number operation, has a sign inside 2nd term parenthetical expression
-			fifth: {
-                title: 'Evaluate Signed Expressions',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-						+'{\\html{Evaluate:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{html{$firstLeftparan}}{\\sign{$firstSign}}{html{$firstText}}{html{$firstRightparan}}{html{$secondLeftparan}}{html{$thirdText}}{html{$secondExp}}{html{$secondRightparan}}{html{$thirdLeftparan}}{\\sign{$thirdSign}}{html{$thirdAbsNumber}}{html{$fifthText}}{html{$thirdExp}}{html{$thirdRightparan}}}',
-						answer: '\\grp{\\input{$ans}}{\\exp{\\input{$firsttex}}{\\input{$firstexp}}}{\\input{$secondtex}}',
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\html{$firstHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$secondHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$thirdHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\html{answer:  $textAnswer}}{help-answer-text}}'
-						}
-					}]
-				}]
-			},
-			sixth: {
-                title: 'Evaluate Signed Expressions',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-						+'{\\html{Evaluate:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{html{$firstAbsNumber}}{html{$firstText}}{\\str{*}}{\\sign{$secondSign}}{html{$secondAbsNumber}}{html{$thirdText}}{\\str{*}}{html{$thirdAbsNumber}}{html{$fifthText}}{html{$sixthText}}{html{$thirdExp}}}',
-						answer: '\\grp{\\input{$ans}}{\\exp{\\input{$firsttex}}{\\input{$firstexp}}}{\\input{$secondtex}}{\\exp{\\input{$thirdtex}}{\\input{$thirdexp}}}',
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\html{$firstHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$secondHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$thirdHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\html{answer:  $textAnswer}}{help-answer-text}}'
-						}
-					}]
-				}]
-			},
-			// fourth template, two number operation, no sign inside 2nd term parenthetical expression
-			seventhexp: {
-                title: 'Evaluate Signed Expressions',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-						+'{\\html{Evaluate:}}'
-						+'{\\html{&nbsp;}}'
-						+'{\\grp{html{$firstLeftparan}}{\\sign{$firstSign}}{\\frac{\\html{$firstNum}}{\\html{$firstDen}}}{html{$secondText}}{html{$firstRightparan}}{html{$secondLeftparan}}{\\sign{$secondSign}}{html{$secondAbsNumber}}{html{$thirdText}}{html{$secondExp}}{html{$fourthText}}{html{$secondRightparan}}}',
-						answer: '\\grp{\\input{$ans}}{\\exp{\\input{$firsttex}}{\\input{$firstexp}}}',
-						controls: {
-							"checkAnswer": true,
-							"help": '\\rowgrp'
-							+'{\\html{$firstHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$secondHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{\\html{$thirdHelp}}'
-							+'{\\html{&nbsp;}}'
-							+'{css{\\html{answer:  $textAnswer}}{help-answer-text}}'
-						}
-					}]
-				}]
-			},
+			}
         },
         data = [
 			// problem 1
-			{ firstSign: '', secondSign: '', firstAbsNumber: '3', secondAbsNumber: '4', firstText: '', secondText: 'x',firstExp:'', secondExp: '', firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstAbsNumber <font size = 4>&bull;</font> $$secondAbsNumber = 12 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable(s) together&nbsp;( follow the exponent rule - multiplication of same bases -- add exponents) :', thirdHelp: 'The variable <span class=underline>x</span> has no other <span class=underline>x</span> to multiply by, so it remains a part of the multiplication (12 <font size = 4>&bull;</font> x).', ans: '12x', textAnswer: ' &nbsp; 12x', template: 'third' },
+			{ 	problem: dataUtils.pre('\\str{3 &nbsp; * &nbsp; 4x}'), 
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{7x}'),
+				buttonValueB: 'T',
+				buttonLabelB: dataUtils.pre('\\str{12x}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\str{7}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\str{12}'),
+				firstHelp: dataUtils.pre('{\\str{3 * 4 = 12}}'),
+				thirdHelp: dataUtils.pre('{\\str{The variable \"x\" has no other \"x\" to multiply by, so it remains a part of the multiplication (12 * x).}}'),
+				answer: '12x',
+				template: 'main'
+			}
+			,
 			// problem 2
-			{ firstSign: '', secondSign: '', firstAbsNumber: '5', secondAbsNumber: '3', firstText: 'm', secondText: 'm',firstExp:'', secondExp: '', firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstAbsNumber <font size = 4>&bull;</font> $$secondAbsNumber = 15 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable(s) together&nbsp;( follow the exponent rule - multiplication of same bases -- add exponents) :', thirdHelp: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m <font size = 4>&bull;</font> m = m<sup>2</sup>', textAnswer: ' &nbsp; 15m<sup>2</sup>', ans: '15', tex:'m', exp: '2', template: 'thirdexp' },
+			{ 	problem: dataUtils.pre('\\str{5m &nbsp; * &nbsp; 3m}'), 
+				buttonValueA: 'T',
+				buttonLabelA: dataUtils.pre('\\str{15m<sup>2</sup>}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\str{15m}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\str{8m}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\str{8m<sup>2</sup>}'),
+				firstHelp: dataUtils.pre('{\\str{5 * 3 = 15}}'),
+				thirdHelp: dataUtils.pre('{\\grp'
+											+'{\\css'
+												+'{\\str{(1) the coefficients together: &nbsp; }}'
+												+'{hiddenSpace}'
+											+'}'
+											+'{\\str{m * m = m<sup>2</sup>}}'
+										+'}'
+									),
+				answer: '15m<sup>2</sup>',
+				template: 'main'
+			}
+			,
 			// problem 3
-			{ firstSign: '-', secondSign: '', firstAbsNumber: '2', secondAbsNumber: '7', firstText: 'y', secondText: 'y',firstExp:'', secondExp: '<sup>2</sup>', firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstSign $$firstAbsNumber <font size = 4>&bull;</font> $$secondAbsNumber = -14 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable(s) together&nbsp;( follow the exponent rule - multiplication of same bases --&nbsp; add exponents) :', thirdHelp: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y <font size = 4>&bull;</font> y<sup>2</sup> = y<sup>3</sup>', textAnswer: ' &nbsp; -14y<sup>3</sup>', ans: '-14', tex:'y', exp: '3', template: 'thirdexp' },
+			{ 	problem: dataUtils.pre('\\str{-2y &nbsp; * &nbsp; 7y2}'), 
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{14y}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\str{14y<sup>3</sup>}'),
+				buttonValueC: 'T',
+				buttonLabelC: dataUtils.pre('\\str{-14y<sup>3</sup>}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\str{-14y<sup>2</sup>}'),
+				firstHelp: dataUtils.pre('{\\str{-2 * 7  =  -14}}'),
+				thirdHelp: dataUtils.pre('{\\grp'
+											+'{\\css'
+												+'{\\str{(1) the coefficients together: &nbsp; }}'
+												+'{hiddenSpace}'
+											+'}'
+											+'{\\str{y * y<sup>2</sup> = y<sup>3</sup>}}'
+										+'}'
+									),
+				answer: '-14y<sup>3</sup>',
+				template: 'main'
+			}
+			,
 			// problem 4
-			{ firstSign: '-', secondSign: '-', firstAbsNumber: '3', secondAbsNumber: '4', firstText: 'x', secondText: 'y', thirdText: 'x', fourthText: 'y', firstExp:'<sup>4</sup>', secondExp: '<sup>2</sup>', firstLeftparan: '(', secondLeftparan: '(',firstRightparan: ')',secondRightparan: ')',firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstSign $$firstAbsNumber <font size = 4>&bull;</font> $$secondSign $$secondAbsNumber = 12 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable(s) together&nbsp;( follow the exponent rule - multiplication of same bases -- &nbsp; add exponents) :', thirdHelp: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x<sup>4</sup> <font size = 4>&bull;</font> x<sup>2</sup> = x<sup>6</sup> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y <font size = 4>&bull;</font> y = y<sup>2</sup>', textAnswer: ' &nbsp; 12x<sup>6</sup>y<sup>2</sup>', ans: '12', firsttex:'x', firstexp: '6', secondtex:'y', secondexp: '2', template: 'fourthexp' },
+			{ 	problem: dataUtils.pre('\\str{(-3x<sup>4</sup>y)(-4x<sup>2</sup>y)}'), 
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{-12x<sup>8</sup>y<sup>2</sup>}'),
+				buttonValueB: 'T',
+				buttonLabelB: dataUtils.pre('\\str{12x<sup>6</sup>y<sup>2</sup>}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\str{-7x<sup>8</sup>y}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\str{7x<sup>8</sup>y}'),
+				firstHelp: dataUtils.pre('{\\str{-3 * -4  =  12}}'),
+				thirdHelp: dataUtils.pre('{\\grp'
+											+'{\\css'
+												+'{\\str{(1) the coefficients together: &nbsp; }}'
+												+'{hiddenSpace}'
+											+'}'
+											+'{\\str{x<sup>4</sup> * x<sup>2</sup> = x<sup>6</sup><br>y * y = y<sup>2</sup>}}'
+										+'}'
+									),
+				answer: '12x<sup>6</sup>y<sup>2</sup>',
+				template: 'main'
+			}
+			,
 			// problem 5
-			{ firstSign: '-', secondSign: '', firstAbsNumber: '6', secondAbsNumber: '3', firstText: '', secondText: '', thirdText: 'm', fourthText: 'n', firstExp:'', secondExp: '<sup>2</sup>', firstLeftparan: '(', secondLeftparan: '(',firstRightparan: ')',secondRightparan: ')',firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstSign $$firstAbsNumber <font size = 4>&bull;</font> $$secondSign$$secondAbsNumber = -18 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable(s) together&nbsp;( follow the exponent rule - multiplication of same bases -- add exponents) :', thirdHelp: 'The variable <span class=underline>m</span> has no other <span class=underline>m</span> to multiply by. The variable <span class=underline>n</span> has no other <span class=underline>n</span> to multiply by. The m<sup>2</sup> and the n remain a part of the multiplication (-18 <font size = 4>&bull;</font> m<sup>2</sup> <font size = 4>&bull;</font> n). ', textAnswer: ' &nbsp; -18m<sup>2</sup> n', ans: '-18', firsttex:'m', firstexp: '2', secondtex:'n', template: 'fifthexp' },
+			{ 	problem: dataUtils.pre('\\str{(-6)(3m<sup>2</sup>n)}'), 
+				buttonValueA: 'T',
+				buttonLabelA: dataUtils.pre('\\str{-18m<sup>2</sup>n}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\str{18m<sup>2</sup>n}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\str{18m}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\str{-18}'),
+				firstHelp: dataUtils.pre('{\\str{-6 * 3  =  -18}}'),
+				thirdHelp: dataUtils.pre('{\\str{The variable \"m\" has no other \"m\" to multiply by. The variable \"n\" has no other \"n\" to multiply by. The m<sup>2</sup> and the n remain a part of the multiplication (-18 * m<sup>2</sup> * n).}}'),
+				answer: '-18m<sup>2</sup>n',
+				template: 'main'
+			}
+			,
 			// problem 6
-			{ firstSign: '-', secondSign: '', firstAbsNumber: '2', secondAbsNumber: '5', firstText: 'x', secondText: '', thirdText: 'x', fourthText: 'y', firstExp:'<sup>3</sup>', secondExp: '', firstLeftparan: '', secondLeftparan: '(',firstRightparan: '',secondRightparan: ')',firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstSign $$firstAbsNumber <font size = 4>&bull;</font> $$secondSign$$secondAbsNumber = -10 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable(s) together&nbsp;( follow the exponent rule - multiplication of same bases -- add exponents) :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x<sup>3</sup> <font size = 4>&bull;</font> x = x<sup>4</sup> ', thirdHelp: 'The variable <span class=underline>y</span> has no other <span class=underline>y</span> to multiply by. The y remains a part of the multiplication (-10 <font size = 4>&bull;</font> x<sup>4</sup> <font size = 4>&bull;</font> y). ', textAnswer: ' &nbsp; -10x<sup>4</sup>y', ans: '-10', firsttex:'x', firstexp: '4', secondtex:'y', template: 'fifthexp'},
+			{ 	problem: dataUtils.pre('\\str{-2x<sup>3</sup>(5xy)}'), 
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{10x<sup>3</sup>}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\str{10x<sup>4</sup>y}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\str{-10x<sup>3</sup>y}'),
+				buttonValueD: 'T',
+				buttonLabelD: dataUtils.pre('\\str{-10x<sup>4</sup>y}'),
+				firstHelp: dataUtils.pre('{\\str{-2 * 5  =  -10}}'),
+				thirdHelp: dataUtils.pre('{\\grp'
+											+'{\\css'
+												+'{\\str{(1) the coefficients together: &nbsp; }}'
+												+'{hiddenSpace}'
+											+'}'
+											+'{\\str{x<sup>3</sup> * x = x<sup>4</sup>}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{The variable \"y\" has no other \"y\" to multiply by. The y remains part of the multiplication (-10 * x<sup>4</sup> * y).}}'
+									),
+				answer: '-10x<sup>4</sup>y',
+				template: 'main' 
+			}
+			,
 			// problem 7
-			{ firstSign: '-', secondSign: '', firstNum: '2', secondAbsNumber: '15', firstDen: '5', secondText: '', thirdText: 'a', fourthText: '', firstExp:'', secondExp: '<sup>2</sup>', firstLeftparan: '(', secondLeftparan: '(',firstRightparan: ')',secondRightparan: ')',firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: <font size=4>$$firstSign&nbsp; <sup>2</sup>&frasl;<sub>5</sub></font>&nbsp;<font size = 4>&bull;</font> $$secondAbsNumber = -6<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable(s) together&nbsp;( follow the exponent rule - multiplication of same bases -- add exponents) :', thirdHelp: 'The variable <span class=underline>a</span> has no other <span class=underline>a</span> to multiply by. The a<sup>2</sup> remains a part of the multiplication (-6 <font size = 4>&bull;</font> a<sup>2</sup>). ', textAnswer: ' &nbsp; -6a<sup>2</sup>', ans: '-6', firsttex:'a', firstexp: '2', template: 'seventhexp' },
+			{ 	problem: dataUtils.pre('\\grp'
+									   +'{\\str{(}}'
+									   +'{\\frac{\\fracstr{-2}}{\\fracstr{5}}}'
+									   +'{\\str{)}}'
+									   +'{\\str{(&nbsp; 15a<sup>2</sup> &nbsp;)}}'
+									   ), 
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{-30a<sup>2</sup>}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\str{30a<sup>2</sup>}'),
+				buttonValueC: 'T',
+				buttonLabelC: dataUtils.pre('\\str{-6a<sup>2</sup>}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\str{-6}'),
+				firstHelp: dataUtils.pre('{\\grp'
+											   +'{\\frac{\\fracstr{-2}}{\\fracstr{5}}}'
+											   +'{\\str{* 15 = -6}}'
+										   +'}'
+									   ),
+				thirdHelp: dataUtils.pre('{\\str{The variable \"a\" has no other \"a\" to multiply by. The a<sup>2</sup> remains a part of the multiplication (-6 * a<sup>2</sup>).}}'),
+				answer: '-6a<sup>2</sup>',
+				template: 'main'
+			}
+			,
 			// problem 8
-			{ firstSign: '-', secondSign: '-', firstNum: '3', firstDen: '4', secondNum: '1', secondDen: '6', firstText: '<font size=5><sup><sub>m</sub></sup></font>', secondText: '<font size=5><sup><sub>n</sub></sup></font>', thirdText: '<font size=5><sup><sub>m</sub></sup></font>', fourthText: '', firstExp:'<font size=5><sup><sup>3</sup></sup></font>', secondExp: '<font size=5><sup><sup>2</sup></sup></font>', firstLeftparan: '(', secondLeftparan: '(',firstRightparan: ')',secondRightparan: ')',firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: <font size=4>$$firstSign <sup>3</sup>&frasl;<sub>4</sub> &nbsp; <font size = 4>&bull;</font> &nbsp; $$secondSign <sup>1</sup>&frasl;<sub>6</sub>&nbsp; = &nbsp; <sup>1</sup>&frasl;<sub>8</sub></font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable(s) together&nbsp;( follow the exponent rule - multiplication of same bases -- add exponents) :<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m<sup>3</sup> &nbsp;<font size = 4>&bull;</font>&nbsp; m<sup>2</sup> = m<sup>5</sup>', thirdHelp: 'The variable <span class=underline>n</span> has no other <span class=underline>n</span> to multiply by. The n remains a part of the multiplication (<font size=4><sup>1</sup>&frasl;<sub>8</sub></font> <font size = 4>&bull;</font> m<sup>5</sup> <font size = 4>&bull;</font>&nbsp;n). ', ansnum: '1', ansden: '8', oneText: 'm',oneExp:'5', twoText: 'n', textAnswer: ' &nbsp; <font size=4><sup>1</sup>&frasl;<sub>8</sub></font>&nbsp; m<sup>5</sup>n', template: 'fourth' },
-			// problem 9
-			{ firstSign: '-', secondSign: '', thirdSign: '-', firstAbsNumber: '', secondAbsNumber: '',thirdAbsNumber: '4', firstText: 'x', secondText: '', thirdText: 'x', fourthText: '', fifthText: 'y',sixthText: '', firstExp:'', secondExp: '<sup>2</sup>',thirdExp: '', firstLeftparan: '(', secondLeftparan: '(',firstRightparan: ')',secondRightparan: ')',thirdLeftparan: '(', thirdRightparan: ')', firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: $$firstSign 1 <font size = 4>&bull;</font> 1 <font size = 4>&bull;</font> $$thirdSign $$thirdAbsNumber = 4 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable(s) together&nbsp;( follow the exponent rule - multiplication of same bases -- add exponents) :<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x <font size = 4>&bull;</font> x <sup>2</sup> = x<sup>3</sup> ', thirdHelp: 'The variable <span class=underline>y</span> has no other <span class=underline>y</span> to multiply by. The y remains a part of the multiplication (4 <font size = 4>&bull;</font> x<sup>3</sup> <font size = 4>&bull;</font> y). ',textAnswer: ' &nbsp; 4x<sup>3</sup>y', ans: '4', firsttex:'x', firstexp: '3', secondtex:'y', template: 'fifth' },
-			// problem 10
-			{ firstSign: '', secondSign: '-', thirdSign: '', firstAbsNumber: '4', secondAbsNumber: '2',thirdAbsNumber: '7', firstText: 'y', secondText: '', thirdText: 'x', fourthText: '', fifthText: 'x',sixthText: 'z', firstExp:'', secondExp: '',thirdExp: '<sup>3</sup>', firstLeftparan: '', secondLeftparan: '',firstRightparan: '',secondRightparan: '',thirdLeftparan: '', thirdRightparan: '', firstHelp: 'When multiplying terms, multiply :', secondHelp: '(1) the coefficients together: 4 <font size = 4>&bull;</font> -2 <font size = 4>&bull;</font> 7 = -56<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and<br>(2) the same variable(s) together&nbsp;( follow the exponent rule - multiplication of same bases -- add exponents) :<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x <font size = 4>&bull;</font> x = x<sup>2</sup> ', thirdHelp: 'The variable <span class=underline>y</span> has no other <span class=underline>y</span> to multiply by. The variable <span class=underline>z</span> has no other <span class=underline>z</span> to multiply by. The y and the z remains a part of the multiplication (-56 <font size = 4>&bull;</font> x<sup>2</sup> <font size = 4>&bull;</font> y <font size = 4>&bull;</font> z<sup>3</sup>). ', textAnswer: ' &nbsp; -56x<sup>2</sup>yz<sup>3</sup>', ans: '-56', firsttex:'x', firstexp: '2', secondtex:'y', thirdtex:'z', thirdexp: '3', template: 'sixth' },
+			{ 	problem: dataUtils.pre('\\grp'
+										   +'{\\str{(}}'
+										   +'{\\frac{\\fracstr{-3m<sup>3</sup>n}}{\\fracstr{4}}}'
+										   +'{\\str{)}}'
+										   +'{\\str{(}}'
+										   +'{\\frac{\\fracstr{-1m<sup>2</sup>}}{\\fracstr{6}}}'
+										   +'{\\str{)}'
+										+'}'
+									  ), 
+				buttonValueA: 'T',
+				buttonLabelA: dataUtils.pre('\\frac{\\fracstr{m<sup>5</sup>n}}{\\fracstr{8}}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\frac{\\fracstr{-3mn}}{\\fracstr{10}}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\frac{\\fracstr{-m}}{\\fracstr{8n}}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\frac{\\fracstr{m<sup>6</sup>n}}{\\fracstr{8}}'),
+				firstHelp: dataUtils.pre('\\grp'
+										   +'{\\frac{\\fracstr{-3}}{\\fracstr{4}}}'
+										   +'{\\str{*}}'
+										   +'{\\frac{\\fracstr{-1}}{\\fracstr{6}}}'
+									   ),
+				thirdHelp: dataUtils.pre('{\\grp'
+											+'{\\css'
+												+'{\\str{(1) the coefficients together: &nbsp; }}'
+												+'{hiddenSpace}'
+											+'}'
+											+'{\\str{m<sup>3</sup> * m<sup>2</sup> = m<sup>5</sup>}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{The variable \"n\" has no other \"n\" to multiply by. The n remains part of the multiplication:}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{(1) the coefficients together: &nbsp; }}'
+												+'{hiddenSpace}'
+											+'}'
+											+'{\\css'
+												+'{\\frac{\\fracstr{1}}{\\fracstr{8}}}'	
+												+'{fracNoMargin}'
+											+'}'
+											+'{\\str{* m<sup>5</sup> * n}}'
+										+'}'
+									),
+				answer: dataUtils.pre(
+									  '{\\frac{\\fracstr{m<sup>5</sup>n}}{\\fracstr{8}}}'
+									  ),
+				template: 'fractional'
+			}
         ];
 
 	return dataUtils.build(desc, template, data);
