@@ -293,6 +293,56 @@ template = {
 									  ),
 				template: 'fractional'
 			}
+			,
+			// problem 9
+			{ 	problem: dataUtils.pre('\\str{(-x) (x<sup>2</sup>) (-4y)}'), 
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{-6x<sup>2</sup>}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\str{12x<sup>3</sup>y}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\str{3xy}'),
+				buttonValueD: 'T',
+				buttonLabelD: dataUtils.pre('\\str{4x<sup>3</sup>y}'),
+				firstHelp: dataUtils.pre('{\\str{-1 * 1 * -4  =  4}}'),
+				thirdHelp: dataUtils.pre('{\\grp'
+											+'{\\css'
+												+'{\\str{(1) the coefficients together: &nbsp; }}'
+												+'{hiddenSpace}'
+											+'}'
+											+'{\\str{x * x<sup>2</sup> = x<sup>3</sup>}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{The variable \"y\" has no other \"y\" to multiply by. The y remains part of the multiplication (4 * x<sup>3</sup> * y).}}'
+									),
+				answer: '4x<sup>3</sup>y',
+				template: 'main'
+			}
+			,
+			// problem 10
+			{ 	problem: dataUtils.pre('\\str{4y * -2x * 7xz<sup>3</sup> }'), 
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{9x<sup>2</sup>yz<sup>3</sup>}'),
+				buttonValueB: 'T',
+				buttonLabelB: dataUtils.pre('\\str{-56x<sup>2</sup>yz<sup>3</sup>}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\str{-56yz<sup>3</sup>}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\str{9x<sup>2</sup>}'),
+				firstHelp: dataUtils.pre('{\\str{4 * -2 * 7  =  -56}}'),
+				thirdHelp: dataUtils.pre('{\\grp'
+											+'{\\css'
+												+'{\\str{(1) the coefficients together: &nbsp; }}'
+												+'{hiddenSpace}'
+											+'}'
+											+'{\\str{x * x = x<sup>2</sup>}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{The variable \"y\" has no other \"y\" to multiply by. The variable \"z\" has no other \"z\" to multiply by. The y and the z remain a part of the multiplication (-56 * x<sup>2</sup> * y * z<sup>3</sup>).}}'
+									),
+				answer: '-56x<sup>2</sup>yz<sup>3</sup>',
+				template: 'main'
+			}
         ];
 
 	return dataUtils.build(desc, template, data);
