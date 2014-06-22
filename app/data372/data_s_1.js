@@ -12,7 +12,10 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\image{$illustration}',
+						problem: '\\rowgrp'
+									+'{\\html{Solve for the perimeter of the shape below.}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\image{$illustration}}',
                         answer: '\\grp'
 									+'{$finalAnswer}'
 									+'{\\select{$unitsPower}{$unitsSelect}{widthFixed120}}',
@@ -42,7 +45,10 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\image{$illustration}',
+						problem: '\\rowgrp'
+									+'{\\html{Solve for the perimeter of the shape below.}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\image{$illustration}}',
                         answer: '\\grp'
 									+'{$finalAnswer}'
 									+'{\\select{$unitsPower}{$unitsSelect}{widthFixed120}}',
@@ -73,7 +79,10 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\image{$illustration}',
+						problem: '\\rowgrp'
+									+'{\\html{Solve for the perimeter of the shape below.}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\image{$illustration}}',
                         answer: '\\grp'
 									+'{$finalAnswer}'
 									+'{\\select{$unitsPower}{$unitsSelect}{widthFixed120}}',
