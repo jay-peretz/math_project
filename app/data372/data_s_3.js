@@ -12,7 +12,10 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\image{$illustration}',
+						problem: '\\rowgrp'
+									+'{\\html{Solve for the area of the shape below.$addProblemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\image{$illustration}}',
                         answer: '\\grp'
 									+'{$finalAnswer}'
 									+'{\\select{$unitsPower}{$unitsSelect}{widthFixed120}}',
@@ -42,7 +45,10 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\image{$illustration}',
+						problem: '\\rowgrp'
+									+'{\\html{Solve for the area of the shape below.$addProblemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\image{$illustration}}',
                         answer: '\\grp'
 									+'{$finalAnswer}'
 									+'{\\select{$unitsPower}{$unitsSelect}{widthFixed120}}',
@@ -54,39 +60,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 										+'{\\html{<table><tr><td>Write the formula:&nbsp;&nbsp;</td><td>$formula</td></tr>'
 										+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>$substitution</td></tr>'
 										+'<tr><td>Solve:&nbsp;&nbsp;</td><td> $lineOneSolve</td></tr>'
-										+'<tr><td>&nbsp;&nbsp;</td><td>$lineTwoSolve</td></tr></table>}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\css'
-											+'{\\grp'
-												+'{\\html{Answer: &nbsp;}}'
-												+'{\\html{$helpAnswer}}'
-												+'{\\html{$unitsAnswer}}'
-											+'}'
-											+'{help-answer-text}'
-										+'}'
-                        }
-                    }]
-                }]
-            },
-			threeStepSolution: {
-                title: 'Area of Rectangles, Squares and Triangles',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\image{$illustration}',
-                        answer: '\\grp'
-									+'{$finalAnswer}'
-									+'{\\select{$unitsPower}{$unitsSelect}{widthFixed120}}',
-                        controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{Identify the shape:  $identifyShape}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\html{<table><tr><td>Write the formula:&nbsp;&nbsp;</td><td>$formula</td></tr>'
-										+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>$substitution</td></tr>'
-										+'<tr><td>Solve:&nbsp;&nbsp;</td><td> $lineOneSolve</td></tr>'
-										+'<tr><td>&nbsp;&nbsp;</td><td>$lineTwoSolve</td></tr>'
-										+'<tr><td>&nbsp;&nbsp;</td><td>$lineThreeSolve</td></tr></table>}}'
+										+'<tr><td>&nbsp;&nbsp;</td><td>$addProblemText</td></tr></table>}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\css'
 											+'{\\grp'
@@ -103,6 +77,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
         },
         data = [
 			{ // problem 1
+				addProblemText: '',
 				illustration: 'S.1/Rectangle_L7ft_W11ft.jpg',
 				unitsAnswer: 'ft&sup2;',
 				unitsPower: 'ft&sup2;',
@@ -117,6 +92,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 2
+				addProblemText: '',
 				illustration: 'S.1/Rectangle_L22ft_W20ft.jpg',
 				unitsAnswer: 'ft&sup2;',
 				unitsPower: 'ft&sup2;',
@@ -131,6 +107,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 3
+				addProblemText: '',
 				illustration: 'S.1/Rectangle_L5.4in_W6.25in.jpg',
 				unitsAnswer: 'in&sup2;',
 				unitsPower: 'in&sup2;',
@@ -145,6 +122,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 4
+				addProblemText: '',
 				illustration: 'S.1/Rectangle_L10.8in_W12.5in.jpg',
 				unitsAnswer: 'in&sup2;',
 				unitsPower: 'in&sup2;',
@@ -159,6 +137,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 5
+				addProblemText: '',
 				illustration: 'S.1/Rectangle_L14m_W14m.jpg',
 				unitsAnswer: 'm&sup2;',
 				unitsPower: 'm&sup2;',
@@ -173,6 +152,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 6
+				addProblemText: '',
 				illustration: 'S.1/Rectangle_L32m_W32m.jpg',
 				unitsAnswer: 'm&sup2;',
 				unitsPower: 'm&sup2;',
@@ -187,6 +167,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 7
+				addProblemText: '',
 				illustration: 'S.1/Rectangle_L8_3-5cm_W12_1-2cm.jpg',
 				unitsAnswer: 'cm&sup2;',
 				unitsPower: 'cm&sup2;',
@@ -201,6 +182,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 8
+				addProblemText: '',
 				illustration: 'S.1/Rectangle_L18_1-2yd_W5_1-3yd.jpg',
 				unitsAnswer: 'yd&sup2;',
 				unitsPower: 'yd&sup2;',
@@ -215,6 +197,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 9
+				addProblemText: '',
 				illustration: 'S.1/Tri_12x15x9in.jpg',
 				unitsAnswer: 'in&sup2;',
 				unitsPower: 'in&sup2;',
@@ -229,6 +212,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 10
+				addProblemText: '',
 				illustration: 'S.3/Tri_16x20x12ft.jpg',
 				unitsAnswer: 'ft&sup2;',
 				unitsPower: 'ft&sup2;',
@@ -243,6 +227,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 11
+				addProblemText: '<br>Round the answer to the tenths place.',
 				illustration: 'S.3/Tri_16-1x19-23x24-73cm.jpg',
 				unitsAnswer: 'cm&sup2;',
 				unitsPower: 'cm&sup2;',
@@ -251,13 +236,13 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
                 formula: 'A = <sup>1</sup>&#8260;<sub>2</sub> &bull; b &bull; h',
 				substitution: 'A = <sup>1</sup>&#8260;<sub>2</sub> &bull; 16.1 &bull; 19.23',
 				lineOneSolve: 'P = 154.8015',
-				lineTwoSolve: 'Round answer to the tenths place.',
 				finalAnswer: dataUtils.pre('\\input{154.8}'),
 				helpAnswer: ' 154.8',
 				template: 'twoStepSolution' 
 			}
 			,
 			{ // problem 12
+				addProblemText: '',
 				illustration: 'S.3/Tri_4-8x3x3m.jpg',
 				unitsAnswer: 'm&sup2;',
 				unitsPower: 'm&sup2;',
@@ -272,6 +257,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 13
+				addProblemText: '',
 				illustration: 'S.3/Tri_2.5x2.5x3ft.jpg',
 				unitsAnswer: 'ft&sup2;',
 				unitsPower: 'ft&sup2;',
@@ -286,6 +272,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 14
+				addProblemText: '',
 				illustration: 'S.3/Tri_17.5x17.5x21in.jpg',
 				unitsAnswer: 'in&sup2;',
 				unitsPower: 'in&sup2;',
@@ -300,6 +287,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 15
+				addProblemText: '<br>Give the answer as a mixed number.',
 				illustration: 'S.3/Tri_9_3-5x7_1-5x12ft.jpg',
 				unitsAnswer: 'ft&sup2;',
 				unitsPower: 'ft&sup2;',
@@ -314,6 +302,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 16
+				addProblemText: '<br>Give the answer as a mixed number.',
 				illustration: 'S.3/Tri_7_1-4x6x4_1-2m.jpg',
 				unitsAnswer: 'm&sup2;',
 				unitsPower: 'm&sup2;',

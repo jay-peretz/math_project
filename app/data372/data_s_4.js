@@ -126,7 +126,7 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
 				line1: dataUtils.pre('\\html{The diameter is the distance from one edge of the circle to its opposite edge (passing through the circle\'s center point).}'),
 			    line2: dataUtils.pre('\\html{The radius is the distance from the center point of the circle to its edge.}'),
 				line3: dataUtils.pre('\\html{The radius is <sup>1</sup>&#8260;<sub>2</sub> the length of the diameter.}'),
-				line4: dataUtils.pre('\\grp{\\frac{\\str{1}}{\\str{2}}}{\\sign{\xB7}}{\\mixed{\\fracstr{4}}{\\frac{\\str{2}}{\\str{3}}}}{\\html{=}}{\\frac{\\str{7}}{\\str{3}}}{\\html{=}}{\\mixed{\\fracstr{2}}{\\frac{\\str{1}}{\\str{3}}}}'),
+				line4: dataUtils.pre('\\grp{\\frac{\\str{1}}{\\str{2}}}{\\str{*}}{\\mixed{\\fracstr{4}}{\\frac{\\str{2}}{\\str{3}}}}{\\str{=}}{\\frac{\\str{7}}{\\str{3}}}{\\str{or}}{\\mixed{\\fracstr{2}}{\\frac{\\str{1}}{\\str{3}}}}'),
 				finalAnswer: dataUtils.pre('\\grp{\\mixed{\\input{2}}{\\frac{\\input{1}}{\\input{3}}}}'),
 				helpAnswer: dataUtils.pre('\\grp{\\mixed{\\fracstr{2}}{\\frac{\\str{1}}{\\str{3}}}}'), 
 				template: 'informationalAnswer' 
@@ -140,7 +140,7 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
 				line1: dataUtils.pre('\\html{The radius is the distance from the center point of the circle to its edge.}'),
 			    line2: dataUtils.pre('\\html{The diameter is the distance from one edge of the circle to its opposite edge (passing through the circle’s center point).}'),
 				line3: dataUtils.pre('\\html{The diameter is 2 times the length of the radius.}'),
-				line4: dataUtils.pre('\\grp{\\mixed{\\fracstr{2}}{\\frac{\\str{1}}{\\str{4}}}}{\\sign{\xB7}}{\\html{2}}{\\html{=}}{\\mixed{\\fracstr{4}}{\\frac{\\str{1}}{\\str{2}}}}'),
+				line4: dataUtils.pre('\\grp{\\mixed{\\fracstr{2}}{\\frac{\\str{1}}{\\str{4}}}}{\\str{*}}{\\html{2}}{\\str{=}}{\\mixed{\\fracstr{4}}{\\frac{\\str{1}}{\\str{2}}}}'),
 				finalAnswer: dataUtils.pre('\\grp{\\mixed{\\input{4}}{\\frac{\\input{1}}{\\input{2}}}}'),
 				helpAnswer: dataUtils.pre('\\grp{\\mixed{\\fracstr{4}}{\\frac{\\str{1}}{\\str{2}}}}'), 
 				template: 'informationalAnswer' 
