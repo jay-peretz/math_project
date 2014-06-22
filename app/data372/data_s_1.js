@@ -251,13 +251,13 @@ angular.module('mathSkills').service('data_s_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 11
-				illustration: 'S.1/Tri_8x8x20cm.jpg',
+				illustration: 'S.1/Tri_10x10x16cm.jpg',
 				unitsAnswer: 'cm',
 				unitsPower: 'cm',
 				unitsSelect: '[\\"cm\\",\\"cm&sup2;\\",\\"cm&sup3;\\"]',
 				identifyShape: 'triangle',
                 formula: 'P = s<sub>1</sub> + s<sub>2</sub> + s<sub>3</sub>',
-				substitution: 'P = 8 + 8 + 20',
+				substitution: 'P = 10 + 10 + 16',
 				lineOneSolve: 'P = 36',
 				finalAnswer: dataUtils.pre('\\input{36}'),
 				helpAnswer: '36',
