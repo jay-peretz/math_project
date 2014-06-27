@@ -36,7 +36,7 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\css'
 											+'{\\grp'
-												+'{\\html{Answer: &nbsp;}}'
+												+'{\\html{Answer: }}'
 												+'{\\str{$answerHelp}}'
 											+'}'
 											+'{help-answer-text}'
@@ -79,9 +79,9 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				illustration: 'T.1/Trapezoid_01.jpg',
 				buttonValueA: 'F',
 				buttonLabelA: dataUtils.pre('\\str{d and b}'),
-				buttonValueB: 'F',
+				buttonValueB: 'T',
 				buttonLabelB: dataUtils.pre('\\str{e and b}'),
-				buttonValueC: 'T',
+				buttonValueC: 'F',
 				buttonLabelC: dataUtils.pre('\\str{a and c}'),
 				buttonValueD: 'F',
 				buttonLabelD: dataUtils.pre('\\str{no sides are known to be equal in length}'),
@@ -89,10 +89,11 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				bValue: '<em>b</em>',
 				cValue: '<em>c</em>',
 				dValue: '<em>d</em>',
+				eValue: '<em>e</em>',
                 firstHelp: 'Sides $$dValue and $$bValue are not parallel, and they are not equal in length.  Side $$dValue is longer than side $$bValue.',
 				secondHelp: 'Sides $$aValue and $$cValue are parallel, but not equal in length.  Side $$cValue is longer than side $$aValue.',
-				thirdHelp: 'Only sides $$bValue and $$cValue are equal in length. They are actually opposite sides of an internal rectangle.',
-				answerHelp: 'Sides $$cValue and $$bValue are equal in length',
+				thirdHelp: 'Only sides $$bValue and $$eValue are equal in length. They are actually opposite sides of an internal rectangle.',
+				answerHelp: 'Sides $$eValue and $$bValue are equal in length',
 				template: 'multipleChoice' 
 			}
 			,
@@ -101,11 +102,11 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				illustration: 'T.1/Trapezoid_02.jpg',
 				buttonValueA: 'F',
 				buttonLabelA: dataUtils.pre('\\str{s<sub>1</sub> and s<sub>3</sub>}'),
-				buttonValueB: 'T',
+				buttonValueB: 'F',
 				buttonLabelB: dataUtils.pre('\\str{s<sub>2</sub> and s<sub>4</sub>}'),
 				buttonValueC: 'F',
 				buttonLabelC: dataUtils.pre('\\str{s<sub>1</sub> and s<sub>4</sub>}'),
-				buttonValueD: 'F',
+				buttonValueD: 'T',
 				buttonLabelD: dataUtils.pre('\\str{no sides are known to be equal in length}'),
 				s1Value: 's<sub>1</sub>',
 				s2Value: 's<sub>2</sub>',
@@ -161,8 +162,8 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 			{ // problem 5
 				illustration: 'T.1/Trap_a_10in_b_4in_d_5in.jpg',
 				alt: 'trapezoid',
-				width: '300px',
-				height: '127px',
+				width: '400px',
+				height: '156px',
 				probQuestion: 'What is the length of side $$cValue?',
 				simpleAnswer: dataUtils.pre('\\grp'+
 												'{\\input{13}}'+
@@ -203,8 +204,8 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 			{ // problem 7
 				illustration: 'T.1/Trap_a_10in_b_4in_d_5in.jpg',
 				alt: 'trapezoid',
-				width: '300px',
-				height: '127px',
+				width: '400px',
+				height: '156px',
 				probQuestion: 'Solve for the perimeter of the following shape:',
 				simpleAnswer: dataUtils.pre('\\grp'+
 												'{\\input{32}}'+
@@ -267,7 +268,7 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 10
-				illustration: 'T.1/Notched_Rectangle_04.jpg',
+				illustration: 'T.1/Trap_a_22ft_b_25ft.jpg',
 				alt: 'trapezoid',
 				width: '300px',
 				height: '159px',
@@ -310,6 +311,186 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				thirdHelp: 'If we subtract $$s5Value from $$s3Value, we have $$s1Value.',
 				answerHelp: '$$s3Value - $$s5Value',
 				template: 'multipleChoice'
+			}
+			,
+			{ // problem 12
+				probQuestion: 'Choose the expression that has the same length as $$s2Value.',
+				illustration: 'T.1/Notched_Rectangle_04.jpg',
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{$$s4Value + $$s6Value}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\str{$$s3Value - $$s6Value}'),
+				buttonValueC: 'T',
+				buttonLabelC: dataUtils.pre('\\str{$$s4Value - $$s6Value}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\str{$$s3Value + $$s5Value}'),
+				s1Value: 's<sub>1</sub>',
+				s2Value: 's<sub>2</sub>',
+				s3Value: 's<sub>3</sub>',
+				s4Value: 's<sub>4</sub>',
+				s5Value: 's<sub>5</sub>',
+				s6Value: 's<sub>6</sub>',
+                firstHelp: '$$s2Value is a vertical distance.',
+				secondHelp: '$$s4Value is the long vertical side. The other two vertical sides, $$s6Value plus $$s2Value together equal the length of $$s4Value.',
+				thirdHelp: 'If we subtract $$s6Value from $$s4Value, we have $$s2Value.',
+				answerHelp: '$$s4Value - $$s6Value',
+				template: 'multipleChoice'
+			}
+			,
+			{ // problem 13
+				probQuestion: 'Choose the expression that has the same length as $$s3Value.',
+				illustration: 'T.1/Notched_Rectangle_04.jpg',
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{$$s4Value - $$s5Value}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\str{$$s4Value}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\str{$$s2Value + $$s6Value}'),
+				buttonValueD: 'T',
+				buttonLabelD: dataUtils.pre('\\str{$$s5Value + $$s1Value}'),
+				s1Value: 's<sub>1</sub>',
+				s2Value: 's<sub>2</sub>',
+				s3Value: 's<sub>3</sub>',
+				s4Value: 's<sub>4</sub>',
+				s5Value: 's<sub>5</sub>',
+				s6Value: 's<sub>6</sub>',
+                firstHelp: '$$s3Value is a horizontal distance.',
+				secondHelp: '$$s3Value is the long horizontal side. ',
+				thirdHelp: 'The other two horizontal sides, $$s5Value and $$s1Value, must be added together to equal the length of $$s3Value.',
+				answerHelp: '$$s5Value + $$s1Value',
+				template: 'multipleChoice'
+			}
+			,
+			{ // problem 14
+				probQuestion: 'Choose the expression that has the same length as $$s4Value.',
+				illustration: 'T.1/Notched_Rectangle_04.jpg',
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{$$s5Value + $$s1Value}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\str{$$s3Value + $$s2Value}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\str{$$s3Value - $$s5Value}'),
+				buttonValueD: 'T',
+				buttonLabelD: dataUtils.pre('\\str{$$s6Value + $$s2Value}'),
+				s1Value: 's<sub>1</sub>',
+				s2Value: 's<sub>2</sub>',
+				s3Value: 's<sub>3</sub>',
+				s4Value: 's<sub>4</sub>',
+				s5Value: 's<sub>5</sub>',
+				s6Value: 's<sub>6</sub>',
+                firstHelp: '$$s4Value is a vertical distance.',
+				secondHelp: '$$s4Value is the long vertical side.',
+				thirdHelp: 'The other two vertical sides, $$s6Value and $$s2Value, must be added together to equal the length of $$s4Value.',
+				answerHelp: '$$s6Value + $$s2Value',
+				template: 'multipleChoice'
+			}
+			,
+			{ // problem 15
+				probQuestion: 'Choose the expression that has the same length as $$s5Value.',
+				illustration: 'T.1/Notched_Rectangle_04.jpg',
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{$$s3Value - $$s6Value}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\str{$$s4Value - $$s2Value}'),
+				buttonValueC: 'T',
+				buttonLabelC: dataUtils.pre('\\str{$$s3Value - $$s1Value}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\str{$$s1Value + $$s6Value}'),
+				s1Value: 's<sub>1</sub>',
+				s2Value: 's<sub>2</sub>',
+				s3Value: 's<sub>3</sub>',
+				s4Value: 's<sub>4</sub>',
+				s5Value: 's<sub>5</sub>',
+				s6Value: 's<sub>6</sub>',
+                firstHelp: '$$s5Value is a horizontal distance.',
+				secondHelp: '$$s3Value is the long horizontal side. The other two horizontal sides, $$s5Value and $$s1Value together equal the length of $$s3Value.',
+				thirdHelp: 'If we subtract $$s1Value from $$s3Value, we have $$s5Value.',
+				answerHelp: '$$s3Value - $$s1Value',
+				template: 'multipleChoice'
+			}
+			,
+			{ // problem 16
+				probQuestion: 'Choose the expression that has the same length as $$s6Value.',
+				illustration: 'T.1/Notched_Rectangle_04.jpg',
+				buttonValueA: 'T',
+				buttonLabelA: dataUtils.pre('\\str{$$s4Value - $$s2Value}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\str{$$s3Value - $$s5Value}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\str{$$s4Value + $$s6Value}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\str{$$s3Value + $$s5Value}'),
+				s1Value: 's<sub>1</sub>',
+				s2Value: 's<sub>2</sub>',
+				s3Value: 's<sub>3</sub>',
+				s4Value: 's<sub>4</sub>',
+				s5Value: 's<sub>5</sub>',
+				s6Value: 's<sub>6</sub>',
+                firstHelp: '$$s6Value is a vertical distance.',
+				secondHelp: '$$s4Value is the long vertical side. The other two vertical sides, $$s6Value plus $$s2Value together equal the length of $$s4Value.',
+				thirdHelp: 'If we subtract $$s2Value from $$s4Value, we have $$s6Value.',
+				answerHelp: '$$s4Value - $$s2Value',
+				template: 'multipleChoice'
+			}
+			,
+			{ // problem 17
+				illustration: 'T.1/Notched_Rectangle_02.jpg',
+				alt: 'notched rectangle',
+				width: '400px',
+				height: '151px',
+				probQuestion: 'Solve for the perimeter of the following shape. All measurements are in meters.',
+				simpleAnswer: dataUtils.pre('\\grp'+
+												'{\\input{36}}'+
+												'{\\str{m}}'
+								),
+				s1Value: 's<sub>1</sub>',
+				s2Value: 's<sub>2</sub>',
+				s3Value: 's<sub>3</sub>',
+				s4Value: 's<sub>4</sub>',
+				s5Value: 's<sub>5</sub>',
+				s6Value: 's<sub>6</sub>',
+                helpTexts: 'Identify the shape: &nbsp; six&#45;sided figure.<br><br>'
+				+'First, we need to solve for the unknown lengths of $$s1Value and $$s2Value.<br><br>'
+				+'<table><tr><td>$$s1Value = $$s3Value + $$s5Value</td><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td>$$s2Value = $$s6Value + $$s4Value</td></tr>'
+										+'<tr><td>$$s1Value = 6 + 4</td><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td>$$s2Value = 3 + 5</td></tr>'
+										+'<tr><td><strong>$$s1Value = 10</strong></td><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td><strong>$$s2Value = 8</strong></td></tr></table><br><br>'
+				+'Now we can write the formula and substitute.<br><br>'
+				+'<table><tr><td>Formula:&nbsp;</td><td>P = $$s1Value + $$s2Value + $$s3Value + $$s4Value + $$s5Value + $$s6Value</td></tr>'
+										+'<tr><td>Substitution:&nbsp;</td><td>P = 10 + 8 + 6 + 5 + 4 + 3</td></tr>'
+										+'<tr><td>Solve:&nbsp;</td><td> P = 36</td></tr></table><br>',
+				answerHelp: dataUtils.pre('\\str{36 m}'
+								),
+				template: 'simpleQuestion' 
+			}
+			,
+			{ // problem 18
+				illustration: 'T.1/Notched_Rectangle_01.jpg',
+				alt: 'notched rectangle',
+				width: '400px',
+				height: '216px',
+				probQuestion: 'Solve for the perimeter of the following shape. All measurements are in feet.',
+				simpleAnswer: dataUtils.pre('\\grp'+
+												'{\\input{52}}'+
+												'{\\str{ft}}'
+								),
+				aValue: 'a',
+				bValue: 'b',
+				cValue: 'c',
+				dValue: 'd',
+				eValue: 'e',
+				fValue: 'f',
+                helpTexts: 'Identify the shape: &nbsp; six&#45;sided figure.<br><br>'
+				+'First, we need to solve for the unknown lengths of side \\"$$bValue\\" and side \\"$$cValue\\".<br><br>'
+				+'<table><tr><td>$$bValue = $$fValue - $$dValue</td><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td>$$cValue = $$eValue - $$aValue</td></tr>'
+										+'<tr><td>$$bValue = 10 - 7</td><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td>$$cValue = 16 - 12</td></tr>'
+										+'<tr><td><strong>$$bValue = 3</strong></td><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td><strong>$$cValue = 4</strong></td></tr></table><br><br>'
+				+'Now we can write the formula and substitute.<br><br>'
+				+'<table><tr><td>Formula:&nbsp;</td><td>P = $$aValue + $$bValue + $$cValue + $$dValue + $$eValue + $$fValue</td></tr>'
+										+'<tr><td>Substitution:&nbsp;</td><td>P = 12 + 3 + 4 + 7 + 16 + 10</td></tr>'
+										+'<tr><td>Solve:&nbsp;</td><td> P = 52</td></tr></table><br>',
+				answerHelp: dataUtils.pre('\\str{52 ft}'
+								),
+				template: 'simpleQuestion' 
 			}
         ];
 	
