@@ -16,6 +16,22 @@ angular.module('mathSkills').filter('enlargeOps', function () {
 			.replace(/\/(?![a-z])/g,'<span class=bigger>&divide;</span>')
 			// replace period when followed by a number, i.e. .5
 			.replace(/\.(?=\d)/g,'<span class=decimalNoPadding>.</span>') 
+			// replace left paren if that's the only element in the string
+			.replace(/\(/, function (whole) {
+				if (input === "(" && whole === "(") {
+					return '<span class=hugeAndThin>(</span>';
+				} else {
+					return whole;
+				}
+			})
+			// replace right paren if that's the only element in the string
+			.replace(/\)/, function (whole) {
+				if (input === ")" && whole === ")") {
+					return '<span class=hugeAndThin>)</span>';
+				} else {
+					return whole;
+				}
+			})
 			: input;
     };
 });

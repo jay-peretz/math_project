@@ -383,16 +383,30 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
             },
 			// problem 23
 			{
-                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\str{&nbsp; * &nbsp;}}{\\str{[}}{\\str{2}}{\\str{&nbsp; * &nbsp;}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\str{+}}{\\str{3}}{\\str{/}}{\\str{-5}}{\\str{)}}{\\str{]}}'),
-                ans: dataUtils.pre('\\css{\\frac{\\input{27}}{\\input{25}}}{}'),
+                prob: dataUtils.pre('\\grp'
+									+'{\\frac{\\fracstr{-2}}{\\fracstr{5}}}'
+									+'{\\str{&nbsp; * &nbsp;}}'
+									+'{\\css{\\html{[}}{hugeAndThin}}'
+									+'{\\str{2}}'
+									+'{\\str{&nbsp; * &nbsp;}}'
+									+'{\\str{(}}'
+									+'{\\frac{\\fracstr{-3}}{\\fracstr{4}}}'
+									+'{\\str{+}}'
+									+'{\\str{3}}'
+									+'{\\str{/}}'
+									+'{\\str{-5}}'
+									+'{\\str{)}}'
+									+'{\\css{\\html{]}}{hugeAndThin}}'
+								),
+                ans: dataUtils.pre('\\pan{6}{6}{\\frac{\\input{27}}{\\input{25}}}'),
                 wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\btn{&bull;}{F}{bigger}}{\\str{[}}{\\str{2}}{\\btn{&bull;}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\btn{+}{F}{bigger}}{\\str{3}}{\\btn{&divide;}{T}{bigger}}{\\str{-5}}{\\str{)}}{\\str{]}},' +
+						'\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\btn{&bull;}{F}{bigger}}{\\css{\\html{[}}{hugeAndThin}}{\\str{2}}{\\btn{&bull;}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\btn{+}{F}{bigger}}{\\str{3}}{\\btn{&divide;}{T}{bigger}}{\\str{-5}}{\\str{)}}{\\css{\\html{]}}{hugeAndThin}},' +
                         '\\frac{\\input{-3}}{\\input{5}},' +
-                        '\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\btn{&bull;}{F}{bigger}}{\\str{[}}{\\str{2}}{\\btn{&bull;}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{-3}}{\\fracstr{5}}}{\\str{)}}{\\str{]}},' +
+                        '\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\btn{&bull;}{F}{bigger}}{\\css{\\html{[}}{hugeAndThin}}{\\str{2}}{\\btn{&bull;}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{-3}}{\\fracstr{5}}}{\\str{)}}{\\css{\\html{]}}{hugeAndThin}},' +
 						'\\frac{\\input{-27}}{\\input{20}},' +
-						 '\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\btn{&bull;}{F}{bigger}}{\\str{[}}{\\str{2}}{\\btn{&bull;}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-27}}{\\fracstr{20}}}{\\str{)}}{\\str{]}},' +
+						 '\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\btn{&bull;}{F}{bigger}}{\\css{\\html{[}}{hugeAndThin}}{\\str{2}}{\\btn{&bull;}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-27}}{\\fracstr{20}}}{\\str{)}}{\\css{\\html{]}}{hugeAndThin}},' +
 						'\\frac{\\input{-27}}{\\input{10}},' +
-                        '\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\btn{&bull;}{T}{bigger}}{\\str{[}}{\\frac{\\fracstr{-27}}{\\fracstr{10}}}{\\str{]}},' +
+                        '\\grp{\\frac{\\fracstr{-2}}{\\fracstr{5}}}{\\btn{&bull;}{T}{bigger}}{\\css{\\html{[}}{hugeAndThin}}{\\frac{\\fracstr{-27}}{\\fracstr{10}}}{\\css{\\html{]}}{hugeAndThin}},' +
                         '\\frac{\\input{27}}{\\input{25}},' +
 						'\\grp{\\frac{\\fracstr{27}}{\\fracstr{25}}}' +
                     '}{Evaluate the operator (simplify any fractions).}'),
@@ -400,16 +414,16 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
             },
 			// problem 24
 			{
-                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\str{/}}{\\str{[}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\str{/}}{\\str{(}}{\\frac{\\fracstr{-7}}{\\fracstr{8}}}{\\str{+}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{&nbsp; * &nbsp;}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{)}}{\\str{]}}'),
-                ans: dataUtils.pre('\\frac{\\input{-25}}{\\input{32}}'),
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\str{/}}{\\css{\\html{[}}{hugeAndThin}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\str{/}}{\\str{(}}{\\frac{\\fracstr{-7}}{\\fracstr{8}}}{\\str{+}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{&nbsp; * &nbsp;}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{)}}{\\css{\\html{]}}{hugeAndThin}}'),
+                ans: dataUtils.pre('\\pan{6}{6}{\\frac{\\input{-25}}{\\input{32}}}'),
                 wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&divide;}{F}{bigger}}{\\str{[}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\btn{&divide;}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-7}}{\\fracstr{8}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\btn{&bull;}{T}{bigger}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{)}}{\\str{]}},' +
+						'\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&divide;}{F}{bigger}}{\\css{\\html{[}}{hugeAndThin}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\btn{&divide;}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-7}}{\\fracstr{8}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\btn{&bull;}{T}{bigger}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{)}}{\\css{\\html{]}}{hugeAndThin}},' +
                         '\\frac{\\input{1}}{\\input{4}},' +
-                        '\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&divide;}{F}{bigger}}{\\str{[}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\btn{&divide;}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-7}}{\\fracstr{8}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\str{)}}{\\str{]}},' +
+                        '\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&divide;}{F}{bigger}}{\\css{\\html{[}}{hugeAndThin}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\btn{&divide;}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-7}}{\\fracstr{8}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\str{)}}{\\css{\\html{]}}{hugeAndThin}},' +
 						'\\frac{\\input{-5}}{\\input{8}},' +
-						 '\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&divide;}{F}{bigger}}{\\str{[}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\btn{&divide;}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-5}}{\\fracstr{8}}}{\\str{)}}{\\str{]}},' +
+						 '\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&divide;}{F}{bigger}}{\\css{\\html{[}}{hugeAndThin}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\btn{&divide;}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-5}}{\\fracstr{8}}}{\\str{)}}{\\css{\\html{]}}{hugeAndThin}},' +
 						'\\frac{\\input{-16}}{\\input{25}},' +
-                        '\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&divide;}{T}{bigger}}{\\str{[}}{\\frac{\\fracstr{-16}}{\\fracstr{25}}}{\\str{]}},' +
+                        '\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&divide;}{T}{bigger}}{\\css{\\html{[}}{hugeAndThin}}{\\frac{\\fracstr{-16}}{\\fracstr{25}}}{\\css{\\html{]}}{hugeAndThin}},' +
                         '\\frac{\\input{-25}}{\\input{32}},' +
 						'\\grp{\\frac{\\fracstr{-25}}{\\fracstr{32}}}' +
                     '}{Evaluate the operator (simplify any fractions).}'),
