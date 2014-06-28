@@ -259,7 +259,7 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
 			// problem 14
 			{
                 prob: dataUtils.pre('\\grp{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\str{/}}{\\str{(}}{\\frac{\\fracstr{-4}}{\\fracstr{5}}}{\\str{)}}{\\sign{-}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}'),
-                ans: dataUtils.pre('\\frac{\\input{-29}}{\\input{30}}'),
+                ans: dataUtils.pre('\\frac{\\input{-5}}{\\input{6}}'),
                 wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\btn{&divide;}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-4}}{\\fracstr{5}}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{3}}},'+
                         '\\frac{\\input{-1}}{\\input{2}},' +
@@ -371,11 +371,11 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
                 prob: dataUtils.pre('\\grp{\\mixed{\\fracstr{-2}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\str{+}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}{\\str{/}}{\\mixed{\\fracstr{-1}}{\\frac{\\fracstr{1}}{\\fracstr{9}}}}{\\str{+}}{\\frac{\\fracstr{7}}{\\fracstr{10}}}'),
                 ans: dataUtils.pre('\\css{\\frac{\\input{-51}}{\\input{20}}}{}'),
                 wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\mixed{\\fracstr{-2}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}{\\btn{&bull;}{T}{bigger}}{\\mixed{\\fracstr{-1}}{\\frac{\\fracstr{1}}{\\fracstr{9}}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{7}}{\\fracstr{10}}},' +
+						'\\grp{\\mixed{\\fracstr{-2}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}{\\btn{&divide;}{T}{bigger}}{\\mixed{\\fracstr{-1}}{\\frac{\\fracstr{1}}{\\fracstr{9}}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{7}}{\\fracstr{10}}},' +
                         '\\frac{\\input{-3}}{\\input{4}},' +
                         '\\grp{\\mixed{\\fracstr{-2}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{7}}{\\fracstr{10}}},' +
-						'\\mixed{\\input{-3}}{\\frac{\\input{1}}{\\input{4}}},' +
-                        '\\grp{\\mixed{\\fracstr{-3}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{7}}{\\fracstr{10}}},' +
+						'\\frac{\\input{-13}}{\\input{4}},' +
+                        '\\grp{\\frac{\\fracstr{-13}}{\\fracstr{4}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{7}}{\\fracstr{10}}},' +
                         '\\frac{\\input{-51}}{\\input{20}},' +
 						'\\grp{\\frac{\\fracstr{-51}}{\\fracstr{20}}}' +
                     '}{Evaluate the operator (simplify any fractions).}'),
