@@ -22,6 +22,12 @@ angular.module('mathSkills')
                         if($scope.expected) {
                             //$scope.display = parser.extractTag($scope.expected).args[0].length === 0;
                             $scope.string = parser.extractTag($scope.expected).args[0];
+							// add space around number numerators- center negs
+							if (Number($scope.string)) {
+								if (Number($scope.string) < 0) {
+									$scope.string = $scope.string+"&nbsp;&nbsp;&nbsp;&nbsp;";
+								} 
+							}
                             
                             if ($scope.string && $scope.string[0] === '[') {
                                 var possibleAnswers = JSON.parse($scope.string);

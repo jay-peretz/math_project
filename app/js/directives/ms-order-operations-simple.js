@@ -46,7 +46,6 @@ angular.module('mathSkills')
 									case(parser.extractTag($scope.answers[$scope.cur]).tag === "frac"):
 									// test for two digit numbers in numerator or denominator and adjust space
 										if (curNum.length > 1 || curDen.length > 1) {
-											console.log("length > 1");
 											tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
 										} else {
 											tagString = '\\sign{&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';

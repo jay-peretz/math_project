@@ -90,7 +90,7 @@ angular.module('mathSkills').service('data_l_2', ['dataUtils', function (dataUti
 			// problem 9
 			{prob: dataUtils.pre('{\\grp{\\mixed{\\str{2}}{\\frac{\\fracstr{4}}{\\fracstr{5}}}}{\\sign{&divide;}}{\\html{(&minus;}}{\\mixed{\\str{2}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\html{)}}}'),
 			answer:dataUtils.pre('\\grp{\\sign{=}}{\\mixed{\\input{-1}}{\\frac{\\input{1}}{\\input{5}}}}'),		
-			textAnswer: dataUtils.pre('{\\html{&nbsp;&minus;}}{\\mixed{\\fracstr{1}}{\\frac{\\str{1}}{\\str{5}}}}'), 
+			textAnswer: dataUtils.pre('{\\html{&nbsp;&minus;}}{\\mixed{\\str{1}}{\\frac{\\str{1}}{\\str{5}}}}'), 
 			template: 'first',
 			firstHelp: dataUtils.pre('{\\grp{\\html{The 2<sup>4</sup>&#8260;<sub>5</sub> is positive and the 2<sup>1</sup>&#8260;<sub>3</sub> is negative. Because there is one negative sign (<span class=underline>an odd number of negative signs</span>) in this division problem, the answer is negative.}}}')} ,
 				

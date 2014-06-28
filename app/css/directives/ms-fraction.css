@@ -14,6 +14,7 @@ div .fraction .control-group {
 .fraction hr {
 	border-color: transparent transparent #515151 transparent;
 	height:1px;
+	min-width:1em;
 	padding:0px;
 	margin:0px;
 }

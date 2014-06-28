@@ -2027,34 +2027,34 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 			{ whole1: 7, num1: 1, den1: 2, whole2: 4, num2: 3, den2: 4,wholeanswer: '-2', numanswer1: -11, numanswer2: 3, answerDen: 4, numnew1: -15, numnew2: 19, numlcd1: -30, numlcd2: 19, firstSign: '-', secondSign: '-', thirdSign: '-', negFrac: '4 3/4' ,template: 'twoFracDblNeg',
 			buttonValueA: 'T',
 				buttonLabelA: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{-7}}'
+												+'{\\mixed{\\str{-7}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{4}}'
+												+'{\\mixed{\\str{4}}'
 												+'{\\frac{\\fracstr{3}}{\\fracstr{4}}}}'
 												),
 				buttonValueB: 'F',
 				buttonLabelB: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{7}}'
+												+'{\\mixed{\\str{7}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{4}}'
+												+'{\\mixed{\\str{4}}'
 												+'{\\frac{\\fracstr{3}}{\\fracstr{4}}}}'
 												),
 				buttonValueC: 'F',
 				buttonLabelC: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{-7}}'
+												+'{\\mixed{\\str{-7}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
 												+'{\\sign{-}}'
-												+'{\\mixed{\\fracstr{4}}'
+												+'{\\mixed{\\str{4}}'
 												+'{\\frac{\\fracstr{3}}{\\fracstr{4}}}}'
 												),
 				buttonValueD: 'F',
 				buttonLabelD: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{7}}'
+												+'{\\mixed{\\str{7}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
 												+'{\\sign{-}}'
-												+'{\\mixed{\\fracstr{4}}'
+												+'{\\mixed{\\str{4}}'
 												+'{\\frac{\\fracstr{3}}{\\fracstr{4}}}}'
 												),
 			
@@ -2063,34 +2063,34 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 			{ whole1: 1, num1: 2, den1: 9, whole2: 5, num2: 1, den2: 3,wholeanswer: '6', numanswer1: 59, numanswer2: 5, answerDen: 9, numnew1: 11, numnew2: 16, numlcd1: 11, numlcd2: 48, firstSign: '', secondSign: '-', thirdSign: '-', negFrac: '5 1/3' ,template: 'twoFracDblNeg',
 			buttonValueA: 'F',
 				buttonLabelA: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{-1}}'
+												+'{\\mixed{\\str{-1}}'
 												+'{\\frac{\\fracstr{2}}{\\fracstr{9}}}}'
 												+'{\\sign{-}}'
-												+'{\\mixed{\\fracstr{5}}'
+												+'{\\mixed{\\str{5}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{3}}}}'
 												),
 				buttonValueB: 'T',
 				buttonLabelB: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{1}}'
+												+'{\\mixed{\\str{1}}'
 												+'{\\frac{\\fracstr{2}}{\\fracstr{9}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{5}}'
+												+'{\\mixed{\\str{5}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{3}}}}'
 												),
 				buttonValueC: 'F',
 				buttonLabelC: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{-1}}'
+												+'{\\mixed{\\str{-1}}'
 												+'{\\frac{\\fracstr{2}}{\\fracstr{9}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{5}}'
+												+'{\\mixed{\\str{5}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{3}}}}'
 												),
 				buttonValueD: 'F',
 				buttonLabelD: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{1}}'
+												+'{\\mixed{\\str{1}}'
 												+'{\\frac{\\fracstr{2}}{\\fracstr{9}}}}'
 												+'{\\sign{-}}'
-												+'{\\mixed{\\fracstr{5}}'
+												+'{\\mixed{\\str{5}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{3}}}}'
 												),		},
 			// problem 8
@@ -2101,86 +2101,86 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 			{ whole1: 3, num1: 1, den1: '\xA02\xA0', whole2: 1, num2: 1, den2: 4, whole3: 2, num3: 2, den3: '\xA03\xA0', wholeanswer1: -4, numanswer1: -59, answerDen: 12, answer1Den: 12, numnew1: 7, numnew2: 5, numnew3: 8, numanswer2: 11, numlcd1: 42, numlcd2: 15, numlcd3: 32,firstSign: '-', secondSign: '-', thirdSign: '-', fourthSign: '+', fifthSign: '-', sign1: '-', sign2: '+' , sign3: '-', negFrac: '1 1/4', template: 'threeFracDblNeg', 
 			buttonValueA: 'F',
 				buttonLabelA: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{-3}}'
+												+'{\\mixed{\\str{-3}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
 												+'{\\sign{-}}'
-												+'{\\mixed{\\fracstr{1}}'
+												+'{\\mixed{\\str{1}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{4}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{2}}'
+												+'{\\mixed{\\str{2}}'
 												+'{\\frac{\\fracstr{2}}{\\fracstr{3}}}}'),
 				buttonValueB: 'F',
 				buttonLabelB: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{3}}'
+												+'{\\mixed{\\str{3}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{1}}'
+												+'{\\mixed{\\str{1}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{4}}}}'
 												+'{\\sign{-}}'
-												+'{\\mixed{\\fracstr{2}}'
+												+'{\\mixed{\\str{2}}'
 												+'{\\frac{\\fracstr{2}}{\\fracstr{3}}}}'),
 				buttonValueC: 'F',
 				buttonLabelC: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{3}}'
+												+'{\\mixed{\\str{3}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
 												+'{\\sign{-}}'
-												+'{\\mixed{\\fracstr{1}}'
+												+'{\\mixed{\\str{1}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{4}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{2}}'
+												+'{\\mixed{\\str{2}}'
 												+'{\\frac{\\fracstr{2}}{\\fracstr{3}}}}'),
 				buttonValueD: 'T',
 				buttonLabelD: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{-3}}'
+												+'{\\mixed{\\str{-3}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{1}}'
+												+'{\\mixed{\\str{1}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{4}}}}'
 												+'{\\sign{-}}'
-												+'{\\mixed{\\fracstr{2}}'
+												+'{\\mixed{\\str{2}}'
 												+'{\\frac{\\fracstr{2}}{\\fracstr{3}}}}'),
 			 },
 			// problem 11
 			{ whole1: 1, num1: 1, den1: '\xA05\xA0', whole2: 3, num2: 1, den2: 10, whole3: 2, num3: 1, den3: '\xA02\xA0', wholeanswer1: 4, numanswer1: 44, answerDen: 10, answer1Den: 5, numnew1: 6, numnew2:31, numnew3: 5, numanswer2: 2, numlcd1: 12, numlcd2: 31, numlcd3: 25,firstSign: '-', secondSign: '+', thirdSign: '', fourthSign: '-', fifthSign: '-', sign1: '-', sign2: '+' , sign3: '+', negFrac: '2 1/2', template: 'threeFracDblNeg', 
 			buttonValueA: 'F',
 				buttonLabelA: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{-1}}'
+												+'{\\mixed{\\str{-1}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{5}}}}'
 												+'{\\sign{-}}'
-												+'{\\mixed{\\fracstr{3}}'
+												+'{\\mixed{\\str{3}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{2}}'
+												+'{\\mixed{\\str{2}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'),
 				buttonValueB: 'T',
 				buttonLabelB: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{-1}}'
+												+'{\\mixed{\\str{-1}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{5}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{3}}'
+												+'{\\mixed{\\str{3}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{2}}'
+												+'{\\mixed{\\str{2}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'),
 				buttonValueC: 'F',
 				buttonLabelC: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{1}}'
+												+'{\\mixed{\\str{1}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{5}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{3}}'
+												+'{\\mixed{\\str{3}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{2}}'
+												+'{\\mixed{\\str{2}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'),
 				buttonValueD: 'F',
 				buttonLabelD: dataUtils.pre('\\grp'
-												+'{\\mixed{\\fracstr{1}}'
+												+'{\\mixed{\\str{1}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{5}}}}'
 												+'{\\sign{+}}'
-												+'{\\mixed{\\fracstr{3}}'
+												+'{\\mixed{\\str{3}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{10}}}}'
 												+'{\\sign{-}}'
-												+'{\\mixed{\\fracstr{2}}'
+												+'{\\mixed{\\str{2}}'
 												+'{\\frac{\\fracstr{1}}{\\fracstr{2}}}}'),
 			
 			},

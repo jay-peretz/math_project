@@ -14,9 +14,9 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                         answer: '\\mixed{\\input{$ma}}{\\frac{\\input{$na}}{\\input{$da}}}',                       
                         controls: {
                             "checkAnswer": true,
@@ -29,9 +29,9 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                         answer: '\\rowgrp'
 									+'{\\ins{Change the mixed numbers into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
@@ -43,9 +43,9 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                         answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Change the mixed numbers into improper fractions:}}'
@@ -68,9 +68,9 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                         answer: '\\mixed{\\input{$ma}}{\\frac{\\input{$na}}{\\input{$da}}}',
                         controls: {
                             "checkAnswer": true,
@@ -83,9 +83,9 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
 						answer: '\\rowgrp'
 									+'{\\ins{Change the mixed numbers into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
@@ -97,9 +97,9 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                         answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Change the mixed numbers into improper fractions:}}'
@@ -115,9 +115,9 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                         answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Change the mixed numbers into improper fractions:}}'
@@ -141,10 +141,10 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
 										+'{\\str{\xA0}}'
 										+'{\\grp{\\frac{\\fracstr{$nproduct}}{\\fracstr{$dproduct}}}'
 										+'{\\str{\xA0 = \xA0}}'
-										+'{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}}'
+										+'{\\mixed{\\str{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp{css{\\str{answer:  \xA0}}{help-answer-text}}'
-										+'{css{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{help-answer-text-tight}}}',*/
+										+'{css{\\mixed{\\str{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{help-answer-text-tight}}}',*/
 							"help": true,			
 							"fixBottomRight": true
                         }
@@ -158,11 +158,11 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
+									+'{\\mixed{\\str{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
                         answer: '\\mixed{\\input{$ma}}{\\frac{\\input{$na}}{\\input{$da}}}',
                         controls: {
                             "checkAnswer": true,
@@ -175,11 +175,11 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
+									+'{\\mixed{\\str{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
 						answer: '\\rowgrp'
 									+'{\\ins{Change the mixed numbers into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
@@ -191,11 +191,11 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
+									+'{\\mixed{\\str{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
                         answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Change the mixed numbers into improper fractions:}}'
@@ -211,11 +211,11 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
+									+'{\\mixed{\\str{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
                         answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Change the mixed numbers into improper fractions:}}'
@@ -239,10 +239,10 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
 										+'{\\str{\xA0}}'
 										+'{\\grp{\\frac{\\fracstr{$nproduct}}{\\fracstr{$dproduct}}}'
 										+'{\\str{\xA0 = \xA0}}'
-										+'{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}}'
+										+'{\\mixed{\\str{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp{css{\\str{answer:  \xA0}}{help-answer-text}}'
-										+'{css{\\mixed{\\fracstr{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{help-answer-text-tight}}}',*/
+										+'{css{\\mixed{\\str{$ma}}{\\frac{\\fracstr{$na}}{\\fracstr{$da}}}}{help-answer-text-tight}}}',*/
 							"help": true,
 							"fixBottomRight": true
                         }
@@ -256,11 +256,11 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
+									+'{\\mixed{\\str{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
                         answer: '\\mixed{\\input{$ma}}{\\frac{\\input{$na}}{\\input{$da}}}',
                         controls: {
                             "checkAnswer": true,
@@ -273,11 +273,11 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
+									+'{\\mixed{\\str{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
 						answer: '\\rowgrp'
 									+'{\\ins{Change the mixed numbers into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
@@ -289,11 +289,11 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
+									+'{\\mixed{\\str{$m3}}{\\frac{\\fracstr{$n3}}{\\fracstr{$d3}}}}',
                         answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Change the mixed numbers into improper fractions:}}'
@@ -316,9 +316,9 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                         answer: '\\mixed{\\input{$ma}}{\\frac{\\input{$na}}{\\input{$da}}}',
                         controls: {
                             "checkAnswer": true,
@@ -331,9 +331,9 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     children: [{
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
 						answer: '\\rowgrp'
 									+'{\\ins{Change the mixed numbers into improper fractions:}}'
 									+'{\\html{&nbsp;}}'
@@ -345,9 +345,9 @@ angular.module('mathSkills').service('data_e_2', ['dataUtils', function (dataUti
                     }, {
                         problem: '\\grp'
 									+'{\\html{Solve &nbsp;}}'
-									+'{\\mixed{\\fracstr{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
+									+'{\\mixed{\\str{$m1}}{\\frac{\\fracstr{$n1}}{\\fracstr{$d1}}}}'
 									+'{\\sign{&times;}}'
-									+'{\\mixed{\\fracstr{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
+									+'{\\mixed{\\str{$m2}}{\\frac{\\fracstr{$n2}}{\\fracstr{$d2}}}}',
                         answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{Change the mixed numbers into improper fractions:}}'

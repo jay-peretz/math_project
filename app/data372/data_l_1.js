@@ -111,14 +111,14 @@ angular.module('mathSkills').service('data_l_1', ['dataUtils', function (dataUti
 			// problem 9
 			{prob: dataUtils.pre('{\\grp{\\html{(}}{\\sign{&minus;}}{\\mixed{\\str{2}}{\\frac{\\fracstr{4}}{\\fracstr{5}}}}{\\html{)}}{\\sign{\xB7}}{\\html{(}}{\\sign{&minus;}}{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\html{)}}}'),
 			answer:dataUtils.pre('\\grp{\\sign{=}}{\\mixed{\\input{3}}{\\frac{\\input{1}}{\\input{2}}}}'),		
-			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\mixed{\\fracstr{3}}{\\frac{\\str{1}}{\\str{2}}}}}'), 
+			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\mixed{\\str{3}}{\\frac{\\str{1}}{\\str{2}}}}}'), 
 			template: 'second',
 			firstHelp: dataUtils.pre('{\\grp{\\html{The 2 <sup>4</sup>&#8260;<sub>5</sub> is negative and the 1 <sup>1</sup>&#8260;<sub>4</sub> is negative. Because there are two negative signs (<span class=underline>an even number of negative signs</span>) in this multiplication problem, the answer is positive.}}}')} ,
 			
 			// problem 10
 			{prob: dataUtils.pre('{\\grp{\\html{(}}{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\html{)}}{\\sign{\xB7}}{\\html{(}}{\\sign{&minus;}}{\\mixed{\\str{3}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}}{\\html{)}}}'),
 			answer:dataUtils.pre('\\grp{\\sign{=}}{\\mixed{\\input{-5}}{\\frac{\\input{1}}{\\input{2}}}}'),		
-			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\mixed{\\fracstr{5}}{\\frac{\\str{1}}{\\str{2}}}}}'), 
+			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\mixed{\\str{5}}{\\frac{\\str{1}}{\\str{2}}}}}'), 
 			template: 'second',
 			firstHelp: dataUtils.pre('{\\grp{\\html{The 1 <sup>1</sup>&#8260;<sub>2</sub> is positive and the 3 <sup>2</sup>&#8260;<sub>3</sub> is negative. Because there is one negative sign (<span class=underline>an odd number of negative signs</span>) in this multiplication problem, the answer is negative.}}}') },
 			
