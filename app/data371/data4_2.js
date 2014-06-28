@@ -53,7 +53,7 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			// problem 2
 			{ problemStatement: '( 15 <span class=bigger>&minus;</span> 10 ) <span class=bigger>&divide;</span> 5', ordopsStatement: '( 15 - 10 ) / 5', answer: '1', 
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{(}}{\\html{15}}{\\btn{-}{T}{bigger}}{\\html{10}}{\\html{)}}{\\btn{\xF7}{F}{bigger}}{\\html{5}},' +
+						'\\grp{\\str{(}}{\\html{15}}{\\btn{-}{T}{bigger}}{\\html{10}}{\\str{)}}{\\btn{\xF7}{F}{bigger}}{\\html{5}},' +
                         '\\input{5},' +
                         '\\grp{\\html{5}}{\\btn{\xF7}{T}{bigger}}{\\html{5}},' +
                         '\\input{1},' +
@@ -73,7 +73,7 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			// problem 4
 			{ problemStatement: '6 <span class=bigger>&minus;</span> ( 6 <span class=bigger>&divide;</span> 3 )', ordopsStatement: '6 - (6 / 3)', answer: '4',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{6}}{\\btn{-}{F}{bigger}}{\\html{(}}{\\html{6}}{\\btn{\xF7}{T}{bigger}}{\\html{3}}{\\html{)}},' +
+						'\\grp{\\html{6}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\html{6}}{\\btn{\xF7}{T}{bigger}}{\\html{3}}{\\str{)}},' +
                         '\\input{2},' +
                         '\\grp{\\html{6}}{\\btn{-}{T}{bigger}}{\\html{2}},' +
                         '\\input{4},' +
@@ -93,9 +93,9 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			// problem 6
 			{ problemStatement: '3 <span class=bigger>&divide;</span> ( 3 <span class=margin-not-bigger>&bull;</span> 3 <span class=bigger>&divide;</span> 3 )', ordopsStatement: '3 / (3 * 3 / 3)', answer: '1',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\html{(}}{\\html{3}}{\\btn{\xB7}{T}{bigger}}{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\html{3}}{\\html{)}},' +
+						'\\grp{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\str{(}}{\\html{3}}{\\btn{\xB7}{T}{bigger}}{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\html{3}}{\\str{)}},' +
                         '\\input{9},' +
-                        '\\grp{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\html{(}}{\\html{9}}{\\btn{\xF7}{T}{bigger}}{\\html{3}}{\\html{)}},' +
+                        '\\grp{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\str{(}}{\\html{9}}{\\btn{\xF7}{T}{bigger}}{\\html{3}}{\\str{)}},' +
                         '\\input{3},' +
 						'\\grp{\\html{3}}{\\btn{\xF7}{T}{bigger}}{\\html{3}},' +
                         '\\input{1},' +
@@ -105,9 +105,9 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			// problem 7
 			{ problemStatement: '15 <span class=bigger>&minus;</span> ( ( 7 <span class=bigger>&minus;</span> 4 ) <span class=margin-not-bigger>&bull;</span> 2 )', ordopsStatement: '15 - ((7 - 4) * 2)', answer: '9',
 			  wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{15}}{\\btn{-}{F}{bigger}}{\\html{(}}{\\html{(}}{\\html{7}}{\\btn{-}{T}{bigger}}{\\html{4}}{\\html{)}}{\\btn{\xB7}{F}{bigger}}{\\html{2}}{\\html{)}},' +
+						'\\grp{\\html{15}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\str{(}}{\\html{7}}{\\btn{-}{T}{bigger}}{\\html{4}}{\\str{)}}{\\btn{\xB7}{F}{bigger}}{\\html{2}}{\\str{)}},' +
                         '\\input{3},' +
-                        '\\grp{\\html{15}}{\\btn{-}{F}{bigger}}{\\html{(}}{\\html{3}}{\\btn{\xB7}{T}{bigger}}{\\html{2}}{\\html{)}},' +
+                        '\\grp{\\html{15}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\html{3}}{\\btn{\xB7}{T}{bigger}}{\\html{2}}{\\str{)}},' +
                         '\\input{6},' +
 						'\\grp{\\html{15}}{\\btn{-}{T}{bigger}}{\\html{6}},' +
                         '\\input{9},' +
@@ -129,9 +129,9 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			// problem 9
 			{ problemStatement: '( 28 <span class=bigger>+</span> 15 <span class=bigger>&divide;</span> 5 ) <span class=bigger>&minus;</span> 14', ordopsStatement: '(28 + 15 / 5) - 14', answer: '17', 
 			  wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{(}}{\\html{28}}{\\btn{+}{F}{bigger}}{\\html{15}}{\\btn{\xF7}{T}{bigger}}{\\html{5}}{\\html{)}}{\\btn{-}{F}{bigger}}{\\html{14}},' +
+						'\\grp{\\str{(}}{\\html{28}}{\\btn{+}{F}{bigger}}{\\html{15}}{\\btn{\xF7}{T}{bigger}}{\\html{5}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\html{14}},' +
                         '\\input{3},' +
-                        '\\grp{\\html{(}}{\\html{28}}{\\btn{+}{T}{bigger}}{\\html{3}}{\\html{)}}{\\btn{-}{F}{bigger}}{\\html{14}},' +
+                        '\\grp{\\str{(}}{\\html{28}}{\\btn{+}{T}{bigger}}{\\html{3}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\html{14}},' +
                         '\\input{31},' +
 						'\\grp{\\html{31}}{\\btn{-}{T}{bigger}}{\\html{14}},' +
                         '\\input{17},' +
