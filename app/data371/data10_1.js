@@ -185,6 +185,7 @@ angular.module('mathSkills').service('data10_1', ['dataUtils', function (dataUti
 									+'{\\html{$answerDen}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\html{Use the LCD to convert the fractions:}}'
+									+'{\\html{&nbsp;}}'
 									+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
 										+'{\\sign{=}}'
 										+'{\\frac{\\fracstr{$firstAnswerNum}}{\\fracstr{$answerDen}}}}'
