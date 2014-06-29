@@ -88,35 +88,35 @@ angular.module('mathSkills').service('data_l_1', ['dataUtils', function (dataUti
 			firstHelp: dataUtils.pre('{\\grp{\\html{The 7.5 is negative and the 0.4 is negative. Because there are two negative signs (<span class=underline>an even number of negative signs</span>) in this multiplication problem, the answer is positive.}}}') },
 			
 			// problem 6
-			{prob: dataUtils.pre('{\\grp{\\sign{&minus;}}{\\frac{\\str{3}}{\\str{4}}}{\\sign{\xB7}}{\\html{(}}{\\frac{\\str{5}}{\\str{9}}}{\\html{)}}}'),
+			{prob: dataUtils.pre('{\\grp{\\sign{&minus;}}{\\frac{\\str{3}}{\\str{4}}}{\\sign{\xB7}}{\\str{(}}{\\frac{\\str{5}}{\\str{9}}}{\\str{)}}}'),
 			answer: dataUtils.pre('\\grp{\\sign{=}}{\\frac{\\input{-5}}{\\input{12}}}'),	
 			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{&minus;}}{\\frac{\\str{5}}{\\str{12}}}}'), 
 			template: 'second',
 			firstHelp: dataUtils.pre('{\\grp{\\html{The <sup>3</sup>&#8260;<sub>4</sub> is negative and the <sup>5</sup>&#8260;<sub>9</sub> is positive. Because there is one negative sign (<span class=underline>an odd number of negative signs</span>) in this multiplication problem, the answer is negative.}}}') },
 			
 			// problem 7
-			{prob: dataUtils.pre('{\\grp{\\frac{\\str{7}}{\\str{8}}}{\\sign{\xB7}}{\\html{(}}{\\sign{&minus;}}{\\frac{\\str{4}}{\\str{21}}}{\\html{)}}}'),
+			{prob: dataUtils.pre('{\\grp{\\frac{\\str{7}}{\\str{8}}}{\\sign{\xB7}}{\\str{(}}{\\sign{&minus;}}{\\frac{\\str{4}}{\\str{21}}}{\\str{)}}}'),
 			answer: dataUtils.pre('\\grp{\\sign{=}}{\\frac{\\input{-1}}{\\input{6}}}'),	
 			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{&minus;}}{\\frac{\\str{1}}{\\str{6}}}}'), 
 			template: 'second',
 			firstHelp: dataUtils.pre('{\\grp{\\html{The <sup>7</sup>&#8260;<sub>8</sub> is positive and the <sup>4</sup>&#8260;<sub>21</sub> is negative. Because there is one negative sign (<span class=underline>an odd number of negative signs</span>) in this multiplication problem, the answer is negative.}}}') },
 			
 			// problem 8
-			{prob: dataUtils.pre('{\\grp{\\html{(}}{\\sign{&minus;}}{\\frac{\\str{1}}{\\str{2}}}{\\html{)}}{\\sign{\xB7}}{\\html{(}}{\\frac{\\str{3}}{\\str{16}}}{\\html{)}}{\\sign{\xB7}}{\\html{(}}{\\sign{&minus;}}{\\frac{\\str{11}}{\\str{6}}}{\\html{)}}}'),
+			{prob: dataUtils.pre('{\\grp{\\str{(}}{\\sign{&minus;}}{\\frac{\\str{1}}{\\str{2}}}{\\str{)}}{\\sign{\xB7}}{\\str{(}}{\\frac{\\str{3}}{\\str{16}}}{\\str{)}}{\\sign{\xB7}}{\\str{(}}{\\sign{&minus;}}{\\frac{\\str{11}}{\\str{6}}}{\\str{)}}}'),
 			answer: dataUtils.pre('\\grp{\\sign{=}}{\\frac{\\input{11}}{\\input{64}}}'),	
 			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\frac{\\str{11}}{\\str{64}}}}'), 
 			template: 'second',
 			firstHelp: dataUtils.pre('{\\grp{\\html{The <sup>1</sup>&#8260;<sub>2</sub> and the <sup>11</sup>&#8260;<sub>16</sub> are negative, and the <sup>3</sup>&#8260;<sub>16</sub> is positive. Because there are two negative signs (<span class=underline>an even number of negative signs</span>) in this multiplication problem, the answer is positive.}}}') },
 			
 			// problem 9
-			{prob: dataUtils.pre('{\\grp{\\html{(}}{\\sign{&minus;}}{\\mixed{\\str{2}}{\\frac{\\fracstr{4}}{\\fracstr{5}}}}{\\html{)}}{\\sign{\xB7}}{\\html{(}}{\\sign{&minus;}}{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\html{)}}}'),
+			{prob: dataUtils.pre('{\\grp{\\str{(}}{\\sign{&minus;}}{\\mixed{\\str{2}}{\\frac{\\fracstr{4}}{\\fracstr{5}}}}{\\str{)}}{\\sign{\xB7}}{\\str{(}}{\\sign{&minus;}}{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\str{)}}}'),
 			answer:dataUtils.pre('\\grp{\\sign{=}}{\\mixed{\\input{3}}{\\frac{\\input{1}}{\\input{2}}}}'),		
 			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\mixed{\\str{3}}{\\frac{\\str{1}}{\\str{2}}}}}'), 
 			template: 'second',
 			firstHelp: dataUtils.pre('{\\grp{\\html{The 2 <sup>4</sup>&#8260;<sub>5</sub> is negative and the 1 <sup>1</sup>&#8260;<sub>4</sub> is negative. Because there are two negative signs (<span class=underline>an even number of negative signs</span>) in this multiplication problem, the answer is positive.}}}')} ,
 			
 			// problem 10
-			{prob: dataUtils.pre('{\\grp{\\html{(}}{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\html{)}}{\\sign{\xB7}}{\\html{(}}{\\sign{&minus;}}{\\mixed{\\str{3}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}}{\\html{)}}}'),
+			{prob: dataUtils.pre('{\\grp{\\str{(}}{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\str{)}}{\\sign{\xB7}}{\\str{(}}{\\sign{&minus;}}{\\mixed{\\str{3}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}}{\\str{)}}}'),
 			answer:dataUtils.pre('\\grp{\\sign{=}}{\\mixed{\\input{-5}}{\\frac{\\input{1}}{\\input{2}}}}'),		
 			textAnswer: dataUtils.pre('{\\html{&nbsp;}}{\\grp{\\sign{-}}{\\mixed{\\str{5}}{\\frac{\\str{1}}{\\str{2}}}}}'), 
 			template: 'second',
