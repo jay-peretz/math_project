@@ -238,7 +238,8 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 									+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": false
+							"help": false,
+							"fixBottomRight": true
 						}
 					}]
 				}]
@@ -371,7 +372,8 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"fixBottomRight": true
 						}
 					}, {
 						problem: '\\rowgrp'
@@ -417,7 +419,8 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"fixBottomRight": true
 						}
 					}]
 				}]
@@ -550,7 +553,8 @@ fourth: {
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"fixBottomRight": true
 						}
 					}, {
 						problem: '\\rowgrp'
@@ -596,7 +600,8 @@ fourth: {
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"fixBottomRight": true
 						}
 					}, {
 						problem: '\\rowgrp'
@@ -643,7 +648,8 @@ fourth: {
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"fixBottomRight": true
 						}
 					}]
 				}]

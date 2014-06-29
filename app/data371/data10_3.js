@@ -132,7 +132,8 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 									+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"fixBottomRight": true
 						}
 					}]
 				}]
@@ -356,7 +357,8 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 									+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": false
+							"help": false,
+							"fixBottomRight": true
 						}
 					}]
 				}]
@@ -444,6 +446,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 										+'{\\html{$answerDen1}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
 										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
 										+'{\\sign{=}}'
 										+'{\\mixed{\\fracstr{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\fracstr{$answerDen1}}}}}'
@@ -467,7 +470,8 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 									+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"fixBottomRight": true
 						}
 					}, {
 						problem: '\\rowgrp'
@@ -483,6 +487,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 										+'{\\html{$answerDen1}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
 										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
 										+'{\\sign{=}}'
 										+'{\\mixed{\\fracstr{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\fracstr{$answerDen1}}}}}'
@@ -508,7 +513,8 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 									+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": false
+							"help": false,
+							"fixBottomRight": true
 						}
 					}, {
 						problem: '\\rowgrp'
@@ -524,6 +530,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 										+'{\\html{$answerDen1}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
 										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
 										+'{\\sign{=}}'
 										+'{\\mixed{\\fracstr{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\fracstr{$answerDen1}}}}}'
@@ -550,7 +557,8 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 									+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"fixBottomRight": true
 						}
 					}]
 				}]
@@ -638,6 +646,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 										+'{\\html{$answerDen1}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
 										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
 										+'{\\sign{=}}'
 										+'{\\mixed{\\fracstr{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\fracstr{$answerDen1}}}}}'
@@ -661,7 +670,8 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 									+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"fixBottomRight": true
 						}
 					}]
 				}]
@@ -749,6 +759,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 										+'{\\html{$answerDen1}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
 										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
 										+'{\\sign{=}}'
 										+'{\\mixed{\\fracstr{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\fracstr{$answerDen1}}}}}'
@@ -772,7 +783,8 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 									+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"fixBottomRight": true
 						}
 					}, {
 						problem: '\\rowgrp'
@@ -788,6 +800,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 										+'{\\html{$answerDen1}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\html{Use the LCD to convert the fractions:}}'
+										+'{\\html{&nbsp;}}'
 										+'{\\grp{\\html{<span style="font-size:550%;">&nbsp;</span>}}{\\mixed{\\str{$whole1}}{\\frac{\\str{$num1}}{\\str{$den1}}}}'
 										+'{\\sign{=}}'
 										+'{\\mixed{\\fracstr{$whole1}}{\\frac{\\fracstr{$numnew1}}{\\fracstr{$answerDen1}}}}}'
@@ -813,7 +826,8 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 									+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": false
+							"help": false,
+							"fixBottomRight": true
 						}
 					}]
 				}]

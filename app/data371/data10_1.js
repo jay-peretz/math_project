@@ -208,7 +208,8 @@ angular.module('mathSkills').service('data10_1', ['dataUtils', function (dataUti
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"fixBottomRight": true
 						}
                     }]
                 }]
