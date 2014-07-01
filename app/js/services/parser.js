@@ -57,11 +57,17 @@ angular.module('mathSkills.services')
                     decorateScope: function (parsedTag, scope) {
                         // Get the templates registered for this tag.
                         var templates = registeredTags[parsedTag.tag].argTemplates;
-
-                        // Add each argTemplate to the scope.
-                        parsedTag.args.forEach(function (arg, ii) {
-                            scope[templates[ii].name] = arg;
-                        });
+						
+						try {
+							// Add each argTemplate to the scope.
+							parsedTag.args.forEach(function (arg, ii) {
+								scope[templates[ii].name] = arg;
+							});
+						}
+						catch(err) {
+							console.log ("Error: ",err.message);
+							console.log ("Parse error at: ",JSON.stringify(parsedTag));
+						}
                     },
                     /**
                      * Extracts the tag name and argument values from a tag string
@@ -158,19 +164,25 @@ angular.module('mathSkills.services')
                     generateTemplate: function (parsedTag, options) {
                         var tagTemplate = '';
 
-                        // If the options say to use the directiveTemplate, do so.
-                        if (options.directiveTemplate === true) {
-                            tagTemplate += registeredTags[parsedTag.tag].directiveTemplate;
-                        // Otherwise, use the argument templates.
-                        } else {
-                            // Get the templates registered for this tag.
-                            var templates = registeredTags[parsedTag.tag].argTemplates;
-
-                            // Build up the templates for each tag argument.
-                            parsedTag.args.forEach(function (arg, ii) {
-                                tagTemplate += templates[ii].template;
-                            });
-                        }
+						try {
+							// If the options say to use the directiveTemplate, do so.
+							if (options.directiveTemplate === true) {
+								tagTemplate += registeredTags[parsedTag.tag].directiveTemplate;
+							// Otherwise, use the argument templates.
+							} else {
+								// Get the templates registered for this tag.
+								var templates = registeredTags[parsedTag.tag].argTemplates;
+	
+								// Build up the templates for each tag argument.
+								parsedTag.args.forEach(function (arg, ii) {
+									tagTemplate += templates[ii].template;
+								});
+							}
+						}
+						catch(err) {
+							console.log ("Error: ",err.message);
+							console.log ("Parse error at: ",JSON.stringify(parsedTag));
+						}
 
                         return tagTemplate;
                     },
