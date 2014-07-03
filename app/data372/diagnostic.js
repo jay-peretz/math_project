@@ -36,7 +36,6 @@ template = {
         },
         data = [
 			{ // problem 1
-			answerBtn: 'noAnswer',
 			numberProb: '44816',
 			placeNumber: '3',
 			prob: dataUtils.pre('\\rowgrp{\\str{Identify the place value of the indicated digit: }}{\\placevalue{$$numberProb}{$$placeNumber}}'
@@ -54,7 +53,6 @@ template = {
 			}
 			,
 			{ // problem 2
-			answerBtn: 'noAnswer',
 			numberProb: '99999',
 			placeNumber: '3',
 			prob: dataUtils.pre('\\rowgrp{\\str{Identify the place value of the indicated digit: }}{\\placevalue{$$numberProb}{$$placeNumber}}'
@@ -72,7 +70,6 @@ template = {
 			}
 			,
 			{ // problem 3
-			answerBtn: 'noAnswer',
 			numberProb: '38059', 
 			placeNumber: '2', 
 			prob: dataUtils.pre('\\rowgrp{\\str{Identify the place value of the indicated digit: }}{\\placevalue{$$numberProb}{$$placeNumber}}'
