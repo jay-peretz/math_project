@@ -55,6 +55,11 @@ angular.module('mathSkills')
                                     $scope.$emit('panelGroupDone');
                                 }
                             break;
+							case 'diagnostic':
+									data.noHelpPrompt = true;
+									$scope.$emit('panelDone');
+										
+							break;
                         }
                     });
                 },

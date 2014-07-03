@@ -26,14 +26,19 @@ angular.module('mathSkills')
             $scope.$on('problemDone', function () {
                 var numberOfProblems = courseData.getNumberOfProblems($routeParams.unit, $routeParams.problemSet),
                     newPath = $location.path().split('/').slice(0, -1).join('/');
-
                 if (+$routeParams.problemNumber + 1 <= numberOfProblems) {
                     newPath += '/' + (+$routeParams.problemNumber + 1);
                 } else {
-					if (JSON.stringify($scope.problem.children[0]).search('"provideFeedback":true') === -1) {
-                    	newPath = $location.path().split('/').slice(0, -2).join('/');
-					} else {
-					    newPath += '/all/feedback';
+					switch (true) {
+						case(JSON.stringify($scope.problem.children[0]).search('"provideFeedback":true') !== -1):
+							newPath += '/all/feedback';
+							break;
+						case(JSON.stringify($scope.problem.children[0]).search('"provideFeedback":"diagnostic"') !== -1):
+							newPath += '/all/feedback-diagnostic';
+							break;
+						default:
+							newPath = $location.path().split('/').slice(0, -2).join('/');
+							break;
 					}
                 }
 

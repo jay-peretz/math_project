@@ -3,6 +3,7 @@
 
 angular.module('mathSkills.services')
     .service('courseData', [
+		'diagnostic',
         'data_a_1', 'data_b_1','data_c_1','data_c_2','data_d_1','data_e_1','data_e_2','data_e_3','data_e_4',
 		'data_f_1', 'data_g_1','data_g_2','data_g_3','data_h_1','data_h_2','data_i_1','data_i_2','data_i_3','data_i_4',
 		'data_k_1', 'data_k_2','data_k_3','data_l_1','data_l_2','data_m_1','data_m_2','data_m_3','data_n_1',
@@ -12,6 +13,7 @@ angular.module('mathSkills.services')
 		'data_w_1', 'data_w_2', 'data_x_1', 'data_y_1', 'data_y_2', 'data_z_1', 'data_aa_1',  
 		'data_aa_2',  'data_bb_1',  'data_cc_1',  'data_dd_1',  'data_dd_2',   'data_ee_1',
         function (
+			diagnostic,
             data_a_1, data_b_1, data_c_1, data_c_2, data_d_1, data_e_1, data_e_2, data_e_3, data_e_4,
 			data_f_1, data_g_1, data_g_2, data_g_3, data_h_1, data_h_2, data_i_1, data_i_2,data_i_3,data_i_4,
 			data_k_1, data_k_2, data_k_3, data_l_1, data_l_2, data_m_1, data_m_2, data_m_3, data_n_1,
@@ -22,7 +24,13 @@ angular.module('mathSkills.services')
         ) {
             var course = {
                 title: 'PRE ALGEBRA',
-                children: [{
+                 children: [{
+                    title: 'Diagnostic',
+                    path: 'diagnostic',
+                    children: [
+                        diagnostic
+                    ]
+                }, {
                     title: '1 Review of Arithmetic',
                     path: 'review-arithmetic',
                     children: [

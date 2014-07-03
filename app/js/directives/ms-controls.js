@@ -79,6 +79,8 @@ angular.module('mathSkills')
 								} else {
 									$scope.fixHelpClass = "fixHelpControls span2";
 								}
+
+								
 								// $scope.hasHelpData is true if showHelpPanel is true
 								if ($scope.hasHelpData === true) {
 									// changes help button label to "Next Problem"
@@ -169,13 +171,19 @@ angular.module('mathSkills')
 								}
 								
 								$scope.fixBottomRight = function () {
-									if (typeof $scope.data.fixBottomRight !== "undefined" && $scope.data.fixBottomRight === true) {
-										var wt = $(window).scrollTop();
-										var wb = wt + $(window).height();
-										window.scrollTo(0, wb);
-										return "fixBottomRight span2";
-									} else {
-										return "";
+									switch (true) {
+										case (typeof $scope.data.fixBottomRight !== "undefined" && $scope.data.fixBottomRight === true):
+											var wt = $(window).scrollTop();
+											var wb = wt + $(window).height();
+											window.scrollTo(0, wb);
+											return "fixBottomRight span2";
+											break;
+										case (typeof $scope.data.fixBottomRight !== "undefined" && $scope.data.fixBottomRight === "hidden"):
+											return "hiddenSpace span3";
+											break;
+										default:
+											return "";
+											break;
 									}
 								}
 

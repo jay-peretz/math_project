@@ -27,6 +27,10 @@ angular.module('mathSkills', ['mathSkills.services']).
                     templateUrl: 'partials/controllers/feedback.html',
                     controller: 'feedback'
                 })
+				.when('/units/:unit/:problemSet/all/feedback-diagnostic', {
+                    templateUrl: 'partials/controllers/feedbackDiagnostic.html',
+                    controller: 'feedbackDiagnostic'
+                })
                 .otherwise({redirectTo: '/'});
                 
                 $rootScopeProvider.digestTtl(15);

@@ -1,0 +1,15 @@
+<h1>Diagnostic</h1>
+<table class=table>
+    <tr>
+        <th>Problem #</th>
+        <th>Problem</th>
+        <th>Provided Answer</th>
+        <th>Result</th>
+    </tr>
+    <tr ng-repeat="problemFeedback in feedback" class={{rowClass(problemFeedback.result)}}>
+        <td>{{problemFeedback.problemNumber}}</td>
+        <td><ms-expression expected={{problemFeedback.problem}}></ms-expression></td>
+        <td><ms-expression expected="{{problemFeedback.answer | replace:'input':'str' | replace:'but':'str' | checkbox2lbl | replace:'select':'str'}}"></ms-expression></td>
+        <td>{{problemFeedback.result}}</td>
+    </tr>
+</table>
