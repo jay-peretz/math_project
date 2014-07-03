@@ -6,7 +6,8 @@
         <th>Provided Answer</th>
         <th>Result</th>
     </tr>
-    <tr ng-repeat="problemFeedback in feedback" class={{rowClass(problemFeedback.result)}}>
+    <!--<tr ng-repeat="problemFeedback in feedback" class={{rowClass(problemFeedback.result)}}>-->
+    <tr ng-repeat="problemFeedback in feedback">
         <td>{{problemFeedback.problemNumber}}</td>
         <td><ms-expression expected={{problemFeedback.problem}}></ms-expression></td>
         <td><ms-expression expected="{{problemFeedback.answer | replace:'input':'str' | replace:'but':'str' | checkbox2lbl | replace:'select':'str'}}"></ms-expression></td>

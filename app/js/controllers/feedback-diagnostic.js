@@ -18,7 +18,10 @@ angular.module('mathSkills')
             $scope.feedback = feedbackData.getData($routeParams.unit, $routeParams.problemSet);
 			
 			for (var ii = 0, len = $scope.feedback.length; ii < len; ii += 1) {
-				$scope.tagIndex = $scope.feedback[ii].answer.indexOf("solobtn") + 19;
+				if ($scope.feedback[ii].problem === '') {
+					$scope.feedback[ii].problem = $scope.feedback[ii].answer;
+				}
+				$scope.tagIndex = $scope.feedback[ii].answer.indexOf("solobtn");
 				$scope.tagString = $scope.feedback[ii].answer.substr($scope.tagIndex).match(/{(.*?)}/);
 				$scope.feedback[ii].answer = '\\str{' + $scope.tagString[1] + '}';
 				
