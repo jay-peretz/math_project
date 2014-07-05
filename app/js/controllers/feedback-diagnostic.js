@@ -17,6 +17,12 @@ angular.module('mathSkills')
             $scope.problemSet = courseData.getProblemSetData($routeParams.unit, $routeParams.problemSet);
             $scope.feedback = feedbackData.getData($routeParams.unit, $routeParams.problemSet);
 			
+			// remove correct answers
+			$scope.feedback = $scope.feedback.filter(function(arrayElement) {
+				return (arrayElement.result === "incorrect");
+			});
+			
+			
 			for (var ii = 0, len = $scope.feedback.length; ii < len; ii += 1) {
 				if ($scope.feedback[ii].problem === '') {
 					$scope.feedback[ii].problem = $scope.feedback[ii].answer;
