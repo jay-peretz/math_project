@@ -2,13 +2,13 @@
 
 angular.module('mathSkills').service('data25_1', ['dataUtils', function (dataUtils) {
     var desc = {
-			title: '25.1 Metric to Metric Conversions',
-            path: '25.1-metric-to-metric-conversions',
+			title: '25.1 Converting Measurements in the Metric System',
+            path: '25.1-converting-measurements-in-the-metric-system',
             children: []
         },
         template = {
             main: {
-                title: 'Metric to Metric Conversions',
+                title: 'Converting Measurements in the Metric System',
                 children: [{
                     title: 'Main Answer',
                     children: [{

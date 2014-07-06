@@ -2,13 +2,13 @@
 
 angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUtils) {
     var desc = {
-			title: '25.2 Converting English Compound Units Using Dimensional Analysis',
-            path: '25.2-converting-english-compound-units-using-dimensional-analysis',
+			title: '25.2 Converting Compound Measurements in the Metric System',
+            path: '25.2-converting-compound-measurements-in-the-metric-system',
             children: []
         },
         template = {
 			simpleConversion: {
-                title: 'Converting English Compound Units Using Dimensional Analysis',
+                title: 'Converting Compound Measurements in the Metric System',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -43,7 +43,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                 }]
 			},
 			simpleMultFracConversion: {
-                title: 'Converting English Compound Units Using Dimensional Analysis',
+                title: 'Converting Compound Measurements in the Metric System',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -86,7 +86,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                 }]
 			},
 			simpleFractional: {
-                title: 'Converting English Compound Units Using Dimensional Analysis',
+                title: 'Converting Compound Measurements in the Metric System',
                 children: [{
                     title: 'Main Answer',
                     children: [{

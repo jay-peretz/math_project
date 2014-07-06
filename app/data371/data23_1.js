@@ -2,13 +2,13 @@
 
 angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUtils) {
     var desc = {
-			title: '23.1 Converting Units of Volume',
-            path: '23.1-converting-units-of-volume',
+			title: '23.1 Converting Measurements in the English System',
+            path: '23.1-converting-measurements-in-the-english-system',
             children: []
         },
         template = {
             oneStep: {
-                title: 'Converting Units of Volume',
+                title: 'Converting Measurements in the English System',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -136,7 +136,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                 }]
             },
 			twoStep: {
-                title: 'Converting Units of Volume',
+                title: 'Converting Measurements in the English System',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -307,7 +307,7 @@ angular.module('mathSkills').service('data23_1', ['dataUtils', function (dataUti
                 }]
             },
 			threeStep: {
-                title: 'Converting Units of Volume',
+                title: 'Converting Measurements in the English System',
                 children: [{
                     title: 'Main Answer',
                     children: [{

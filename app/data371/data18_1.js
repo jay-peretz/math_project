@@ -2,13 +2,13 @@
 
 angular.module('mathSkills').service('data18_1', ['dataUtils', function (dataUtils) {
     var desc = {
-			title: '18.1 Decimal & Fraction Form of Percents',
-			path: '18.1-decimal-fraction-form-percents',
+			title: '18.1 An Introduction to Decimal, Fraction, and Percent Equivalencies',
+			path: '18.1-decimal-fraction-percent-equivalencies',
             children: []
         },
         template = {
 			equivFracValueReduce: {
-                title: 'Decimal & Fraction Form of Percents',
+                title: 'An Introduction to Decimal, Fraction, and Percent Equivalencies',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -28,7 +28,7 @@ angular.module('mathSkills').service('data18_1', ['dataUtils', function (dataUti
                 }]
             },
 			equivFracValueNoReduce: {
-                title: 'Decimal & Fraction Form of Percents',
+                title: 'An Introduction to Decimal, Fraction, and Percent Equivalencies',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -46,7 +46,7 @@ angular.module('mathSkills').service('data18_1', ['dataUtils', function (dataUti
                 }]
             },
 			equivDecValueProper: {
-                title: 'Decimal & Fraction Form of Percents',
+                title: 'An Introduction to Decimal, Fraction, and Percent Equivalencies',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -65,7 +65,7 @@ angular.module('mathSkills').service('data18_1', ['dataUtils', function (dataUti
                 }]
             },
 			equivDecValueImproper: {
-                title: 'Decimal & Fraction Form of Percents',
+                title: 'An Introduction to Decimal, Fraction, and Percent Equivalencies',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -85,7 +85,7 @@ angular.module('mathSkills').service('data18_1', ['dataUtils', function (dataUti
                 }]
             },
 			decPercentFracPercentReduce: {
-                title: 'Decimal & Fraction Form of Percents',
+                title: 'An Introduction to Decimal, Fraction, and Percent Equivalencies',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -105,7 +105,7 @@ angular.module('mathSkills').service('data18_1', ['dataUtils', function (dataUti
                 }]
             },
 			fracPercentDecPercentProper: {
-                title: 'Decimal & Fraction Form of Percents',
+                title: 'An Introduction to Decimal, Fraction, and Percent Equivalencies',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -124,7 +124,7 @@ angular.module('mathSkills').service('data18_1', ['dataUtils', function (dataUti
                 }]
             },
 			fracPercentDecPercentImproper: {
-                title: 'Decimal & Fraction Form of Percents',
+                title: 'An Introduction to Decimal, Fraction, and Percent Equivalencies',
                 children: [{
                     title: 'Main Answer',
                     children: [{

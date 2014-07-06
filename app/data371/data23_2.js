@@ -2,13 +2,13 @@
 
 angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUtils) {
     var desc = {
-			title: '23.2 Converting Compound Units of Volume',
-            path: '23.2-converting-compound-units-of-volume',
+			title: '23.2 Converting Compound Measurements in the English System',
+            path: '23.2-converting-compound-measurements-in-the-english-system',
             children: []
         },
         template = {
             oneStep: {
-                title: 'Converting Units of Volume',
+                title: 'Converting Compound Measurements in the English System',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -155,7 +155,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
                 }]
             },
 			dollarOneStep: {
-                title: 'Converting Units of Volume',
+                title: 'Converting Compound Measurements in the English System',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -313,7 +313,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
                 }]
             },
 			twoStep: {
-                title: 'Converting Units of Volume',
+                title: 'Converting Compound Measurements in the English System',
                 children: [{
                     title: 'Main Answer',
                     children: [{
@@ -603,7 +603,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
                 }]
             },
 			threeStep: {
-                title: 'Converting Units of Volume',
+                title: 'Converting Compound Measurements in the English System',
                 children: [{
                     title: 'Main Answer',
                     children: [{

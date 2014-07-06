@@ -2,14 +2,14 @@
 
 angular.module('mathSkills').service('data20_2', ['dataUtils', function (dataUtils) {
     var desc = {
-            title: '20.2 Solve Percent Problems (proportion method)',
-            path: '20.2-solve-percent-problems',
+            title: '20.2 Solving Percent Problems Using Proportions',
+            path: '20.2-solve-percent-problems-using-proportions',
             children: []
         },
         template = {
             main: {
                 
-                title: 'Solving Percent Proportions problems',
+                title: 'Solving Percent Problems Using Proportions',
                 children: [{
                     title: 'Main Answer',
                     children: [{
