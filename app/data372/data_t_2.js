@@ -468,6 +468,34 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 								),
 				template: 'simpleQuestion' 
 			}
+			,
+			{ // problem 15
+				illustration: 'T.2/Rectangle_Half_Circle03.jpg',
+				alt: 'rectangle half circle',
+				width: '300px',
+				height: '170px',
+				imageClass: '',
+				probQuestion: 'What is the correct formula to find the perimeter of this object?',
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{P = 2a &#43; 2b &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)}'),
+				buttonValueB: 'T',
+				buttonLabelB: dataUtils.pre('\\str{P = a &#43; b &#43; c &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\str{P = 2a &#43; 2b &#43; (&pi; * d)}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\str{P = a &#43; 2b &#43; (&pi; * d)}'),
+                firstHelp: 'Identify the shape:  A rectangle connected to a half circle.',
+				secondHelp: 'Side d is <u>not</u> a part of the perimeter because it is <u>inside</u> the shape, not a part of its outside.'
+							+'<br><br>'
+							+'The perimeter (the outside of this shape) consists of three sides (sides, a, b, and c) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+							+'<br><br>'
+							+'Distance of the three sides = a &#43; b &#43; c'
+							+'<br>'
+							+'Distance of open half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * d',
+				thirdHelp: 'Add these together to get the perimeter formula.',
+				answerHelp: 'P = a &#43; b &#43; c &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)',
+				template: 'multipleChoice' 
+			}
         ];
 	
 	/*shuffle = [
