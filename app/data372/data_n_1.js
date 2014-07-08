@@ -355,7 +355,7 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
 			{
                 prob: dataUtils.pre('\\grp{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\str{)}}{\\str{-}}{\\str{(}}{\\frac{\\fracstr{-1}}{\\fracstr{4}}}{\\str{)}}{\\str{&nbsp; * &nbsp;}}{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{5}}}}{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}'),
 				ans: dataUtils.pre('\\pan{6}{6}{\\frac{\\input{-17}}{\\input{20}}}'),
-                wb: dataUtils.pre('\\ordopssimple{' +
+                wb: dataUtils.pre('\\pan{12}{11}{\\ordopssimple{' +
 						'\\grp{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-1}}{\\fracstr{4}}}{\\str{)}}{\\btn{&bull;}{T}{bigger}}{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{5}}}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{2}}{\\fracstr{5}}},' +
                         '\\frac{\\input{-3}}{\\input{10}},' +
                         '\\grp{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\str{)}}{\\btn{-}{T}{bigger}}{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{10}}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{2}}{\\fracstr{5}}},' +
@@ -363,14 +363,14 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
                         '\\grp{\\str{(}}{\\frac{\\fracstr{-9}}{\\fracstr{20}}}{\\str{)}}{\\btn{-}{T}{bigger}}{\\frac{\\fracstr{2}}{\\fracstr{5}}},' +
                         '\\frac{\\input{-17}}{\\input{20}},' +
 						'\\grp{\\frac{\\fracstr{-17}}{\\fracstr{20}}}' +
-                    '}{Evaluate the operator (simplify any fractions).}'),
-                template: 'fractions'
+                    '}{Evaluate the operator (simplify any fractions).}}'),
+                template: 'wideFractions'
             },
 			// problem 22
 			{
                 prob: dataUtils.pre('\\grp{\\mixed{\\str{-2}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\str{+}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}{\\str{/}}{\\mixed{\\str{-1}}{\\frac{\\fracstr{1}}{\\fracstr{9}}}}{\\str{+}}{\\frac{\\fracstr{7}}{\\fracstr{10}}}'),
 				ans: dataUtils.pre('\\pan{6}{6}{\\frac{\\input{-51}}{\\input{20}}}'),
-                wb: dataUtils.pre('\\ordopssimple{' +
+                wb: dataUtils.pre('\\pan{12}{11}{\\ordopssimple{' +
 						'\\grp{\\mixed{\\str{-2}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{5}}{\\fracstr{6}}}{\\btn{&divide;}{T}{bigger}}{\\mixed{\\str{-1}}{\\frac{\\fracstr{1}}{\\fracstr{9}}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{7}}{\\fracstr{10}}},' +
                         '\\frac{\\input{-3}}{\\input{4}},' +
                         '\\grp{\\mixed{\\str{-2}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\btn{+}{F}{bigger}}{\\frac{\\fracstr{7}}{\\fracstr{10}}},' +
@@ -378,8 +378,8 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
                         '\\grp{\\frac{\\fracstr{-13}}{\\fracstr{4}}}{\\btn{+}{T}{bigger}}{\\frac{\\fracstr{7}}{\\fracstr{10}}},' +
                         '\\frac{\\input{-51}}{\\input{20}},' +
 						'\\grp{\\frac{\\fracstr{-51}}{\\fracstr{20}}}' +
-                    '}{Evaluate the operator (simplify any fractions).}'),
-                template: 'fractions'
+                    '}{Evaluate the operator (simplify any fractions).}}'),
+                template: 'wideFractions'
             },
 			// problem 23
 			{
@@ -430,10 +430,23 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
                 template: 'wideFractions'
             },
         ];
-
-	return dataUtils.build(desc, template, data);
+		shuffle = [
+				{ problems: [1,2], total: 1},
+				{ problems: [3,4], total: 1},
+				{ problems: [5,6], total: 1},
+				{ problems: [7,8], total: 1},
+				{ problems: [9,10], total: 1},
+				{ problems: [11,12], total: 1},
+				{ problems: [13,14], total: 1},
+				{ problems: [15,16], total: 1},
+				{ problems: [17,18], total: 1},
+				{ problems: [19,20], total: 1},
+				{ problems: [21,22], total: 1},
+				{ problems: [23,24], total: 1}
+		];
+		//return dataUtils.build(desc, template, data);
+    
+    	return dataUtils.build(desc, template, data, shuffle);
 }]);
-
-
 
 
