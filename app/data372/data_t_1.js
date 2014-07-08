@@ -131,7 +131,7 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				buttonValueD: 'F',
 				buttonLabelD: dataUtils.pre('\\html{P = a + b + (e <span class=bigger>-</span> c) + d}'),
                 firstHelp: 'The four sides of the trapezoid make up its perimeter (the distance around the outside of the shape).  Side e is <u><strong>inside</strong></u> the trapezoid so it is <u><strong>not</strong></u> part of the perimeter.',
-				secondHelp: 'No two sides are the same length, so no sides can be duplicated.',
+				secondHelp: 'No two sides are the same length, so no sides can be doubled.',
 				thirdHelp: 'The correct formula is: &nbsp; P = a + b + c + d',
 				answerHelp: 'P = a + b + c + d',
 				template: 'multipleChoice'
@@ -153,7 +153,7 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				s3Value: 's<sub>3</sub>',
 				s4Value: 's<sub>4</sub>',
                 firstHelp: 'The four sides of the trapezoid make up its perimeter (the distance around the outside of the shape).',
-				secondHelp: 'No two sides are the same length, so no sides can be duplicated.',
+				secondHelp: 'No two sides are the same length, so no sides can be doubled.',
 				thirdHelp: 'The correct formula is: &nbsp; P = $$s1Value + $$s2Value + $$s3Value + $$s4Value',
 				answerHelp: 'P = $$s1Value + $$s2Value + $$s3Value + $$s4Value',
 				template: 'multipleChoice'
@@ -260,7 +260,7 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				s3Value: 's<sub>3</sub>',
 				s4Value: 's<sub>4</sub>',
 				helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br><table><tr><td>Write the formula:&nbsp; </td><td>P = $$s1Value + $$s2Value + $$s3Value + $$s4Value</td></tr>'
-										+'<tr><td>Substitution:&nbsp; </td><td>P = 15 + 12.5 + (7.5 + 1.5 + 7.5) + 12.5</td></tr>'
+										+'<tr><td>Substitution:&nbsp; </td><td>P = 15 + 12.5 + (7.5 + 15 + 7.5) + 12.5</td></tr>'
 										+'<tr><td>Solve:&nbsp; </td><td> P = 70</td></tr></table><br>',
 				answerHelp: dataUtils.pre('\\str{70 m}'
 								),
