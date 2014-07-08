@@ -166,6 +166,9 @@ div.fakeButton {
 .tdButtonHeight > ms-expression > ms-row-group > table > tbody > tr > td {
 	height:60px;
 }
+.marginLeft80px {
+	margin-left:80px;
+}
 /*zero out padding and margin...used in ms-group*/
 .zero td{
     margin: 0;
