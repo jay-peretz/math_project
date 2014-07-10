@@ -19,7 +19,7 @@ angular.module('mathSkills')
 				numberIncorrect,
 				tagIndex,
 				tagString,
-				closeValueIndex;
+				feedbackSoloIndex;
 				
 			$scope.allCorrect = false;   // displays incorrect problems or all correct message
 			
@@ -32,14 +32,10 @@ angular.module('mathSkills')
 				return (arrayElement.result === "incorrect");
 			});
 			numberIncorrect = $scope.feedback.length;
-			//console.log("JSON.stringify($scope.feedback) is: ",JSON.stringify($scope.feedback)," numberIncorrect is: ",numberIncorrect);
 			
 			if (numberIncorrect > 0) {
 			
 				for (var ii = 0; ii < numberIncorrect; ii += 1) {
-					if ($scope.feedback[ii].problem === '') {
-						$scope.feedback[ii].problem = $scope.feedback[ii].answer;
-					}
 					
 					// get correct solobtn tag label
 					regString = /solobtn{.?}{T}/;
@@ -47,24 +43,29 @@ angular.module('mathSkills')
 					regString = /{.?}/;
 					soloArgs = JSON.stringify(expectedTags[0]).match(regString);
 					soloArgs = JSON.stringify(soloArgs[0]).substring(2,JSON.stringify(soloArgs[0]).length - 2);
-					$scope.feedback[ii].correctLabel = "\\solobtn{"+soloArgs+"}{T}{}";
-					// get answer solobtn
-					/*tagIndex = $scope.feedback[ii].answer.indexOf("solobtn");
-					$scope.tagString = $scope.feedback[ii].answer.substr(tagIndex).match(/{(.*?)}/);	
-					$scope.closeValueIndex = tagIndex + 7 + $scope.tagString[1].length + 1;
-					$scope.feedback[ii].answer = '\\solobtn{' + $scope.tagString[1] + '}{F}{warning}';*/
+					$scope.feedback[ii].correctLabel = "\\solobtn{"+soloArgs+"}{T}{success}";
+					
+					// get incorrect solobtn tag label
+					feedbackSoloIndex = JSON.stringify($scope.feedback[ii].answer).indexOf("solobtn");
+					regString = /solobtn{.?}{F}/;
+					expectedTags = $scope.feedback[ii].answer.match(regString);
+					regString = /{.?}/;
+					soloArgs = JSON.stringify(expectedTags[0]).match(regString);
+					soloArgs = JSON.stringify(soloArgs[0]).substring(2,JSON.stringify(soloArgs[0]).length - 2);
+					$scope.feedback[ii].answer = JSON.stringify($scope.feedback[ii].answer).substr(0,feedbackSoloIndex) + "solobtn{" + soloArgs + "}{F}{danger}}" + JSON.stringify($scope.feedback[ii].answer).substr((feedbackSoloIndex + 8 + soloArgs.length + 5));
+					$scope.feedback[ii].answer = JSON.parse($scope.feedback[ii].answer);
 					
 							
 					// A UI helper function to convert answer event data.result strings to
 					// a corresponding bootstrap table row class.
-					$scope.rowClass = function (result) {
+					/*$scope.rowClass = function (result) {
 						switch (result) {
 							case 'correct': return 'success';
 							case 'incorrect': return 'error';
 							case 'helped': return 'warning';
 							default: return '';
 						}
-					};
+					};*/
 				}
 			} else {
 				$scope.allCorrect = true;
