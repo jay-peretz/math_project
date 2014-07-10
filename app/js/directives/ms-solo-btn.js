@@ -102,7 +102,7 @@ angular.module('mathSkills')
                                     'margin-bottom: 4px;'+
                                 '}'+
                             '</style>'+
-                            '<button class="btn btn-{{class}} {{opclass}}" type=button ng-bind-html-unsafe=args[0]|enlargeOps></button>'
+                            '<button class="btn btn-{{class}} btn-{{opclass}}" type=button ng-bind-html-unsafe=args[0]|enlargeOps></button>'
             };
         }
     ]);
