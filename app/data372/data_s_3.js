@@ -315,17 +315,20 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 				helpAnswer: ' 13 <sup>1</sup>&#8260;<sub>2</sub>',
 				template: 'oneStepSolution' 
 			}
-        ];
-	
-	/*shuffle = [
-				{ problems: [1,2,3,4,5,6,7,8,9,10], total: 8},
+        ],
+		shuffle = [
+				{ problems: [1,2], total: 1},
+				{ problems: [3,4], total: 1},
+				{ problems: [5,6], total: 1},
+				{ problems: [7,8], total: 1},
+				{ problems: [9,10], total: 1},
 				{ problems: [11,12], total: 1},
-				{ problems: [13,14,15,16], total: 1}
+				{ problems: [13,14], total: 1},
+				{ problems: [15,16], total: 1}
 		];
-
+		//return dataUtils.build(desc, template, data);
     
-    	return dataUtils.build(desc, template, data, shuffle);*/
-
-    return dataUtils.build(desc, template, data);
-	
+    	return dataUtils.build(desc, template, data, shuffle);
 }]);
+
+
