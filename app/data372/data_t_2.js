@@ -145,7 +145,7 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 				buttonLabelC: dataUtils.pre('\\str{<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>}'),
 				buttonValueD: 'F',
 				buttonLabelD: dataUtils.pre('\\str{&pi; * r<sup>2</sup>}'),
-                firstHelp: 'The formula to find the circumference or perimeter of a circle is: &nbsp; c = &pi; * d',
+                firstHelp: 'The formula to find the circumference or perimeter of a circle is:<br><br>c = &pi; * d',
 				secondHelp: 'The distance of the open half circle is only <sup>1</sup>&#8260;<sub>2</sub> of the distance of the circumference. Therefore:<br><br>Distance of open half circle = <sup>1</sup>&#8260;<sub>2</sub> of (circumference)',
 				thirdHelp: 'Now we just substitute the formula for the word \\"circumference\\"  (&pi; * d). We get:<br><br>Distance of open half circle = <sup>1</sup>&#8260;<sub>2</sub> * (&pi; * d)',
 				answerHelp: '<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d',
@@ -189,7 +189,7 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 4
-				probQuestion: 'The arc below is an open half circle. What is the formula to find the distance of this arc?<br><br>',
+				probQuestion: 'The shape below is a closed half circle. It consists of an open half circle and the diameter that has closed it (connected its two ends). What is the formula to find the perimeter of this shape?<br><br>',
 				illustration: 'T.2/Half_Circle_Closed02.jpg',
 				alt: 'open half circle',
 				width: '100px',
@@ -439,7 +439,7 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 										+'<br><br>'
 										+'<table>'
 										+'<tr><td>Write the formula:</td><td>&nbsp;</td><td>P = (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d) &#43; d</td></tr>'
-										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>P = (<sup>1</sup>&#8260;<sub>2</sub> * 3.14 * 21) &#43; 21</td></tr>'
+										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>P = (<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * 21) &#43; 21</td></tr>'
 										+'<tr><td>Solve:</td><td>&nbsp;</td><td>P = 54</td></tr>'
 										+'</table>'
 										+'<br>',
@@ -478,10 +478,10 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 15
-				illustration: 'T.2/Rectangle_Half_Circle03.jpg',
+				illustration: 'T.2/15_Rectangle_Half_Circle03_No_E.jpg',
 				alt: 'rectangle half circle',
 				width: '300px',
-				height: '170px',
+				height: '186px',
 				imageClass: '',
 				probQuestion: 'What is the correct formula to find the perimeter of this object?',
 				buttonValueA: 'F',
@@ -495,7 +495,7 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
                 firstHelp: 'Identify the shape:  A rectangle connected to a half circle.',
 				secondHelp: 'Side d is <u>not</u> a part of the perimeter because it is <u>inside</u> the shape, not a part of its outside.'
 							+'<br><br>'
-							+'The perimeter (the outside of this shape) consists of three sides (sides a, b, and c) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+							+'The perimeter (the outside of this shape) consists of three sides (a, b, and c) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
 							+'<br><br>'
 							+'Distance of the three sides = a &#43; b &#43; c'
 							+'<br>'
@@ -521,7 +521,7 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 				buttonValueD: 'T',
 				buttonLabelD: dataUtils.pre('\\str{P = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)}'),
                 firstHelp: 'Identify the shape:  A rectangle connected to a half circle.',
-				secondHelp: 'The perimeter (the outside of this shape) consists of three sides (sides s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+				secondHelp: 'The perimeter (the outside of this shape) consists of three sides (s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
 							+'<br><br>'
 							+'Distance of the three sides = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub>'
 							+'<br>'
@@ -544,7 +544,7 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 								),
 				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (sides s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'The perimeter (the outside of this shape) consists of three sides (s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
 										+'<br><br>'
 										+'In this shape s<sub>2</sub> is the same as the diameter of the half circle (the dotted line).'
 										+'<br><br>'
@@ -573,7 +573,7 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 								),
 				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (sides a, b, and c) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'The perimeter (the outside of this shape) consists of three sides (a, b, and c) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
 										+'<br><br>'
 										+'In this shape <em>a</em> is the same as the diameter of the half circle (the dotted line).'
 										+'<br><br>'
@@ -602,7 +602,7 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 								),
 				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (sides s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'The perimeter (the outside of this shape) consists of three sides (s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
 										+'<br><br>'
 										+'In this shape s<sub>2</sub> is the same as the diameter of the half circle (the dotted line).'
 										+'<br><br>'
@@ -631,7 +631,7 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 								),
 				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (sides a, b, and c) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'The perimeter (the outside of this shape) consists of three sides (a, b, and c) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
 										+'<br><br>'
 										+'In this shape <em>a</em> is the same as the diameter of the half circle (the dotted line).'
 										+'<br><br>'
@@ -660,7 +660,7 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 								),
 				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (sides a, b, and c) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'The perimeter (the outside of this shape) consists of three sides (a, b, and c) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
 										+'<br><br>'
 										+'In this shape <em>a</em> is the same as the diameter of the half circle (the dotted line).'
 										+'<br><br>'
@@ -689,7 +689,7 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 								),
 				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (sides s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'The perimeter (the outside of this shape) consists of three sides (s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
 										+'<br><br>'
 										+'In this shape s<sub>2</sub> is the same as the diameter of the half circle (the dotted line).'
 										+'<br><br>'
@@ -718,9 +718,11 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 								),
 				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (sides s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'The perimeter (the outside of this shape) consists of three sides (s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
 										+'<br><br>'
 										+'For the half circle, we are given the radius of 1 <sup>3</sup>&#8260;<sub>4</sub> ft. That means that the diameter (the dotted line) is double that (2 * 1 <sup>3</sup>&#8260;<sub>4</sub>) or 3 <sup>1</sup>&#8260;<sub>2</sub> ft.'
+										+'<br><br>'
+										+'The diameter (the dotted line) is the same distance as s<sub>2</sub> in this shape.'
 										+'<br><br>'
 										+'<table>'
 										+'<tr><td>The formula:</td><td>&nbsp;</td><td>P = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)</td></tr>'
@@ -747,11 +749,11 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 								),
 				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (sides s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'The perimeter (the outside of this shape) consists of three sides (s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
 										+'<br><br>'
 										+'For the half circle, we are given the radius of 2 <sup>1</sup>&#8260;<sub>4</sub> in. That means that the diameter (the dotted line) is double that (2 * 2 <sup>1</sup>&#8260;<sub>4</sub>) or 4 <sup>1</sup>&#8260;<sub>2</sub> in.'
 										+'<br><br>'
-										+'The diameter of 4 <sup>1</sup>&#8260;<sub>2</sub> is the same distance as s<sub>2</sub>.'
+										+'The diameter (the dotted line) is the same distance as s<sub>2</sub> in this shape.'
 										+'<br><br>'
 										+'<table>'
 										+'<tr><td>The formula:</td><td>&nbsp;</td><td>P = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)</td></tr>'
