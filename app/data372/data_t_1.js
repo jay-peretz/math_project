@@ -16,13 +16,11 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\image{$illustration}}',
                        answer: '\\css'+
-					   				'{\\btngrp'+
-										'{\\rowgrp'+
-											'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
-											'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
-											'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-											'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
-										'}'+
+									'{\\rowgrp'+
+										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
 									'}'+
 									'{margin-left-small}',
                         controls: {

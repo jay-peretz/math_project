@@ -12,19 +12,19 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-									+'{\\html{$probQuestion}}'
+									+'{\\str{$probQuestion}}'
 									+'{\\html{&nbsp;}}'
-									+'{\\image{$illustration}}',
-                       answer: '\\css'+
-					   				'{\\btngrp'+
+									+'{\\image{$illustration}{$alt}}',
+                       answer: '\\pan{5}{7}'+
+					  				'{\\css'+
 										'{\\rowgrp'+
 											'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 											'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
 											'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
 											'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
 										'}'+
-									'}'+
-									'{margin-left-small}',
+									'{margin-left-small}'+
+								'}',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
@@ -44,8 +44,9 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
                         }
                     }]
                 }]
-            },
-			simpleQuestion: {
+            }
+			,
+			simpleWideQuestion: {
                 title: 'Area of Trapezoids and Shapes Consisting of Two Rectangles',
                 children: [{
                     title: 'Main Answer',
@@ -54,17 +55,54 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 									+'{\\str{$probQuestion}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\image{$illustration}{$alt}{$width}{$height}}',
-                       answer: '\\css'+
-					   				'{$simpleAnswer}'+
-									'{margin-left-small}',
+                       answer: '\\pan{6}{6}'+
+					   				'{\\css'+
+										'{$simpleAnswer}'+
+										'{margin-left-small}'+
+									'}',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\str{$helpTexts}}'
+										+'{\\html{$helpTexts}}'
 										+'{\\css'
 											+'{\\grp'
 												+'{\\html{Answer: &nbsp;}}'
 												+'{$answerHelp}'
+											+'}'
+											+'{help-answer-text}'
+										+'}',
+                        }
+                    }]
+                }]
+            },
+			multipleChoiceSimpleHelp: {
+                title: 'Area of Trapezoids and Shapes Consisting of Two Rectangles',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+									+'{\\str{$probQuestion}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\image{$illustration}{$alt}}',
+                       answer: '\\pan{5}{7}'+
+					  				'{\\css'+
+										'{\\rowgrp'+
+											'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+											'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+											'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+											'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+										'}'+
+									'{margin-left-small}'+
+								'}',
+                        controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{$firstHelp}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\html{Answer: }}'
+												+'{\\str{$answerHelp}}'
 											+'}'
 											+'{help-answer-text}'
 										+'}'
@@ -75,422 +113,371 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
         },
         data = [
 			{ // problem 1
-				probQuestion: 'Which distances are the same length?',
-				illustration: 'T.1/Trapezoid_01.jpg',
-				buttonValueA: 'F',
-				buttonLabelA: dataUtils.pre('\\str{d and b}'),
-				buttonValueB: 'T',
-				buttonLabelB: dataUtils.pre('\\str{e and b}'),
-				buttonValueC: 'F',
-				buttonLabelC: dataUtils.pre('\\str{a and c}'),
-				buttonValueD: 'F',
-				buttonLabelD: dataUtils.pre('\\str{no sides are known to be equal in length}'),
-				aValue: '<em>a</em>',
-				bValue: '<em>b</em>',
-				cValue: '<em>c</em>',
-				dValue: '<em>d</em>',
-				eValue: '<em>e</em>',
-                firstHelp: 'Sides $$dValue and $$bValue are not parallel, and they are not equal in length.  Side $$dValue is longer than side $$bValue.',
-				secondHelp: 'Sides $$aValue and $$cValue are parallel, but not equal in length.  Side $$cValue is longer than side $$aValue.',
-				thirdHelp: 'Only sides $$bValue and $$eValue are equal in length. They are actually opposite sides of an internal rectangle.',
-				answerHelp: 'Sides $$eValue and $$bValue are equal in length',
-				template: 'multipleChoice' 
-			}
-			,
-			{ // problem 2
-				probQuestion: 'Which distances are the same length?',
+				probQuestion: 'The formula to find the area of a trapezoid is: <br><br>'
+								+'A = <sup>1</sup>&#8260;<sub>2</sub> * (b<sub>1</sub> &#43; b<sub>2</sub>) * h.<br><br>Which two sides below represent b<sub>1</sub> and b<sub>2</sub>?<br><br>',
 				illustration: 'T.1/Trapezoid_02.jpg',
+				alt: 'Trapezoid',
 				buttonValueA: 'F',
-				buttonLabelA: dataUtils.pre('\\str{s<sub>1</sub> and s<sub>3</sub>}'),
+				buttonLabelA: dataUtils.pre('\\html{s<sub>2</sub> and s<sub>4</sub>}'),
 				buttonValueB: 'F',
-				buttonLabelB: dataUtils.pre('\\str{s<sub>2</sub> and s<sub>4</sub>}'),
-				buttonValueC: 'F',
-				buttonLabelC: dataUtils.pre('\\str{s<sub>1</sub> and s<sub>4</sub>}'),
-				buttonValueD: 'T',
-				buttonLabelD: dataUtils.pre('\\str{no sides are known to be equal in length}'),
+				buttonLabelB: dataUtils.pre('\\html{s<sub>1</sub> and s<sub>4</sub>}'),
+				buttonValueC: 'T',
+				buttonLabelC: dataUtils.pre('\\html{s<sub>1</sub> and s<sub>3</sub>}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\html{s<sub>2</sub> and s<sub>3</sub>}'),
 				s1Value: 's<sub>1</sub>',
 				s2Value: 's<sub>2</sub>',
 				s3Value: 's<sub>3</sub>',
 				s4Value: 's<sub>4</sub>',
-                firstHelp: '$$s1Value and $$s3Value are parallel, but not equal in length: $$s3Value is longer than $$s1Value.',
-				secondHelp: '$$s2Value and $$s4Value are not parallel, and they are not equal in length: $$s2Value is longer than $$s4Value.',
-				thirdHelp: '$$s1Value and $$s4Value would only be equal if the internal rectangle was actually a square. We don\'t know this, so we <u><strong>cannot</strong></u> assume they are equal.',
-				answerHelp: 'no sides are known to be equal in length',
+                firstHelp: 'b<sub>1</sub> and b<sub>2</sub> in the formula are the two bases of the trapezoid.',
+				secondHelp: 'The bases of a trapezoid are always the only two sides which are <strong><u>parallel</u></strong> to each other.',
+				thirdHelp: '$$s1Value and $$s3Value are parallel sides. They are the bases.',
+				answerHelp: 's<sub>1</sub> and s<sub>3</sub>',
+				template: 'multipleChoice'
+			}
+			,
+			{ // problem 2
+				probQuestion: 'The formula to find the area of a trapezoid is: '
+								+'A = <sup>1</sup>&#8260;<sub>2</sub> * (b<sub>1</sub> &#43; b<sub>2</sub>) * h. Which letter below represents <em>h</em> (the height of the trapezoid)?',
+				probQuestion: 'The formula to find the area of a trapezoid is: <br><br>'
+								+'A = <sup>1</sup>&#8260;<sub>2</sub> * (b<sub>1</sub> &#43; b<sub>2</sub>) * h.<br><br>Which letter below represents <em>h</em> (the height of the trapezoid)?<br><br>',
+				illustration: 'T.1/Trapezoid_01.jpg',
+				alt: 'Trapezoid',
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{a or c}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\str{c}'),
+				buttonValueC: 'T',
+				buttonLabelC: dataUtils.pre('\\str{e or b}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\str{d}'),
+                firstHelp: 'The height of a trapezoid is the distance between the two bases of the trapezoid.',
+				secondHelp: 'Since a and c are the parallel sides of the trapezoid, they are the bases. The distance between them is either distance e or distance b. ',
+				thirdHelp: 'd is <u>not</u> the height because it is a slanted line (not perpendicular to the bases).',
+				answerHelp: 'e or b',
 				template: 'multipleChoice'
 			}
 			,
 			{ // problem 3
-				probQuestion: 'Choose the formula that would correctly solve for the perimeter of the trapezoid below.',
-				illustration: 'T.1/Trapezoid_01.jpg',
-				buttonValueA: 'F',
-				buttonLabelA: dataUtils.pre('\\str{P = a + b + c + d + e}'),
-				buttonValueB: 'F',
-				buttonLabelB: dataUtils.pre('\\str{P = 2a + 2b}'),
-				buttonValueC: 'T',
-				buttonLabelC: dataUtils.pre('\\str{P = a + b + c + d}'),
-				buttonValueD: 'F',
-				buttonLabelD: dataUtils.pre('\\str{P = a + b + (e - c) + d}'),
-                firstHelp: 'The four sides of the trapezoid make up its perimeter (the distance around the outside of the shape).  Side e is <u><strong>inside</strong></u> the trapezoid so it is <u><strong>not</strong></u> part of the perimeter.',
-				secondHelp: 'No two sides are the same length, so no sides can be duplicated.',
-				thirdHelp: 'The correct formula is: &nbsp; P = a + b + c + d',
-				answerHelp: 'P = a + b + c + d',
-				template: 'multipleChoice'
+				probQuestion: 'Solve for the area of the following shape.',
+				illustration: 'U.1/Trap_a_10in_b_4in_d_5in.jpg',
+				alt: 'trapezoid',
+				width: '450px',
+				height: '175px',
+				simpleAnswer: dataUtils.pre('\\grp'+
+												'{\\input{46}}'+
+												'{\\str{in<sup>2</sup>}}'
+								),
+                helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br>'
+								+'Identify the two bases and the height of the figure.<br><br>'
+								+'<table>'
+									+'<tr><td>Side a (10) is b<sub>1</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>1</sub> = 10</td></tr>'
+									+'<tr><td>Side c (10 &#43; 3) is b<sub>2</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>2</sub> = 13</td></tr>'
+									+'<tr><td>Side b (4) is the height.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>h = 4</td></tr>'
+								+'</table><br><br>'
+								+'Now we can write the formula and substitute.<br><br>'
+								+'<table>'
+									+'<tr><td>Formula:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (b<sub>1</sub> &#43; b<sub>2</sub>) &bull; h</td></tr>'
+									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (10 &#43; 13) &bull; 4</td></tr>'
+									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 46</td></tr>'
+								+'</table><br>',
+				answerHelp: dataUtils.pre('\\str{46 sq. in. or 46 in<sup>2</sup>}'
+								),
+				template: 'simpleWideQuestion' 
 			}
 			,
 			{ // problem 4
-				probQuestion: 'Choose the formula that would correctly solve for the perimeter of the trapezoid below.',
-				illustration: 'T.1/Trapezoid_02.jpg',
-				buttonValueA: 'F',
-				buttonLabelA: dataUtils.pre('\\str{P = 2($$s1Value) + 2($$s4Value)}'),
-				buttonValueB: 'T',
-				buttonLabelB: dataUtils.pre('\\str{P = $$s1Value + $$s2Value + $$s3Value + $$s4Value}'),
-				buttonValueC: 'F',
-				buttonLabelC: dataUtils.pre('\\str{P = 4($$s1Value)}'),
-				buttonValueD: 'F',
-				buttonLabelD: dataUtils.pre('\\str{P = ($$s3Value - $$s1Value) + $$s2Value + $$s4Value}'),
-				s1Value: 's<sub>1</sub>',
-				s2Value: 's<sub>2</sub>',
-				s3Value: 's<sub>3</sub>',
-				s4Value: 's<sub>4</sub>',
-                firstHelp: 'The four sides of the trapezoid make up its perimeter (the distance around the outside of the shape).',
-				secondHelp: 'No two sides are the same length, so no sides can be duplicated.',
-				thirdHelp: 'The correct formula is: &nbsp; P = $$s1Value + $$s2Value + $$s3Value + $$s4Value',
-				answerHelp: 'P = $$s1Value + $$s2Value + $$s3Value + $$s4Value',
-				template: 'multipleChoice'
+				probQuestion: 'Solve for the area of the following shape.',
+				illustration: 'U.1/04_Trap_a_5in_b_2in_d_2.5in.jpg',
+				alt: 'trapezoid',
+				width: '450px',
+				height: '173px',
+				simpleAnswer: dataUtils.pre('\\grp'+
+												'{\\input{11.5}}'+
+												'{\\str{in<sup>2</sup>}}'
+								),
+                helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br>'
+								+'Identify the two bases and the height of the figure.<br><br>'
+								+'<table>'
+									+'<tr><td>Side a (5) is b<sub>1</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>1</sub> = 10</td></tr>'
+									+'<tr><td>Side c (5 &#43; 1.5) is b<sub>2</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>2</sub> = 6.5</td></tr>'
+									+'<tr><td>Side b (2) is the height.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>h = 2</td></tr>'
+								+'</table><br><br>'
+								+'Now we can write the formula and substitute.<br><br>'
+								+'<table>'
+									+'<tr><td>Formula:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (b<sub>1</sub> &#43; b<sub>2</sub>) &bull; h</td></tr>'
+									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (5 &#43; 6.5) &bull; 2</td></tr>'
+									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 11.5</td></tr>'
+								+'</table><br>',
+				answerHelp: dataUtils.pre('\\str{11.5 sq. in. or 11.5 in<sup>2</sup>}'
+								),
+				template: 'simpleWideQuestion' 
 			}
 			,
 			{ // problem 5
-				illustration: 'T.1/Trap_a_10in_b_4in_d_5in.jpg',
+				probQuestion: 'Solve for the area of the following shape. Round the answer to the nearest tenth of a meter.',
+				illustration: 'U.1/Trap_s1_8m_s2_3.75m_s4_3m.jpg',
 				alt: 'trapezoid',
-				width: '400px',
-				height: '156px',
-				probQuestion: 'What is the length of side $$cValue?',
+				width: '450px',
+				height: '162px',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{13}}'+
-												'{\\str{in}}'
+												'{\\input{27.4}}'+
+												'{\\str{m<sup>2</sup>}}'
 								),
-				aValue: '<em>a</em>',
-				bValue: '<em>b</em>',
-				cValue: '<em>c</em>',
-				dValue: '<em>d</em>',
-				helpTexts: 'The length of side $$cValue is the same as side $$aValue (10 inches) plus the 3 inches that are the base of the internal triangle.<br><br><table><tr><td>Distance of side $$cValue &nbsp; = &nbsp;</td><td>$$aValue + 3</td></tr>'
-										+'<tr><td>&nbsp;</td><td>10 + 3</td></tr></table><br>',
-				answerHelp: dataUtils.pre('\\str{13 in}'
+                helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br>'
+								+'Identify the two bases and the height of the figure.<br><br>'
+								+'<table>'
+									+'<tr><td>s<sub>1</sub> (8) is b<sub>1</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>1</sub> = 8</td></tr>'
+									+'<tr><td>s<sub>3</sub> (8 &#43; 2.25) is b<sub>2</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>2</sub> = 10.25</td></tr>'
+									+'<tr><td>s<sub>4</sub> (3) is the height.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>h = 3</td></tr>'
+								+'</table><br><br>'
+								+'Now we can write the formula and substitute.<br><br>'
+								+'<table>'
+									+'<tr><td>Formula:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (b<sub>1</sub> &#43; b<sub>2</sub>) &bull; h</td></tr>'
+									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (8 &#43; 2.25) &bull; 3</td></tr>'
+									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 27.375</td></tr>'
+								+'</table><br><br>'
+								+'Round answer to the tenths place.<br><br>',
+				answerHelp: dataUtils.pre('\\str{27.4 sq. m. or 27.4 m<sup>2</sup>}'
 								),
-				template: 'simpleQuestion' 
+				template: 'simpleWideQuestion' 
 			}
 			,
 			{ // problem 6
-				illustration: 'T.1/Trap_s1_8m_s2_3.75m_s4_3m.jpg',
+				probQuestion: 'Solve for the area of the following shape.',
+				illustration: 'U.1/06_Trap_s1_16m_s2_7.5m_s4_6m.jpg',
 				alt: 'trapezoid',
-				width: '400px',
-				height: '144px',
-				probQuestion: 'What is the length of side $$s3Value?',
+				width: '450px',
+				height: '165px',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{10.25}}'+
-												'{\\str{m}}'
+												'{\\input{109}}'+
+												'{\\str{m<sup>2</sup>}}'
 								),
-				s1Value: 's<sub>1</sub>',
-				s2Value: 's<sub>2</sub>',
-				s3Value: 's<sub>3</sub>',
-				s4Value: 's<sub>4</sub>',
-				helpTexts: 'The length of side $$s3Value is the same distance as side $$s1Value (8 meters) plus the 2.25 meters that are the base of the internal triangle.<br><br><table><tr><td>Distance of side $$s3Value &nbsp; = &nbsp; </td><td>$$s1Value + 2.25</td></tr>'
-										+'<tr><td>&nbsp;</td><td>8 + 2.25</td></tr></table><br>',
-				answerHelp: dataUtils.pre('\\str{10.25 m}'
+                helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br>'
+								+'Identify the two bases and the height of the figure.<br><br>'
+								+'<table>'
+									+'<tr><td>s<sub>1</sub> (16) is b<sub>1</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>1</sub> = 16</td></tr>'
+									+'<tr><td>s<sub>3</sub> (16 &#43; 4.5) is b<sub>2</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>2</sub> = 20.5</td></tr>'
+									+'<tr><td>s<sub>4</sub> (6) is the height.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>h = 6</td></tr>'
+								+'</table><br><br>'
+								+'Now we can write the formula and substitute.<br><br>'
+								+'<table>'
+									+'<tr><td>Formula:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (b<sub>1</sub> &#43; b<sub>2</sub>) &bull; h</td></tr>'
+									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (16 &#43; 20.5) &bull; 6</td></tr>'
+									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 109</td></tr>'
+								+'</table><br><br>'
+								+'Round answer to the tenths place.<br><br>',
+				answerHelp: dataUtils.pre('\\str{109 sq. m. or 109 m<sup>2</sup>}'
 								),
-				template: 'simpleQuestion' 
+				template: 'simpleWideQuestion' 
 			}
 			,
 			{ // problem 7
-				illustration: 'T.1/Trap_a_10in_b_4in_d_5in.jpg',
+				probQuestion: 'Solve for the area of the following shape.',
+				illustration: 'U.1/07_Trap_s1_15cm_s2_12.5cm_H_10cm.jpg',
 				alt: 'trapezoid',
 				width: '400px',
-				height: '156px',
-				probQuestion: 'Solve for the perimeter of the following shape:',
+				height: '188px',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{32}}'+
-												'{\\str{in}}'
+												'{\\input{225}}'+
+												'{\\str{cm<sup>2</sup>}}'
 								),
-				aValue: 'a',
-				bValue: 'b',
-				cValue: 'c',
-				dValue: 'd',
-                helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br><table><tr><td>Write the formula:&nbsp;&nbsp;</td><td>P = $$aValue + $$bValue + $$cValue + $$dValue</td></tr>'
-										+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>P = 10 + 4 + (10 + 3) + 5</td></tr>'
-										+'<tr><td>Solve:&nbsp;&nbsp;</td><td> P = 32</td></tr></table><br>',
-				answerHelp: dataUtils.pre('\\str{32 in}'
+                helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br>'
+								+'Identify the two bases and the height of the figure.<br><br>'
+								+'<table>'
+									+'<tr><td>s<sub>1</sub> (15) is b<sub>1</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>1</sub> = 15</td></tr>'
+									+'<tr><td>s<sub>3</sub> (15 &#43; 7.5 &#43; 7.5) is b<sub>2</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>2</sub> = 30</td></tr>'
+									+'<tr><td>The height is 10.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>h = 10</td></tr>'
+								+'</table><br><br>'
+								+'Now we can write the formula and substitute.<br><br>'
+								+'<table>'
+									+'<tr><td>Formula:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (b<sub>1</sub> &#43; b<sub>2</sub>) &bull; h</td></tr>'
+									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (15 &#43; 30) &bull; 10</td></tr>'
+									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 225</td></tr>'
+								+'</table><br>',
+				answerHelp: dataUtils.pre('\\str{225 sq. cm. or 225 cm<sup>2</sup>}'
 								),
-				template: 'simpleQuestion' 
+				template: 'simpleWideQuestion' 
 			}
 			,
 			{ // problem 8
-				illustration: 'T.1/Trap_s1_8m_s2_3.75m_s4_3m.jpg',
+				probQuestion: 'Solve for the area of the following shape.',
+				illustration: 'U.1/08_Trap_s1_7.5cm_s2_6.25cm.jpg',
 				alt: 'trapezoid',
 				width: '400px',
-				height: '144px',
-				probQuestion: 'Solve for the perimeter of the following shape:',
+				height: '188px',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{25}}'+
-												'{\\str{m}}'
+												'{\\input{56.25}}'+
+												'{\\str{cm<sup>2</sup>}}'
 								),
-				s1Value: 's<sub>1</sub>',
-				s2Value: 's<sub>2</sub>',
-				s3Value: 's<sub>3</sub>',
-				s4Value: 's<sub>4</sub>',
-				helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br><table><tr><td>Write the formula:&nbsp;&nbsp;</td><td>P = $$s1Value + $$s2Value + $$s3Value + $$s4Value</td></tr>'
-										+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>P = 8 + 3.75 + (8 + 2.25) + 3</td></tr>'
-										+'<tr><td>Solve:&nbsp;&nbsp;</td><td> P = 25</td></tr></table><br>',
-				answerHelp: dataUtils.pre('\\str{25 m}'
+                helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br>'
+								+'Identify the two bases and the height of the figure.<br><br>'
+								+'<table>'
+									+'<tr><td>s<sub>1</sub> (7.5) is b<sub>1</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>1</sub> = 7.5</td></tr>'
+									+'<tr><td>s<sub>3</sub> (7.5 &#43; 3.75 &#43; 3.75) is b<sub>2</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>2</sub> = 15</td></tr>'
+									+'<tr><td>The height is 5.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>h = 5</td></tr>'
+								+'</table><br><br>'
+								+'Now we can write the formula and substitute.<br><br>'
+								+'<table>'
+									+'<tr><td>Formula:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (b<sub>1</sub> &#43; b<sub>2</sub>) &bull; h</td></tr>'
+									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (7.5 &#43; 15) &bull; 5</td></tr>'
+									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 56.25</td></tr>'
+								+'</table><br>',
+				answerHelp: dataUtils.pre('\\str{56.25 sq. cm. or 56.25 cm<sup>2</sup>}'
 								),
-				template: 'simpleQuestion' 
+				template: 'simpleWideQuestion' 
 			}
 			,
 			{ // problem 9
-				illustration: 'T.1/Trapezoid-15cm.jpg',
+				probQuestion: 'Solve for the area of the following shape.',
+				illustration: 'U.1/09_Trap_a_22ft_b_25ft_H_22ft.jpg',
 				alt: 'trapezoid',
-				width: '387px',
-				height: '182px',
-				probQuestion: 'Solve for the perimeter of the following shape:',
+				width: '400px',
+				height: '212px',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{70}}'+
-												'{\\str{m}}'
+												'{\\input{740}}'+
+												'{\\str{ft<sup>2</sup>}}'
 								),
-				s1Value: 's<sub>1</sub>',
-				s2Value: 's<sub>2</sub>',
-				s3Value: 's<sub>3</sub>',
-				s4Value: 's<sub>4</sub>',
-				helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br><table><tr><td>Write the formula:&nbsp; </td><td>P = $$s1Value + $$s2Value + $$s3Value + $$s4Value</td></tr>'
-										+'<tr><td>Substitution:&nbsp; </td><td>P = 15 + 12.5 + (7.5 + 1.5 + 7.5) + 12.5</td></tr>'
-										+'<tr><td>Solve:&nbsp; </td><td> P = 70</td></tr></table><br>',
-				answerHelp: dataUtils.pre('\\str{70 m}'
+                helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br>'
+								+'Identify the two bases and the height of the figure.<br><br>'
+								+'<table>'
+									+'<tr><td>s<sub>1</sub> (22) is b<sub>1</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>1</sub> = 22</td></tr>'
+									+'<tr><td>s<sub>3</sub> (22 &#43; 15 &#43; 15) is b<sub>2</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>2</sub> = 52</td></tr>'
+									+'<tr><td>The height is 20.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>h = 20</td></tr>'
+								+'</table><br><br>'
+								+'Now we can write the formula and substitute.<br><br>'
+								+'<table>'
+									+'<tr><td>Formula:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (b<sub>1</sub> &#43; b<sub>2</sub>) &bull; h</td></tr>'
+									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (22 &#43; 42) &bull; 20</td></tr>'
+									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 740</td></tr>'
+								+'</table><br>',
+				answerHelp: dataUtils.pre('\\str{740 sq. ft. or 740 ft<sup>2</sup>}'
 								),
-				template: 'simpleQuestion' 
+				template: 'simpleWideQuestion' 
 			}
 			,
 			{ // problem 10
-				illustration: 'T.1/Trap_a_22ft_b_25ft.jpg',
+				probQuestion: 'Solve for the area of the following shape.',
+				illustration: 'U.1/10_Trap_a_33ft_b_37.5ft_H_30ft.jpg',
 				alt: 'trapezoid',
-				width: '300px',
-				height: '159px',
-				probQuestion: 'Solve for the perimeter of the following shape:',
+				width: '400px',
+				height: '208px',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{124}}'+
-												'{\\str{ft}}'
+												'{\\input{1665}}'+
+												'{\\str{ft<sup>2</sup>}}'
 								),
-				aValue: 'a',
-				bValue: 'b',
-				cValue: 'c',
-				dValue: 'd',
-                helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br><table><tr><td>Write the formula:&nbsp;</td><td>P = $$aValue + $$bValue + $$cValue + $$dValue</td></tr>'
-										+'<tr><td>Substitution:&nbsp;</td><td>P = 22 + 25 + (15 + 22 +15) + 25</td></tr>'
-										+'<tr><td>Solve:&nbsp;</td><td> P = 124</td></tr></table><br>',
-				answerHelp: dataUtils.pre('\\str{124 ft}'
+                helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br>'
+								+'Identify the two bases and the height of the figure.<br><br>'
+								+'<table>'
+									+'<tr><td>s<sub>1</sub> (33) is b<sub>1</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>1</sub> = 33</td></tr>'
+									+'<tr><td>s<sub>3</sub> (33 &#43; 22.5 &#43; 22.5) is b<sub>2</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>2</sub> = 78</td></tr>'
+									+'<tr><td>The height is 30.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>h = 30</td></tr>'
+								+'</table><br><br>'
+								+'Now we can write the formula and substitute.<br><br>'
+								+'<table>'
+									+'<tr><td>Formula:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (b<sub>1</sub> &#43; b<sub>2</sub>) &bull; h</td></tr>'
+									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (33 &#43; 78) &bull; 30</td></tr>'
+									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 1665</td></tr>'
+								+'</table><br>',
+				answerHelp: dataUtils.pre('\\str{1665 sq. ft. or 1665 ft<sup>2</sup>}'
 								),
-				template: 'simpleQuestion' 
+				template: 'simpleWideQuestion' 
 			}
 			,
 			{ // problem 11
-				probQuestion: 'Choose the expression that has the same length as $$s1Value.',
+				probQuestion: 'Choose the expression (the length by the width) that makes a rectangle.<br><br>',
 				illustration: 'T.1/Notched_Rectangle_04.jpg',
-				buttonValueA: 'T',
-				buttonLabelA: dataUtils.pre('\\str{$$s3Value - $$s5Value}'),
+				alt: 'Notched Rectangle',
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\html{s<sub>6</sub> by s<sub>3</sub>}'),
 				buttonValueB: 'F',
-				buttonLabelB: dataUtils.pre('\\str{$$s2Value}'),
-				buttonValueC: 'F',
-				buttonLabelC: dataUtils.pre('\\str{$$s4Value - $$s6Value}'),
+				buttonLabelB: dataUtils.pre('\\html{s<sub>1</sub> by s<sub>3</sub>}'),
+				buttonValueC: 'T',
+				buttonLabelC: dataUtils.pre('\\html{s<sub>5</sub> by s<sub>6</sub>}'),
 				buttonValueD: 'F',
-				buttonLabelD: dataUtils.pre('\\str{$$s3Value + $$s5Value}'),
-				s1Value: 's<sub>1</sub>',
-				s2Value: 's<sub>2</sub>',
-				s3Value: 's<sub>3</sub>',
-				s4Value: 's<sub>4</sub>',
-				s5Value: 's<sub>5</sub>',
-				s6Value: 's<sub>6</sub>',
-                firstHelp: '$$s1Value is a horizontal distance.',
-				secondHelp: '$$s3Value is the long horizontal side. The other two horizontal sides, $$s5Value plus $$s1Value together equal the length of $$s3Value.',
-				thirdHelp: 'If we subtract $$s5Value from $$s3Value, we have $$s1Value.',
-				answerHelp: '$$s3Value - $$s5Value',
-				template: 'multipleChoice'
+				buttonLabelD: dataUtils.pre('\\html{s<sub>1</sub> by s<sub>4</sub>}'),
+                firstHelp: 's<sub>5</sub> is a length and s<sub>6</sub> is a width that forms a rectangle. None of the other given pairs of sides form the length and width of a rectangle. ',
+				answerHelp: 's<sub>5</sub> by s<sub>6</sub>',
+				template: 'multipleChoiceSimpleHelp'
 			}
 			,
 			{ // problem 12
-				probQuestion: 'Choose the expression that has the same length as $$s2Value.',
+				probQuestion: 'Choose the expression (the length by the width) that makes a rectangle.<br><br>',
 				illustration: 'T.1/Notched_Rectangle_04.jpg',
-				buttonValueA: 'F',
-				buttonLabelA: dataUtils.pre('\\str{$$s4Value + $$s6Value}'),
+				alt: 'Notched Rectangle',
+				buttonValueA: 'T',
+				buttonLabelA: dataUtils.pre('\\html{s<sub>2</sub> by s<sub>3</sub>}'),
 				buttonValueB: 'F',
-				buttonLabelB: dataUtils.pre('\\str{$$s3Value - $$s6Value}'),
-				buttonValueC: 'T',
-				buttonLabelC: dataUtils.pre('\\str{$$s4Value - $$s6Value}'),
+				buttonLabelB: dataUtils.pre('\\html{s<sub>1</sub> by s<sub>5</sub>}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\html{s<sub>1</sub> by s<sub>4</sub>}'),
 				buttonValueD: 'F',
-				buttonLabelD: dataUtils.pre('\\str{$$s3Value + $$s5Value}'),
-				s1Value: 's<sub>1</sub>',
-				s2Value: 's<sub>2</sub>',
-				s3Value: 's<sub>3</sub>',
-				s4Value: 's<sub>4</sub>',
-				s5Value: 's<sub>5</sub>',
-				s6Value: 's<sub>6</sub>',
-                firstHelp: '$$s2Value is a vertical distance.',
-				secondHelp: '$$s4Value is the long vertical side. The other two vertical sides, $$s6Value plus $$s2Value together equal the length of $$s4Value.',
-				thirdHelp: 'If we subtract $$s6Value from $$s4Value, we have $$s2Value.',
-				answerHelp: '$$s4Value - $$s6Value',
-				template: 'multipleChoice'
+				buttonLabelD: dataUtils.pre('\\html{s<sub>1</sub> by s<sub>4</sub>}'),
+                firstHelp: 's<sub>3</sub> is a length and s<sub>2</sub> is a width that forms a rectangle. None of the other given pairs of sides form the length and width of a rectangle. ',
+				answerHelp: 's<sub>2</sub> by s<sub>3</sub>',
+				template: 'multipleChoiceSimpleHelp'
 			}
 			,
 			{ // problem 13
-				probQuestion: 'Choose the expression that has the same length as $$s3Value.',
+				probQuestion: 'Choose the formula given below which will solve for the area of the figure.<br><br>',
 				illustration: 'T.1/Notched_Rectangle_04.jpg',
+				alt: 'Notched Rectangle',
 				buttonValueA: 'F',
-				buttonLabelA: dataUtils.pre('\\str{$$s4Value - $$s5Value}'),
-				buttonValueB: 'F',
-				buttonLabelB: dataUtils.pre('\\str{$$s4Value}'),
+				buttonLabelA: dataUtils.pre('\\html{A = (s<sub>4</sub> &bull; s<sub>3</sub>) + (s<sub>2</sub> &bull; s<sub>3</sub>)}'),
+				buttonValueB: 'T',
+				buttonLabelB: dataUtils.pre('\\html{A = (s<sub>5</sub> &bull; s<sub>6</sub>) + (s<sub>2</sub> &bull; s<sub>3</sub>)}'),
 				buttonValueC: 'F',
-				buttonLabelC: dataUtils.pre('\\str{$$s2Value + $$s6Value}'),
-				buttonValueD: 'T',
-				buttonLabelD: dataUtils.pre('\\str{$$s5Value + $$s1Value}'),
+				buttonLabelC: dataUtils.pre('\\html{A = (s<sub>5</sub> &bull; s<sub>6</sub>) + (s<sub>4</sub> &bull; s<sub>1</sub>)}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\html{A = (s<sub>4</sub> &bull; s<sub>5</sub>) + (s<sub>2</sub> &bull; s<sub>3</sub>)}'),
 				s1Value: 's<sub>1</sub>',
 				s2Value: 's<sub>2</sub>',
 				s3Value: 's<sub>3</sub>',
 				s4Value: 's<sub>4</sub>',
 				s5Value: 's<sub>5</sub>',
 				s6Value: 's<sub>6</sub>',
-                firstHelp: '$$s3Value is a horizontal distance.',
-				secondHelp: '$$s3Value is the long horizontal side. ',
-				thirdHelp: 'The other two horizontal sides, $$s5Value and $$s1Value, must be added together to equal the length of $$s3Value.',
-				answerHelp: '$$s5Value + $$s1Value',
+                firstHelp: 'Let\'s look at the possible answers:<br><br>'
+								+'(a) &nbsp; A = ($$s4Value &bull; $$s3Value)  +  ($$s2Value &bull; $$s3Value)<br><br>'
+								+'$$s4Value &bull; $$s3Value and $$s2Value &bull; $$s3Value will each solve for the area of a rectangle. However, the area of the rectangle with dimensions of $$s4Value &bull; $$s3Value by itself is larger than the area of the shape we want to solve for. (a) can\'t be correct.',
+				secondHelp: '(c) &nbsp; A = ($$s5Value &bull; $$s6Value)  +  ($$s4Value &bull; $$s1Value)<br><br>'
+								+'$$s5Value &bull; $$s6Value solves for the area of a rectangle. However, $$s4Value &bull; $$s1Value will not solve for an area; $$s4Value and $$s1Value are not the dimensions (the length and width) of a rectangle. The sides of $$s4Value and $$s1Value do not meet to create a box. (c) can\'t be correct.',
+				thirdHelp: '(d) &nbsp; A = ($$s4Value &bull; $$s5Value)  +  ($$s2Value &bull; $$s3Value)<br><br>'
+								+'$$s4Value &bull; $$s5Value and $$s2Value &bull; $$s3Value will each solve for the area of a rectangle. However, the areas of these two rectangles overlap each other. The area at the bottom left of this figure is incorrectly counted twice. (d) can\'t be correct.<br><br>'
+							+'(b) &nbsp; A = ($$s5Value &bull; $$s6Value)  +  ($$s2Value &bull; $$s3Value)<br><br>'
+								+'$$s5Value &bull; $$s6Value and $$s2Value &bull; $$s3Value will each solve for the area of a rectangle. The areas of these two rectangles do not overlap each other. Together they correctly measure the entire area of the given shape. (b) is the correct answer.',
+				answerHelp: 'A = (s<sub>5</sub> &bull; s<sub>6</sub>) + (s<sub>2</sub> &bull; s<sub>3</sub>)',
 				template: 'multipleChoice'
 			}
 			,
 			{ // problem 14
-				probQuestion: 'Choose the expression that has the same length as $$s4Value.',
+				probQuestion: 'Choose the formula given below which will solve for the area of the figure.<br><br>',
 				illustration: 'T.1/Notched_Rectangle_04.jpg',
+				alt: 'Notched Rectangle',
 				buttonValueA: 'F',
-				buttonLabelA: dataUtils.pre('\\str{$$s5Value + $$s1Value}'),
+				buttonLabelA: dataUtils.pre('\\html{A = (s<sub>4</sub> &bull; s<sub>2</sub>) + (s<sub>5</sub> &bull; s<sub>6</sub>)}'),
 				buttonValueB: 'F',
-				buttonLabelB: dataUtils.pre('\\str{$$s3Value + $$s2Value}'),
-				buttonValueC: 'F',
-				buttonLabelC: dataUtils.pre('\\str{$$s3Value - $$s5Value}'),
-				buttonValueD: 'T',
-				buttonLabelD: dataUtils.pre('\\str{$$s6Value + $$s2Value}'),
-				s1Value: 's<sub>1</sub>',
-				s2Value: 's<sub>2</sub>',
-				s3Value: 's<sub>3</sub>',
-				s4Value: 's<sub>4</sub>',
-				s5Value: 's<sub>5</sub>',
-				s6Value: 's<sub>6</sub>',
-                firstHelp: '$$s4Value is a vertical distance.',
-				secondHelp: '$$s4Value is the long vertical side.',
-				thirdHelp: 'The other two vertical sides, $$s6Value and $$s2Value, must be added together to equal the length of $$s4Value.',
-				answerHelp: '$$s6Value + $$s2Value',
-				template: 'multipleChoice'
-			}
-			,
-			{ // problem 15
-				probQuestion: 'Choose the expression that has the same length as $$s5Value.',
-				illustration: 'T.1/Notched_Rectangle_04.jpg',
-				buttonValueA: 'F',
-				buttonLabelA: dataUtils.pre('\\str{$$s3Value - $$s6Value}'),
-				buttonValueB: 'F',
-				buttonLabelB: dataUtils.pre('\\str{$$s4Value - $$s2Value}'),
+				buttonLabelB: dataUtils.pre('\\html{A = (s<sub>4</sub> &bull; s<sub>5</sub>) + (s<sub>2</sub> &bull; s<sub>3</sub>)}'),
 				buttonValueC: 'T',
-				buttonLabelC: dataUtils.pre('\\str{$$s3Value - $$s1Value}'),
+				buttonLabelC: dataUtils.pre('\\html{A = (s<sub>4</sub> &bull; s<sub>5</sub>) + (s<sub>1</sub> &bull; s<sub>2</sub>)}'),
 				buttonValueD: 'F',
-				buttonLabelD: dataUtils.pre('\\str{$$s1Value + $$s6Value}'),
+				buttonLabelD: dataUtils.pre('\\html{A = (s<sub>2</sub> &bull; s<sub>3</sub>) + (s<sub>6</sub> &bull; s<sub>1</sub>)}'),
 				s1Value: 's<sub>1</sub>',
 				s2Value: 's<sub>2</sub>',
 				s3Value: 's<sub>3</sub>',
 				s4Value: 's<sub>4</sub>',
 				s5Value: 's<sub>5</sub>',
 				s6Value: 's<sub>6</sub>',
-                firstHelp: '$$s5Value is a horizontal distance.',
-				secondHelp: '$$s3Value is the long horizontal side. The other two horizontal sides, $$s5Value and $$s1Value together equal the length of $$s3Value.',
-				thirdHelp: 'If we subtract $$s1Value from $$s3Value, we have $$s5Value.',
-				answerHelp: '$$s3Value - $$s1Value',
+                firstHelp: 'Let\'s look at the possible answers:<br><br>'
+								+'(a) &nbsp; A = ($$s4Value &bull; $$s2Value)  +  ($$s5Value &bull; $$s6Value)<br><br>'
+								+'$$s5Value &bull; $$s6Value solves for the area of a rectangle. However, $$s4Value &bull; $$s2Value will not solve for an area;  $$s4Value and $$s2Value are not the dimensions (the length and width) of a rectangle. The sides of $$s4Value and $$s2Value do not meet to create a box. (a) can\'t be correct.',
+				secondHelp: '(b) &nbsp; A = ($$s4Value &bull; $$s5Value)  +  ($$s2Value &bull; $$s3Value)<br><br>'
+								+'$$s4Value &bull; $$s5Value and $$s2Value &bull; $$s3Value will each solve for the area of a rectangle. However, the areas of these two rectangles overlap each other. The area at the bottom left of this figure is incorrectly counted twice. (b) can\'t be correct.',
+				thirdHelp: '(d) &nbsp; A = ($$s2Value &bull; $$s3Value)  +  ($$s6Value &bull; $$s1Value)<br><br>'
+								+'$$s2Value &bull; $$s3Value and $$s6Value &bull; $$s1Value will each solve for the area of a rectangle. However, the area of the rectangle with dimensions of $$s6Value &bull; $$s1Value measures the area of a rectangle <u>outside</u> the shape we want to solve for. (d) can\'t be correct.<br><br>'
+							+'(c) &nbsp; A = ($$s4Value &bull; $$s5Value)  +  ($$s1Value &bull; $$s2Value)<br><br>'
+								+'$$s4Value &bull; $$s5Value and $$s1Value &bull; $$s2Value will each solve for the area of a rectangle. The areas of these two rectangles do not overlap each other. Together they correctly measure the entire area of the given shape. (c) is the correct answer.',
+				answerHelp: 'A = (s<sub>4</sub> &bull; s<sub>5</sub>) + (s<sub>1</sub> &bull; s<sub>2</sub>)',
 				template: 'multipleChoice'
-			}
-			,
-			{ // problem 16
-				probQuestion: 'Choose the expression that has the same length as $$s6Value.',
-				illustration: 'T.1/Notched_Rectangle_04.jpg',
-				buttonValueA: 'T',
-				buttonLabelA: dataUtils.pre('\\str{$$s4Value - $$s2Value}'),
-				buttonValueB: 'F',
-				buttonLabelB: dataUtils.pre('\\str{$$s3Value - $$s5Value}'),
-				buttonValueC: 'F',
-				buttonLabelC: dataUtils.pre('\\str{$$s4Value + $$s6Value}'),
-				buttonValueD: 'F',
-				buttonLabelD: dataUtils.pre('\\str{$$s3Value + $$s5Value}'),
-				s1Value: 's<sub>1</sub>',
-				s2Value: 's<sub>2</sub>',
-				s3Value: 's<sub>3</sub>',
-				s4Value: 's<sub>4</sub>',
-				s5Value: 's<sub>5</sub>',
-				s6Value: 's<sub>6</sub>',
-                firstHelp: '$$s6Value is a vertical distance.',
-				secondHelp: '$$s4Value is the long vertical side. The other two vertical sides, $$s6Value plus $$s2Value together equal the length of $$s4Value.',
-				thirdHelp: 'If we subtract $$s2Value from $$s4Value, we have $$s6Value.',
-				answerHelp: '$$s4Value - $$s2Value',
-				template: 'multipleChoice'
-			}
-			,
-			{ // problem 17
-				illustration: 'T.1/Notched_Rectangle_02.jpg',
-				alt: 'notched rectangle',
-				width: '400px',
-				height: '151px',
-				probQuestion: 'Solve for the perimeter of the following shape. All measurements are in meters.',
-				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{36}}'+
-												'{\\str{m}}'
-								),
-				s1Value: 's<sub>1</sub>',
-				s2Value: 's<sub>2</sub>',
-				s3Value: 's<sub>3</sub>',
-				s4Value: 's<sub>4</sub>',
-				s5Value: 's<sub>5</sub>',
-				s6Value: 's<sub>6</sub>',
-                helpTexts: 'Identify the shape: &nbsp; six&#45;sided figure.<br><br>'
-				+'First, we need to solve for the unknown lengths of $$s1Value and $$s2Value.<br><br>'
-				+'<table><tr><td>$$s1Value = $$s3Value + $$s5Value</td><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td>$$s2Value = $$s6Value + $$s4Value</td></tr>'
-										+'<tr><td>$$s1Value = 6 + 4</td><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td>$$s2Value = 3 + 5</td></tr>'
-										+'<tr><td><strong>$$s1Value = 10</strong></td><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td><strong>$$s2Value = 8</strong></td></tr></table><br><br>'
-				+'Now we can write the formula and substitute.<br><br>'
-				+'<table><tr><td>Formula:&nbsp;</td><td>P = $$s1Value + $$s2Value + $$s3Value + $$s4Value + $$s5Value + $$s6Value</td></tr>'
-										+'<tr><td>Substitution:&nbsp;</td><td>P = 10 + 8 + 6 + 5 + 4 + 3</td></tr>'
-										+'<tr><td>Solve:&nbsp;</td><td> P = 36</td></tr></table><br>',
-				answerHelp: dataUtils.pre('\\str{36 m}'
-								),
-				template: 'simpleQuestion' 
-			}
-			,
-			{ // problem 18
-				illustration: 'T.1/Notched_Rectangle_01.jpg',
-				alt: 'notched rectangle',
-				width: '400px',
-				height: '216px',
-				probQuestion: 'Solve for the perimeter of the following shape. All measurements are in feet.',
-				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{52}}'+
-												'{\\str{ft}}'
-								),
-				aValue: 'a',
-				bValue: 'b',
-				cValue: 'c',
-				dValue: 'd',
-				eValue: 'e',
-				fValue: 'f',
-                helpTexts: 'Identify the shape: &nbsp; six&#45;sided figure.<br><br>'
-				+'First, we need to solve for the unknown lengths of side \\"$$bValue\\" and side \\"$$cValue\\".<br><br>'
-				+'<table><tr><td>$$bValue = $$fValue - $$dValue</td><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td>$$cValue = $$eValue - $$aValue</td></tr>'
-										+'<tr><td>$$bValue = 10 - 7</td><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td>$$cValue = 16 - 12</td></tr>'
-										+'<tr><td><strong>$$bValue = 3</strong></td><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td><strong>$$cValue = 4</strong></td></tr></table><br><br>'
-				+'Now we can write the formula and substitute.<br><br>'
-				+'<table><tr><td>Formula:&nbsp;</td><td>P = $$aValue + $$bValue + $$cValue + $$dValue + $$eValue + $$fValue</td></tr>'
-										+'<tr><td>Substitution:&nbsp;</td><td>P = 12 + 3 + 4 + 7 + 16 + 10</td></tr>'
-										+'<tr><td>Solve:&nbsp;</td><td> P = 52</td></tr></table><br>',
-				answerHelp: dataUtils.pre('\\str{52 ft}'
-								),
-				template: 'simpleQuestion' 
 			}
         ];
 	
