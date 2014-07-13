@@ -479,6 +479,138 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 				answerHelp: 'A = (s<sub>4</sub> &bull; s<sub>5</sub>) + (s<sub>1</sub> &bull; s<sub>2</sub>)',
 				template: 'multipleChoice'
 			}
+			,
+			{ // problem 15
+				probQuestion: 'Choose the formula given below which will solve for the area of the figure.<br><br>',
+				illustration: 'T.1/Notched_Rectangle_04.jpg',
+				alt: 'Notched Rectangle',
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\html{A = (s<sub>5</sub> &bull; s<sub>3</sub>) &#8722; (s<sub>5</sub> &bull; s<sub>6</sub>)}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\html{A = (s<sub>2</sub> &bull; s<sub>3</sub>) &#8722; (s<sub>5</sub> &bull; s<sub>6</sub>)}'),
+				buttonValueC: 'T',
+				buttonLabelC: dataUtils.pre('\\html{A = (s<sub>4</sub> &bull; s<sub>3</sub>) &#8722; (s<sub>1</sub> &bull; s<sub>6</sub>)}'),
+				buttonValueD: 'F',
+				buttonLabelD: dataUtils.pre('\\html{A = (s<sub>4</sub> &bull; s<sub>1</sub>) &#8722; (s<sub>6</sub> &bull; s<sub>1</sub>)}'),
+				s1Value: 's<sub>1</sub>',
+				s2Value: 's<sub>2</sub>',
+				s3Value: 's<sub>3</sub>',
+				s4Value: 's<sub>4</sub>',
+				s5Value: 's<sub>5</sub>',
+				s6Value: 's<sub>6</sub>',
+                firstHelp: 'Let\'s look at the possible answers:<br><br>'
+								+'(a) &nbsp; A = ($$s5Value &bull; $$s3Value)  &#8722; ($$s5Value &bull; $$s6Value)<br><br>'
+								+'$$s5Value &bull; $$s3Value will not solve for an area;  $$s5Value and $$s3Value are <strong><u>not</u></strong> the dimensions (the length and width) of a rectangle. The sides of $$s5Value and $$s3Value do not meet to create a box. (a) can\'t be correct.',
+				secondHelp: '(b) &nbsp; A = ($$s2Value &bull; $$s3Value)  &#8722;  ($$s5Value &bull; $$s6Value)<br><br>'
+								+'$$s2Value &bull; $$s3Value and $$s5Value &bull; $$s6Value will each solve for the area of a rectangle. However, the area of the first rectangle ($$s2Value &bull; $$s3Value) is less than the total area of the shape we are measuring. Therefore, we can\'t be subtracting the second area ($$s5Value &bull; $$s6Value). We would need to add to get more area. (b) can\'t be correct.',
+				thirdHelp: '(d) &nbsp; A = ($$s4Value &bull; $$s1Value)  &#8722;  ($$s6Value &bull; $$s1Value)<br><br>'
+								+'$$s4Value &bull; $$s1Value will not solve for an area; $$s4Value and $$s1Value are <strong><u>not</u></strong> the dimensions (the length and width) of a rectangle. The sides of $$s4Value and $$s1Value do not meet to create a box. (d) can\'t be correct.<br><br>'
+							+'(c) &nbsp; A = ($$s4Value &bull; $$s3Value)  &#8722;  ($$s1Value &bull; $$s6Value)<br><br>'
+								+'$$s4Value &bull; $$s3Value and $$s1Value &bull; $$s6Value will each solve for the area of a rectangle. The area of the first rectangle ($$s4Value &bull; $$s3Value) is larger than the area of the shape we are measuring. If we subtract the area of the second rectangle ($$s1Value &bull; $$s6Value) we are left with exactly the area of the given shape.  (c) is the correct answer.',
+				answerHelp: 'A = (s<sub>4</sub> &bull; s<sub>3</sub>) - (s<sub>1</sub> &bull; s<sub>6</sub>)',
+				template: 'multipleChoice'
+			}
+			,
+			{ // problem 16
+				probQuestion: 'Solve for the area of the following shape. All measurements are in inches.',
+				illustration: 'T.1/Notched_Rectangle_02.jpg',
+				alt: 'notched rectangle',
+				width: '400px',
+				height: '151px',
+				simpleAnswer: dataUtils.pre('\\grp'+
+												'{\\input{60}}'+
+												'{\\str{in<sup>2</sup>}}'
+								),
+				s1Value: 's<sub>1</sub>',
+				s2Value: 's<sub>2</sub>',
+				s3Value: 's<sub>3</sub>',
+				s4Value: 's<sub>4</sub>',
+				s5Value: 's<sub>5</sub>',
+				s6Value: 's<sub>6</sub>',
+                helpTexts: 'Identify the shape: &nbsp; An Irregular Shape that Consists of Two Rectangles<br><br>'
+				+'One way to solve for the area of this shape is to visualize and identify the area formulas for the following two rectangles:<br><br>'
+				+'(1) $$s6Value &bull; $$s5Value<br>'
+				+'(2) $$s2Value &bull; $$s3Value<br><br>'
+				+'We need to solve for the unknown length of $$s2Value.<br><br>'
+				+'$$s2Value = $$s6Value + $$s4Value<br>'
+				+'$$s2Value = 3 + 5<br>'
+				+'<strong>$$s2Value = 8</strong><br><br>'
+				+'Now we can write the formula and substitute.<br><br>'
+				+'<table><tr><td>Formula:&nbsp;</td><td>A = ($$s6Value &bull; $$s5Value) + ($$s2Value &bull; $$s3Value)</td></tr>'
+										+'<tr><td>Substitution:&nbsp;</td><td>A = (3 &bull; 4) + (8 &bull; 6)</td></tr>'
+										+'<tr><td>Solve:&nbsp;</td><td> A = 60</td></tr></table><br>',
+				answerHelp: dataUtils.pre('\\str{60 sq. in or 60 in<sup>2</sup>}'
+								),
+				template: 'simpleWideQuestion' 
+			}
+			,
+			{ // problem 17
+				probQuestion: 'Solve for the area of the following shape. All measurements are in feet.',
+				illustration: 'T.1/Notched_Rectangle_01.jpg',
+				alt: 'notched rectangle',
+				width: '400px',
+				height: '216px',
+				simpleAnswer: dataUtils.pre('\\grp'+
+												'{\\input{148}}'+
+												'{\\str{ft<sup>2</sup>}}'
+								),
+                helpTexts: 'Identify the shape: &nbsp; An Irregular Shape that Consists of Two Rectangles<br><br>'
+				+'One way to solve for the area of this shape is to visualize and identify the area formulas for the following two rectangles:<br><br>'
+				+'(1) c &bull; d<br>'
+				+'(2) a &bull; f<br><br>'
+				+'We need to solve for the unknown length of side c.<br><br>'
+				+'c = e &#8722; a<br>'
+				+'c = 16 &#8722; 12<br>'
+				+'<strong>c = 4</strong><br><br>'
+				+'Now we can write the formula and substitute.<br><br>'
+				+'<table><tr><td>Formula:&nbsp;</td><td>A = (c &bull; d) + (a &bull; f)</td></tr>'
+										+'<tr><td>Substitution:&nbsp;</td><td>A = (4 &bull; 7) + (12 &bull; 10)</td></tr>'
+										+'<tr><td>Solve:&nbsp;</td><td> A = 148</td></tr></table><br>',
+				answerHelp: dataUtils.pre('\\str{148 sq. ft or 148 ft<sup>2</sup>}'
+								),
+				template: 'simpleWideQuestion' 
+			}
+			,
+			{ // problem 18
+				probQuestion: 'Solve for the area of the following shape. All measurements are in centimeters.<br><br>'
+							+'$$s1Value = 4 <sup>1</sup>&#8260;<sub>5</sub><br>'
+							+'$$s2Value = 3 <sup>1</sup>&#8260;<sub>2</sub><br>'
+							+'$$s4Value = 6 <sup>1</sup>&#8260;<sub>4</sub><br>'
+							+'$$s5Value = 1 <sup>1</sup>&#8260;<sub>5</sub><br><br>',
+				illustration: 'T.1/Notched_Rectangle_04.jpg',
+				alt: 'notched rectangle',
+				width: '318px',
+				height: '350px',
+				s1Value: 's<sub>1</sub>',
+				s2Value: 's<sub>2</sub>',
+				s3Value: 's<sub>3</sub>',
+				s4Value: 's<sub>4</sub>',
+				s5Value: 's<sub>5</sub>',
+				s6Value: 's<sub>6</sub>',
+				simpleAnswer: dataUtils.pre('\\grp'+
+												'{\\mixed{\\input{22}}{\\frac{\\input{1}}{\\input{5}}}}'+
+												'{\\str{cm<sup>2</sup>}}'
+								),
+                helpTexts: 'Identify the shape: &nbsp; An Irregular Shape that Consists of Two Rectangles<br><br>'
+				+'One way to solve for the area of this shape is to visualize and identify the area formulas for the following two rectangles:<br><br>'
+				+'(1) $$s5Value &bull; $$s6Value<br>'
+				+'(2) $$s2Value &bull; $$s3Value<br><br>'
+				+'We need to solve for the unknown lengths of $$s6Value and $$s3Value.<br><br>'
+								+'<table>'
+									+'<tr><td>$$s6Value = $$s6Value &#8722; $$s2Value</td><td><span class=marginLeft80px>&nbsp;</span></td><td>$$s3Value = $$s1Value + $$s5Value</td></tr>'
+									+'<tr><td>$$s6Value = 6 <sup>1</sup>&#8260;<sub>4</sub> &#8722; 3 <sup>1</sup>&#8260;<sub>2</sub></td><td><span class=marginLeft80px>&nbsp;</span></td><td>$$s3Value = 4 <sup>1</sup>&#8260;<sub>5</sub> + 1 <sup>1</sup>&#8260;<sub>5</sub></td></tr>'
+									+'<tr><td><strong>$$s6Value = 2 <sup>3</sup>&#8260;<sub>4</sub></strong></td><td><span class=marginLeft80px>&nbsp;</span></td><td><strong>$$s3Value = 5 <sup>2</sup>&#8260;<sub>5</sub></strong></td></tr>'
+								+'</table><br><br>'
+								+'Now we can write the formula and substitute.<br><br>'
+								+'<table>'
+									+'<tr><td>Formula:&nbsp;&nbsp;</td><td>A = ($$s5Value &bull; $$s6Value) + ($$s2Value &bull; $$s3Value)</td></tr>'
+									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = (1 <sup>1</sup>&#8260;<sub>5</sub> &bull; 2 <sup>3</sup>&#8260;<sub>4</sub>) + (3 <sup>1</sup>&#8260;<sub>2</sub> &bull; 5 <sup>2</sup>&#8260;<sub>5</sub>)</td></tr>'
+									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 22 <sup>1</sup>&#8260;<sub>5</sub></td></tr>'
+								+'</table><br><br>',
+				answerHelp: dataUtils.pre('\\str{22 <sup>1</sup>&#8260;<sub>5</sub> sq. cm. or 22 <sup>1</sup>&#8260;<sub>5</sub> cm<sup>2</sup>}'
+								),
+				template: 'simpleWideQuestion' 
+			}
         ];
 	
 	/*shuffle = [
