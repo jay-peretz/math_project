@@ -165,7 +165,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 												'{\\input{127.17}}'+
 												'{\\str{cm<sup>2</sup>}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; Half Circle'
+				helpTexts: 'Identify the shape: &nbsp; half circle'
 										+'<br><br>'
 										+'The diameter is given as 18 cm.<br>' 
 										+'Therefore: the radius (<sup>1</sup>&#8260;<sub>2</sub> of a diameter) is 9 cm.'
@@ -193,7 +193,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 												'{\\input{61}}'+
 												'{\\str{m<sup>2</sup>}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; Half Circle'
+				helpTexts: 'Identify the shape: &nbsp; half circle'
 										+'<br><br>'
 										+'The diameter is given as 12.5 cm.<br>' 
 										+'Therefore: the radius (<sup>1</sup>&#8260;<sub>2</sub> of a diameter) is 6.25 cm.'
@@ -223,7 +223,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 												'{\\input{88}}'+
 												'{\\str{ft<sup>2</sup>}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; Half Circle'
+				helpTexts: 'Identify the shape: &nbsp; half circle'
 										+'<br><br>'
 										+'The radius is given as 7.5 ft.' 
 										+'<br><br>'
@@ -252,7 +252,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 												'{\\input{39.25}}'+
 												'{\\str{cm<sup>2</sup>}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; Half Circle'
+				helpTexts: 'Identify the shape: &nbsp; half circle'
 										+'<br><br>'
 										+'The radius is given as 5 cm.' 
 										+'<br><br>'
@@ -281,7 +281,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 												'{\\mixed{\\input{1}}{\\frac{\\input{13}}{\\input{64}}}}'+
 												'{\\str{ft<sup>2</sup>}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; Half Circle'
+				helpTexts: 'Identify the shape: &nbsp; half circle'
 										+'<br><br>'
 										+'The diameter is given as 1 <sup>3</sup>&#8260;<sub>4</sub>.<br>' 
 										+'Therefore: the radius (<sup>1</sup>&#8260;<sub>2</sub> of a diameter) is <sup>7</sup>&#8260;<sub>8</sub> ft.' 
@@ -311,7 +311,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 												'{\\mixed{\\input{1}}{\\frac{\\input{23}}{\\input{252}}}}'+
 												'{\\str{in<sup>2</sup>}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; Half Circle'
+				helpTexts: 'Identify the shape: &nbsp; half circle'
 										+'<br><br>'
 										+'The diameter is given as 1 <sup>2</sup>&#8260;<sub>3</sub>.<br>' 
 										+'Therefore: the radius (<sup>1</sup>&#8260;<sub>2</sub> of a diameter) is <sup>5</sup>&#8260;<sub>6</sub> ft.' 
@@ -341,7 +341,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 												'{\\mixed{\\input{173}}{\\frac{\\input{1}}{\\input{4}}}}'+
 												'{\\str{in<sup>2</sup>}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; Half Circle'
+				helpTexts: 'Identify the shape: &nbsp; half circle'
 										+'<br><br>'
 										+'The radius is given as 10 <sup>1</sup>&#8260;<sub>2</sub>.' 
 										+'<br><br>'
@@ -370,7 +370,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 												'{\\mixed{\\input{9}}{\\frac{\\input{23}}{\\input{28}}}}'+
 												'{\\str{mi<sup>2</sup>}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; Half Circle'
+				helpTexts: 'Identify the shape: &nbsp; half circle'
 										+'<br><br>'
 										+'The radius is given as 2 <sup>1</sup>&#8260;<sub>2</sub>.' 
 										+'<br><br>'
@@ -403,7 +403,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				buttonLabelC: dataUtils.pre('\\str{A = (b &bull; a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>) &#43; d}'),
 				buttonValueD: 'F',
 				buttonLabelD: dataUtils.pre('\\str{A = a &#43; 2b &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)}'),
-                firstHelp: 'Identify the shape:  A rectangle connected to a half circle.'
+                firstHelp: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 							+'<br><br>'
 							+'The area of this shape is the area of the rectangle plus the area of the half circle.',
 				secondHelp: 'A = (area of rectangle) &#43; (area of half circle)'
@@ -417,7 +417,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				answerHelp: 'A = (b &bull; a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)',
 				template: 'multipleChoice' 
 			}
-			/*,
+			,
 			{ // problem 11
 				illustration: 'T.2/16_Rectangle_Half_Circle03_s1-s2-s3.jpg',
 				alt: 'rectangle half circle',
@@ -426,21 +426,27 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				imageClass: '',
 				probQuestion: 'What is the correct formula to find the area of this object?',
 				buttonValueA: 'F',
-				buttonLabelA: dataUtils.pre('\\str{A = 2(s<sub>1</sub>) &#43; 2(s<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)}'),
-				buttonValueB: 'F',
-				buttonLabelB: dataUtils.pre('\\str{A = s<sub>1</sub> &#43; 2(s<sub>2</sub>) &#43; s<sub>3</sub> &#43; (&pi; * d)}'),
+				buttonLabelA: dataUtils.pre('\\str{A = (s<sub>2</sub> * s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>) &#43; s<sub>1</sub>}'),
+				buttonValueB: 'T',
+				buttonLabelB: dataUtils.pre('\\str{A = (s<sub>2</sub> * s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)}'),
 				buttonValueC: 'F',
-				buttonLabelC: dataUtils.pre('\\str{A = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (&pi; * d)}'),
-				buttonValueD: 'T',
+				buttonLabelC: dataUtils.pre('\\str{A = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)}'),
+				buttonValueD: 'F',
 				buttonLabelD: dataUtils.pre('\\str{A = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)}'),
-                firstHelp: 'Identify the shape:  A rectangle connected to a half circle.',
-				secondHelp: 'The perimeter (the outside of this shape) consists of three sides (s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+                firstHelp: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 							+'<br><br>'
-							+'Distance of the three sides = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub>'
+							+'The area of this shape is the area of the rectangle plus the area of the half circle.',
+				secondHelp: 'A = (area of rectangle) &#43;  (area of half circle)'
+							+'<br><br>'
+							+'Area of rectangle  =  l * w.  In this figure we could use s<sub>2</sub> as the length and s<sub>1</sub> as the width. l * w is the same as s<sub>2</sub> * s<sub>1</sub> '
+							+'<br><br>'
+							+'Area of half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>'
+							+'<br><br>'
+							+'Add these together to get the area formula.',
+				thirdHelp: 'A = (area of rectangle) &#43; (area of half circle)'
 							+'<br>'
-							+'Distance of open half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * d',
-				thirdHelp: 'Add these together to get the perimeter formula.',
-				answerHelp: 'P = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)',
+							+'A = (s<sub>2</sub> * s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)',
+				answerHelp: 'A = (s<sub>2</sub> * s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)',
 				template: 'multipleChoice' 
 			}
 			,
@@ -450,26 +456,32 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				width: '350px',
 				height: '142px',
 				imageClass: '',
-				probQuestion: 'Find the area of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
+				probQuestion: 'Find the area of the shape below. Use 3.14 for &pi;. $$answerRound',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{23}}'+
-												'{\\str{in}}'
+												'{\\input{29}}'+
+												'{\\str{in<sup>2</sup>}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
+				helpTexts: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (a, b, and c) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'A = (area of rectangle) &#43; (area of half circle)' 
 										+'<br><br>'
-										+'In this shape <em>a</em> is the same as the diameter of the half circle (the dotted line).'
+										+'Area of rectangle  =  l * w.  In this figure we could use side <em>b</em> as the length and side <em>a</em> as the width. l * w is the same as b * a.' 
 										+'<br><br>'
-										+'<table>'
-										+'<tr><td>The formula:</td><td>&nbsp;</td><td>P = a &#43; b &#43; c &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)</td></tr>'
-										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>P = 3 <sup>1</sup>&#8260;<sub>2</sub> &#43; 7 &#43; 7 &#43; (<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * 3 <sup>1</sup>&#8260;<sub>2</sub>)</td></tr>'
-										+'<tr><td>Solve:</td><td>&nbsp;</td><td>P = 23</td></tr>'
+										+'Area of half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>' 
+										+'<br><br>'
+										+'In this shape side <em>a</em> (3 <sup>1</sup>&#8260;<sub>2</sub> in) is the same as the diameter of the half circle (the dotted line). Therefore, the radius is 1 <sup>3</sup>&#8260;<sub>4</sub> in.'
+										+'<br><br>'
+										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (b * a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
+										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (7 * 3 <sup>1</sup>&#8260;<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * 3.14 * (1 <sup>3</sup>&#8260;<sub>4</sub>)<sup>2</sup>)</td></tr>'
+										+'<tr><td>&nbsp;</td><td>&nbsp;</td><td>A = (24.5) &#43; (4.808125)</td></tr>'
+										+'<tr><td>Solve:</td><td>&nbsp;</td><td>A = 29.3125</td></tr>'
 										+'</table>'
-										+'<br>',
-				answerHelp: dataUtils.pre('\\str{23 in}'
+										+'<br>'
+										+'$$answerRound'
+										+'<br><br>',
+				answerHelp: dataUtils.pre('\\str{29 sq. in or 29 in<sup>2</sup>}'
 								),
-				answerRound: '',
+				answerRound: 'Round the answer to the nearest whole.',
                 template: 'simpleQuestion' 
 			}
 			,
@@ -479,26 +491,32 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				width: '350px',
 				height: '183px',
 				imageClass: '',
-				probQuestion: 'Find the area of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
+				probQuestion: 'Find the area of the shape below. Use 3.14 for &pi;. $$answerRound',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\mixed{\\input{26}}{\\frac{\\input{31}}{\\input{35}}}}'+
-												'{\\str{cm}}'
+												'{\\input{46.5}}'+
+												'{\\str{cm<sup>2</sup>}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
+				helpTexts: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'A = (area of rectangle) &#43; (area of half circle)' 
 										+'<br><br>'
-										+'In this shape s<sub>2</sub> is the same as the diameter of the half circle (the dotted line).'
+										+'Area of rectangle  =  l * w.  In this figure we could use s<sub>3</sub> as the length and side s<sub>2</sub> as the width. l * w is the same as s<sub>3</sub> * s<sub>2</sub>.' 
 										+'<br><br>'
-										+'<table>'
-										+'<tr><td>The formula:</td><td>&nbsp;</td><td>P = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)</td></tr>'
-										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>P = 6 <sup>1</sup>&#8260;<sub>2</sub> &#43; 5 <sup>2</sup>&#8260;<sub>5</sub> &#43; 6 <sup>1</sup>&#8260;<sub>2</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * 5 <sup>2</sup>&#8260;<sub>5</sub>)</td></tr>'
-										+'<tr><td>Solve:</td><td>&nbsp;</td><td>P = 26 <sup>31</sup>&#8260;<sub>35</sub></td></tr>'
+										+'Area of half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>' 
+										+'<br><br>'
+										+'In this shape side s<sub>2</sub> (5 <sup>2</sup>&#8260;<sub>5</sub> cm) is the same as the diameter of the half circle (the dotted line). Therefore, the radius is 2 <sup>7</sup>&#8260;<sub>10</sub> cm.'
+										+'<br><br>'
+										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (s<sub>3</sub> * s<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
+										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (6 <sup>1</sup>&#8260;<sub>2</sub> * 5 <sup>2</sup>&#8260;<sub>5</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * 3.14 * (2 <sup>7</sup>&#8260;<sub>10</sub>)<sup>2</sup>)</td></tr>'
+										+'<tr><td>&nbsp;</td><td>&nbsp;</td><td>A = (35.1) &#43; (11.4453)</td></tr>'
+										+'<tr><td>Solve:</td><td>&nbsp;</td><td>A = 46.5453</td></tr>'
 										+'</table>'
-										+'<br>',
-				answerHelp: dataUtils.pre('\\str{26 <sup>31</sup>&#8260;<sub>35</sub> cm}'
+										+'<br>'
+										+'$$answerRound'
+										+'<br><br>',
+				answerHelp: dataUtils.pre('\\str{46.5 sq. cm or 46.5 cm<sup>2</sup>}'
 								),
-				answerRound: '',
+				answerRound: 'Round the answer to the nearest tenths.',
                 template: 'simpleQuestion' 
 			}
 			,
@@ -508,26 +526,32 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				width: '350px',
 				height: '167px',
 				imageClass: '',
-				probQuestion: 'Find the area of the shape below. Use 3.14 for &pi;. Round answer to the nearest whole.',
+				probQuestion: 'Find the area of the shape below. Use 3.14 for &pi;. $$answerRound',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{66}}'+
-												'{\\str{ft}}'
+												'{\\input{261}}'+
+												'{\\str{ft<sup>2</sup>}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
+				helpTexts: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'A = (area of rectangle) &#43; (area of half circle)' 
 										+'<br><br>'
-										+'In this shape s<sub>2</sub> is the same as the diameter of the half circle (the dotted line).'
+										+'Area of rectangle  =  l * w.  In this figure we could use s<sub>3</sub> as the length and side s<sub>2</sub> as the width. l * w is the same as s<sub>3</sub> * s<sub>2</sub>.' 
 										+'<br><br>'
-										+'<table>'
-										+'<tr><td>The formula:</td><td>&nbsp;</td><td>P = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)</td></tr>'
-										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>P = 18.2 &#43; 11.5 &#43; 18.2 &#43; (<sup>1</sup>&#8260;<sub>2</sub> * 3.14 * 11.5)</td></tr>'
-										+'<tr><td>Solve:</td><td>&nbsp;</td><td>P = 65.955</td></tr>'
+										+'Area of half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>' 
+										+'<br><br>'
+										+'In this shape side s<sub>2</sub> (11.5 ft) is the same as the diameter of the half circle (the dotted line). Therefore, the radius is 5.75 ft.'
+										+'<br><br>'
+										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (s<sub>3</sub> * s<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
+										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (18.2 * 11.5) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * 3.14 * (5.75)<sup>2</sup>)</td></tr>'
+										+'<tr><td>&nbsp;</td><td>&nbsp;</td><td>A = (209.3) &#43; (51.908125)</td></tr>'
+										+'<tr><td>Solve:</td><td>&nbsp;</td><td>A = 261.208125</td></tr>'
 										+'</table>'
-										+'<br>',
-				answerHelp: dataUtils.pre('\\str{66 ft}'
+										+'<br>'
+										+'$$answerRound'
+										+'<br><br>',
+				answerHelp: dataUtils.pre('\\str{261 sq. ft or 261 ft<sup>2</sup>}'
 								),
-                answerRound: ' (rounded to the nearest whole)',
+				answerRound: 'Round the answer to the nearest whole.',
                 template: 'simpleQuestion' 
 			}
 			,
@@ -537,26 +561,32 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				width: '350px',
 				height: '165px',
 				imageClass: '',
-				probQuestion: 'Find the area of the shape below. Use 3.14 for &pi;. Round answer to the nearest whole.',
+				probQuestion: 'Find the area of the shape below. Use 3.14 for &pi;. $$answerRound',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{37}}'+
-												'{\\str{m}}'
+												'{\\input{261}}'+
+												'{\\str{ft<sup>2</sup>}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
+				helpTexts: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (a, b, and c) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'A = (area of rectangle) &#43; (area of half circle)' 
 										+'<br><br>'
-										+'In this shape <em>a</em> is the same as the diameter of the half circle (the dotted line).'
+										+'Area of rectangle  =  l * w.  In this figure we could use s<sub>3</sub> as the length and side s<sub>2</sub> as the width. l * w is the same as s<sub>3</sub> * s<sub>2</sub>.' 
 										+'<br><br>'
-										+'<table>'
-										+'<tr><td>The formula:</td><td>&nbsp;</td><td>P = a &#43; b &#43; c &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)</td></tr>'
-										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>P = 6.2 &#43; 10.5 &#43; 10.5 &#43; (<sup>1</sup>&#8260;<sub>2</sub> * 3.14 * 6.2)</td></tr>'
-										+'<tr><td>Solve:</td><td>&nbsp;</td><td>P = 36.934</td></tr>'
+										+'Area of half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>' 
+										+'<br><br>'
+										+'In this shape side s<sub>2</sub> (11.5 ft) is the same as the diameter of the half circle (the dotted line). Therefore, the radius is 5.75 ft.'
+										+'<br><br>'
+										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (s<sub>3</sub> * s<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
+										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (18.2 * 11.5) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * 3.14 * (5.75)<sup>2</sup>)</td></tr>'
+										+'<tr><td>&nbsp;</td><td>&nbsp;</td><td>A = (209.3) &#43; (51.908125)</td></tr>'
+										+'<tr><td>Solve:</td><td>&nbsp;</td><td>A = 261.208125</td></tr>'
 										+'</table>'
-										+'<br>',
-				answerHelp: dataUtils.pre('\\str{37 m}'
+										+'<br>'
+										+'$$answerRound'
+										+'<br><br>',
+				answerHelp: dataUtils.pre('\\str{261 sq. ft or 261 ft<sup>2</sup>}'
 								),
-				answerRound: ' (rounded to the nearest whole)',
+				answerRound: 'Round the answer to the nearest whole.',
                 template: 'simpleQuestion' 
 			}
 			,
@@ -568,22 +598,26 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				imageClass: '',
 				probQuestion: 'Find the area of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{60}}'+
+												'{\\input{245}}'+
 												'{\\str{in}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
+				helpTexts: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'A = (area of rectangle) &#43; (area of half circle)' 
 										+'<br><br>'
-										+'In this shape s<sub>2</sub> is the same as the diameter of the half circle (the dotted line).'
+										+'Area of rectangle  =  l * w.  In this figure we could use s<sub>3</sub> as the length and side s<sub>2</sub> as the width. l * w is the same as s<sub>3</sub> * s<sub>2</sub>.' 
 										+'<br><br>'
-										+'<table>'
-										+'<tr><td>The formula:</td><td>&nbsp;</td><td>P = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)</td></tr>'
-										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>P = 12 &#43; 14 &#43; 12 &#43; (<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * 14)</td></tr>'
-										+'<tr><td>Solve:</td><td>&nbsp;</td><td>P = 60</td></tr>'
+										+'Area of half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>' 
+										+'<br><br>'
+										+'In this shape side s<sub>2</sub> (14 in) is the same as the diameter of the half circle (the dotted line). Therefore, the radius is 7 in.'
+										+'<br><br>'
+										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (s<sub>3</sub> * s<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
+										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (12 * 14) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * 3.14 * 7<sup>2</sup>)</td></tr>'
+										+'<tr><td>&nbsp;</td><td>&nbsp;</td><td>A = (168) &#43; (77)</td></tr>'
+										+'<tr><td>Solve:</td><td>&nbsp;</td><td>A = 245</td></tr>'
 										+'</table>'
 										+'<br>',
-				answerHelp: dataUtils.pre('\\str{60 in}'
+				answerHelp: dataUtils.pre('\\str{245 sq. in or 245 in<sup>2</sup>}'
 								),
 				answerRound: '',
                 template: 'simpleQuestion' 
@@ -595,24 +629,28 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				width: '350px',
 				height: '180px',
 				imageClass: '',
-				probQuestion: 'Find the area of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
+				probQuestion: 'Find the area of the shape below.  Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;. Give the answer as a mixed number. $$answerRound',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{84}}'+
-												'{\\str{cm}}'
+												'{\\mixed{\\input{488}}{\\frac{\\input{1}}{\\input{4}}}}'+
+												'{\\str{cm<sup>2</sup>}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
+				helpTexts: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (a, b, and c) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'A = (area of rectangle) &#43; (area of half circle)' 
 										+'<br><br>'
-										+'In this shape <em>a</em> is the same as the diameter of the half circle (the dotted line).'
+										+'Area of rectangle  =  l * w.  In this figure we could use side <em>b</em> as the length and side <em>a</em> as the width. l * w is the same as b * a.' 
 										+'<br><br>'
-										+'<table>'
-										+'<tr><td>The formula:</td><td>&nbsp;</td><td>P = a &#43; b &#43; c &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)</td></tr>'
-										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>P = 21 &#43; 15 &#43; 15 &#43; (<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * 21)</td></tr>'
-										+'<tr><td>Solve:</td><td>&nbsp;</td><td>P = 84</td></tr>'
+										+'Area of half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>' 
+										+'<br><br>'
+										+'In this shape side <em>a</em> (21 cm) is the same as the diameter of the half circle (the dotted line). Therefore, the radius is 10 <sup>1</sup>&#8260;<sub>2</sub> cm.'
+										+'<br><br>'
+										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (b * a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
+										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (15 * 21) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * (10 <sup>1</sup>&#8260;<sub>2</sub>)<sup>2</sup>)</td></tr>'
+										+'<tr><td>&nbsp;</td><td>&nbsp;</td><td>A = (315) &#43; (173 <sup>1</sup>&#8260;<sub>4</sub>)</td></tr>'
+										+'<tr><td>Solve:</td><td>&nbsp;</td><td>A = 488 <sup>1</sup>&#8260;<sub>4</sub></td></tr>'
 										+'</table>'
 										+'<br>',
-				answerHelp: dataUtils.pre('\\str{84 cm}'
+				answerHelp: dataUtils.pre('\\str{488 <sup>1</sup>&#8260;<sub>4</sub> sq. cm or 488 <sup>1</sup>&#8260;<sub>4</sub> cm<sup>2</sup>}'
 								),
 				answerRound: '',
                 template: 'simpleQuestion' 
@@ -624,26 +662,30 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				width: '300px',
 				height: '195px',
 				imageClass: '',
-				probQuestion: 'Find the area of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
+				probQuestion: 'Find the area of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;. Give the answer as a mixed number. $$answerRound',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\mixed{\\input{17}}{\\frac{\\input{2}}{\\input{5}}}}'+
+												'{\\mixed{\\input{19}}{\\frac{\\input{41}}{\\input{80}}}}'+
 												'{\\str{ft}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
+				helpTexts: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'A = (area of rectangle) &#43; (area of half circle)' 
 										+'<br><br>'
-										+'For the half circle, we are given the radius of 1 <sup>3</sup>&#8260;<sub>4</sub> ft. That means that the diameter (the dotted line) is double that (2 * 1 <sup>3</sup>&#8260;<sub>4</sub>) or 3 <sup>1</sup>&#8260;<sub>2</sub> ft.'
+										+'Area of rectangle  =  l * w.  In this figure we could use s<sub>3</sub> as the length and side s<sub>2</sub> as the width. l * w is the same as s<sub>3</sub> * s<sub>2</sub>.' 
 										+'<br><br>'
-										+'The diameter (the dotted line) is the same distance as s<sub>2</sub> in this shape.'
+										+'Area of half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>' 
 										+'<br><br>'
-										+'<table>'
-										+'<tr><td>The formula:</td><td>&nbsp;</td><td>P = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)</td></tr>'
-										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>P = 4 <sup>1</sup>&#8260;<sub>5</sub> &#43; 3 <sup>1</sup>&#8260;<sub>2</sub> &#43; 4 <sup>1</sup>&#8260;<sub>5</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * 3 <sup>1</sup>&#8260;<sub>2</sub>)</td></tr>'
-										+'<tr><td>Solve:</td><td>&nbsp;</td><td>P = 17 <sup>2</sup>&#8260;<sub>5</sub></td></tr>'
+										+'In this shape the radius of the half circle is given as 1 <sup>3</sup>&#8260;<sub>4</sub> ft. Therefore, the diameter would be 3 <sup>1</sup>&#8260;<sub>2</sub> ft.'
+										+'<br><br>'
+										+'In this figure the diameter of the circle is the same distance as s<sub>2</sub>. Therefore, s<sub>2</sub> is 3 <sup>1</sup>&#8260;<sub>2</sub> ft.'
+										+'<br><br>'
+										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (s<sub>3</sub> * s<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
+										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (4 <sup>1</sup>&#8260;<sub>5</sub> * 3 <sup>1</sup>&#8260;<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * (1 <sup>3</sup>&#8260;<sub>4</sub>)<sup>2</sup>)</td></tr>'
+										+'<tr><td>&nbsp;</td><td>&nbsp;</td><td>A = (14 <sup>7</sup>&#8260;<sub>10</sub>) &#43; (4 <sup>13</sup>&#8260;<sub>16</sub>)</td></tr>'
+										+'<tr><td>Solve:</td><td>&nbsp;</td><td>A = 19 <sup>41</sup>&#8260;<sub>80</sub></td></tr>'
 										+'</table>'
 										+'<br>',
-				answerHelp: dataUtils.pre('\\str{17 <sup>2</sup>&#8260;<sub>5</sub> ft}'
+				answerHelp: dataUtils.pre('\\str{19 <sup>41</sup>&#8260;<sub>80</sub> sq. ft or 19 <sup>41</sup>&#8260;<sub>80</sub> ft<sup>2</sup>}'
 								),
 				answerRound: '',
                 template: 'simpleQuestion' 
@@ -655,30 +697,64 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				width: '300px',
 				height: '194px',
 				imageClass: '',
-				probQuestion: 'Find the area of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
+				probQuestion: 'Find the area of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;. Give the answer as a mixed number. $$answerRound',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\mixed{\\input{22}}{\\frac{\\input{4}}{\\input{7}}}}'+
+												'{\\mixed{\\input{32}}{\\frac{\\input{79}}{\\input{112}}}}'+
 												'{\\str{in}}'
 								),
-				helpTexts: 'Identify the shape: &nbsp; A rectangle connected to a half circle.'
+				helpTexts: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 										+'<br><br>'
-										+'The perimeter (the outside of this shape) consists of three sides (s<sub>1</sub>, s<sub>2</sub>, and s<sub>3</sub>) <u>and</u> an open half circle (<sup>1</sup>&#8260;<sub>2</sub> of a circumference).'
+										+'A = (area of rectangle) &#43; (area of half circle)' 
 										+'<br><br>'
-										+'For the half circle, we are given the radius of 2 <sup>1</sup>&#8260;<sub>4</sub> in. That means that the diameter (the dotted line) is double that (2 * 2 <sup>1</sup>&#8260;<sub>4</sub>) or 4 <sup>1</sup>&#8260;<sub>2</sub> in.'
+										+'Area of rectangle  =  l * w.  In this figure we could use s<sub>1</sub> as the length and side s<sub>2</sub> as the width. l * w is the same as s<sub>1</sub> * s<sub>2</sub>.' 
 										+'<br><br>'
-										+'The diameter (the dotted line) is the same distance as s<sub>2</sub> in this shape.'
+										+'Area of half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>' 
 										+'<br><br>'
-										+'<table>'
-										+'<tr><td>The formula:</td><td>&nbsp;</td><td>P = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)</td></tr>'
-										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>P = 5 <sup>1</sup>&#8260;<sub>2</sub> &#43; 4 <sup>1</sup>&#8260;<sub>2</sub> &#43; 5 <sup>1</sup>&#8260;<sub>2</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * 4 <sup>1</sup>&#8260;<sub>2</sub>)</td></tr>'
-										+'<tr><td>Solve:</td><td>&nbsp;</td><td>P = 22 <sup>4</sup>&#8260;<sub>7</sub></td></tr>'
+										+'In this shape the radius of the half circle is given as 2 <sup>1</sup>&#8260;<sub>4</sub> in. Therefore, the diameter would be 4 <sup>1</sup>&#8260;<sub>2</sub> in.'
+										+'<br><br>'
+										+'In this figure the diameter of the circle is the same distance as s<sub>2</sub>. Therefore, s<sub>2</sub> is 4 <sup>1</sup>&#8260;<sub>2</sub> in.'
+										+'<br><br>'
+										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (s<sub>1</sub> * s<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
+										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (5 <sup>1</sup>&#8260;<sub>2</sub> * 4 <sup>1</sup>&#8260;<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * (2 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup>)</td></tr>'
+										+'<tr><td>&nbsp;</td><td>&nbsp;</td><td>A = (24 <sup>3</sup>&#8260;<sub>4</sub>) &#43; (7 <sup>107</sup>&#8260;<sub>112</sub>)</td></tr>'
+										+'<tr><td>Solve:</td><td>&nbsp;</td><td>A = 32 <sup>79</sup>&#8260;<sub>112</sub></td></tr>'
 										+'</table>'
 										+'<br>',
-				answerHelp: dataUtils.pre('\\str{22 <sup>4</sup>&#8260;<sub>7</sub> in}'
+				answerHelp: dataUtils.pre('\\str{32 <sup>79</sup>&#8260;<sub>112</sub> sq. in or 32 <sup>79</sup>&#8260;<sub>112</sub> in<sup>2</sup>}'
 								),
 				answerRound: '',
                 template: 'simpleQuestion' 
-			}*/
+			}
+			,
+			{ // problem 20
+				probQuestion: 'The shape below is a half circle. The formula to find the area of this shape is: A = <sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>.<br><br>If we know that the diameter of the half circle is 8 <sup>1</sup>&#8260;<sub>2</sub> feet, which formula shows the <u>correct substitution</u> to solve for the area of the shape? <br><br>',
+				illustration: 'T.2/Half_Circle_Closed02.jpg',
+				alt: 'open half circle',
+				width: '100px',
+				height: '200px',
+				buttonValueA: 'F',
+				buttonLabelA: dataUtils.pre('\\str{<sup>22</sup>&#8260;<sub>7</sub> * (8 <sup>1</sup>&#8260;<sub>2</sub>)<sup>2</sup>}'),
+				buttonValueB: 'F',
+				buttonLabelB: dataUtils.pre('\\str{<sup>22</sup>&#8260;<sub>7</sub> * 8 <sup>1</sup>&#8260;<sub>2</sub> &#43; 8 <sup>1</sup>&#8260;<sub>2</sub>}'),
+				buttonValueC: 'F',
+				buttonLabelC: dataUtils.pre('\\str{<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup> &#43; 8 <sup>1</sup>&#8260;<sub>2</sub>}'),
+				buttonValueD: 'T',
+				buttonLabelD: dataUtils.pre('\\str{<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup>}'),
+                firstHelp: 'The area formula for a <strong>full</strong> circle is:  A = &pi; * r<sup>2</sup>.'
+							+'<br><br>'
+							+'The area of a <strong>half</strong> circle is:  A = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>.',
+				secondHelp: 'If the diameter is 8 <sup>1</sup>&#8260;<sub>2</sub> feet, then the radius is half of that diameter or 4 <sup>1</sup>&#8260;<sub>4</sub> feet.'
+							+'<br><br>'
+							+'Here we\'ll use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
+				thirdHelp: 'Now, substitute number values for &pi; and the radius.'
+							+'<br><br>'
+							+'A = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>'
+							+'<br>'
+							+'A = <sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup> '
+							+'<br>',
+				answerHelp: '<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup>',
+				template: 'multipleChoice' 
+			}
         ];
 	
 	/*shuffle = [
