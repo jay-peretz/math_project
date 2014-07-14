@@ -563,30 +563,30 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				imageClass: '',
 				probQuestion: 'Find the area of the shape below. Use 3.14 for &pi;. $$answerRound',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{261}}'+
-												'{\\str{ft<sup>2</sup>}}'
+												'{\\input{80.2}}'+
+												'{\\str{m<sup>2</sup>}}'
 								),
 				helpTexts: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 										+'<br><br>'
 										+'A = (area of rectangle) &#43; (area of half circle)' 
 										+'<br><br>'
-										+'Area of rectangle  =  l * w.  In this figure we could use s<sub>3</sub> as the length and side s<sub>2</sub> as the width. l * w is the same as s<sub>3</sub> * s<sub>2</sub>.' 
+										+'Area of rectangle  =  l * w.  In this figure we could use side <em>b</em> as the length and side <em>a</em> as the width. l * w is the same as b * a.' 
 										+'<br><br>'
 										+'Area of half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>' 
 										+'<br><br>'
-										+'In this shape side s<sub>2</sub> (11.5 ft) is the same as the diameter of the half circle (the dotted line). Therefore, the radius is 5.75 ft.'
+										+'In this shape side <em>a</em> (6.2 m) is the same as the diameter of the half circle (the dotted line). Therefore, the radius is 3.1 m.'
 										+'<br><br>'
-										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (s<sub>3</sub> * s<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
-										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (18.2 * 11.5) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * 3.14 * (5.75)<sup>2</sup>)</td></tr>'
-										+'<tr><td>&nbsp;</td><td>&nbsp;</td><td>A = (209.3) &#43; (51.908125)</td></tr>'
-										+'<tr><td>Solve:</td><td>&nbsp;</td><td>A = 261.208125</td></tr>'
+										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (b * a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
+										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (10.5 * 6.2) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * 3.14 * (3.1)<sup>2</sup>)</td></tr>'
+										+'<tr><td>&nbsp;</td><td>&nbsp;</td><td>A = (65.1) &#43; (15.0877)</td></tr>'
+										+'<tr><td>Solve:</td><td>&nbsp;</td><td>A = 80.1877</td></tr>'
 										+'</table>'
 										+'<br>'
 										+'$$answerRound'
 										+'<br><br>',
-				answerHelp: dataUtils.pre('\\str{261 sq. ft or 261 ft<sup>2</sup>}'
+				answerHelp: dataUtils.pre('\\str{80.2 sq. m or 80.2 m<sup>2</sup>}'
 								),
-				answerRound: 'Round the answer to the nearest whole.',
+				answerRound: 'Round the answer to the nearest tenths place.',
                 template: 'simpleQuestion' 
 			}
 			,
@@ -599,7 +599,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				probQuestion: 'Find the area of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
 				simpleAnswer: dataUtils.pre('\\grp'+
 												'{\\input{245}}'+
-												'{\\str{in}}'
+												'{\\str{in<sup>2</sup>}}'
 								),
 				helpTexts: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 										+'<br><br>'
@@ -700,7 +700,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				probQuestion: 'Find the area of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;. Give the answer as a mixed number. $$answerRound',
 				simpleAnswer: dataUtils.pre('\\grp'+
 												'{\\mixed{\\input{32}}{\\frac{\\input{79}}{\\input{112}}}}'+
-												'{\\str{in}}'
+												'{\\str{in<sup>2</sup>}}'
 								),
 				helpTexts: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 										+'<br><br>'
