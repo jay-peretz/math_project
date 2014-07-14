@@ -401,7 +401,7 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 				alt: 'closed half circle diameter 1 2/3 in',
 				width: '200px',
 				height: '172px',
-				imageClass: 'buttonsright',
+				imageClass: '',
 				probQuestion: 'Find the perimeter of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
 				simpleAnswer: dataUtils.pre('\\grp'+
 												'{\\mixed{\\input{4}}{\\frac{\\input{2}}{\\input{7}}}}'+

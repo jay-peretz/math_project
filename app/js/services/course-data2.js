@@ -9,7 +9,7 @@ angular.module('mathSkills.services')
 		'data_k_1', 'data_k_2','data_k_3','data_l_1','data_l_2','data_m_1','data_m_2','data_m_3','data_n_1',
 		'data_j_1', 'data_o_1_1', 'data_o_2_1', 'data_o_2_2', 'data_p_1', 'data_q_1','data_r_1',
 		'data_s_1', 'data_s_2', 'data_s_3', 'data_s_4',
-		'data_t_1', 'data_t_2', 'data_u_1','data_v_1',
+		'data_t_1', 'data_t_2', 'data_u_1', 'data_u_2', 'data_v_1',
 		'data_w_1', 'data_w_2', 'data_x_1', 'data_y_1', 'data_y_2', 'data_z_1', 'data_aa_1',  
 		'data_aa_2',  'data_bb_1',  'data_cc_1',  'data_dd_1',  'data_dd_2',   'data_ee_1',
         function (
@@ -19,7 +19,7 @@ angular.module('mathSkills.services')
 			data_k_1, data_k_2, data_k_3, data_l_1, data_l_2, data_m_1, data_m_2, data_m_3, data_n_1,
 			data_j_1, data_o_1_1,data_o_2_1,data_o_2_2, data_p_1,data_q_1,data_r_1,
 			data_s_1,data_s_2,data_s_3,data_s_4,
-			data_t_1,data_t_2,data_u_1,data_v_1,
+			data_t_1,data_t_2,data_u_1,data_u_2,data_v_1,
 		    data_w_1, data_w_2, data_x_1, data_y_1, data_y_2, data_z_1, data_aa_1,  data_aa_2,  data_bb_1,  data_cc_1,  data_dd_1,  data_dd_2,   data_ee_1
         ) {
             var course = {
@@ -53,7 +53,7 @@ angular.module('mathSkills.services')
                     title: '4 Geometric Shapes',
                     path: 'geometric-shapes',
                     children: [
-                        data_s_1,data_s_2,data_s_3,data_s_4,data_t_1,data_t_2,data_u_1,data_v_1
+                        data_s_1,data_s_2,data_s_3,data_s_4,data_t_1,data_t_2,data_u_1,data_u_2,data_v_1
                     ]
                 }, {
                     title: '5 Algebraic Expressions & Equations',
