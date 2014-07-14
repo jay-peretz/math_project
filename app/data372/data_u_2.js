@@ -417,7 +417,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				answerHelp: 'A = (b &bull; a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)',
 				template: 'multipleChoice' 
 			}
-			,
+			/*,
 			{ // problem 11
 				illustration: 'T.2/16_Rectangle_Half_Circle03_s1-s2-s3.jpg',
 				alt: 'rectangle half circle',
@@ -678,7 +678,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 								),
 				answerRound: '',
                 template: 'simpleQuestion' 
-			}
+			}*/
         ];
 	
 	/*shuffle = [
