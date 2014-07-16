@@ -234,7 +234,7 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 								+'Now we can write the formula and substitute.<br><br>'
 								+'<table>'
 									+'<tr><td>Formula:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (b<sub>1</sub> &#43; b<sub>2</sub>) &bull; h</td></tr>'
-									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (8 &#43; 2.25) &bull; 3</td></tr>'
+									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (8 &#43; 10.25) &bull; 3</td></tr>'
 									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 27.375</td></tr>'
 								+'</table><br><br>'
 								+'Round answer to the tenths place.<br><br>',
@@ -250,7 +250,7 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 				width: '450px',
 				height: '165px',
 				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{109}}'+
+												'{\\input{109.5}}'+
 												'{\\str{m<sup>2</sup>}}'
 								),
                 helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br>'
@@ -264,10 +264,9 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 								+'<table>'
 									+'<tr><td>Formula:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (b<sub>1</sub> &#43; b<sub>2</sub>) &bull; h</td></tr>'
 									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (16 &#43; 20.5) &bull; 6</td></tr>'
-									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 109</td></tr>'
-								+'</table><br><br>'
-								+'Round answer to the tenths place.<br><br>',
-				answerHelp: dataUtils.pre('\\str{109 sq. m. or 109 m<sup>2</sup>}'
+									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 109.5</td></tr>'
+								+'</table><br>',
+				answerHelp: dataUtils.pre('\\str{109.5 sq. m. or 109.5 m<sup>2</sup>}'
 								),
 				template: 'simpleWideQuestion' 
 			}
@@ -597,7 +596,7 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 				+'(2) $$s2Value &bull; $$s3Value<br><br>'
 				+'We need to solve for the unknown lengths of $$s6Value and $$s3Value.<br><br>'
 								+'<table>'
-									+'<tr><td>$$s6Value = $$s6Value &#8722; $$s2Value</td><td><span class=marginLeft80px>&nbsp;</span></td><td>$$s3Value = $$s1Value + $$s5Value</td></tr>'
+									+'<tr><td>$$s6Value = $$s4Value &#8722; $$s2Value</td><td><span class=marginLeft80px>&nbsp;</span></td><td>$$s3Value = $$s1Value + $$s5Value</td></tr>'
 									+'<tr><td>$$s6Value = 6 <sup>1</sup>&#8260;<sub>4</sub> &#8722; 3 <sup>1</sup>&#8260;<sub>2</sub></td><td><span class=marginLeft80px>&nbsp;</span></td><td>$$s3Value = 4 <sup>1</sup>&#8260;<sub>5</sub> + 1 <sup>1</sup>&#8260;<sub>5</sub></td></tr>'
 									+'<tr><td><strong>$$s6Value = 2 <sup>3</sup>&#8260;<sub>4</sub></strong></td><td><span class=marginLeft80px>&nbsp;</span></td><td><strong>$$s3Value = 5 <sup>2</sup>&#8260;<sub>5</sub></strong></td></tr>'
 								+'</table><br><br>'
@@ -605,6 +604,7 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 								+'<table>'
 									+'<tr><td>Formula:&nbsp;&nbsp;</td><td>A = ($$s5Value &bull; $$s6Value) + ($$s2Value &bull; $$s3Value)</td></tr>'
 									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = (1 <sup>1</sup>&#8260;<sub>5</sub> &bull; 2 <sup>3</sup>&#8260;<sub>4</sub>) + (3 <sup>1</sup>&#8260;<sub>2</sub> &bull; 5 <sup>2</sup>&#8260;<sub>5</sub>)</td></tr>'
+									+'<tr><td>&nbsp;</td><td>A = (3 <sup>3</sup>&#8260;<sub>10</sub>) + (18 <sup>9</sup>&#8260;<sub>10</sub>)</td></tr>'
 									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 22 <sup>1</sup>&#8260;<sub>5</sub></td></tr>'
 								+'</table><br><br>',
 				answerHelp: dataUtils.pre('\\str{22 <sup>1</sup>&#8260;<sub>5</sub> sq. cm. or 22 <sup>1</sup>&#8260;<sub>5</sub> cm<sup>2</sup>}'

@@ -26,16 +26,16 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
-										+'{\\str{$firstHelp}}'
+										+'{\\html{$firstHelp}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{$secondHelp}}'
+										+'{\\html{$secondHelp}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{$thirdHelp}}'
+										+'{\\html{$thirdHelp}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\css'
 											+'{\\grp'
 												+'{\\html{Answer: }}'
-												+'{\\str{$answerHelp}}'
+												+'{\\html{$answerHelp}}'
 											+'}'
 											+'{help-answer-text}'
 										+'}'
@@ -138,19 +138,19 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				width: '100px',
 				height: '200px',
 				buttonValueA: 'F',
-				buttonLabelA: dataUtils.pre('\\str{&pi; * r<sup>2</sup>}'),
+				buttonLabelA: dataUtils.pre('\\html{A = &pi; &bull; r<sup>2</sup>}'),
 				buttonValueB: 'F',
-				buttonLabelB: dataUtils.pre('\\str{&pi; * d &#43; d}'),
+				buttonLabelB: dataUtils.pre('\\html{A = &pi; &bull; d &#43; d}'),
 				buttonValueC: 'F',
-				buttonLabelC: dataUtils.pre('\\str{<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup> &#43; d}'),
+				buttonLabelC: dataUtils.pre('\\html{A = <sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup> &#43; d}'),
 				buttonValueD: 'T',
-				buttonLabelD: dataUtils.pre('\\str{<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>}'),
-                firstHelp: 'The area formula for a full circle is:  A = &pi; * r<sup>2</sup>.<br><br>'
+				buttonLabelD: dataUtils.pre('\\html{A = <sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>}'),
+                firstHelp: 'The area formula for a full circle is:  A = &pi; &bull; r<sup>2</sup>.<br><br>'
 							+'The space or area of a half circle is only <sup>1</sup>&#8260;<sub>2</sub> of the area of the full circle. Therefore:<br><br>'
 							+'Area of half circle = <sup>1</sup>&#8260;<sub>2</sub> of (area of a full circle)',
-				secondHelp: 'Now we just substitute the formula for the words \'area of a full circle\' (&pi; * r<sup>2</sup>). We get:',
-				thirdHelp: 'Area of a half circle =  <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>',
-				answerHelp: '<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>',
+				secondHelp: 'Now we just substitute the formula for the words \'area of a full circle\' (&pi; &bull; r<sup>2</sup>). We get:',
+				thirdHelp: 'Area of a half circle =  <sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>',
+				answerHelp: 'A = <sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>',
 				template: 'multipleChoice' 
 			}
 			,
@@ -396,13 +396,13 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				imageClass: '',
 				probQuestion: 'What is the correct formula to find the area of this object?',
 				buttonValueA: 'F',
-				buttonLabelA: dataUtils.pre('\\str{A = a &#43; 2b &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)}'),
+				buttonLabelA: dataUtils.pre('\\html{A = a &#43; 2b &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; d)}'),
 				buttonValueB: 'T',
-				buttonLabelB: dataUtils.pre('\\str{A = (b &bull; a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)}'),
+				buttonLabelB: dataUtils.pre('\\html{A = (b &bull; a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>)}'),
 				buttonValueC: 'F',
-				buttonLabelC: dataUtils.pre('\\str{A = (b &bull; a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>) &#43; d}'),
+				buttonLabelC: dataUtils.pre('\\html{A = (b &bull; a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>) &#43; d}'),
 				buttonValueD: 'F',
-				buttonLabelD: dataUtils.pre('\\str{A = a &#43; 2b &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)}'),
+				buttonLabelD: dataUtils.pre('\\html{A = a &#43; 2b &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>)}'),
                 firstHelp: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 							+'<br><br>'
 							+'The area of this shape is the area of the rectangle plus the area of the half circle.',
@@ -410,11 +410,11 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 							+'<br><br>'
 							+'Area of rectangle  =  l &bull; w.  In this figure we could use side b as the length and side a as the width. l &bull; w is the same as b &bull; a'
 							+'<br><br>'
-							+'Area of half circle =  <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>',
+							+'Area of half circle =  <sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>',
 				thirdHelp: 'Add these together to get the area formula.'
 							+'<br><br>'
-							+'(b &bull; a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)',
-				answerHelp: 'A = (b &bull; a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)',
+							+'A = (b &bull; a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>)',
+				answerHelp: 'A = (b &bull; a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>)',
 				template: 'multipleChoice' 
 			}
 			,
@@ -426,27 +426,27 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				imageClass: '',
 				probQuestion: 'What is the correct formula to find the area of this object?',
 				buttonValueA: 'F',
-				buttonLabelA: dataUtils.pre('\\str{A = (s<sub>2</sub> * s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>) &#43; s<sub>1</sub>}'),
+				buttonLabelA: dataUtils.pre('\\html{A = (s<sub>2</sub> &bull; s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>) &#43; s<sub>1</sub>}'),
 				buttonValueB: 'T',
-				buttonLabelB: dataUtils.pre('\\str{A = (s<sub>2</sub> * s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)}'),
+				buttonLabelB: dataUtils.pre('\\html{A = (s<sub>2</sub> &bull; s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>)}'),
 				buttonValueC: 'F',
-				buttonLabelC: dataUtils.pre('\\str{A = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)}'),
+				buttonLabelC: dataUtils.pre('\\html{A = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>)}'),
 				buttonValueD: 'F',
-				buttonLabelD: dataUtils.pre('\\str{A = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)}'),
+				buttonLabelD: dataUtils.pre('\\html{A = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; d)}'),
                 firstHelp: 'Identify the shape:&nbsp;  a rectangle connected to a half circle.'
 							+'<br><br>'
 							+'The area of this shape is the area of the rectangle plus the area of the half circle.',
 				secondHelp: 'A = (area of rectangle) &#43;  (area of half circle)'
 							+'<br><br>'
-							+'Area of rectangle  =  l * w.  In this figure we could use s<sub>2</sub> as the length and s<sub>1</sub> as the width. l * w is the same as s<sub>2</sub> * s<sub>1</sub> '
+							+'Area of rectangle  =  l &bull; w.  In this figure we could use s<sub>2</sub> as the length and s<sub>1</sub> as the width. l &bull; w is the same as s<sub>2</sub> &bull; s<sub>1</sub> '
 							+'<br><br>'
-							+'Area of half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>'
+							+'Area of half circle = <sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>'
 							+'<br><br>'
 							+'Add these together to get the area formula.',
 				thirdHelp: 'A = (area of rectangle) &#43; (area of half circle)'
 							+'<br>'
-							+'A = (s<sub>2</sub> * s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)',
-				answerHelp: 'A = (s<sub>2</sub> * s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)',
+							+'A = (s<sub>2</sub> &bull; s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>)',
+				answerHelp: 'A = (s<sub>2</sub> &bull; s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>)',
 				template: 'multipleChoice' 
 			}
 			,
@@ -474,7 +474,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (b * a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
 										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (7 * 3 <sup>1</sup>&#8260;<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * 3.14 * (1 <sup>3</sup>&#8260;<sub>4</sub>)<sup>2</sup>)</td></tr>'
 										+'<tr><td>&nbsp;</td><td>&nbsp;</td><td>A = (24.5) &#43; (4.808125)</td></tr>'
-										+'<tr><td>Solve:</td><td>&nbsp;</td><td>A = 29.3125</td></tr>'
+										+'<tr><td>Solve:</td><td>&nbsp;</td><td>A = 29.308125</td></tr>'
 										+'</table>'
 										+'<br>'
 										+'$$answerRound'
@@ -612,7 +612,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 										+'In this shape side s<sub>2</sub> (14 in) is the same as the diameter of the half circle (the dotted line). Therefore, the radius is 7 in.'
 										+'<br><br>'
 										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (s<sub>3</sub> * s<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
-										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (12 * 14) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * 3.14 * 7<sup>2</sup>)</td></tr>'
+										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (12 * 14) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * 7<sup>2</sup>)</td></tr>'
 										+'<tr><td>&nbsp;</td><td>&nbsp;</td><td>A = (168) &#43; (77)</td></tr>'
 										+'<tr><td>Solve:</td><td>&nbsp;</td><td>A = 245</td></tr>'
 										+'</table>'
@@ -677,7 +677,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 										+'<br><br>'
 										+'In this shape the radius of the half circle is given as 1 <sup>3</sup>&#8260;<sub>4</sub> ft. Therefore, the diameter would be 3 <sup>1</sup>&#8260;<sub>2</sub> ft.'
 										+'<br><br>'
-										+'In this figure the diameter of the circle is the same distance as s<sub>2</sub>. Therefore, s<sub>2</sub> is 3 <sup>1</sup>&#8260;<sub>2</sub> ft.'
+										+'In this figure the diameter of the circle (the dotted line) is the same distance as s<sub>2</sub>. Therefore, s<sub>2</sub> is 3 <sup>1</sup>&#8260;<sub>2</sub> ft.'
 										+'<br><br>'
 										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (s<sub>3</sub> * s<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
 										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (4 <sup>1</sup>&#8260;<sub>5</sub> * 3 <sup>1</sup>&#8260;<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * (1 <sup>3</sup>&#8260;<sub>4</sub>)<sup>2</sup>)</td></tr>'
@@ -712,7 +712,7 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 										+'<br><br>'
 										+'In this shape the radius of the half circle is given as 2 <sup>1</sup>&#8260;<sub>4</sub> in. Therefore, the diameter would be 4 <sup>1</sup>&#8260;<sub>2</sub> in.'
 										+'<br><br>'
-										+'In this figure the diameter of the circle is the same distance as s<sub>2</sub>. Therefore, s<sub>2</sub> is 4 <sup>1</sup>&#8260;<sub>2</sub> in.'
+										+'In this figure the diameter of the circle (the dotted line) is the same distance as s<sub>2</sub>. Therefore, s<sub>2</sub> is 4 <sup>1</sup>&#8260;<sub>2</sub> in.'
 										+'<br><br>'
 										+'<table><tr><td>Formula:</td><td>&nbsp;</td><td>A = (s<sub>1</sub> * s<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>)</td></tr>'
 										+'<tr><td>Substitution:</td><td>&nbsp;</td><td>A = (5 <sup>1</sup>&#8260;<sub>2</sub> * 4 <sup>1</sup>&#8260;<sub>2</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * (2 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup>)</td></tr>'
@@ -733,26 +733,26 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				width: '100px',
 				height: '200px',
 				buttonValueA: 'F',
-				buttonLabelA: dataUtils.pre('\\str{<sup>22</sup>&#8260;<sub>7</sub> * (8 <sup>1</sup>&#8260;<sub>2</sub>)<sup>2</sup>}'),
+				buttonLabelA: dataUtils.pre('\\html{A = <sup>22</sup>&#8260;<sub>7</sub> &bull; (8 <sup>1</sup>&#8260;<sub>2</sub>)<sup>2</sup>}'),
 				buttonValueB: 'F',
-				buttonLabelB: dataUtils.pre('\\str{<sup>22</sup>&#8260;<sub>7</sub> * 8 <sup>1</sup>&#8260;<sub>2</sub> &#43; 8 <sup>1</sup>&#8260;<sub>2</sub>}'),
+				buttonLabelB: dataUtils.pre('\\html{A = <sup>22</sup>&#8260;<sub>7</sub> &bull; 8 <sup>1</sup>&#8260;<sub>2</sub> &#43; 8 <sup>1</sup>&#8260;<sub>2</sub>}'),
 				buttonValueC: 'F',
-				buttonLabelC: dataUtils.pre('\\str{<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup> &#43; 8 <sup>1</sup>&#8260;<sub>2</sub>}'),
+				buttonLabelC: dataUtils.pre('\\html{A = <sup>1</sup>&#8260;<sub>2</sub> &bull; <sup>22</sup>&#8260;<sub>7</sub> &bull; (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup> &#43; 8 <sup>1</sup>&#8260;<sub>2</sub>}'),
 				buttonValueD: 'T',
-				buttonLabelD: dataUtils.pre('\\str{<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup>}'),
-                firstHelp: 'The area formula for a <strong>full</strong> circle is:  A = &pi; * r<sup>2</sup>.'
+				buttonLabelD: dataUtils.pre('\\html{A = <sup>1</sup>&#8260;<sub>2</sub> &bull; <sup>22</sup>&#8260;<sub>7</sub> &bull; (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup>}'),
+                firstHelp: 'The area formula for a <strong>full</strong> circle is:  A = &pi; &bull; r<sup>2</sup>.'
 							+'<br><br>'
-							+'The area of a <strong>half</strong> circle is:  A = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>.',
+							+'The area of a <strong>half</strong> circle is:  A = <sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>.',
 				secondHelp: 'If the diameter is 8 <sup>1</sup>&#8260;<sub>2</sub> feet, then the radius is half of that diameter or 4 <sup>1</sup>&#8260;<sub>4</sub> feet.'
 							+'<br><br>'
 							+'Here we\'ll use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
 				thirdHelp: 'Now, substitute number values for &pi; and the radius.'
 							+'<br><br>'
-							+'A = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * r<sup>2</sup>'
+							+'A = <sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>'
 							+'<br>'
-							+'A = <sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup> '
+							+'A = <sup>1</sup>&#8260;<sub>2</sub> &bull; <sup>22</sup>&#8260;<sub>7</sub> &bull; (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup> '
 							+'<br>',
-				answerHelp: '<sup>1</sup>&#8260;<sub>2</sub> * <sup>22</sup>&#8260;<sub>7</sub> * (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup>',
+				answerHelp: 'A = <sup>1</sup>&#8260;<sub>2</sub> &bull; <sup>22</sup>&#8260;<sub>7</sub> &bull; (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup>',
 				template: 'multipleChoice' 
 			}
         ];
