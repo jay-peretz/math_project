@@ -486,18 +486,21 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 										+'{\\fracstr{5}}{\\fracstr{12}}}'),
 			},
 			//problem 15 (a/2 – 2b/3) – (3a/5 – b/7)
-				{prob: dataUtils.pre('\\grp'
-									+'{\\str{(}}'
-									+'{\\frac{\\fracstr{a}}{\\fracstr{2}}}'
-									+'{\\sign{-}}'
-									+'{\\frac{\\fracstr{2b}}{\\fracstr{3}}}'
-									+'{\\str{)}}'
-									+'{\\sign{-}}'
-									+'{\\str{(}}'
-									+'{\\frac{\\fracstr{3a}}{\\fracstr{5}}}'
-									+'{\\sign{-}}'
-									+'{\\frac{\\fracstr{b}}{\\fracstr{7}}}'
-									+'{\\str{)}}'),
+				{prob: dataUtils.pre('\\pan{5}{7}'
+										 +'{\\grp'
+											+'{\\str{(}}'
+											+'{\\frac{\\fracstr{a}}{\\fracstr{2}}}'
+											+'{\\sign{-}}'
+											+'{\\frac{\\fracstr{2b}}{\\fracstr{3}}}'
+											+'{\\str{)}}'
+											+'{\\sign{-}}'
+											+'{\\str{(}}'
+											+'{\\frac{\\fracstr{3a}}{\\fracstr{5}}}'
+											+'{\\sign{-}}'
+											+'{\\frac{\\fracstr{b}}{\\fracstr{7}}}'
+											+'{\\str{)}}'
+										+'}'
+									),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
 					 +'{\\html{&nbsp;}}'
@@ -589,7 +592,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 							+'{\\frac{\\fracstr{11b }}{\\fracstr{21}}}'
 							+'{fracNoMargin}'
 						+'}'
-					+'}'	
+					+'}'
+					+'{\\html{&nbsp;}}'
 					),
 			template: 'second', 
 			textAnswer: dataUtils.pre('{\\grp'
