@@ -755,18 +755,22 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				answerHelp: 'A = <sup>1</sup>&#8260;<sub>2</sub> &bull; <sup>22</sup>&#8260;<sub>7</sub> &bull; (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup>',
 				template: 'multipleChoice' 
 			}
-        ];
-	
-	/*shuffle = [
-				{ problems: [1,2,3,4,5,6,7,8,9,10], total: 8},
-				{ problems: [11,12], total: 1},
-				{ problems: [13,14,15,16], total: 1}
+        ],
+		shuffle = [
+				{ problems: [1], total: 1},
+				{ problems: [20], total: 1},
+				{ problems: [2,3], total: 1},
+				{ problems: [4,5], total: 1},
+				{ problems: [6,7], total: 1},
+				{ problems: [8,9], total: 1},
+				{ problems: [10], total: 1},
+				{ problems: [11], total: 1},
+				{ problems: [12,13], total: 1},
+				{ problems: [14,15], total: 1},
+				{ problems: [16,17], total: 1},
+				{ problems: [18,19], total: 1}
 		];
-
+		//return dataUtils.build(desc, template, data);
     
-    	return dataUtils.build(desc, template, data, shuffle);*/
-
-    return dataUtils.build(desc, template, data);
-	
+    	return dataUtils.build(desc, template, data, shuffle);
 }]);
-

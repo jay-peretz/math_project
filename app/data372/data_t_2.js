@@ -816,18 +816,25 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 				answerRound: '',
                 template: 'simpleQuestion' 
 			}
-        ];
-	
-	/*shuffle = [
-				{ problems: [1,2,3,4,5,6,7,8,9,10], total: 8},
+        ],
+		shuffle = [
+				{ problems: [1], total: 1},
+				{ problems: [2,3], total: 1},
+				{ problems: [4], total: 1},
+				{ problems: [5,6], total: 1},
+				{ problems: [7,8], total: 1},
+				{ problems: [9,10], total: 1},
 				{ problems: [11,12], total: 1},
-				{ problems: [13,14,15,16], total: 1}
+				{ problems: [13,14], total: 1},
+				{ problems: [15,16], total: 1},
+				{ problems: [17,18], total: 1},
+				{ problems: [19,20], total: 1},
+				{ problems: [21,22], total: 1},
+				{ problems: [23,24], total: 1},
+				{ problems: [25,26], total: 1}
 		];
-
+		//return dataUtils.build(desc, template, data);
     
-    	return dataUtils.build(desc, template, data, shuffle);*/
-
-    return dataUtils.build(desc, template, data);
-	
+    	return dataUtils.build(desc, template, data, shuffle);
 }]);
 

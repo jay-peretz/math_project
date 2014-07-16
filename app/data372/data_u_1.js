@@ -611,18 +611,24 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 								),
 				template: 'simpleWideQuestion' 
 			}
-        ];
-	
-	/*shuffle = [
-				{ problems: [1,2,3,4,5,6,7,8,9,10], total: 8},
-				{ problems: [11,12], total: 1},
-				{ problems: [13,14,15,16], total: 1}
+        ],
+		shuffle = [
+				{ problems: [1], total: 1},
+				{ problems: [2], total: 1},
+				{ problems: [3,4], total: 1},
+				{ problems: [5,6], total: 1},
+				{ problems: [7,8], total: 1},
+				{ problems: [9,10], total: 1},
+				{ problems: [11], total: 1},
+				{ problems: [12], total: 1},
+				{ problems: [13], total: 1},
+				{ problems: [14], total: 1},
+				{ problems: [15], total: 1},
+				{ problems: [16], total: 1},
+				{ problems: [17], total: 1},
+				{ problems: [18], total: 1}
 		];
-
+		//return dataUtils.build(desc, template, data);
     
-    	return dataUtils.build(desc, template, data, shuffle);*/
-
-    return dataUtils.build(desc, template, data);
-	
+    	return dataUtils.build(desc, template, data, shuffle);
 }]);
-
