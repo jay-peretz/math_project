@@ -13,13 +13,11 @@ template = {
                     title: 'Main Answer',
                     children: [{
 						problem: '$problem',
-						answer: '\\btngrp'+
-									'{\\rowgrp'+
+						answer: '\\rowgrp'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
-									'}',
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -51,16 +49,14 @@ template = {
                     title: 'Main Answer',
                     children: [{
 						problem: '$problem',
-						answer: '\\btngrp'+
-									'{\\css' +
+						answer: '\\css' +
 										'{\\rowgrp'+
 											'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 											'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
 											'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
 											'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
 										'}'+
-										'{tdButtonHeight}'+
-									'}',
+										'{tdButtonHeight}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -133,7 +129,7 @@ template = {
 			}
 			,
 			// problem 3
-			{ 	problem: dataUtils.pre('\\str{-2y &nbsp; * &nbsp; 7y2}'), 
+			{ 	problem: dataUtils.pre('\\str{-2y &nbsp; * &nbsp; 7y<sup>2</sup>}'), 
 				buttonValueA: 'F',
 				buttonLabelA: dataUtils.pre('\\str{14y}'),
 				buttonValueB: 'F',
@@ -266,6 +262,8 @@ template = {
 										   +'{\\frac{\\fracstr{-3}}{\\fracstr{4}}}'
 										   +'{\\str{*}}'
 										   +'{\\frac{\\fracstr{-1}}{\\fracstr{6}}}'
+										   +'{\\sign{=}}'
+										   +'{\\frac{\\fracstr{1}}{\\fracstr{8}}}'
 									   ),
 				thirdHelp: dataUtils.pre('{\\grp'
 											+'{\\css'

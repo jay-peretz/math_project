@@ -26,13 +26,11 @@ angular.module('mathSkills').service('data_y_2', ['dataUtils', function (dataUti
                     children: [{
 						problem: '\\rowgrp'
 								+'$prob',
-						answer: '\\btngrp'+
-									'{\\rowgrp'+
+						answer: '\\rowgrp'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
-									'}',
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}',
 						controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
@@ -63,13 +61,11 @@ angular.module('mathSkills').service('data_y_2', ['dataUtils', function (dataUti
                     children: [{
 						problem: '\\rowgrp'
 								+'$prob',
-						answer: '\\btngrp'+
-									'{\\rowgrp'+
+						answer: '\\rowgrp'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
-									'}',
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}',
 						controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
@@ -105,16 +101,14 @@ angular.module('mathSkills').service('data_y_2', ['dataUtils', function (dataUti
                     children: [{
 						problem: '\\rowgrp'
 								+'$prob',
-						answer: '\\btngrp'+
-									'{\\css' +
+						answer: '\\css' +
 										'{\\rowgrp'+
 											'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 											'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
 											'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
 											'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
 										'}'+
-										'{tdButtonHeight}'+
-									'}',
+										'{tdButtonHeight}',
 						controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
@@ -245,7 +239,7 @@ angular.module('mathSkills').service('data_y_2', ['dataUtils', function (dataUti
 			,
 			// problem 6
 			{
-				prob: dataUtils.pre('{\\str{-m (-3m + 2n<sup>3</sup> - 1))}'),
+				prob: dataUtils.pre('{\\str{-m (-3m + 2n<sup>3</sup> - 1)}'),
 				buttonValueA: 'T',
 				buttonLabelA: dataUtils.pre('\\str{3m<sup>2</sup> - 2mn<sup>3</sup> + m}'),
 				buttonValueB: 'F',
@@ -384,7 +378,7 @@ angular.module('mathSkills').service('data_y_2', ['dataUtils', function (dataUti
 										+'{\\grp'
 											+'{\\frac{\\fracstr{-5ab}}{\\fracstr{6}}}'
 											+'{\\str{(}}'
-											+'{\\frac{\\fracstr{-2a}}{\\fracstr{3}}}'
+											+'{\\frac{\\fracstr{2a}}{\\fracstr{3}}}'
 											+'{\\str{-}}'
 											+'{\\frac{\\fracstr{3b}}{\\fracstr{4}}}'
 											+'{\\str{+}}'

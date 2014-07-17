@@ -15,16 +15,14 @@ template = {
                     title: 'Main Answer',
                     children: [{
 						problem: '$prob',
-						answer: '\\btngrp'+
-										'{\\css' +
+						answer: '\\css' +
 											'{\\rowgrp'+
 												'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 												'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
 												'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
 												'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
 											'}'+
-											'{tdButtonHeight}'+
-										'}',
+											'{tdButtonHeight}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -52,16 +50,14 @@ template = {
                     title: 'Main Answer',
                     children: [{
 						problem: '$prob',
-						answer: '\\btngrp'+
-										'{\\css' +
+						answer: '\\css' +
 											'{\\rowgrp'+
 												'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 												'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
 												'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
 												'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
 											'}'+
-											'{tdButtonHeight}'+
-										'}',
+											'{tdButtonHeight}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -121,7 +117,7 @@ template = {
 										+'{\\str{2}}'
 										+'{\\str{&nbsp; m<sup>2</sup> &nbsp;}}'
 								),
-			firstHelp: '4', 
+			firstHelp: '2', 
 			secondHelp: '$expoHelpQuoted is not divided by any other $helpQuoted variable.<br>$helpQuoted stays the same',
 			helpQuoted: '\\"m\\"',
 			expoHelpQuoted: '\\"m<sup>2</sup>\\"',
@@ -194,8 +190,8 @@ template = {
 			buttonValueD: 'T',
 			buttonLabelD: dataUtils.pre('\\str{&nbsp; 5m<sup>2</sup>n &nbsp;}'),
 			firstHelp: '5', 
-			secondHelp: '$firstHelpQuoted is not divided by any other $firstHelpQuoted variable.<br>$firstHelpQuoted stays the same<br><br>$secondHelpQuoted is not divided by any other $secondHelpQuoted variable.<br>$secondHelpQuoted stays the same',
-			firstHelpQuoted: '\\"m\\"',
+			secondHelp: '$firstHelpQuoted is not divided by any other \\"m\\" variable.<br>$firstHelpQuoted stays the same<br><br>$secondHelpQuoted is not divided by any other $secondHelpQuoted variable.<br>$secondHelpQuoted stays the same',
+			firstHelpQuoted: '\\"m<sup>2</sup>\\"',
 			secondHelpQuoted: '\\"n\\"',
 			helpAnswer: '5m<sup>2</sup>n', 
 			textAnswer: '5m', 
@@ -283,11 +279,15 @@ template = {
 											+'{\\str{5}}'
 									+'}'
 						),
-			secondHelp: '$firstHelpQuoted is not divided by any other $thirdHelpQuoted variable.<br>$firstHelpQuoted stays the same<br><br>$fourthHelpQuoted is in the numerator and $fourthHelpQuoted is in the denominator.  The larger degree is in the numerator, so the $fourthHelpQuoted base will end up in the numerator.<br>$secondHelpQuoted = y<sup> 2-1</sup> or y<sup>1</sup>.',
+			secondHelp: '$firstHelpQuoted is not divided by any other $thirdHelpQuoted variable.<br>$firstHelpQuoted stays the same<br><br>$fourthHelpQuoted is in the numerator and \\"y\\" is in the denominator.  The larger degree is in the numerator, so the \\"y\\" base will end up in the numerator.'
+						+'<br><br>'
+						+'Subtract the smaller degree from the larger:&nbsp; y<sup> 2-1</sup> =  y<sup>1</sup>.'
+						+'<br>'
+						+'y<sup>1</sup> will be in the numerator.',
 			firstHelpQuoted: '\\"x<sup>4</sup>\\"',
 			secondHelpQuoted: '\\"y<sup>2</sup> / y\\"',
 			thirdHelpQuoted: '\\"x\\"',
-			fourthHelpQuoted: '\\"y\\"',
+			fourthHelpQuoted: '\\"y<sup>2</sup>\\"',
 			textAnswer: 'x', 
 			expoAnswer: '4',
 			secondAnswer: 'y',
@@ -320,16 +320,22 @@ template = {
 			buttonLabelB: dataUtils.pre('\\str{-6x}'),
 			buttonValueC: 'T',
 			buttonLabelC: dataUtils.pre('\\frac'
-										+'{\\str{&nbsp; x<sup>4</sup>y &nbsp;}}'
-										+'{\\str{5}}'
+										+'{\\str{-6&nbsp;&nbsp;}}'
+										+'{\\str{&nbsp;x}}'
 								),
 			buttonValueD: 'F',
 			buttonLabelD: dataUtils.pre('\\frac'
-										+'{\\str{&nbsp; -6y &nbsp;}}'
-										+'{\\str{x<sup>5</sup>}}'
+										+'{\\str{-6y&nbsp;&nbsp;}}'
+										+'{\\str{&nbsp;x<sup>5</sup>}}'
 								),
 			firstHelp: dataUtils.pre('{\\str{6}}'),
-			secondHelp: '$firstHelpQuoted is in the numerator and $secondHelpQuoted is in the denominator.  The larger degree is in the denominator, so the $thirdHelpQuoted base will end up in the denominator.<br>$fourthHelpQuoted = x<sup> 3-2</sup> or x<sup>1</sup>.<br><br>$fifthHelpQuoted = y<sup> 2-2</sup> or y<sup>0</sup> (which equals 1).  The $sixthHelpQuoted variables cancel out each other.',
+			secondHelp: '$firstHelpQuoted is in the numerator and $secondHelpQuoted is in the denominator.  The larger degree is in the denominator, so the $thirdHelpQuoted base will end up in the denominator.'
+						+'<br><br>'
+						+'Subtract the smaller degree from the larger:&nbsp; x<sup> 3-2</sup> =  x<sup>1</sup>.'
+						+'<br>'
+						+'x<sup>1</sup> will be in the numerator.'
+						+'<br><br>'
+						+'<br>$fifthHelpQuoted = y<sup> 2-2</sup> or y<sup>0</sup> (which equals 1).  The $sixthHelpQuoted variables cancel out each other.',
 			firstHelpQuoted: '\\"x<sup>2</sup>\\"',
 			secondHelpQuoted: '\\"x<sup>3</sup>\\"',
 			thirdHelpQuoted: '\\"x\\"',
@@ -387,7 +393,17 @@ template = {
 											+'{\\str{7}}'
 									+'}'
 						),
-			secondHelp: '$firstHelpQuoted is in the numerator and $secondHelpQuoted is in the denominator.  The larger degree is in the numerator, so the $secondHelpQuoted base will end up in the numerator.<br>$thirdHelpQuoted = a<sup> 3-1</sup> or a<sup>2</sup>.<br><br>$fourthHelpQuoted is in the numerator and $fifthHelpQuoted is in the denominator.  The larger degree is in the denominator so the $fourthHelpQuoted base will end up in the denominator.<br>  $sixthHelpQuoted= b<sup> 2-1</sup> or b<sup>1.',
+			secondHelp: '$firstHelpQuoted is in the numerator and $secondHelpQuoted is in the denominator.  The larger degree is in the numerator, so the $secondHelpQuoted base will end up in the numerator.'
+						+'<br><br>'
+						+'Subtract the smaller degree from the larger:&nbsp; a<sup> 3-1</sup> = a<sup>2</sup>.'
+						+'<br>'
+						+'a<sup>2</sup> will be in the numerator.'
+						+'<br><br>'
+						+'$fourthHelpQuoted is in the numerator and $fifthHelpQuoted is in the denominator.  The larger degree is in the denominator so the $fourthHelpQuoted base will end up in the denominator.'
+						+'<br><br>'
+						+'Subtract the smaller degree from the larger:&nbsp; b<sup> 2-1</sup> = b<sup>1</sup>'
+						+'<br>'
+						+'b<sup>1</sup> will be in the denominator.',
 			firstHelpQuoted: '\\"a<sup>3</sup>\\"',
 			secondHelpQuoted: '\\"a\\"',
 			thirdHelpQuoted: '\\"a<sup>3</sup> / a\\"',
@@ -480,22 +496,30 @@ template = {
 										+'{\\str{&nbsp; -5z &nbsp;}}'
 										+'{\\str{2y}}'
 								),
-			buttonValueC: 'T',
+			buttonValueC: 'F',
 			buttonLabelC: dataUtils.pre('\\frac'
 										+'{\\str{&nbsp; 5y &nbsp;}}'
 										+'{\\str{2}}'
 								),
-			buttonValueD: 'F',
+			buttonValueD: 'T',
 			buttonLabelD: dataUtils.pre('\\frac'
 										+'{\\str{&nbsp; 5z &nbsp;}}'
 										+'{\\str{2y}}'
 								),
 			firstHelp: dataUtils.pre('{\\frac'
-											+'{\\str{5z}}'
-											+'{\\str{2xy}}'
+											+'{\\str{5}}'
+											+'{\\str{2}}'
 									+'}'
 						),
-			secondHelp: '$firstHelpQuoted = x<sup> 1 - 1</sup> or x<sup>0</sup> (which equals 1).<br>The $secondHelpQuoted variables cancel out each other.<br><br>$thirdHelpQuoted is in the numerator and $fourthHelpQuoted is in the denominator.  The larger degree is in the denominator so the $thirdHelpQuoted base will end up in the denominator.<br>$fifthHelpQuoted = y<sup> 2 - 1</sup> or y<sup>1</sup>.<br><br>$sixthHelpQuoted is not divided by any other $sixthHelpQuoted variable.<br>$sixthHelpQuoted stays the same.',
+			secondHelp: '$firstHelpQuoted = x<sup> 1 - 1</sup> or x<sup>0</sup> (which equals 1).<br>The $secondHelpQuoted variables cancel out each other.<br><br>$thirdHelpQuoted is in the numerator and $fourthHelpQuoted is in the denominator.  The larger degree is in the denominator so the $thirdHelpQuoted base will end up in the denominator.'
+						+'<br><br>'
+						+'Subtract the smaller degree from the larger:&nbsp; y<sup> 2 - 1</sup> = y<sup>1</sup>.'
+						+'<br>'
+						+'y<sup>1</sup> will be in the denominator.'
+						+'<br><br>'
+						+'$sixthHelpQuoted is not divided by any other $sixthHelpQuoted variable.'
+						+'<br>'
+						+'$sixthHelpQuoted stays the same.',
 			firstHelpQuoted: '\\"x / x\\"',
 			secondHelpQuoted: '\\"x\\"',
 			thirdHelpQuoted: '\\"y\\"',
