@@ -432,14 +432,16 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 17
-				illustration: 'T.1/Notched_Rectangle_02.jpg',
+				illustration: 'T.1/Notched_Rectangle_02_v2.jpg',
 				alt: 'notched rectangle',
-				width: '400px',
-				height: '151px',
+				width: '350px',
+				height: '257px',
 				probQuestion: 'Solve for the perimeter of the following shape. All measurements are in meters.',
-				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{36}}'+
-												'{\\str{m}}'
+				simpleAnswer: dataUtils.pre('\\pan{5}{6}'+
+												'{\\grp'+
+													'{\\input{36}}'+
+													'{\\str{m}}'+
+												'}'
 								),
 				s1Value: 's<sub>1</sub>',
 				s2Value: 's<sub>2</sub>',

@@ -512,13 +512,15 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 			,
 			{ // problem 16
 				probQuestion: 'Solve for the area of the following shape. All measurements are in inches.',
-				illustration: 'T.1/Notched_Rectangle_02.jpg',
+				illustration: 'T.1/Notched_Rectangle_02_v2.jpg',
 				alt: 'notched rectangle',
-				width: '400px',
-				height: '151px',
-				simpleAnswer: dataUtils.pre('\\grp'+
-												'{\\input{60}}'+
-												'{\\str{in<sup>2</sup>}}'
+				width: '350px',
+				height: '257px',
+				simpleAnswer: dataUtils.pre('\\pan{5}{6}'+
+												'{\\grp'+
+													'{\\input{60}}'+
+													'{\\str{in<sup>2</sup>}}'+
+												'}'
 								),
 				s1Value: 's<sub>1</sub>',
 				s2Value: 's<sub>2</sub>',
