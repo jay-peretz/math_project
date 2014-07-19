@@ -20,7 +20,7 @@ angular.module('mathSkills')
                     $scope.$watch('expected', function () {
                         if ($scope.expected){
                             $scope.args = parser.extractTag($scope.expected).args;
-                            $scope.opclass = $scope.args.length > 2 ? $scope.args[2] : '';
+                            $scope.opclass = $scope.args.length > 3 ? $scope.args[3] : '';
                         }
                     });
                      
@@ -30,7 +30,7 @@ angular.module('mathSkills')
                             if ($scope.clicked === true){
 								var data = {
 									expected: $scope.expected,
-									answer: '\\solobtn{' + $scope.args[0] + '}{' + $scope.args[1] + '}',
+									answer: '\\solobtn{' + $scope.args[0] + '}{' + $scope.args[1] + '}{' + $scope.args[2] + '}',
 									label: $scope.label
 								};
                                 if ($scope.args[1] === "T") {

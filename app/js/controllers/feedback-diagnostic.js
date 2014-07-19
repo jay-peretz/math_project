@@ -4,6 +4,9 @@
 angular.module('mathSkills')
     /**
      * Displays feedback information for a problem set.
+	 * feedbackDiagnostic presumes either 4 solobtn tags (T/F) or 2 (>/<) in answer sec.
+	 * feedbackDiagnostic also presumes 2 solobtn problems with more than one grp
+	 * have a problem display in the last grp
      */
     .controller('feedbackDiagnostic', [
         'courseData',
@@ -19,7 +22,10 @@ angular.module('mathSkills')
 				numberIncorrect,
 				tagIndex,
 				tagString,
-				feedbackSoloIndex;
+				feedbackSoloIndex,
+				greaterLesser,
+				regexp,
+				regexpMatches = [];
 				
 			$scope.allCorrect = false;   // displays incorrect problems or all correct message
 			
@@ -36,36 +42,59 @@ angular.module('mathSkills')
 			if (numberIncorrect > 0) {
 			
 				for (var ii = 0; ii < numberIncorrect; ii += 1) {
+					greaterLesser = false;
 					
-					// get correct solobtn tag label
-					regString = /solobtn{.?}{T}/;
-					expectedTags = $scope.feedback[ii].expected.match(regString);
-					regString = /{.?}/;
-					soloArgs = JSON.stringify(expectedTags[0]).match(regString);
-					soloArgs = JSON.stringify(soloArgs[0]).substring(2,JSON.stringify(soloArgs[0]).length - 2);
-					$scope.feedback[ii].correctLabel = "\\solobtn{"+soloArgs+"}{T}{success}";
-					
-					// get incorrect solobtn tag label
-					feedbackSoloIndex = JSON.stringify($scope.feedback[ii].answer).indexOf("solobtn");
-					regString = /solobtn{.?}{F}/;
-					expectedTags = $scope.feedback[ii].answer.match(regString);
-					regString = /{.?}/;
-					soloArgs = JSON.stringify(expectedTags[0]).match(regString);
-					soloArgs = JSON.stringify(soloArgs[0]).substring(2,JSON.stringify(soloArgs[0]).length - 2);
-					$scope.feedback[ii].answer = JSON.stringify($scope.feedback[ii].answer).substr(0,feedbackSoloIndex) + "solobtn{" + soloArgs + "}{F}{danger}}" + JSON.stringify($scope.feedback[ii].answer).substr((feedbackSoloIndex + 8 + soloArgs.length + 5));
-					$scope.feedback[ii].answer = JSON.parse($scope.feedback[ii].answer);
-					
-							
-					// A UI helper function to convert answer event data.result strings to
-					// a corresponding bootstrap table row class.
-					/*$scope.rowClass = function (result) {
-						switch (result) {
-							case 'correct': return 'success';
-							case 'incorrect': return 'error';
-							case 'helped': return 'warning';
-							default: return '';
+					if ($scope.feedback[ii].problem === "") {
+						$scope.feedback[ii].problem =$scope.feedback[ii].answer;
+					}
+					// Find the correct answer amongst the contained buttons.
+					parser.find($scope.feedback[ii].expected, 'solobtn').forEach(function (button) {
+						if (button.args[1] === 'T') {
+							$scope.correctAnswer = button.args[0];
+							console.log("$scope.correctAnswer is: ",$scope.correctAnswer);
+							$scope.correctLabel = button.args[2];
+							if ($scope.correctAnswer === ">" || $scope.correctAnswer === "<") {
+								greaterLesser = true;
+							}
 						}
-					};*/
+					});
+					$scope.answerSelected = parser.find($scope.feedback[ii].answer, 'solobtn')[0].args[0];
+					$scope.answerSelectedLabel = parser.find($scope.feedback[ii].answer, 'solobtn')[0].args[2];
+					console.log("$scope.correctLabel is: ",$scope.correctLabel," $scope.answerSelectedLabel is: ",$scope.answerSelectedLabel);
+					
+					//compose selected answer 
+					$scope.feedback[ii].answer = '\\grp{\\solobtn{'+ $scope.answerSelected +'}{}{}{danger}}{'+ $scope.answerSelectedLabel +'}';								
+					
+					//compose correct answer 
+					$scope.feedback[ii].correctAnswer = '\\grp{\\solobtn{'+ $scope.correctAnswer +'}{}{}{success}}{'+ $scope.correctLabel +'}';	
+					
+					console.log("$scope.feedback[ii].problem.match('grp') is: ",$scope.feedback[ii].problem.match(/grp/g)); 
+					// replace buttons in problem section
+					if (greaterLesser === true) {
+						// get the number of \\grp tags in the problem
+						regexp = /grp/g;
+						while (regexp.test($scope.feedback[ii].problem) === true) {
+							if (typeof regexp.lastIndex !== "undefined") {
+						  		regexpMatches.push(+regexp.lastIndex);
+							} else {
+								regexpMatches.push[0]
+							}
+						}
+						console.log("regexpMatches is: ",regexpMatches," JSON.parse($scope.correctLabel)[0] is: ",JSON.parse($scope.correctLabel)[0]); 
+						if (regexpMatches.length < 2) {
+			 				$scope.feedback[ii].problem = '\\grp{\\str{' + JSON.parse($scope.correctLabel)[0] + '}}{\\solobtn{>}{}{}}{\\solobtn{<}{}{}}{\\str{' + JSON.parse($scope.correctLabel)[1] +'}}';
+						} else {
+							$scope.feedback[ii].problem = '\\rowgrp{\\grp{\\str{' + JSON.parse($scope.correctLabel)[0] + '}}{\\solobtn{>}{}{}}{\\solobtn{<}{}{}}{\\str{' + JSON.parse($scope.correctLabel)[1] +'}}}' + $scope.feedback[ii].problem.substr(regexpMatches[regexpMatches.length - 1] - 5)
+							console.log("in else, $scope.feedback[ii].problem is: ",$scope.feedback[ii].problem);
+						}
+					}
+					
+					console.log("$scope.feedback[ii].problem is: ",$scope.feedback[ii].problem);
+					console.log("$scope.feedback[ii].answer is: ",$scope.feedback[ii].answer);
+					console.log("$scope.feedback[ii].correctAnswer is: ",$scope.feedback[ii].correctAnswer);
+					
+					
+					
 				}
 			} else {
 				$scope.allCorrect = true;

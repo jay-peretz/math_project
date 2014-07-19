@@ -19,10 +19,10 @@ template = {
 						problem: '\\rowgrp{\\str{Identify the place value of the indicated digit: }}{\\placevalue{$numberProb}{$placeNumber}}',
 						answer: '\\wb'
 									+'{\\rowgrp'+
-										'{\\grp{\\solobtn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
-										'{\\grp{\\solobtn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
-										'{\\grp{\\solobtn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-										'{\\grp{\\solobtn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'
+										'{\\grp{\\solobtn{A}{$buttonValueA}{$buttonLabelA}{marg}}{$buttonLabelA}}'+
+										'{\\grp{\\solobtn{B}{$buttonValueB}{$buttonLabelB}{marg}}{$buttonLabelB}}'+
+										'{\\grp{\\solobtn{C}{$buttonValueC}{$buttonLabelC}{marg}}{$buttonLabelC}}'+
+										'{\\grp{\\solobtn{D}{$buttonValueD}{$buttonLabelD}{marg}}{$buttonLabelD}}'
 									+'}{}{diagnostic}',
 						// use of wb with "diagnostic moves on, correct or not
 						controls: {
@@ -45,9 +45,9 @@ template = {
 						answer: '\\wb'+
 									'{\\grp'+
 										'{\\str{$firstNumber \xA0}}'+
-										'{\\solobtn{>}{$buttonValueFirst}}'+
+										'{\\solobtn{>}{$buttonValueFirst}{[$firstNumber,$secondNumber]}}'+
 										'{\\str{&nbsp;}}'+
-										'{\\solobtn{<}{$buttonValueSecond}}'+
+										'{\\solobtn{<}{$buttonValueSecond}{[$firstNumber,$secondNumber]}}'+
 										'{\\str{\xA0 $secondNumber}}'+
 									'}'+
 								'{}{diagnostic}',
@@ -72,9 +72,9 @@ template = {
 										'{\\rowgrp'+
 											'{\\grp'+
 												'{\\str{X \xA0}}'+
-												'{\\solobtn{>}{$firstButton}}'+
+												'{\\solobtn{>}{$firstButton}{["$firstLabel","$secondLabel"]}}'+
 												'{\\str{&nbsp;}}'+
-												'{\\solobtn{<}{$secondButton}}'+
+												'{\\solobtn{<}{$secondButton}{["$firstLabel","$secondLabel"]}}'+
 												'{\\str{\xA0 Y}}'+
 											'}'+
 											'{\\html{&nbsp;}}'+
@@ -151,7 +151,9 @@ template = {
 			,
 			{  // problem 5
 				firstButton: 'F',
+				firstLabel: 'X',
 				secondButton: 'T',
+				secondLabel: 'Y',
 				firstNumber: '83',
 				secondNumber: '84',
 				startGraph: '72', 
@@ -168,7 +170,7 @@ template = {
 			  statement: 'LESS THAN', 
 			  template: 'lessThanGreater' 
 			}
-			,
+			
         ];
 
 	return dataUtils.build(desc, template, data);

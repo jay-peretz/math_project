@@ -2,9 +2,8 @@
 <table class=table ng-hide="allCorrect">
     <tr>
         <th>Problem #</th>
-        <th>Problem/Answer</th>
-        <th></th>
-        <!--<th>Result</th>-->
+        <th>Problem</th>
+        <th>Answer</th>
         <th>Correct Answer</th>
     </tr>
     <!--<tr ng-repeat="problemFeedback in feedback" class={{rowClass(problemFeedback.result)}}>-->
@@ -12,8 +11,7 @@
         <td>{{problemFeedback.problemNumber}}</td>
         <td><ms-expression expected={{problemFeedback.problem}}></ms-expression></td>
         <td><ms-expression expected={{problemFeedback.answer}}></ms-expression></td>
-        <!--<td>{{problemFeedback.result}}</td>-->
-        <td><ms-expression expected="{{problemFeedback.correctLabel}}"></ms-expression></td>
+        <td><ms-expression expected="{{problemFeedback.correctAnswer}}"></ms-expression></td>
     </tr>
 </table>
 <br />
