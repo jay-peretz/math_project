@@ -1,5 +1,11 @@
 'use strict';
 /*global angular */
+// solobtn is used for the diagnostic (diagnostic.js problem set)
+// solobtn advances on any solobtn selection-- reports expected and selected answer data
+// solobtn expects three parameters, with css class an optional fourth parameter
+// the three parameters are button-center text, true/false, and button description label
+// button description label is the text given after or before the button in the problem
+// for 2-button probs, requires before and after description labels in 3rd parm as array
 
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {

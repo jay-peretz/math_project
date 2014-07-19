@@ -45,9 +45,9 @@ template = {
 						answer: '\\wb'+
 									'{\\grp'+
 										'{\\str{$firstNumber \xA0}}'+
-										'{\\solobtn{>}{$buttonValueFirst}{[$firstNumber,$secondNumber]}}'+
+										'{\\solobtn{>}{$buttonValueFirst}{["$firstNumber","$secondNumber"]}}'+
 										'{\\str{&nbsp;}}'+
-										'{\\solobtn{<}{$buttonValueSecond}{[$firstNumber,$secondNumber]}}'+
+										'{\\solobtn{<}{$buttonValueSecond}{["$firstNumber","$secondNumber"]}}'+
 										'{\\str{\xA0 $secondNumber}}'+
 									'}'+
 								'{}{diagnostic}',
