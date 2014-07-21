@@ -17,6 +17,7 @@ angular.module('mathSkills')
         function (courseData, feedbackData, $routeParams, $scope, parser) {
 			var expectedTags,
 				numberIncorrect,
+				problemGroups = [],
 				greaterLesser,
 				correctAnswer,
 				correctLabel,
@@ -45,6 +46,11 @@ angular.module('mathSkills')
 					if ($scope.feedback[ii].problem === "") {
 						$scope.feedback[ii].problem =$scope.feedback[ii].answer;
 					}
+					
+					// collect all the problem-section grp tags for this problem
+					problemGroups = []
+					parser.find($scope.feedback[ii].problem, 'grp').forEach(function (group) {														   									  						problemGroups.push(group.args);
+					});
 					
 					// Find the correct answer solobtn amongst the submitted buttons.
 					parser.find($scope.feedback[ii].expected, 'solobtn').forEach(function (button) {
@@ -81,22 +87,11 @@ angular.module('mathSkills')
 					// add the buttons, then if there is more than one \\grp in problem,
 					// add the last \\grp because that should contain a display tag
 					if (greaterLesser === true) {
-						// get the number of \\grp tags in the problem
-						regexpMatches = [];
-						regexp = /grp/g;
-						while (regexp.test($scope.feedback[ii].problem) === true) {
-							if (typeof regexp.lastIndex !== "undefined") {
-						  		regexpMatches.push(+regexp.lastIndex);
-							} else {
-								regexpMatches.push[0]
-							}
-						}
-						// if there are less than two \\grp tags in the problem section
-						if (regexpMatches.length < 2) {
+						if (problemGroups.length < 2) {
 			 				$scope.feedback[ii].problem = '\\grp{\\str{' + JSON.parse(correctLabel)[0] + '}}{\\solobtn{>}{}{}}{\\solobtn{<}{}{}}{\\str{' + JSON.parse(correctLabel)[1] +'}}';
 						// otherwise
 						} else {
-							$scope.feedback[ii].problem = '\\rowgrp{\\grp{\\str{' + JSON.parse(correctLabel)[0] + '}}{\\solobtn{>}{}{}}{\\solobtn{<}{}{}}{\\str{' + JSON.parse(correctLabel)[1] +'}}}' + $scope.feedback[ii].problem.substr(regexpMatches[regexpMatches.length - 1] - 5)
+							$scope.feedback[ii].problem = '\\rowgrp{\\grp{\\str{' + JSON.parse(correctLabel)[0] + '}}{\\solobtn{>}{}{}}{\\solobtn{<}{}{}}{\\str{' + JSON.parse(correctLabel)[1] +'}}}{\\grp{' + problemGroups[problemGroups.length - 1] + '}';
 						}
 					}
 					
