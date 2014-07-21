@@ -44,7 +44,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Write the given value as a fraction.$descriptor}}'
+										+'{\\html{Write the given rate as a fraction.$descriptor}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$unitsStart}{$labelSelect}}}{\\grp{\\input{$denominatorStart}}{\\html{&nbsp;}}{\\select{$unitsPer}{$perSelect}}}}'
@@ -192,7 +192,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Write the given value as a fraction.$descriptor}}'
+										+'{\\html{Write the given rate as a fraction.$descriptor}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\frac'
 											+'{\\grp{\\html{$dollarSign}}{\\html{&nbsp;}}{\\input{$numeratorStart}}{\\html{&nbsp;}}}'
@@ -349,7 +349,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Write the given value as a fraction.$descriptor}}'
+										+'{\\html{Write the given rate as a fraction.$descriptor}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$unitsStart}{$perSelectOne}}}{\\grp{\\input{$denominatorStart}}{\\html{&nbsp;}}{\\select{$firstDenAnswer}{$perSelectTwo}}}}'
@@ -639,7 +639,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Write the given value as a fraction.$descriptor}}'
+										+'{\\html{Write the given rate as a fraction.$descriptor}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\grp{\\input{$numeratorStart}}{\\html{&nbsp;}}{\\select{$unitsStart}{$perSelectOne}}}{\\grp{\\input{$denominatorStart}}{\\html{&nbsp;}}{\\select{$firstDenAnswer}{$perSelectTwo}}}}'
@@ -1244,9 +1244,9 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				thirdWordCancel: 'minutes',
 				perWordCancel: 'hours',
 				numEqFrac: '1 gal',
-				numSelect: '[\\"1 gal\\", \\"1 min\\", \\"4 qt\\", \\"60 min\\"]',
+				numSelect: '[\\"1 gal\\", \\"1 min\\", \\"4 qt\\", \\"1 hr\\"]',
 				denEqFrac: '4 qt',
-				denSelect: '[\\"4 qt\\", \\"1 qt\\", \\"1 gal\\", \\"1 hr\\"]',
+				denSelect: '[\\"4 qt\\", \\"1 qt\\", \\"1 gal\\", \\"60 min\\"]',
 				num2ndEqFrac: '60 min',
 				num2ndSelect: '[\\"1 min\\", \\"4 qt\\", \\"1 hr\\", \\"60 min\\"]',
 				den2ndEqFrac: '1 hr',
@@ -1293,7 +1293,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				thirdWordCancel: 'seconds',
 				perWordCancel: 'minutes',
 				numEqFrac: '1 ft',
-				numSelect: '[\\"60 sec\\", \\"1 min\\", \\"1 ft\\", \\"12 in\\"]',
+				numSelect: '[\\"1 hr\\", \\"1 min\\", \\"1 ft\\", \\"12 in\\"]',
 				denEqFrac: '12 in',
 				denSelect: '[\\"1 in\\", \\"60 sec\\", \\"12 in\\", \\"1 ft\\"]',
 				num2ndEqFrac: '60 sec',
@@ -1393,11 +1393,11 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				numEqFrac: '4 qt',
 				numSelect: '[\\"1 gal\\", \\"4 qt\\", \\"1 qt\\", \\"16 oz\\"]',
 				denEqFrac: '1 gal',
-				denSelect: '[\\"4 qt\\", \\"1 gal\\", \\"16 oz\\", \\"1 lb\\"]',
+				denSelect: '[\\"4 qt\\", \\"1 gal\\", \\"1 ton\\", \\"1 lb\\"]',
 				num2ndEqFrac: '2 pt',
-				num2ndSelect: '[\\"1 lb\\", \\"4 qt\\", \\"1 qt\\", \\"2 pt\\"]',
+				num2ndSelect: '[\\"16 oz\\", \\"4 qt\\", \\"1 qt\\", \\"2 pt\\"]',
 				den2ndEqFrac: '1 qt',
-				den2ndSelect: '[\\"4 qt\\", \\"16 oz\\", \\"2 pt\\", \\"1 qt\\"]',
+				den2ndSelect: '[\\"4 qt\\", \\"1 lb\\", \\"2 pt\\", \\"1 qt\\"]',
 				num3rdEqFrac: '1 lb',
 				num3rdSelect: '[\\"1 lb\\", \\"16 oz\\", \\"4 qt\\", \\"1 pt\\"]',
 				den3rdEqFrac: '16 oz',
