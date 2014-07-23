@@ -260,6 +260,10 @@ button.btn.btn-.huge {
 	font-weight:100;
 	font-family:"Open Sans"
 }
+table td .width160ValignTop {
+	width: 160px;
+	vertical-align: top;
+}
 .underline {
 	text-decoration:underline;
 }
