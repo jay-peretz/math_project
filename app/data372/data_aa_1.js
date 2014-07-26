@@ -277,7 +277,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 				}
 				,
 				{	// problem 14
-					probNumbers: dataUtils.pre('\\str{-15x<sup>3</sup>y<sup>4</sup> &nbsp and&nbsp; 9x<sup>2</sup>y<sup>7</sup>}'),
+					probNumbers: dataUtils.pre('\\str{-15x<sup>3</sup>y<sup>4</sup> &nbsp and&nbsp; -9x<sup>2</sup>y<sup>7</sup>}'),
 					buttonValueA: 'T',
 					buttonLabelA: dataUtils.pre('\\str{-3x<sup>2</sup>y<sup>4</sup>}'),
 					buttonValueB: 'F',
@@ -417,7 +417,20 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 									+'<br><br>'
 									+'z<sup>4</sup>, z<sup>3</sup>, and z<sup>7</sup> all have a degree of three in common.  All the terms have z<sup>3</sup>',
 				}
-        ];
-
-	return dataUtils.build(desc, template, data);
+        ],
+		shuffle = [
+				{ problems: [1,2], total: 1},
+				{ problems: [3,4], total: 1},
+				{ problems: [5,6], total: 1},
+				{ problems: [7,8], total: 1},
+				{ problems: [9,10], total: 1},
+				{ problems: [11,12], total: 1},
+				{ problems: [13,14], total: 1},
+				{ problems: [15,16], total: 1},
+				{ problems: [17,18], total: 1},
+				{ problems: [19,20], total: 1}
+		];
+		//return dataUtils.build(desc, template, data);
+    
+    	return dataUtils.build(desc, template, data, shuffle);
 }]);

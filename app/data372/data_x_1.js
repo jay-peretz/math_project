@@ -151,7 +151,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 					+'{\\html{&nbsp;}}'
 					+'{\\str{-8r - (-3r) - 2r  becomes  -8r + 3r - 2r}}'
 					+'{\\html{&nbsp;}}'
-					+'{\\str{\"-8r\" and \"3r\" and \"- 2r\" are like terms because they are all \"r\" terms.}}'
+					+'{\\str{\"-8r\" and \"3r\" and \"- 2r\" are like terms because they are all \"r<sup>1</sup>\" terms.}}'
 					+'{\\html{&nbsp;}}'
 					+'{\\str{Combine the coefficients: -8 + 3 - 2  =  -7}}'
 					),
@@ -308,7 +308,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 					+'{\\html{&nbsp;}}'
 					+'{\\str{\“4x<sup>2</sup>\” and \“-6x<sup>2</sup>\” are like terms because they are both \“x<sup>2</sup>\” terms. Together they equal -2x<sup>2</sup>.}}'
 					+'{\\html{&nbsp;}}'
-					+'{\\str{\“-4x\” and \“-2x\” are like terms because they are both \“x\” terms. Together they equal -6x.}}'
+					+'{\\str{\“-4x\” and \“-2x\” are like terms because they are both \“x<sup>1</sup>\” terms. Together they equal -6x.}}'
 					),
 			template: 'first', textAnswer: '<span class=bigger>-</span>2x<sup>2</sup>  <span class=bigger>-</span> 6x', 
 			buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>2x <sup>2</sup> <span class=bigger>-</span> 2x', 
@@ -334,7 +334,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 					+'{\\html{&nbsp;}}'
 					+'{\\str{\“-2mn\” and \“5mn\” are like terms because they are both \“mn\” terms. Together they equal 3mn.}}'
 					+'{\\html{&nbsp;}}'
-					+'{\\str{\“n\” and \“3n\” are like terms because they are both \“n\” terms. Together they equal 4n.}}'
+					+'{\\str{\“n\” and \“3n\” are like terms because they are both \“n<sup>1</sup>\” terms. Together they equal 4n.}}'
 					),
 			template: 'first', textAnswer: '3mn + 4n<br><br>', 
 			buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>7mn <span class=bigger>-</span> 2n', 
@@ -360,9 +360,9 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 					+'{\\html{&nbsp;}}'
 					+'{\\str{\“-7xy\” and \“-3xy\” are like terms because they are both \“xy\” terms. Together they equal -10xy.}}'
 					+'{\\html{&nbsp;}}'
-					+'{\\str{\“3x\” is the only \“x\” term; it will stay the same.}}'
+					+'{\\str{\“3x\” is the only \“x<sup>1</sup>\” term; it will stay the same.}}'
 					+'{\\html{&nbsp;}}'
-					+'{\\str{\“7y\” and \“-3y\” are like terms because they are both \“y\” terms. Together they equal 4y.}}'
+					+'{\\str{\“7y\” and \“-3y\” are like terms because they are both \“y<sup>1</sup>\” terms. Together they equal 4y.}}'
 					),
 			template: 'first', textAnswer: '<span class=bigger>-</span>10xy + 3x + 4y<br><br>', 
 			buttonValueA: 'T', buttonLabelA: '<span class=bigger>-</span>10xy &nbsp;+&nbsp; 3x &nbsp;+&nbsp; 4y', 
@@ -561,7 +561,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 						+'}'
 					+'}'
 					 +'{\\html{&nbsp;}}'
-					+'{\\str{are like terms because they are both \"a\" terms.}}'
+					+'{\\str{are like terms because they are both \"a<sup>1</sup>\" terms.}}'
 					 +'{\\html{&nbsp;}}'
 					+'{\\grp'
 						+'{\\str{Together they equal: &nbsp;}}'
@@ -583,7 +583,7 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 						+'{\\frac{\\str{b}}{\\str{7}}}'
 					+'}'
 					+'{\\html{&nbsp;}}'
-					+'{\\html{are like terms because they are both \"b\" terms.}}'
+					+'{\\html{are like terms because they are both \"b<sup>1</sup>\" terms.}}'
 					+'{\\html{&nbsp;}}'
 					+'{\\grp'
 						+'{\\html{Together they equal &nbsp;}}'

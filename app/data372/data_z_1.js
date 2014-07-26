@@ -333,7 +333,7 @@ template = {
 						+'<br><br>'
 						+'Subtract the smaller degree from the larger:&nbsp; x<sup> 3-2</sup> =  x<sup>1</sup>.'
 						+'<br>'
-						+'x<sup>1</sup> will be in the numerator.'
+						+'x<sup>1</sup> will be in the denominator.'
 						+'<br><br>'
 						+'<br>$fifthHelpQuoted = y<sup> 2-2</sup> or y<sup>0</sup> (which equals 1).  The $sixthHelpQuoted variables cancel out each other.',
 			firstHelpQuoted: '\\"x<sup>2</sup>\\"',
