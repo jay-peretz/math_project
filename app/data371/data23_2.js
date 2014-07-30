@@ -438,7 +438,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{is the second fraction that you need to multiply by?}}'
+										+'{\\html{What is the second fraction that you need to multiply by?}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac'
@@ -1102,7 +1102,7 @@ angular.module('mathSkills').service('data23_2', ['dataUtils', function (dataUti
 				firstDenAnswer: '16',
 				numEqFrac: '1 1b',
 				numSelect: '[\\"1 pt\\", \\"1 1b\\", \\"16 oz\\", \\"2 cups\\"]',
-				denEqFrac: '60 min',
+				denEqFrac: '16 oz',
 				denSelect: '[\\"2 cups\\", \\"16 oz\\", \\"1 lb\\", \\"1 pt\\"]',
 				finalAnswer: '0.5',
 				helpFinalAnswer: '0.5',
