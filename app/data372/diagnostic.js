@@ -9,7 +9,58 @@ var desc = {
     children: []
 },
 template = {
-
+			
+			// problem statement and five buttons, no problem display
+			questionNoDisplay: {
+                title: 'Diagnostic',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp{\\str{$problemStatement}}',
+						answer: '\\wb'
+									+'{\\rowgrp'+
+										'{\\grp{\\solobtn{A}{$buttonValueA}{$buttonLabelA}{marg}}{$buttonLabelA}}'+
+										'{\\grp{\\solobtn{B}{$buttonValueB}{$buttonLabelB}{marg}}{$buttonLabelB}}'+
+										'{\\grp{\\solobtn{C}{$buttonValueC}{$buttonLabelC}{marg}}{$buttonLabelC}}'+
+										'{\\grp{\\solobtn{D}{$buttonValueD}{$buttonLabelD}{marg}}{$buttonLabelD}}'+
+										'{\\grp{\\solobtn{E}{$buttonValueE}{$buttonLabelE}{marg}}{$buttonLabelE}}'
+									+'}{}{diagnostic}',
+						// use of wb with "diagnostic moves on, correct or not
+						controls: {
+							"checkAnswer": true,
+							"help": false,
+							// stepwiseNextProblem turns off feedback pop-up
+							"stepwiseNextProblem": true,
+							// "fixBottomRight": "hidden" hides controls
+							"fixBottomRight": "hidden"
+						}
+					}]
+				}]
+			},
+			// problem statement and two buttons "true" and "false", no problem display
+			questionTrueFalse: {
+                title: 'Diagnostic',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp{\\html{$problemStatement}}',
+						answer: '\\wb'
+									+'{\\rowgrp'+
+										'{\\grp{\\solobtn{A}{$buttonValueA}{$buttonLabelA}{marg}}{$buttonLabelA}}'+
+										'{\\grp{\\solobtn{B}{$buttonValueB}{$buttonLabelB}{marg}}{$buttonLabelB}}'
+									+'}{}{diagnostic}',
+						// use of wb with "diagnostic moves on, correct or not
+						controls: {
+							"checkAnswer": true,
+							"help": false,
+							// stepwiseNextProblem turns off feedback pop-up
+							"stepwiseNextProblem": true,
+							// "fixBottomRight": "hidden" hides controls
+							"fixBottomRight": "hidden"
+						}
+					}]
+				}]
+			},
 			// placeValue template, two number operation, coefficients reduce to whole
 			placeValue: {
                 title: 'Diagnostic',
@@ -32,7 +83,8 @@ template = {
 							"stepwiseNextProblem": true,
 							// "fixBottomRight": "hidden" hides controls
 							"fixBottomRight": "hidden"
-						}
+						},
+						provideFeedback:"diagnostic"
 					}]
 				}]
 			},
@@ -56,8 +108,7 @@ template = {
 							"help": false,
 							"stepwiseNextProblem": true,
 							"fixBottomRight": "hidden"
-						},
-						provideFeedback:"diagnostic"
+						}
                     }]
                 }]
            },
@@ -96,6 +147,153 @@ template = {
         },
         data = [
 			{ // problem 1
+			problemStatement: 'Find the sum of:<br><br>28 and 116',
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 3248}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 88}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 4}'),
+			buttonValueD: 'T',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 144}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 2
+			problemStatement: 'Find the difference of:<br><br>92 and 37',
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 129}'),
+			buttonValueB: 'T',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 55}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 3404}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 2}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 3
+			problemStatement: 'Find the product of:<br><br>37 and 24',
+			buttonValueA: 'T',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 888}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 61}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 13}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 1}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 4
+			problemStatement: 'Find the quotient of:<br><br>50 and 10',
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 40}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 60}'),
+			buttonValueC: 'T',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 5}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 500}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 5
+			problemStatement: 'Identify the place value of the 7 in the number:<br><br>171,640',
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; hundreds}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; thousands}'),
+			buttonValueC: 'T',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; ten-thousands}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; hundred-thousands}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; millions}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 6
+			problemStatement: 'Identify the place value of the 4 in the number:<br><br>172.46',
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; ones}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; tens}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; thousandths}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; hundredths}'),
+			buttonValueE: 'T',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; tenths}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 7
+			problemStatement: 'Identify the place value of the 5 in the number:<br><br>986.2157',
+			buttonValueA: 'T',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; thousandths}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; thousands}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; hundredths}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; hundreds}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; tens}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 8
+			problemStatement: 'True or False:<br><br>18 &nbsp;<span class=bigger>></span>&nbsp; 0.19',
+			buttonValueA: 'T',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; True}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; False}'),
+			template: 'questionTrueFalse'
+			}
+			,
+			{ // problem 9
+			problemStatement: 'True or False:<br><br>169<span class=decimalNoPadding>.</span>45 &nbsp;<span class=bigger>></span>&nbsp; 169<span class=decimalNoPadding>.</span>428',
+			buttonValueA: 'T',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; True}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; False}'),
+			template: 'questionTrueFalse'
+			}
+			,
+			{ // problem 10
+			problemStatement: 'True or False:<br><br>0<span class=decimalNoPadding>.</span>07 &nbsp;<span class=bigger><</span>&nbsp; 0<span class=decimalNoPadding>.</span>7 &nbsp;<span class=bigger><</span>&nbsp; 1',
+			buttonValueA: 'T',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; True}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; False}'),
+			template: 'questionTrueFalse'
+			}
+			,
+			{ // problem 11
+			problemStatement: 'Arrange these four values in order from smallest to largest:<br><br>8.4,  8.32,  8,  and 8.321',
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 8,  8.321,  8.32, and 8.4}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 8.32,  8.4,  8, and 8.321}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 8.4,  8.321,  8.32, and 8}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 8,  8.4,  8.321, and 8.32}'),
+			buttonValueE: 'T',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; 8,  8.32,  8.321, and 8.4}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 5
 			numberProb: '44816',
 			placeNumber: '3',
 			buttonValueA: 'T',
@@ -109,7 +307,7 @@ template = {
 								),
 			template: 'placeValue'
 			}
-			,
+			/*,
 			{ // problem 2
 			numberProb: '3888708', 
 			placeNumber: '6',
@@ -169,7 +367,7 @@ template = {
 			  buttonValueSecond: 'F', 
 			  statement: 'LESS THAN', 
 			  template: 'lessThanGreater' 
-			}
+			}*/
 			
         ];
 
