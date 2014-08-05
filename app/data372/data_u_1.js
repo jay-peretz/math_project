@@ -347,7 +347,7 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 								+'Now we can write the formula and substitute.<br><br>'
 								+'<table>'
 									+'<tr><td>Formula:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (b<sub>1</sub> &#43; b<sub>2</sub>) &bull; h</td></tr>'
-									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (22 &#43; 42) &bull; 20</td></tr>'
+									+'<tr><td>Substitution:&nbsp;&nbsp;</td><td>A = <sup>1</sup>&#8260;<sub>2</sub> &bull; (22 &#43; 52) &bull; 20</td></tr>'
 									+'<tr><td>Solve:&nbsp;&nbsp;</td><td> A = 740</td></tr>'
 								+'</table><br>',
 				answerHelp: dataUtils.pre('\\str{740 sq. ft. or 740 ft<sup>2</sup>}'
