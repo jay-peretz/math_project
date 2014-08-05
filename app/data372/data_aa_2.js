@@ -27,13 +27,81 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 								"help": '\\rowgrp'
 											+'{\\str{(1) To factor a polynomial we must <strong>first</strong> identify the GCF of the terms.}}'
 											+'{\\html{&nbsp;}}'
-											+'{\\str{$firstHelp}}'
+											+'{\\str{$firstHelp&nbsp; is the greatest factor that can divide evenly into the terms $firstNumHelp &nbsp;and&nbsp; $secondNumHelp.&nbsp; The GCF is: $gcfHelp}}'
 											+'{\\html{&nbsp;}}'
 											+'{\\str{(2) To find what terms are left over <strong>after</strong> we factor out the GCF, we must divide each given term by the GCF. In this case we divide each term by the GCF of $gcfHelp.}}'
 											+'{\\html{&nbsp;}}'
-											+'{\\str{$secondHelp}}'
+											+'{\\grp'
+												+'{\\frac'
+													+'{\\fracstr{$firstNumHelp}}'
+													+'{\\fracstr{$gcfHelp}}'
+												+'}'
+												+'{\\str{$operation}}'
+												+'{\\frac'
+													+'{\\fracstr{$secondNumHelp}}'
+													+'{\\fracstr{$gcfHelp}}'
+												+'}'
+											+'}'
 											+'{\\html{&nbsp;}}'
-											+'{\\str{(3)  A factored polynomial will always be written in this format:  GCF (leftovers of each term after the division)}}'
+											+'{\\str{(3)  A factored polynomial will always be written in this format:}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{&nbsp; &nbsp; &nbsp; &nbsp;GCF (leftovers of each term after the division)}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{GCF: &nbsp; $gcfHelp}}'
+											+'{\\str{Leftover terms: &nbsp; $leftoverHelp}}'
+											+'{\\html{&nbsp;}}'
+											+'{css'
+												+'{\\str{Answer: &nbsp; $$gcfHelp($$leftoverHelp)}}'
+												+'{help-answer-text}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+						}
+					}]
+				}]
+			},
+			threeElement: {
+                title: 'Find the GCF of Terms',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+									+'{\\str{Factor the polynomial:}}'
+									+'{\\html{&nbsp;}}'
+									+'{$probNumbers}',
+						answer: '\\rowgrp'+
+										'{\\grp{\\btn{A}{$buttonValueA}{margin-left-small}}{\\html{&nbsp;}}{$buttonLabelA}}'+
+										'{\\grp{\\btn{B}{$buttonValueB}{margin-left-small}}{\\html{&nbsp;}}{$buttonLabelB}}'+
+										'{\\grp{\\btn{C}{$buttonValueC}{margin-left-small}}{\\html{&nbsp;}}{$buttonLabelC}}'+
+										'{\\grp{\\btn{D}{$buttonValueD}{margin-left-small}}{\\html{&nbsp;}}{$buttonLabelD}}',
+						controls: {
+								"checkAnswer": true,
+								"help": '\\rowgrp'
+											+'{\\str{(1) To factor a polynomial we must <strong>first</strong> identify the GCF of the terms.}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{$gcfHelp&nbsp; is the greatest factor that can divide evenly into the terms &nbsp;$firstNumHelp<strong>,</strong>&nbsp; $secondNumHelp<strong>,</strong>&nbsp; and $thirdNumHelp.&nbsp; The GCF is:&nbsp; $gcfHelp}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{(2) To find what terms are left over <strong>after</strong> we factor out the GCF, we must divide each given term by the GCF. In this case we divide each term by the GCF of $gcfHelp.}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\grp'
+												+'{\\frac'
+													+'{\\fracstr{$firstNumHelp}}'
+													+'{\\fracstr{$gcfHelp}}'
+												+'}'
+												+'{\\str{$operation}}'
+												+'{\\frac'
+													+'{\\fracstr{$secondNumHelp}}'
+													+'{\\fracstr{$gcfHelp}}'
+												+'}'
+												+'{\\str{$secondOperation}}'
+												+'{\\frac'
+													+'{\\fracstr{$thirdNumHelp}}'
+													+'{\\fracstr{$gcfHelp}}'
+												+'}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{(3)  A factored polynomial will always be written in this format:}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{&nbsp; &nbsp; &nbsp; &nbsp;GCF (leftovers of each term after the division)}}'
 											+'{\\html{&nbsp;}}'
 											+'{\\str{GCF: &nbsp; $gcfHelp}}'
 											+'{\\str{Leftover terms: &nbsp; $leftoverHelp}}'
@@ -59,8 +127,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; 2(x - 6)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{-2(x - 3)}'),
-					firstHelp: '2 is the greatest factor that can divide evenly into the terms 2x and -6. The GCF is: 2',
-					secondHelp: '2x&#47;2 - 6&#47;2 gives us the leftover terms of:&nbsp;&nbsp;  x - 3',
+					firstHelp: '2',
+					firstNumHelp: '2x',
+					secondNumHelp: '6',
+					operation: '-',
 					gcfHelp: '2',
 					leftoverHelp: 'x - 3',
 					template: 'main',
@@ -76,8 +146,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; 3(m - 9)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 3m(3)}'),
-					firstHelp: '3 is the greatest factor that can divide evenly into the terms 3m and -9. The GCF is: $$gcfHelp',
-					secondHelp: '3m&#47;3 - 9&#47;3 gives us the leftover terms of:&nbsp;&nbsp;  m - 3',
+					firstHelp: '3',
+					firstNumHelp: '3m',
+					secondNumHelp: '9',
+					operation: '-',
 					gcfHelp: '3',
 					leftoverHelp: 'm - 3',
 					template: 'main',
@@ -93,8 +165,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; x<sup>2</sup>(5x - 8)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; x(5x<sup>2</sup> - 8x)}'),
-					firstHelp: '1x or x is the greatest factor that can divide evenly into the terms 5x<sup>2</sup> and -8x. The GCF is: x',
-					secondHelp: '5x<sup>2</sup>&#47;x - 8x&#47;x gives us the leftover terms of:&nbsp;&nbsp;  5x - 8',
+					firstHelp: '1x or x',
+					firstNumHelp: '5x<sup>2</sup>',
+					secondNumHelp: '8x',
+					operation: '-',
 					gcfHelp: 'x',
 					leftoverHelp: '5x - 8',
 					template: 'main'
@@ -110,8 +184,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; 7a(a - 9)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; a(7a<sup>2</sup> - 9a)}'),
-					firstHelp: '1a or a is the greatest factor that can divide evenly into the terms 7a<sup>2</sup> and -9a. The GCF is: a',
-					secondHelp: '7a<sup>2</sup>&#47;a - 9a&#47;a gives us the leftover terms of:&nbsp;&nbsp;  7a - 9',
+					firstHelp: '1a or a',
+					firstNumHelp: '7a<sup>2</sup>',
+					secondNumHelp: '9a',
+					operation: '-',
 					gcfHelp: 'a',
 					leftoverHelp: '7a - 9',
 					template: 'main'
@@ -127,8 +203,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; 4m<sup>3</sup>(-2m &#43; 3m)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 4m<sup>2</sup>(-2m &#43; 3)}'),
-					firstHelp: '4m is the greatest factor that can divide evenly into the terms -8m<sup>3</sup> and 12m. The GCF is: 4m',
-					secondHelp: '-8m<sup>3</sup>&#47;4m - 12m&#47;4m gives us <br>the leftover terms of:&nbsp;  -2m<sup>2</sup> &#43; 3',
+					firstHelp: '4m',
+					firstNumHelp: '-8m<sup>3</sup>',
+					secondNumHelp: '12m',
+					operation: '&#43;',
 					gcfHelp: '4m',
 					leftoverHelp: '-2m<sup>2</sup> &#43; 3',
 					template: 'main'
@@ -144,8 +222,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; 3x(-3x<sup>2</sup> &#43; 2)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{-3x(-3x<sup>2</sup> &#43; 2)}'),
-					firstHelp: '3x is the greatest factor that can divide evenly into the terms -9x<sup>3</sup> and 6x. The GCF is: 3x',
-					secondHelp: '-9x<sup>3</sup>&#47;3x &#43; 6x&#47;3x gives us <br>the leftover terms of:&nbsp;  -3x<sup>2</sup> &#43; 2',
+					firstHelp: '3x',
+					firstNumHelp: '-9x<sup>3</sup>',
+					secondNumHelp: '6x',
+					operation: '&#43;',
 					gcfHelp: '3x',
 					leftoverHelp: '-3x<sup>2</sup> &#43; 2',
 					template: 'main'
@@ -161,8 +241,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; abc(a<sup>3</sup>b &#43; a<sup>2</sup>c)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; a<sup>3</sup>b(b &#43; c<sup>2</sup>)}'),
-					firstHelp: '1a<sup>3</sup>b or a<sup>3</sup>b is the greatest factor that can divide evenly into the terms a<sup>4</sup>b<sup>2</sup> and a<sup>3</sup>bc<sup>2</sup>. The GCF is: a<sup>3</sup>b',
-					secondHelp: 'a<sup>4</sup>b<sup>2</sup>&#47;a<sup>3</sup>b &#43; a<sup>3</sup>bc<sup>2</sup>&#47;a<sup>3</sup>b gives us <br>the leftover terms of:&nbsp;&nbsp;  ab &#43; c<sup>2</sup>',
+					firstHelp: '1a<sup>3</sup>b or a<sup>3</sup>b',
+					firstNumHelp: 'a<sup>4</sup>b<sup>2</sup>',
+					secondNumHelp: 'a<sup>3</sup>bc<sup>2</sup>',
+					operation: '&#43;',
 					gcfHelp: 'a<sup>3</sup>b',
 					leftoverHelp: 'ab &#43; c<sup>2</sup>',
 					template: 'main'
@@ -178,8 +260,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; xyz(x<sup>4</sup>y &#43; x<sup>2</sup>z)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; x<sup>3</sup>y(x<sup>2</sup> &#43; z<sup>2</sup>)}'),
-					firstHelp: '1x<sup>3</sup>y or x<sup>3</sup>y is the greatest factor that can divide evenly into the terms x<sup>5</sup>y<sup>2</sup> and x<sup>3</sup>yz<sup>2</sup>. The GCF is: x<sup>3</sup>y',
-					secondHelp: 'x<sup>5</sup>y<sup>2</sup>&#47;x<sup>3</sup>y &#43; x<sup>3</sup>yz<sup>2</sup>&#47;x<sup>3</sup>y gives us <br>the leftover terms of:&nbsp;&nbsp;  x<sup>2</sup>y &#43; z<sup>2</sup>',
+					firstHelp: '1x<sup>3</sup>y or x<sup>3</sup>y',
+					firstNumHelp: 'x<sup>5</sup>y<sup>2</sup>',
+					secondNumHelp: 'x<sup>3</sup>yz<sup>2</sup>',
+					operation: '&#43;',
 					gcfHelp: 'x<sup>3</sup>y',
 					leftoverHelp: 'x<sup>2</sup>y &#43; z<sup>2</sup>',
 					template: 'main'
@@ -195,10 +279,12 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; 3mn(4m<sup>2</sup> - 2)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 6mn(-2m<sup>2</sup> &#43; 1)}'),
-					firstHelp: '6mn is the greatest factor that can divide evenly into the terms &nbsp;12m<sup>3</sup>n&nbsp; and -6mn. The GCF is: &nbsp;6mn',
-					secondHelp: '12m<sup>3</sup>n&#47;6mn - 6mn&#47;6mn gives us <br>the leftover terms of:&nbsp;&nbsp;  2m<sup>2</sup>n - 1',
+					firstHelp: '6mn',
+					firstNumHelp: '12m<sup>3</sup>n',
+					secondNumHelp: '6mn',
+					operation: '-',
 					gcfHelp: '6mn',
-					leftoverHelp: '2m<sup>2</sup>n - 1',
+					leftoverHelp: '2m<sup>2</sup> - 1',
 					template: 'main'
 				}
 				,
@@ -212,8 +298,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; 5xy(10x<sup>2</sup> - 2)}'),
 					buttonValueD: 'T',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 10xy(2x<sup>2</sup> - 1)}'),
-					firstHelp: '10xy is the greatest factor that can divide evenly into the terms &nbsp;20x<sup>3</sup>y&nbsp; and -10xy. The GCF is: &nbsp;10xy',
-					secondHelp: '20x<sup>3</sup>y&#47;10xy - 10xy&#47;10xy gives us <br>the leftover terms of:&nbsp;&nbsp;  2x<sup>2</sup> - 1',
+					firstHelp: '10xy',
+					firstNumHelp: '20x<sup>3</sup>y',
+					secondNumHelp: '10xy',
+					operation: '-',
 					gcfHelp: '10xy',
 					leftoverHelp: '2x<sup>2</sup> - 1',
 					template: 'main'
@@ -229,8 +317,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{-6x<sup>2</sup>y<sup>2</sup>(y &#43; 3x)}'),
 					buttonValueD: 'T',
 					buttonLabelD: dataUtils.pre('\\str{-3x<sup>2</sup>y<sup>2</sup> (2y &#43; 5x<sup>3</sup>)}'),
-					firstHelp: '-3x<sup>2</sup>y<sup>2</sup> is the greatest factor that can divide evenly into the terms &nbsp;-6x<sup>2</sup>y<sup>3</sup>&nbsp; and 15x<sup>5</sup>y<sup>2</sup>. The GCF is: &nbsp;-3x<sup>2</sup>y<sup>2</sup>',
-					secondHelp: '2-6x<sup>2</sup>y<sup>3</sup>&#47;-3x<sup>2</sup>y<sup>2</sup> - 15x<sup>5</sup>y<sup>2</sup>&#47;-3x<sup>2</sup>y<sup>2</sup> gives us <br>the leftover terms of:&nbsp;&nbsp;  2y &#43; 5x<sup>3</sup>',
+					firstHelp: '-3x<sup>2</sup>y<sup>2</sup>',
+					firstNumHelp: '-6x<sup>2</sup>y<sup>3</sup>',
+					secondNumHelp: '15x<sup>5</sup>y<sup>2</sup>',
+					operation: '-',
 					gcfHelp: '-3x<sup>2</sup>y<sup>2</sup>',
 					leftoverHelp: '2y &#43; 5x<sup>3</sup>',
 					template: 'main'
@@ -246,8 +336,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{-6m<sup>2</sup>n<sup>2</sup>(n &#43; 5m)}'),
 					buttonValueD: 'T',
 					buttonLabelD: dataUtils.pre('\\str{-2m<sup>2</sup>n<sup>2</sup>(3n &#43; 5m<sup>3</sup>)}'),
-					firstHelp: '$$gcfHelp is the greatest factor that can divide evenly into the terms &nbsp;-6m<sup>2</sup>n<sup>3</sup>&nbsp; and 10m<sup>5</sup>n<sup>2</sup>. The GCF is: &nbsp;$$gcfHelp',
-					secondHelp: '-6m<sup>2</sup>n<sup>3</sup>&#47;$$gcfHelp - 10m<sup>5</sup>n<sup>2</sup>&#47;$$gcfHelp gives us <br>the leftover terms of:&nbsp;&nbsp;  $$leftoverHelp',
+					firstHelp: '$$gcfHelp',
+					firstNumHelp: '-6m<sup>2</sup>n<sup>3</sup>',
+					secondNumHelp: '10m<sup>5</sup>n<sup>2</sup>',
+					operation: '-',
 					gcfHelp: '-2m<sup>2</sup>n<sup>2</sup>',
 					leftoverHelp: '3n &#43; 5m<sup>3</sup>',
 					template: 'main'
@@ -263,11 +355,15 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; 5m(n<sup>2</sup> - 3n - 2)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{-5m(mn<sup>2</sup> &#43; 3n &#43; 2m)}'),
-					firstHelp: '$$gcfHelp is the greatest factor that can divide evenly into the terms &nbsp;5m<sup>2</sup><strong>,</strong>&nbsp; -15m<strong>,</strong> and -10m. The GCF is: &nbsp;$$gcfHelp',
-					secondHelp: '5mn<sup>2</sup>&#47;$$gcfHelp - 15mn&#47;$$gcfHelp - 10m&#47;$$gcfHelp gives us <br>the leftover terms of:&nbsp;&nbsp;  $$leftoverHelp',
+					firstHelp: '$$gcfHelp',
+                    firstNumHelp: '5mn<sup>2</sup>',
+					secondNumHelp: '-15m',
+                    thirdNumHelp: '-10m',
+					operation: '-',
+                    secondOperation: '-',
 					gcfHelp: '5m',
 					leftoverHelp: 'n<sup>2</sup> - 3n - 2',
-					template: 'main'
+					template: 'threeElement'
 				}
 				,
 				{	// problem 14
@@ -280,11 +376,15 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; 5x(4y<sup>2</sup> - 3xy - 2)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{-5x(4xy<sup>2</sup> &#43; 3xy &#43; 2x)}'),
-					firstHelp: '$$gcfHelp is the greatest factor that can divide evenly into the terms &nbsp;20xy<sup>2</sup><strong>,</strong>&nbsp; -15xy<strong>,</strong> and -10x. The GCF is: &nbsp;$$gcfHelp',
-					secondHelp: '20xy<sup>2</sup>&#47;$$gcfHelp - 15xy&#47;$$gcfHelp - 10x&#47;$$gcfHelp gives us <br>the leftover terms of:&nbsp;&nbsp;  $$leftoverHelp',
+					firstHelp: '$$gcfHelp',
+					firstNumHelp: '20xy<sup>2</sup>',
+					secondNumHelp: '-15xy',
+                    thirdNumHelp: '-10x',
+					operation: '-',
+                    secondOperation: '-',
 					gcfHelp: '5x',
 					leftoverHelp: '4y<sup>2</sup> - 3y - 2',
-					template: 'main'
+					template: 'threeElement'
 				}
 				,
 				{	// problem 15
@@ -297,11 +397,15 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{-8ab(4ab &#43; 48a &#43; 8)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 8ab(252ab &#43; 192a &#43; 64)}'),
-					firstHelp: '$$gcfHelp is the greatest factor that can divide evenly into the terms -32a<sup>2</sup>b<sup>3</sup><strong>,</strong>&nbsp; 24a<sup>2</sup>b<strong>,</strong> and 8ab. The GCF is: &nbsp;$$gcfHelp',
-					secondHelp: '-32a<sup>2</sup>b<sup>3</sup>&#47;$$gcfHelp &nbsp;&nbsp;-&nbsp;&nbsp; 24a<sup>2</sup>b&#47;$$gcfHelp &nbsp;&nbsp;-&nbsp;&nbsp; 8ab&#47;$$gcfHelp &nbsp;gives us <br>the leftover terms of:&nbsp;&nbsp;  $$leftoverHelp',
+					firstHelp: '$$gcfHelp',
+					firstNumHelp: '-32a<sup>2</sup>b<sup>3</sup>',
+					secondNumHelp: '24a<sup>2</sup>b',
+                    thirdNumHelp: '8ab',
+					operation: '-',
+                    secondOperation: '-',
 					gcfHelp: '-8ab',
 					leftoverHelp: '4ab<sup>2</sup> &#43; 3a &#43; 1',
-					template: 'main'
+					template: 'threeElement'
 				}
 				,
 				{	// problem 16
@@ -314,11 +418,15 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{-7xy(2xy &#43; 49x &#43; 1)}'),
 					buttonValueD: 'T',
 					buttonLabelD: dataUtils.pre('\\str{-7xy(2xy<sup>2</sup> &#43; 3x &#43; 1)}'),
-					firstHelp: '$$gcfHelp is the greatest factor that can divide evenly into the terms -14x<sup>2</sup>y<sup>3</sup><strong>,</strong>&nbsp; 21x<sup>2</sup>y<strong>,</strong> and 7xy. The GCF is: &nbsp;$$gcfHelp',
-					secondHelp: '-14x<sup>2</sup>y<sup>3</sup>&#47;$$gcfHelp &nbsp;&nbsp;-&nbsp;&nbsp; 21x<sup>2</sup>y&#47;$$gcfHelp &nbsp;&nbsp;-&nbsp;&nbsp; 7xy&#47;$$gcfHelp &nbsp;gives us <br>the leftover terms of:&nbsp;&nbsp;  $$leftoverHelp',
+					firstHelp: '$$gcfHelp',
+					firstNumHelp: '-14x<sup>2</sup>y<sup>3</sup>',
+					secondNumHelp: '21x<sup>2</sup>y',
+                    thirdNumHelp: '7xy',
+					operation: '-',
+                    secondOperation: '-',
 					gcfHelp: '-7xy',
 					leftoverHelp: '2xy<sup>2</sup> &#43; 3x &#43; 1',
-					template: 'main'
+					template: 'threeElement'
 				}
 				,
 				{	// problem 17
@@ -331,11 +439,15 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; 11ab(4ac - 3ab &#43; 1)}'),
 					buttonValueD: 'T',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 11(4a<sup>2</sup>c - 3a<sup>2</sup>b<sup>2</sup> &#43; 1)}'),
-					firstHelp: '$$gcfHelp is the greatest factor that can divide evenly into the terms 44a<sup>2</sup>c<strong>,</strong>&nbsp; 33a<sup>2</sup>b<sup>2</sup><strong>,</strong> and 11. The GCF is: &nbsp;$$gcfHelp',
-					secondHelp: '44a<sup>2</sup>c&#47;$$gcfHelp &nbsp;&nbsp;-&nbsp;&nbsp; 33a<sup>2</sup>b<sup>2</sup>&#47;$$gcfHelp &nbsp;&nbsp;&#43;&nbsp;&nbsp; 11&#47;$$gcfHelp &nbsp;gives us <br>the leftover terms of:&nbsp;&nbsp;  $$leftoverHelp',
+					firstHelp: '$$gcfHelp',
+					firstNumHelp: '44a<sup>2</sup>c',
+					secondNumHelp: '33a<sup>2</sup>b<sup>2</sup>',
+                    thirdNumHelp: '11',
+					operation: '-',
+                    secondOperation: '&#43;',
 					gcfHelp: '11',
 					leftoverHelp: '4a<sup>2</sup>c - 3a<sup>2</sup>b<sup>2</sup> &#43; 1',
-					template: 'main'
+					template: 'threeElement'
 				}
 				,
 				{	// problem 18
@@ -348,11 +460,15 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; 1(34x<sup>2</sup>z - 51x<sup>2</sup>y<sup>2</sup> - 17)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{-1(-34x<sup>2</sup>z &#43; 51x<sup>2</sup>y<sup>2</sup> &#43; 17)}'),
-					firstHelp: '$$gcfHelp is the greatest factor that can divide evenly into the terms 34x<sup>2</sup>z<strong>,</strong>&nbsp; 51x<sup>2</sup>y<sup>2</sup><strong>,</strong> and 17. The GCF is: &nbsp;$$gcfHelp',
-					secondHelp: '34x<sup>2</sup>z&#47;$$gcfHelp &nbsp;&nbsp;-&nbsp;&nbsp; 51x<sup>2</sup>y<sup>2</sup>&#47;$$gcfHelp &nbsp;&nbsp;-&nbsp;&nbsp; 17&#47;$$gcfHelp &nbsp;gives us <br>the leftover terms of:&nbsp;&nbsp;  $$leftoverHelp',
+					firstHelp: '$$gcfHelp',
+					firstNumHelp: '34x<sup>2</sup>z',
+					secondNumHelp: '51x<sup>2</sup>y<sup>2</sup>',
+                    thirdNumHelp: '17',
+					operation: '-',
+                    secondOperation: '-',
 					gcfHelp: '17',
 					leftoverHelp: '2x<sup>2</sup>z - 3x<sup>2</sup>y<sup>2</sup> - 1',
-					template: 'main'
+					template: 'threeElement'
 				}
 				,
 				{	// problem 19
@@ -365,11 +481,15 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; 3xyz(-6z<sup>2</sup> &#43; 4z - 3yz<sup>3</sup>)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{-3(-6xyz<sup>3</sup> &#43; 4xz<sup>2</sup> &#43; 3y<sup>2</sup>z<sup>4</sup>)}'),
-					firstHelp: '$$gcfHelp is the greatest factor that can divide evenly into the terms -18xyz<sup>3</sup><strong>,</strong>&nbsp; 12xz<sup>2</sup><strong>,</strong> and 9y<sup>2</sup>z<sup>4</sup>. The GCF is: &nbsp;$$gcfHelp',
-					secondHelp: '-18xyz<sup>3</sup>&#47;$$gcfHelp &nbsp;&nbsp;&#43;&nbsp;&nbsp; 12xz<sup>2</sup>&#47;$$gcfHelp &nbsp;&nbsp;-&nbsp;&nbsp; 9y<sup>2</sup>z<sup>4</sup>&#47;$$gcfHelp &nbsp;gives us <br>the leftover terms of:&nbsp;&nbsp;  $$leftoverHelp',
+					firstHelp: '$$gcfHelp',
+					firstNumHelp: '-18xyz<sup>3</sup>',
+					secondNumHelp: '12xz<sup>2</sup>',
+                    thirdNumHelp: '9y<sup>2</sup>z<sup>4</sup>',
+					operation: '&#43;',
+                    secondOperation: '-',
 					gcfHelp: '3z<sup>2</sup>',
 					leftoverHelp: '-6xyz &#43; 4x - 3y<sup>2</sup>z<sup>2</sup>',
-					template: 'main'
+					template: 'threeElement'
 				}
 				,
 				{	// problem 20
@@ -382,11 +502,15 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelC: dataUtils.pre('\\str{&nbsp; &nbsp; 4m<sup>2</sup>n(-4o<sup>3</sup> - 3mn &#43; 5n<sup>3</sup>o<sup>2</sup>)}'),
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 4o<sup>2</sup>(-4m<sup>2</sup>no - 3m<sup>3</sup>n<sup>2</sup> &#43; 5m<sup>2</sup>n<sup>4</sup>)}'),
-					firstHelp: '$$gcfHelp is the greatest factor that can divide evenly into the terms -16m<sup>2</sup>no<sup>3</sup><strong>,</strong>&nbsp; 12m<sup>3</sup>n<sup>2</sup><strong>,</strong> and &nbsp;20m<sup>2</sup>n<sup>4</sup>o<sup>2</sup>. The GCF is: &nbsp;$$gcfHelp',
-					secondHelp: '-16m<sup>2</sup>no<sup>3</sup>&#47;$$gcfHelp &nbsp;&nbsp;-&nbsp;&nbsp; 12m<sup>3</sup>n<sup>2</sup>&#47;$$gcfHelp &nbsp;&nbsp;&#43;&nbsp;&nbsp; 20m<sup>2</sup>n<sup>4</sup>o<sup>2</sup>&#47;$$gcfHelp &nbsp;gives us <br>the leftover terms of:&nbsp;&nbsp;  $$leftoverHelp',
+					firstHelp: '$$gcfHelp', 
+					firstNumHelp: '-16m<sup>2</sup>no<sup>3</sup>',
+					secondNumHelp: '12m<sup>3</sup>n<sup>2</sup>',
+                    thirdNumHelp: '20m<sup>2</sup>n<sup>4</sup>o<sup>2</sup>',
+					operation: '-',
+                    secondOperation: '&#43;',
 					gcfHelp: '4m<sup>2</sup>n',
 					leftoverHelp: '-4o<sup>3</sup> - 3mn &#43; 5n<sup>3</sup>o<sup>2</sup>',
-					template: 'main'
+					template: 'threeElement'
 				}
         ];/*,
 		shuffle = [
