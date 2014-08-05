@@ -70,17 +70,25 @@ angular.module('mathSkills')
 					
 					//for four-button probs, add description after the button
 					if (greaterLesser === false) {
-						//compose selected answer 
-						$scope.feedback[ii].answer = '\\grp{\\solobtn{'+ answerSelected +'}{}{}{danger}}{'+ answerSelectedLabel +'}';	
-						//compose correct answer 
-						$scope.feedback[ii].correctAnswer = '\\grp{\\solobtn{'+ correctAnswer +'}{}{}{success}}{'+ correctLabel +'}';
+						//compose selected answer without colored button
+						$scope.feedback[ii].answer = '\\grp{\\solobtn{'+ answerSelected +'}{}{}{}}{'+ answerSelectedLabel +'}';
+						//compose selected answer with colored button
+						//$scope.feedback[ii].answer = '\\grp{\\solobtn{'+ answerSelected +'}{}{}{danger}}{'+ answerSelectedLabel +'}';	
+						//compose correct answer without color on button
+						$scope.feedback[ii].correctAnswer = '\\grp{\\solobtn{'+ correctAnswer +'}{}{}{}}{'+ correctLabel +'}';
+						//compose correct answer with colored button
+						//$scope.feedback[ii].correctAnswer = '\\grp{\\solobtn{'+ correctAnswer +'}{}{}{success}}{'+ correctLabel +'}';
 						
 					//for two-button probs, no description after the button
 					} else {
-						//compose selected answer  
-						$scope.feedback[ii].answer = '\\grp{\\solobtn{'+ answerSelected +'}{}{}{danger}}';		
-						//compose correct answer
-						$scope.feedback[ii].correctAnswer = '\\grp{\\solobtn{'+ correctAnswer +'}{}{}{success}}';	
+						//compose selected answer without color button 
+						$scope.feedback[ii].answer = '\\grp{\\solobtn{'+ answerSelected +'}{}{}{}}';		
+						//compose selected answer with color button 
+						//$scope.feedback[ii].answer = '\\grp{\\solobtn{'+ answerSelected +'}{}{}{danger}}';		
+						//compose correct answer with color button
+						$scope.feedback[ii].correctAnswer = '\\grp{\\solobtn{'+ correctAnswer +'}{}{}{}}';
+						//compose correct answer with color button
+						//$scope.feedback[ii].correctAnswer = '\\grp{\\solobtn{'+ correctAnswer +'}{}{}{success}}';	
 					}
 					
 					// compose the problem section for two-button, ">" or "<" problems

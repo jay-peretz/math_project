@@ -5,6 +5,9 @@ body {
 	font-family: sans-serif;
 	font-size:100%;
 }
+.continuedDecimal {
+	border-top: 1px solid black;
+}
 .center-tr-txt{
     text-align: center;
 }

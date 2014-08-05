@@ -1,17 +1,22 @@
+<style>
+    .noInsideBorder table td {
+        border-top: 0px;
+    }
+</style>
 <h1>Diagnostic</h1>
 <table class="table table-condensed" ng-hide="allCorrect">
     <tr>
         <th>Problem #</th>
         <th>Problem</th>
-        <th>Answer</th>
+        <th>Given Answer</th>
         <th>Correct Answer</th>
     </tr>
     <!--<tr ng-repeat="problemFeedback in feedback" class={{rowClass(problemFeedback.result)}}>-->
     <tr ng-repeat="problemFeedback in feedback">
         <td>{{problemFeedback.problemNumber}}</td>
-        <td><ms-expression expected={{problemFeedback.problem}}></ms-expression></td>
-        <td><ms-expression expected={{problemFeedback.answer}}></ms-expression></td>
-        <td><ms-expression expected="{{problemFeedback.correctAnswer}}"></ms-expression></td>
+        <td class=noInsideBorder><ms-expression expected={{problemFeedback.problem}}></ms-expression></td>
+        <td class=noInsideBorder><ms-expression expected={{problemFeedback.answer}}></ms-expression></td>
+        <td class=noInsideBorder><ms-expression expected="{{problemFeedback.correctAnswer}}"></ms-expression></td>
     </tr>
 </table>
 <br />

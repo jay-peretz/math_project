@@ -61,20 +61,24 @@ template = {
 					}]
 				}]
 			},
-			// placeValue template, two number operation, coefficients reduce to whole
-			placeValue: {
+			questionTwoLineButtons: {
                 title: 'Diagnostic',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '\\rowgrp{\\str{Identify the place value of the indicated digit: }}{\\placevalue{$numberProb}{$placeNumber}}',
+						problem: '\\rowgrp{$problemStatement}',
 						answer: '\\wb'
-									+'{\\rowgrp'+
-										'{\\grp{\\solobtn{A}{$buttonValueA}{$buttonLabelA}{marg}}{$buttonLabelA}}'+
-										'{\\grp{\\solobtn{B}{$buttonValueB}{$buttonLabelB}{marg}}{$buttonLabelB}}'+
-										'{\\grp{\\solobtn{C}{$buttonValueC}{$buttonLabelC}{marg}}{$buttonLabelC}}'+
-										'{\\grp{\\solobtn{D}{$buttonValueD}{$buttonLabelD}{marg}}{$buttonLabelD}}'
-									+'}{}{diagnostic}',
+									+'{\\css'
+										+'{\\rowgrp'+
+											'{\\grp{\\solobtn{A}{$buttonValueA}{$buttonLabelA}{marg}}{$buttonLabelA}}'+
+											'{\\grp{\\solobtn{B}{$buttonValueB}{$buttonLabelB}{marg}}{$buttonLabelB}}'+
+											'{\\grp{\\solobtn{C}{$buttonValueC}{$buttonLabelC}{marg}}{$buttonLabelC}}'+
+											'{\\grp{\\solobtn{D}{$buttonValueD}{$buttonLabelD}{marg}}{$buttonLabelD}}'+
+											'{\\grp{\\solobtn{E}{$buttonValueE}{$buttonLabelE}{marg}}{$buttonLabelE}}'
+										+'}'
+										+'{tdButtonHeight}'
+									+'}'
+								+'{}{diagnostic}',
 						// use of wb with "diagnostic moves on, correct or not
 						controls: {
 							"checkAnswer": true,
@@ -87,63 +91,7 @@ template = {
 						provideFeedback:"diagnostic"
 					}]
 				}]
-			},
-			lessThanGreater: {
-                title: 'Comparing Whole Numbers',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '',
-						answer: '\\wb'+
-									'{\\grp'+
-										'{\\str{$firstNumber \xA0}}'+
-										'{\\solobtn{>}{$buttonValueFirst}{["$firstNumber","$secondNumber"]}}'+
-										'{\\str{&nbsp;}}'+
-										'{\\solobtn{<}{$buttonValueSecond}{["$firstNumber","$secondNumber"]}}'+
-										'{\\str{\xA0 $secondNumber}}'+
-									'}'+
-								'{}{diagnostic}',
-						controls: {
-							"checkAnswer": false,
-							"help": false,
-							"stepwiseNextProblem": true,
-							"fixBottomRight": "hidden"
-						}
-                    }]
-                }]
-           },
-		   graphLessThanGreater: {
-                title: 'Comparing Whole Numbers',
-				children: [{
-					title: 'Main Answer',
-					children: [{
-						problem: '',
-						answer: '\\pan{2}{10}'+
-									'{\\wb'+
-										'{\\rowgrp'+
-											'{\\grp'+
-												'{\\str{X \xA0}}'+
-												'{\\solobtn{>}{$firstButton}{["$firstLabel","$secondLabel"]}}'+
-												'{\\str{&nbsp;}}'+
-												'{\\solobtn{<}{$secondButton}{["$firstLabel","$secondLabel"]}}'+
-												'{\\str{\xA0 Y}}'+
-											'}'+
-											'{\\html{&nbsp;}}'+
-											'{\\grp'+
-												'{\\comparewholesgraph{$firstNumber}{$secondNumber}{$startGraph}{$endGraph}}'+
-											'}'+
-										'}'+
-										'{}{diagnostic}'+
-									'}',
-						controls: {
-							"checkAnswer": false,
-							"help": false,
-							"stepwiseNextProblem": true,
-							"fixBottomRight": "hidden"
-						}
-					}]
-                }]
-            }
+			}
         },
         data = [
 			{ // problem 1
@@ -518,84 +466,258 @@ template = {
 			template: 'questionNoDisplay'
 			}
 			,
-			{ // problem 5
-			numberProb: '44816',
-			placeNumber: '3',
+			{ // problem 27
+			problemStatement: dataUtils.pre('\\str{Solve:<br><br>22,400 / 80}'),
 			buttonValueA: 'T',
-			buttonLabelA: dataUtils.pre('\\str{&nbsp; thousands}'),
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 280}'),
 			buttonValueB: 'F',
-			buttonLabelB: dataUtils.pre('\\str{&nbsp; hundreds}'),
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 279 R.80}'),
 			buttonValueC: 'F',
-			buttonLabelC: dataUtils.pre('\\str{&nbsp; ten-thousands}'),
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 28}'),
 			buttonValueD: 'F',
-			buttonLabelD: dataUtils.pre('\\str{&nbsp; tens}'
-								),
-			template: 'placeValue'
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 208}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionNoDisplay'
 			}
-			/*,
-			{ // problem 2
-			numberProb: '3888708', 
-			placeNumber: '6',
+			,
+			{ // problem 28
+			problemStatement: dataUtils.pre('\\rowgrp'
+											+'{\\str{Solve:}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\frac{\\fracstr{124}}{\\fracstr{4}}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{Give the answer as a decimal.}}'
+											),
 			buttonValueA: 'F',
-			buttonLabelA: dataUtils.pre('\\str{&nbsp; thousands}'),
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 3.125}'),
 			buttonValueB: 'F',
-			buttonLabelB: dataUtils.pre('\\str{&nbsp; ten-thousands}'),
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 0.3125}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 312.5}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 31.5}'),
+			buttonValueE: 'T',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 29
+			problemStatement: dataUtils.pre('\\rowgrp'
+											+'{\\str{Solve:}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\frac{\\fracstr{8}}{\\fracstr{250}}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{Give the answer as a decimal.}}'
+											),
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 0.320}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 0.0032}'),
 			buttonValueC: 'T',
-			buttonLabelC: dataUtils.pre('\\str{&nbsp; millions}'),
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 0.032}'),
 			buttonValueD: 'F',
-			buttonLabelD: dataUtils.pre('\\str{&nbsp; billions}'
-								),
-			template: 'placeValue'
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 3.2}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionNoDisplay'
 			}
 			,
-			{ // problem 3
-			numberProb: '38059', 
-			placeNumber: '2',
+			{ // problem 30
+			problemStatement: dataUtils.pre('\\html{Solve:<br><br><span class=divisorstyleSmall>6</span><span class=dividendstyleSmall>0.048 </span>}'),
 			buttonValueA: 'F',
-			buttonLabelA: dataUtils.pre('\\str{&nbsp; thousands}'),
-			buttonValueB: 'T',
-			buttonLabelB: dataUtils.pre('\\str{&nbsp; hundreds}'),
-			buttonValueC: 'F',
-			buttonLabelC: dataUtils.pre('\\str{&nbsp; ten-thousands}'),
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 0.8}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 0.08}'),
+			buttonValueC: 'T',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 0.008}'),
 			buttonValueD: 'F',
-			buttonLabelD: dataUtils.pre('\\str{&nbsp; tens}'
-								),
-			template: 'placeValue'
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 0.0008}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionNoDisplay'
 			}
 			,
-			{ // problem 4
-			  firstNumber: '47',
-			  secondNumber: '57', 
-			  buttonValueFirst: 'F', 
-			  buttonValueSecond: 'T', 
-			  statement: 'LESS THAN', 
-			  template: 'lessThanGreater' 
+			{ // problem 31
+			problemStatement: dataUtils.pre('\\str{Solve:<br><br>56 / 0.7}'),
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 800}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 8000}'),
+			buttonValueC: 'T',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 80}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 8}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionNoDisplay'
 			}
 			,
-			{  // problem 5
-				firstButton: 'F',
-				firstLabel: 'X',
-				secondButton: 'T',
-				secondLabel: 'Y',
-				firstNumber: '83',
-				secondNumber: '84',
-				startGraph: '72', 
-				endGraph: '88',
-				statement: 'LESS THAN',
-				template: 'graphLessThanGreater'
+			{ // problem 32
+			problemStatement: dataUtils.pre('\\str{Solve:<br><br>2114 / 3.5}'),
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 0.604}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 6.04}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 60.4}'),
+			buttonValueD: 'T',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 604}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionNoDisplay'
 			}
 			,
-			{ // problem 6
-			  firstNumber: '53',
-			  secondNumber: '50', 
-			  buttonValueFirst: 'T', 
-			  buttonValueSecond: 'F', 
-			  statement: 'LESS THAN', 
-			  template: 'lessThanGreater' 
-			}*/
-			
+			{ // problem 33
+			problemStatement: dataUtils.pre('\\str{You paid $2.89 for a package of 17 cookies. What was the price per cookie?}'),
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 0.017&cent;}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 1.7&cent;}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; $1.70}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; $0.16}'),
+			buttonValueE: 'T',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; $0.17}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 34
+			problemStatement: dataUtils.pre('\\str{Round 3579 to the tens place.}'),
+			buttonValueA: 'T',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 3,580}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 3,750}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 3,680}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 3,670}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; 4,000}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 35
+			problemStatement: dataUtils.pre('\\str{Round 849 to the thousands place.}'),
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 1,100}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 1,800}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 1,049}'),
+			buttonValueD: 'T',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 1,000}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; 900}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 36
+			problemStatement: dataUtils.pre('\\str{Round 75.84 to the tenths place.}'),
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 75.80}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 75.0}'),
+			buttonValueC: 'T',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 75.8}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 76.8}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 37
+			problemStatement: dataUtils.pre('\\str{Round 409.623 to the nearest whole value.}'),
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\str{&nbsp; 410.000}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\str{&nbsp; 400}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\str{&nbsp; 7409}'),
+			buttonValueD: 'T',
+			buttonLabelD: dataUtils.pre('\\str{&nbsp; 410}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionNoDisplay'
+			}
+			,
+			{ // problem 38
+			problemStatement: dataUtils.pre('\\rowgrp'
+											+'{\\html{Round 6<span class=decimalNoPadding>.</span><span class=continuedDecimal>3</span> to the:}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{(a) tenths place}}'
+											+'{\\str{(b) hundredths place}}'
+											),
+			buttonValueA: 'T',
+			buttonLabelA: dataUtils.pre('\\rowgrp{\\str{&nbsp; (a) 6.3}}{\\str{&nbsp; (b) 6.33}}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\rowgrp{\\str{&nbsp; (a) 6.30}}{\\str{&nbsp; (b) 6.330}}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\rowgrp{\\str{&nbsp; (a) 6.0}}{\\str{&nbsp; (b) 6.30}}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\rowgrp{\\str{&nbsp; (a) 6.33}}{\\str{&nbsp; (b) 6.333}}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionTwoLineButtons'
+			}
+			,
+			{ // problem 39
+			problemStatement: dataUtils.pre('\\rowgrp'
+											+'{\\html{Round 8<span class=decimalNoPadding>.</span><span class=continuedDecimal>45</span> to the:}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{(a) hundredths place}}'
+											+'{\\str{(b) thousandths place}}'
+											),
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\rowgrp{\\str{&nbsp; (a) 8.44}}{\\str{&nbsp; (b) 6.454}}'),
+			buttonValueB: 'T',
+			buttonLabelB: dataUtils.pre('\\rowgrp{\\str{&nbsp; (a) 8.45}}{\\str{&nbsp; (b) 8.455}}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\rowgrp{\\str{&nbsp; (a) 8.40}}{\\str{&nbsp; (b) 8.450}}'),
+			buttonValueD: 'F',
+			buttonLabelD: dataUtils.pre('\\rowgrp{\\str{&nbsp; (a) 8.450}}{\\str{&nbsp; (b) 8.4550}}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionTwoLineButtons'
+			}
+			,
+			{ // problem 40
+			problemStatement: dataUtils.pre('\\rowgrp'
+											+'{\\html{Cereal sells for $0.9265 per ounce. How much money is this per ounce, rounded to the: }}'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{(a) nearest cent}}'
+											+'{\\str{(b) nearest tenth of a cent}}'
+											),
+			buttonValueA: 'F',
+			buttonLabelA: dataUtils.pre('\\rowgrp{\\str{&nbsp; (a) 0.92&cent;}}{\\str{&nbsp; (b) 0.926&cent;}}'),
+			buttonValueB: 'F',
+			buttonLabelB: dataUtils.pre('\\rowgrp{\\str{&nbsp; (a) $0.92}}{\\str{&nbsp; (b) $0.926}}'),
+			buttonValueC: 'F',
+			buttonLabelC: dataUtils.pre('\\rowgrp{\\str{&nbsp; (a) 0.93&cent;}}{\\str{&nbsp; (b) 0.927&cent;}}'),
+			buttonValueD: 'T',
+			buttonLabelD: dataUtils.pre('\\rowgrp{\\str{&nbsp; (a) $0.93}}{\\str{&nbsp; (b) $0.927}}'),
+			buttonValueE: 'F',
+			buttonLabelE: dataUtils.pre('\\str{&nbsp; None of the above}'),
+			template: 'questionTwoLineButtons'
+			}
         ];
-
-	return dataUtils.build(desc, template, data);
+		/*,shuffle = [
+				{ problems: [1], total: 1},
+				{ problems: [2], total: 1},
+				{ problems: [3,4], total: 1},
+				{ problems: [5,6], total: 1},
+				{ problems: [7,8], total: 1},
+				{ problems: [9,10], total: 1},
+				{ problems: [11,12], total: 1}
+		];
+		
+    	return dataUtils.build(desc, template, data, shuffle);*/
+		
+		return dataUtils.build(desc, template, data);
 }]);
+
+
+
 
