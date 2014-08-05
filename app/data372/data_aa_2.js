@@ -27,7 +27,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 								"help": '\\rowgrp'
 											+'{\\str{(1) To factor a polynomial we must <strong>first</strong> identify the GCF of the terms.}}'
 											+'{\\html{&nbsp;}}'
-											+'{\\str{$firstHelp&nbsp; is the greatest factor that can divide evenly into the terms $firstNumHelp &nbsp;and&nbsp; $secondNumHelp.&nbsp; The GCF is: $gcfHelp}}'
+											+'{\\str{$firstHelp&nbsp; is the greatest factor that can divide evenly into the terms $firstNumHelp &nbsp;and&nbsp; $secondNumFirstHelp.&nbsp; The GCF is: $gcfHelp}}'
 											+'{\\html{&nbsp;}}'
 											+'{\\str{(2) To find what terms are left over <strong>after</strong> we factor out the GCF, we must divide each given term by the GCF. In this case we divide each term by the GCF of $gcfHelp.}}'
 											+'{\\html{&nbsp;}}'
@@ -38,7 +38,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 												+'}'
 												+'{\\str{$operation}}'
 												+'{\\frac'
-													+'{\\fracstr{$secondNumHelp}}'
+													+'{\\fracstr{$secondNumSecondHelp}}'
 													+'{\\fracstr{$gcfHelp}}'
 												+'}'
 											+'}'
@@ -78,7 +78,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 								"help": '\\rowgrp'
 											+'{\\str{(1) To factor a polynomial we must <strong>first</strong> identify the GCF of the terms.}}'
 											+'{\\html{&nbsp;}}'
-											+'{\\str{$gcfHelp&nbsp; is the greatest factor that can divide evenly into the terms &nbsp;$firstNumHelp<strong>,</strong>&nbsp; $secondNumHelp<strong>,</strong>&nbsp; and $thirdNumHelp.&nbsp; The GCF is:&nbsp; $gcfHelp}}'
+											+'{\\str{$gcfHelp&nbsp; is the greatest factor that can divide evenly into the terms &nbsp;$firstNumHelp<strong>,</strong>&nbsp; $secondNumFirstHelp<strong>,</strong>&nbsp; and $thirdNumFirstHelp.&nbsp; The GCF is:&nbsp; $gcfHelp}}'
 											+'{\\html{&nbsp;}}'
 											+'{\\str{(2) To find what terms are left over <strong>after</strong> we factor out the GCF, we must divide each given term by the GCF. In this case we divide each term by the GCF of $gcfHelp.}}'
 											+'{\\html{&nbsp;}}'
@@ -89,12 +89,12 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 												+'}'
 												+'{\\str{$operation}}'
 												+'{\\frac'
-													+'{\\fracstr{$secondNumHelp}}'
+													+'{\\fracstr{$secondNumSecondHelp}}'
 													+'{\\fracstr{$gcfHelp}}'
 												+'}'
 												+'{\\str{$secondOperation}}'
 												+'{\\frac'
-													+'{\\fracstr{$thirdNumHelp}}'
+													+'{\\fracstr{$thirdNumSecondHelp}}'
 													+'{\\fracstr{$gcfHelp}}'
 												+'}'
 											+'}'
@@ -129,7 +129,8 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{-2(x - 3)}'),
 					firstHelp: '2',
 					firstNumHelp: '2x',
-					secondNumHelp: '6',
+					secondNumFirstHelp: '6',
+                    secondNumSecondHelp: '$$secondNumFirstHelp',
 					operation: '-',
 					gcfHelp: '2',
 					leftoverHelp: 'x - 3',
@@ -148,7 +149,8 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 3m(3)}'),
 					firstHelp: '3',
 					firstNumHelp: '3m',
-					secondNumHelp: '9',
+					secondNumFirstHelp: '9',
+                    secondNumSecondHelp: '$$secondNumFirstHelp',
 					operation: '-',
 					gcfHelp: '3',
 					leftoverHelp: 'm - 3',
@@ -167,7 +169,8 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; x(5x<sup>2</sup> - 8x)}'),
 					firstHelp: '1x or x',
 					firstNumHelp: '5x<sup>2</sup>',
-					secondNumHelp: '8x',
+					secondNumFirstHelp: '8x',
+                    secondNumSecondHelp: '$$secondNumFirstHelp',
 					operation: '-',
 					gcfHelp: 'x',
 					leftoverHelp: '5x - 8',
@@ -186,7 +189,8 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; a(7a<sup>2</sup> - 9a)}'),
 					firstHelp: '1a or a',
 					firstNumHelp: '7a<sup>2</sup>',
-					secondNumHelp: '9a',
+					secondNumFirstHelp: '9a',
+                    secondNumSecondHelp: '$$secondNumFirstHelp',
 					operation: '-',
 					gcfHelp: 'a',
 					leftoverHelp: '7a - 9',
@@ -205,7 +209,8 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 4m<sup>2</sup>(-2m &#43; 3)}'),
 					firstHelp: '4m',
 					firstNumHelp: '-8m<sup>3</sup>',
-					secondNumHelp: '12m',
+					secondNumFirstHelp: '12m',
+                    secondNumSecondHelp: '$$secondNumFirstHelp',
 					operation: '&#43;',
 					gcfHelp: '4m',
 					leftoverHelp: '-2m<sup>2</sup> &#43; 3',
@@ -224,7 +229,8 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{-3x(-3x<sup>2</sup> &#43; 2)}'),
 					firstHelp: '3x',
 					firstNumHelp: '-9x<sup>3</sup>',
-					secondNumHelp: '6x',
+					secondNumFirstHelp: '6x',
+                    secondNumSecondHelp: '$$secondNumFirstHelp',
 					operation: '&#43;',
 					gcfHelp: '3x',
 					leftoverHelp: '-3x<sup>2</sup> &#43; 2',
@@ -243,7 +249,8 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; a<sup>3</sup>b(b &#43; c<sup>2</sup>)}'),
 					firstHelp: '1a<sup>3</sup>b or a<sup>3</sup>b',
 					firstNumHelp: 'a<sup>4</sup>b<sup>2</sup>',
-					secondNumHelp: 'a<sup>3</sup>bc<sup>2</sup>',
+					secondNumFirstHelp: 'a<sup>3</sup>bc<sup>2</sup>',
+                    secondNumSecondHelp: '$$secondNumFirstHelp',
 					operation: '&#43;',
 					gcfHelp: 'a<sup>3</sup>b',
 					leftoverHelp: 'ab &#43; c<sup>2</sup>',
@@ -262,7 +269,8 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; x<sup>3</sup>y(x<sup>2</sup> &#43; z<sup>2</sup>)}'),
 					firstHelp: '1x<sup>3</sup>y or x<sup>3</sup>y',
 					firstNumHelp: 'x<sup>5</sup>y<sup>2</sup>',
-					secondNumHelp: 'x<sup>3</sup>yz<sup>2</sup>',
+					secondNumFirstHelp: 'x<sup>3</sup>yz<sup>2</sup>',
+                    secondNumSecondHelp: '$$secondNumFirstHelp',
 					operation: '&#43;',
 					gcfHelp: 'x<sup>3</sup>y',
 					leftoverHelp: 'x<sup>2</sup>y &#43; z<sup>2</sup>',
@@ -281,7 +289,8 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 6mn(-2m<sup>2</sup> &#43; 1)}'),
 					firstHelp: '6mn',
 					firstNumHelp: '12m<sup>3</sup>n',
-					secondNumHelp: '6mn',
+					secondNumFirstHelp: '6mn',
+                    secondNumSecondHelp: '$$secondNumFirstHelp',
 					operation: '-',
 					gcfHelp: '6mn',
 					leftoverHelp: '2m<sup>2</sup> - 1',
@@ -300,7 +309,8 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 10xy(2x<sup>2</sup> - 1)}'),
 					firstHelp: '10xy',
 					firstNumHelp: '20x<sup>3</sup>y',
-					secondNumHelp: '10xy',
+					secondNumFirstHelp: '10xy',
+                    secondNumSecondHelp: '$$secondNumFirstHelp',
 					operation: '-',
 					gcfHelp: '10xy',
 					leftoverHelp: '2x<sup>2</sup> - 1',
@@ -319,7 +329,8 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{-3x<sup>2</sup>y<sup>2</sup> (2y &#43; 5x<sup>3</sup>)}'),
 					firstHelp: '-3x<sup>2</sup>y<sup>2</sup>',
 					firstNumHelp: '-6x<sup>2</sup>y<sup>3</sup>',
-					secondNumHelp: '15x<sup>5</sup>y<sup>2</sup>',
+					secondNumFirstHelp: '-15x<sup>5</sup>y<sup>2</sup>',
+                    secondNumSecondHelp: '15x<sup>5</sup>y<sup>2</sup>',
 					operation: '-',
 					gcfHelp: '-3x<sup>2</sup>y<sup>2</sup>',
 					leftoverHelp: '2y &#43; 5x<sup>3</sup>',
@@ -338,7 +349,8 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{-2m<sup>2</sup>n<sup>2</sup>(3n &#43; 5m<sup>3</sup>)}'),
 					firstHelp: '$$gcfHelp',
 					firstNumHelp: '-6m<sup>2</sup>n<sup>3</sup>',
-					secondNumHelp: '10m<sup>5</sup>n<sup>2</sup>',
+					secondNumFirstHelp: '-10m<sup>5</sup>n<sup>2</sup>',
+                    secondNumSecondHelp: '10m<sup>5</sup>n<sup>2</sup>',
 					operation: '-',
 					gcfHelp: '-2m<sup>2</sup>n<sup>2</sup>',
 					leftoverHelp: '3n &#43; 5m<sup>3</sup>',
@@ -357,8 +369,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{-5m(mn<sup>2</sup> &#43; 3n &#43; 2m)}'),
 					firstHelp: '$$gcfHelp',
                     firstNumHelp: '5mn<sup>2</sup>',
-					secondNumHelp: '-15m',
-                    thirdNumHelp: '-10m',
+					secondNumFirstHelp: '-15m',
+                    thirdNumFirstHelp: '-10m',
+                    secondNumSecondHelp: '$$secondNumFirstHelp',
+                    thirdNumSecondHelp: '$$thirdNumFirstHelp',
 					operation: '-',
                     secondOperation: '-',
 					gcfHelp: '5m',
@@ -378,8 +392,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{-5x(4xy<sup>2</sup> &#43; 3xy &#43; 2x)}'),
 					firstHelp: '$$gcfHelp',
 					firstNumHelp: '20xy<sup>2</sup>',
-					secondNumHelp: '-15xy',
-                    thirdNumHelp: '-10x',
+					secondNumFirstHelp: '-15xy',
+                    thirdNumFirstHelp: '-10x',
+                    secondNumSecondHelp: '15xy',
+                    thirdNumSecondHelp: '10x',
 					operation: '-',
                     secondOperation: '-',
 					gcfHelp: '5x',
@@ -399,8 +415,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 8ab(252ab &#43; 192a &#43; 64)}'),
 					firstHelp: '$$gcfHelp',
 					firstNumHelp: '-32a<sup>2</sup>b<sup>3</sup>',
-					secondNumHelp: '24a<sup>2</sup>b',
-                    thirdNumHelp: '8ab',
+					secondNumFirstHelp: '-24a<sup>2</sup>b',
+                    thirdNumFirstHelp: '-8ab',
+                    secondNumSecondHelp: '24a<sup>2</sup>b',
+                    thirdNumSecondHelp: '8ab',
 					operation: '-',
                     secondOperation: '-',
 					gcfHelp: '-8ab',
@@ -420,8 +438,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{-7xy(2xy<sup>2</sup> &#43; 3x &#43; 1)}'),
 					firstHelp: '$$gcfHelp',
 					firstNumHelp: '-14x<sup>2</sup>y<sup>3</sup>',
-					secondNumHelp: '21x<sup>2</sup>y',
-                    thirdNumHelp: '7xy',
+					secondNumFirstHelp: '-21x<sup>2</sup>y',
+                    thirdNumFirstHelp: '-7xy',
+                    secondNumSecondHelp: '21x<sup>2</sup>y',
+                    thirdNumSecondHelp: '7xy',
 					operation: '-',
                     secondOperation: '-',
 					gcfHelp: '-7xy',
@@ -441,8 +461,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 11(4a<sup>2</sup>c - 3a<sup>2</sup>b<sup>2</sup> &#43; 1)}'),
 					firstHelp: '$$gcfHelp',
 					firstNumHelp: '44a<sup>2</sup>c',
-					secondNumHelp: '33a<sup>2</sup>b<sup>2</sup>',
-                    thirdNumHelp: '11',
+					secondNumFirstHelp: '-33a<sup>2</sup>b<sup>2</sup>',
+                    thirdNumFirstHelp: '11',
+                    secondNumSecondHelp: '33a<sup>2</sup>b<sup>2</sup>',
+                    thirdNumSecondHelp: '$$thirdNumFirstHelp',
 					operation: '-',
                     secondOperation: '&#43;',
 					gcfHelp: '11',
@@ -462,8 +484,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{-1(-34x<sup>2</sup>z &#43; 51x<sup>2</sup>y<sup>2</sup> &#43; 17)}'),
 					firstHelp: '$$gcfHelp',
 					firstNumHelp: '34x<sup>2</sup>z',
-					secondNumHelp: '51x<sup>2</sup>y<sup>2</sup>',
-                    thirdNumHelp: '17',
+					secondNumFirstHelp: '-51x<sup>2</sup>y<sup>2</sup>',
+                    thirdNumFirstHelp: '17',
+                    secondNumSecondHelp: '51x<sup>2</sup>y<sup>2</sup>',
+                    thirdNumSecondHelp: '$$thirdNumFirstHelp',
 					operation: '-',
                     secondOperation: '-',
 					gcfHelp: '17',
@@ -483,8 +507,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{-3(-6xyz<sup>3</sup> &#43; 4xz<sup>2</sup> &#43; 3y<sup>2</sup>z<sup>4</sup>)}'),
 					firstHelp: '$$gcfHelp',
 					firstNumHelp: '-18xyz<sup>3</sup>',
-					secondNumHelp: '12xz<sup>2</sup>',
-                    thirdNumHelp: '9y<sup>2</sup>z<sup>4</sup>',
+					secondNumFirstHelp: '12xz<sup>2</sup>',
+                    thirdNumFirstHelp: '-9y<sup>2</sup>z<sup>4</sup>',
+                    secondNumSecondHelp: '12xz<sup>2</sup>',
+                    thirdNumSecondHelp: '9y<sup>2</sup>z<sup>4</sup>',
 					operation: '&#43;',
                     secondOperation: '-',
 					gcfHelp: '3z<sup>2</sup>',
@@ -504,8 +530,10 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 4o<sup>2</sup>(-4m<sup>2</sup>no - 3m<sup>3</sup>n<sup>2</sup> &#43; 5m<sup>2</sup>n<sup>4</sup>)}'),
 					firstHelp: '$$gcfHelp', 
 					firstNumHelp: '-16m<sup>2</sup>no<sup>3</sup>',
-					secondNumHelp: '12m<sup>3</sup>n<sup>2</sup>',
-                    thirdNumHelp: '20m<sup>2</sup>n<sup>4</sup>o<sup>2</sup>',
+					secondNumFirstHelp: '-12m<sup>3</sup>n<sup>2</sup>',
+                    thirdNumFirstHelp: '20m<sup>2</sup>n<sup>4</sup>o<sup>2</sup>',
+                    secondNumSecondHelp: '12m<sup>3</sup>n<sup>2</sup>',
+                    thirdNumSecondHelp: '$$thirdNumFirstHelp',
 					operation: '-',
                     secondOperation: '&#43;',
 					gcfHelp: '4m<sup>2</sup>n',
