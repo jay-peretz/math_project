@@ -10,3 +10,7 @@
 .ms-order-ops-simple input {
     width: 40px;
 }
+.ms-order-ops-simple sup {
+font-weight:bold;
+font-family:"Open Sans";
+}

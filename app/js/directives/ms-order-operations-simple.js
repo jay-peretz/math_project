@@ -11,6 +11,7 @@ angular.module('mathSkills')
         return {
             controller: ['$scope', '$element', function ($scope, $element) {
                 var saved = null,
+					termsFlag = false,
                     saveStep = function () {
                         //saved = parser.replace($scope.rows[$scope.cur], 'btn', 'html');
 						var newArgsSaved = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
@@ -108,7 +109,11 @@ angular.module('mathSkills')
 						// more than one parameter to ordopssimple tag, push to array
 						// set 'row' instruction to first additional parameter 
 						if (parser.extractTag($scope.expected).args.length > 1) {
-							for (var ii = 1, len = parser.extractTag($scope.expected).args.length; ii < len; ii += 1) {
+							if (parser.extractTag($scope.expected).args[1] === "terms") {
+								termsFlag = true;
+								$scope.instructions = 'Click on the term or the operator that should be evaluated first.';
+							}
+							for (var ii = termsFlag? 2: 1, len = parser.extractTag($scope.expected).args.length; ii < len; ii += 1) {
 								$scope.instructArray.push(parser.extractTag($scope.expected).args[ii]);
 							}
 							$scope.evalText = $scope.instructArray[$scope.cur + 1];
@@ -162,7 +167,11 @@ angular.module('mathSkills')
                                         $scope.cur += 1;
 										$scope.currentExpression = updateExpression($scope.rows, $scope.cur);
                                         $scope.mode = 'row';
-                                        $scope.instructions = 'Click on the operator that should be evaluated next.';
+                                        if (termsFlag === false) {
+                                        	$scope.instructions = 'Click on the operator that should be evaluated next.';
+										} else {
+											$scope.instructions = 'Click on the term or the operator that should be evaluated first.';
+										}
                                     }, 0);
                                     e.stopPropagation();
                                 }

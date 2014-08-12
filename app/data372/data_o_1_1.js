@@ -222,7 +222,7 @@ angular.module('mathSkills').service('data_o_1_1', ['dataUtils', function (dataU
 			textAnswer: ' &nbsp; -25', 
 			template: 'first' }
 			,
-            { // problem 11
+             { // problem 11
 			problemStatement: dataUtils.pre(
 											'{\\grp'
 												+'{\\exp{\\str{8}}{\\str{4}}}'
@@ -233,15 +233,38 @@ angular.module('mathSkills').service('data_o_1_1', ['dataUtils', function (dataU
 			ordopsStatement: '8<sup>4</sup> - 6<sup>5</sup>',
 			answer: '-3680',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\btn{8<sup>4</sup>}{T}{bigger}}{\\btn{-}{F}{bigger}}{\\btn{6<sup>5</sup>}{F}{bigger}},' +
+						'\\grp{\\btn{8 <sup>4</sup>}{T}{bigger}}{\\btn{-}{F}{bigger}}{\\btn{6 <sup>5</sup>}{F}{bigger}},' +
                         '\\input{4096},' +
-                        '\\grp{\\html{4096}}{\\btn{-}{F}{bigger}}{\\btn{6<sup>5</sup>}{T}{bigger}},' +
+                        '\\grp{\\html{<span class=bigger>4096</span>}}{\\btn{-}{F}{bigger}}{\\btn{6 <sup>5</sup>}{T}{bigger}},' +
                         '\\input{7776},' +
-						'\\grp{\\html{4096}}{\\btn{-}{T}{bigger}}{\\html{7776}},' +
+						'\\grp{\\html{<span class=bigger>4096</span>}}{\\btn{-}{T}{bigger}}{\\html{<span class=bigger>7776</span>}},' +
 						'\\input{-3680},' +
-						'\\str{-3680}' +
-                    '}{8<sup>4</sup>}{6<sup>5</sup>}{4096 - 7776}'),
-			template: 'evaluate' },
+						'\\sign{-3680}' +
+                    '}{terms}{evaluate&nbsp; 8<sup>4</sup>}{evaluate&nbsp; 6<sup>5</sup>}{4096 - 7776}'),
+			template: 'evaluate' 
+			}
+			,
+            { // problem 12
+			problemStatement: dataUtils.pre(
+											'{\\grp'
+												+'{\\exp{\\str{2}}{\\str{9}}}'
+												+'{\\str{ - }}'
+												+'{\\exp{\\str{12}}{\\str{3}}}'
+											+'}'
+								),
+			ordopsStatement: '2<sup>9</sup> - 12<sup>3</sup>',
+			answer: '-1216',
+			wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp{\\btn{2 <sup>9</sup>}{T}{bigger}}{\\btn{-}{F}{bigger}}{\\btn{12 <sup>3</sup>}{F}{bigger}},' +
+                        '\\input{512},' +
+                        '\\grp{\\html{<span class=bigger>512</span>}}{\\btn{-}{F}{bigger}}{\\btn{12 <sup>3</sup>}{T}{bigger}},' +
+                        '\\input{1728},' +
+						'\\grp{\\html{<span class=bigger>512</span>}}{\\btn{-}{T}{bigger}}{\\html{<span class=bigger>1728</span>}},' +
+						'\\input{-1216},' +
+						'\\sign{-1216}' +
+                    '}{terms}{evaluate&nbsp; 2<sup>9</sup>}{evaluate&nbsp; 12<sup>3</sup>}{512 - 1728}'),
+			template: 'evaluate' 
+			}
         ];
 
 	return dataUtils.build(desc, template, data);
