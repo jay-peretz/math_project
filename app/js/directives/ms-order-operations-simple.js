@@ -1,6 +1,12 @@
 'use strict';
 /*global angular */
-
+// ordopssimple tag accepts multiple parameters:
+// first parameter a series of lines in mathproject language with commas between them
+// first parameter odd lines represent the terms and operators including buttons
+// first parameter even lines are answer input when term or operator button is clicked
+// second parameter can be {terms}- changes default instructions to "terms and operators"
+// otherwise second and all other parameters represent successive instructions
+// if there is no second parameter the default instructions apply.
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
         parserProvider.register('ordopssimple', {
