@@ -221,15 +221,25 @@ angular.module('mathSkills').service('data10_2', ['dataUtils', function (dataUti
             }
         },
         data = [
+			// problem 1
             { firstNum: '4', firstDen: '5', secondNum: '3', secondDen: '4', firstAnswerNum: '16', secondAnswerNum: '15', differenceNum: '1', answerDen: '20', template: 'twoFractions' },
+			// problem 2
             { firstNum: '3', firstDen: '2', secondNum: '3', secondDen: '5', firstAnswerNum: '15', secondAnswerNum: '6', differenceNum: '9', answerDen: '10', template: 'twoFractions' },
+			// problem 3
 			{ firstNum: '5', firstDen: '6', secondNum: '1', secondDen: '8', firstAnswerNum: '20', secondAnswerNum: '3', differenceNum: '17', answerDen: '24', template: 'twoFractions' },
+			// problem 4
 			{ firstNum: '5', firstDen: '8', secondNum: '1', secondDen: '2', firstAnswerNum: '5', secondAnswerNum: '4', differenceNum: '1', answerDen: '8', template: 'twoFractions' },
+			// problem 5
 			{ firstNum: '4', firstDen: '3', secondNum: '8', secondDen: '7', firstAnswerNum: '28', secondAnswerNum: '24', differenceNum: '4', answerDen: '21', template: 'twoFractions' },
+			// problem 6
 			{ firstNum: '7', firstDen: '16', secondNum: '1', secondDen: '4', firstAnswerNum: '7', secondAnswerNum: '4', differenceNum: '3', answerDen: '16', template: 'twoFractions' },
-			{ firstNum: '7', firstDen: '8', secondNum: '1', secondDen: '3', firstAnswerNum: '21', secondAnswerNum: '8', differenceNum: '5', answerDen: '24', template: 'twoFractions' },
+			// problem 7
+			{ firstNum: '7', firstDen: '8', secondNum: '1', secondDen: '3', firstAnswerNum: '21', secondAnswerNum: '8', differenceNum: '13', answerDen: '24', template: 'twoFractions' },
+			// problem 8
 			{ firstNum: '11', firstDen: '12', secondNum: '1', secondDen: '\xA03\xA0', thirdNum: '1', thirdDen: '\xA06\xA0', firstAnswerNum: '11', secondAnswerNum: '4', thirdAnswerNum: '2', differenceNum: '5', answerDen: '12', template: 'threeFractions' },
-			{ firstNum: '13', firstDen: '10', secondNum: '1', secondDen: '\xA04\xA0', thirdNum: '3', thirdDen: '\xA05\xA0', firstAnswerNum: '26', secondAnswerNum: '5', thirdAnswerNum: '12', differenceNum: '9', answerDen: '20', template: 'threeFractions' },
+			// problem 9
+			{ firstNum: '13', firstDen: '10', secondNum: '1', secondDen: '\xA04\xA0', thirdNum: '3', thirdDen: '\xA05\xA0', firstAnswerNum: '26', secondAnswerNum: '5', 	thirdAnswerNum: '12', differenceNum: '9', answerDen: '20', template: 'threeFractions' },
+			// problem 10
 			{ firstNum: '7', firstDen: '3', secondNum: '5', secondDen: '4', thirdNum: '1', thirdDen: '6', firstAnswerNum: '28', secondAnswerNum: '15', thirdAnswerNum: '2', differenceNum: '11', answerDen: '12', template: 'threeFractions' }
 			
         ];

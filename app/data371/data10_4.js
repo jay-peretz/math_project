@@ -256,7 +256,7 @@ angular.module('mathSkills').service('data10_4', ['dataUtils', function (dataUti
 						+'{\\html{&nbsp;}}'
 						+'{\\css{\\grp{\\sign{-}}{\\mixed{\\str{$whole2}}{\\frac{\\str{$num2}}{\\str{$den2}}}}}{border-bottom-with-padding}}'
 						+'{\\html{&nbsp;}}'
-						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer2}}{\\input{$denanswer2}}}}}}'
+						+'{\\grp{\\sign{\xA0 \xA0}}{\\mixed{\\input{$wholeanswer}}{\\frac{\\input{$numanswer}}{\\input{$dennew1}}}}}}'
 						+'{centerTableText3}',
 						controls: {
 							"checkAnswer": true,
