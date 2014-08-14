@@ -132,7 +132,7 @@ angular.module('mathSkills').service('data_s_4', ['dataUtils', function (dataUti
 				template: 'informationalAnswer' 
 			}, 
 			{ // problem 2
-				questionDesc: dataUtils.pre('\\grp{\\html{If the diameter of a circle is 2 <sup>1</sup>&#8260;<sub>4</sub> feet, what is the radius?}}'),
+				questionDesc: dataUtils.pre('\\grp{\\html{If the radius of a circle is 2 <sup>1</sup>&#8260;<sub>4</sub> feet, what is the diameter?}}'),
 				illustration: '',
 				unitsAnswer: 'ft',
 				unitsPower: 'ft',

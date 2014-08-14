@@ -71,7 +71,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -102,7 +102,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -117,7 +117,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{Use the LCD to convert the fractions:}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -152,7 +152,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -168,14 +168,14 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
 										+'}'
 										+'{\\html{&nbsp;}}'	
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numlcd1}}{\\fracstr{$answerDen}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
@@ -219,7 +219,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -235,14 +235,14 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
 										+'}'
 										+'{\\html{&nbsp;}}'	
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numlcd1}}{\\fracstr{$answerDen}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
@@ -309,7 +309,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 									+'{\\rowgrp'
 										+'{\\ins{Convert the mixed numbers to improper fractions:}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 											+'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
 						+'{\\sign{$secondSign}}{\\str{(}}{\\sign{$thirdSign}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
@@ -340,7 +340,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{Convert the mixed numbers to improper fractions:}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 											+'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
 											+'{\\sign{$secondSign}}'
@@ -374,7 +374,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{Convert the mixed numbers to improper fractions:}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 											+'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
 											+'{\\sign{$secondSign}}'
@@ -428,7 +428,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{Convert the mixed numbers to improper fractions:}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 											+'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
 											+'{\\sign{$secondSign}}'
@@ -498,7 +498,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{Convert the mixed numbers to improper fractions:}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 											+'{\\html{<span style="font-size:5%;">&nbsp;</span>}}{\\html{<span style="font-size:5%;">&nbsp;</span>}}'
 											+'{\\sign{$secondSign}}'
@@ -710,11 +710,12 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 					children: [{
 						problem: '',
 						answer: '\\grp'
-									+'{\\sign{$firstSign}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+									+'{\\sign{$firstSign}}'
+									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 									+'{\\sign{$secondSign}}'
 									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
 									+'{\\sign{=}}'
-									+'{\\mixed{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}',
+									+'{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}',
 						controls: {
 								"checkAnswer": true,
 								"help": false,
@@ -765,7 +766,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{$secondSign}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -801,13 +802,14 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 					children: [{
 						problem: '',
 						answer: '\\grp'
-									+'{\\sign{$sign1}}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+									+'{\\sign{$sign1}}'
+									+'{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
 									+'{\\sign{$sign2}}'
 									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
 									+'{\\sign{$sign3}}'
 									+'{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}'
 									+'{\\sign{=}}'
-									+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}',
+									+'{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": false,
@@ -1033,7 +1035,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 									+'{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}'
 									+'{\\html{$rightParen}}' 
 									+'{\\sign{=}}'
-									+'{\\mixed{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}',
+									+'{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}',
 						controls: {
 								"checkAnswer": true,
 								"help": false,
@@ -1094,7 +1096,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{$secondSign}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -1128,7 +1130,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{$secondSign}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -1143,7 +1145,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{Use the LCD to convert the fractions:}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{$secondSign}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -1182,7 +1184,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{$secondSign}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -1198,14 +1200,14 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\str{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{$secondSign}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
 										+'}'
 										+'{\\html{&nbsp;}}'	
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numlcd1}}{\\fracstr{$answerDen}}}'
 											+'{\\sign{$secondSign}}'
 											+'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
@@ -1280,10 +1282,10 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\html{The expression without double negatives is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\row'
-										+'{$firstSign}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
-										+'{\\sign{+}}'
-										+'{\\str{(}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}{\\str{)}}'
+										+'{\\grp'
+											+'{$firstSign}{\\mixed{\\str{$whole1}}{\\frac{\\fracstr{$num1}}{\\fracstr{$den1}}}}'
+											+'{\\sign{+ }}'
+											+'{\\str{(}}{\\mixed{\\str{$whole2}}{\\frac{\\fracstr{$num2}}{\\fracstr{$den2}}}}{\\str{)}}'
 										+'}'
 						},
                     }, {
@@ -1363,7 +1365,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\html{&nbsp;}}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{+}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
 										+'}'
@@ -1407,7 +1409,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\html{&nbsp;}}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{+}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
 										+'}'
@@ -1421,7 +1423,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{Use the LCD to convert the fractions:}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\html{&nbsp;}}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{+}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
 										+'}'
@@ -1470,7 +1472,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\html{&nbsp;}}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{+}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
 										+'}'
@@ -1485,13 +1487,13 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\html{&nbsp;}}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{+}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
 										+'}'
 										+'{\\html{&nbsp;}}'	
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numlcd1}}{\\fracstr{$answerDen}}}'
 											+'{\\sign{+}}'
 											+'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
@@ -1549,7 +1551,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\html{&nbsp;}}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{+}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
 										+'}'
@@ -1564,13 +1566,13 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
+											+'{\\html{&nbsp;}}'																			 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{+}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
 										+'}'
 										+'{\\html{&nbsp;}}'	
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numlcd1}}{\\fracstr{$answerDen}}}'
 											+'{\\sign{+}}'
 											+'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
@@ -1625,7 +1627,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 									+'{\\mixed{\\str{$whole3}}{\\frac{\\fracstr{$num3}}{\\fracstr{$den3}}}}'
 									+'{\\str{)}}'
 									+'{\\sign{=}}'
-									+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer2}}{\\input{$answerDen}}}}',
+									+'{\\mixed{\\input{$wholeanswer1}}{\\frac{\\input{$numanswer2}}{\\input{$answer1Den}}}}',
 						controls: {
 							"checkAnswer": true,
 							"help": false,
@@ -2091,7 +2093,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -2126,7 +2128,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -2141,7 +2143,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{&nbsp;}}'
 										+'{\\ins{Use the LCD to convert the fractions:}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -2180,7 +2182,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -2196,14 +2198,14 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
 										+'}'
 										+'{\\html{&nbsp;}}'	
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numlcd1}}{\\fracstr{$answerDen}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
@@ -2251,7 +2253,7 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
@@ -2267,14 +2269,14 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 										+'{\\html{Use the LCD to convert the fractions:}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numnew1}}{\\fracstr{$den1}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numnew2}}{\\fracstr{$den2}}}'
 										+'}'
 										+'{\\html{&nbsp;}}'	
 										+'{\\grp'
-											+'{$improperFirstSign}'
+											+'{\\html{&nbsp;}}'
 											+'{\\frac{\\fracstr{$numlcd1}}{\\fracstr{$answerDen}}}'
 											+'{\\sign{-}}'
 											+'{\\frac{\\fracstr{$numlcd2}}{\\fracstr{$answerDen}}}'
@@ -2314,16 +2316,13 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 			// problem 1
             { whole1: 2, num1: 3, den1: 5, whole2: 3, num2: 1, den2: 5, numanswer1: 3, numanswer2: 3, answerDen: 5, numnew1: -13, numnew2: 16, numlcd1: -13, numlcd2: 16, 
 			firstSign: '-',
-			improperFirstSign: dataUtils.pre('html{&nbsp;}'),
 			secondSign: '+', 
 			template: 'second' },
 			// problem 2
 			{ whole1: 1, num1: 4, den1: 5, whole2: 2, num2: 1, den2: 2,wholeanswer: '-4', numanswer1: -43, numanswer2: 3, answerDen: 10, numnew1: -9, numnew2: 5, numlcd1: -18, numlcd2: 25, 
-			improperFirstSign: dataUtils.pre('html{&nbsp;}'),
 			firstSign: '-', template: 'main' },
 			// problem 3
 			{ whole1: 4, num1: '', den1: '', whole2: 1, num2: 7, den2: 8, den3: 1, wholeanswer: 2, numanswer1: 17, numanswer2: 1, answerDen: 8, numnew1: 4, numnew2: 15, numlcd1: 32, numlcd2: 15, 
-			improperFirstSign: dataUtils.pre('html{&nbsp;}'),
 			secondSign: '+', thirdSign: '-', 
 			template: 'first' },
 			// problem 4
@@ -2331,13 +2330,11 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 			// problem 5
 			{ whole1: 3, num1: 1, den1: 6, whole2: 2, num2: 3, den2: 5, numanswer1: 17, numanswer2: 17, answerDen: 30, numnew1: 19, numnew2: 13, numlcd1: 95, numlcd2: 78, wholeanswer: '',
 			firstSign: '',
-			improperFirstSign: dataUtils.pre('html{&nbsp;}'),
 			secondSign: '-',leftParen: '(', rightParen: ')', 
 			template: 'fourth' },
 			// problem 6
 			{ whole1: 7, num1: 1, den1: 2, whole2: 4, num2: 3, den2: 4,wholeanswer: '-2', numanswer1: -11, numanswer2: 3, answerDen: 4, numnew1: -15, numnew2: 19, numlcd1: -30, numlcd2: 19,
 			firstSign: dataUtils.pre('str{-}'),
-			improperFirstSign: dataUtils.pre('html{&nbsp;}'),
 			secondSign: '-', thirdSign: '-', negFrac: '4 3/4' ,
 			template: 'twoFracDblNeg',
 			buttonValueA: 'T',
@@ -2377,7 +2374,6 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 			// problem 7
 			{ whole1: 1, num1: 2, den1: 9, whole2: 5, num2: 1, den2: 3,wholeanswer: '6', numanswer1: 59, numanswer2: 5, answerDen: 9, numnew1: 11, numnew2: 16, numlcd1: 11, numlcd2: 48,
 			firstSign: dataUtils.pre('\\html{}'),
-			improperFirstSign: dataUtils.pre('html{&nbsp;}'),
 			secondSign: '-', thirdSign: '-', negFrac: '5 1/3' ,
 			template: 'twoFracDblNeg',
 			buttonValueA: 'F',
@@ -2415,11 +2411,9 @@ angular.module('mathSkills').service('data_m_2', ['dataUtils', function (dataUti
 			// problem 8
 			{ whole1: 12, num1: 1, den1: 2, whole2: 20, num2: 1, den2: 3,wholeanswer: '-7', numanswer1: -47, numanswer2: 5, answerDen: 6, numnew1: 25, numnew2: 61, numlcd1: 75, numlcd2: 122, 
 			firstSign: '', 
-			improperFirstSign: dataUtils.pre('html{&nbsp;}'),
 			template: 'main' },
 			// problem 9
 			{ whole1: 10, num1: 2, den1: 5, whole2: 8, num2: 1, den2: 4, wholeanswer: '-18', numanswer1: -373, numanswer2: 13, answerDen: 20, numnew1: -52, numnew2: 33, numlcd1: -208, numlcd2: 165, 
-			improperFirstSign: dataUtils.pre('html{&nbsp;}'),
 			firstSign: '-',
 			secondSign: '+', thirdSign: '-',
 			template: 'tenth' },
