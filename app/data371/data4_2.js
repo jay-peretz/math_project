@@ -43,9 +43,9 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			// problem 1
             { problemStatement: '7 <span class=margin-not-bigger>&bull;</span> 2 <span class=bigger>+</span> 4', ordopsStatement: '7 * 2 + 4', answer: '18',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{7}}{\\btn{\xB7}{T}{huge}}{\\html{2}}{\\btn{+}{F}{bigger}}{\\html{4}},' +
+						'\\grp{\\html{7}}{\\btn{\xB7}{T}{huge}}{\\html{2}}{\\btn{+}{F}{large}}{\\html{4}},' +
                         '\\input{14},' +
-                        '\\grp{\\html{14}}{\\btn{+}{T}{bigger}}{\\html{4}},' +
+                        '\\grp{\\html{14}}{\\btn{+}{T}{large}}{\\html{4}},' +
                         '\\input{18},' +
 						'\\grp{\\html{18}},' +
                     '}{Solve 7 <span class=bigger>\xB7</span> 2}{Solve 14 + 4}'),
@@ -63,9 +63,9 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			// problem 3
 			{ problemStatement: '4 <span class=bigger>&divide;</span> 2 <span class=bigger>+</span> 9', ordopsStatement: '4 / 2 + 9', answer: '11',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{4}}{\\btn{\xF7}{T}{bigger}}{\\html{2}}{\\btn{+}{F}{bigger}}{\\html{9}},' +
+						'\\grp{\\html{4}}{\\btn{\xF7}{T}{bigger}}{\\html{2}}{\\btn{+}{F}{large}}{\\html{9}},' +
                         '\\input{2},' +
-                        '\\grp{\\html{2}}{\\btn{+}{T}{bigger}}{\\html{9}},' +
+                        '\\grp{\\html{2}}{\\btn{+}{T}{large}}{\\html{9}},' +
                         '\\input{11},' +
 						'\\grp{\\html{11}},' +
                     '}{Solve 4 <span class=bigger>\xF7</span> 2}{Solve 2 + 9}'),
@@ -83,9 +83,9 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			// problem 5
 			{ problemStatement: '7 <span class=bigger>+</span> 15 <span class=bigger>&divide;</span> 3', ordopsStatement: '7 + 15 / 3', answer: '12',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{7}}{\\btn{+}{F}{bigger}}{\\html{15}}{\\btn{\xF7}{T}{bigger}}{\\html{3}},' +
+						'\\grp{\\html{7}}{\\btn{+}{F}{large}}{\\html{15}}{\\btn{\xF7}{T}{bigger}}{\\html{3}},' +
                         '\\input{5},' +
-                        '\\grp{\\html{7}}{\\btn{+}{T}{bigger}}{\\html{5}},' +
+                        '\\grp{\\html{7}}{\\btn{+}{T}{large}}{\\html{5}},' +
                         '\\input{12},' +
 						'\\grp{\\html{12}},' +
                     '}{Solve 15 <span class=bigger>\xF7</span> 3}{Solve 7 + 5}'),
@@ -129,9 +129,9 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			// problem 9
 			{ problemStatement: '( 28 <span class=bigger>+</span> 15 <span class=bigger>&divide;</span> 5 ) <span class=bigger>&minus;</span> 14', ordopsStatement: '(28 + 15 / 5) - 14', answer: '17', 
 			  wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\str{(}}{\\html{28}}{\\btn{+}{F}{bigger}}{\\html{15}}{\\btn{\xF7}{T}{bigger}}{\\html{5}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\html{14}},' +
+						'\\grp{\\str{(}}{\\html{28}}{\\btn{+}{F}{large}}{\\html{15}}{\\btn{\xF7}{T}{bigger}}{\\html{5}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\html{14}},' +
                         '\\input{3},' +
-                        '\\grp{\\str{(}}{\\html{28}}{\\btn{+}{T}{bigger}}{\\html{3}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\html{14}},' +
+                        '\\grp{\\str{(}}{\\html{28}}{\\btn{+}{T}{large}}{\\html{3}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\html{14}},' +
                         '\\input{31},' +
 						'\\grp{\\html{31}}{\\btn{-}{T}{bigger}}{\\html{14}},' +
                         '\\input{17},' +
@@ -140,11 +140,11 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			  template: 'first' },
 			// problem 10
 			{ problemStatement: '27 <span class=bigger>&divide;</span> 9 <span class=bigger>+</span> 6 <span class=margin-not-bigger>&bull;</span> 8 <span class=bigger>&minus;</span> 35', ordopsStatement: '27 / 9 + 6 * 8 - 35)', answer: '16', wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{27}}{\\btn{\xF7}{T}{bigger}}{\\html{9}}{\\btn{+}{F}{bigger}}{\\html{6}}{\\btn{\xB7}{F}{bigger}}{\\html{8}}{\\btn{-}{F}{bigger}}{\\html{35}},' +
+						'\\grp{\\html{27}}{\\btn{\xF7}{T}{bigger}}{\\html{9}}{\\btn{+}{F}{large}}{\\html{6}}{\\btn{\xB7}{F}{bigger}}{\\html{8}}{\\btn{-}{F}{bigger}}{\\html{35}},' +
                         '\\input{3},' +
-                        '\\grp{\\html{3}}{\\btn{+}{F}{bigger}}{\\html{6}}{\\btn{\xB7}{T}{bigger}}{\\html{8}}{\\btn{-}{F}{bigger}}{\\html{35}},' +
+                        '\\grp{\\html{3}}{\\btn{+}{F}{large}}{\\html{6}}{\\btn{\xB7}{T}{bigger}}{\\html{8}}{\\btn{-}{F}{bigger}}{\\html{35}},' +
                         '\\input{48},' +
-						'\\grp{\\html{3}}{\\btn{+}{T}{bigger}}{\\html{48}}{\\btn{-}{F}{bigger}}{\\html{35}},' +
+						'\\grp{\\html{3}}{\\btn{+}{T}{large}}{\\html{48}}{\\btn{-}{F}{bigger}}{\\html{35}},' +
                         '\\input{51},' +
 						'\\grp{\\html{51}}{\\btn{-}{T}{bigger}}{\\html{35}},' +
                         '\\input{16},' +

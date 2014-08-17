@@ -246,6 +246,9 @@ ul.nav-list li {
 button.btn {
 	font-size:75%;
 }
+button.btn.btn-.large {
+	font-size:110%;
+}
 button.btn.btn-.bigger {
 	font-size:125%;
 }
