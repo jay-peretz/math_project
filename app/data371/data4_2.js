@@ -43,12 +43,12 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			// problem 1
             { problemStatement: '7 <span class=margin-not-bigger>&bull;</span> 2 <span class=bigger>+</span> 4', ordopsStatement: '7 * 2 + 4', answer: '18',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{7}}{\\btn{\xB7}{T}{huge}}{\\html{2}}{\\btn{+}{F}{large}}{\\html{4}},' +
+						'\\grp{\\html{7}}{\\btn{&bull;}{T}{large}}{\\html{2}}{\\btn{+}{F}{large}}{\\html{4}},' +
                         '\\input{14},' +
                         '\\grp{\\html{14}}{\\btn{+}{T}{large}}{\\html{4}},' +
                         '\\input{18},' +
 						'\\grp{\\html{18}},' +
-                    '}{Solve 7 <span class=bigger>\xB7</span> 2}{Solve 14 + 4}'),
+                    '}{Solve 7 <span class=bigger>&bull;</span> 2}{Solve 14 + 4}'),
 			template: 'first' },
 			// problem 2
 			{ problemStatement: '( 15 <span class=bigger>&minus;</span> 10 ) <span class=bigger>&divide;</span> 5', ordopsStatement: '( 15 - 10 ) / 5', answer: '1', 
@@ -93,7 +93,7 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			// problem 6
 			{ problemStatement: '3 <span class=bigger>&divide;</span> ( 3 <span class=margin-not-bigger>&bull;</span> 3 <span class=bigger>&divide;</span> 3 )', ordopsStatement: '3 / (3 * 3 / 3)', answer: '1',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\str{(}}{\\html{3}}{\\btn{\xB7}{T}{bigger}}{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\html{3}}{\\str{)}},' +
+						'\\grp{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\str{(}}{\\html{3}}{\\btn{&bull;}{T}{large}}{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\html{3}}{\\str{)}},' +
                         '\\input{9},' +
                         '\\grp{\\html{3}}{\\btn{\xF7}{F}{bigger}}{\\str{(}}{\\html{9}}{\\btn{\xF7}{T}{bigger}}{\\html{3}}{\\str{)}},' +
                         '\\input{3},' +
@@ -105,9 +105,9 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			// problem 7
 			{ problemStatement: '15 <span class=bigger>&minus;</span> ( ( 7 <span class=bigger>&minus;</span> 4 ) <span class=margin-not-bigger>&bull;</span> 2 )', ordopsStatement: '15 - ((7 - 4) * 2)', answer: '9',
 			  wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{15}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\str{(}}{\\html{7}}{\\btn{-}{T}{bigger}}{\\html{4}}{\\str{)}}{\\btn{\xB7}{F}{bigger}}{\\html{2}}{\\str{)}},' +
+						'\\grp{\\html{15}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\str{(}}{\\html{7}}{\\btn{-}{T}{bigger}}{\\html{4}}{\\str{)}}{\\btn{&bull;}{F}{large}}{\\html{2}}{\\str{)}},' +
                         '\\input{3},' +
-                        '\\grp{\\html{15}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\html{3}}{\\btn{\xB7}{T}{bigger}}{\\html{2}}{\\str{)}},' +
+                        '\\grp{\\html{15}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\html{3}}{\\btn{&bull;}{T}{large}}{\\html{2}}{\\str{)}},' +
                         '\\input{6},' +
 						'\\grp{\\html{15}}{\\btn{-}{T}{bigger}}{\\html{6}},' +
                         '\\input{9},' +
@@ -117,7 +117,7 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			// problem 8
 			{ problemStatement: '15 <span class=bigger>&minus;</span> 8 <span class=margin-not-bigger>&bull;</span> 2 <span class=bigger>&divide;</span> 4', ordopsStatement: '15 - 8 * 2 / 4', answer: '11',
 			  wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{15}}{\\btn{-}{F}{bigger}}{\\html{8}}{\\btn{\xB7}{T}{bigger}}{\\html{2}}{\\btn{\xF7}{F}{bigger}}{\\html{4}},' +
+						'\\grp{\\html{15}}{\\btn{-}{F}{bigger}}{\\html{8}}{\\btn{&bull;}{T}{large}}{\\html{2}}{\\btn{\xF7}{F}{bigger}}{\\html{4}},' +
                         '\\input{16},' +
                         '\\grp{\\html{15}}{\\btn{-}{F}{bigger}}{\\html{16}}{\\btn{\xF7}{T}{bigger}}{\\html{4}},' +
                         '\\input{4},' +
@@ -140,9 +140,9 @@ angular.module('mathSkills').service('data4_2', ['dataUtils', function (dataUtil
 			  template: 'first' },
 			// problem 10
 			{ problemStatement: '27 <span class=bigger>&divide;</span> 9 <span class=bigger>+</span> 6 <span class=margin-not-bigger>&bull;</span> 8 <span class=bigger>&minus;</span> 35', ordopsStatement: '27 / 9 + 6 * 8 - 35)', answer: '16', wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{27}}{\\btn{\xF7}{T}{bigger}}{\\html{9}}{\\btn{+}{F}{large}}{\\html{6}}{\\btn{\xB7}{F}{bigger}}{\\html{8}}{\\btn{-}{F}{bigger}}{\\html{35}},' +
+						'\\grp{\\html{27}}{\\btn{\xF7}{T}{bigger}}{\\html{9}}{\\btn{+}{F}{large}}{\\html{6}}{\\btn{&bull;}{F}{large}}{\\html{8}}{\\btn{-}{F}{bigger}}{\\html{35}},' +
                         '\\input{3},' +
-                        '\\grp{\\html{3}}{\\btn{+}{F}{large}}{\\html{6}}{\\btn{\xB7}{T}{bigger}}{\\html{8}}{\\btn{-}{F}{bigger}}{\\html{35}},' +
+                        '\\grp{\\html{3}}{\\btn{+}{F}{large}}{\\html{6}}{\\btn{&bull;}{T}{large}}{\\html{8}}{\\btn{-}{F}{bigger}}{\\html{35}},' +
                         '\\input{48},' +
 						'\\grp{\\html{3}}{\\btn{+}{T}{large}}{\\html{48}}{\\btn{-}{F}{bigger}}{\\html{35}},' +
                         '\\input{51},' +

@@ -38,10 +38,10 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
         data = [
 			// problem 1
 			{
-                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\sign{+}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\css{\\html{\xB7}}{huge}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}'),
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\sign{+}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\css{\\html{&bull;}}{large}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}'),
                 ans: dataUtils.pre('\\frac{\\input{5}}{\\input{6}}'),
                 wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{+}{F}{large}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{\xB7}{T}{huge}}{\\frac{\\fracstr{1}}{\\fracstr{4}}},' +
+						'\\grp{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{+}{F}{large}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{&bull;}{T}{large}}{\\frac{\\fracstr{1}}{\\fracstr{4}}},' +
                         '\\frac{\\input{1}}{\\input{6}},' +
                         '\\grp{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{+}{T}{large}}{\\frac{\\fracstr{1}}{\\fracstr{6}}},' +
                         '\\frac{\\input{5}}{\\input{6}},' +
@@ -64,10 +64,10 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
 			},
 			// problem 3
 			{
-                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\css{\\html{\xB7}}{huge}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}{\\sign{-}}{\\frac{\\fracstr{1}}{\\fracstr{5}}}'),
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\css{\\html{&bull;}}{large}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}{\\sign{-}}{\\frac{\\fracstr{1}}{\\fracstr{5}}}'),
                 ans: dataUtils.pre('\\frac{\\input{1}}{\\input{10}}'),
                 wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{\xB7}{T}{huge}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{5}}},' +
+						'\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&bull;}{T}{large}}{\\frac{\\fracstr{3}}{\\fracstr{5}}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{5}}},' +
                         '\\frac{\\input{3}}{\\input{10}},' +
                         '\\grp{\\frac{\\fracstr{3}}{\\fracstr{10}}}{\\btn{-}{T}{bigger}}{\\frac{\\fracstr{1}}{\\fracstr{5}}},' +
                         '\\frac{\\input{1}}{\\input{10}},' +
@@ -77,12 +77,12 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
             },
 			// problem 4
 			{
-				prob : dataUtils.pre('\\grp{\\frac{\\fracstr{5}}{\\fracstr{8}}}{\\css{\\html{\xB7}}{huge}}{\\str{(}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\sign{+}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\str{)}}'),
+				prob : dataUtils.pre('\\grp{\\frac{\\fracstr{5}}{\\fracstr{8}}}{\\css{\\html{&bull;}}{large}}{\\str{(}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\sign{+}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\str{)}}'),
 				ans: dataUtils.pre('\\frac{\\input{35}}{\\input{48}}'),
 				wb : dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\frac{\\fracstr{5}}{\\fracstr{8}}}{\\btn{\xB7}{F}{huge}}{\\str{(}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{+}{T}{large}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\str{)}},' +
+						'\\grp{\\frac{\\fracstr{5}}{\\fracstr{8}}}{\\btn{&bull;}{F}{large}}{\\str{(}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{+}{T}{large}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\str{)}},' +
 						'\\frac{\\input{7}}{\\input{6}},' +
-						'\\grp{\\frac{\\fracstr{5}}{\\fracstr{8}}}{\\btn{\xB7}{T}{huge}}{\\frac{\\fracstr{7}}{\\fracstr{6}}},' +
+						'\\grp{\\frac{\\fracstr{5}}{\\fracstr{8}}}{\\btn{&bull;}{T}{large}}{\\frac{\\fracstr{7}}{\\fracstr{6}}},' +
 						'\\frac{\\input{35}}{\\input{48}},' +
 						'\\grp{\\frac{\\fracstr{35}}{\\fracstr{48}}}' +
 						'}{Evaluate the operator (simplify any fractions).}'),
@@ -103,11 +103,11 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
 			},
 			// problem 6
 			{
-                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{3}}{\\fracstr{4}}}{\\sign{+}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}{\\css{\\html{\xB7}}{huge}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\sign{-}}{\\frac{\\fracstr{5}}{\\fracstr{12}}}'),
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{3}}{\\fracstr{4}}}{\\sign{+}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}{\\css{\\html{&bull;}}{large}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\sign{-}}{\\frac{\\fracstr{5}}{\\fracstr{12}}}'),
                 ans: dataUtils.pre('\\frac{\\input{5}}{\\input{9}}'),
                 wb: dataUtils.pre('\\ordopssimple{' +
 								  
-						'\\grp{\\frac{\\fracstr{3}}{\\fracstr{4}}}{\\btn{+}{F}{large}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}{\\btn{\xB7}{T}{huge}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{5}}{\\fracstr{12}}},' +
+						'\\grp{\\frac{\\fracstr{3}}{\\fracstr{4}}}{\\btn{+}{F}{large}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}{\\btn{&bull;}{T}{large}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{5}}{\\fracstr{12}}},' +
                         '\\frac{\\input{2}}{\\input{9}},' +
                         '\\grp{\\frac{\\fracstr{3}}{\\fracstr{4}}}{\\btn{+}{T}{large}}{\\frac{\\fracstr{2}}{\\fracstr{9}}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{5}}{\\fracstr{12}}},' +
                         '\\frac{\\input{35}}{\\input{36}},' +
@@ -132,10 +132,10 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
             },
 			// problem 8
 			{
-                prob: dataUtils.pre('\\grp{\\mixed{\\fracstr{2}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\sign{-}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\css{\\html{\xB7}}{huge}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}}'),
+                prob: dataUtils.pre('\\grp{\\mixed{\\fracstr{2}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\sign{-}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\css{\\html{&bull;}}{large}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}}'),
                 ans: dataUtils.pre('\\frac{\\input{7}}{\\input{12}}'),
                 wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\mixed{\\fracstr{2}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\btn{-}{F}{bigger}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\btn{\xB7}{T}{huge}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}},' +
+						'\\grp{\\mixed{\\fracstr{2}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\btn{-}{F}{bigger}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\btn{&bull;}{T}{large}}{\\mixed{\\fracstr{1}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}},' +
                         '\\frac{\\input{7}}{\\input{4}},' +
                         '\\grp{\\mixed{\\fracstr{2}}{\\frac{\\fracstr{1}}{\\fracstr{3}}}}{\\btn{-}{T}{bigger}}{\\frac{\\fracstr{7}}{\\fracstr{4}}},' +
                         '\\frac{\\input{7}}{\\input{12}},' +
@@ -161,7 +161,7 @@ angular.module('mathSkills').service('data11_1', ['dataUtils', function (dataUti
                 prob: dataUtils.pre('\\grp{\\html{3}}{\\sign{+}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\sign{&bull;}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\sign{-}}{\\html{2}}'),
                 ans: dataUtils.pre('\\mixed{\\input{1}}{\\frac{\\input{1}}{\\input{8}}}'),
                 wb: dataUtils.pre('\\ordopssimple{' +
-                        '\\grp{\\html{3}}{\\btn{+}{F}{large}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{\xB7}{T}{huge}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\btn{-}{F}{bigger}}{\\html{2}},' +
+                        '\\grp{\\html{3}}{\\btn{+}{F}{large}}{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{&bull;}{T}{large}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}{\\btn{-}{F}{bigger}}{\\html{2}},' +
                         '\\frac{\\input{1}}{\\input{8}},' +
                         '\\grp{\\html{3}}{\\btn{+}{T}{large}}{\\frac{\\fracstr{1}}{\\fracstr{8}}}{\\btn{-}{F}{bigger}}{\\html{2}},' +
                         '\\mixed{\\input{3}}{\\frac{\\input{1}}{\\input{8}}},' +
