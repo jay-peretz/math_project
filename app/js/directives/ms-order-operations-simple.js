@@ -23,7 +23,7 @@ angular.module('mathSkills')
 						var newArgsSaved = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
                             if (parsed.tag === 'btn') {
-                                tagString = '\\css{\\sign{' + parsed.args[0] + '}}{bigger}';
+                                tagString = '\\css{\\html{' + parsed.args[0] + '}}{bigger}';
                             }
                             return tagString;
                         });
