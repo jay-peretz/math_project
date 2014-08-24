@@ -355,7 +355,7 @@ angular.module('mathSkills').service('data_o_1_1', ['dataUtils', function (dataU
 								),
 			answer: '4',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\btn{-2 <sup>3</sup>}{T}{large}}{\\btn{-}{F}{bigger}}{\\html{<span class=bigger>4</span>}}{\\btn{&bull;}{F}{large}}{\\html{<span class=bigger>-</span><span class=bigger>3</span>}},' +
+						'\\grp{\\btn{- 2 <sup>3</sup>}{T}{large}}{\\btn{-}{F}{bigger}}{\\html{<span class=bigger>4</span>}}{\\btn{&bull;}{F}{large}}{\\html{<span class=bigger>-</span><span class=bigger>3</span>}},' +
                         '\\input{-8},' +
                         '\\grp{\\html{<span class=bigger>-</span><span class=bigger>8</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=bigger>4</span>}}{\\btn{&bull;}{T}{large}}{\\html{<span class=bigger>-</span><span class=bigger>3</span>}},' +
                         '\\input{-12},' +
@@ -375,7 +375,7 @@ angular.module('mathSkills').service('data_o_1_1', ['dataUtils', function (dataU
 								),
 			answer: '-124',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\btn{-11 <sup>2</sup>}{T}{large}}{\\btn{-}{F}{bigger}}{\\html{<span class=bigger>18</span>}}{\\btn{&divide;}{F}{bigger}}{\\html{<span class=bigger>6</span>}},' +
+						'\\grp{\\btn{- 11 <sup>2</sup>}{T}{large}}{\\btn{-}{F}{bigger}}{\\html{<span class=bigger>18</span>}}{\\btn{&divide;}{F}{bigger}}{\\html{<span class=bigger>6</span>}},' +
                         '\\input{-121},' +
                         '\\grp{\\html{<span class=bigger>-</span><span class=bigger>121</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=bigger>18</span>}}{\\btn{&divide;}{T}{bigger}}{\\html{<span class=bigger>6</span>}},' +
                         '\\input{3},' +
@@ -395,7 +395,7 @@ angular.module('mathSkills').service('data_o_1_1', ['dataUtils', function (dataU
 								),
 			answer: '-10',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\btn{-10 <sup>2</sup>}{T}{large}}{\\btn{&divide;}{F}{bigger}}{\\html{<span class=bigger>4</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=bigger>5</span>}}{\\btn{&bull;}{F}{large}}{\\html{<span class=bigger>7</span>}},' +
+						'\\grp{\\btn{- 10 <sup>2</sup>}{T}{large}}{\\btn{&divide;}{F}{bigger}}{\\html{<span class=bigger>4</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=bigger>5</span>}}{\\btn{&bull;}{F}{large}}{\\html{<span class=bigger>7</span>}},' +
                         '\\input{-100},' +
                         '\\grp{\\html{<span class=bigger>100</span>}}{\\btn{&divide;}{T}{bigger}}{\\html{<span class=bigger>4</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=bigger>5</span>}}{\\btn{&bull;}{F}{large}}{\\html{<span class=bigger>7</span>}},' +
                         '\\input{25},' +
@@ -417,7 +417,7 @@ angular.module('mathSkills').service('data_o_1_1', ['dataUtils', function (dataU
 								),
 			answer: '63',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\btn{( -6 ) <sup>2</sup>}{T}{large}}{\\btn{&bull;}{F}{large}}{\\html{<span class=bigger>2</span>}}{\\btn{+}{F}{large}}{\\html{<span class=bigger>27</span>}}{\\btn{&divide;}{F}{bigger}}{\\html{<span class=bigger>-</span><span class=bigger>3</span>}},' +
+						'\\grp{\\btn{( - 6 ) <sup>2</sup>}{T}{large}}{\\btn{&bull;}{F}{large}}{\\html{<span class=bigger>2</span>}}{\\btn{+}{F}{large}}{\\html{<span class=bigger>27</span>}}{\\btn{&divide;}{F}{bigger}}{\\html{<span class=bigger>-</span><span class=bigger>3</span>}},' +
                         '\\input{36},' +
                         '\\grp{\\html{<span class=bigger>36</span>}}{\\btn{&bull;}{T}{large}}{\\html{<span class=bigger>2</span>}}{\\btn{+}{F}{large}}{\\html{<span class=bigger>27</span>}}{\\btn{&divide;}{F}{bigger}}{\\html{<span class=bigger>-</span><span class=bigger>3</span>}},' +
                         '\\input{72},' +
@@ -440,7 +440,7 @@ angular.module('mathSkills').service('data_o_1_1', ['dataUtils', function (dataU
 								),
 			answer: '-33',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\btn{- (-5 ) <sup>2</sup>}{T}{large}}{\\btn{-}{F}{bigger}}{\\btn{2 <sup>3</sup>}{F}{large}},' +
+						'\\grp{\\btn{- ( - 5 ) <sup>2</sup>}{T}{large}}{\\btn{-}{F}{bigger}}{\\btn{2 <sup>3</sup>}{F}{large}},' +
                         '\\input{-25},' +
                         '\\grp{\\html{<span class=bigger>-</span> <span class=bigger>25</span>}}{\\btn{-}{F}{bigger}}{\\btn{2 <sup>3</sup>}{T}{large}},' +
                         '\\input{8},' +
@@ -461,7 +461,7 @@ angular.module('mathSkills').service('data_o_1_1', ['dataUtils', function (dataU
 								),
 			answer: '-50',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\btn{- (-7 ) <sup>2</sup>}{T}{large}}{\\btn{-}{F}{bigger}}{\\btn{1 <sup>3</sup>}{F}{large}},' +
+						'\\grp{\\btn{- ( - 7 ) <sup>2</sup>}{T}{large}}{\\btn{-}{F}{bigger}}{\\btn{1 <sup>3</sup>}{F}{large}},' +
                         '\\input{-49},' +
                         '\\grp{\\html{<span class=bigger>-</span> <span class=bigger>49</span>}}{\\btn{-}{F}{bigger}}{\\btn{1 <sup>3</sup>}{T}{large}},' +
                         '\\input{1},' +
@@ -487,7 +487,7 @@ angular.module('mathSkills').service('data_o_1_1', ['dataUtils', function (dataU
                         '\\input{2},' +
 						'\\grp{\\html{<span class=bigger>-</span><span class=bigger>8</span>}}{\\str{(}}{\\html{<span class=bigger>-</span><span class=bigger>8</span>}}{\\btn{-}{T}{bigger}}{\\html{<span class=bigger>2</span>}}{\\str{)}},' +
 						'\\input{-10},' +
-						'\\grp{\\btn{-8&nbsp;( -10 )}{T}{bigger}},' +
+						'\\grp{\\btn{- 8&nbsp;( -10 )}{T}{bigger}},' +
 						'\\input{80},' +
 						'\\sign{80}' +
                     '}{terms}{evaluate&nbsp; ( -2 ) <sup>3</sup>}{2 &bull; 1}{-8 - 2}{-8 ( -10 )}'),

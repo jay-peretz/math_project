@@ -14,3 +14,6 @@
 font-weight:bold;
 font-family:"Open Sans";
 }
+.ms-order-ops-simple button.btn {
+font-size:110%;
+}

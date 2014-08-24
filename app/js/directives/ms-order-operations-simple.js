@@ -18,6 +18,7 @@ angular.module('mathSkills')
             controller: ['$scope', '$element', function ($scope, $element) {
                 var saved = null,
 					termsFlag = false,
+					numberOfSpaces,
                     saveStep = function () {
                         //saved = parser.replace($scope.rows[$scope.cur], 'btn', 'html');
 						var newArgsSaved = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
@@ -60,6 +61,19 @@ angular.module('mathSkills')
 										break;
 									case(parser.extractTag($scope.answers[$scope.cur]).tag === "mixed"): 
 										tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+										break;
+									// case for exponent as button text 
+									case(parsed.args[0].indexOf("sup") !== -1): 
+										if (parsed.args[0].indexOf("sup") > 4) {
+												numberOfSpaces = "";
+										} else {
+												numberOfSpaces = "&nbsp;&nbsp;";
+										}
+										tagString = '\\sign{'+ numberOfSpaces + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+										break;
+									// case for product no operator-- term in parenthesis
+									case(parsed.args[0].indexOf("(") !== -1):
+										tagString = '\\sign{'+ parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
 										break;
 									// default includes whole numbers 
 									default: 
