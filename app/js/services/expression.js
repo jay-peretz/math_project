@@ -1,6 +1,7 @@
 'use strict';
 /*global angular */
-
+// factory expression.js is only used by ms-order-operations.js
+// ms-order-operations is not in use in the project as of August 2014
 angular.module('mathSkills.services')
     .factory('Expression', [function () {
         var valueId = 1,

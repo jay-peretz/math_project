@@ -1,5 +1,7 @@
 'use strict';
 /*global angular */
+// ms-order-operations is not in use in the project as of August 2014
+// all instances of directive ms-order-operations.js use were replaced by ms-order-operations-simple.js
 
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
