@@ -120,6 +120,37 @@ angular.module('mathSkills').service('data_o_1_1', ['dataUtils', function (dataU
                     }]
                 }]
             }
+			,
+			firstFractions: {
+                title: 'Evaluating Exponential Expressions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+						+'{\\html{Evaluate:}}'
+						+'{\\html{&nbsp;}}'
+						+'{\\grp'
+							+'$problemStatement'
+						+'}',
+						answer: '\\grp{$answer}',
+						controls: {
+							"checkAnswer": true,
+							"help": '\\rowgrp'
+							+'{\\html{$firstHelp}}'
+							+'{\\html{&nbsp;}}'
+							+'$secondHelp'
+							+'{\\html{&nbsp;}}'
+							+'{css'
+								+'{\\grp'
+									+'{\\str{Answer: &nbsp;}}'
+									+'{$helpAnswer}'
+								+'}'	
+								+'{help-answer-text}'
+							+'}'
+						}
+					}]
+				}]
+			},
         },
         data = [
             { // problem 1
@@ -575,6 +606,256 @@ angular.module('mathSkills').service('data_o_1_1', ['dataUtils', function (dataU
                     '}{terms}{evaluate&nbsp; - 3 <sup>2</sup>}{evaluate&nbsp; ( - 2 ) <sup>2</sup>}{evaluate&nbsp; ( - 2 ) <sup>3</sup>}{- 45 &nbsp;&divide;&nbsp; -9}{5 &nbsp;-&nbsp; 4}{1 &nbsp;+&nbsp; - 8}'),
 			template: 'wideEvaluate' 
 			}
+			,
+            { // problem 25
+			problemStatement: dataUtils.pre('{\\grp{\\str{(}}{\\mixed{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}}{\\str{)}}{\\css{\\html{<sup>2</sup>}}{exponentLarge}}}'),
+			firstHelp: 'The exponent is raised above the parenthesis. It therefore affects \\"everything\\" inside the parenthesis (the sign and the number).', 
+			secondHelp: dataUtils.pre(
+							'{\\grp'
+								+'{\\str{(}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}}'
+								+'{\\str{)}}'
+								+'{\\css'
+									+'{\\html{<sup>2</sup>}}'
+									+'{exponentLarge}'
+								+'}'
+								+'{\\str{ &nbsp; means &nbsp; }}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}}'
+								+'{\\str{&nbsp;* &nbsp;}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}}'
+							+'}'
+						),
+			answer: dataUtils.pre('\\frac{\\input{4}}{\\input{25}}'),
+			helpAnswer: dataUtils.pre('\\frac{\\fracstr{4}}{\\fracstr{25}}'),
+			template: 'firstFractions' 
+			}
+			,
+            { // problem 26
+			problemStatement: dataUtils.pre('{\\grp{\\str{(}}{\\mixed{\\str{-}}{\\frac{\\fracstr{3}}{\\fracstr{7}}}}{\\str{)}}{\\css{\\html{<sup>2</sup>}}{exponentLarge}}}'),
+			firstHelp: 'The exponent is raised above the parenthesis. It therefore affects \\"everything\\" inside the parenthesis (the sign and the number).', 
+			secondHelp: dataUtils.pre(
+							'{\\grp'
+								+'{\\str{(}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{3}}{\\fracstr{7}}}}'
+								+'{\\str{)}}'
+								+'{\\css'
+									+'{\\html{<sup>2</sup>}}'
+									+'{exponentLarge}'
+								+'}'
+								+'{\\str{ &nbsp; means &nbsp; }}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{3}}{\\fracstr{7}}}}'
+								+'{\\str{&nbsp;* &nbsp;}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{3}}{\\fracstr{7}}}}'
+							+'}'
+						),
+			answer: dataUtils.pre('\\frac{\\input{9}}{\\input{49}}'),
+			helpAnswer: dataUtils.pre('\\frac{\\fracstr{9}}{\\fracstr{49}}'),
+			template: 'firstFractions' 
+			}
+			,
+            { // problem 27
+			problemStatement: dataUtils.pre('{\\grp{\\str{(}}{\\mixed{\\str{-}}{\\frac{\\fracstr{5}}{\\fracstr{4}}}}{\\str{)}}{\\css{\\html{<sup>3</sup>}}{exponentLarge}}}'),
+			firstHelp: 'The exponent is raised above the parenthesis. It therefore affects \\"everything\\" inside the parenthesis (the sign and the number).', 
+			secondHelp: dataUtils.pre(
+							'{\\grp'
+								+'{\\str{(}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{5}}{\\fracstr{4}}}}'
+								+'{\\str{)}}'
+								+'{\\css'
+									+'{\\html{<sup>3</sup>}}'
+									+'{exponentLarge}'
+								+'}'
+								+'{\\str{ &nbsp; means &nbsp; }}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{5}}{\\fracstr{4}}}}'
+								+'{\\str{&nbsp;* &nbsp;}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{5}}{\\fracstr{4}}}}'
+								+'{\\str{&nbsp;* &nbsp;}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{5}}{\\fracstr{4}}}}'
+							+'}'
+						),
+			answer: dataUtils.pre('\\frac{\\input{-125}}{\\input{64}}'),
+			helpAnswer: dataUtils.pre('\\mixed{\\str{-}}{\\frac{\\fracstr{125}}{\\fracstr{64}}}'),
+			template: 'firstFractions' 
+			}
+			,
+            { // problem 28
+			problemStatement: dataUtils.pre('{\\grp{\\str{(}}{\\mixed{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{7}}}}{\\str{)}}{\\css{\\html{<sup>3</sup>}}{exponentLarge}}}'),
+			firstHelp: 'The exponent is raised above the parenthesis. It therefore affects \\"everything\\" inside the parenthesis (the sign and the number).', 
+			secondHelp: dataUtils.pre(
+							'{\\grp'
+								+'{\\str{(}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{7}}}}'
+								+'{\\str{)}}'
+								+'{\\css'
+									+'{\\html{<sup>3</sup>}}'
+									+'{exponentLarge}'
+								+'}'
+								+'{\\str{ &nbsp; means &nbsp; }}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{7}}}}'
+								+'{\\str{&nbsp;* &nbsp;}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{7}}}}'
+								+'{\\str{&nbsp;* &nbsp;}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{7}}}}'
+							+'}'
+						),
+			answer: dataUtils.pre('\\frac{\\input{-8}}{\\input{343}}'),
+			helpAnswer: dataUtils.pre('\\mixed{\\str{-}}{\\frac{\\fracstr{8}}{\\fracstr{343}}}'),
+			template: 'firstFractions' 
+			}
+			,
+            { // problem 29
+			problemStatement: dataUtils.pre('{\\grp{\\str{-}}{\\str{(}}{\\mixed{\\str{-}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}{\\str{)}}{\\css{\\html{<sup>2</sup>}}{exponentLarge}}}'),
+			firstHelp: 'The exponent is raised above the parenthesis. It therefore affects \\"everything\\" inside the parenthesis (the sign and the number). It does not affect the minus sign in front of the parenthesis.', 
+			secondHelp: dataUtils.pre(
+							'{\\str{Evaluate the exponent and its base first.}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp'
+								+'{\\str{-}}'
+								+'{\\str{(}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{1}}{\\fracstr{4}}}}'
+								+'{\\str{)}}'
+								+'{\\css'
+									+'{\\html{<sup>2</sup>}}'
+									+'{exponentLarge}'
+								+'}'
+								+'{\\str{ &nbsp; means &nbsp; }}'
+								+'{\\str{-}}'
+								+'{\\str{(}}'
+								+'{\\frac{\\fracstr{1}}{\\fracstr{16}}}'
+								+'{\\str{)}}'
+							+'}'
+						),
+			answer: dataUtils.pre('\\frac{\\input{-1}}{\\input{16}}'),
+			helpAnswer: dataUtils.pre('\\mixed{\\str{-}}{\\frac{\\fracstr{1}}{\\fracstr{16}}}'),
+			template: 'firstFractions' 
+			}
+			,
+            { // problem 30
+			problemStatement: dataUtils.pre('{\\grp{\\str{-}}{\\str{(}}{\\mixed{\\str{-}}{\\frac{\\fracstr{1}}{\\fracstr{6}}}}{\\str{)}}{\\css{\\html{<sup>2</sup>}}{exponentLarge}}}'),
+			firstHelp: 'The exponent is raised above the parenthesis. It therefore affects \\"everything\\" inside the parenthesis (the sign and the number). It does not affect the minus sign in front of the parenthesis.', 
+			secondHelp: dataUtils.pre(
+							'{\\str{Evaluate the exponent and its base first.}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp'
+								+'{\\str{-}}'
+								+'{\\str{(}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{1}}{\\fracstr{6}}}}'
+								+'{\\str{)}}'
+								+'{\\css'
+									+'{\\html{<sup>2</sup>}}'
+									+'{exponentLarge}'
+								+'}'
+								+'{\\str{ &nbsp; means &nbsp; }}'
+								+'{\\str{-}}'
+								+'{\\str{(}}'
+								+'{\\frac{\\fracstr{1}}{\\fracstr{36}}}'
+								+'{\\str{)}}'
+							+'}'
+						),
+			answer: dataUtils.pre('\\frac{\\input{-1}}{\\input{36}}'),
+			helpAnswer: dataUtils.pre('\\mixed{\\str{-}}{\\frac{\\fracstr{1}}{\\fracstr{36}}}'),
+			template: 'firstFractions' 
+			}
+			,
+            { // problem 31
+			problemStatement: dataUtils.pre('{\\grp{\\str{-}}{\\str{(}}{\\mixed{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}}{\\str{)}}{\\css{\\html{<sup>3</sup>}}{exponentLarge}}}'),
+			firstHelp: 'The exponent is raised above the parenthesis. It therefore affects \\"everything\\" inside the parenthesis (the sign and the number). It does not affect the minus sign in front of the parenthesis.', 
+			secondHelp: dataUtils.pre(
+							'{\\str{Evaluate the exponent and its base first.}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp'
+								+'{\\str{-}}'
+								+'{\\str{(}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{3}}}}'
+								+'{\\str{)}}'
+								+'{\\css'
+									+'{\\html{<sup>3</sup>}}'
+									+'{exponentLarge}'
+								+'}'
+								+'{\\str{ &nbsp; means &nbsp; }}'
+								+'{\\str{-}}'
+								+'{\\str{(}}'
+								+'{\\mixed{str{-}}{\\frac{\\fracstr{8}}{\\fracstr{27}}}}'
+								+'{\\str{)}}'
+							+'}'
+						),
+			answer: dataUtils.pre('\\frac{\\input{8}}{\\input{27}}'),
+			helpAnswer: dataUtils.pre('\\mixed{\\str{}}{\\frac{\\fracstr{8}}{\\fracstr{27}}}'),
+			template: 'firstFractions' 
+			}
+			,
+            { // problem 31
+			problemStatement: dataUtils.pre('{\\grp{\\str{-}}{\\str{(}}{\\mixed{\\str{-}}{\\frac{\\fracstr{3}}{\\fracstr{2}}}}{\\str{)}}{\\css{\\html{<sup>3</sup>}}{exponentLarge}}}'),
+			firstHelp: 'The exponent is raised above the parenthesis. It therefore affects \\"everything\\" inside the parenthesis (the sign and the number). It does not affect the minus sign in front of the parenthesis.', 
+			secondHelp: dataUtils.pre(
+							'{\\str{Evaluate the exponent and its base first.}}'
+							+'{\\html{&nbsp;}}'
+							+'{\\grp'
+								+'{\\str{-}}'
+								+'{\\str{(}}'
+								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{3}}{\\fracstr{2}}}}'
+								+'{\\str{)}}'
+								+'{\\css'
+									+'{\\html{<sup>3</sup>}}'
+									+'{exponentLarge}'
+								+'}'
+								+'{\\str{ &nbsp; means &nbsp; }}'
+								+'{\\str{-}}'
+								+'{\\str{(}}'
+								+'{\\mixed{str{-}}{\\frac{\\fracstr{27}}{\\fracstr{8}}}}'
+								+'{\\str{)}}'
+							+'}'
+						),
+			answer: dataUtils.pre('\\frac{\\input{27}}{\\input{8}}'),
+			helpAnswer: dataUtils.pre('\\mixed{\\str{}}{\\frac{\\fracstr{27}}{\\fracstr{8}}}'),
+			template: 'firstFractions' 
+			}
+			,
+             { // problem 33
+			problemStatement: dataUtils.pre(
+									'{\\grp'
+										+'{\\frac{\\fracstr{7}}{\\fracstr{10}}}'
+										+'{\\str{-}}'
+										+'{\\str{(}}'
+										+'{\\mixed{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}}'
+										+'{\\str{)}}'
+										+'{\\css'
+											+'{\\html{<sup>2</sup>}}'
+											+'{exponentLarge}'
+										+'}'
+									+'}'
+								),
+			answer: '-3680',
+			wb: dataUtils.pre('\\ordopssimple{' +
+						'\\grp'
+							+'{\\css'
+								+'{\\frac{\\fracstr{7}}{\\fracstr{10}}}'
+								+'{bigger}'
+							+'}'
+							+'{\\btn{-}{F}{bigger}}'
+							+'{\\btn{'
+								+'<table><tr><td rowspan="3" class=hugeAndThin>(</td><td></td><td>2</td><td rowspan="3" class=hugeAndThin>)</td><td rowspan="3"><span class=exponentLarge><sup>2</sup></span></td></tr><tr><td>-</td><td><hr class=specialHR></td></tr><tr><td></td><td>5</td></tr></table>'
+							+'}'
+							+'{T}{}},' 
+							+'\\frac{\\input{4}}{\\input{25}},'
+                        +'\\grp'
+							+'{\\css'
+								+'{\\frac{\\fracstr{7}}{\\fracstr{10}}}'
+								+'{bigger}'
+							+'}'
+							+'{\\btn{-}{T}{bigger}}'
+							+'{\\css'
+								+'{\\frac{\\fracstr{4}}{\\fracstr{25}}}'
+								+'{bigger}'
+							+'},'
+							+'\\frac{\\input{27}}{\\input{50}},' 
+						+'\\frac{\\input{27}}{\\input{50}}' 
+                    +'}{terms}'
+						+'{<table><tr><td>evaluate&nbsp;</td><td>&nbsp;</td><td><table><tr><td rowspan="3" class=hugeAndThin>(</td><td></td><td>2</td><td rowspan="3" class=hugeAndThin>)</td><td rowspan="3"><span class=exponentLarge><sup>2</sup></span></td></tr><tr><td><span class=bigger>-</span></td><td><hr class=specialHR></td></tr><tr><td></td><td>5</td></tr></table></td></tr></table>}'
+						+'{<table><tr><td><table><tr><td>7<td></tr><tr><td><hr class=specialHR><td></tr><tr><td>10<td></tr></table></td><td>&nbsp; <span class=bigger>-</bigger> &nbsp;</td><td><table><tr><td>4<td></tr><tr><td><hr class=specialHR><td></tr><tr><td>25<td></tr></table></td></tr></table>}'),
+			template: 'evaluate' 
+			}
+			
         ];
 
 	return dataUtils.build(desc, template, data);
