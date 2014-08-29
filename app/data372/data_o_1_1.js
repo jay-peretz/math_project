@@ -1,9 +1,9 @@
 /*global angular */
 
-angular.module('mathSkills').service('data_o_1_1', ['dataUtils', function (dataUtils) {
+angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUtils) {
     var desc = {
-			title: 'O.1.1 Evaluating Exponential Expressions',
-    		path: 'O.1.1-evaluating-exponential-expressions',
+			title: 'O.1 Evaluating Exponential Expressions',
+    		path: 'O.1-evaluating-exponential-expressions',
             children: []
         },
 	        template = {
