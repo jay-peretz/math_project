@@ -8,15 +8,19 @@
 .ms-order-ops-simple ms-btn td {
 	text-align:center;
 	width:12px;
-	height:20px;
+	height:20px
+	font-size:110%;
 } 
 
-.specialHR {
-	border-color: transparent transparent #515151 transparent;
+.ms-order-ops-simple hr {
+	border-bottom: 1px solid;
+	border-top: 0px;
 	height:1px;
 	min-width:1em;
 	padding:0px;
 	margin:0px;
 }
-
+.success .specialHR {
+	border-bottom: 1px solid;
+}
 

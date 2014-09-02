@@ -64,6 +64,9 @@
     top: 50%;
 	left:20%;
 }
+.ms-order-ops-simple button.btn.btn- {
+	font-size:100%;
+}
 
 /* Animations */
 
