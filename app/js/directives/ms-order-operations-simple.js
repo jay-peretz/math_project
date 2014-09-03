@@ -51,23 +51,24 @@ angular.module('mathSkills')
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
 								// improve centering of brace- adjust space around operator in second-to-last line of display based on last line tag displayed
 								switch (true) {
-									case(parser.extractTag($scope.answers[$scope.cur]).tag === "frac"):
-									// test for two digit numbers in numerator or denominator and adjust space
+									// test for more than 2 digits in input numerator or denominator and no exponential/no pair of terms above, adjust space
+									case(parser.extractTag($scope.answers[$scope.cur]).tag === "frac" && parsed.args[0].indexOf("sup") === -1 && parsed.args[0].indexOf("(") === -1):
 										if (curNum.length > 1 || curDen.length > 1) {
 											tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
 										} else {
 											tagString = '\\sign{&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
 										}
 										break;
-									case(parser.extractTag($scope.answers[$scope.cur]).tag === "mixed"): 
+									// test for mixed fraction input, and no exponential/no pair of terms above, adjust space
+									case(parser.extractTag($scope.answers[$scope.cur]).tag === "mixed" && parsed.args[0].indexOf("sup") === -1 && parsed.args[0].indexOf("(") === -1): 
 										tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
 										break;
 									// case for exponent as button text 
 									case(parsed.args[0].indexOf("sup") !== -1): 
 										if (parsed.args[0].indexOf("sup") > 4) {
-												numberOfSpaces = "";
+												numberOfSpaces = "&nbsp;";
 										} else {
-												numberOfSpaces = "&nbsp;&nbsp;";
+												numberOfSpaces = "&nbsp;&nbsp;&nbsp;";
 										}
 										tagString = '\\sign{'+ numberOfSpaces + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
 										break;

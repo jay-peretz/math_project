@@ -64,8 +64,15 @@
     top: 50%;
 	left:20%;
 }
-.ms-order-ops-simple button.btn.btn- {
+/*.ms-order-ops-simple button.btn.btn- {
 	font-size:100%;
+}*/
+div.alert.alert-block.alert-info td hr{
+	border-color: transparent transparent #515151 transparent;
+	height:1px;
+	min-width:1em;
+	padding:0px;
+	margin:0px;
 }
 
 /* Animations */
