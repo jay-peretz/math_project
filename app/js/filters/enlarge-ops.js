@@ -33,6 +33,22 @@ angular.module('mathSkills').filter('enlargeOps', function () {
 					return whole;
 				}
 			})
+			// replace left bracket if that's the only element in the string
+			.replace(/\[/, function (whole) {
+				if (input === "[" && whole === "[") {
+					return '<span class=hugeAndThin>[</span>';
+				} else {
+					return whole;
+				}
+			})
+			// replace right bracket if that's the only element in the string
+			.replace(/\]/, function (whole) {
+				if (input === "]" && whole === "]") {
+					return '<span class=hugeAndThin>]</span>';
+				} else {
+					return whole;
+				}
+			})
 			: input;
     };
 });

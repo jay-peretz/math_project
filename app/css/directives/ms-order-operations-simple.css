@@ -3,6 +3,7 @@
 }
 .ms-order-ops-simple table {
 	margin-bottom:5px;
+	text-align:center;
 }
 .ms-order-ops-simple div.noShow {
 	visibility:hidden;
@@ -16,4 +17,26 @@ font-family:"Open Sans";
 }
 .ms-order-ops-simple button.btn {
 font-size:110%;
+}
+.ms-order-ops-simple button.btn td {
+	height:20px;
+}
+div.fakeButton td {
+	height:20px;
+}
+.brace90 {
+	margin-left:.9em;
+	transform: rotate(90deg) scale(1,4);
+	  -webkit-transform: rotate(90deg) scale(1,4);
+	  -moz-transform: rotate(90deg) scale(1,4);
+	  -ms-transform: rotate(90deg) scale(1,4);
+	  -o-transform: rotate(90deg) scale(1,4);
+}
+.brace90Simple {
+	margin-left:.7em;
+	transform: rotate(90deg) scale(1,4);
+	  -webkit-transform: rotate(90deg) scale(1,4);
+	  -moz-transform: rotate(90deg) scale(1,4);
+	  -ms-transform: rotate(90deg) scale(1,4);
+	  -o-transform: rotate(90deg) scale(1,4);
 }
