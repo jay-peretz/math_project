@@ -47,7 +47,7 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
                                 	'{\\str{Solve:}}' +
 									'{\\html{&nbsp;}}' +
                                 	'{$prob}',
-                        answer: '$ans',
+						answer: '\\pan{6}{6}{$ans}',
                         controls: {
                             "checkAnswer": true,
                             "help": false,
@@ -79,7 +79,7 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
                                 	'{\\str{Solve:}}' +
 									'{\\html{&nbsp;}}' +
                                 	'{$prob}',
-                        answer: '\\pan{12}{11}{'
+                        answer: '\\pan{6}{6}{'
 									+'$ans'
 								+'}',
                         controls: {
@@ -108,47 +108,52 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
         },
         data = [
 			// problem 1
-            { problemStatement: '6 - 8&nbsp; * &nbsp;2', ordopsStatement: '6 - 8 * 2', answer: '-10',
+            { problemStatement: '6 - 8 * 2',
+			answer: '-10',
 			wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\html{6}}{\\btn{-}{F}{bigger}}{\\html{8}}{\\btn{*}{T}{large}}{\\html{2}},' +
                         '\\input{16},' +
                         '\\grp{\\html{6}}{\\btn{-}{T}{bigger}}{\\html{16}},' +
                         '\\input{-10},' +
 						'\\grp{\\str{-10}},' +
-                    '}{Solve 8 <span class=bigger>*</span> 2}{Solve 6 <span class=bigger>-</span> 16}'),
+                    '}{Solve 8 * 2}{Solve 6 - 16}'),
 			template: 'first' },
 			// problem 2
-			{ problemStatement: '14 - 4 / ( -2 )', ordopsStatement: '14 - 4 / ( -2 )', answer: '16', 
+			{ problemStatement: '14 - 4 / ( -2 )',
+			answer: '16', 
 			wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\html{14}}{\\btn{-}{F}{bigger}}{\\html{4}}{\\btn{/}{T}{bigger}}{\\html{(}}{\\str{-2}}{\\html{)}},' +
                         '\\input{-2},' +
                         '\\grp{\\html{14}}{\\btn{-}{T}{bigger}}{\\html{(}}{\\str{-2}}{\\html{)}},' +
                         '\\input{16},' +
 						'\\grp{\\html{16}},' +
-                    '}{Solve 4 <span class=bigger>&divide;</span> ( <span class=bigger>&minus;</span> 2 )}{Solve 14 <span class=bigger>-</span> (<span class=bigger>-</span>2)}'),
+                    '}{Solve 4 / ( - 2 )}{Solve 14 - (-2)}'),
 			template: 'first' },
 			// problem 3
-			{ problemStatement: '-4 - 6&nbsp; * &nbsp;-3', ordopsStatement: '-4 – 6 * -3', answer: '14',
+			{ problemStatement: '-4 - 6 * -3',
+			answer: '14',
 			wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\str{-4}}{\\btn{-}{F}{bigger}}{\\str{6}}{\\btn{*}{T}{large}}{\\str{-3}},' +
                         '\\input{-18},' +
                         '\\grp{\\str{-4}}{\\btn{-}{T}{bigger}}{\\html{(}}{\\str{-18}}{\\html{)}},' +
                         '\\input{14},' +
 						'\\grp{\\html{14}},' +
-                    '}{Solve 6 <span class=bigger>*</span> <span class=bigger>-</span>3}{Solve <span class=bigger>-</span>4 <span class=bigger>-</span> (<span class=bigger>-</span>18)}'),
+                    '}{Solve 6 * -3}{Solve -4 - (-18)}'),
 			template: 'first' },
 			// problem 4
-			{ problemStatement: '-11 - 18 / 6', ordopsStatement: '-11 - 18 / 6', answer: '-14',
+			{ problemStatement: '-11 - 18 / 6',
+			answer: '-14',
 			wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\str{-11}}{\\btn{-}{F}{bigger}}{\\str{18}}{\\btn{/}{T}{bigger}}{\\html{6}},' +
                         '\\input{3},' +
                         '\\grp{\\str{-11}}{\\btn{-}{T}{bigger}}{\\str{3}},' +
                         '\\input{-14},' +
 						'\\grp{\\str{-14}},' +
-                    '}{Solve 18 <span class=bigger>&divide;</span> 6}{Solve <span class=bigger>-</span>11 - 3}'),
+                    '}{Solve 18 / 6}{Solve -11 - 3}'),
 			template: 'first' },
 			// problem 5
-			{ problemStatement: '-10  /  5 - 3 &nbsp; * &nbsp; 7', ordopsStatement: '-10  /  5 - 3 * 7', answer: '-23',
+			{ problemStatement: '-10 / 5 - 3 * 7',
+			answer: '-23',
 			wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\str{-10}}{\\btn{/}{T}{bigger}}{\\str{5}}{\\btn{-}{F}{bigger}}{\\str{3}}{\\btn{*}{F}{large}}{\\str{7}},' +
                         '\\input{-2},' +
@@ -157,10 +162,11 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
 						'\\grp{\\str{-2}}{\\btn{-}{T}{bigger}}{\\str{21}},' +
                         '\\input{-23},' +
 						'\\grp{\\str{-23}},' +
-                    '}{Solve <span class=bigger>-</span>10 <span class=bigger>&divide;</span> 5}{Solve 3 <span class=bigger>*</span> 7}{Solve <span class=bigger>-</span>2 <span class=bigger>-</span> 21}'),
+                    '}{Solve -10 / 5}{Solve 3 * 7}{Solve -2 - 21}'),
 			template: 'first' },
 			// problem 6
-			{ problemStatement: '-6 &nbsp; * &nbsp; 7 + 14 / -2', ordopsStatement: '-6  *  7 + 14 / -2', answer: '-49',
+			{ problemStatement: '-6  *  7 + 14 / -2',
+			answer: '-49',
 			wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\str{-6}}{\\btn{*}{T}{large}}{\\str{7}}{\\btn{+}{F}{large}}{\\str{14}}{\\btn{/}{F}{bigger}}{\\str{-2}},' +
                         '\\input{-42},' +
@@ -169,10 +175,11 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
 						'\\grp{\\str{-42}}{\\btn{+}{T}{large}}{\\html{(}}{\\str{-7}}{\\html{)}},' +
                         '\\input{-49},' +
 						'\\grp{\\str{-49}},' +
-                    '}{Solve <span class=bigger>-</span>6 * 7}{Solve 14 <span class=bigger>&divide;</span> <span class=bigger>-</span>2}{Solve <span class=bigger>-</span>42 <span class=bigger>+</span> ( <span class=bigger>-</span>7 )}'),
+                    '}{Solve -6 * 7}{Solve 14 / -2}{Solve -42 + ( -7 )}'),
 			template: 'first' },
 			// problem 7
-			{ problemStatement: '-6 - 2 (-3 -1)', ordopsStatement: '-6 - 2 (-3 -1)', answer: '2',
+			{ problemStatement: '-6 - 2 (-3 -1)',
+			answer: '2',
 			wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\str{-6}}{\\btn{-}{F}{bigger}}{\\str{2}}{\\str{(}}{\\str{-3}}{\\btn{-}{T}{bigger}}{\\str{1}}{\\str{)}},' +
                         '\\input{-4},' +
@@ -181,10 +188,11 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
 						'\\grp{\\str{-6}}{\\btn{-}{T}{bigger}}{\\str{(}}{\\str{-8}}{\\str{)}},' +
                         '\\input{2},' +
 						'\\grp{\\str{2}},' +
-                    '}{Solve <span class=bigger>-</span>3 <span class=bigger>-</span> 1}{Solve 2 * <span class=bigger>-</span>4}{Solve <span class=bigger>-</span>6 <span class=bigger>-</span> (<span class=bigger>-</span>8)}'),
+                    '}{Solve -3 - 1}{Solve 2 * -4}{Solve -6 - (-8)}'),
 			template: 'first' },
 			// problem 8
-			{ problemStatement: '7 - 5 (2 - 7)', ordopsStatement: '7 - 5 (2 - 7)', answer: '32',
+			{ problemStatement: '7 - 5 (2 - 7)',
+			answer: '32',
 			wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\str{7}}{\\btn{-}{F}{bigger}}{\\str{5}}{\\str{(}}{\\str{2}}{\\btn{-}{T}{bigger}}{\\str{7}}{\\str{)}},' +
                         '\\input{-5},' +
@@ -193,10 +201,11 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
 						'\\grp{\\str{7}}{\\btn{-}{T}{bigger}}{\\str{(}}{\\str{-25}}{\\str{)}},' +
                         '\\input{32},' +
 						'\\grp{\\str{32}},' +
-                    '}{Solve 2 <span class=bigger>-</span> 7}{Solve 5 * <span class=bigger>-</span>5}{Solve 7 <span class=bigger>-</span> ( <span class=bigger>-</span>25 )}'),
+                    '}{Solve 2 - 7}{Solve 5 * -5}{Solve 7 - ( -25 )}'),
 			template: 'first' },
 			// problem 9
-			{ problemStatement: '-4 (-10 - 4 &nbsp; * &nbsp; 2)', ordopsStatement: '-4 (-10 - 4 * 2)', answer: '72',
+			{ problemStatement: '-4 (-10 - 4  *  2)',
+			answer: '72',
 			wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\str{-4}}{\\str{(}}{\\str{-10}}{\\btn{-}{F}{bigger}}{\\str{4}}{\\btn{*}{T}{large}}{\\str{2}}{\\str{)}},' +
                         '\\input{8},' +
@@ -205,10 +214,11 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
 						'\\grp{\\str{-4}}{\\btn{*}{T}{large}}{\\str{(}}{\\str{-18}}{\\str{)}},' +
                         '\\input{72},' +
 						'\\grp{\\str{72}},' +
-                    '}{Solve 4 * 2}{Solve <span class=bigger>-</span>10 <span class=bigger>-</span>8}{Solve <span class=bigger>-</span>4 * <span class=bigger>-</span>18}'),
+                    '}{Solve 4 * 2}{Solve -10 -8}{Solve -4 * -18}'),
 			template: 'first' },
 			// problem 10
-			{ problemStatement: '-3 (-3 / -3 - 1)', ordopsStatement: '-3 (-3 / -3 - 1)', answer: '0', 
+			{ problemStatement: '-3 (-3 / -3 - 1)',
+			  answer: '0', 
 			  wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\str{-3}}{\\str{(}}{\\str{-3}}{\\btn{/}{T}{bigger}}{\\str{-3}}{\\btn{-}{F}{bigger}}{\\str{1}}{\\str{)}},' +
                         '\\input{1},' +
@@ -217,10 +227,11 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
 						'\\grp{\\str{-3}}{\\btn{*}{T}{large}}{\\str{(}}{\\str{0}}{\\str{)}},' +
                         '\\input{0},' +
 						'\\grp{\\str{0}},' +
-                    '}{Solve <span class=bigger>-</span>3 <span class=bigger>&divide;</span> <span class=bigger>-</span>3}{Solve 1 <span class=bigger>-</span> 1}{Solve <span class=bigger>-</span>3 * 0}'),
+                    '}{Solve -3 / -3}{Solve 1 - 1}{Solve -3 * 0}'),
 			template: 'first' },
 			// problem 11
-			{ problemStatement: '8 &nbsp; * &nbsp; -7 - (-3) - 4', ordopsStatement: '8 * -7 - (-3) - 4)', answer: '-57', 
+			{ problemStatement: '8 * -7 - (-3) - 4',
+			  answer: '-57', 
 			  wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\str{8}}{\\btn{*}{T}{large}}{\\str{-7}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\str{-3}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\str{4}},' +
                         '\\input{-56},' +
@@ -229,10 +240,11 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
 						'\\grp{\\str{-53}}{\\btn{-}{T}{bigger}}{\\str{4}},' +
                         '\\input{-57},' +
 						'\\grp{\\str{-57}},' +
-                    '}{Solve 8<span class=bigger>*</span><span class=bigger>-</span>7}{Solve <span class=bigger>-</span>56 <span class=bigger>-</span> ( <span class=bigger>-</span>3 )}{Solve <span class=bigger>-</span>53 <span class=bigger>-</span>4}'),
+                    '}{Solve 8 * -7}{Solve -56 -( -3 )}{Solve -53 -4}'),
 			template: 'first' },
 			// problem 12
-			{ problemStatement: '-15 / -3 - ( -6) + (-2)', ordopsStatement: '-15 / -3 - ( -6) + (-2)', answer: '9', 
+			{ problemStatement: '-15 / -3 - ( -6) + (-2)',
+			  answer: '9', 
 			  wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\str{-15}}{\\btn{/}{T}{bigger}}{\\str{-3}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\str{-6}}{\\str{)}}{\\btn{+}{F}{large}}{\\str{(}}{\\str{-2}}{\\str{)}},' +
                         '\\input{5},' +
@@ -241,7 +253,7 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
 						'\\grp{\\str{11}}{\\btn{+}{T}{large}}{\\str{(}}{\\str{-2}}{\\str{)}},' +
                         '\\input{9},' +
 						'\\grp{\\str{9}},' +
-                    '}{Solve <span class=bigger>-</span>15<span class=bigger>&divide;</span><span class=bigger>-</span>3}{Solve 5 <span class=bigger>-</span> ( <span class=bigger>-</span>6 )}{Solve 11 <span class=bigger>+</span>( <span class=bigger>-</span>2 )}'),
+                    '}{Solve -15 / -3}{Solve 5 - ( -6 )}{Solve 11 +( -2 )}'),
 			template: 'first' },
 			// problem 13
 			{
@@ -353,7 +365,7 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
             },
 			// problem 21
 			{
-                prob: dataUtils.pre('\\grp{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\str{)}}{\\str{-}}{\\str{(}}{\\frac{\\fracstr{-1}}{\\fracstr{4}}}{\\str{)}}{\\str{&nbsp; * &nbsp;}}{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{5}}}}{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}'),
+                prob: dataUtils.pre('\\grp{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\str{)}}{\\str{-}}{\\str{(}}{\\frac{\\fracstr{-1}}{\\fracstr{4}}}{\\str{)}}{\\str{ * }}{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{5}}}}{\\str{-}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}'),
 				ans: dataUtils.pre('\\pan{6}{6}{\\frac{\\input{-17}}{\\input{20}}}'),
                 wb: dataUtils.pre('\\pan{12}{11}{\\ordopssimple{' +
 						'\\grp{\\str{(}}{\\frac{\\fracstr{-3}}{\\fracstr{4}}}{\\str{)}}{\\btn{-}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-1}}{\\fracstr{4}}}{\\str{)}}{\\btn{*}{T}{large}}{\\mixed{\\str{1}}{\\frac{\\fracstr{1}}{\\fracstr{5}}}}{\\btn{-}{F}{bigger}}{\\frac{\\fracstr{2}}{\\fracstr{5}}},' +
@@ -385,10 +397,10 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
 			{
                 prob: dataUtils.pre('\\grp'
 									+'{\\frac{\\fracstr{-2}}{\\fracstr{5}}}'
-									+'{\\str{&nbsp; * &nbsp;}}'
+									+'{\\str{ * }}'
 									+'{\\css{\\html{[}}{hugeAndThin}}'
 									+'{\\str{2}}'
-									+'{\\str{&nbsp; * &nbsp;}}'
+									+'{\\str{ * }}'
 									+'{\\str{(}}'
 									+'{\\frac{\\fracstr{-3}}{\\fracstr{4}}}'
 									+'{\\str{+}}'
@@ -414,7 +426,7 @@ angular.module('mathSkills').service('data_n_1', ['dataUtils', function (dataUti
             },
 			// problem 24
 			{
-                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\str{/}}{\\css{\\html{[}}{hugeAndThin}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\str{/}}{\\str{(}}{\\frac{\\fracstr{-7}}{\\fracstr{8}}}{\\str{+}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{&nbsp; * &nbsp;}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{)}}{\\css{\\html{]}}{hugeAndThin}}'),
+                prob: dataUtils.pre('\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\str{/}}{\\css{\\html{[}}{hugeAndThin}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\str{/}}{\\str{(}}{\\frac{\\fracstr{-7}}{\\fracstr{8}}}{\\str{+}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{ * }}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{)}}{\\css{\\html{]}}{hugeAndThin}}'),
                 ans: dataUtils.pre('\\frac{\\input{-25}}{\\input{32}}'),
                 wb: dataUtils.pre('\\pan{12}{11}{\\ordopssimple{' +
 						'\\grp{\\frac{\\fracstr{1}}{\\fracstr{2}}}{\\btn{/}{F}{bigger}}{\\css{\\html{[}}{hugeAndThin}}{\\frac{\\fracstr{2}}{\\fracstr{5}}}{\\btn{/}{F}{bigger}}{\\str{(}}{\\frac{\\fracstr{-7}}{\\fracstr{8}}}{\\btn{+}{F}{large}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\btn{*}{T}{large}}{\\frac{\\fracstr{-1}}{\\fracstr{2}}}{\\str{)}}{\\css{\\html{]}}{hugeAndThin}},' +

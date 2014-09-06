@@ -115,7 +115,8 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
                         answer: '$wb',
                         controls: {
                             "checkAnswer": true,
-                            "help": true
+                            "help": true,
+							"fixBottomRight": true
                         }
                     }]
                 }]
@@ -529,21 +530,21 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 			problemStatement: dataUtils.pre(
 											'{\\grp'
 												+'{\\exp{\\str{(-3 )}}{\\str{3}}}'
-												+'{\\str{( -5 &nbsp;/&nbsp; -1 &nbsp; - &nbsp; 4 )}}'
+												+'{\\str{( -6 &nbsp;/&nbsp; -1 &nbsp; - &nbsp; 4 )}}'
 											+'}'
 								),
-			answer: '-27',
+			answer: '-54',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\btn{( - 3 ) <sup>3</sup>}{T}{large}}{\\str{(}}{\\html{<span class=bigger>-</span><span class=large>5</span>}}{\\btn{/}{F}{bigger}}{\\html{<span class=bigger>-</span><span class=large>1</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=large>4</span>}}{\\str{)}},' +
+						'\\grp{\\btn{( - 3 ) <sup>3</sup>}{T}{large}}{\\str{(}}{\\html{<span class=bigger>-</span><span class=large>6</span>}}{\\btn{/}{F}{large}}{\\html{<span class=bigger>-</span><span class=large>1</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=large>4</span>}}{\\str{)}},' +
                         '\\input{-27},' +
-                        '\\grp{\\html{<span class=bigger>-</span><span class=large>27</span>}}{\\str{(}}{\\html{<span class=bigger>-</span><span class=large>5</span>}}{\\btn{/}{T}{bigger}}{\\html{<span class=bigger>-</span><span class=large>1</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=large>4</span>}}{\\str{)}},' +
-                        '\\input{5},' +
-						'\\grp{\\html{<span class=bigger>-</span><span class=large>27</span>}}{\\str{(}}{\\html{<span class=large>5</span>}}{\\btn{-}{T}{bigger}}{\\html{<span class=large>4</span>}}{\\str{)}},' +
-						'\\input{1},' +
-						'\\grp{\\btn{-27&nbsp;( 1 )}{T}{large}},' +
-						'\\input{-27},' +
-						'\\sign{-27}' +
-                    '}{terms}{evaluate&nbsp; ( -3 ) <sup>3</sup>}{-5 &nbsp;/&nbsp; -1}{5 - 4}{-27 ( 1 )}'),
+                        '\\grp{\\html{<span class=bigger>-</span><span class=large>27</span>}}{\\str{(}}{\\html{<span class=bigger>-</span><span class=large>6</span>}}{\\btn{/}{T}{large}}{\\html{<span class=bigger>-</span><span class=large>1</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=large>4</span>}}{\\str{)}},' +
+                        '\\input{6},' +
+						'\\grp{\\html{<span class=bigger>-</span><span class=large>27</span>}}{\\str{(}}{\\html{<span class=large>6</span>}}{\\btn{-}{T}{bigger}}{\\html{<span class=large>4</span>}}{\\str{)}},' +
+						'\\input{2},' +
+						'\\grp{\\btn{-27&nbsp;( 2 )}{T}{large}},' +
+						'\\input{-54},' +
+						'\\str{-54}' +
+                    '}{terms}{evaluate&nbsp; ( -3 ) <sup>3</sup>}{-6 * -1}{6 - 4}{-27 ( 2 )}'),
 			template: 'evaluate' 
 			}
 			,
@@ -581,7 +582,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 			problemStatement: dataUtils.pre(
 											'{\\grp'
 												+'{\\str{- 45 &nbsp;&nbsp; / &nbsp;}}'
-												+'{\\exp{\\str{ -3 &nbsp;}}{\\str{2}}}'
+												+'{\\exp{\\str{( -3 &nbsp;)}}{\\str{2}}}'
 												+'{\\str{ - &nbsp;}}'
 												+'{\\exp{\\str{( -2 &nbsp;)}}{\\str{2}}}'
 												+'{\\str{ &nbsp; &#43; &nbsp;}}'
@@ -590,19 +591,19 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 								),
 			answer: '-7',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\html{<span class=bigger>-</span><span class=large>45</span>}}{\\btn{/}{F}{bigger}}{\\btn{ - 3 <sup>2</sup>}{T}{large}}{\\btn{-}{F}{bigger}}{\\btn{( - 2 ) <sup>2</sup>}{F}{large}}{\\btn{+}{F}{large}}{\\btn{( - 2 ) <sup>3</sup>}{F}{large}},' +
+						'\\grp{\\html{<span class=bigger>-</span><span class=large>45</span>}}{\\btn{/}{F}{bigger}}{\\btn{( - 3 ) <sup>2</sup>}{T}{large}}{\\btn{-}{F}{bigger}}{\\btn{( - 2 ) <sup>2</sup>}{F}{large}}{\\btn{+}{F}{large}}{\\btn{( - 2 ) <sup>3</sup>}{F}{large}},' +
                         '\\input{-9},' +
                         '\\grp{\\html{<span class=bigger>-</span><span class=large>45</span>}}{\\btn{/}{F}{bigger}}{\\html{<span class=bigger>-</span><span class=large>9</span>}}{\\btn{-}{F}{bigger}}{\\btn{( - 2 ) <sup>2</sup>}{T}{large}}{\\btn{+}{F}{large}}{\\btn{( - 2 ) <sup>3</sup>}{F}{large}},' +
                         '\\input{4},' +
 						'\\grp{\\html{<span class=bigger>-</span><span class=large>45</span>}}{\\btn{/}{F}{bigger}}{\\html{<span class=bigger>-</span><span class=large>9</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=large>4</span>}}{\\btn{+}{F}{large}}{\\btn{( - 2 ) <sup>3</sup>}{T}{large}},' +
 						'\\input{-8},' +
-						'\\grp{\\html{<span class=bigger>-</span><span class=large>45</span>}}{\\btn{/}{T}{bigger}}{\\html{<span class=bigger>-</span><span class=large>9</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=large>4</span>}}{\\btn{+}{F}{large}}{\\html{<span class=large>(</span><span class=bigger>-</span><span class=large>8 )</span>},' +
+						'\\grp{\\html{<span class=bigger>-</span><span class=large>45</span>}}{\\btn{/}{T}{bigger}}{\\html{<span class=bigger>-</span><span class=large>9</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=large>4</span>}}{\\btn{+}{F}{large}}{\\html{<span class=large>(</span><span class=bigger>-</span><span class=large>8 )</span>}},' +
 						'\\input{5},' +
 						'\\grp{\\html{<span class=large>5</span>}}{\\btn{-}{T}{bigger}}{\\html{<span class=large>4</span>}}{\\btn{+}{F}{large}}{\\html{<span class=large>(</span><span class=bigger>-</span><span class=large>8 )</span>}},' +
 						'\\input{1},' +
 						'\\grp{\\html{<span class=large>1</span>}}{\\btn{+}{T}{large}}{\\html{<span class=large>(</span><span class=bigger>-</span><span class=large>8 )</span>}},' +
 						'\\input{-7},' +
-						'\\sign{-7}' +
+						'\\str{-7}' +
                     '}{terms}{evaluate&nbsp;- 3 <sup>2</sup>}{evaluate&nbsp; ( - 2 ) <sup>2</sup>}{evaluate&nbsp; ( - 2 ) <sup>3</sup>}{- 45 / -9}{5 - 4}{1 + ( - 8 )}'),
 			template: 'wideEvaluate' 
 			}
