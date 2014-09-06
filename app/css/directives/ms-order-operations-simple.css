@@ -19,6 +19,7 @@
 }
 .ms-order-ops-simple button.btn {
 	font-size:110%;
+	min-width:50px;
 }
 .ms-order-ops-simple hr {
 	border-bottom: 1px solid;

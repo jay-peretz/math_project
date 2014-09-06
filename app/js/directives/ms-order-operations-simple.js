@@ -58,8 +58,13 @@ angular.module('mathSkills')
 									
 									// test for more than 2 digits in input numerator or denominator and no exponential/no pair of terms above, adjust space
 									case(parser.extractTag($scope.answers[$scope.cur]).tag === "frac" && parsed.args[0].length === 1):
+										// adjust for differences in styling of operators
 										if (curNum.length > 1 || curDen.length > 1) {
-											tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+											if (parsed.args[0] === '/' || parsed.args[0] === '-') {
+												tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+											} else {
+												tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+											}
 										} else {
 											tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
 										}
@@ -67,7 +72,12 @@ angular.module('mathSkills')
 										
 									// test for mixed fraction input, and no exponential/no pair of terms above, adjust space
 									case(parser.extractTag($scope.answers[$scope.cur]).tag === "mixed" && parsed.args[0].length === 1): 
-										tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+										// adjust for differences in styling of operators
+										if (parsed.args[0] === '/' || parsed.args[0] === '-') {
+											tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+										} else {
+											tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+										}
 										break;
 										
 									// case for exponent "sup" tag in button text 
@@ -87,11 +97,18 @@ angular.module('mathSkills')
 										
 									// default includes whole numbers 
 									default: 
-										tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+										// adjust for differences in styling of operators
+										if (parsed.args[0] === '/' || parsed.args[0] === '-') {
+											tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+										} else {
+											tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+										}
 										break;
 										
 								}
+								// 
 								//console.log("tagString is: ",tagString);
+								// 
                             } else if (parsed.tag === 'btn') {
 								tagString = '\\grp{\\css{\\str{' + parsed.args[0] + '}}{fakeButton}}';
 							}
@@ -122,7 +139,9 @@ angular.module('mathSkills')
 											tagString = '\\grp{\\rowgrp{css{\\html{&#125;}}{brace90Simple}}{' + $scope.answers[$scope.cur] + '}}';
 										}
 									}
+									//
 									//console.log("2 tagString is: ",tagString);
+									//
 									break	
 								case(parsed.tag === 'btn' && parsed.args[1] === 'F'):					
 									tagString = '\\grp{\\css{\\str{' + parsed.args[0] + '}}{fakeButton noShow}}';
