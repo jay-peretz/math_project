@@ -24,7 +24,11 @@ angular.module('mathSkills')
 						var newArgsSaved = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
                             if (parsed.tag === 'btn') {
-                                tagString = '\\css{\\html{' + parsed.args[0] + '}}{bigger}';
+								if (parsed.args[0].length === 1) {
+                                	tagString = '\\str{' + parsed.args[0] + '}';
+								} else {
+									tagString = '\\css{\\html{' + parsed.args[0] + '}}{large}';
+								}
                             }
                             return tagString;
                         });
@@ -51,56 +55,82 @@ angular.module('mathSkills')
                             if (parsed.tag === 'btn' && parsed.args[1] === 'T') {
 								// improve centering of brace- adjust space around operator in second-to-last line of display based on last line tag displayed
 								switch (true) {
+									
 									// test for more than 2 digits in input numerator or denominator and no exponential/no pair of terms above, adjust space
-									case(parser.extractTag($scope.answers[$scope.cur]).tag === "frac" && parsed.args[0].indexOf("sup") === -1 && parsed.args[0].indexOf("(") === -1):
+									case(parser.extractTag($scope.answers[$scope.cur]).tag === "frac" && parsed.args[0].length === 1):
 										if (curNum.length > 1 || curDen.length > 1) {
-											tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
+											tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
 										} else {
-											tagString = '\\sign{&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
+											tagString = '\\str{&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;}';
 										}
 										break;
+										
 									// test for mixed fraction input, and no exponential/no pair of terms above, adjust space
-									case(parser.extractTag($scope.answers[$scope.cur]).tag === "mixed" && parsed.args[0].indexOf("sup") === -1 && parsed.args[0].indexOf("(") === -1): 
-										tagString = '\\sign{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+									case(parser.extractTag($scope.answers[$scope.cur]).tag === "mixed" && parsed.args[0].length === 1): 
+										tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
 										break;
-									// case for exponent as button text 
-									case(parsed.args[0].indexOf("sup") !== -1): 
-										if (parsed.args[0].indexOf("sup") > 4) {
+										
+									// case for exponent "sup" tag in button text 
+									case(parsed.args[0].length > 1 && parsed.args[0].indexOf("sup") !== -1): 
+										tagString = '\\css{\\html{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}}{large}';
+										break;
+										
+									// case for exponent or two terms as button text
+									case(parsed.args[0].length > 1 && parsed.args[0].indexOf("sup") === -1): 
+										if (parsed.args[0].length > 4) {
 												numberOfSpaces = "&nbsp;";
 										} else {
 												numberOfSpaces = "&nbsp;&nbsp;&nbsp;";
 										}
-										tagString = '\\sign{'+ numberOfSpaces + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
+										tagString = '\\css{\\html{'+ numberOfSpaces + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}}{large}';
 										break;
-									// case for product no operator-- term in parenthesis
-									case(parsed.args[0].indexOf("(") !== -1):
-										tagString = '\\sign{'+ parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
-										break;
+										
 									// default includes whole numbers 
 									default: 
-										tagString = '\\sign{<span style="padding-left:.8em;">&nbsp;</span>' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
+										tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
 										break;
 										
 								}
                             } else if (parsed.tag === 'btn') {
-								tagString = '\\grp{\\css{\\html{' + parsed.args[0] + '}}{fakeButton}}';
+								tagString = '\\grp{\\css{\\str{' + parsed.args[0] + '}}{fakeButton}}';
 							}
-							
+							//console.log("tagString is: ",tagString);
                             return tagString;
                         });
 						var newArgs2 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
                             var parsed = parser.extractTag(tagString);
 							switch (true) {
 								case(parsed.tag === 'btn' && parsed.args[1] === 'T'):
-									tagString = '\\grp{\\rowgrp{css{\\html{&#125;}}{brace90Simple}}{' + $scope.answers[$scope.cur] + '}}';
+									
+									// if this button has an operator for a label
+									if (parsed.args[0].length === 1) {
+										tagString = '\\grp{\\rowgrp{css{\\html{&#125;}}{brace90Simple}}{' + $scope.answers[$scope.cur] + '}}';
+									// if this button has an exponent "<sup>" tag & a paren
+									} else if (parsed.args[0].indexOf("sup") !== -1) {
+										if (parsed.args[0].indexOf("(") !== -1 || parsed.args[0].indexOf("-") !== -1) {																			
+											tagString = '\\grp{\\html{&nbsp;}}{\\rowgrp{css{\\html{&#125;}}{brace90Simple}}{' + $scope.answers[$scope.cur] + '}}';
+										} else {
+											tagString = '\\grp{\\rowgrp{css{\\html{&#125;}}{brace90Simple}}{' + $scope.answers[$scope.cur] + '}}';
+										}
+									// if this button has a fraction or a pair of terms as label
+									} else {
+										//exclude pair of terms
+										if (parsed.args[0].indexOf("(") === -1) {
+											tagString = '\\grp{\\html{&nbsp;&nbsp;&nbsp;&nbsp;}}{\\rowgrp{css{\\html{&#125;}}{brace90Simple}}{' + $scope.answers[$scope.cur] + '}}';
+										} else {
+											tagString = '\\grp{\\rowgrp{css{\\html{&#125;}}{brace90Simple}}{' + $scope.answers[$scope.cur] + '}}';
+										}
+									}
+									
 									break	
 								case(parsed.tag === 'btn' && parsed.args[1] === 'F'):					
-									tagString = '\\grp{\\css{\\html{' + parsed.args[0] + '}}{fakeButton noShow}}';
+									tagString = '\\grp{\\css{\\str{' + parsed.args[0] + '}}{fakeButton noShow}}';
 									break;
 								default:
 									tagString = '\\css{' + tagString + '}{noShow}';
 									break;
 							}
+							
                             return tagString;
                         });
                         $scope.rows[$scope.cur] = '\\rowgrp{\\grp{' + newArgs1.join('}{') + '}}{\\grp{' + newArgs2.join('}{') + '}}';
@@ -209,7 +239,7 @@ angular.module('mathSkills')
                 expected: '@',
                 label: '@'
             },
-			template:   '<div class="alert alert-block alert-info" ng-bind-html-unsafe=instructions>'+
+			template:   '<div class="alert alert-block alert-info" ng-bind-html-unsafe=instructions|enlargeOps>'+
                             '</div>'+
                             '<span class=ms-order-ops-simple>'+
 							'<ms-expression expected={{currentExpression}}>'+

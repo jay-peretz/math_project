@@ -34,6 +34,7 @@ angular.module('mathSkills').filter('enlargeOps', function () {
 				}
 			})
 			// replace left bracket if that's the only element in the string
+			// not actually in use owing to multiple answer logic in ms.string.js
 			.replace(/\[/, function (whole) {
 				if (input === "[" && whole === "[") {
 					return '<span class=hugeAndThin>[</span>';

@@ -1,9 +1,11 @@
 .ms-order-ops-simple table {
 	text-align:center;
 }
-.ms-order-ops-simple table {
-	margin-bottom:5px;
-	text-align:center;
+.ms-order-ops-simple .large {
+	font-size:110%;
+}
+.ms-order-ops-simple .large {
+	font-size:110%;
 }
 .ms-order-ops-simple div.noShow {
 	visibility:hidden;
@@ -12,18 +14,21 @@
     width: 40px;
 }
 .ms-order-ops-simple sup {
-font-weight:bold;
-font-family:"Open Sans";
+	font-weight:bold;
+	font-family:"Open Sans";
 }
 .ms-order-ops-simple button.btn {
-font-size:110%;
+	font-size:110%;
 }
-.ms-order-ops-simple button.btn td {
-	height:20px;
+.ms-order-ops-simple hr {
+	border-bottom: 1px solid;
+	border-top: 0px;
+	height:1px;
+	min-width:1em;
+	padding:0px;
+	margin:0px;
 }
-div.fakeButton td {
-	height:20px;
-}
+
 .brace90 {
 	margin-left:.9em;
 	transform: rotate(90deg) scale(1,4);
