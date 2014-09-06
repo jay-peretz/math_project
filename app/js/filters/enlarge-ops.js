@@ -7,7 +7,7 @@ angular.module('mathSkills').filter('enlargeOps', function () {
                 switch (char) {
                     case '*': return '<span>&bull;</span>';
 					case 'x': return '<span>&bull;</span>';
-					case '+': return '<span class=bigger>&#43;</span>';
+					case '+': return '<span class=large>&#43;</span>';
 					case '-': return '<span class=bigger>&#45;</span>';
                 }
             })

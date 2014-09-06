@@ -351,7 +351,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 						'\\grp{\\html{<span class=large>5</span>}}{\\btn{-}{T}{bigger}}{\\html{<span class=large>18</span>}},' +
 						'\\input{-13},' +
 						'\\sign{-13}' +
-                    '}{terms}{evaluate&nbsp; 3<sup>2</sup>}{9 &bull; 2}{5 - 18}'),
+                    '}{terms}{evaluate&nbsp; 3<sup>2</sup>}{9 * 2}{5 - 18}'),
 			template: 'evaluate' 
 			}
 			,
@@ -373,7 +373,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 						'\\grp{\\html{<span class=large>20</span>}}{\\btn{-}{T}{bigger}}{\\html{( <span class=large>-18</span> )}},' +
 						'\\input{38},' +
 						'\\sign{38}' +
-                    '}{terms}{evaluate&nbsp; 6<sup>2</sup>}{36 &divide; (-2)}{20 - (-18)}'),
+                    '}{terms}{evaluate&nbsp; 6<sup>2</sup>}{36 / (-2)}{20 - (-18)}'),
 			template: 'evaluate' 
 			}
 			,
@@ -393,7 +393,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 						'\\grp{\\html{<span class=bigger>-</span><span class=large>8</span>}}{\\btn{-}{T}{bigger}}{\\str{(}}{\\html{<span class=bigger>-</span><span class=large>12</span>}}{\\str{)}},' +
 						'\\input{4},' +
 						'\\sign{4}' +
-                    '}{terms}{evaluate&nbsp; -2<sup>3</sup>}{4 &bull; -3}{-8 - (-12)}'),
+                    '}{terms}{evaluate&nbsp; -2<sup>3</sup>}{4 * -3}{-8 - (-12)}'),
 			template: 'evaluate' 
 			}
 			,
@@ -413,7 +413,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 						'\\grp{\\html{<span class=bigger>-</span><span class=large>121</span>}}{\\btn{-}{T}{bigger}}{\\html{<span class=large>3</span>}},' +
 						'\\input{-124},' +
 						'\\sign{-124}' +
-                    '}{terms}{evaluate&nbsp; -11<sup>2</sup>}{18 &divide; 6}{-121 - 3}'),
+                    '}{terms}{evaluate&nbsp; -11<sup>2</sup>}{18 / 6}{-121 - 3}'),
 			template: 'evaluate' 
 			}
 			,
@@ -435,7 +435,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 						'\\grp{\\html{<span class=large>25</span>}}{\\btn{-}{T}{bigger}}{\\html{<span class=large>35</span>}},' +
 						'\\input{-10},' +
 						'\\sign{-10}' +
-                    '}{terms}{evaluate&nbsp; -10<sup>2</sup>}{100 &divide; 4}{5 &bull; 7}{25 - 35}'),
+                    '}{terms}{evaluate&nbsp; -10<sup>2</sup>}{100 / 4}{5 * 7}{25 - 35}'),
 			template: 'evaluate' 
 			}
 			,
@@ -457,7 +457,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 						'\\grp{\\html{<span class=large>72</span>}}{\\btn{+}{T}{large}}{\\html{<span class=hugeAndThin>(</span> <span class=bigger>-</span><span class=large>9</span> <span class=hugeAndThin>)</span>}},' +
 						'\\input{63},' +
 						'\\sign{63}' +
-                    '}{terms}{evaluate&nbsp; ( -6 ) <sup>2</sup>}{100 &bull; 4}{5 &bull; 7}{25 - 35}'),
+                    '}{terms}{evaluate&nbsp; ( -6 ) <sup>2</sup>}{100 * 4}{5 * 7}{25 - 35}'),
 			template: 'evaluate' 
 			}
 			,
@@ -507,7 +507,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 			problemStatement: dataUtils.pre(
 											'{\\grp'
 												+'{\\exp{\\str{(-2 )}}{\\str{3}}}'
-												+'{\\str{( -8 &nbsp;-&nbsp; 2 &nbsp; &bull; &nbsp; 1 )}}'
+												+'{\\str{( -8 &nbsp;-&nbsp; 2 &nbsp; * &nbsp; 1 )}}'
 											+'}'
 								),
 			answer: '80',
@@ -521,7 +521,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 						'\\grp{\\btn{- 8&nbsp;( -10 )}{T}{bigger}},' +
 						'\\input{80},' +
 						'\\sign{80}' +
-                    '}{terms}{evaluate&nbsp; ( -2 ) <sup>3</sup>}{2 &bull; 1}{-8 - 2}{-8 ( -10 )}'),
+                    '}{terms}{evaluate&nbsp; ( -2 ) <sup>3</sup>}{2 * 1}{-8 - 2}{-8 ( -10 )}'),
 			template: 'evaluate' 
 			}
 			,
@@ -543,7 +543,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 						'\\grp{\\btn{-27&nbsp;( 1 )}{T}{large}},' +
 						'\\input{-27},' +
 						'\\sign{-27}' +
-                    '}{terms}{evaluate&nbsp; ( -3 ) <sup>3</sup>}{-5 &nbsp;&divide;&nbsp; -1}{5 - 4}{-27 ( 1 )}'),
+                    '}{terms}{evaluate&nbsp; ( -3 ) <sup>3</sup>}{-5 &nbsp;/&nbsp; -1}{5 - 4}{-27 ( 1 )}'),
 			template: 'evaluate' 
 			}
 			,
@@ -573,7 +573,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 						'\\grp{\\html{<span class=bigger>-</span><span class=large>107</span>}}{\\btn{+}{T}{large}}{\\html{<span class=large>25</span>}},' +
 						'\\input{-82},' +
 						'\\sign{-82}' +
-                    '}{terms}{evaluate&nbsp; -7 <sup>2</sup>}{evaluate&nbsp; ( -3 ) <sup>2</sup>}{evaluate&nbsp; ( -5 ) <sup>2</sup>}{2 &nbsp;&bull;&nbsp; -49}{-98 &nbsp;-&nbsp; 9}{-107 &nbsp;+&nbsp; 25}'),
+                    '}{terms}{evaluate&nbsp; -7 <sup>2</sup>}{evaluate&nbsp; ( -3 ) <sup>2</sup>}{evaluate&nbsp; ( -5 ) <sup>2</sup>}{2 &nbsp;*&nbsp; -49}{-98 &nbsp;-&nbsp; 9}{-107 &nbsp;+&nbsp; 25}'),
 			template: 'wideEvaluate' 
 			}
 			,
@@ -603,7 +603,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 						'\\grp{\\html{<span class=large>1</span>}}{\\btn{+}{T}{large}}{\\html{<span class=large>(</span><span class=bigger>-</span><span class=large>8 )</span>}},' +
 						'\\input{-7},' +
 						'\\sign{-7}' +
-                    '}{terms}{evaluate&nbsp;- 3 <sup>2</sup>}{evaluate&nbsp; ( - 2 ) <sup>2</sup>}{evaluate&nbsp; ( - 2 ) <sup>3</sup>}{- 45 <span class=bigger>&divide;</span> -9}{5 - 4}{1 + ( - 8 )}'),
+                    '}{terms}{evaluate&nbsp;- 3 <sup>2</sup>}{evaluate&nbsp; ( - 2 ) <sup>2</sup>}{evaluate&nbsp; ( - 2 ) <sup>3</sup>}{- 45 / -9}{5 - 4}{1 + ( - 8 )}'),
 			template: 'wideEvaluate' 
 			}
 			,
@@ -953,7 +953,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 									+'<td>'
 										+'<table><tr><td>3<td></tr><tr><td><hr><td></tr><tr><td>5<td></tr></table>'
 									+'</td>'
-									+'<td>&nbsp; <span class=large>&bull;</span> &nbsp;</td>'
+									+'<td>&nbsp; <span class=large>*</span> &nbsp;</td>'
 									+'<td>'
 										+'<table><tr><td>1<td></tr><tr><td><hr><td></tr><tr><td>2<td></tr></table>'
 									+'</td>'
@@ -1245,7 +1245,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 								+'{large}'
 							+'}'
 							+'{\\btn'
-								+'{&divide;}'
+								+'{/}'
 								+'{F}'
 								+'{bigger}'
 							+'}'
@@ -1559,7 +1559,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 										+'</tr>'
 									+'</table>'
 								+'</td>'
-								+'<td>&nbsp; <span class=large>&bull;</span> &nbsp;</td>'
+								+'<td>&nbsp; <span class=large>*</span> &nbsp;</td>'
 								+'<td>'
 									+'<table>'
 										+'<tr>'
@@ -1675,7 +1675,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 								+'{large}'
 							+'}'
 							+'{\\btn'
-								+'{&divide;}'
+								+'{/}'
 								+'{F}'
 								+'{bigger}'
 							+'}' 
@@ -1703,7 +1703,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 								+'{large}'
 							+'}'
 							+'{\\btn'
-								+'{&divide;}'
+								+'{/}'
 								+'{F}'
 								+'{bigger}'
 							+'}' 
@@ -1731,7 +1731,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 								+'{large}'
 							+'}'
 							+'{\\btn'
-								+'{&divide;}'
+								+'{/}'
 								+'{T}'
 								+'{bigger}'
 							+'}' 
@@ -2063,7 +2063,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 										+'</tr>'
 									+'</table>'
 								+'</td>'
-								+'<td>&nbsp; <span class=large>&bull;</span> &nbsp;</td>'
+								+'<td>&nbsp; <span class=large>*</span> &nbsp;</td>'
 								+'<td><span class=hugeAndThin>(</span></td>'
 								+'<td class=bigger>-&nbsp;</td>'
 								+'<td>'

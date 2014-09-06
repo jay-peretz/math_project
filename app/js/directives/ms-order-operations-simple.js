@@ -61,7 +61,7 @@ angular.module('mathSkills')
 										if (curNum.length > 1 || curDen.length > 1) {
 											tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}';
 										} else {
-											tagString = '\\str{&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;}';
+											tagString = '\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + parsed.args[0] + '&nbsp;&nbsp;&nbsp;&nbsp;}';
 										}
 										break;
 										
@@ -91,10 +91,11 @@ angular.module('mathSkills')
 										break;
 										
 								}
+								//console.log("tagString is: ",tagString);
                             } else if (parsed.tag === 'btn') {
 								tagString = '\\grp{\\css{\\str{' + parsed.args[0] + '}}{fakeButton}}';
 							}
-							//console.log("tagString is: ",tagString);
+							
                             return tagString;
                         });
 						var newArgs2 = parser.extractTag($scope.rows[$scope.cur]).args.map(function (tagString) {
@@ -121,7 +122,7 @@ angular.module('mathSkills')
 											tagString = '\\grp{\\rowgrp{css{\\html{&#125;}}{brace90Simple}}{' + $scope.answers[$scope.cur] + '}}';
 										}
 									}
-									
+									//console.log("2 tagString is: ",tagString);
 									break	
 								case(parsed.tag === 'btn' && parsed.args[1] === 'F'):					
 									tagString = '\\grp{\\css{\\str{' + parsed.args[0] + '}}{fakeButton noShow}}';
@@ -130,7 +131,6 @@ angular.module('mathSkills')
 									tagString = '\\css{' + tagString + '}{noShow}';
 									break;
 							}
-							
                             return tagString;
                         });
                         $scope.rows[$scope.cur] = '\\rowgrp{\\grp{' + newArgs1.join('}{') + '}}{\\grp{' + newArgs2.join('}{') + '}}';
