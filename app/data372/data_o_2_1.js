@@ -104,13 +104,128 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 										+'{\\html{&nbsp;}}'
 										+'{\\css'
 											+'{\\grp'
-												+'{\\str{Evaluate the expression: &nbsp;}}'
-												+'{$stringAnswer}'
+												+'{\\str{Evaluate the simplified expression<span class=large>:</span>}}'
 											+'}'
 											+'{alert alert-info}'
 										+'}'
 										+'{\\grp'
 											+'{\\input{$finalAnswer}}'
+										+'}'
+									+'}{well}',	
+						controls: {
+                            "checkAnswer": true,
+                            "help": true
+						}
+					}]
+                }]
+            },
+			multiplyEvaluate2ndHelp: {
+                title: 'Simplifying Exponential Expressions: Multiplication with Same Bases',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+						problem: '$problemStatement',
+						answer: '\\rowgrp'
+									+'{\\str{Use parentheses as a part of your answer <u>if</u> necessary.}}'
+									+'{\\html{&nbsp;}}'
+									+'{$solutionAnswer}',		
+						controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$line1}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$line2}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$line3}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$helpAnswer}}'
+											+'}'
+											+'{help-answer-text}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+								}
+						}
+						,
+						{
+						problem: '$problemStatement',
+						answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'$noPanProbStatement'
+										+'{\\html{&nbsp;}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{Evaluate the simplified expression<span class=large>:</span>}}'
+											+'}'
+											+'{alert alert-info}'
+										+'}'
+										+'{\\grp'
+											+'{\\input{$finalAnswer}}'
+										+'}'
+									+'}{well}',	
+						controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$secondHelpLine1}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$secondHelpAnswer}}'
+											+'}'
+											+'{help-answer-text}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+						}
+					}]
+                }]
+            }
+			,
+			multiplyFractionsEvaluate: {
+                title: 'Simplifying Exponential Expressions: Multiplication with Same Bases',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+						problem: '$problemStatement',
+						answer: '\\rowgrp'
+									+'{\\str{Use parentheses as a part of your answer <u>if</u> necessary.}}'
+									+'{\\html{&nbsp;}}'
+									+'{$solutionAnswer}',		
+						controls: {
+                            "checkAnswer": true,
+                            "help": '\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$line1}}'
+										+'{\\html{&nbsp;}}'
+										+'{$line2}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{Simplified Answer: &nbsp;}}'
+												+'{$stringAnswer}'
+											+'}'
+											+'{help-answer-text}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+								}
+						}
+						,
+						{
+						problem: '$problemStatement',
+						answer: '\\css'
+									+'{\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'$noPanProbStatement'
+										+'{\\html{&nbsp;}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{Evaluate the simplified expression<span class=large>:</span>}}'
+											+'}'
+											+'{alert alert-info}'
+										+'}'
+										+'{\\grp'
+											+'{$finalAnswer}'
 										+'}'
 									+'}{well}',	
 						controls: {
@@ -923,7 +1038,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	base2: 'o',
 			exp2: '-3',
 			base3: 'n',
-			exp3: '-4',
+			exp3: '-3',
 			base4: 'o',
 			exp4: '4',
 			base5: 'n',
@@ -981,7 +1096,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	base2: '(-2)',
 			exp2: '-2',
 			base3: '(-2)',
-			exp3: '-8',
+			exp3: '8',
 			solutionAnswer: dataUtils.pre(
 								'\\grp'
 									+'{\\exp{\\input{$$firstAnsBase}}{\\input{$$firstAnsExp}}}'
@@ -998,6 +1113,368 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	line3: '',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;(-2)<sup>7</sup>',
 		  	template: 'multiplyEvaluate' 
+		 	}
+			,
+		 	// prob 26
+		 	{
+		 	problemStatement: dataUtils.pre(
+							'\\pan{12}{11}'
+								+'{\\rowgrp'
+									+'{\\grp'
+										+'{\\str{Simplify: &nbsp;}}'
+										+'{\\exp{\\str{$$base1}}{\\str{$$exp1}}}'
+										+'{\\str{*}}'
+										+'{\\str{$$base2}}'
+										+'{\\str{*}}'
+										+'{\\exp{\\str{$$base3}}{\\str{$$exp3}}}'
+									+'}'
+								+'}'
+						),
+			noPanProbStatement: dataUtils.pre(
+										'{\\grp'
+											+'{\\str{The simplified expression is: &nbsp;}}'
+											+'{$stringAnswer}'
+										+'}'
+						),
+		  	base1: '(-4)',
+			exp1: '-3',
+		  	base2: '(-4)',
+			base3: '(-4)',
+			exp3: '7',
+			solutionAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\exp{\\input{$$firstAnsBase}}{\\input{$$firstAnsExp}}}'
+						),
+			stringAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\exp{\\str{$$firstAnsBase}}{\\str{$$firstAnsExp}}}'
+						),
+		  	firstAnsBase: '(-4)',
+			firstAnsExp: '5',
+			finalAnswer: '-1024',
+		  	line1: 'To simplify this quickly, we use the exponent rule \\"Multiplication of Same Bases\\" here. When we multiply same bases, we <u>add the exponents</u>.',
+			line2:'(-4)<sup>-3</sup> * (-4) * (-4)<sup>7</sup> &nbsp;means&nbsp; (-4)<sup>-3 + 1 + 7</sup> &nbsp;or&nbsp; (-4)<sup>5</sup>',
+		  	line3: '',
+		  	helpAnswer: '<br>Simplified Answer: &nbsp;(-4)<sup>5</sup>',
+		  	template: 'multiplyEvaluate' 
+		 	}
+			,
+		 	// prob 27
+		 	{
+		 	problemStatement: dataUtils.pre(
+							'\\pan{12}{11}'
+								+'{\\rowgrp'
+									+'{\\grp'
+										+'{\\str{Simplify: &nbsp;}}'
+										+'{\\exp{\\str{$$base1}}{\\str{$$exp1}}}'
+										+'{\\str{*}}'
+										+'{\\exp{\\str{$$base2}}{\\str{$$exp2}}}'
+										+'{\\str{*}}'
+										+'{\\exp{\\str{$$base3}}{\\str{$$exp3}}}'
+										+'{\\str{*}}'
+										+'{\\exp{\\str{$$base4}}{\\str{$$exp4}}}'
+									+'}'
+								+'}'
+						),
+			noPanProbStatement: dataUtils.pre(
+										'{\\grp'
+											+'{\\str{The simplified expression is: &nbsp;}}'
+											+'{$stringAnswer}'
+										+'}'
+						),
+		  	base1: '(-5)',
+			exp1: '-2',
+		  	base2: '(-5)',
+			exp2: '4',
+			base3: '4',
+			exp3: '5',
+			base4: '4',
+			exp4: '-2',
+			solutionAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\exp{\\input{$$firstAnsBase}}{\\input{$$firstAnsExp}}}'
+									+'{\\str{*}}'
+									+'{\\exp{\\input{$$secondAnsBase}}{\\input{$$secondAnsExp}}}'
+						),
+			stringAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\exp{\\str{$$firstAnsBase}}{\\str{$$firstAnsExp}}}'
+									+'{\\str{*}}'
+									+'{\\exp{\\str{$$secondAnsBase}}{\\str{$$secondAnsExp}}}'
+						),
+		  	firstAnsBase: '4',
+			firstAnsExp: '3',
+			secondAnsBase: '(-5)',
+			secondAnsExp: '2',
+			finalAnswer: '1600',
+		  	line1: 'To simplify this quickly, we use the exponent rule \\"Multiplication of Same Bases\\" here. When we multiply same bases, we <u>add the exponents</u>.',
+			line2:'4<sup>5</sup> * 4<sup>-2</sup> &nbsp;means&nbsp; 4<sup>5 + (-2)</sup> &nbsp;or&nbsp; 4<sup>3</sup>',
+		  	line3: '(-5)<sup>-2</sup> * (-5)<sup>4</sup> &nbsp;means&nbsp; (-5)<sup>-2 + 4</sup> &nbsp;or&nbsp; (-5)<sup>2</sup>',
+		  	helpAnswer: '<br>Simplified Answer: &nbsp;4<sup>3</sup> * (-5)<sup>2</sup>',
+			secondHelpLine1: 'Solve by following order of operations.<br><br>'
+								+'4<sup>3</sup> * (-5)<sup>2</sup><br>'
+								+'64 * 25',
+		  	secondHelpAnswer: '<br>Evaluated Answer:&nbsp; 1600',
+		  	template: 'multiplyEvaluate2ndHelp' 
+		 	}
+			,
+		 	// prob 28
+		 	{
+		 	problemStatement: dataUtils.pre(
+							'\\pan{12}{11}'
+								+'{\\rowgrp'
+									+'{\\grp'
+										+'{\\str{Simplify: &nbsp;}}'
+										+'{\\exp{\\str{$$base1}}{\\str{$$exp1}}}'
+										+'{\\str{*}}'
+										+'{\\exp{\\str{$$base2}}{\\str{$$exp2}}}'
+										+'{\\str{*}}'
+										+'{\\exp{\\str{$$base3}}{\\str{$$exp3}}}'
+										+'{\\str{*}}'
+										+'{\\exp{\\str{$$base4}}{\\str{$$exp4}}}'
+									+'}'
+								+'}'
+						),
+			noPanProbStatement: dataUtils.pre(
+										'{\\grp'
+											+'{\\str{The simplified expression is: &nbsp;}}'
+											+'{$stringAnswer}'
+										+'}'
+						),
+		  	base1: '3',
+			exp1: '5',
+		  	base2: '(-2)',
+			exp2: '-3',
+			base3: '(-2)',
+			exp3: '6',
+			base4: '3',
+			exp4: '-3',
+			solutionAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\exp{\\input{$$firstAnsBase}}{\\input{$$firstAnsExp}}}'
+									+'{\\str{*}}'
+									+'{\\exp{\\input{$$secondAnsBase}}{\\input{$$secondAnsExp}}}'
+						),
+			stringAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\exp{\\str{$$firstAnsBase}}{\\str{$$firstAnsExp}}}'
+									+'{\\str{*}}'
+									+'{\\exp{\\str{$$secondAnsBase}}{\\str{$$secondAnsExp}}}'
+						),
+		  	firstAnsBase: '(-2)',
+			firstAnsExp: '3',
+			secondAnsBase: '3',
+			secondAnsExp: '2',
+			finalAnswer: '-72',
+		  	line1: 'To simplify this quickly, we use the exponent rule \\"Multiplication of Same Bases\\" here. When we multiply same bases, we <u>add the exponents</u>.',
+			line2:'(-2)<sup>-3</sup> * (-2)<sup>6</sup> &nbsp;means&nbsp; (-2)<sup>-3 + 6</sup> &nbsp;or&nbsp; (-2)<sup>3</sup>',
+		  	line3: '3<sup>5</sup> * 3<sup>-3</sup> &nbsp;means&nbsp; 3<sup>5 + (-3)</sup> &nbsp;or&nbsp; 3<sup>2</sup>',
+		  	helpAnswer: '<br>Simplified Answer: &nbsp;(-2)<sup>3</sup> * 3<sup>2</sup>',
+			secondHelpLine1: 'Solve by following order of operations.<br><br>'
+								+'(-2)<sup>3</sup> * 3<sup>2</sup><br>'
+								+'-8 * 9',
+		  	secondHelpAnswer: '<br>Evaluated Answer:&nbsp; -72',
+		  	template: 'multiplyEvaluate2ndHelp' 
+		 	}
+			,
+		 	// prob 29
+		 	{
+		 	problemStatement: dataUtils.pre(
+							'\\pan{12}{11}'
+								+'{\\rowgrp'
+									+'{\\grp'
+										+'{\\str{Simplify: &nbsp;}}'
+										+'{\\exp'
+											+'{\\grp'
+												+'{\\str{(}}'
+												+'{\\frac{\\fracstr{$$firstBaseNum}}{\\fracstr{$$firstBaseDen}}}'
+												+'{\\str{)}}'
+											+'}'
+											+'{\\str{$$exp1}}'
+										+'}'
+										+'{\\str{*}}'
+										+'{\\exp'
+											+'{\\grp'
+												+'{\\str{(}}'
+												+'{\\frac{\\fracstr{$$secondBaseNum}}{\\fracstr{$$secondBaseDen}}}'
+												+'{\\str{)}}'
+											+'}'
+											+'{\\str{$$exp2}}'
+										+'}'
+									+'}'
+								+'}'
+						),
+			noPanProbStatement: dataUtils.pre(
+										'{\\grp'
+											+'{\\str{The simplified expression is: &nbsp;}}'
+											+'{$stringAnswer}'
+										+'}'
+						),
+		  	firstBaseNum: '3',
+			firstBaseDen: '5',
+			exp1: '4',
+		  	secondBaseNum: '3',
+			secondBaseDen: '5',
+			exp2: '-2',
+			expAddition: '4 + (-2)',
+			expSum: '2',
+			solutionAnswer: dataUtils.pre(
+								'\\frac{\\exp{\\input{$$firstAnswerBase}}{\\input{$$firstAnswerExp}}}{\\exp{\\input{$$secondAnswerBase}}{\\input{$$secondAnswerExp}}}'
+						),
+			stringAnswer: dataUtils.pre(
+								'\\frac{\\exp{\\str{$$firstAnswerBase}}{\\str{$$firstAnswerExp}}}{\\exp{\\str{$$secondAnswerBase}}{\\str{$$secondAnswerExp}}}'
+						),
+		  	firstAnswerBase: '3',
+			firstAnswerExp: '2',
+			secondAnswerBase: '5',
+			secondAnswerExp: '2',
+			finalAnswerNum: '9',
+			finalAnswerDen: '25',
+			finalAnswer: dataUtils.pre(
+										'\\frac'
+											+'{\\input{$$finalAnswerNum}}'
+											+'{\\input{$$finalAnswerDen}}'
+						),
+		  	line1: 'To simplify this quickly, we use the exponent rule \\"Multiplication of Same Bases\\" here. When we multiply same bases, we <u>add the exponents</u>.',
+			line2: dataUtils.pre(
+								 '\\grp'
+									+'{\\exp'
+										+'{\\grp'
+											+'{\\str{(}}'
+											+'{\\frac{\\fracstr{$$firstBaseNum}}{\\fracstr{$$firstBaseDen}}}'
+											+'{\\str{)}}'
+										+'}'
+										+'{\\str{$$exp1}}'
+									+'}'
+									+'{\\str{*}}'
+									+'{\\exp'
+										+'{\\grp'
+											+'{\\str{(}}'
+											+'{\\frac{\\fracstr{$$secondBaseNum}}{\\fracstr{$$secondBaseDen}}}'
+											+'{\\str{)}}'
+										+'}'
+										+'{\\str{$$exp2}}'
+									+'}'
+									+'{\\str{&nbsp; means &nbsp;}}'
+									+'{\\exp'
+										+'{\\grp'
+											+'{\\str{(}}'
+											+'{\\frac{\\fracstr{$$firstBaseNum}}{\\fracstr{$$firstBaseDen}}}'
+											+'{\\str{)}}'
+										+'}'
+										+'{\\str{$$expAddition}}'
+									+'}'
+									+'{\\str{&nbsp; or &nbsp;}}'
+									+'{\\exp'
+										+'{\\grp'
+											+'{\\str{(}}'
+											+'{\\frac{\\fracstr{$$firstBaseNum}}{\\fracstr{$$firstBaseDen}}}'
+											+'{\\str{)}}'
+										+'}'
+										+'{\\str{$$expSum}}'
+									+'}'
+						),
+		  	template: 'multiplyFractionsEvaluate' 
+		 	}
+			,
+		 	// prob 30
+		 	{
+		 	problemStatement: dataUtils.pre(
+							'\\pan{12}{11}'
+								+'{\\rowgrp'
+									+'{\\grp'
+										+'{\\str{Simplify: &nbsp;}}'
+										+'{\\exp'
+											+'{\\grp'
+												+'{\\str{(}}'
+												+'{\\frac{\\fracstr{$$firstBaseNum}}{\\fracstr{$$firstBaseDen}}}'
+												+'{\\str{)}}'
+											+'}'
+											+'{\\str{$$exp1}}'
+										+'}'
+										+'{\\str{*}}'
+										+'{\\exp'
+											+'{\\grp'
+												+'{\\str{(}}'
+												+'{\\frac{\\fracstr{$$secondBaseNum}}{\\fracstr{$$secondBaseDen}}}'
+												+'{\\str{)}}'
+											+'}'
+											+'{\\str{$$exp2}}'
+										+'}'
+									+'}'
+								+'}'
+						),
+			noPanProbStatement: dataUtils.pre(
+										'{\\grp'
+											+'{\\str{The simplified expression is: &nbsp;}}'
+											+'{$stringAnswer}'
+										+'}'
+						),
+		  	firstBaseNum: '2',
+			firstBaseDen: '3',
+			exp1: '6',
+		  	secondBaseNum: '2',
+			secondBaseDen: '3',
+			exp2: '-3',
+			expAddition: '6 + (-3)',
+			expSum: '3',
+			solutionAnswer: dataUtils.pre(
+								'\\frac{\\exp{\\input{$$firstAnswerBase}}{\\input{$$firstAnswerExp}}}{\\exp{\\input{$$secondAnswerBase}}{\\input{$$secondAnswerExp}}}'
+						),
+			stringAnswer: dataUtils.pre(
+								'\\frac{\\exp{\\str{$$firstAnswerBase}}{\\str{$$firstAnswerExp}}}{\\exp{\\str{$$secondAnswerBase}}{\\str{$$secondAnswerExp}}}'
+						),
+		  	firstAnswerBase: '2',
+			firstAnswerExp: '3',
+			secondAnswerBase: '3',
+			secondAnswerExp: '3',
+			finalAnswerNum: '8',
+			finalAnswerDen: '27',
+			finalAnswer: dataUtils.pre(
+										'\\frac'
+											+'{\\input{$$finalAnswerNum}}'
+											+'{\\input{$$finalAnswerDen}}'
+						),
+		  	line1: 'To simplify this quickly, we use the exponent rule \\"Multiplication of Same Bases\\" here. When we multiply same bases, we <u>add the exponents</u>.',
+			line2: dataUtils.pre(
+								 '\\grp'
+									+'{\\exp'
+										+'{\\grp'
+											+'{\\str{(}}'
+											+'{\\frac{\\fracstr{$$firstBaseNum}}{\\fracstr{$$firstBaseDen}}}'
+											+'{\\str{)}}'
+										+'}'
+										+'{\\str{$$exp1}}'
+									+'}'
+									+'{\\str{*}}'
+									+'{\\exp'
+										+'{\\grp'
+											+'{\\str{(}}'
+											+'{\\frac{\\fracstr{$$secondBaseNum}}{\\fracstr{$$secondBaseDen}}}'
+											+'{\\str{)}}'
+										+'}'
+										+'{\\str{$$exp2}}'
+									+'}'
+									+'{\\str{&nbsp; means &nbsp;}}'
+									+'{\\exp'
+										+'{\\grp'
+											+'{\\str{(}}'
+											+'{\\frac{\\fracstr{$$firstBaseNum}}{\\fracstr{$$firstBaseDen}}}'
+											+'{\\str{)}}'
+										+'}'
+										+'{\\str{$$expAddition}}'
+									+'}'
+									+'{\\str{&nbsp; or &nbsp;}}'
+									+'{\\exp'
+										+'{\\grp'
+											+'{\\str{(}}'
+											+'{\\frac{\\fracstr{$$firstBaseNum}}{\\fracstr{$$firstBaseDen}}}'
+											+'{\\str{)}}'
+										+'}'
+										+'{\\str{$$expSum}}'
+									+'}'
+						),
+		  	template: 'multiplyFractionsEvaluate' 
 		 	}
 		];
 		

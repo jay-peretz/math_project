@@ -35,3 +35,7 @@ div .fraction .control-group {
 	height:1em;
 	padding-top:1em;
 }
+.fraction ms-exponent {
+	padding-top: 6px;
+	padding-bottom: 4px;
+}
