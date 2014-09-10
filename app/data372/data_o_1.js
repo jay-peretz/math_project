@@ -2123,8 +2123,23 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 			template: 'evaluateFractionBase' 
 			}
         ];
-
-	return dataUtils.build(desc, template, data);
+		/*shuffle = [
+				{ problems: [1,2], total: 1},
+				{ problems: [3,4], total: 1},
+				{ problems: [5,6], total: 1},
+				{ problems: [7,8], total: 1},
+				{ problems: [9,10], total: 1},
+				{ problems: [11,12], total: 1},
+				{ problems: [13,14], total: 1},
+				{ problems: [15,16], total: 1},
+				{ problems: [17,18], total: 1},
+				{ problems: [19,20], total: 1},
+				{ problems: [21,22], total: 1},
+				{ problems: [23,24], total: 1}
+		];*/
+		return dataUtils.build(desc, template, data);
+    
+    	//return dataUtils.build(desc, template, data, shuffle);
 }]);
 
 
