@@ -421,13 +421,13 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 			{ // problem 17
 			problemStatement: dataUtils.pre(
 											'{\\grp'
-												+'{\\exp{\\str{-10}}{\\str{2}}}'
+												+'{\\exp{\\str{(-10 )}}{\\str{2}}}'
 												+'{\\str{/&nbsp; 4&nbsp; - &nbsp; 5 &nbsp; * &nbsp; 7}}'
 											+'}'
 								),
 			answer: '-10',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\btn{- 10 <sup>2</sup>}{T}{large}}{\\btn{/}{F}{bigger}}{\\html{<span class=large>4</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=large>5</span>}}{\\btn{*}{F}{large}}{\\html{<span class=large>7</span>}},' +
+						'\\grp{\\btn{( - 10 ) <sup>2</sup>}{T}{large}}{\\btn{/}{F}{bigger}}{\\html{<span class=large>4</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=large>5</span>}}{\\btn{*}{F}{large}}{\\html{<span class=large>7</span>}},' +
                         '\\input{-100},' +
                         '\\grp{\\html{<span class=large>100</span>}}{\\btn{/}{T}{bigger}}{\\html{<span class=large>4</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=large>5</span>}}{\\btn{*}{F}{large}}{\\html{<span class=large>7</span>}},' +
                         '\\input{25},' +
@@ -472,14 +472,14 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 								),
 			answer: '-33',
 			wb: dataUtils.pre('\\ordopssimple{' +
-						'\\grp{\\btn{- ( - 5 ) <sup>2</sup>}{T}{large}}{\\btn{-}{F}{bigger}}{\\btn{2 <sup>3</sup>}{F}{large}},' +
-                        '\\input{-25},' +
-                        '\\grp{\\html{<span class=bigger>-</span> <span class=large>25</span>}}{\\btn{-}{F}{bigger}}{\\btn{2 <sup>3</sup>}{T}{large}},' +
+						'\\grp{\\str{-}}{\\btn{( - 5 ) <sup>2</sup>}{T}{large}}{\\btn{-}{F}{bigger}}{\\btn{2 <sup>3</sup>}{F}{large}},' +
+                        '\\input{25},' +
+                        '\\grp{\\str{-}}{\\html{<span class=large>25</span>}}{\\btn{-}{F}{bigger}}{\\btn{2 <sup>3</sup>}{T}{large}},' +
                         '\\input{8},' +
 						'\\grp{\\html{<span class=bigger>-</span> <span class=large>25</span>}}{\\btn{-}{T}{bigger}}{\\html{<span class=large>8</span>}},' +
 						'\\input{-33},' +
 						'\\sign{-33}' +
-                    '}{terms}{evaluate&nbsp; - ( -5 ) <sup>2</sup>}{evaluate&nbsp; 2<sup>3</sup>}{-25 - 8}'),
+                    '}{terms}{evaluate&nbsp; ( -5 ) <sup>2</sup>}{evaluate&nbsp; 2<sup>3</sup>}{-25 - 8}'),
 			template: 'evaluate' 
 			}
 			,
