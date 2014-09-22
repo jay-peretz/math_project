@@ -43,7 +43,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 					children: [{
 						problem: '$problemStatement',
 						answer: '\\rowgrp'
-									+'{\\str{Use parentheses as a part of your answer <u>if</u> necessary.}}'
+									+'{\\str{$problemInstructions}}'
 									+'{\\html{&nbsp;}}'
 									+'{$solutionAnswer}',		
 						controls: {
@@ -594,8 +594,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	line2:'2<sup>4</sup> * 2 &nbsp;means&nbsp; 2<sup>4 + 1</sup> or 2<sup>5</sup>',
 		  	line3: '3<sup>5</sup> * 3<sup>2</sup> &nbsp;means&nbsp; 3<sup>5 + 2</sup> or 3<sup>7</sup>',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;2<sup>5</sup> * 3<sup>7</sup>',
-		  	template: 'multiplicationDiffBase' 
-		 	}
+		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+            template: 'multiplicationDiffBase'
+            }
 			,
 		 	// prob 14
 		 	{
@@ -633,8 +634,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	line2:'3 * 3<sup>3</sup> &nbsp;means&nbsp; 3<sup>1 + 3</sup> or 3<sup>4</sup>',
 		  	line3: '7<sup>3</sup> * 7<sup>2</sup> &nbsp;means&nbsp; 7<sup>3 + 2</sup> or 7<sup>5</sup>',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;3<sup>4</sup> * 7<sup>5</sup>',
-		  	template: 'multiplicationDiffBase' 
-		 	}
+		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+            template: 'multiplicationDiffBase'
+            }
 			,
 		 	// prob 15
 		 	{
@@ -661,9 +663,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 			exp4: '5',
 			solutionAnswer: dataUtils.pre(
 								'\\grp'
-									+'{\\exp{\\input{[$$firstAnsBase,$$secondAnsBase]}}{\\input{[$$firstAnsExp,$$secondAnsExp]}}}'
+									+'{\\input{[$$firstAnsBase,$$secondAnsBase]}}'
 									+'{\\str{*}}'
-									+'{\\exp{\\input{[$$secondAnsBase,$$firstAnsBase]}}{\\input{[$$secondAnsExp,$$firstAnsExp]}}}'
+									+'{\\input{[$$secondAnsBase,$$firstAnsBase]}}'
 						),
 		  	firstAnsBase: '11',
 			secondAnsBase: '5',
@@ -671,8 +673,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	line2:'11<sup>3</sup> * 11<sup>-2</sup> &nbsp;means&nbsp; 11<sup>3 + (-2)</sup> &nbsp;or&nbsp; 11<sup>1</sup> = 11',
 		  	line3: '5<sup>-4</sup> * 5<sup>5</sup> &nbsp;means&nbsp; 5<sup>(-4) + 5</sup> &nbsp;or&nbsp; 5<sup>1</sup> = 5',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;11 * 5',
-		  	template: 'multiplicationDiffBase' 
-		 	}
+		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+            template: 'multiplicationDiffBase'
+            }
 			,
 		 	// prob 16
 		 	{
@@ -711,8 +714,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	line2:'2<sup>6</sup> * 2<sup>-3</sup> &nbsp;means&nbsp; 2<sup>6 + (-3)</sup> &nbsp;or&nbsp; 2<sup>3</sup>',
 		  	line3: '13<sup>-2</sup> * 13<sup>3</sup> &nbsp;means&nbsp; 13<sup>(-2) + 3</sup> &nbsp;or&nbsp; 13<sup>1</sup> = 13',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;2<sup>3</sup> * 13',
-		  	template: 'multiplicationDiffBase' 
-		 	}
+		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+            template: 'multiplicationDiffBase'
+            }
 			,
 		 	// prob 17
 		 	{
@@ -747,8 +751,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	line2:'The only value with a base of 3 is 3<sup>5</sup>.&nbsp; This will stay the same.',
 		  	line3: '8<sup>-2</sup> * 8<sup>4</sup> &nbsp;means&nbsp; 8<sup>(-2) + 4</sup> &nbsp;or&nbsp; 8<sup>2</sup>',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;3<sup>5</sup> * 8<sup>2</sup>',
-		  	template: 'multiplicationDiffBase' 
-		 	}
+		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+            template: 'multiplicationDiffBase'
+            }
 			,
 		 	// prob 18
 		 	{
@@ -783,8 +788,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	line2:'The only value with a base of 4 is 4<sup>5</sup>.&nbsp; This will stay the same.',
 		  	line3: '5<sup>3</sup> * 5<sup>-2</sup> &nbsp;means&nbsp; 5<sup>3 + (-2)</sup> &nbsp;or&nbsp; 5<sup>1</sup> = 5',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;4<sup>5</sup> * 5',
-		  	template: 'multiplicationDiffBase' 
-		 	}
+		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+            template: 'multiplicationDiffBase'
+            }
 			,
 		 	// prob 19
 		 	{
@@ -817,9 +823,11 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 			exp5: '3',
 			solutionAnswer: dataUtils.pre(
 								'\\grp'
-									+'{\\exp{\\input{[$$firstAnsBase,$$secondAnsBase]}}{\\input{[$$firstAnsExp,$$secondAnsExp]}}}'
+									+'{\\exp{\\input{$$firstAnsBase}}{\\input{$$firstAnsExp}}}'
 									+'{\\str{*}}'
-									+'{\\exp{\\input{[$$secondAnsBase,$$firstAnsBase]}}{\\input{[$$secondAnsExp,$$firstAnsExp]}}}'
+									+'{\\exp{\\input{$$secondAnsBase}}{\\input{$$secondAnsExp}}}'
+									+'{\\str{*}}'
+									+'{\\exp{\\input{$$thirdAnsBase}}{\\input{$$thirdAnsExp}}}'
 						),
 		  	firstAnsBase: '2',
 			firstAnsExp: '2',
@@ -833,8 +841,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 					+'<br><br>'
 					+'The only value with a base of 7 is 7<sup>3</sup>.&nbsp; This will stay the same.',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;2<sup>2</sup> * (-3)<sup>8</sup> * 7<sup>3</sup>',
-		  	template: 'multiplicationDiffBase' 
-		 	}
+		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+            template: 'multiplicationDiffBase'
+            }
 			,
 		 	// prob 20
 		 	{
@@ -885,8 +894,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 					+'<br><br>'
 					+'(-9)<sup>-3</sup> * (-9)<sup>7</sup> &nbsp;means&nbsp; (-9)<sup>-3 + 7</sup> &nbsp;or&nbsp; (-9)<sup>4</sup>',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;2<sup>3</sup> * 5 * (-9)<sup>4</sup>',
-		  	template: 'multiplicationDiffBase' 
-		 	}
+		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+            template: 'multiplicationDiffBase'
+            }
 			,
 		 	// prob 21
 		 	{
@@ -918,8 +928,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	line2:'a<sup>5</sup> * a<sup>-2</sup> * a<sup>3</sup> &nbsp;means&nbsp; a<sup>5 + (-2) + 3</sup> &nbsp;or&nbsp; a<sup>6</sup>',
 		  	line3: '',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;a<sup>6</sup>',
-		  	template: 'multiplicationDiffBase' 
-		 	}
+		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+            template: 'multiplicationDiffBase'
+            }
 			,
 		 	// prob 22
 		 	{
@@ -951,8 +962,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	line2:'b<sup>4</sup> * b<sup>-6</sup> * b<sup>5</sup> &nbsp;means&nbsp; b<sup>4 + (-6) + 5</sup> &nbsp;or&nbsp; b<sup>3</sup>',
 		  	line3: '',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;b<sup>3</sup>',
-		  	template: 'multiplicationDiffBase' 
-		 	}
+		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+            template: 'multiplicationDiffBase'
+            }
 			,
 		 	// prob 23
 		 	{
@@ -1004,8 +1016,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 					+'y<sup>4</sup> * y<sup>2</sup> &nbsp;means&nbsp; y<sup>4 + 2</sup> &nbsp;or&nbsp; y<sup>6</sup>',
 			line3:'The only value with a base of z is z<sup>2</sup>.&nbsp; This will stay the same.',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;x<sup>2</sup> * y<sup>6</sup> * z<sup>2</sup>',
-		  	template: 'multiplicationDiffBase' 
-		 	}
+		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+            template: 'multiplicationDiffBase'
+            }
 			,
 		 	// prob 24
 		 	{
@@ -1056,8 +1069,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 					+'<br><br>'
 					+'o<sup>-3</sup> * o<sup>4</sup> &nbsp;means&nbsp; o<sup>(-3) + 4</sup> &nbsp;or&nbsp; o<sup>1</sup> = o',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;m<sup>2</sup> * n<sup>4</sup> * o',
-		  	template: 'multiplicationDiffBase' 
-		 	}
+		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+            template: 'multiplicationDiffBase'
+            }
 			,
 		 	// prob 25
 		 	{
