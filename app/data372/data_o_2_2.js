@@ -257,7 +257,7 @@ angular.module('mathSkills').service('data_o_2_2', ['dataUtils', function (dataU
 			solutionAnswer: dataUtils.pre(
 							'\\rowgrp'
 								+'{\\str{$$answerInstructions}}'
-								+'{\\exp{\\input{$baseans}}{\\input{$expans}}'
+								+'{\\exp{\\input{$$baseans}}{\\input{$$expans}}'
 						),
 			firstBaseExpand: '4 * 4 * 4 * 4 * 4',
 			secondBaseExpand: '4 * 4 * 4',
@@ -319,7 +319,7 @@ angular.module('mathSkills').service('data_o_2_2', ['dataUtils', function (dataU
 			solutionAnswer: dataUtils.pre(
 							'\\rowgrp'
 								+'{\\str{$$answerInstructions}}'
-								+'{\\exp{\\input{$baseans}}{\\input{$expans}}'
+								+'{\\exp{\\input{$$baseans}}{\\input{$$expans}}'
 						),
 			firstBaseExpand: '7 * 7 * 7 * 7',
 			secondBaseExpand: '7 * 7',
@@ -380,7 +380,7 @@ angular.module('mathSkills').service('data_o_2_2', ['dataUtils', function (dataU
 			solutionAnswer: dataUtils.pre(
 							'\\rowgrp'
 								+'{\\str{$$answerInstructions}}'
-								+'{\\exp{\\input{$baseans}}{\\input{$expans}}'
+								+'{\\exp{\\input{$$baseans}}{\\input{$$expans}}'
 						),
 			firstBaseExpand: '5 * 5 * 5 * 5',
 			secondBaseExpand: '5',
@@ -441,7 +441,7 @@ angular.module('mathSkills').service('data_o_2_2', ['dataUtils', function (dataU
 			solutionAnswer: dataUtils.pre(
 							'\\rowgrp'
 								+'{\\str{$$answerInstructions}}'
-								+'{\\exp{\\input{$baseans}}{\\input{$expans}}'
+								+'{\\exp{\\input{$$baseans}}{\\input{$$expans}}'
 						),
 			firstBaseExpand: '6 * 6 * 6',
 			secondBaseExpand: '6',
@@ -498,12 +498,12 @@ angular.module('mathSkills').service('data_o_2_2', ['dataUtils', function (dataU
 		 	exp1: '5',
 		  	base2: '(-2 )',
 		  	exp2: '2',
-		  	baseans: '(-2 )',
+		  	baseans: '(-2)',
 		  	expans: '3',
 			solutionAnswer: dataUtils.pre(
 							'\\rowgrp'
 								+'{\\str{$$answerInstructions}}'
-								+'{\\exp{\\input{$baseans}}{\\input{$expans}}'
+								+'{\\exp{\\input{$$baseans}}{\\input{$$expans}}'
 						),
 		  	line1: dataUtils.pre(
 							'\\str{'
@@ -543,12 +543,11 @@ angular.module('mathSkills').service('data_o_2_2', ['dataUtils', function (dataU
 		 	exp1: '3',
 		  	base2: '(-3 )',
 		  	exp2: '2',
-			baseans: '(-3 )',
 		  	solutionAnswer: dataUtils.pre(
 							'\\rowgrp'
 								+'{\\str{$$answerInstructions}}'
 								+'{\\grp'
-									+'{\\input{$baseans}}'
+									+'{\\input{["(-3)",-3]}}'
 								+'}'
 						),
 		  	line1: dataUtils.pre(
@@ -593,7 +592,7 @@ angular.module('mathSkills').service('data_o_2_2', ['dataUtils', function (dataU
 							'\\rowgrp'
 								+'{\\str{$$answerInstructions}}'
 								+'{\\grp'
-									+'{\\exp{\\input{$baseans}}{\\input{$expans}}}'
+									+'{\\exp{\\input{$$baseans}}{\\input{$$expans}}}'
 								+'}'
 						),
 		  	line1: dataUtils.pre(
@@ -637,7 +636,7 @@ angular.module('mathSkills').service('data_o_2_2', ['dataUtils', function (dataU
 							'\\rowgrp'
 								+'{\\str{$$answerInstructions}}'
 								+'{\\grp'
-									+'{\\exp{\\input{$baseans}}{\\input{$expans}}}'
+									+'{\\exp{\\input{$$baseans}}{\\input{$$expans}}}'
 								+'}'
 						),
 		  	line1: dataUtils.pre(
@@ -676,13 +675,13 @@ angular.module('mathSkills').service('data_o_2_2', ['dataUtils', function (dataU
 		 	exp1: '4',
 		  	base2: '(-4 )',
 		  	exp2: '2',
-			baseans: '(-4 )',
+			baseans: '(-4)',
 		  	expans: '2',
 		  	solutionAnswer: dataUtils.pre(
 							'\\rowgrp'
 								+'{\\str{$$answerInstructions}}'
 								+'{\\grp'
-									+'{\\exp{\\input{$baseans}}{\\input{$expans}}'
+									+'{\\exp{\\input{$$baseans}}{\\input{$$expans}}'
 								+'}'
 						),
 		  	line1: dataUtils.pre(
@@ -721,13 +720,13 @@ angular.module('mathSkills').service('data_o_2_2', ['dataUtils', function (dataU
 		 	exp1: '6',
 		  	base2: '(-5 )',
 		  	exp2: '4',
-			baseans: '(-5 )',
+			baseans: '(-5)',
 		  	expans: '2',
 		  	solutionAnswer: dataUtils.pre(
 							'\\rowgrp'
 								+'{\\str{$$answerInstructions}}'
 								+'{\\grp'
-									+'{\\exp{\\input{$baseans}}{\\input{$expans}}'
+									+'{\\exp{\\input{$$baseans}}{\\input{$$expans}}'
 								+'}'
 						),
 		  	line1: dataUtils.pre(
