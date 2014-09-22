@@ -306,7 +306,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	exp2: '4',
 		  	baseans: '3',
 		  	expans: '5',
-		  	line1: 'In the expression of &nbsp;3 * 3<sup>4</sup>,&nbsp; the base of 3 has an exponent of 1 (every base has an exponent of 1 unless otherwise stated).&nbsp; So 3 is the same as 3<sup>1</sup>.&nbsp; 3<sup>4</sup> means 3 * 3 * 3 * 3.',
+		  	line1: 'In the expression of &nbsp;3 * 3<sup>4</sup>,&nbsp; the base of 3 has an exponent of 1 (every base has an exponent of 1 unless otherwise stated).&nbsp; So 3 is the same as 3<sup>1</sup>.<br>3<sup>4</sup> means 3 * 3 * 3 * 3.',
 		  	line2:'In fact, 3 * 3<sup>4</sup> means (3) * (3 * 3 * 3 * 3)  = 3<sup>5</sup>',
 		  	line3: 'To simplify this quickly, we use the exponent rule \\"Multiplication of Same Bases\\" here. When we multiply same bases, we <u>add the exponents</u>.<br><br>'
 		  		+'3 * 3<sup>4</sup> &nbsp;means&nbsp; 3<sup>1 + 4</sup>  = 3<sup>5</sup>',
@@ -331,7 +331,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	exp2: '2',
 		  	baseans: '7',
 		  	expans: '3',
-		  	line1: 'In the expression of &nbsp;7 * 7<sup>2</sup>,&nbsp; the base of 7 has an exponent of 1 (every base has an exponent of 1 unless otherwise stated).&nbsp; So 7 is the same as 7<sup>1</sup>.&nbsp; 7<sup>2</sup> means 7 * 7.',
+		  	line1: 'In the expression of &nbsp;7 * 7<sup>2</sup>,&nbsp; the base of 7 has an exponent of 1 (every base has an exponent of 1 unless otherwise stated).&nbsp; So 7 is the same as 7<sup>1</sup>.<br>7<sup>2</sup> means 7 * 7.',
 		  	line2:'In fact, 7 * 7<sup>2</sup> means (7) * (7 * 7)  = 7<sup>3</sup>',
 		  	line3: 'To simplify this quickly, we use the exponent rule \\"Multiplication of Same Bases\\" here. When we multiply same bases, we <u>add the exponents</u>.<br><br>'
 		  		+'7 * 7<sup>2</sup> &nbsp;means&nbsp; 7<sup>1 + 2</sup>  = 7<sup>3</sup>',
@@ -582,11 +582,10 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 			exp4: '2',
 			solutionAnswer: dataUtils.pre(
 								'\\grp'
-									+'{\\exp{\\input{$$firstAnsBase}}{\\input{$$firstAnsExp}}}'
+									+'{\\exp{\\input{[$$firstAnsBase,$$secondAnsBase]}}{\\input{[$$firstAnsExp,$$secondAnsExp]}}}'
 									+'{\\str{*}}'
-									+'{\\exp{\\input{$$secondAnsBase}}{\\input{$$secondAnsExp}}}'
+									+'{\\exp{\\input{[$$secondAnsBase,$$firstAnsBase]}}{\\input{[$$secondAnsExp,$$firstAnsExp]}}}'
 						),
-			
 		  	firstAnsBase: '2',
 			firstAnsExp: '5',
 			secondAnsBase: '3',
@@ -622,11 +621,10 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 			exp4: '2',
 			solutionAnswer: dataUtils.pre(
 								'\\grp'
-									+'{\\exp{\\input{$$firstAnsBase}}{\\input{$$firstAnsExp}}}'
+									+'{\\exp{\\input{[$$firstAnsBase,$$secondAnsBase]}}{\\input{[$$firstAnsExp,$$secondAnsExp]}}}'
 									+'{\\str{*}}'
-									+'{\\exp{\\input{$$secondAnsBase}}{\\input{$$secondAnsExp}}}'
+									+'{\\exp{\\input{[$$secondAnsBase,$$firstAnsBase]}}{\\input{[$$secondAnsExp,$$firstAnsExp]}}}'
 						),
-			
 		  	firstAnsBase: '3',
 			firstAnsExp: '4',
 			secondAnsBase: '7',
@@ -663,11 +661,10 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 			exp4: '5',
 			solutionAnswer: dataUtils.pre(
 								'\\grp'
-									+'{\\input{$$firstAnsBase}}'
+									+'{\\exp{\\input{[$$firstAnsBase,$$secondAnsBase]}}{\\input{[$$firstAnsExp,$$secondAnsExp]}}}'
 									+'{\\str{*}}'
-									+'{\\input{$$secondAnsBase}}'
+									+'{\\exp{\\input{[$$secondAnsBase,$$firstAnsBase]}}{\\input{[$$secondAnsExp,$$firstAnsExp]}}}'
 						),
-			
 		  	firstAnsBase: '11',
 			secondAnsBase: '5',
 		  	line1: 'To simplify this quickly, we use the exponent rule \\"Multiplication of Same Bases\\" here. When we multiply same bases, we <u>add the exponents</u>.',
@@ -738,11 +735,10 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 			exp3: '4',
 			solutionAnswer: dataUtils.pre(
 								'\\grp'
-									+'{\\exp{\\input{$$firstAnsBase}}{\\input{$$firstAnsExp}}}'
+									+'{\\exp{\\input{[$$firstAnsBase,$$secondAnsBase]}}{\\input{[$$firstAnsExp,$$secondAnsExp]}}}'
 									+'{\\str{*}}'
-									+'{\\exp{\\input{$$secondAnsBase}}{\\input{$$secondAnsExp}}}'
+									+'{\\exp{\\input{[$$secondAnsBase,$$firstAnsBase]}}{\\input{[$$secondAnsExp,$$firstAnsExp]}}}'
 						),
-			
 		  	firstAnsBase: '3',
 			firstAnsExp: '5',
 			secondAnsBase: '8',
@@ -821,13 +817,10 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 			exp5: '3',
 			solutionAnswer: dataUtils.pre(
 								'\\grp'
-									+'{\\exp{\\input{$$firstAnsBase}}{\\input{$$firstAnsExp}}}'
+									+'{\\exp{\\input{[$$firstAnsBase,$$secondAnsBase]}}{\\input{[$$firstAnsExp,$$secondAnsExp]}}}'
 									+'{\\str{*}}'
-									+'{\\exp{\\input{$$secondAnsBase}}{\\input{$$secondAnsExp}}}'
-									+'{\\str{*}}'
-									+'{\\exp{\\input{$$thirdAnsBase}}{\\input{$$thirdAnsExp}}}'
+									+'{\\exp{\\input{[$$secondAnsBase,$$firstAnsBase]}}{\\input{[$$secondAnsExp,$$firstAnsExp]}}}'
 						),
-			
 		  	firstAnsBase: '2',
 			firstAnsExp: '2',
 			secondAnsBase: '(-3)',
@@ -874,17 +867,17 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 			exp5: '7',
 			solutionAnswer: dataUtils.pre(
 								'\\grp'
-									+'{\\exp{\\input{$$firstAnsBase}}{\\input{$$firstAnsExp}}}'
+									+'{\\exp{\\input{[$$firstAnsBase,$$thirdAnsBase]}}{\\input{[$$firstAnsExp,$$thirdAnsExp]}}}'
 									+'{\\str{*}}'
 									+'{\\input{$$secondAnsBase}}'
 									+'{\\str{*}}'
-									+'{\\exp{\\input{$$thirdAnsBase}}{\\input{$$thirdAnsExp}}}'
+									+'{\\exp{\\input{[$$thirdAnsBase,$$firstAnsBase]}}{\\input{[$$thirdAnsExp,$$firstAnsExp]}}}'
 						),
 			
 		  	firstAnsBase: '2',
 			firstAnsExp: '3',
 			secondAnsBase: '5',
-			thirdAnsBase: '(-9)',
+			thirdAnsBase: '"(-9)"',
 			thirdAnsExp: '4',
 		  	line1: 'To simplify this quickly, we use the exponent rule \\"Multiplication of Same Bases\\" here. When we multiply same bases, we <u>add the exponents</u>.',
 		  	line2:'The only value with a base of 2 is 2<sup>3</sup>.&nbsp; This will stay the same.',
