@@ -179,6 +179,9 @@ div.fakeButton {
 .marginLeft80px {
 	margin-left:80px;
 }
+sup, sub {
+	font-weight:700;
+}
 /*zero out padding and margin...used in ms-group*/
 .zero td{
     margin: 0;
