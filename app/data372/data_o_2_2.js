@@ -34,36 +34,6 @@ angular.module('mathSkills').service('data_o_2_2', ['dataUtils', function (dataU
 					}]
                 }]
             },
-			divisionDiffBase: {
-                title: 'Simplifying Exponential Expressions: Division with Same Bases',
-				children: [{
-					title: 'Main Answer',
-					children: [{
-						problem: '$problemStatement',
-						answer: '\\rowgrp'
-									+'{\\str{Use parentheses as a part of your answer <u>if</u> necessary.}}'
-									+'{\\html{&nbsp;}}'
-									+'{$solutionAnswer}',		
-						controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{&nbsp;}}'
-										+'{\\str{$line1}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\str{$line2}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\str{$line3}}'
-										+'{\\css'
-											+'{\\grp'
-												+'{\\str{$helpAnswer}}'
-											+'}'
-											+'{help-answer-text}'
-										+'}'
-										+'{\\html{&nbsp;}}'
-						}
-					}]
-                }]
-            },
 			divideEvaluate: {
                 title: 'Simplifying Exponential Expressions: Division with Same Bases',
 				children: [{
@@ -93,122 +63,6 @@ angular.module('mathSkills').service('data_o_2_2', ['dataUtils', function (dataU
 						{
 						problem: '$problemStatement',
 						answer: '$wellProblemStatement',	
-						controls: {
-                            "checkAnswer": true,
-                            "help": true
-						}
-					}]
-                }]
-            },
-			divideEvaluate2ndHelp: {
-                title: 'Simplifying Exponential Expressions: Division with Same Bases',
-				children: [{
-					title: 'Main Answer',
-					children: [{
-						problem: '$problemStatement',
-						answer: '\\rowgrp'
-									+'{\\str{Use parentheses as a part of your answer <u>if</u> necessary.}}'
-									+'{\\html{&nbsp;}}'
-									+'{$solutionAnswer}',		
-						controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{&nbsp;}}'
-										+'{\\str{$line1}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\str{$line2}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\str{$line3}}'
-										+'{\\css'
-											+'{\\grp'
-												+'{\\str{$helpAnswer}}'
-											+'}'
-											+'{help-answer-text}'
-										+'}'
-										+'{\\html{&nbsp;}}'
-								}
-						}
-						,
-						{
-						problem: '$problemStatement',
-						answer: '\\css'
-									+'{\\rowgrp'
-										+'{\\html{&nbsp;}}'
-										+'$noPanProbStatement'
-										+'{\\html{&nbsp;}}'
-										+'{\\css'
-											+'{\\grp'
-												+'{\\str{Evaluate the simplified expression<span class=large>:</span>}}'
-											+'}'
-											+'{alert alert-info}'
-										+'}'
-										+'{\\grp'
-											+'{\\input{$finalAnswer}}'
-										+'}'
-									+'}{well}',	
-						controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{&nbsp;}}'
-										+'{\\str{$secondHelpLine1}}'
-										+'{\\css'
-											+'{\\grp'
-												+'{\\str{$secondHelpAnswer}}'
-											+'}'
-											+'{help-answer-text}'
-										+'}'
-										+'{\\html{&nbsp;}}'
-						}
-					}]
-                }]
-            }
-			,
-			divideFractionsEvaluate: {
-                title: 'Simplifying Exponential Expressions: Division with Same Bases',
-				children: [{
-					title: 'Main Answer',
-					children: [{
-						problem: '$problemStatement',
-						answer: '\\rowgrp'
-									+'{\\str{Use parentheses as a part of your answer <u>if</u> necessary.}}'
-									+'{\\html{&nbsp;}}'
-									+'{$solutionAnswer}',		
-						controls: {
-                            "checkAnswer": true,
-                            "help": '\\rowgrp'
-										+'{\\html{&nbsp;}}'
-										+'{\\str{$line1}}'
-										+'{\\html{&nbsp;}}'
-										+'{$line2}'
-										+'{\\html{&nbsp;}}'
-										+'{\\css'
-											+'{\\grp'
-												+'{\\str{Simplified Answer: &nbsp;}}'
-												+'{$stringAnswer}'
-											+'}'
-											+'{help-answer-text}'
-										+'}'
-										+'{\\html{&nbsp;}}'
-								}
-						}
-						,
-						{
-						problem: '$problemStatement',
-						answer: '\\css'
-									+'{\\rowgrp'
-										+'{\\html{&nbsp;}}'
-										+'$noPanProbStatement'
-										+'{\\html{&nbsp;}}'
-										+'{\\css'
-											+'{\\grp'
-												+'{\\str{Evaluate the simplified expression<span class=large>:</span>}}'
-											+'}'
-											+'{alert alert-info}'
-										+'}'
-										+'{\\grp'
-											+'{$finalAnswer}'
-										+'}'
-									+'}{well}',	
 						controls: {
                             "checkAnswer": true,
                             "help": true
@@ -1817,7 +1671,350 @@ angular.module('mathSkills').service('data_o_2_2', ['dataUtils', function (dataU
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;$$base1 <sup>$$firstExpAns</sup> * $$base2 <sup>$$secondExpAns</sup>',
 		  	template: 'divisionSimplification' 
 		 }
-		
+		  ,
+		 // prob 27
+		 {
+		 	problemStatement: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\grp'
+									+'{\\str{Simplify: &nbsp;}}'
+									+'{\\frac'
+										+'{\\grp'
+											+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp1}}}'
+											+'{\\str{*}}'
+											+'{\\exp{\\str{$$base2}}{\\str{$$exp2}}}'
+										+'}'
+										+'{\\grp'
+											+'{\\str{&nbsp;&nbsp;$$base1}}'
+											+'{\\str{*}}'
+											+'{\\exp{\\str{$$base2}}{\\str{$$exp4}}}'
+										+'}'
+									+'}'
+								+'}'
+						),
+		  	answerInstructions: '',
+		 	base1: '2',
+			base2: '3',
+		 	exp1: '5',
+		  	exp2: '2',
+			exp3: '',
+		  	exp4: '-3',
+			exp5: '1',
+			firstExpAns: '4',
+			secondExpAns: '5',
+			solutionAnswer: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\str{$$answerInstructions}}'
+								+'{\\grp'
+									+'{\\exp{\\input{$$base1}}{\\input{$$firstExpAns}}}'
+									+'{\\str{*}}'
+									+'{\\exp{\\input{$$base2}}{\\input{$$secondExpAns}}}'
+								+'}'
+						),
+		  	line1: dataUtils.pre(
+								 '\\str{'
+										+'To simplify this quickly, we use the exponent rule \"Division of Same Bases\" '
+										+'here. When we divide same bases, we <u>subtract the exponents</u>.'
+									+'}'
+						),
+		  	line2: 'Here we have two different bases, bases of $$base1 and bases of $$base2. Simplify each \\"same base\\" separately.',
+		  	line3: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\grp'
+									+'{\\frac'
+										+'{\\exp{\\str{&nbsp;&nbsp;$$base1}}{\\str{$$exp1}}}'
+										+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp3}}}'
+									+'}'
+									+'{\\str{&nbsp;means&nbsp; $$base1 <sup>$$exp1 - $$exp5</sup> &nbsp; or &nbsp; $$base1 <sup>$$firstExpAns</sup>}}'
+								+'}'
+								+'{\\str{&nbsp;}}'
+								+'{\\grp'
+									+'{\\frac'
+										+'{\\exp{\\str{&nbsp;$$base2}}{\\str{$$exp2}}}'
+										+'{\\exp{\\str{&nbsp;$$base2}}{\\str{$$exp4}}}'
+									+'}'
+									+'{\\str{&nbsp; means &nbsp; $$base2<sup>&nbsp;$$exp2 - ( $$exp4 )</sup> &nbsp;or&nbsp; $$base2<sup>&nbsp;$$secondExpAns</sup>}}'
+								+'}'
+						),
+		  	helpAnswer: '<br>Simplified Answer: &nbsp;$$base1 <sup>$$firstExpAns</sup> * $$base2 <sup>$$secondExpAns</sup>',
+		  	template: 'divisionSimplification' 
+		 }	
+		  ,
+		 // prob 28
+		 {
+		 	problemStatement: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\grp'
+									+'{\\str{Simplify: &nbsp;}}'
+									+'{\\frac'
+										+'{\\grp'
+											+'{\\str{&nbsp;&nbsp;$$base1}}'
+											+'{\\str{*}}'
+											+'{\\exp{\\str{$$base2}}{\\str{$$exp2}}}'
+										+'}'
+										+'{\\grp'
+											+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp3}}}'
+											+'{\\str{*}}'
+											+'{\\exp{\\str{$$base2}}{\\str{$$exp4}}}'
+										+'}'
+									+'}'
+								+'}'
+						),
+		  	answerInstructions: '',
+		 	base1: '8',
+			base2: '13',
+		 	exp1: '',
+		  	exp2: '4',
+			exp3: '-2',
+		  	exp4: '2',
+			exp5: '1',
+			firstExpAns: '3',
+			secondExpAns: '2',
+			solutionAnswer: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\str{$$answerInstructions}}'
+								+'{\\grp'
+									+'{\\exp{\\input{$$base1}}{\\input{$$firstExpAns}}}'
+									+'{\\str{*}}'
+									+'{\\exp{\\input{$$base2}}{\\input{$$secondExpAns}}}'
+								+'}'
+						),
+		  	line1: dataUtils.pre(
+								 '\\str{'
+										+'To simplify this quickly, we use the exponent rule \"Division of Same Bases\" '
+										+'here. When we divide same bases, we <u>subtract the exponents</u>.'
+									+'}'
+						),
+		  	line2: 'Here we have two different bases, bases of $$base1 and bases of $$base2. Simplify each \\"same base\\" separately.',
+		  	line3: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\grp'
+									+'{\\frac'
+										+'{\\exp{\\str{&nbsp;&nbsp;$$base1}}{\\str{$$exp1}}}'
+										+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp3}}}'
+									+'}'
+									+'{\\str{&nbsp;means&nbsp; $$base1 <sup>$$exp5 - ( $$exp3 )</sup> &nbsp; or &nbsp; $$base1 <sup>$$firstExpAns</sup>}}'
+								+'}'
+								+'{\\str{&nbsp;}}'
+								+'{\\grp'
+									+'{\\frac'
+										+'{\\exp{\\str{&nbsp;$$base2}}{\\str{$$exp2}}}'
+										+'{\\exp{\\str{&nbsp;$$base2}}{\\str{$$exp4}}}'
+									+'}'
+									+'{\\str{&nbsp; means &nbsp; $$base2<sup>&nbsp;$$exp2 - $$exp4</sup> &nbsp;or&nbsp; $$base2<sup>&nbsp;$$secondExpAns</sup>}}'
+								+'}'
+						),
+		  	helpAnswer: '<br>Simplified Answer: &nbsp;$$base1 <sup>$$firstExpAns</sup> * $$base2 <sup>$$secondExpAns</sup>',
+		  	template: 'divisionSimplification' 
+		 }	
+		 ,
+		 // prob 29
+		 {
+		 	problemStatement: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\grp'
+									+'{\\str{Simplify: &nbsp;}}'
+									+'{\\frac'
+										+'{\\grp'
+											+'{\\exp{\\str{&nbsp;&nbsp;$$base1}}{\\str{$$exp1}}}'
+											+'{\\str{*}}'
+											+'{\\exp{\\str{$$base2}}{\\str{$$exp2}}}'
+										+'}'
+										+'{\\grp'
+											+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp3}}}'
+											+'{\\str{*}}'
+											+'{\\str{$$base2}}'
+										+'}'
+									+'}'
+								+'}'
+						),
+			wellProblemStatement: dataUtils.pre(
+								'\\css'
+									+'{\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\exp{\\str{&nbsp;&nbsp;$$base1}}{\\str{$$exp1}}}'
+													+'{\\str{*}}'
+													+'{\\exp{\\str{$$base2}}{\\str{$$exp2}}}'
+												+'}'
+												+'{\\grp'
+													+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp3}}}'
+													+'{\\str{*}}'
+													+'{\\str{$$base2}}'
+												+'}'
+											+'}'
+											+'{\\str{=}}'
+											+'{\\str{&nbsp;&nbsp;}}'
+											+'{\\exp{\\str{$$base1}}{\\str{$$firstExpAns}}}'
+											+'{\\str{*}}'
+											+'{\\exp{\\str{$$base2}}{\\str{$$secondExpAns}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{Evaluate the simplified expression<span class=large>:</span>}}'
+											+'}'
+											+'{alert alert-info}'
+										+'}'
+										+'{\\grp'
+											+'{\\input{$finalAnswer}}'
+										+'}'
+									+'}{well}'
+						),
+		  	answerInstructions: 'Use parentheses as a part of your answer if necessary.<br><br>',
+		 	base1: '5',
+			base2: '7',
+		 	exp1: ' 2',
+		  	exp2: ' 3',
+			exp3: ' -2',
+		  	exp4: '',
+			exp5: '1',
+		  	firstExpAns: '4',
+			secondExpAns: '2',
+			solutionAnswer: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\str{$$answerInstructions}}'
+								+'{\\grp'
+									+'{\\exp{\\input{$$base1}}{\\input{$$firstExpAns}}}'
+									+'{\\str{*}}'
+									+'{\\exp{\\input{$$base2}}{\\input{$$secondExpAns}}}'
+								+'}'
+						),
+		  	line1: dataUtils.pre(
+								 '\\str{'
+										+'To simplify this quickly, we use the exponent rule \"Division of Same Bases\" '
+										+'here. When we divide same bases, we <u>subtract the exponents</u>.'
+									+'}'
+						),
+		  	line2: 'Here we have two different bases, bases of $$base1 and bases of $$base2. Simplify each \\"same base\\" separately.',
+		  	line3: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\grp'
+									+'{\\frac'
+										+'{\\exp{\\str{&nbsp;&nbsp;$$base1}}{\\str{$$exp1}}}'
+										+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp3}}}'
+									+'}'
+									+'{\\str{&nbsp;means&nbsp; $$base1 <sup>$$exp1 - ( $$exp3 )</sup> &nbsp; or &nbsp; $$base1 <sup>$$firstExpAns</sup>}}'
+								+'}'
+								+'{\\str{&nbsp;}}'
+								+'{\\grp'
+									+'{\\frac'
+										+'{\\exp{\\str{&nbsp;$$base2}}{\\str{$$exp2}}}'
+										+'{\\exp{\\str{&nbsp;$$base2}}{\\str{$$exp4}}}'
+									+'}'
+									+'{\\str{&nbsp; means &nbsp; $$base2<sup>&nbsp;$$exp2 - $$exp5</sup> &nbsp;or&nbsp; $$base2<sup>&nbsp;$$secondExpAns</sup>}}'
+								+'}'
+						),
+		  	helpAnswer: '<br>Simplified Answer: &nbsp;$$base1 <sup>$$firstExpAns</sup> * $$base2 <sup>$$secondExpAns</sup>',
+			finalAnswer: '30625',
+		  	template: 'divideEvaluate' 
+		 }
+		 ,
+		 // prob 30
+		 {
+		 	problemStatement: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\grp'
+									+'{\\str{Simplify: &nbsp;}}'
+									+'{\\frac'
+										+'{\\grp'
+											+'{\\exp{\\str{&nbsp;&nbsp;$$base1}}{\\str{$$exp1}}}'
+											+'{\\str{*}}'
+											+'{\\exp{\\str{$$base2}}{\\str{$$exp2}}}'
+										+'}'
+										+'{\\grp'
+											+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp3}}}'
+											+'{\\str{*}}'
+											+'{\\str{$$base2}}'
+										+'}'
+									+'}'
+								+'}'
+						),
+			wellProblemStatement: dataUtils.pre(
+								'\\css'
+									+'{\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\grp'
+													+'{\\exp{\\str{&nbsp;&nbsp;$$base1}}{\\str{$$exp1}}}'
+													+'{\\str{*}}'
+													+'{\\exp{\\str{$$base2}}{\\str{$$exp2}}}'
+												+'}'
+												+'{\\grp'
+													+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp3}}}'
+													+'{\\str{*}}'
+													+'{\\str{$$base2}}'
+												+'}'
+											+'}'
+											+'{\\str{=}}'
+											+'{\\str{&nbsp;&nbsp;}}'
+											+'{\\exp{\\str{$$base1}}{\\str{$$firstExpAns}}}'
+											+'{\\str{*}}'
+											+'{\\exp{\\str{$$base2}}{\\str{$$secondExpAns}}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{Evaluate the simplified expression<span class=large>:</span>}}'
+											+'}'
+											+'{alert alert-info}'
+										+'}'
+										+'{\\grp'
+											+'{\\input{$finalAnswer}}'
+										+'}'
+									+'}{well}'
+						),
+		  	answerInstructions: 'Use parentheses as a part of your answer if necessary.<br><br>',
+		 	base1: '3',
+			base2: '11',
+		 	exp1: ' 4',
+		  	exp2: ' 2',
+			exp3: ' -2',
+		  	exp4: '',
+			exp5: '1',
+		  	firstExpAns: '6',
+			secondExpAns: '',
+			solutionAnswer: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\str{$$answerInstructions}}'
+								+'{\\grp'
+									+'{\\exp{\\input{$$base1}}{\\input{$$firstExpAns}}}'
+									+'{\\str{*}}'
+									+'{\\exp{\\input{$$base2}}{\\input{$$secondExpAns}}}'
+								+'}'
+						),
+		  	line1: dataUtils.pre(
+								 '\\str{'
+										+'To simplify this quickly, we use the exponent rule \"Division of Same Bases\" '
+										+'here. When we divide same bases, we <u>subtract the exponents</u>.'
+									+'}'
+						),
+		  	line2: 'Here we have two different bases, bases of $$base1 and bases of $$base2. Simplify each \\"same base\\" separately.',
+		  	line3: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\grp'
+									+'{\\frac'
+										+'{\\exp{\\str{&nbsp;&nbsp;$$base1}}{\\str{$$exp1}}}'
+										+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp3}}}'
+									+'}'
+									+'{\\str{&nbsp;means&nbsp; $$base1 <sup>$$exp1 - ( $$exp3 )</sup> &nbsp; or &nbsp; $$base1 <sup>$$firstExpAns</sup>}}'
+								+'}'
+								+'{\\str{&nbsp;}}'
+								+'{\\grp'
+									+'{\\frac'
+										+'{\\exp{\\str{&nbsp;$$base2}}{\\str{$$exp2}}}'
+										+'{\\exp{\\str{&nbsp;$$base2}}{\\str{$$exp4}}}'
+									+'}'
+									+'{\\str{&nbsp; means &nbsp; $$base2<sup>&nbsp;$$exp2 - $$exp5</sup> &nbsp;or&nbsp; $$base2<sup>&nbsp;$$secondExpAns</sup>}}'
+								+'}'
+						),
+		  	helpAnswer: '<br>Simplified Answer: &nbsp;$$base1 <sup>$$firstExpAns</sup> * $$base2 <sup>$$secondExpAns</sup>',
+			finalAnswer: '8019',
+		  	template: 'divideEvaluate' 
+		 }
 		];
 		
 		/*shuffle = [
