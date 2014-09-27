@@ -383,7 +383,7 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 		  	expans: '6',
 		  	line1: 'To simplify this quickly, we use the exponent rule \\"Multiplication of Same Bases\\" here. When we multiply same bases, we <u>add the exponents</u>.',
 		  	line2:'In this problem, the \\"same base\\" is the -5, which must be put inside a parenthesis.',
-		  	line3: '(-5)<sup>5</sup> * (-5)<sup>1</sup> &nbsp;means&nbsp; (-5)<sup>5</sup> + (-5)<sup>1</sup>  = (-5)<sup>6</sup>',
+		  	line3: '(-5)<sup>5</sup> * (-5)<sup>1</sup> &nbsp;means&nbsp; (-5)<sup>5 + 1</sup>  = (-5)<sup>6</sup>',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;(-5)<sup>6</sup>',
 		  	template: 'multiplicationSameBase' 
 		  }
