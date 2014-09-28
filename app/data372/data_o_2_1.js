@@ -841,7 +841,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 					+'<br><br>'
 					+'The only value with a base of 7 is 7<sup>3</sup>.&nbsp; This will stay the same.',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;2<sup>2</sup> * (-3)<sup>8</sup> * 7<sup>3</sup>',
-		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+		  	problemInstructions: 'Write the bases in numerical order, from smallest to largest.'
+								+'<br>'
+								+'Use parentheses as a part of your answer <u>if</u> necessary.',
             template: 'multiplicationDiffBase'
             }
 			,
@@ -894,7 +896,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 					+'<br><br>'
 					+'(-9)<sup>-3</sup> * (-9)<sup>7</sup> &nbsp;means&nbsp; (-9)<sup>-3 + 7</sup> &nbsp;or&nbsp; (-9)<sup>4</sup>',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;2<sup>3</sup> * 5 * (-9)<sup>4</sup>',
-		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+		  	problemInstructions: 'Write the bases in numerical order, from smallest to largest.'
+								+'<br>'
+								+'Use parentheses as a part of your answer <u>if</u> necessary.',
             template: 'multiplicationDiffBase'
             }
 			,
@@ -1016,7 +1020,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 					+'y<sup>4</sup> * y<sup>2</sup> &nbsp;means&nbsp; y<sup>4 + 2</sup> &nbsp;or&nbsp; y<sup>6</sup>',
 			line3:'The only value with a base of z is z<sup>2</sup>.&nbsp; This will stay the same.',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;x<sup>2</sup> * y<sup>6</sup> * z<sup>2</sup>',
-		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+		  	problemInstructions: 'Write the bases in alphabetical order.'
+								+'<br>'
+								+'Use parentheses as a part of your answer <u>if</u> necessary.',
             template: 'multiplicationDiffBase'
             }
 			,
@@ -1069,7 +1075,9 @@ angular.module('mathSkills').service('data_o_2_1', ['dataUtils', function (dataU
 					+'<br><br>'
 					+'o<sup>-3</sup> * o<sup>4</sup> &nbsp;means&nbsp; o<sup>(-3) + 4</sup> &nbsp;or&nbsp; o<sup>1</sup> = o',
 		  	helpAnswer: '<br>Simplified Answer: &nbsp;m<sup>2</sup> * n<sup>4</sup> * o',
-		  	problemInstructions: 'Use parentheses as a part of your answer <u>if</u> necessary.',
+		  	problemInstructions: 'Write the bases in alphabetical order.'
+								+'<br>'
+								+'Use parentheses as a part of your answer <u>if</u> necessary.',
             template: 'multiplicationDiffBase'
             }
 			,
