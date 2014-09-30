@@ -1750,7 +1750,6 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 			ans: dataUtils.pre('\\frac{\\input{-1}}{\\input{8}}'),
 			firstFraction: '<table>'
 								+'<tr>'
-									+'<td rowspan="3" class=bigger>-</td>'
 									+'<td rowspan="3" class=hugeAndThin>(&nbsp;</td>'
 									+'<td>1</td>'
 									+'<td rowspan="3" class=hugeAndThin>&nbsp;)</td>'
@@ -1794,6 +1793,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 							+'</table>',
 			wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp'
+							+'{str{-}}'
 							+'{\\btn'
 								+'{$$firstFraction}'
 								+'{F}'
@@ -1823,6 +1823,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 							+'{\\str{]}},'
 							+'\\frac{\\input{1}}{\\input{9}},'
                        +'\\grp'
+					   		+'{str{-}}'
 							+'{\\btn'
 								+'{$$firstFraction}'
 								+'{F}'
@@ -1851,6 +1852,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 							+'{\\str{]}},'
 							+'\\frac{\\input{16}}{\\input{9}},'
 						+'\\grp'
+							+'{str{-}}'
 							+'{\\btn'
 								+'{$$firstFraction}'
 								+'{F}'
@@ -1878,6 +1880,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 							+'{\\str{]}},'
 							+'\\frac{\\input{1}}{\\input{16}},'
 						+'\\grp'
+							+'{str{-}}'
 							+'{\\btn'
 								+'{$$firstFraction}'
 								+'{T}'
@@ -1892,7 +1895,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 								+'{\\frac{\\fracstr{1}}{\\fracstr{16}}}'
 								+'{large}'
 							+'},'
-							+'\\frac{\\input{-1}}{\\input{16}},'
+							+'\\frac{\\input{1}}{\\input{16}},'
 						
 						+'\\grp'
 							+'{\\css'
@@ -2014,7 +2017,6 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 			ans: dataUtils.pre('\\frac{\\input{-73}}{\\input{12}}'),
 			firstFraction: '<table>'
 								+'<tr>'
-									+'<td rowspan="3" class=bigger>-</td>'
 									+'<td rowspan="3" class=hugeAndThin>(&nbsp;</td>'
 									+'<td>5</td>'
 									+'<td rowspan="3" class=hugeAndThin>&nbsp;)</td>'
@@ -2059,6 +2061,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 							+'</table>',
 			wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp'
+							+'{str{-}}'
 							+'{\\btn'
 								+'{$$firstFraction}'
 								+'{F}'
@@ -2088,6 +2091,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 							+'{\\str{]}},'
 							+'\\frac{\\input{4}}{\\input{81}},'
                        +'\\grp'
+					   		+'{str{-}}'
 							+'{\\btn'
 								+'{$$firstFraction}'
 								+'{F}'
@@ -2116,6 +2120,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 							+'{\\str{]}},'
 							+'\\frac{\\input{-27}}{\\input{8}},'
 						+'\\grp'
+							+'{str{-}}'
 							+'{\\btn'
 								+'{$$firstFraction}'
 								+'{F}'
@@ -2145,6 +2150,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 							+'{\\str{]}},'
 							+'\\frac{\\input{-1}}{\\input{6}},'
 						+'\\grp'
+							+'{str{-}}'
 							+'{\\btn'
 								+'{$$firstFraction}'
 								+'{T}'
@@ -2161,11 +2167,12 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 								+'{large}'
 							+'}'
 							+'{\\str{]}},'
-							+'\\frac{\\input{-25}}{\\input{4}},'
+							+'\\frac{\\input{25}}{\\input{4}},'
 						
 						+'\\grp'
+							+'{str{-}}'
 							+'{\\css'
-								+'{\\mixed{\\str{-}}{\\frac{\\fracstr{25}}{\\fracstr{4}}}}'
+								+'{\\frac{\\fracstr{25}}{\\fracstr{4}}}'
 								+'{large}'
 							+'}'
 							+'{\\btn'
