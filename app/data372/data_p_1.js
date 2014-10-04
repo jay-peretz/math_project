@@ -258,7 +258,7 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 					template: 'firstSimplify' 
 				 }
 			  ,
-			 // prob 5
+			 /*// prob 5
 			 {
 				problemStatement: dataUtils.pre(
 								'\\rowgrp'
@@ -430,8 +430,127 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 				secondHelpAnswer: '<br>Evaluated Answer: &nbsp;$$finalAnswer',
 				finalAnswer: '1',
 				template: 'evaluateAfterSimplify' 
+			 }*/
+			// prob 5
+			{
+				problemStatement: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\grp'
+										+'{\\str{Simplify: &nbsp;}}'
+										+'{\\frac'
+											+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp1}}}'
+											+'{\\exp{\\str{&nbsp;$$base2}}{\\str{$$exp2}}}'
+										+'}'
+									+'}'
+							),
+				answerInstructions: '',
+				base1: '6',
+				exp1: '3',
+				base2: '6',
+				exp2: '3',
+				baseans: '1',
+				expans: '0',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\input{$$baseans}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+									 '\\rowgrp'
+										+'{\\str{'
+											+'This problem has \"Division of Same Bases\". '
+											+'Therefore, we <u>subtract the exponents</u>.'
+										+'}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp1}}}'
+												+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp2}}}'
+											+'}'
+											+'{\\str{'
+												+'&nbsp; means &nbsp; $$base1 <sup>$$exp1 - $$exp2</sup> &nbsp; or &nbsp; $$base1 <sup>$$expans</sup>'
+											+'}}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Any non-zero base raised to the power of zero is equal to 1 whole.<span class=large>.</span>}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\str{$$base1 <sup>$$expans</sup>}}'
+											+'{\\str{=}}'
+											+'{\\str{$$finalAnswer}}'
+										+'}'
+										
+							),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{<br>Simplified Answer: $$finalAnswer}}'
+							),
+				finalAnswer: '1',
+				template: 'firstSimplify' 
 			 }
-			,
+			 ,
+			 // prob 6
+			{
+				problemStatement: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\grp'
+										+'{\\str{Simplify: &nbsp;}}'
+										+'{\\frac'
+											+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp1}}}'
+											+'{\\exp{\\str{&nbsp;$$base2}}{\\str{$$exp2}}}'
+										+'}'
+									+'}'
+							),
+				answerInstructions: '',
+				base1: '5',
+				exp1: '2',
+				base2: '5',
+				exp2: '2',
+				baseans: '1',
+				expans: '0',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\input{$$baseans}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+									 '\\rowgrp'
+										+'{\\str{'
+											+'This problem has \"Division of Same Bases\". '
+											+'Therefore, we <u>subtract the exponents</u>.'
+										+'}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\frac'
+												+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp1}}}'
+												+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp2}}}'
+											+'}'
+											+'{\\str{'
+												+'&nbsp; means &nbsp; $$base1 <sup>$$exp1 - $$exp2</sup> &nbsp; or &nbsp; $$base1 <sup>$$expans</sup>'
+											+'}}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Any non-zero base raised to the power of zero is equal to 1 whole.<span class=large>.</span>}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\str{$$base1 <sup>$$expans</sup>}}'
+											+'{\\str{=}}'
+											+'{\\str{$$finalAnswer}}'
+										+'}'
+										
+							),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{<br>Simplified Answer: $$finalAnswer}}'
+							),
+				finalAnswer: '1',
+				template: 'firstSimplify' 
+			 }
+			 ,
 		  	// prob 7
 			{
 				problemStatement: dataUtils.pre(
@@ -452,12 +571,9 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 								'\\rowgrp'
 									+'{\\str{$$answerInstructions}}'
 									+'{\\grp'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\input{$$numBaseAns}}'
-												+'{\\input{$$denBaseAns}}'
-											+'}'
-											+'{\\input{$$expAns}}'
+										+'{\\frac'
+											+'{\\input{$$numBaseAns}}'
+											+'{\\exp{\\input{$$denBaseAns}}{\\input{$$expAns}}}'
 										+'}'
 									+'}'
 							),
@@ -467,17 +583,14 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 									+'{\\str{&nbsp;}}'
 									+'{\\str{We can \"get rid of a negative exponent\" by taking the <u>reciprocal of the base</u> and changing the sign of the exponent.}}'
 									+'{\\str{&nbsp;}}'
-									+'{\\str{In this case the base of 2 is flipped from its location as a numerator (the whole number) to the denominator. The negative exponent changes to positive.}}'
+									+'{\\str{In this case the base of $$base1 is flipped from its location as a numerator (the whole number) to the denominator. The negative exponent changes to positive.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\grp'
 										+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp1}}}'
 										+'{\\str{=}}'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\str{$$numBaseAns}}'
-												+'{\\str{$$denBaseAns}}'
-											+'}'
-											+'{\\str{$$expAns}}'
+										+'{\\frac'
+											+'{\\str{$$numBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 										+'}'
 									+'}'
 									+'{\\str{&nbsp;}}'
@@ -488,9 +601,8 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 									+'{\\exp'
 										+'{\\frac'
 											+'{\\str{$$numBaseAns}}'
-											+'{\\str{$$denBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 										+'}'
-										+'{\\str{$$expAns}}'
 									+'}'
 							),
 				template: 'firstSimplify' 
@@ -516,12 +628,9 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 								'\\rowgrp'
 									+'{\\str{$$answerInstructions}}'
 									+'{\\grp'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\input{$$numBaseAns}}'
-												+'{\\input{$$denBaseAns}}'
-											+'}'
-											+'{\\input{$$expAns}}'
+										+'{\\frac'
+											+'{\\input{$$numBaseAns}}'
+											+'{\\exp{\\input{$$denBaseAns}}{\\input{$$expAns}}}'
 										+'}'
 									+'}'
 							),
@@ -531,17 +640,14 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 									+'{\\str{&nbsp;}}'
 									+'{\\str{We can \"get rid of a negative exponent\" by taking the <u>reciprocal of the base</u> and changing the sign of the exponent.}}'
 									+'{\\str{&nbsp;}}'
-									+'{\\str{In this case the base of 2 is flipped from its location as a numerator (the whole number) to the denominator. The negative exponent changes to positive.}}'
+									+'{\\str{In this case the base of $$base1 is flipped from its location as a numerator (the whole number) to the denominator. The negative exponent changes to positive.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\grp'
 										+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp1}}}'
 										+'{\\str{=}}'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\str{$$numBaseAns}}'
-												+'{\\str{$$denBaseAns}}'
-											+'}'
-											+'{\\str{$$expAns}}'
+										+'{\\frac'
+											+'{\\str{$$numBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 										+'}'
 									+'}'
 									+'{\\str{&nbsp;}}'
@@ -552,9 +658,8 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 									+'{\\exp'
 										+'{\\frac'
 											+'{\\str{$$numBaseAns}}'
-											+'{\\str{$$denBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 										+'}'
-										+'{\\str{$$expAns}}'
 									+'}'
 							),
 				template: 'firstSimplify' 
@@ -580,12 +685,9 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 								'\\rowgrp'
 									+'{\\str{$$answerInstructions}}'
 									+'{\\grp'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\input{$$numBaseAns}}'
-												+'{\\input{$$denBaseAns}}'
-											+'}'
-											+'{\\input{$$expAns}}'
+										+'{\\frac'
+											+'{\\input{$$numBaseAns}}'
+											+'{\\exp{\\input{$$denBaseAns}}{\\input{$$expAns}}}'
 										+'}'
 									+'}'
 							),
@@ -595,17 +697,14 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 									+'{\\str{&nbsp;}}'
 									+'{\\str{We can \"get rid of a negative exponent\" by taking the <u>reciprocal of the base</u> and changing the sign of the exponent.}}'
 									+'{\\str{&nbsp;}}'
-									+'{\\str{In this case the base of 2 is flipped from its location as a numerator (the whole number) to the denominator. The negative exponent changes to positive.}}'
+									+'{\\str{In this case the base of $$base1 is flipped from its location as a numerator (the whole number) to the denominator. The negative exponent changes to positive.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\grp'
 										+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp1}}}'
 										+'{\\str{=}}'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\str{$$numBaseAns}}'
-												+'{\\str{$$denBaseAns}}'
-											+'}'
-											+'{\\str{$$expAns}}'
+										+'{\\frac'
+											+'{\\str{$$numBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 										+'}'
 									+'}'
 									+'{\\str{&nbsp;}}'
@@ -616,9 +715,8 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 									+'{\\exp'
 										+'{\\frac'
 											+'{\\str{$$numBaseAns}}'
-											+'{\\str{$$denBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 										+'}'
-										+'{\\str{$$expAns}}'
 									+'}'
 							),
 				template: 'firstSimplify' 
@@ -644,12 +742,9 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 								'\\rowgrp'
 									+'{\\str{$$answerInstructions}}'
 									+'{\\grp'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\input{$$numBaseAns}}'
-												+'{\\input{$$denBaseAns}}'
-											+'}'
-											+'{\\input{$$expAns}}'
+										+'{\\frac'
+											+'{\\input{$$numBaseAns}}'
+											+'{\\exp{\\input{$$denBaseAns}}{\\input{$$expAns}}}'
 										+'}'
 									+'}'
 							),
@@ -659,17 +754,14 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 									+'{\\str{&nbsp;}}'
 									+'{\\str{We can \"get rid of a negative exponent\" by taking the <u>reciprocal of the base</u> and changing the sign of the exponent.}}'
 									+'{\\str{&nbsp;}}'
-									+'{\\str{In this case the base of 2 is flipped from its location as a numerator (the whole number) to the denominator. The negative exponent changes to positive.}}'
+									+'{\\str{In this case the base of $$base1 is flipped from its location as a numerator (the whole number) to the denominator. The negative exponent changes to positive.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\grp'
 										+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$exp1}}}'
 										+'{\\str{=}}'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\str{$$numBaseAns}}'
-												+'{\\str{$$denBaseAns}}'
-											+'}'
-											+'{\\str{$$expAns}}'
+										+'{\\frac'
+											+'{\\str{$$numBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 										+'}'
 									+'}'
 									+'{\\str{&nbsp;}}'
@@ -680,9 +772,8 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 									+'{\\exp'
 										+'{\\frac'
 											+'{\\str{$$numBaseAns}}'
-											+'{\\str{$$denBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 										+'}'
-										+'{\\str{$$expAns}}'
 									+'}'
 							),
 				template: 'firstSimplify' 
@@ -873,12 +964,9 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 													+'{\\str{$$exp2}}'
 												+'}'
 												+'{\\str{=}}'
-												+'{\\exp'
-													+'{\\frac'
-														+'{\\str{$$numBaseAns}}'
-														+'{\\str{$$denBaseAns}}'
-													+'}'
-													+'{\\str{$expAns}}'
+												+'{\\frac'
+													+'{\\str{$$numBaseAns}}'
+													+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 												+'}'
 											+'}'
 											+'{\\html{&nbsp;}}'
@@ -905,13 +993,11 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 				solutionAnswer: dataUtils.pre(
 								'\\rowgrp'
 									+'{\\str{$$answerInstructions}}'
-									+'{\\str{&nbsp;}}'
-									+'{\\exp'
+									+'{\\grp'
 										+'{\\frac'
 											+'{\\input{$$numBaseAns}}'
-											+'{\\input{$$denBaseAns}}'
+											+'{\\exp{\\input{$$denBaseAns}}{\\input{$$expAns}}}'
 										+'}'
-										+'{\\input{$$expAns}}'
 									+'}'
 							),
 				line1: dataUtils.pre(
@@ -925,24 +1011,18 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 									+'{\\grp'
 										+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$expDiff}}}'
 										+'{\\str{=}}'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\str{$$numBaseAns}}'
-												+'{\\str{$$denBaseAns}}'
-											+'}'
-											+'{\\str{$$expAns}}'
+										+'{\\frac'
+											+'{\\str{$$numBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 										+'}'
 									+'}'
 							),
 				helpAnswer:  dataUtils.pre(
 									'\\grp'
 										+'{\\str{Simplified Answer: &nbsp;}}'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\str{$$numBaseAns}}'
-												+'{\\str{$$denBaseAns}}'
-											+'}'
-											+'{\\str{$$expAns}}'
+										+'{\\frac'
+											+'{\\str{$$numBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 										+'}'
 							),		
 				finalAnswer: dataUtils.pre(
@@ -987,12 +1067,9 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 													+'{\\str{$$exp2}}'
 												+'}'
 												+'{\\str{=}}'
-												+'{\\exp'
-													+'{\\frac'
-														+'{\\str{$$numBaseAns}}'
-														+'{\\str{$$denBaseAns}}'
-													+'}'
-													+'{\\str{$expAns}}'
+												+'{\\frac'
+													+'{\\str{$$numBaseAns}}'
+													+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 												+'}'
 											+'}'
 											+'{\\html{&nbsp;}}'
@@ -1019,13 +1096,11 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 				solutionAnswer: dataUtils.pre(
 								'\\rowgrp'
 									+'{\\str{$$answerInstructions}}'
-									+'{\\str{&nbsp;}}'
-									+'{\\exp'
+									+'{\\grp'
 										+'{\\frac'
 											+'{\\input{$$numBaseAns}}'
-											+'{\\input{$$denBaseAns}}'
+											+'{\\exp{\\input{$$denBaseAns}}{\\input{$$expAns}}}'
 										+'}'
-										+'{\\input{$$expAns}}'
 									+'}'
 							),
 				line1: dataUtils.pre(
@@ -1039,24 +1114,18 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 									+'{\\grp'
 										+'{\\exp{\\str{&nbsp;$$base1}}{\\str{$$expDiff}}}'
 										+'{\\str{=}}'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\str{$$numBaseAns}}'
-												+'{\\str{$$denBaseAns}}'
-											+'}'
-											+'{\\str{$$expAns}}'
+										+'{\\frac'
+											+'{\\str{$$numBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 										+'}'
 									+'}'
 							),
 				helpAnswer:  dataUtils.pre(
 									'\\grp'
 										+'{\\str{Simplified Answer: &nbsp;}}'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\str{$$numBaseAns}}'
-												+'{\\str{$$denBaseAns}}'
-											+'}'
-											+'{\\str{$$expAns}}'
+										+'{\\frac'
+											+'{\\str{$$numBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 										+'}'
 							),		
 				finalAnswer: dataUtils.pre(
@@ -1093,12 +1162,9 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 								'\\rowgrp'
 									+'{\\str{$$answerInstructions}}'
 									+'{\\grp'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\input{$$numBaseAns}}'
-												+'{\\input{$$denBaseAns}}'
-											+'}'
-											+'{\\input{$$expAns}}'
+										+'{\\frac'
+											+'{\\input{$$numBaseAns}}'
+											+'{\\exp{\\input{$$denBaseAns}}{\\input{$$expAns}}}'
 										+'}'
 									+'}'
 							),
@@ -1113,26 +1179,23 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 									+'{\\grp'
 										+'{\\exp{\\str{&nbsp;$$baseAll}}{\\str{$$expDiff}}}'
 										+'{\\str{=}}'
-										+'{\\exp'
-											+'{\\frac'
-												+'{\\str{$$numBaseAns}}'
-												+'{\\str{$$denBaseAns}}'
-											+'}'
-											+'{\\str{$$expAns}}'
-										+'}'
-									+'}'
-									+'{\\str{&nbsp;}}'
-							),
-				helpAnswer: dataUtils.pre(
-								'\\grp'
-									+'{\\str{<br>Simplified Answer: &nbsp;}}'
-									+'{\\exp'
 										+'{\\frac'
 											+'{\\str{$$numBaseAns}}'
-											+'{\\str{$$denBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
 										+'}'
-										+'{\\str{$$expAns}}'
 									+'}'
+							),
+				helpAnswer:  dataUtils.pre(
+									'\\grp'
+										+'{\\str{Simplified Answer: &nbsp;}}'
+										+'{\\frac'
+											+'{\\str{$$numBaseAns}}'
+											+'{\\exp{\\str{$$denBaseAns}}{\\str{$$expAns}}}'
+										+'}'
+							),		
+				finalAnswer: dataUtils.pre(
+											'\\grp'
+												+'{\\frac{\\input{$$numAns}}{\\input{$$denAns}}}'
 							),
 				template: 'firstSimplify' 
 			 }
