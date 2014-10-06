@@ -589,7 +589,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 												+'{\\exp{\\str{( -2 &nbsp;)}}{\\str{3}}}'
 											+'}'
 								),
-			answer: '-7',
+			answer: '-17',
 			wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\html{<span class=bigger>-</span><span class=large>45</span>}}{\\btn{/}{F}{bigger}}{\\btn{( - 3 ) <sup>2</sup>}{T}{large}}{\\btn{-}{F}{bigger}}{\\btn{( - 2 ) <sup>2</sup>}{F}{large}}{\\btn{+}{F}{large}}{\\btn{( - 2 ) <sup>3</sup>}{F}{large}},' +
                         '\\input{9},' +
