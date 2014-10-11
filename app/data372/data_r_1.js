@@ -43,11 +43,6 @@ angular.module('mathSkills').service('data_r_1', ['dataUtils', function (dataUti
                             "help": '\\rowgrp'
 										+'{\\html{&nbsp;}}'
 										+'{$line1}'
-										+'{\\html{&nbsp;}}'
-										+'{\\str{$base<sup> $exp1</sup> means:}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\multiplydecpowten{1}{$multiplier}{hide}}'
-										+'{\\html{&nbsp;}}'
 										+'{\\css'
 											+'{\\grp'
 												+'{$helpAnswer}'
@@ -186,10 +181,13 @@ angular.module('mathSkills').service('data_r_1', ['dataUtils', function (dataUti
 									+'{\\str{&nbsp;}}'
 									+'{\\str{<span class=bottomBlack>If we use 10<sup> 0</sup> (which equals 1 whole) as our reference point</span>, then the exponent above base 10 tells us to <span class=bottomBlack>move the decimal point 3 times to the right from the value of one whole</span>. }}'
 									+'{\\str{&nbsp;}}'
+									+'{\\str{$$base<sup> $$exp1</sup> means:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\multiplydecpowten{1}{$$multiplier}{hide}}'
 							),
 				helpAnswer: dataUtils.pre(
 								'\\grp'
-									+'{\\str{<br>Answer: &nbsp; $$helpNumber}}'	
+									+'{\\str{Answer: &nbsp; $$helpNumber}}'	
 							),
 				template: 'displayEvaluation' 
 			 }
