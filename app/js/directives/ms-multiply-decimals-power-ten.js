@@ -77,6 +77,7 @@ angular.module('mathSkills')
 						
 						problemObjects[0] = Number(tagParameters[0]);
 						problemObjects[1] = Number(tagParameters[1]);
+						
 						//  if multiplicand < multiplier exchange the numbers
 						/*if (problemObjects[0]<problemObjects[1]) {
 							problemObjects.reverse();
@@ -193,7 +194,11 @@ angular.module('mathSkills')
 							$scope.decimalDisplacement = Math.abs(Math.round(Math.log(problemObjects[1])/Math.log(10)));
 						}
 						
-						$scope.addDecimalText = 'The result of multiplying '+problemObjects[0]+' by '+problemObjects[1]+' is formed by displacing the decimal point '+$scope.decimalDisplacement+' place(s) to the '+$scope.pointLeftOrRight+' and filling in any "open" place holders with zeros:'
+						if (tagParameters.length > 2 && tagParameters[2] === 'hide') {
+							$scope.addDecimalText = '';
+						} else {
+							$scope.addDecimalText = 'The result of multiplying '+problemObjects[0]+' by '+problemObjects[1]+' is formed by displacing the decimal point '+$scope.decimalDisplacement+' place(s) to the '+$scope.pointLeftOrRight+' and filling in any "open" place holders with zeros:'
+						}
 						
 						$scope.emptyArray = [];
 						$scope.emptyArray[0] = [];
