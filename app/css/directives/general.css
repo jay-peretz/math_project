@@ -308,3 +308,6 @@ table td .width160ValignTop {
 .width20 input{
 	width: 20px;
 }
+.whiteSpaceNoWrap {
+	white-space: nowrap;
+}
