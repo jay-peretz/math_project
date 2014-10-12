@@ -191,6 +191,605 @@ angular.module('mathSkills').service('data_r_1', ['dataUtils', function (dataUti
 							),
 				template: 'displayEvaluation' 
 			 }
+			 ,
+			// prob 4
+			{
+				problemStatement: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\grp'
+										+'{\\str{Evaluate: &nbsp;}}'
+										+'{\\exp{\\str{&nbsp;$$base}}{\\str{$$exp1}}}'
+									+'}'
+							),
+				answerInstructions: '',
+				base: '10',
+				exp1: '5',
+				multiplier: '100000',
+				answer: '100000',
+				helpNumber: '100,000',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\input{$$answer}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{We know that 10<sup> $$exp1</sup>  means 10 * 10 * 10 * 10 * 10.<br>Here is a quick method for solving a power of 10 expression.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Any base raised to a positive exponent will become larger; the decimal point will be moved to the right here.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{<span class=bottomBlack>If we use 10<sup> 0</sup> (which equals 1 whole) as our reference point</span>, then the exponent above base 10 tells us to <span class=bottomBlack>move the decimal point $$exp1 times to the right from the value of one whole</span>. }}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{$$base<sup> $$exp1</sup> means:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\multiplydecpowten{1}{$$multiplier}{hide}}'
+							),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{Answer: &nbsp; $$helpNumber}}'	
+							),
+				template: 'displayEvaluation' 
+			 }
+			 ,
+			// prob 5
+			{
+				problemStatement: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\grp'
+										+'{\\str{Evaluate: &nbsp;}}'
+										+'{\\exp{\\str{&nbsp;$$base}}{\\str{$$exp1}}}'
+									+'}'
+							),
+				answerInstructions: '',
+				base: '10',
+				exp1: '-2 ',
+				positiveExp1: '2',
+				multiplier: '.01',
+				answer: '0.01',
+				helpNumber: '0.01',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\input{$$answer}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{We know that 10<sup> $$exp1</sup> &nbsp;&nbsp;means}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\frac{\\str{1}}{\\str{10<sup> $$positiveExp1</sup>}}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{which will equal:}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\frac{\\str{1}}{\\str{10 * 10}}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Here is a quick method for solving a power of 10 expression.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Any base raised to a negative exponent will become smaller; the decimal point will be moved to the left here.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{<span class=bottomBlack>If we use 10<sup> 0</sup> (which equals 1 whole) as our reference point</span>, then the exponent above base 10 tells us to <span class=bottomBlack>move the decimal point $$positiveExp1 times to the left from the value of one whole</span>. }}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{$$base<sup> $$exp1</sup> means:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\multiplydecpowten{1}{$$multiplier}{hide}}'
+							),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{Answer: &nbsp; $$helpNumber}}'	
+							),
+				template: 'displayEvaluation' 
+			 }
+			 ,
+			// prob 5
+			{
+				problemStatement: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\grp'
+										+'{\\str{Evaluate: &nbsp;}}'
+										+'{\\exp{\\str{&nbsp;$$base}}{\\str{$$exp1}}}'
+									+'}'
+							),
+				answerInstructions: '',
+				base: '10',
+				exp1: '-4 ',
+				positiveExp1: '4',
+				multiplier: '.0001',
+				answer: '0.0001',
+				helpNumber: '0.0001',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\input{$$answer}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{We know that 10<sup> $$exp1</sup> &nbsp;&nbsp;means}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\frac{\\str{1}}{\\str{10<sup> $$positiveExp1</sup>}}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{which will equal:}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\frac{\\str{1}}{\\str{10 * 10 * 10 * 10}}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Here is a quick method for solving a power of 10 expression.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Any base raised to a negative exponent will become smaller; the decimal point will be moved to the left here.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{<span class=bottomBlack>If we use 10<sup> 0</sup> (which equals 1 whole) as our reference point</span>, then the exponent above base 10 tells us to <span class=bottomBlack>move the decimal point $$positiveExp1 times to the left from the value of one whole</span>. }}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{$$base<sup> $$exp1</sup> means:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\multiplydecpowten{1}{$$multiplier}{hide}}'
+							),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{Answer: &nbsp; $$helpNumber}}'	
+							),
+				template: 'displayEvaluation' 
+			 }
+			 ,
+			// prob 6
+			{
+				problemStatement: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\grp'
+										+'{\\str{Evaluate: &nbsp;}}'
+										+'{\\exp{\\str{&nbsp;$$base}}{\\str{$$exp1}}}'
+									+'}'
+							),
+				answerInstructions: '',
+				base: '10',
+				exp1: '-1 ',
+				positiveExp1: '1',
+				multiplier: '.1',
+				answer: '0.1',
+				helpNumber: '0.1',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\input{$$answer}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{We know that 10<sup> $$exp1</sup> &nbsp;&nbsp;means}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\frac{\\str{1}}{\\str{10<sup> $$positiveExp1</sup>}}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{which will equal:}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\frac{\\str{1}}{\\str{10}}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Here is a quick method for solving a power of 10 expression.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Any base raised to a negative exponent will become smaller; the decimal point will be moved to the left here.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{<span class=bottomBlack>If we use 10<sup> 0</sup> (which equals 1 whole) as our reference point</span>, then the exponent above base 10 tells us to <span class=bottomBlack>move the decimal point $$positiveExp1 times to the left from the value of one whole</span>. }}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{$$base<sup> $$exp1</sup> means:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\multiplydecpowten{1}{$$multiplier}{hide}}'
+							),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{Answer: &nbsp; $$helpNumber}}'	
+							),
+				template: 'displayEvaluation' 
+			 }
+			 ,
+			// prob 8
+			{
+				problemStatement: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\grp'
+										+'{\\str{Evaluate: &nbsp;}}'
+										+'{\\exp{\\str{&nbsp;$$base}}{\\str{$$exp1}}}'
+									+'}'
+							),
+				answerInstructions: '',
+				base: '10',
+				exp1: '4',
+				multiplier: '10000',
+				answer: '10000',
+				helpNumber: '10,000',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\input{$$answer}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{We know that 10<sup> $$exp1</sup>  means 10 * 10 * 10 * 10.<br>Here is a quick method for solving a power of 10 expression.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Any base raised to a positive exponent will become larger; the decimal point will be moved to the right here.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{<span class=bottomBlack>If we use 10<sup> 0</sup> (which equals 1 whole) as our reference point</span>, then the exponent above base 10 tells us to <span class=bottomBlack>move the decimal point $$exp1 times to the right from the value of one whole</span>. }}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{$$base<sup> $$exp1</sup> means:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\multiplydecpowten{1}{$$multiplier}{hide}}'
+							),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{Answer: &nbsp; $$helpNumber}}'	
+							),
+				template: 'displayEvaluation' 
+			 }
+			 ,
+			// prob 9
+			{
+				problemStatement: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{Express the following scientific notation in standard notation:}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$problemNumber}}'
+										+'{\\str{&nbsp; x &nbsp;}}'
+										+'{\\exp{\\str{&nbsp;$$base}}{\\str{$$exp1}}}'
+									+'}'
+							),
+				answerInstructions: '',
+				problemNumber: '1.6',
+				base: '10',
+				exp1: '3',
+				longhand: 'three',
+				multiplier: '1000',
+				answer: '1600',
+				helpNumber: '1,600',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\input{$$answer}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{In scientific notation the exponent above the base of 10 tells us the direction <span class=bottomBlack>and</span> the number of places to move the decimal point in the given number.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In this case the exponent of positive $$exp1 in $$base<sup>$$exp1 </sup> &nbsp;tells us to move the decimal point in $$problemNumber $$longhand decimal places to the right.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$problemNumber}}'
+										+'{\\str{&nbsp; x &nbsp;}}'
+										+'{\\exp{\\str{&nbsp;$$base}}{\\str{$$exp1}}}'
+										+'{\\str{&nbsp;&nbsp;means:}}'
+									+'}'
+									+'{\\html{&nbsp;}}'
+									+'{\\multiplydecpowten{$$problemNumber}{$$multiplier}{hide}}'
+							),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{Answer: &nbsp; $$helpNumber}}'	
+							),
+				template: 'displayEvaluation' 
+			 }
+			  ,
+			// prob 10
+			{
+				problemStatement: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{Express the following scientific notation in standard notation:}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$problemNumber}}'
+										+'{\\str{&nbsp; x &nbsp;}}'
+										+'{\\exp{\\str{&nbsp;$$base}}{\\str{$$exp1}}}'
+									+'}'
+							),
+				answerInstructions: '',
+				problemNumber: '4.3',
+				base: '10',
+				exp1: '6',
+				longhand: 'six',
+				multiplier: '1000000',
+				answer: '4300000',
+				helpNumber: '4,300,000',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\css'
+										+'{\\input{$$answer}}'
+										+'{width120px}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{In scientific notation the exponent above the base of 10 tells us the direction <span class=bottomBlack>and</span> the number of places to move the decimal point in the given number.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In this case the exponent of positive $$exp1 in $$base<sup>$$exp1 </sup> &nbsp;tells us to move the decimal point in $$problemNumber $$longhand decimal places to the right.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$problemNumber}}'
+										+'{\\str{&nbsp; x &nbsp;}}'
+										+'{\\exp{\\str{&nbsp;$$base}}{\\str{$$exp1}}}'
+										+'{\\str{&nbsp;&nbsp;means:}}'
+									+'}'
+									+'{\\html{&nbsp;}}'
+									+'{\\multiplydecpowten{$$problemNumber}{$$multiplier}{hide}}'
+							),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{Answer: &nbsp; $$helpNumber}}'	
+							),
+				template: 'displayEvaluation' 
+			 }
+			 ,
+			// prob 11
+			{
+				problemStatement: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{Express the following scientific notation in standard notation:}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$problemNumber}}'
+										+'{\\str{&nbsp; x &nbsp;}}'
+										+'{\\exp{\\str{&nbsp;$$base}}{\\str{$$exp1}}}'
+									+'}'
+							),
+				answerInstructions: '',
+				problemNumber: '9.2',
+				base: '10',
+				exp1: '-2 ',
+				positiveExp1: '2',
+				longhand: 'two',
+				multiplier: '.01',
+				answer: '0.092',
+				helpNumber: '0.092',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\input{$$answer}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{In scientific notation the exponent above the base of 10 tells us the direction <span class=bottomBlack>and</span> the number of places to move the decimal point in the given number.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In this case the exponent of negative $$positiveExp1 in $$base<sup>$$exp1 </sup> &nbsp;tells us to move the decimal point in $$problemNumber $$longhand decimal places to the left.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$problemNumber}}'
+										+'{\\str{&nbsp; x &nbsp;}}'
+										+'{\\exp{\\str{&nbsp;$$base}}{\\str{$$exp1}}}'
+										+'{\\str{&nbsp;&nbsp;means:}}'
+									+'}'
+									+'{\\html{&nbsp;}}'
+									+'{\\multiplydecpowten{$$problemNumber}{$$multiplier}{hide}}'
+							),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{Answer: &nbsp; $$helpNumber}}'	
+							),
+				template: 'displayEvaluation' 
+			 }
+			  ,
+			// prob 12
+			{
+				problemStatement: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{Express the following scientific notation in standard notation:}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$problemNumber}}'
+										+'{\\str{&nbsp; x &nbsp;}}'
+										+'{\\exp{\\str{&nbsp;$$base}}{\\str{$$exp1}}}'
+									+'}'
+							),
+				answerInstructions: '',
+				problemNumber: '5.64',
+				base: '10',
+				exp1: '-3 ',
+				positiveExp1: '3',
+				longhand: 'three',
+				multiplier: '.001',
+				answer: '0.00564',
+				helpNumber: '0.00564',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\input{$$answer}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{In scientific notation the exponent above the base of 10 tells us the direction <span class=bottomBlack>and</span> the number of places to move the decimal point in the given number.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In this case the exponent of negative $$positiveExp1 in $$base<sup>$$exp1 </sup> &nbsp;tells us to move the decimal point in $$problemNumber $$longhand decimal places to the left.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$problemNumber}}'
+										+'{\\str{&nbsp; x &nbsp;}}'
+										+'{\\exp{\\str{&nbsp;$$base}}{\\str{$$exp1}}}'
+										+'{\\str{&nbsp;&nbsp;means:}}'
+									+'}'
+									+'{\\html{&nbsp;}}'
+									+'{\\multiplydecpowten{$$problemNumber}{$$multiplier}{hide}}'
+							),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{Answer: &nbsp; $$helpNumber}}'	
+							),
+				template: 'displayEvaluation' 
+			 }
+			 ,
+			// prob 13
+			{
+				problemStatement: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{Express the following value in scientific notation:}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$problemNumber}}'
+									+'}'
+							),
+				answerInstructions: '',
+				problemNumber: '34,000',
+				scienceNumber: '3.4',
+				rightLeft: 'right',
+				base: '10',
+				exp1: '4',
+				longhand: 'four',
+				firstDigit: 'three',
+				lastDigit: 'four',
+				combineTable: '<table>'
+								+'<tr>'
+									+'<td>'
+										+'<span>(From the 1<sup>st</sup> step)</span>'
+									+'</td>'
+									+'<td>'
+										+'<span>&nbsp;&bull;&nbsp;</span>'
+									+'</td>'
+									+'<td>'
+										+'<span>(From the 2<sup>nd</sup> step)</span>'
+									+'</td>'
+								+'</tr>'
+								+'<tr>'
+									+'<td class=textAlignRight></span>'
+										+'<span>3.4</span>'
+									+'</td>'
+									+'<td>'
+										+'<span>&nbsp;x&nbsp;</span>'
+									+'</td>'
+									+'<td class=textAlignLeft>'
+										+'<span>10<sup> 4</sup></span>'
+									+'</td>'
+								+'</tr>'
+							+'</table>',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\input{$$scienceNumber}}'
+										+'{\\css'
+											+'{\\input{x}}'
+											+'{width20}'
+										+'}'
+										+'{\\exp{\\input{$$base}}{\\input{$$exp1}}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{To rewrite a number in scientific notation:}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{<u>First Step</u>: Rewrite the given number by inserting the decimal point to the $$rightLeft of the first non&#45;zero digit. This will always create a number that is greater than or equal to one whole and less than 10.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In $$problemNumber the first non&#45;zero number is the $$firstDigit. Therefore, we will insert the decimal point to the $$rightLeft of the $$firstDigit.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{The first part of our scientific notation answer will be $$scienceNumber. Notice that we do not include any zeros to the right of the $$lastDigit (the last non&#45;zero digit).}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{<u>Second Step</u>: Ask how many places <span class=bottomBlack>and</span> which direction we would need to move the decimal point in $$scienceNumber to get the original value of $$problemNumber.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{To get from $$scienceNumber to $$problemNumber, we would need to move the decimal point $$longhand places to the $$rightLeft. We represent this as a power of 10, and get 10<sup> $$exp1</sup>. It is 10<sup> $$exp1</sup> that tells us to move the decimal point $$longhand places to the $$rightLeft.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{<u>Final Answer</u>: Write these two parts as a product. It is common practice to use the arithmetic \"x\" for the multiplication symbol in scientific notation.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\html{'
+										+'$$combineTable'
+									+'}}'
+									+'{\\html{&nbsp;}}'
+							),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{Answer: &nbsp; $$scienceNumber &nbsp;x}}'
+									+'{\\exp{\\str{$$base}}{\\str{$$exp1}}}'
+							),
+				template: 'displayEvaluation' 
+			 }
+			  ,
+			// prob 14
+			{
+				problemStatement: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{Express the following value in scientific notation:}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$problemNumber}}'
+									+'}'
+							),
+				answerInstructions: '',
+				problemNumber: '708,000',
+				scienceNumber: '7.08',
+				rightLeft: 'right',
+				base: '10',
+				exp1: '5',
+				longhand: 'five',
+				firstDigit: '7',
+				lastDigit: '8',
+				combineTable: '<table>'
+								+'<tr>'
+									+'<td>'
+										+'<span>(From the 1<sup>st</sup> step)</span>'
+									+'</td>'
+									+'<td>'
+										+'<span>&nbsp;&bull;&nbsp;</span>'
+									+'</td>'
+									+'<td>'
+										+'<span>(From the 2<sup>nd</sup> step)</span>'
+									+'</td>'
+								+'</tr>'
+								+'<tr>'
+									+'<td class=textAlignRight></span>'
+										+'<span>7.08</span>'
+									+'</td>'
+									+'<td>'
+										+'<span>&nbsp;x&nbsp;</span>'
+									+'</td>'
+									+'<td class=textAlignLeft>'
+										+'<span>10<sup> 5</sup></span>'
+									+'</td>'
+								+'</tr>'
+							+'</table>',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\input{$$scienceNumber}}'
+										+'{\\css'
+											+'{\\input{x}}'
+											+'{width20}'
+										+'}'
+										+'{\\exp{\\input{$$base}}{\\input{$$exp1}}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{To rewrite a number in scientific notation:}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{<u>First Step</u>: Rewrite the given number by inserting the decimal point to the $$rightLeft of the first non&#45;zero digit. This will always create a number that is greater than or equal to one whole and less than 10.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In $$problemNumber the first non&#45;zero number is the $$firstDigit. Therefore, we will insert the decimal point to the $$rightLeft of the $$firstDigit.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{The first part of our scientific notation answer will be $$scienceNumber. Notice that we do not include any zeros to the right of the $$lastDigit (the last non&#45;zero digit).}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{<u>Second Step</u>: Ask how many places <span class=bottomBlack>and</span> which direction we would need to move the decimal point in $$scienceNumber to get the original value of $$problemNumber.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{To get from $$scienceNumber to $$problemNumber, we would need to move the decimal point $$longhand places to the $$rightLeft. We represent this as a power of 10, and get 10<sup> $$exp1</sup>. It is 10<sup> $$exp1</sup> that tells us to move the decimal point $$longhand places to the $$rightLeft.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{<u>Final Answer</u>: Write these two parts as a product. It is common practice to use the arithmetic \"x\" for the multiplication symbol in scientific notation.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\html{'
+										+'$$combineTable'
+									+'}}'
+									+'{\\html{&nbsp;}}'
+							),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{Answer: &nbsp; $$scienceNumber &nbsp;x}}'
+									+'{\\exp{\\str{$$base}}{\\str{$$exp1}}}'
+							),
+				template: 'displayEvaluation' 
+			 }
 		];
 		
 		/*shuffle = [

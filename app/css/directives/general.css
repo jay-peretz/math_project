@@ -283,6 +283,12 @@ table td .width160ValignTop {
 	width: 160px;
 	vertical-align: top;
 }
+.textAlignRight {
+	text-align: right;
+}
+.textAlignLeft {
+	text-align: left;
+}
 .underline {
 	text-decoration:underline;
 }
@@ -298,4 +304,7 @@ table td .width160ValignTop {
 }
 .width120 input{
 	width: 120px;
+}
+.width20 input{
+	width: 20px;
 }
