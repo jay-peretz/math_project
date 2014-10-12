@@ -1438,7 +1438,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 											+'{exponentLarge}'
 										+'}'
 								),
-			ans: dataUtils.pre('\\frac{\\input{3}}{\\input{10}}'),
+			ans: dataUtils.pre('\\frac{\\input{3}}{\\input{4}}'),
 			firstFraction: '<table>'
 								+'<tr>'
 									+'<td rowspan="3" class=hugeAndThin>(</td>'

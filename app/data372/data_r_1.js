@@ -671,10 +671,7 @@ angular.module('mathSkills').service('data_r_1', ['dataUtils', function (dataUti
 									+'{\\str{$$answerInstructions}}'
 									+'{\\grp'
 										+'{\\input{$$scienceNumber}}'
-										+'{\\css'
-											+'{\\input{x}}'
-											+'{width20}'
-										+'}'
+										+'{\\str{x}}'
 										+'{\\exp{\\input{$$base}}{\\input{$$exp1}}}'
 									+'}'
 							),
@@ -755,10 +752,7 @@ angular.module('mathSkills').service('data_r_1', ['dataUtils', function (dataUti
 									+'{\\str{$$answerInstructions}}'
 									+'{\\grp'
 										+'{\\input{$$scienceNumber}}'
-										+'{\\css'
-											+'{\\input{x}}'
-											+'{width20}'
-										+'}'
+										+'{\\str{x}}'
 										+'{\\exp{\\input{$$base}}{\\input{$$exp1}}}'
 									+'}'
 							),

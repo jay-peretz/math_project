@@ -232,7 +232,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
-                answer: '55200', template: 'main', pre_symbol: '$', post_symbol: '', 
+                answer: '55200.00', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
                 dld: '100', drd: 'Base (Whole Quantity)',
