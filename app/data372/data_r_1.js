@@ -846,7 +846,7 @@ angular.module('mathSkills').service('data_r_1', ['dataUtils', function (dataUti
 									+'{\\str{&nbsp;}}'
 									+'{\\str{In $$problemNumber the first non&#45;zero number is the $$firstDigit. Therefore, we will insert the decimal point to the right of the $$firstDigit.}}'
 									+'{\\str{&nbsp;}}'
-									+'{\\str{The first part of our scientific notation answer will be $$scienceNumber. Notice that we do not include any zeros to the right of the $$lastDigit (the last non&#45;zero digit).}}'
+									+'{\\str{The first part of our scientific notation answer will be $$scienceNumber.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\str{<u>Second Step</u>: Ask how many places <span class=bottomBlack>and</span> which direction we would need to move the decimal point in $$scienceNumber to get the original value of $$problemNumber.}}'
 									+'{\\str{&nbsp;}}'
@@ -1058,7 +1058,7 @@ angular.module('mathSkills').service('data_r_1', ['dataUtils', function (dataUti
 				answerInstructions: '',
 				problemNumber: '0.503',
 				scienceNumber: '5.03',
-				rightLeft: 'right',
+				rightLeft: 'left',
 				base: '10',
 				exp1: '-1 ',
 				ansExp1: '-1',
@@ -1140,7 +1140,7 @@ angular.module('mathSkills').service('data_r_1', ['dataUtils', function (dataUti
 				answerInstructions: '',
 				problemNumber: '0.405',
 				scienceNumber: '4.05',
-				rightLeft: 'right',
+				rightLeft: 'left',
 				base: '10',
 				exp1: '-1 ',
 				ansExp1: '-1',
