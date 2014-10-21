@@ -435,7 +435,7 @@ angular.module('mathSkills').service('data17_2', ['dataUtils', function (dataUti
             {
                 question: '90 milligrams (mg) of medication are in 20 milliliters (mL) of solution. How many milligrams of medication are in each milliliter of solution?', 
                 round: '<br><br><span class=blue-text>Round to nearest whole milligram (mg).</span>',
-                answer: '4.5', Nanswer:'', Danswer:'', template: 'main',
+                answer: '5', Nanswer:'', Danswer:'', template: 'main',
                 ln: '90', Nln: '', Dln: '', rn: 'x', Nrn: '', Drn: '', lbln: '(mg) medication', words: 'number of',
                 ld: '20', Nld: '', Dld: '', rd: '1', Nrd: '', Drd: '', lbld: '(mL) solution', xlbld: '(mL) solution',
                 lblarr: '[\\"(mg) medication\\",\\"(mL) solution\\",\\"cups\\"]',
@@ -578,7 +578,7 @@ angular.module('mathSkills').service('data17_2', ['dataUtils', function (dataUti
                 xlblarr: '[\\"minute\\",\\"runner\\",\\"mile\\"]',
                 previousCorrect: true,
             }
-        ],
+        ];
 		shuffle = [
 				{ problems: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,22,23], total: 8},
 				{ problems: [18,19], total: 1},
@@ -587,4 +587,6 @@ angular.module('mathSkills').service('data17_2', ['dataUtils', function (dataUti
 
     
     	return dataUtils.build(desc, template, data, shuffle);
+		
+		//return dataUtils.build(desc, template, data);
 }]);

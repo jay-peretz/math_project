@@ -40,7 +40,7 @@ angular.module('mathSkills').service('data19_1', ['dataUtils', function (dataUti
 						+'{\\grp{\\str{Change the fraction to a mixed number percentage:}}}'
 						+'{\\grp{\\html{&nbsp;}}}'
 						+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}',
-						answer: '\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}{\\str{%}}}}',		
+						answer: '\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}{\\str{%}}',		
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -66,7 +66,7 @@ angular.module('mathSkills').service('data19_1', ['dataUtils', function (dataUti
 						+'{\\grp{\\html{&nbsp;}}}'
 						+'{\\grp{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}}',
 						answer: '\\grp{\\mixed{\\input{$answerFractionWhole}}{\\frac{\\input{$answerFractionNum}}{\\input{$answerFractionDen}}}}'
-						+'{\\str{%}}}',		
+						+'{\\str{%}}',		
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
