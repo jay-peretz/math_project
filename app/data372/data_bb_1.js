@@ -37,6 +37,33 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 					}]
 				}]
 			}
+			,
+			flexy: {
+                title: 'Evaluating Algebraic Expressions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '$stateProblem',
+						answer: '$solution',
+						controls: {
+								"checkAnswer": true,
+								"help": '\\rowgrp'
+											+'$firstLines'
+											+'{\\html{&nbsp;}}'
+											+'$firstTable'
+											+'{\\html{&nbsp;}}'
+											+'{css'
+												+'{\\grp'
+													+'{\\str{Answer: &nbsp;}}'
+													+'{$helpAnswer}'
+												+'}'
+												+'{help-answer-text}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+						}
+					}]
+				}]
+			}
         },
         data = [
 				{	// problem 1
@@ -285,6 +312,252 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 					textAnswer: ' &nbsp; 1.45',
 					answer: '1.45',
 					template: 'main',
+				}
+				,
+				{	// problem 9
+					stateProblem: dataUtils.pre(
+										'\\rowgrp'
+											+'{\\grp'
+												+'{\\str{If&nbsp;&nbsp; x = }}'
+												+'{\\css'
+													+'{\\mixed{\\str{-}}{\\frac{\\str{3}}{\\str{4}}}}'
+													+'{fracNoMargin}'
+												+'}'
+												+'{\\str{&nbsp; and &nbsp; y = }}'
+												+'{\\css'
+													+'{\\frac{\\str{3}}{\\str{2}}}'
+													+'{fracNoMargin}'
+												+'}'
+												+'{\\str{<span class=large>,</span>}}'
+											+'}'
+											+'{\\str{evaluate the following expression<span class=large>:</span>}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{$expression}}'
+									),
+					solution: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\frac{\\input{$$numAnswer}}{\\input{$$denAnswer}}}'
+						),
+					answerInstructions: '',
+					numAnswer: '27',
+					denAnswer: '16',
+					expression: '-x<sup>2</sup> + y<sup>2</sup>',
+					firstLines: dataUtils.pre(
+										'{\\str{Whenever you substitute a number value for a variable, put that number inside a parenthesis.}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Therefore:  $$expression&nbsp; is the same as:}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\exp'
+												+'{\\grp'
+													+'{\\str{-}}'
+													+'{\\str{(}}'
+													+'{\\css'
+														+'{\\mixed{\\str{-}}{\\frac{\\str{3}}{\\str{4}}}}'
+														+'{fracNoMargin}'
+													+'}'
+													+'{\\str{)}}'
+												+'}'
+												+'{\\str{2}}'
+											+'}'
+											+'{\\str{&nbsp; + &nbsp;}}'
+											+'{\\exp'
+												+'{\\grp'
+													+'{\\str{(}}'
+													+'{\\css'
+														+'{\\frac{\\str{3}}{\\str{2}}}'
+														+'{fracNoMargin}'
+													+'}'
+													+'{\\str{)}}'
+												+'}'
+												+'{\\str{2}}'
+											+'}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Follow order of operations to evaluate the problem.}}'
+									),
+					firstTable: dataUtils.pre(
+											'{\\grp'
+												+'{\\str{1st: Solve the exponents.}}'
+												+'{\\grp'
+													+'{\\exp'
+														+'{\\grp'
+															+'{\\str{-}}'
+															+'{\\str{(}}'
+															+'{\\css'
+																+'{\\mixed{\\str{-}}{\\frac{\\str{3}}{\\str{4}}}}'
+																+'{fracNoMargin}'
+															+'}'
+															+'{\\str{)}}'
+														+'}'
+														+'{\\str{2}}'
+													+'}'
+													+'{\\str{&nbsp; + &nbsp;}}'
+													+'{\\exp'
+														+'{\\grp'
+															+'{\\str{(}}'
+															+'{\\css'
+																+'{\\frac{\\str{3}}{\\str{2}}}'
+																+'{fracNoMargin}'
+															+'}'
+															+'{\\str{)}}'
+														+'}'
+														+'{\\str{2}}'
+													+'}'
+												+'}'
+											+'}'
+											+'{\\str{&nbsp;}}'
+											+'{\\grp'
+												+'{\\str{2nd: Combine the values.&nbsp;&nbsp;}}'
+												+'{\\str{-}}'
+												+'{\\str{(}}'
+												+'{\\css'
+													+'{\\mixed{\\str{}}{\\frac{\\str{9}}{\\str{16}}}}'
+													+'{fracNoMargin}'
+												+'}'
+												+'{\\str{)}}'
+												+'{\\str{&nbsp; + &nbsp;}}'
+												+'{\\str{(}}'
+												+'{\\css'
+													+'{\\frac{\\str{9}}{\\str{4}}}'
+													+'{fracNoMargin}'
+												+'}'
+												+'{\\str{)}}'
+											+'}'
+											+'{\\str{&nbsp;}}'
+											+'{\\grp'
+												+'{\\str{<span class=marginLeft198px>&nbsp;&nbsp;&nbsp;}}'
+												+'{\\frac{\\str{$$numAnswer}}{\\str{$$denAnswer}}}'
+											+'}'
+										),
+					helpAnswer: dataUtils.pre(
+								'\\frac{\\str{$$numAnswer}}{\\str{$$denAnswer}}'
+						),
+					template: 'flexy',
+				}
+				,
+				{	// problem 10
+					stateProblem: dataUtils.pre(
+										'\\rowgrp'
+											+'{\\grp'
+												+'{\\str{If&nbsp;&nbsp; a = }}'
+												+'{\\css'
+													+'{\\mixed{\\str{-}}{\\frac{\\str{3}}{\\str{10}}}}'
+													+'{fracNoMargin}'
+												+'}'
+												+'{\\str{&nbsp; and &nbsp; b = }}'
+												+'{\\css'
+													+'{\\frac{\\str{2}}{\\str{5}}}'
+													+'{fracNoMargin}'
+												+'}'
+												+'{\\str{<span class=large>,</span>}}'
+											+'}'
+											+'{\\str{evaluate the following expression<span class=large>:</span>}}'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{$expression}}'
+									),
+					solution: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\frac{\\input{$$numAnswer}}{\\input{$$denAnswer}}}'
+						),
+					answerInstructions: '',
+					numAnswer: '7',
+					denAnswer: '100',
+					expression: '-a<sup>2</sup> + b<sup>2</sup>',
+					firstLines: dataUtils.pre(
+										'{\\str{Whenever you substitute a number value for a variable, put that number inside a parenthesis.}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Therefore:  $$expression&nbsp; is the same as:}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\exp'
+												+'{\\grp'
+													+'{\\str{-}}'
+													+'{\\str{(}}'
+													+'{\\css'
+														+'{\\mixed{\\str{-}}{\\frac{\\str{3}}{\\str{10}}}}'
+														+'{fracNoMargin}'
+													+'}'
+													+'{\\str{)}}'
+												+'}'
+												+'{\\str{2}}'
+											+'}'
+											+'{\\str{&nbsp; + &nbsp;}}'
+											+'{\\exp'
+												+'{\\grp'
+													+'{\\str{(}}'
+													+'{\\css'
+														+'{\\frac{\\str{2}}{\\str{5}}}'
+														+'{fracNoMargin}'
+													+'}'
+													+'{\\str{)}}'
+												+'}'
+												+'{\\str{2}}'
+											+'}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Follow order of operations to evaluate the problem.}}'
+									),
+					firstTable: dataUtils.pre(
+											'{\\grp'
+												+'{\\str{1st: Solve the exponents.}}'
+												+'{\\grp'
+													+'{\\exp'
+														+'{\\grp'
+															+'{\\str{-}}'
+															+'{\\str{(}}'
+															+'{\\css'
+																+'{\\mixed{\\str{-}}{\\frac{\\str{3}}{\\str{10}}}}'
+																+'{fracNoMargin}'
+															+'}'
+															+'{\\str{)}}'
+														+'}'
+														+'{\\str{2}}'
+													+'}'
+													+'{\\str{&nbsp; + &nbsp;}}'
+													+'{\\exp'
+														+'{\\grp'
+															+'{\\str{(}}'
+															+'{\\css'
+																+'{\\frac{\\str{2}}{\\str{5}}}'
+																+'{fracNoMargin}'
+															+'}'
+															+'{\\str{)}}'
+														+'}'
+														+'{\\str{2}}'
+													+'}'
+												+'}'
+											+'}'
+											+'{\\str{&nbsp;}}'
+											+'{\\grp'
+												+'{\\str{2nd: Combine the values.&nbsp;&nbsp;}}'
+												+'{\\str{-}}'
+												+'{\\str{(}}'
+												+'{\\css'
+													+'{\\mixed{\\str{}}{\\frac{\\str{9}}{\\str{100}}}}'
+													+'{fracNoMargin}'
+												+'}'
+												+'{\\str{)}}'
+												+'{\\str{&nbsp; + &nbsp;}}'
+												+'{\\str{(}}'
+												+'{\\css'
+													+'{\\frac{\\str{4}}{\\str{25}}}'
+													+'{fracNoMargin}'
+												+'}'
+												+'{\\str{)}}'
+											+'}'
+											+'{\\str{&nbsp;}}'
+											+'{\\grp'
+												+'{\\str{<span class=marginLeft198px>&nbsp;&nbsp;&nbsp;}}'
+												+'{\\frac{\\str{$$numAnswer}}{\\str{$$denAnswer}}}'
+											+'}'
+										),
+					helpAnswer: dataUtils.pre(
+								'\\frac{\\str{$$numAnswer}}{\\str{$$denAnswer}}'
+						),
+					template: 'flexy',
 				}
         ];
 		/*shuffle = [
