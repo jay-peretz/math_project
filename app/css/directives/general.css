@@ -182,9 +182,6 @@ div.fakeButton {
 .marginLeft80px {
 	margin-left:80px;
 }
-.marginLeft198px {
-	margin-left:198px;
-}
 sup, sub {
 	font-weight:700;
 }
@@ -274,6 +271,12 @@ button.btn.btn-success.bigger {
 button.btn.btn-.huge {
 	font-size:175%;
 }
+.fontsize110 {
+	font-size:110%;
+}
+.fontsize125 {
+	font-size:125%;
+}
 .huge {
 	font-size:175%;
 }
@@ -281,6 +284,9 @@ button.btn.btn-.huge {
 	font-size:175%;
 	font-weight:100;
 	font-family:"Open Sans"
+}
+.lineheight40 {
+	line-height: 40%;
 }
 table td .width160ValignTop {
 	width: 160px;
