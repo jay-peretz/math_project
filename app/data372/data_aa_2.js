@@ -540,7 +540,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					leftoverHelp: '-4o<sup>3</sup> - 3mn &#43; 5n<sup>3</sup>o<sup>2</sup>',
 					template: 'threeElement'
 				}
-        ];/*,
+        ];
 		shuffle = [
 				{ problems: [1,2], total: 1},
 				{ problems: [3,4], total: 1},
@@ -554,7 +554,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 				{ problems: [19,20], total: 1}
 		];
 		return dataUtils.build(desc, template, data, shuffle);
-		*/
-		return dataUtils.build(desc, template, data);
+		
+		//return dataUtils.build(desc, template, data);
     
 }]);
