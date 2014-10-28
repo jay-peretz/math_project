@@ -901,6 +901,252 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 					answer: '-76',
 					template: 'main',
 				}
+				,
+				{	// problem 13
+					variableOneValue: 'x <span class=bigger>=</span>-2',
+					variableTwoValue: '&nbsp;&nbsp;and&nbsp; y <span class=bigger>=</span>-3',
+					expression: 'x<sup> 3</sup> - y<sup> 3</sup>',
+					substitution: '(-2 )<sup> 3</sup> - (-3 )<sup> 3</sup>',
+					firstLines: dataUtils.pre(
+										'{\\str{Whenever you substitute a number value for a variable, put that number inside a parenthesis.}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Therefore:  $$expression&nbsp; is the same as&nbsp; $$substitution}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Follow order of operations to evaluate the problem.}}'
+									),
+					firstTable: dataUtils.pre(
+									'{\\html{'
+										+'<table>'
+											+'<tr>'
+												+'<td>'
+													+'1st: Solve the exponent.'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'(<span class=bigger>-</span>2 )<sup> 3</sup> <span class=bigger>-</span> (<span class=bigger>-</span>3 )<sup> 3</sup>'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'2nd: Combine.'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=bigger>-</span>8  <span class=bigger>-</span> (<span class=bigger>-</span>27 )'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'19'
+												+'</td>'
+											+'</tr>'
+										+'</table>'
+									+'}}'
+								),
+					textAnswer: ' &nbsp; 19',
+					answer: '19',
+					template: 'main',
+				}
+				,
+				{	// problem 14
+					variableOneValue: 'a <span class=bigger>=</span>-7',
+					variableTwoValue: '&nbsp;&nbsp;and&nbsp; b <span class=bigger>=</span>-5',
+					expression: 'a<sup> 3</sup> - b<sup> 3</sup>',
+					substitution: '(-7 )<sup> 3</sup> - (-5 )<sup> 3</sup>',
+					firstLines: dataUtils.pre(
+										'{\\str{Whenever you substitute a number value for a variable, put that number inside a parenthesis.}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Therefore:  $$expression&nbsp; is the same as&nbsp; $$substitution}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Follow order of operations to evaluate the problem.}}'
+									),
+					firstTable: dataUtils.pre(
+									'{\\html{'
+										+'<table>'
+											+'<tr>'
+												+'<td>'
+													+'1st: Solve the exponent.'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'(<span class=bigger>-</span>7 )<sup> 3</sup> <span class=bigger>-</span> (<span class=bigger>-</span>5 )<sup> 3</sup>'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'2nd: Combine.'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=bigger>-</span>343  <span class=bigger>-</span> (<span class=bigger>-</span>125 )'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=bigger>-</span>218'
+												+'</td>'
+											+'</tr>'
+										+'</table>'
+									+'}}'
+								),
+					textAnswer: ' &nbsp; -218',
+					answer: '-218',
+					template: 'main',
+				}
+				,
+				{	// problem 15
+					variableOneValue: 'a <span class=bigger>=</span> 6',
+					variableTwoValue: '&nbsp;&nbsp;and&nbsp; b <span class=bigger>=</span>-4',
+					expression: '2a<sup> 2</sup> / b',
+					substitution: '2( 6 )<sup> 2</sup> / (-4 )',
+					firstLines: dataUtils.pre(
+										'{\\str{Whenever you substitute a number value for a variable, put that number inside a parenthesis.}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Therefore:  $$expression&nbsp; is the same as&nbsp; $$substitution}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Follow order of operations to evaluate the problem.}}'
+									),
+					firstTable: dataUtils.pre(
+									'{\\html{'
+										+'<table>'
+											+'<tr>'
+												+'<td>'
+													+'1st: Solve the exponent.'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'2( 6 )<sup> 2</sup> <span class=bigger>&divide;</span> (<span class=bigger>-</span>4 )'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'2nd: Multiply.'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'2( 36 ) <span class=bigger>&divide;</span> (<span class=bigger>-</span>4 )'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'3rd: Divide.'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'72 <span class=bigger>&divide;</span> (<span class=bigger>-</span>4 )'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=bigger>-</span>18'
+												+'</td>'
+											+'</tr>'
+										+'</table>'
+									+'}}'
+								),
+					textAnswer: ' &nbsp; -18',
+					answer: '-18',
+					template: 'main',
+				}
+				,
+				{	// problem 16
+					variableOneValue: 'x <span class=bigger>= -</span>5',
+					variableTwoValue: '&nbsp;&nbsp;and&nbsp; y <span class=bigger>=</span>10',
+					expression: '4y<sup> 2</sup> / x',
+					substitution: '4( 10 )<sup> 2</sup> / (-5 )',
+					firstLines: dataUtils.pre(
+										'{\\str{Whenever you substitute a number value for a variable, put that number inside a parenthesis.}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Therefore:  $$expression&nbsp; is the same as&nbsp; $$substitution}}'
+										+'{\\str{&nbsp;}}'
+										+'{\\str{Follow order of operations to evaluate the problem.}}'
+									),
+					firstTable: dataUtils.pre(
+									'{\\html{'
+										+'<table>'
+											+'<tr>'
+												+'<td>'
+													+'1st: Solve the exponent.'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'4( 10 )<sup> 2</sup> <span class=bigger>&divide;</span> (<span class=bigger>-</span>5 )'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'2nd: Multiply.'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'4( 100 ) <span class=bigger>&divide;</span> (<span class=bigger>-</span>5 )'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'3rd: Divide.'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'400 <span class=bigger>&divide;</span> (<span class=bigger>-</span>5 )'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=bigger>-</span>80'
+												+'</td>'
+											+'</tr>'
+										+'</table>'
+									+'}}'
+								),
+					textAnswer: ' &nbsp; -80',
+					answer: '-80',
+					template: 'main',
+				}
         ];
 		/*shuffle = [
 				{ problems: [1,2], total: 1},
