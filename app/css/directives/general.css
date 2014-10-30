@@ -8,6 +8,10 @@ body {
 .bottomBlack {
 	border-bottom: 1px solid black;
 }
+.bottomBlackPadded {
+	padding-bottom:6px;
+	border-bottom: 1px solid black;
+}
 .continuedDecimal {
 	border-top: 1px solid black;
 }
@@ -277,6 +281,9 @@ button.btn.btn-.huge {
 .fontsize125 {
 	font-size:125%;
 }
+.fontweightBold {
+	font-weight:bold;
+}
 .huge {
 	font-size:175%;
 }
@@ -287,6 +294,12 @@ button.btn.btn-.huge {
 }
 .lineheight40 {
 	line-height: 40%;
+}
+.rotate-45-clockwise {
+    display: inline-block;
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 table td .width160ValignTop {
 	width: 160px;

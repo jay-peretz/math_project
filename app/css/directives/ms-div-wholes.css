@@ -75,6 +75,9 @@
     padding: 2px 8px 0px 0px;
     border-radius: 0 6px 6px 0;
 }
+.divisionPadTop {
+	padding-top:7px;
+}
 /* tableCollapseStyle class allows border-radius us in ms-long-division.html*/
 .table-collapse-separate {
 	border-collapse:separate;
