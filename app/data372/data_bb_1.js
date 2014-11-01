@@ -313,7 +313,7 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
 												+'</td>'
 												+'<td>'
-													+'<span class=bigger>-</span>( 1 )<sup> 3</sup>'
+													+'(<span class=bigger>-</span>1 )<sup> 3</sup> <span class=bigger>-</span> (<span class=bigger>-</span>4 )'
 												+'</td>'
 											+'</tr>'
 											+'<tr>'
@@ -369,7 +369,7 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
 												+'</td>'
 												+'<td>'
-													+'<span class=bigger>-</span>( 2 )<sup> 3</sup>'
+													+'(<span class=bigger>-</span>2 )<sup> 3</sup> <span class=bigger>-</span> (<span class=bigger>-</span>7 )'
 												+'</td>'
 											+'</tr>'
 											+'<tr>'
@@ -631,7 +631,7 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 											+'}'
 											+'{\\str{&nbsp;}}'
 											+'{\\grp'
-												+'{\\str{<span class=marginLeft198px>&nbsp;&nbsp;&nbsp;}}'
+												+'{\\str{<span class=marginLeft180px>&nbsp;&nbsp;</span>}}'
 												+'{\\frac{\\str{$$numAnswer}}{\\str{$$denAnswer}}}'
 											+'}'
 										),
@@ -758,7 +758,7 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 											+'}'
 											+'{\\str{&nbsp;}}'
 											+'{\\grp'
-												+'{\\str{<span class=marginLeft198px>&nbsp;&nbsp;&nbsp;}}'
+												+'{\\str{<span class=marginLeft180px>&nbsp;&nbsp;</span>}}'
 												+'{\\frac{\\str{$$numAnswer}}{\\str{$$denAnswer}}}'
 											+'}'
 										),
@@ -1205,14 +1205,14 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
 												+'</td>'
 												+'<td>'
-													+'<span class=bigger>-</span>6.42'
+													+'<span class=bigger>-</span>6.634'
 												+'</td>'
 											+'</tr>'
 										+'</table>'
 									+'}}'
 								),
-					textAnswer: ' &nbsp; <span class=bigger>-</span>6.42',
-					answer: '-6.42',
+					textAnswer: ' &nbsp; <span class=bigger>-</span>6.634',
+					answer: '-6.634',
 					template: 'main',
 				}
 				,
@@ -1508,9 +1508,9 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 									),
 					firstTable: dataUtils.pre(
 											'{\\str{&nbsp;}}'
-											+'{\\str{1st: inside brackets (combine).}}'
-											+'{\\str{&nbsp;}}'
 											+'{\\grp'
+												+'{\\str{1st: inside brackets<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(combine).}}'
+												+'{\\str{&nbsp;&nbsp;}}'
 												+'{\\str{(}}'
 												+'{\\css'
 													+'{\\mixed{\\str{-}}{\\frac{\\str{3}}{\\str{4}}}}'
@@ -1631,9 +1631,9 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 									),
 					firstTable: dataUtils.pre(
 											'{\\str{&nbsp;}}'
-											+'{\\str{1st: inside brackets (combine).}}'
-											+'{\\str{&nbsp;}}'
 											+'{\\grp'
+												+'{\\str{1st: inside brackets<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(combine).}}'
+												+'{\\str{&nbsp;&nbsp;}}'
 												+'{\\str{(}}'
 												+'{\\css'
 													+'{\\mixed{\\str{-}}{\\frac{\\str{2}}{\\str{3}}}}'
