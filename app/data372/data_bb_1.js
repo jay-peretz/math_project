@@ -1509,7 +1509,7 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 					firstTable: dataUtils.pre(
 											'{\\str{&nbsp;}}'
 											+'{\\grp'
-												+'{\\str{1st: inside brackets<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(combine).}}'
+												+'{\\str{1st: Inside brackets<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(combine).}}'
 												+'{\\str{&nbsp;&nbsp;}}'
 												+'{\\str{(}}'
 												+'{\\css'
@@ -1632,7 +1632,7 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 					firstTable: dataUtils.pre(
 											'{\\str{&nbsp;}}'
 											+'{\\grp'
-												+'{\\str{1st: inside brackets<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(combine).}}'
+												+'{\\str{1st: Inside brackets<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(combine).}}'
 												+'{\\str{&nbsp;&nbsp;}}'
 												+'{\\str{(}}'
 												+'{\\css'
