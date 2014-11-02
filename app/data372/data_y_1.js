@@ -12,12 +12,19 @@ template = {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '$problem',
-						answer: '\\rowgrp'+
+						problem: '\\rowgrp'
+									+'{\\str{Simplify:}}'
+									+'{\\str{&nbsp;}}'
+									+'{$problem}',
+						answer: '\\css'+
+									'{\\rowgrp'+
+										'{\\ins{Choose the right answer:}}'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}',
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+									'}'+
+									'{tdButtonHeight50px}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -48,15 +55,19 @@ template = {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '$problem',
-						answer: '\\css' +
-										'{\\rowgrp'+
-											'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
-											'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
-											'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-											'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
-										'}'+
-										'{tdButtonHeight}',
+						problem: '\\rowgrp'
+									+'{\\str{Simplify:}}'
+									+'{\\str{&nbsp;}}'
+									+'{$problem}',
+						answer: '\\css'+
+									'{\\rowgrp'+
+										'{\\ins{Choose the right answer:}}'+
+										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+									'}'+
+									'{tdButtonHeight80px}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'

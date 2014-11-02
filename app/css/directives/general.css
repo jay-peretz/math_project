@@ -183,6 +183,15 @@ div.fakeButton {
 .tdButtonHeight > ms-expression > ms-row-group > table > tbody > tr > td {
 	height:60px;
 }
+.tdButtonHeight50px > ms-expression > ms-row-group > table > tbody > tr > td {
+	height:50px;
+}
+.tdButtonHeight80px > ms-expression > ms-row-group > table > tbody > tr > td {
+	height:80px;
+}
+.marg {
+	margin-right:1em;
+}
 .marginLeft80px {
 	margin-left:80px;
 }

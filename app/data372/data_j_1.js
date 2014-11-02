@@ -49,10 +49,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                         answer: '\\css'+
 									'{\\rowgrp'+
 		                                        '{\\ins{$question}}'+
-		                                        '{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\str{\xA0 \xA0 $buttonLabelA}}}'+
-		                                        '{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\str{\xA0 \xA0 $buttonLabelB}}}'+
-		                                        '{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\str{\xA0 \xA0 $buttonLabelC}}}'+
-		                                        '{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\str{\xA0 \xA0 $buttonLabelD}}}'+
+		                                        '{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\str{ $buttonLabelA}}}'+
+		                                        '{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\str{ $buttonLabelB}}}'+
+		                                        '{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\str{ $buttonLabelC}}}'+
+		                                        '{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\str{ $buttonLabelD}}}'+
 		                            '}{well}',
                         controls: {
                             "checkAnswer": true,
@@ -95,10 +95,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-10}{10}{2}{1}{ [[-9, 0], [-3, 0], [6, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 -1}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 2}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 1}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ -1}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{ 2}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{ 1}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ 4}}'),
                 val1: '-9', val2: '-3', val3: '6'
             },
             //problem 2
@@ -107,10 +107,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-10}{10}{2}{1}{ [[5, 0], [-1, 0], [7.5, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 -2}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{\xA0 \xA0 1}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 -1}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ -2}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 1}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ -1}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ 4}}'),
                 val1: '5', val2: '-1', val3: '7.5'
             },
             //problem 3
@@ -119,10 +119,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-10}{10}{2}{1}{ [[-7, 0], [0, 0], [10, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 -1}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 2}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 1}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ -1}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{ 2}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{ 1}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ 4}}'),
                 val1: '-7', val2: '0', val3: '10'
             },
             //problem 4
@@ -131,10 +131,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-2}{2}{1}{4}{ [[1, 0], [-1.5, 0], [-0.25, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 1}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{\xA0 \xA0 0.25}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 -1}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ 1}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 0.25}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 4}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ -1}}'),
                 val1: '1', val2: '-1.5', val3: '-0.25'
             },
             //problem 5
@@ -143,10 +143,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-2}{2}{1}{4}{ [[-0.75, 0], [-1.5, 0], [-0.25, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 1}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{\xA0 \xA0 0.25}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 -1}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ 1}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 0.25}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 4}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ -1}}'),
                 val1: '-0.75', val2: '-1.5', val3: '-0.25'
             },
             //problem 6
@@ -155,10 +155,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-3}{3}{1}{4}{ [[-2.75, 0], [2.75, 0], [-0.25, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 0.5}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{\xA0 \xA0 0.25}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 3}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 -1}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ 0.5}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 0.25}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 3}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ -1}}'),
                 val1: '-2.75', val2: '2.75', val3: '-0.25'
             },
             //problem 7
@@ -167,10 +167,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-2}{2}{1}{5}{ [[0.4, 0], [-1.8, 0], [1.2, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{T}{marg}}{\\str{\xA0 \xA0 0.2}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 1}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 5}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 0.5}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{T}{marg}}{\\str{ 0.2}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{ 1}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 5}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ 0.5}}'),
                 val1: '0.4', val2: '-1.8', val3: '1.2'
             },
             //problem 8
@@ -179,10 +179,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-3}{3}{1}{5}{ [[2.4, 0], [1.8, 0], [-1.2, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 1.2}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 1}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 5}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{\xA0 \xA0 0.2}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ 1.2}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{ 1}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 5}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{ 0.2}}'),
                 val1: '2.4', val2: '1.8', val3: '-1.2'
             },
             //problem 9
@@ -191,10 +191,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-2}{2}{1}{5}{ [[-1.6, 0], [0.8, 0], [-0.2, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 1.2}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{\xA0 \xA0 0.2}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 5}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 0.5}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ 1.2}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 0.2}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 5}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ 0.5}}'),
                 val1: '-1.6', val2: '0.8', val3: '-0.2'
             },
             //problem 10
@@ -203,10 +203,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-12}{12}{2}{0}{ [[-10, 0], [-2, 0], [3, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 0.2}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{\xA0 \xA0 2}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 1}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ 0.2}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 2}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 1}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ 4}}'),
                 val1: '-10', val2: '-2', val3: '3'
             },
             //problem 11
@@ -215,10 +215,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-12}{12}{2}{0}{ [[11, 0], [-7, 0], [-4, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 0.2}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{\xA0 \xA0 2}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 1}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ 0.2}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 2}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 1}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ 4}}'),
                 val1: '11', val2: '-7', val3: '-4'
             },
             //problem 12
@@ -227,10 +227,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-12}{12}{2}{0}{ [[-1, 0], [-11, 0], [3, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 0.2}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{\xA0 \xA0 2}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 1}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ 0.2}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 2}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 1}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ 4}}'),
                 val1: '-1', val2: '-11', val3: '3'
             },
 			//problem 13
@@ -239,10 +239,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-3}{3}{1}{4}{ [[-2.5, 0], [-0.75, 0], [1.25, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 1}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{\xA0 \xA0 0.25}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 -0.5}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ 1}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 0.25}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 4}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ -0.5}}'),
                 val1: '-2.5', val2: '-0.75', val3: '1.25'
             },
             //problem 14
@@ -251,10 +251,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-2}{2}{1}{4}{ [[0.75, 0], [1.75, 0], [-1.25, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 1}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{\xA0 \xA0 0.25}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 -0.5}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ 1}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 0.25}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 4}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ -0.5}}'),
                 val1: '0.75', val2: '1.75', val3: '-1.25'
             },
             //problem 15
@@ -263,10 +263,10 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 chart2: dataUtils.pre('\\graphnum{-3}{3}{1}{4}{ [[-0.5, 0], [1.25, 0], [-2.5, 0]] }{chart2}'),
                 question: 'What is the increment (the distance between any two consecutive ticks) on this graph?', template: 'graphNumberline', answerBtn: 'noAnswer',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 1.25}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 -0.5}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 4}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{\xA0 \xA0 0.25}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{ 1.25}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{ -0.5}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 4}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{ 0.25}}'),
                 val1: '-0.5', val2: '1.25', val3: '-2.5'
             },
           //problem 16

@@ -25,12 +25,18 @@ angular.module('mathSkills').service('data_y_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-								+'$prob',
-						answer: '\\rowgrp'+
+									+'{\\str{Simplify:}}'
+									+'{\\str{&nbsp;}}'
+									+'$prob',
+						answer: '\\css'+
+									'{\\rowgrp'+
+										'{\\ins{Choose the right answer:}}'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}',
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+									'}'+
+									'{tdButtonHeight50px}',
 						controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
@@ -60,12 +66,18 @@ angular.module('mathSkills').service('data_y_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-								+'$prob',
-						answer: '\\rowgrp'+
+									+'{\\str{Simplify:}}'
+									+'{\\str{&nbsp;}}'
+									+'$prob',
+						answer: '\\css'+
+									'{\\rowgrp'+
+										'{\\ins{Choose the right answer:}}'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}',
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+									'}'+
+									'{tdButtonHeight50px}',
 						controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
@@ -100,15 +112,18 @@ angular.module('mathSkills').service('data_y_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-								+'$prob',
+									+'{\\str{Simplify:}}'
+									+'{\\str{&nbsp;}}'
+									+'$prob',
 						answer: '\\css' +
 										'{\\rowgrp'+
+											'{\\ins{Choose the right answer:}}'+
 											'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
 											'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
 											'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
 											'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
 										'}'+
-										'{tdButtonHeight}',
+										'{tdButtonHeight80px}',
 						controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'

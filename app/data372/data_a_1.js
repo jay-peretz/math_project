@@ -16,11 +16,14 @@ angular.module('mathSkills').service('data_a_1', ['dataUtils', function (dataUti
 						'{\\html{Click ALL the correct answers.}}'+
 						'{\\html{&nbsp;}}'+
 						'{\\css{\\html{$instructions}}{blue-text}}',
-						answer: '\\rowgrp'+
-									'{\\grp{\\chkbtn{}{$buttonValueA}{marg}}{$buttonLabelA}}'+
-									'{\\grp{\\chkbtn{}{$buttonValueB}{marg}}{$buttonLabelB}}'+
-									'{\\grp{\\chkbtn{}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-									'{\\grp{\\chkbtn{}{$buttonValueD}{marg}}{$buttonLabelD}}',		
+						answer: '\\css'+
+									'{\\rowgrp'+
+										'{\\grp{\\chkbtn{}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+										'{\\grp{\\chkbtn{}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+										'{\\grp{\\chkbtn{}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+										'{\\grp{\\chkbtn{}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+									'}'+
+									'{tdButtonHeight}',
 						controls: {
 							"checkAnswer": true,
 							"help": true

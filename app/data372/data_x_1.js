@@ -12,13 +12,19 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '$prob',
-						answer: '\\rowgrp'+
-									'{\\ins{Choose the right answer:}}'+
-									'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
-                                    '{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\html{\xA0$buttonLabelB}}}'+
-                                    '{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\html{\xA0$buttonLabelC}}}'+
-                                    '{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\html{\xA0$buttonLabelD}}}',
+						problem: '\\rowgrp'
+									+'{\\str{Simplify:}}'
+									+'{\\str{&nbsp;}}'
+									+'{$prob}',
+						answer: '\\css'+
+									'{\\rowgrp'+
+										'{\\ins{Choose the right answer:}}'+
+										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{$buttonLabelA}}}'+
+										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\html{$buttonLabelB}}}'+
+										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\html{$buttonLabelC}}}'+
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\html{$buttonLabelD}}}'+
+									'}'+
+									'{tdButtonHeight50px}',
                        controls: {
                     	   "checkAnswer": true,
                     	   "help": '\\rowgrp'
@@ -35,16 +41,19 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '$prob',
-						answer: '\\rowgrp'+
-									'{\\ins{Choose the right answer:}}'+
+						problem: '\\rowgrp'
+									+'{\\str{Simplify:}}'
+									+'{\\str{&nbsp;}}'
+									+'{$prob}',
+						answer: '\\css'+
+									'{\\rowgrp'+
+										'{\\ins{Choose the right answer:}}'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
-										'{\\html{&nbsp;}}'+
 										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
-										'{\\html{&nbsp;}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-										'{\\html{&nbsp;}}'+
-										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}',
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+									'}'+
+									'{tdButtonHeight80px}',
                        controls: {
                     	   "checkAnswer": true,
                     	   "help": '\\rowgrp'
@@ -611,31 +620,37 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 						),
 				buttonValueA: 'F',
 				buttonLabelA: dataUtils.pre('\\grp'
-									+'{\\sign{-}}'
-									+'{\\frac'
-										+'{\\fracstr{2a}}{\\fracstr{10}}}'
+									+'{\\mixed'
+										+'{\\str{-}}'
+										+'{\\frac'
+											+'{\\fracstr{2a}}{\\fracstr{10}}}'
+									+'}'
 									+'{\\sign{-}}'
 									+'{\\frac'
 										+'{\\fracstr{b}}{\\fracstr{21}}}'),
 				buttonValueB: 'F',
 				buttonLabelB: dataUtils.pre('\\grp'
-									+'{\\sign{-}}'
-									+'{\\frac'
-										+'{\\fracstr{11a}}{\\fracstr{10}}}'
+									+'{\\mixed'
+										+'{\\str{-}}'
+										+'{\\frac'
+											+'{\\fracstr{11a}}{\\fracstr{10}}}'
+									+'}'
 									+'{\\sign{-}}'
 									+'{\\frac'
 										+'{\\fracstr{17b}}{\\fracstr{21}}}'),
 				buttonValueC: 'T',
 				buttonLabelC: dataUtils.pre('\\grp'
-									+'{\\sign{-}}'
-									+'{\\frac'
-										+'{\\fracstr{a}}{\\fracstr{10}}}'
+									+'{\\mixed'
+										+'{\\str{-}}'
+										+'{\\frac'
+											+'{\\fracstr{a}}{\\fracstr{10}}}'
+									+'}'
 									+'{\\sign{-}}'
 									+'{\\frac'
 										+'{\\fracstr{11b}}{\\fracstr{21}}}'),
 				buttonValueD: 'F',
 				buttonLabelD: dataUtils.pre('\\grp'
-									+'{\\html{&nbsp;&nbsp;&nbsp;&nbsp;}}'
+									+'{\\html{&nbsp;&nbsp;}}'
 									+'{\\frac'
 									+'{\\fracstr{a}}{\\fracstr{10}}}'
 									+'{\\html{&nbsp;+&nbsp;}}'

@@ -36,10 +36,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'Which two athletes had the best times to finish Race #1?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'Runners C & D ran fastest in Race #1',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{T}{marg}}{\\str{\xA0 \xA0 C and D}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 A and B}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 B and C}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 D and E}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{T}{marg}}{\\str{C and D}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{A and B}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{B and C}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{D and E}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //2
@@ -47,10 +47,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'Which athlete took the least amount of time to finish Race #2?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'Runner E ran Race # 2 in the shortest amount of time',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 runner D}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 runner C}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 runner E}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 runner A}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{runner D}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{runner C}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{runner E}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{runner A}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //3
@@ -58,10 +58,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'How many of the runners had a time of 25 seconds or better in at least one race?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: '3 runners ran at least one race in 25 seconds or faster',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 2 runners}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 0 runners}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 1 runner}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{\xA0 \xA0 3 runners}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{2 runners}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{0 runners}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{1 runner}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{3 runners}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //4
@@ -90,10 +90,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'For the four students, which student spent the most for Phone and Gas?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'Maribel spent the most on Phone and Gas expenses.',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 Sam}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 Jerry}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 Maribel}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 Yvonne}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{Sam}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{Jerry}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{Maribel}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{Yvonne}}'),
                 spanQ:'4', spanA:'8'  
             },
             {  //8
@@ -101,10 +101,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'Which service given in these four choices is the most expensive for the four students all together?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'The four students together spent the most on Gas.',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 Phone}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 Internet}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 Cable TV}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{\xA0 \xA0 Gas}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{Phone}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{Internet}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{Cable TV}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{Gas}}'),
                 spanQ:'4', spanA:'8'  
             },
             {  //9
@@ -112,10 +112,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'Which service given in these four choices is the least expensive for the four students all together?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'The lowest expense for the four students together is Cable TV.',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 Phone}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 Internet}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 Cable TV}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 Gas}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{Phone}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{Internet}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{Cable TV}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{Gas}}'),
                 spanQ:'4', spanA:'8'  
             },
             {  //10
@@ -123,10 +123,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'What is the label for the vertical axis?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'The label for the vertical axis is \\"Hourly Wages\\".',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 Employee Classification}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 Hourly Wages for Employees}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 Hourly Wage}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 Hourly Wages at Budget Warehouse}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{Employee Classification}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{Hourly Wages for Employees}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{Hourly Wage}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{Hourly Wages at Budget Warehouse}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //11
@@ -134,10 +134,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'Approximately how much more money per hour does a Class E worker make than Class A worker?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'Class E workers make $16/hour more than Class A workers.',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 $20.00 more}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{\xA0 \xA0 $16.00 more}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 $10.00 more}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 $5.00 more}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{$20.00 more}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{$16.00 more}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{$10.00 more}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{$5.00 more}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //12
@@ -145,10 +145,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'If there are 100 Class A workers, 50 class B workers, 30 class C workers, 10 class D workers, 5 class E workers, and 2 managers, how many employees earn $15 an hour or more?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'There are a total of 17 people who are Class D, Class E or Manager.',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 7 employees}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 15 employees}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 17 employees}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 180 employees}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{7 employees}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{15 employees}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{17 employees}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{180 employees}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //13
@@ -156,10 +156,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'What is the label for the vertical axis?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'The label of the vertical axis is \\"Number of Deer Counted\\".',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 Months}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 Deer Survey in Sonoma County}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 Deer Population}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{\xA0 \xA0 Number of Deer Counted}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{Months}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{Deer Survey in Sonoma County}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{Deer Population}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{Number of Deer Counted}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //14
@@ -167,10 +167,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'Approximately how many deer were counted in July?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'Approximately 445 deer were counted in July.',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{T}{marg}}{\\str{\xA0 \xA0 445 Deer}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 380 Deer}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 410 Deer}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 300 Deer}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{T}{marg}}{\\str{445 Deer}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{380 Deer}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{410 Deer}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{300 Deer}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //15
@@ -178,10 +178,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'Approximately how many deer were counted in the first two periods of the survey (January and April)?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'There were approximately 590 deer counted in January and April.',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 450 Deer}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 680 Deer}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 590 Deer}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 500 Deer}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{450 Deer}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{680 Deer}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{590 Deer}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{500 Deer}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //16
@@ -189,10 +189,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'What is the increment for the horizontal axis?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'The increment for the horizontal axis is 5 million.',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 20 years}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 10 years}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 10 million}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{\xA0 \xA0 5 million}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{20 years}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{10 years}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{10 million}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{5 million}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //17
@@ -200,10 +200,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'Approximately what number represents the population of Country A in 2005?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'The population of Country A in 2005 was approximately 11 million people.',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 12 million}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 18 million}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{\xA0 \xA0 11 million}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{\xA0 \xA0 9 million}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{12 million}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{18 million}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{T}{marg}}{\\str{11 million}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{9 million}}'),
                 spanQ:'5', spanA:'7'  
             },
             {  //18
@@ -211,10 +211,10 @@ angular.module('mathSkills').service('data2A_2', ['dataUtils', function (dataUti
                 question: 'Approximately what number represents the increase in population from 1965 to 1985?', template: 'main', answerBtn: 'noAnswer',
                 answertxt: 'Between 1965 and 1985, the population increased approximately by 1 million.',
                 answerIn: dataUtils.pre('\\rowgrp{$$button1}{$$button2}{$$button3}{$$button4}'),
-                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{\xA0 \xA0 2 million}}'),
-                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{\xA0 \xA0 3 million}}'),
-                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{\xA0 \xA0 4 million}}'),
-                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{\xA0 \xA0 1 million}}'),
+                button1: dataUtils.pre('\\grp{\\btn{A}{F}{marg}}{\\str{2 million}}'),
+                button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{3 million}}'),
+                button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{4 million}}'),
+                button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{1 million}}'),
                 spanQ:'5', spanA:'7'  
             }
         ];

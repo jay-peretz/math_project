@@ -16,11 +16,14 @@ angular.module('mathSkills').service('data2A_1', ['dataUtils', function (dataUti
                                         'Translate the following words into a math expression or an inequality statement:'+
                                         '<br><br><span class=blue-text>$problemStatement</span>'+
                                     '}',
-						answer: '\\rowgrp'+
-                                    '{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
-                                    '{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\html{\xA0$buttonLabelB}}}'+
-                                    '{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\html{\xA0$buttonLabelC}}}'+
-                                    '{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\html{\xA0$buttonLabelD}}}',
+						answer: '\\css' +
+									'{\\rowgrp'+
+										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
+										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\html{\xA0$buttonLabelB}}}'+
+										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\html{\xA0$buttonLabelC}}}'+
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\html{\xA0$buttonLabelD}}}'+
+									'}'+
+								'{tdButtonHeight50px}',
 						controls: {
 							"checkAnswer": true,
 						    "help": true

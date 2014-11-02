@@ -14,15 +14,19 @@ template = {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '$prob',
+						problem: '\\rowgrp'
+									+'{\\str{Simplify:}}'
+									+'{\\str{&nbsp;}}'
+									+'{$prob}',
 						answer: '\\css' +
-											'{\\rowgrp'+
-												'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
-												'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
-												'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-												'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
-											'}'+
-											'{tdButtonHeight}',
+									'{\\rowgrp'+
+										'{\\ins{Choose the right answer:}}'+
+										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+									'}'+
+									'{tdButtonHeight}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -49,15 +53,19 @@ template = {
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '$prob',
+						problem: '\\rowgrp'
+									+'{\\str{Simplify:}}'
+									+'{\\str{&nbsp;}}'
+									+'{$prob}',
 						answer: '\\css' +
-											'{\\rowgrp'+
-												'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
-												'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
-												'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
-												'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
-											'}'+
-											'{tdButtonHeight}',
+									'{\\rowgrp'+
+										'{\\ins{Choose the right answer:}}'+
+										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{$buttonLabelA}}'+
+										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{$buttonLabelB}}'+
+										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{$buttonLabelC}}'+
+										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{$buttonLabelD}}'+
+									'}'+
+									'{$spaceButtons}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -297,6 +305,7 @@ template = {
 										+'{\\str{$$thirdAnswer}}'
 									+'}'
 						),
+			spaceButtons: 'tdButtonHeight80px',
 			template: 'fractionCoefficient'
 			}
 			,
@@ -351,6 +360,7 @@ template = {
 			expoAnswer: '',
 			secondAnswer: 'x',
 			thirdAnswer: '6',
+			spaceButtons: 'tdButtonHeight',
 			template: 'fractionCoefficient'
 			}
 			,
@@ -419,6 +429,7 @@ template = {
 			expoAnswer: '2',
 			secondAnswer: '7b',
 			thirdAnswer: '4a<sup>2</sup>',
+			spaceButtons: 'tdButtonHeight80px',
 			template: 'fractionCoefficient'
 			}
 			,
@@ -469,6 +480,7 @@ template = {
 			expoAnswer: '2',
 			secondAnswer: '3',
 			thirdAnswer: '-n<sup>2</sup>',
+			spaceButtons: 'tdButtonHeight',
 			template: 'fractionCoefficient'
 			}
 			,
@@ -535,6 +547,7 @@ template = {
 			expoAnswer: '',
 			secondAnswer: '2y',
 			thirdAnswer: '5z',
+			spaceButtons: 'tdButtonHeight80px',
 			template: 'fractionCoefficient'
 			}
 			,
@@ -590,6 +603,7 @@ template = {
 			expoAnswer: '',
 			secondAnswer: '2',
 			thirdAnswer: '-11',
+			spaceButtons: 'tdButtonHeight80px',
 			template: 'fractionCoefficient'
 			}
 			
