@@ -33,13 +33,14 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
 										'$problemStatement<br><br>'+
                                         'Choose the expression that is rewritten correctly without any double negatives:'+
                                     '}',
-						answer: '\\btngrp'+
+						answer: '\\css'+
 									'{\\rowgrp'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
 										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\html{\xA0$buttonLabelB}}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\html{\xA0$buttonLabelC}}}'+
 										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\html{\xA0$buttonLabelD}}}'+
-									'}',
+									'}'+
+									'{tdButtonHeight50px}',
 						controls: {
 							"checkAnswer": true,
 						    "help": '\\rowgrp'
@@ -82,13 +83,14 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
 						problem: '\\html{$problemStatement<br><br>'+
 									'Choose the correct math translation for the expression:'+
 									'}',
-						answer: '\\btngrp'+
+						answer: '\\css'+
 									'{\\rowgrp'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
 										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\html{\xA0$buttonLabelB}}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\html{\xA0$buttonLabelC}}}'+
 										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\html{\xA0$buttonLabelD}}}'+
-									'}',
+									'}'+
+									'{tdButtonHeight50px}',
 						controls: {
 							"checkAnswer": true,
 						    "help": "\\html{$helpStatement}"
@@ -121,13 +123,14 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
                                         'Choose the correct math translation for the expression:'+
                                         '<br><br>$problemStatement'+
                                     '}',
-						answer: '\\btngrp'+
+						answer: '\\css'+
 									'{\\rowgrp'+
 										'{\\grp{\\btn{A}{$buttonValueA}{marg}}{\\html{\xA0$buttonLabelA}}}'+
 										'{\\grp{\\btn{B}{$buttonValueB}{marg}}{\\html{\xA0$buttonLabelB}}}'+
 										'{\\grp{\\btn{C}{$buttonValueC}{marg}}{\\html{\xA0$buttonLabelC}}}'+
 										'{\\grp{\\btn{D}{$buttonValueD}{marg}}{\\html{\xA0$buttonLabelD}}}'+
-									'}',
+									'}'+
+									'{tdButtonHeight50px}',
 						controls: {
 							"checkAnswer": true,
 						    "help": "\\html{$helpStatement}"
@@ -137,7 +140,7 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
                                         '$problemStatement'+
                                     '}',
 						answer: '\\css'
-									+'{\\btngrp'
+									+'{\\css'
 										+'{\\rowgrp'
 											+'{\\html{$labelCorrect}}'
 											+'{\\html{&nbsp;}}'
@@ -148,6 +151,7 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
 											+'{\\grp{\\btn{D}{$buttonValueH}{marg}}{\\html{\xA0$buttonLabelH}}}'
 										+'}'
 									+'}'
+									+'{tdButtonHeight50px}'
 								+'{well}',
 						controls: {
 							"checkAnswer": true,
