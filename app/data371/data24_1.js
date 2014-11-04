@@ -30,7 +30,8 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 											+'{\\html{&nbsp;}}',
 								"modalButton": "\\html{Equivalence Chart}",
 								"modalText": '$modalChart',
-								"modalClass": 'modalMiddleLeft'
+								"modalClass": 'modalMiddleLeft',
+								"fixHelpControls": true,
 						}
 					}]
 				}]
