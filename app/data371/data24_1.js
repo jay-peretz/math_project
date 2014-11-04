@@ -65,7 +65,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{&nbsp;}}'
 									+'{\\str{In this case, 60 minutes = 1 hour. 140 minutes is more units than make the next larger time measurement.}}'
 									+'{\\str{&nbsp;}}'
-									+'{\\str{Step #1: Divide 140 minutes by 60 to find out how many \"hours\" are in 140 minutes:}}'
+									+'{\\str{Step #1: Divide 140 minutes by 60 to find out how many \"hours\" are in 140 minutes.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
 										+'<table>'
@@ -128,6 +128,282 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 				template: 'flexy'
 			}
 			,
+			// problem 2
+			{	
+				stateProblem: dataUtils.pre(
+									'\\rowgrp'
+										+'{\\grp'
+											+'{\\str{Simplify:&nbsp; 80 hours.}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+								),
+				solution: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\grp'
+									+'{\\input{$$firstAnswer}}'
+									+'{\\str{&nbsp;$$firstField&nbsp;&nbsp;}}'
+									+'{\\input{$$secondAnswer}}'
+									+'{\\str{&nbsp;$$secondField}}'
+								+'}'
+					),
+				problemNumber: '80',
+				problemUnits: 'hours',
+				firstAnswer: '3',
+				firstField: 'days',
+				secondAnswer: '8',
+				secondField: 'hrs.',
+				firstLines: dataUtils.pre(
+									'{\\str{To simplify a measurement, check to see if the number of given units is equal to or more than the number of those units which make a larger unit of measurement.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In this case, 24 hours = 1 day. $$problemNumber $$problemUnits is more units than make the next larger time measurement.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Step #1: Divide Divide 80 hours by 24 to find out how many \"days\" are in 80 hours.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\html{'
+										+'<table>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class="hiddenSpace">&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;</span>3 days'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=divisorstyleSmall>24</span>'
+												+'</td>'
+												+'<td>'
+													+'<span class=dividendstyleSmall><span class="hiddenSpace">&nbsp;&nbsp;</span>$$problemNumber&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=bigger>-</span><span class=bottomBlackPadded>72</span>'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td class=divisionPadTop>'
+													+'<span class="bigger hiddenSpace">-&nbsp;&nbsp;</span>8 $$problemUnits (now simplified)'
+												+'</td>'
+											+'</tr>'
+										+'</table>'
+									+'}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{80 hours is the same as 3 days 8 hrs.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{3 days 8 hrs. is simplified because the number of hours (8) is less than the 24 hours that make a day.}}'
+								),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{$$firstAnswer&nbsp;$$firstField&nbsp;&nbsp;$$secondAnswer&nbsp;$$secondField}}'
+					),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>60 sec</td><td>=</td><td>1 min</td></tr><tr><td>60 min</td><td>=</td><td>1 hr</td></tr><tr><td>24 hr</td><td>=</td><td>1 day</td><tr><td>7 days</td><td>=</td><td>1 wk</td></tr></table>}'),
+				template: 'flexy'
+			}
+			,
+			// problem 3
+			{	
+				stateProblem: dataUtils.pre(
+									'\\rowgrp'
+										+'{\\grp'
+											+'{\\str{Simplify:&nbsp; 31 inches.}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+								),
+				solution: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\grp'
+									+'{\\input{$$firstAnswer}}'
+									+'{\\str{&nbsp;$$firstField&nbsp;&nbsp;}}'
+									+'{\\input{$$secondAnswer}}'
+									+'{\\str{&nbsp;$$secondField}}'
+								+'}'
+					),
+				problemNumber: '31',
+				problemUnits: 'inches',
+				firstAnswer: '2',
+				firstField: 'ft.',
+				secondAnswer: '7',
+				secondField: 'in.',
+				firstLines: dataUtils.pre(
+									'{\\str{To simplify a measurement, check to see if the number of given units is equal to or more than the number of those units which make a larger unit of measurement.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In this case, 12 inches = 1 foot. 31 inches is more units than make the next larger length measurement.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Step #1: Divide 31 inches by 12 to find out how many \"feet\" are in 31 inches.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\html{'
+										+'<table>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class="hiddenSpace">&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;</span>2 feet'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=divisorstyleSmall>12</span>'
+												+'</td>'
+												+'<td>'
+													+'<span class=dividendstyleSmall><span class="hiddenSpace">&nbsp;&nbsp;</span>$$problemNumber&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=bigger>-</span><span class=bottomBlackPadded>24</span>'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td class=divisionPadTop>'
+													+'<span class="bigger hiddenSpace">-&nbsp;&nbsp;</span>7 $$problemUnits (now simplified)'
+												+'</td>'
+											+'</tr>'
+										+'</table>'
+									+'}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{31 inches is the same as 2 ft. 7 in.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{2 ft. 7 in. is simplified because the number of inches (7) is less than the 12 inches that make a foot.}}'
+								),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{$$firstAnswer&nbsp;$$firstField&nbsp;&nbsp;$$secondAnswer&nbsp;$$secondField}}'
+					),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'flexy'
+			}
+			,
+			// problem 4
+			{	
+				stateProblem: dataUtils.pre(
+									'\\rowgrp'
+										+'{\\grp'
+											+'{\\str{Simplify:&nbsp; 14,000 feet.}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+								),
+				solution: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\grp'
+									+'{\\input{$$firstAnswer}}'
+									+'{\\str{&nbsp;$$firstField&nbsp;&nbsp;}}'
+									+'{\\input{$$secondAnswer}}'
+									+'{\\str{&nbsp;$$secondField}}'
+								+'}'
+					),
+				problemNumber: '14,000',
+				problemUnits: 'feet',
+				firstAnswer: '2',
+				firstField: 'mi.',
+				secondAnswer: '3440',
+				secondField: 'ft.',
+				firstLines: dataUtils.pre(
+									'{\\str{To simplify a measurement, check to see if the number of given units is equal to or more than the number of those units which make a larger unit of measurement.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In this case, 5,280 feet = 1 mile. 14,000 feet is more units than make the next larger length measurement.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Step #1: Divide 14,000 feet by 5,280 to find out how many \"miles\" are in 14,000 feet.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\html{'
+										+'<table>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class="hiddenSpace">&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;</span>2 miles'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=divisorstyleSmall>5280</span>'
+												+'</td>'
+												+'<td>'
+													+'<span class=dividendstyleSmall><span class="hiddenSpace">&nbsp;&nbsp;</span>$$problemNumber&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=bigger>-</span><span class=bottomBlackPadded>10560</span>'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td class=divisionPadTop>'
+													+'<span class="bigger hiddenSpace">-&nbsp;&nbsp;</span>3440 $$problemUnits (now simplified)'
+												+'</td>'
+											+'</tr>'
+										+'</table>'
+									+'}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{14,000 feet is the same as 2 mi. 3440 ft.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{2 mi. 3440 ft. is simplified because the number of feet (3440) is less than the 5280 feet that make a mile.}}'
+								),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{$$firstAnswer&nbsp;$$firstField&nbsp;&nbsp;$$secondAnswer&nbsp;$$secondField}}'
+					),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				template: 'flexy'
+			}
+			,
 			// problem 5
 			{	
 				stateProblem: dataUtils.pre(
@@ -178,7 +454,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 													+'<span class=divisorstyleSmall>16</span>'
 												+'</td>'
 												+'<td>'
-													+'<span class=dividendstyleSmall><span class="hiddenSpace">&nbsp;&nbsp;</span>62&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'
+													+'<span class=dividendstyleSmall><span class="hiddenSpace">&nbsp;&nbsp;</span>62&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'
 												+'</td>'
 											+'</tr>'
 											+'<tr>'
@@ -208,13 +484,197 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{&nbsp;}}'
 									+'{\\str{62 ounces is the same as&nbsp; 3 lbs. 14 oz.}}'
 									+'{\\str{&nbsp;}}'
-									+'{\\str{3 lbs. 14 oz. is simplified because the number of ounces (14) is less than the 16 ounces that make a pound and 3 pounds is less than the 2000 pounds that make a ton.}}'
+									+'{\\str{3 lbs. 14 oz. is simplified because the number of ounces (14) is less than the 16 ounces that make a pound.}}'
 								),
 				helpAnswer: dataUtils.pre(
 								'\\grp'
 									+'{\\str{$$firstAnswer&nbsp;$$firstField&nbsp;&nbsp;$$secondAnswer&nbsp;$$secondField}}'
 					),
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
+				template: 'flexy'
+			}
+			,
+			// problem 6
+			{	
+				stateProblem: dataUtils.pre(
+									'\\rowgrp'
+										+'{\\grp'
+											+'{\\str{Simplify:&nbsp; $$problemNumber $$problemUnits}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+								),
+				solution: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\grp'
+									+'{\\input{$$firstAnswer}}'
+									+'{\\str{&nbsp;$$firstField&nbsp;&nbsp;}}'
+									+'{\\input{$$secondAnswer}}'
+									+'{\\str{&nbsp;$$secondField}}'
+								+'}'
+					),
+				problemNumber: '3260',
+				problemUnits: 'pounds',
+				firstAnswer: '1',
+				firstField: 'ton',
+				secondAnswer: '1260',
+				secondField: 'lbs.',
+				firstLines: dataUtils.pre(
+									'{\\str{To simplify a measurement, check to see if the number of given units is equal to or more than the number of those units which make a larger unit of measurement.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In this case, 2000 pounds = 1 ton. 3260 pounds is more units than make the next larger weight measurement.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Step #1: Divide 3260 pounds by 2000 to find out how many \"tons\" are in 3260 pounds. }}'
+									+'{\\str{&nbsp;}}'
+									+'{\\html{'
+										+'<table>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class="hiddenSpace">&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;</span>1 ton'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=divisorstyleSmall>2000</span>'
+												+'</td>'
+												+'<td>'
+													+'<span class=dividendstyleSmall><span class="hiddenSpace">&nbsp;&nbsp;</span>$$problemNumber&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=bigger>-</span><span class=bottomBlackPadded>2000</span>'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td class=divisionPadTop>'
+													+'<span class="bigger hiddenSpace">&nbsp;</span>1260 pounds (now simplified)'
+												+'</td>'
+											+'</tr>'
+										+'</table>'
+									+'}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{3260 pounds is the same as 1 ton 1260 lbs.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{1 ton 1260 lbs. is simplified because the number of pounds (1260) is less than the 2000 pounds that make a ton.}}'
+								),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{$$firstAnswer&nbsp;$$firstField&nbsp;&nbsp;$$secondAnswer&nbsp;$$secondField}}'
+					),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
+				template: 'flexy'
+			}
+			,
+			// problem 7
+			{	
+				stateProblem: dataUtils.pre(
+									'\\rowgrp'
+										+'{\\grp'
+											+'{\\str{Simplify:&nbsp; $$problemNumber $$problemUnits}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+								),
+				solution: dataUtils.pre(
+							'\\rowgrp'
+								+'{\\grp'
+									+'{\\input{$$firstAnswer}}'
+									+'{\\str{&nbsp;$$firstField&nbsp;&nbsp;}}'
+									+'{\\input{$$secondAnswer}}'
+									+'{\\str{&nbsp;$$secondField}}'
+								+'}'
+					),
+				problemNumber: '19',
+				problemUnits: 'teaspoons',
+				firstAnswer: '6',
+				firstField: 'tbsp.',
+				secondAnswer: '1',
+				secondField: 'tsp.',
+				firstLines: dataUtils.pre(
+									'{\\str{To simplify a measurement, check to see if the number of given units is equal to or more than the number of those units which make a larger unit of measurement.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In this case, 3 teaspoons = 1 tablespoon. 19 teaspoons is more units than make the next larger liquid volume measurement.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Step #1: Divide 19 teaspoons by 3 to find out how many \"tablespoons\" are in 19 teaspoons.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\html{'
+										+'<table>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class="hiddenSpace">&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;</span>6 tablespoons'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=divisorstyleSmall>3</span>'
+												+'</td>'
+												+'<td>'
+													+'<span class=dividendstyleSmall><span class="hiddenSpace">&nbsp;&nbsp;</span>$$problemNumber&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'<span class=bigger>-</span><span class=bottomBlackPadded>18</span>'
+												+'</td>'
+											+'</tr>'
+											+'<tr>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td>'
+													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+												+'</td>'
+												+'<td class=divisionPadTop>'
+													+'<span class="bigger hiddenSpace">&nbsp;&nbsp;&nbsp;</span>1 teaspoon (now simplified)'
+												+'</td>'
+											+'</tr>'
+										+'</table>'
+									+'}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{19 teaspoons is the same as 6 tbsp. 1 tsp.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{6 tbsp. 1 tsp. is simplified because the number of teaspoons (1) is less than the 3 teaspoons that make a tablespoon.}}'
+								),
+				helpAnswer: dataUtils.pre(
+								'\\grp'
+									+'{\\str{$$firstAnswer&nbsp;$$firstField&nbsp;&nbsp;$$secondAnswer&nbsp;$$secondField}}'
+					),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
 				template: 'flexy'
 			}
 			,
