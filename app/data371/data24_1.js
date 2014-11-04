@@ -127,7 +127,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 				template: 'flexy'
 			}
 			,
-			// problem 2
+			// problem 5
 			{	
 				stateProblem: dataUtils.pre(
 									'\\rowgrp'
@@ -152,7 +152,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 				firstLines: dataUtils.pre(
 									'{\\str{To simplify a measurement, check to see if the number of given units is equal to or more than the number of those units which make a larger unit of measurement.}}'
 									+'{\\str{&nbsp;}}'
-									+'{\\str{In this case, 16 ounces = 1 pound. 16 ounces is more units than make the next larger weight measurement.}}'
+									+'{\\str{In this case, 16 ounces = 1 pound. 62 ounces is more units than make the next larger weight measurement.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\str{Step #1: Divide 62 minutes by 16 to find out how many \"pounds\" are in 62 ounces.}}'
 									+'{\\str{&nbsp;}}'
@@ -217,7 +217,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 				template: 'flexy'
 			}
 			,
-			// problem 3
+			// problem 17
 			{	
 				stateProblem: dataUtils.pre(
 									'\\rowgrp'
@@ -373,26 +373,11 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 													+'4 inches'
 												+'</td>'
 											+'</tr>'
-											+'<tr>'
-												+'<td>'
+											+'<tr class=lineheight40>'
+												+'<td colspan=4>'
 													+'&nbsp;'
 												+'</td>'
-												+'<td>'
-													+'&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;'
-												+'</td>'
-												+'<td>'
+												+'<td colspan=3 class=continuedDecimal>'
 													+'&nbsp;'
 												+'</td>'
 											+'</tr>'
@@ -548,26 +533,11 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 													+'&nbsp;'
 												+'</td>'
 											+'</tr>'
-											+'<tr>'
-												+'<td>'
+											+'<tr class=lineheight40>'
+												+'<td colspan=2>'
 													+'&nbsp;'
 												+'</td>'
-												+'<td>'
-													+'&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;'
-												+'</td>'
-												+'<td>'
+												+'<td colspan=5 class=continuedDecimal>'
 													+'&nbsp;'
 												+'</td>'
 											+'</tr>'
