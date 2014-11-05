@@ -234,7 +234,7 @@ angular.module('mathSkills').service('data21_3', ['dataUtils', function (dataUti
                 flip: [[1], ["ln", "rn"], ["ld", "rd"]],
             },
             { //3b problem 8
-                problem: 'Brian earns a 3% commission on his total sales. If he earned $350 in commission last week, what were his total sales?',
+                problem: 'Brian earns a 2.5% commission on his total sales. If he earned $350 in commission last week, what were his total sales?',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '14000.00', template: 'main', pre_symbol: '$', post_symbol: '',
                 dln: '%', drn: 'Amount (Part Quantity)', 
