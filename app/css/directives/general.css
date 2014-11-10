@@ -15,6 +15,9 @@ body {
 .continuedDecimal {
 	border-top: 1px solid black;
 }
+.borderTopBlue {
+	border-top: 1px solid #069;
+}
 .center-tr-txt{
     text-align: center;
 }
