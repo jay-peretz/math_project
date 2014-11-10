@@ -118,7 +118,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{&nbsp;}}'
 									+'{\\str{140 minutes is the same as&nbsp; 2 hr. 20 min.}}'
 									+'{\\str{&nbsp;}}'
-									+'{\\str{2 hr. 20 min. is simplified because the number of hours (2) is less than the 24 hours that make a day and 20 minutes is less than the 60 minutes that make an hour.}}'
+									+'{\\str{2 hr. 20 min. is simplified because 20 minutes is less than the 60 minutes that make an hour.}}'
 								),
 				helpAnswer: dataUtils.pre(
 								'\\grp'
@@ -1790,7 +1790,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
 												+'</td>'
 												+'<td>'
-													+'<span class="hiddenSpace">&nbsp;&nbsp;&nbsp;&nbsp;</span>4 tablespoons'
+													+'<span class="hiddenSpace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>4 tablespoons'
 												+'</td>'
 											+'</tr>'
 											+'<tr>'
@@ -2424,7 +2424,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{40 inches is the same as 3 ft. 4 in.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -2584,7 +2584,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{7 feet is the same as&nbsp; 2 yd. 1 ft.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -2719,7 +2719,8 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 					),
 				firstAnswer: '5',
 				firstField: 'yd.',
-				secondAnswer: '0',
+				secondAnswer: '["0",""]',
+				helpSecondAnswer: '0',
 				secondField: 'ft.',
 				thirdAnswer: '4',
 				thirdField: 'in.',
@@ -2784,7 +2785,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{28 inches is the same as 2 ft. 4 in.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -2944,7 +2945,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{9 feet is the same as&nbsp; 3 yd. 0 ft.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -3052,7 +3053,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 								),
 				helpAnswer: dataUtils.pre(
 								'\\grp'
-									+'{\\str{$$firstAnswer&nbsp;$$firstField&nbsp;&nbsp;$$secondAnswer&nbsp;$$secondField&nbsp;&nbsp;$$thirdAnswer&nbsp;$$thirdField}}'
+									+'{\\str{$$firstAnswer&nbsp;$$firstField&nbsp;&nbsp;$$helpSecondAnswer&nbsp;$$secondField&nbsp;&nbsp;$$thirdAnswer&nbsp;$$thirdField}}'
 					),
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
 				template: 'flexy'
@@ -3144,7 +3145,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{195 seconds is the same as 3 min. 15 sec.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -3304,7 +3305,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{83 minutes is the same as 1 hr. 23 minutes.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -3504,7 +3505,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{145 hours is the same as 6 days 1 hr.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -3664,7 +3665,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{25 days is the same as 3 wk. 4 days.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -3799,7 +3800,8 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 					),
 				firstAnswer: '4',
 				firstField: 'gal.',
-				secondAnswer: '0',
+				secondAnswer: '["0",""]',
+				helpSecondAnswer: '0',
 				secondField: 'qt.',
 				thirdAnswer: '1',
 				thirdField: 'pt.',
@@ -3864,7 +3866,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{11 pints is the same as 5 quarts 1 pt.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -4024,7 +4026,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{8 quarts is the same as 2 gal. 0 qt.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -4132,7 +4134,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 								),
 				helpAnswer: dataUtils.pre(
 								'\\grp'
-									+'{\\str{$$firstAnswer&nbsp;$$firstField&nbsp;&nbsp;$$secondAnswer&nbsp;$$secondField&nbsp;&nbsp;$$thirdAnswer&nbsp;$$thirdField}}'
+									+'{\\str{$$firstAnswer&nbsp;$$firstField&nbsp;&nbsp;$$helpSecondAnswer&nbsp;$$secondField&nbsp;&nbsp;$$thirdAnswer&nbsp;$$thirdField}}'
 					),
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
 				template: 'flexy'
@@ -4246,7 +4248,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{44 teaspoons is the same as 14 tbsp. 2 tsp.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -4406,7 +4408,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{42 tablespoons is the same as 2 cups 10 tbsp.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -4650,7 +4652,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{3000 ounces is the same as 187 lb. 8 oz.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -4810,7 +4812,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{2047 pounds is the same as 1 ton 47 lb.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -5054,7 +5056,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{4400 inches is the same as 366 ft. 8 in.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
@@ -5214,7 +5216,7 @@ angular.module('mathSkills').service('data24_1', ['dataUtils', function (dataUti
 									+'{\\str{8366 feet is the same as 1 mi. 3086 ft.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\html{'
-										+'<table>'
+										+'<table class=label_like>'
 											+'<tr>'
 												+'<td>'
 													+'Therefore:'
