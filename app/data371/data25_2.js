@@ -94,7 +94,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                     children: [{
 						problem: '\\rowgrp'
 									+'{\\html{$problemText}}',
-                        answer: '$fractionAnswer',
+						answer: '\\rowgrp'
+									+'{$fractionAnswer}',
                         controls: {
                             "checkAnswer": true,
                             "help": '\\rowgrp'
@@ -823,7 +824,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				fractionAnswer: dataUtils.pre('\\grp'
 									+'{\\input{$$answer}}'
 						),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
                 helpAddLine: '<br><br>This fraction means 3 <span class=bigger>&divide;</span> 3.',
 				template: 'simpleConversion' },
 				// problem 2
@@ -842,7 +843,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				fractionAnswer: dataUtils.pre('\\grp'
 									+'{\\input{$$answer}}'
 						),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
                 helpAddLine: '<br><br>1 meter is the <u>same</u> distance as 1000 millimeters.',
 				template: 'simpleConversion' },
 				// problem 3
@@ -861,7 +862,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				fractionAnswer: dataUtils.pre('\\grp'
 									+'{\\input{$$answer}}'
 						),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
                 helpAddLine: '<br><br>0.01 hectograms is the <u>same</u> weight as 1 gram.',
 				template: 'simpleConversion' },
 				// problem 4
@@ -880,7 +881,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				fractionAnswer: dataUtils.pre('\\grp'
 									+'{\\input{$$answer}}'
 						),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
                 helpAddLine: '<br><br>1 dL is the <u>same</u> value as 10 cL.',
 				template: 'simpleConversion' },
 				// problem 5
@@ -906,7 +907,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 									+'{\\str{$$answer}}'
 						),
 				helpText: 'Since 1 m is exactly the same as 0.001 km, we know that the fraction of 1 m/0.001 km is equal to 1 whole.<sup>3</sup>&#8260;<sub>5</sub><br>Therefore:<br><br>4 * 1 m / 0.001 km is the same as 4 * 1',
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'simpleMultFracConversion' 
 			},
 				// problem 6
@@ -939,7 +940,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 										+'{\\fracstr{5}}'
 						),
 				helpText: 'Since 100 cg is exactly the same as 1 g, we know that the fraction of 100 cg/1 g is equal to 1 whole.<br>Therefore:<br><br><sup>3</sup>&#8260;<sub>5</sub> * 100 cg/1 g is the same as &nbsp;<sup>3</sup>&#8260;<sub>5</sub> * 1',
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'simpleMultFracConversion' 
 			},
 				// problem 7
@@ -971,7 +972,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 								),
 				helpText: '1 km = 1000 m.<br><br>Therefore, the fraction that equals 1 whole would be:',
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'simpleFractional' 
 			},
 				// problem 8
@@ -1003,7 +1004,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 								),
 				helpText: '1 g = 1000 mg. <br><br>Therefore, the fraction that equals 1 whole would be:',
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'simpleFractional' 
 			},
 			// problem 9
@@ -1035,7 +1036,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 								),
 				helpText: '1 mm = 0.001 m.<br><br>Therefore, the fraction that equals 1 whole would be:',
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'simpleFractional' 
 			},
 			// problem 10
@@ -1067,7 +1068,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 								),
 				helpText: '1 cL = 0.01 L.<br><br>Therefore, the fraction that equals 1 whole would be:',
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'simpleFractional' 
 			},
 			// problem 11
@@ -1099,7 +1100,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
 								),
 				helpText: '0.01 daL = 1 dL.<br><br>Therefore, the fraction that equals 1 whole would be:',
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'simpleFractional' 
 			},
 			// problem 12
@@ -1131,7 +1132,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'{\\fracstr{$$initialNumAmount$$unitsStart}}'
 								),
 				helpText: '0.0001 hg = 1 cg.<br><br>Therefore, the fraction that equals 1 whole would be:',
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'simpleFractional' 
 			},
 			{ // problem 13
@@ -1172,7 +1173,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 											+'}'
 								),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'dollarOneStep' 
 			}
 			,
@@ -1216,7 +1217,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 											+'}'
 								),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'dollarOneStep' 
 			}
 			,
@@ -1259,7 +1260,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 											+'}'
 								),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'dollarOneStep' 
 			}
 			,
@@ -1302,7 +1303,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 											+'}'
 								),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'dollarOneStep' 
 			}
 			,
@@ -1345,7 +1346,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 											+'}'
 								),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'dollarOneStep' 
 			}
 			,
@@ -1392,7 +1393,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 											+'}'
 								),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'quantityOneStep' 
 			} 
 			,
@@ -1438,7 +1439,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 											+'}'
 								),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'quantityOneStep' 
 			}
 			,
@@ -1480,7 +1481,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 											+'}'
 								),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'dollarOneStep' 
 			}
 			,
@@ -1547,7 +1548,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 											+'}'
 								),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'quantityTwoStep' 
 			}
 			,
@@ -1614,7 +1615,7 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 												+'}'
 											+'}'
 								),
-				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td rowspan=3><td rowspan=3>&nbsp;</td><td rowspan=3>METER<br>LITER<br>GRAM</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td><td rowspan=3>&nbsp;</td></tr></table>}'),
 				template: 'quantityTwoStep' 
 			}
         ];
