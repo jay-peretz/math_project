@@ -56,7 +56,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
         data = [
             { //problem 1
                 problem: 'Val Daniels saved $6,300 with her credit union for a period of one year.  The interest rate is 7% compounded semi-annually.  If she made no additional deposits to her account, what is her balance at the end of the year?  (round all dollar amounts to the nearest cent)',
-				 answer: '6,748.72', 
+				 answer: '6748.72', 
 				 helpFirst: "The Basic Interest Formula:", 
 				 timeNumerator: "6",
 				 timeDenominator: "12",
@@ -236,7 +236,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 				 template: "timeFraction"
             },{ //problem 10
                 problem: 'Contansa Aguilera saved $2,000 with her credit union for a period of one year.  The interest rate is 1.4% compounded semi-annually.  If she made no additional deposits to her account, how much interest has her account earned by the end of the year?  (round all dollar amounts to the nearest cent)',
-				 answer: '2028.10', 
+				 answer: '28.10', 
 				 helpFirst: "The Basic Interest Formula:", 
 				 timeNumerator: "6",
 				 timeDenominator: "12",
