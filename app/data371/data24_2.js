@@ -5526,7 +5526,7 @@ angular.module('mathSkills').service('data24_2', ['dataUtils', function (dataUti
 					),
 				firstAnswer: '20',
 				firstField: 'tons',
-				secondAnswer: '257',
+				secondAnswer: '537',
 				secondField: 'lb.',
 				thirdAnswer: '8',
 				thirdField: 'oz.',
@@ -6294,7 +6294,7 @@ angular.module('mathSkills').service('data24_2', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\str{&nbsp;}}'
 										+'{\\str{&nbsp;}}'
-										+'{\\str{<span class=divisorstyleSmall>2</span> <span class=dividendstyleSmall> 17 gal. &nbsp;5 qt.</span>}}'
+										+'{\\str{<span class=divisorstyleSmall>2</span> <span class=dividendstyleSmall> 17 gal. &nbsp;2 qt.</span>}}'
 								),
 				solution: dataUtils.pre(
 							'\\rowgrp'
@@ -6483,7 +6483,7 @@ angular.module('mathSkills').service('data24_2', ['dataUtils', function (dataUti
 													+'&nbsp;'
 												+'</td>'
 												+'<td>'
-													+'3 qt.'
+													+'&nbsp;3 qt.'
 												+'</td>'
 											+'</tr>'
 											+'<tr>'
@@ -6494,7 +6494,7 @@ angular.module('mathSkills').service('data24_2', ['dataUtils', function (dataUti
 													+'<span class=divisorstyleSmall>2</span>'
 												+'</td>'
 												+'<td colspan=4>'
-													+'<span class=dividendstyleSmall><span class="hiddenSpace">&nbsp;&nbsp;</span><span class=line_through>17 gal.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=line_through>2 qt.</span></span>'
+													+'<span class=dividendstyleSmall><span class="hiddenSpace">&nbsp;&nbsp;</span><span class=line_through>17 gal.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=line_through>2 qt.</span></span>'
 												+'</td>'
 											+'</tr>'
 											+'<tr>'
@@ -6514,7 +6514,7 @@ angular.module('mathSkills').service('data24_2', ['dataUtils', function (dataUti
 													+'<span class=fontsize110>+</span>'
 												+'</td>'
 												+'<td>'
-													+'&nbsp;'
+													+'&nbsp;&nbsp;'
 												+'</td>'
 											+'</tr>'
 											+'<tr>'
@@ -6534,7 +6534,7 @@ angular.module('mathSkills').service('data24_2', ['dataUtils', function (dataUti
 													+'&nbsp;'
 												+'</td>'
 												+'<td class=divisionPadTop>'
-													+'<span class=bottomBlackPadded><span class=line_through>4 qt.</span></span>'
+													+'&nbsp;<span class=bottomBlackPadded><span class=line_through>4 qt.</span></span>'
 												+'</td>'
 											+'</tr>'
 											+'<tr>'
@@ -6554,7 +6554,7 @@ angular.module('mathSkills').service('data24_2', ['dataUtils', function (dataUti
 													+'&nbsp;'
 												+'</td>'
 												+'<td class=divisionPadTop>'
-													+'6 qt.'
+													+'&nbsp;6 qt.'
 												+'</td>'
 											+'</tr>'
 											+'<tr>'
@@ -6574,7 +6574,7 @@ angular.module('mathSkills').service('data24_2', ['dataUtils', function (dataUti
 													+'<span class="bigger">-</span>'
 												+'</td>'
 												+'<td>'
-													+'<span class=bottomBlackPadded>6 </span>'
+													+'&nbsp;<span class=bottomBlackPadded>6 </span>'
 												+'</td>'
 											+'</tr>'
 											+'<tr>'
@@ -6594,7 +6594,7 @@ angular.module('mathSkills').service('data24_2', ['dataUtils', function (dataUti
 													+'&nbsp;'
 												+'</td>'
 												+'<td class=divisionPadTop>'
-													+'0'
+													+'&nbsp;0'
 												+'</td>'
 											+'</tr>'
 										+'</table>'
