@@ -363,7 +363,7 @@ angular.module('mathSkills').service('data21_1', ['dataUtils', function (dataUti
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             {  //6b problem 17
-                problem: 'Michelle bought a pair of gloves, and pays $1.44 in sales tax. If the sales tax rate is 8%, what was the cost of the coat without the sales tax included?',
+                problem: 'Michelle bought a pair of gloves, and pays $1.44 in sales tax. If the sales tax rate is 8%, what was the cost of the gloves without the sales tax included?',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '18.00', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', fkey: 'ld', 

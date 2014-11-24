@@ -157,7 +157,7 @@ angular.module('mathSkills').service('data_w_2', ['dataUtils', function (dataUti
 					+'{\\html{Combine the coefficients: <sup>1</sup>&#8260;<sub>5</sub> + <sup>2</sup>&#8260;<sub>5</sub> = <sup>3</sup>&#8260;<sub>5</sub>}}'
 					+'{\\html{&nbsp;}}{\\html{<sup>&minus;2y</sup>&#8260;<sub>3</sub> and <sup>y</sup>&#8260;<sub>2</sub> are like terms because they are both y<sup>1</sup> terms.}}'
 					+'{\\html{Combine the coefficients: <sup>&minus;2</sup>&#8260;<sub>3</sub> + (<sup>&minus;1</sup>&#8260;<sub>2</sub>)  = <sup>&minus;7</sup>&#8260;<sub>6</sub>  }}'),
-			template: 'first', textAnswer: dataUtils.pre('{\\frac{\\fracstr{3x&sup3;}}{\\fracstr{5}}}{\\html{&minus;}}{\\frac{\\fracstr{7y}}{\\fracstr{6}}}')},
+			template: 'first', textAnswer: dataUtils.pre('{\\frac{\\fracstr{3x&sup2;}}{\\fracstr{5}}}{\\html{&minus;}}{\\frac{\\fracstr{7y}}{\\fracstr{6}}}')},
 			
 			// problem 10
 			{prob: dataUtils.pre('\\grp{\\html{(}}{\\frac{\\fracstr{a&sup2;}}{\\fracstr{4}}}{\\html{&minus;}}{\\frac{\\fracstr{3a}}{\\fracstr{4}}}{\\html{)}}{\\html{+}}{\\html{(&minus;}}{\\frac{\\fracstr{a&sup2;}}{\\fracstr{4}}}{\\html{+}}{\\frac{\\fracstr{2a}}{\\fracstr{5}}}{\\html{)}}'),
