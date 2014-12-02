@@ -1619,6 +1619,20 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				template: 'quantityTwoStep' 
 			}
         ];
-
-    return dataUtils.build(desc, template, data);
+		shuffle = [
+				{ problems: [1], total: 1},
+				{ problems: [2,3,4], total: 2},
+				{ problems: [5,6], total: 1},
+				{ problems: [7,8], total: 1},
+				{ problems: [9,10], total: 1},
+				{ problems: [11,12], total: 1},
+				{ problems: [13,14,15,16,17,18,19,20], total: 6},
+				{ problems: [15,16], total: 1},
+				{ problems: [21], total: 1},
+				{ problems: [22], total: 1}
+		];
+    
+    	return dataUtils.build(desc, template, data, shuffle);
+		
+		//return dataUtils.build(desc, template, data);
 }]);
