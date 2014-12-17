@@ -187,7 +187,7 @@ angular.module('mathSkills').service('data_i_2', ['dataUtils', function (dataUti
 			// problem 7
 			{ startNumber: '0.1425', answer: '14.25', finalWhole: '14', finalNum: '1', finalDen: '4', helpNum: '25', helpDen: '100', template: 'twoStepReduce'  },
 			// problem 8
-			{ startNumber: '60', decimalPercent: '0.6', template: 'percentToDecimal'  },
+			{ startNumber: '60', decimalPercent: '[\\"0.6\\",\\"0.60\\",\\".6\\",\\".60\\"]', template: 'percentToDecimal'  },
 			// problem 9
 			{ startNumber: '15.7', decimalPercent: '0.157', template: 'percentToDecimal'  },
 			// problem 10

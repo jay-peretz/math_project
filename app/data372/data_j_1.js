@@ -67,12 +67,8 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
 									'{\\css{'+
 										'\\rowgrp'+
 											'{\\ins{Plot the given values directly on the number line:}}'+
-											'{\\grp{\\str{X = $plotX}}}'+
-											'{\\html{&nbsp;}}'+
-											'{\\grp{\\str{Y = $plotY}}}'+
-											'{\\html{&nbsp;}}'+
-											'{\\grp{\\str{Z = $plotZ}}}'+
-											'{\\html{&nbsp;}}'+
+											'{\\grp{\\str{X = $plotX<span class=marginLeft80px>Y = $plotY</span><span class=marginLeft80px>&nbsp;Z = $plotZ</span>}}}'+
+											'{\\html{&nbsp;}}'+	
 											'{\\grp{\\str{Plotting Instruction: To plot (locate) the given values on the displayed number line, simply move the mouse pointer to that location, then click once.}}}'+
 									'}{well}}',
 						controls: {
@@ -135,7 +131,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 0.25}}'),
                 button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 4}}'),
                 button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ -1}}'),
-                val1: '1', val2: '-1.5', val3: '-0.25'
+                val1: '1', val2: '-1.5', val3: '[\\"-0.25\\",\\"-.25\\"]'
             },
             //problem 5
             {   
@@ -147,7 +143,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 0.25}}'),
                 button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 4}}'),
                 button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ -1}}'),
-                val1: '-0.75', val2: '-1.5', val3: '-0.25'
+                val1: '-0.75', val2: '-1.5', val3: '[\\"-0.25\\",\\"-.25\\"]'
             },
             //problem 6
             {   
@@ -159,7 +155,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 0.25}}'),
                 button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 3}}'),
                 button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ -1}}'),
-                val1: '-2.75', val2: '2.75', val3: '-0.25'
+                val1: '-2.75', val2: '2.75', val3: '[\\"-0.25\\",\\"-.25\\"]'
             },
             //problem 7
             {   
@@ -243,7 +239,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 0.25}}'),
                 button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 4}}'),
                 button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ -0.5}}'),
-                val1: '-2.5', val2: '-0.75', val3: '1.25'
+                val1: '-2.5', val2: '[\\"-0.75\\",\\"-.75\\"]', val3: '1.25'
             },
             //problem 14
             {   
@@ -255,7 +251,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 button2: dataUtils.pre('\\grp{\\btn{B}{T}{marg}}{\\str{ 0.25}}'),
                 button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 4}}'),
                 button4: dataUtils.pre('\\grp{\\btn{D}{F}{marg}}{\\str{ -0.5}}'),
-                val1: '0.75', val2: '1.75', val3: '-1.25'
+                val1: '[\\"-0.75\\",\\"-.75\\"]', val2: '1.75', val3: '-1.25'
             },
             //problem 15
             {   
@@ -267,7 +263,7 @@ angular.module('mathSkills').service('data_j_1', ['dataUtils', function (dataUti
                 button2: dataUtils.pre('\\grp{\\btn{B}{F}{marg}}{\\str{ -0.5}}'),
                 button3: dataUtils.pre('\\grp{\\btn{C}{F}{marg}}{\\str{ 4}}'),
                 button4: dataUtils.pre('\\grp{\\btn{D}{T}{marg}}{\\str{ 0.25}}'),
-                val1: '-0.5', val2: '1.25', val3: '-2.5'
+                val1: '[\\"-0.5\\",\\"-.5\\"]', val2: '1.25', val3: '-2.5'
             },
           //problem 16
             {   
