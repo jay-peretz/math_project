@@ -239,7 +239,7 @@ angular.module('mathSkills').service('data21_4', ['dataUtils', function (dataUti
             },
             
             {  //2a -5
-                problem: 'A textbook normally sells for $34.99. The appliance dealer put it on sale at a 36% discount. What is the amount of the discount?',
+                problem: 'A textbook normally sells for $34.99. The book seller put it on sale at a 36% discount. What is the amount of the discount?',
                 round: 'Round the answer to the nearest cent.',
                 inAnswer: '12.60',
                 answer: '12.60', template: 'dollar', pre_symbol: '$', post_symbol: '', 
@@ -253,7 +253,7 @@ angular.module('mathSkills').service('data21_4', ['dataUtils', function (dataUti
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "keyf"]],
             },
             {  //2b -6
-                problem: 'A textbook was discounted 36%. The amount of the discount was $12.60. What was the original sales price of the refrigerator before the discount?',
+                problem: 'A textbook was discounted 36%. The amount of the discount was $12.60. What was the original sales price of the book before the discount?',
                 round: 'Round the answer to the nearest cent.',
                 inAnswer: '35.00',
                 answer: '35', template: 'dollar', pre_symbol: '$', post_symbol: '', 
@@ -353,7 +353,7 @@ angular.module('mathSkills').service('data21_4', ['dataUtils', function (dataUti
             },
             
             {  //4a -13
-                problem: 'A tuxedo rental was regularly priced at $85. The dealer put it on sale at a 20% discount. What is the amount of the discount?',
+                problem: 'A tuxedo rental was regularly priced at $85. The shop owner put it on sale at a 20% discount. What is the amount of the discount?',
                 round: '',
                 inAnswer: '17.00',
 				answer: '17', template: 'dollar', pre_symbol: '$', post_symbol: '', 

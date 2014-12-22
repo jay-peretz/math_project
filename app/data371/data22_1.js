@@ -266,7 +266,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				}
 		},
         data = [
-            { 
+            { 	// problem 1
                 problem: 'Val Daniels borrowed $1,200 from her credit union for a period of 9 months.  If the simple interest rate is 6%, how much interest did she pay at the end of this loan period?  (round all dollar amounts to the nearest cent)',
 				 answer: '54.00',
 				 helpAnswer: '54.00',
@@ -279,7 +279,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 helpfifth: "3) Calculate the interest:",
 				 helpsixth: "I <span class=bigger>=</span> $1200 <span class=bigger>&sdot;</span> 0.06 <span class=bigger>&sdot;</span> 0.75",
 				 template: 'timeFraction'
-            },{ 
+            },{ // problem 2
                 problem: 'Beth Roberts borrowed $1,400 at a bank where the simple interest rate is 11%.  Assuming she made no down payment on this loan, calculate the total amount she must pay back at the end of one year.  (round all dollar amounts to the nearest cent)',
 				 answer: '1554.00',
 				 helpAnswer: '1,554.00',
@@ -295,7 +295,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 helptenth: "",
 				 template: 'timeWhole'
             },
-			{ 
+			{ 	// problem 3
                 problem: 'Bob Jones borrowed $10,200 at a bank where the simple interest rate is 6%.  Assuming he made no down payment on this loan, calculate the total amount he must pay back at the end of two years.  (round all dollar amounts to the nearest cent)',
 				 answer: '11424.00', 
 				 helpAnswer: '11,424.00',
@@ -304,14 +304,14 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 helpThird: "2) Substitute the values into the formula:",
 				 helpfourth: "I <span class=bigger>=</span> $10,200 <span class=bigger>&sdot;</span> 6% <span class=bigger>&sdot;</span> 2",
 				 helpfifth: "3) Calculate the interest:",
-				 helpsixth: "I <span class=bigger>=</span> $10,200 <span class=bigger>&sdot;</span> 0.6 <span class=bigger>&sdot;</span> 2",
+				 helpsixth: "I <span class=bigger>=</span> $10,200 <span class=bigger>&sdot;</span> 0.06 <span class=bigger>&sdot;</span> 2",
 				 helpseventh: "I <span class=bigger>=</span> $1224.00",
 				 helpeighth: "Total Payment = Principal + Interest",
 				 helpninth: "Total Payment = $10,200 + $1224 <span class=bigger>=</span> $11,424.00",
 				 helptenth: "",
 				 template: 'timeWhole'
             },
-			{ 
+			{ 	// problem 4
                 problem: 'Dana Esquival invested $15,000 into a new company.  She earned 7% simple interest for 2 years.  How much interest did she earn from her investment?',
 				part2Problem: "How much money did the company pay back to Dana? (round all dollar amounts to the nearest cent)",
 				 answer1: '2100.00',
@@ -331,7 +331,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 helptwelfth: "Total Payment = $15,000 + $2,100 <span class=bigger>=</span> $17,100.00",
 				 template: 'timeFractionTwoPartShort'
             },
-			{ 
+			{ 	// problem 5
                 problem: 'Alicia Taylor borrowed $1,600 at a bank where the simple interest rate is 12%.  Assuming she made no down payment on this loan, calculate her pay-off amount at the end of a year. (round all dollar amounts to the nearest cent)',
 				part2Problem: "Determine Alicia's monthly payments. (round all dollar amounts to the nearest cent)",
 				 answer1: '1792.00',
@@ -353,7 +353,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 helpthirteenth: "Monthly Payment <span class=bigger>=</span> $1792.00 <span class=bigger>&divide;</span> 12 <span class=bigger>=</span> 149.33",
 				 template: 'timeWholeTwoPart'
             },
-			{ 
+			{ 	// problem 6
                 problem: 'Jayvis Williams borrowed $100,000 at a bank where the simple interest rate is 4%.  Assuming he made no down payment on this loan, calculate his pay-off amount at the end of ten years. (round all dollar amounts to the nearest cent)',
 				part2Problem: "Determine Jayvis's monthly payments. (round all dollar amounts to the nearest cent)",
 				 answer1: '140000.00',
@@ -375,7 +375,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 helpthirteenth: "Monthly Payment <span class=bigger>=</span> $140,000.00 <span class=bigger>&divide;</span> (10 <span class=bigger>&sdot;</span> 12)<br><span style='visibility:hidden;'>Monthly Payment </span><span class=bigger>=</span> $140,000.00 <span class=bigger>&divide;</span> 120<br><span style='visibility:hidden;'>Monthly Payment </span><span class=bigger>=</span> 1166.67",
 				 template: 'timeWholeTwoPart'
             },
-			{ 
+			{ 	// problem 7
                 problem: 'Sarah Maple borrowed $3,600 for 6 months at a bank where the yearly interest rate is 15%.  She decides to make monthly payments on this loan after making a down-payment of $720.  Calculate the total amount of money she must pay back to the bank in the six months after she makes her down payment (round all dollar amounts to the nearest cent).',
 				part2Problem: "Determine Sarah's monthly payments. (round all dollar amounts to the nearest cent)",
 				 answer1: '3096.00',
@@ -399,7 +399,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 helpthirteenth: "Monthly Payment <span class=bigger>=</span> $3,096.00 <span class=bigger>&divide;</span> 6 <span class=bigger>=</span> $516.00",
 				 template: 'timeFractionTwoPart'
             },
-			{ 
+			{ 	// problem 8
                 problem: 'Greg Schwarz borrowed $2,500 for 3 months at a bank where the yearly interest rate is 12%.  He decides to make monthly payments on this loan after making a down-payment of $100.  Calculate the total amount of money he must pay back to the bank in the three months after he makes his down payment (round all dollar amounts to the nearest cent).',
 				part2Problem: "Determine Greg's monthly payments. (round all dollar amounts to the nearest cent)",
 				 answer1: '2472.00',
@@ -423,7 +423,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 helpthirteenth: "Monthly Payment <span class=bigger>=</span> $2,472.00 <span class=bigger>&divide;</span> 3 <span class=bigger>=</span> $824.00",
 				 template: 'timeFractionTwoPart'
             },
-			{ 
+			{ 	// problem 9
                 problem: 'Contansa Aguilera invested $50,000 into a new company.  She earned 8% simple interest for 3 years.  How much interest did she earn from her investment?',
 				part2Problem: "How much money did the company pay back to Constanza? (round all dollar amounts to the nearest cent)",
 				 answer1: '12000.00',
@@ -442,7 +442,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 helpeleventh: "Total Payment = Principal + Interest",
 				 helptwelfth: "Total Payment = $50,000 + $12,000 <span class=bigger>=</span> $62,000.00",
 				 template: 'timeFractionTwoPartShort'
-            },{ 
+            },{  // problem 10
 				 problem: 'To start his new business, Yousef needed to purchase $180,000 worth of specialized packaging equipment.  He made a 20% downpayment to the manufacturer for this equipment and borrowed the rest at a 5.5% simple interest rate for 6 years.  How much money did Yousef have to pay back to the manufacturer after he made his downpayment?',
 				part2Problem: "What was Yousef's monthly payment? (round all dollar amounts to the nearest cent)",
 				 answer1: '191520.00',
