@@ -13,14 +13,19 @@ angular.module('mathSkills').service('data10_5', ['dataUtils', function (dataUti
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '',
-						answer: '\\pan{2}{10}'
-                                    +'{\\grp'
-                                        +'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
-                                        +'{\\btn{<}{$firstButton}{bigger}}'
-                                        +'{\\btn{=}{$secondButton}{bigger}}'
-                                        +'{\\btn{>}{$thirdButton}{bigger}}'
-										+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+						problem: '\\rowgrp'
+										+'{str{Click on the symbol which makes a true statement.}}'
+										+'{html{&nbsp;}}',
+						answer: '\\pan{3}{9}'
+									+'{\\css'
+										+'{\\grp'
+											+'{\\frac{\\fracstr{$firstNum}}{\\fracstr{$firstDen}}}'
+											+'{\\btn{<}{$firstButton}{bigger}}'
+											+'{\\btn{=}{$secondButton}{bigger}}'
+											+'{\\btn{>}{$thirdButton}{bigger}}'
+											+'{\\frac{\\fracstr{$secondNum}}{\\fracstr{$secondDen}}}'
+										+'}'
+										+'{marginLeft80px}'
 									+'}'
                                 +'}',
 						controls: {

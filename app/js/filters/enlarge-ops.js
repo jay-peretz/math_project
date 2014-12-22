@@ -12,6 +12,8 @@ angular.module('mathSkills').filter('enlargeOps', function () {
             })
 			// replace = if preceded and followed by blanks- avoids replacing ="class">
 			.replace(' = ',' <span class=bigger>=</span> ')
+			// replace not equals (\u2260) 
+			.replace('\u2260','<span class=fontsize110>\u2260</span>')
 			// replace forward slash if not followed by a letter, i.e. /sub>
 			.replace(/\/(?![a-z])/g,'<span class=bigger>&divide;</span>')
 			// replace period when followed by a number, i.e. .5
