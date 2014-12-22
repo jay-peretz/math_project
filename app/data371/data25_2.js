@@ -15,7 +15,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 						problem: '\\rowgrp'
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
-									+'{$fractionQuestion}',
+									+'{$fractionQuestion}'
+									+'{\\html{&nbsp;}}'
+									+'{\\str{$chartAsNeeded}}',
                         answer: '$fractionAnswer',
                         controls: {
                             "checkAnswer": true,
@@ -50,7 +52,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 						problem: '\\rowgrp'
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
-									+'{$fractionQuestion}',
+									+'{$fractionQuestion}'
+									+'{\\html{&nbsp;}}'
+									+'{\\str{$chartAsNeeded}}',
                         answer: '$fractionAnswer',
                         controls: {
                             "checkAnswer": true,
@@ -93,7 +97,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-									+'{\\html{$problemText}}',
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\str{$chartAsNeeded}}',
 						answer: '\\rowgrp'
 									+'{$fractionAnswer}',
                         controls: {
@@ -121,7 +127,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-									+'{\\html{$problemText}}',
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\str{$chartAsNeeded}}',
                         answer: '\\grp'
 									+'{\\css{\\html{$dollarSign}}{bigger}}'
 									+'{\\inputcash{$finalAnswer}}',
@@ -321,7 +329,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-									+'{\\html{$problemText}}',
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\str{$chartAsNeeded}}',
                         answer: '\\grp'
 									+'{\\input{$finalAnswer}}'
 									+'{\\html{$unitsAnswerPer}}',
@@ -553,7 +563,9 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-									+'{\\html{$problemText}}',
+									+'{\\html{$problemText}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\str{$chartAsNeeded}}',
                         answer: '\\grp'
 									+'{\\input{$finalAnswer}}'
 									+'{\\html{$unitsAnswerPer}}',
@@ -810,7 +822,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
         data = [
 				// problem 1
 			{
-				problemText: 'What is the value of this fraction:',
+				chartAsNeeded: '',
+                problemText: 'What is the value of this fraction:',
 				answer: '1',
 				initialNumAmount: '3',
 				initialDenAmount: '3',
@@ -829,7 +842,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				template: 'simpleConversion' },
 				// problem 2
 			{
-				problemText: 'What is the value of this fraction:',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'What is the value of this fraction:',
 				answer: '1',
 				initialNumAmount: '1',
 				initialDenAmount: '1000',
@@ -848,7 +862,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				template: 'simpleConversion' },
 				// problem 3
 			{
-				problemText: 'What is the value of this fraction:',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'What is the value of this fraction:',
 				answer: '1',
 				initialNumAmount: '0.01',
 				initialDenAmount: '1',
@@ -867,7 +882,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				template: 'simpleConversion' },
 				// problem 4
 			{
-				problemText: 'What is the value of this fraction:',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'What is the value of this fraction:',
 				answer: '1',
 				initialNumAmount: '1',
 				initialDenAmount: '10',
@@ -886,7 +902,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				template: 'simpleConversion' },
 				// problem 5
 			{
-				problemText: 'Solve:',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'Solve:',
 				answer: '4',
 				initialNumAmount: '1',
 				initialDenAmount: '0.001',
@@ -912,7 +929,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			},
 				// problem 6
 			{
-				problemText: 'Solve:',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'Solve:',
 				answer: '<sup>3</sup>&#8260;<sub>5</sub>',
 				multiplierNumAmount: '3',
 				multiplierDenAmount: '5',
@@ -945,7 +963,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			},
 				// problem 7
 			{
-				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
 				answer: '1000',
 				initialNumAmount: '1',
 				unitsStart: ' km',
@@ -977,7 +996,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			},
 				// problem 8
 			{
-				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
 				answer: '1000',
 				initialNumAmount: '1',
 				unitsStart: ' g',
@@ -1009,7 +1029,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			},
 			// problem 9
 			{
-				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
 				answer: '0.001',
 				initialNumAmount: '1',
 				unitsStart: ' mm',
@@ -1041,7 +1062,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			},
 			// problem 10
 			{
-				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
 				answer: '0.01',
 				initialNumAmount: '1',
 				unitsStart: ' cL',
@@ -1073,7 +1095,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			},
 			// problem 11
 			{
-				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
 				answer: '0.01',
 				initialNumAmount: '1',
 				unitsStart: ' dL',
@@ -1105,7 +1128,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			},
 			// problem 12
 			{
-				problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'Fill in the blank to create a fraction that equals 1 whole (where the numerator and the denominator represent the same value):',
 				answer: '0.0001',
 				initialNumAmount: '1',
 				unitsStart: ' cg',
@@ -1136,7 +1160,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 				template: 'simpleFractional' 
 			},
 			{ // problem 13
-				problemText: '1 centimeter of cloth costs $0.06.<br>How much would 3 meters of the cloth cost?',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: '1 centimeter of cloth costs $0.06.<br>How much would 3 meters of the cloth cost?',
 				problemAmount: '3',
 				descriptor: '',
 				perSelect: '[\\"cm\\", \\"m\\"]',
@@ -1178,7 +1203,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 14
-				problemText: 'A kiloliter of juice costs $1,250. How much would two liters of the juice cost?',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'A kiloliter of juice costs $1,250. How much would two liters of the juice cost?',
 				problemAmount: '2',
 				descriptor: '',
 				perSelect: '[\\"kL\\", \\"L\\"]',
@@ -1222,7 +1248,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 15
-				problemText: 'Gas costs $1.10 per liter. How much would it cost to buy 5 hectoliters?',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'Gas costs $1.10 per liter. How much would it cost to buy 5 hectoliters?',
 				problemAmount: '5',
 				descriptor: '',
 				perSelect: '[\\"hL\\", \\"dL\\", \\"L\\"]',
@@ -1265,7 +1292,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 16
-				problemText: 'A kilometer of wire costs $145. How much would 250 meters cost?',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'A kilometer of wire costs $145. How much would 250 meters cost?',
 				problemAmount: '250',
 				descriptor: '',
 				perSelect: '[\\"km\\", \\"hM\\", \\"dM\\", \\"m\\"]',
@@ -1308,7 +1336,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 17
-				problemText: '50 milligrams of medication costs $8. How much would 20 grams cost?',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: '50 milligrams of medication costs $8. How much would 20 grams cost?',
 				problemAmount: '20',
 				descriptor: '',
 				perSelect: '[\\"g\\", \\"dG\\", \\"hG\\", \\"mg\\"]',
@@ -1351,7 +1380,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 18
-				problemText: 'The recipe calls for 20 centigrams of sweetener for every liter of juice. How many grams of sweetener would you need if you used six liters of juice?',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'The recipe calls for 20 centigrams of sweetener for every liter of juice. How many grams of sweetener would you need if you used six liters of juice?',
 				statementTwo: 'How many grams of sweetener per liter are needed?',
 				instructionThird: 'How many grams of sweetener would be needed for six liters of juice?',
 				problemAmount: '20',
@@ -1398,7 +1428,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			} 
 			,
 			{ // problem 19
-				problemText: 'The chickens ate 40 grams of food in one day. How many decigrams of food do they eat in seven days?',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'The chickens ate 40 grams of food in one day. How many decigrams of food do they eat in seven days?',
 				statementTwo: 'How many decigrams of food do the chickens eat per day?',
 				instructionThird: 'How many decigrams of food do the chickens eat in seven days?',
 				problemAmount: '40',
@@ -1444,7 +1475,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 20
-				problemText: 'A hectometer of fishing line costs $5. How much would 10 kilometers cost?',
+				chartAsNeeded: 'Use equivalency chart as needed.',
+                problemText: 'A hectometer of fishing line costs $5. How much would 10 kilometers cost?',
 				problemAmount: '10',
 				descriptor: '',
 				perSelect: '[\\"hm\\", \\"m\\"]',
@@ -1486,7 +1518,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 21
-				problemText: 'Three liters of water flow through a pipe in 1 minute. At that rate, how many centiliters flow through the pipe in three hours?',
+				chartAsNeeded: '',
+                problemText: 'Three liters of water flow through a pipe in 1 minute. At that rate, how many centiliters flow through the pipe in three hours?',
 				statementTwo: 'How many centiliters of water flow through the pipe in one hour?',
 				instructionThird: 'How many centiliters of water flow through the pipe in three hours?',
 				typeFraction: 'volume',
@@ -1553,7 +1586,8 @@ angular.module('mathSkills').service('data25_2', ['dataUtils', function (dataUti
 			}
 			,
 			{ // problem 22
-				problemText: 'You ran 1.5 meters in one second. At this rate, how many kilometers could you run in forty-five minutes?',
+				chartAsNeeded: '',
+                problemText: 'You ran 1.5 meters in one second. At this rate, how many kilometers could you run in forty-five minutes?',
 				statementTwo: 'How many kilometers could you run in one minute?',
 				instructionThird: 'How many kilometers could you run in forty-five minutes?',
 				typeFraction: 'distance',
