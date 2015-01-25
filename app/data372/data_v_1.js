@@ -17,50 +17,21 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
             children: []
         },
 	        template = {
-			// first template, integers operation
-			main: {
-                title: 'Volume',
-                children: [{
-                    title: 'Main Answer',
-                    children: [{
-						problem: '\\rowgrp'
-									+'{\\str{$probQuestion}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\image{$illustration}{$alt}}',
-						answer: '\\rowgrp'+
-										'{\\grp'
-											+'{\\input{$answer}}'
-											+'{\\exp{\\str{ft}}{\\input{$expAns}}'
-										+'}',
-						controls: {
-								"checkAnswer": true,
-								"help": '\\rowgrp'
-											+'$firstLines'
-											+'{\\html{&nbsp;}}'
-											+'$firstTable'
-											+'{\\html{&nbsp;}}'
-											+'{css'
-												+'{\\str{Answer:  $textAnswer}}'
-												+'{help-answer-text}'
-											+'}'
-											+'{\\html{&nbsp;}}'
-						}
-					}]
-				}]
-			}
-			,
+			
 			flexy: {
                 title: 'Volume',
                 children: [{
                     title: 'Main Answer',
                     children: [{
-						problem: '$stateProblem',
+						problem: '\\rowgrp'
+										+'{\\str{$probQuestion}}'
+										+'{\\html{&nbsp;}}'
+										//+'{\\image{$illustration}{$alt}}'
+										,
 						answer: '$solution',
 						controls: {
 								"checkAnswer": true,
-								"help": '\\rowgrp'
-											+'$firstLines'
-											+'{\\html{&nbsp;}}'
+								"help": '\\rowgrp' 	 
 											+'$firstTable'
 											+'{\\html{&nbsp;}}'
 											+'{css'
@@ -81,143 +52,471 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 					probQuestion: 'Find the volume of the shape below.',
 					illustration: '',
 					alt: 'rectangular box 8 x 12 x 5',
-					firstLines: dataUtils.pre(
-										'{\\str{Identify the shape: Rectangular Box}}'								
-									),
+					answerInstructions: '',
+					ansNumber: '480',
+					solution: dataUtils.pre(
+									'\\grp'
+										+'{\\input{$$ansNumber}}'
+										+'{\\exp{\\str{ft}}{\\input{3}}}'
+						),
 					firstTable: dataUtils.pre(
-									'{\\html{'
-										+'<table>'
-											+'<tr>'
-												+'<td>'
-													+'Write the formula:'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'V <span class=larger>=</span> L &bull; W &bull; H'
-												+'</td>'
-											+'</tr>'
-											+'<tr>'
-												+'<td>'
-													+'Substitution:'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'V <span class=larger>=</span> (8) &bull; (12) &bull; (5)'
-												+'</td>'
-											+'</tr>'
-											+'<tr>'
-												+'<td>'
-													+'Solve:'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'V <span class=larger>=</span> 480'
-												+'</td>'
-											+'</tr>'
-										+'</table>'
-									+'}}'
+										'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Identify the shape:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{Rectangular Box}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Write the formula:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = L * W * H}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Substitution:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = ( 8 ) * ( 12 ) * ( 5 )}}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Solve:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = $$ansNumber}}'
+										+'}'
 								),
-					textAnswer: ' &nbsp; 480 ft<sup> 3</sup>',
-					answer: '480',
-					expAns: '3',
-					template: 'main',
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{ &nbsp; $$ansNumber}}'
+										+'{\\exp{\\str{ft}}{\\str{3}}}'
+						),
+					template: 'flexy',
+				}
+				,
+				{	// problem 2
+					probQuestion: 'Find the volume of the shape below.',
+					illustration: '',
+					alt: 'rectangular box 10 x 6 x 7',
+					answerInstructions: '',
+					ansNumber: '420',
+					solution: dataUtils.pre(
+									'\\grp'
+										+'{\\input{$$ansNumber}}'
+										+'{\\exp{\\str{cm}}{\\input{3}}}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Identify the shape:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{Rectangular Box}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Write the formula:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = L * W * H}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Substitution:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = ( 10 ) * ( 6 ) * ( 7 )}}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Solve:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = $$ansNumber}}'
+										+'}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{ &nbsp; $$ansNumber}}'
+										+'{\\exp{\\str{cm}}{\\str{3}}}'
+						),
+					template: 'flexy',
+				}
+				,
+				{	// problem 3
+					probQuestion: 'Find the volume of the shape below.',
+					illustration: '',
+					alt: 'rectangular box 6.5 x 4 x 3.25',
+					answerInstructions: '',
+					ansNumber: '84.5',
+					solution: dataUtils.pre(
+									'\\grp'
+										+'{\\input{$$ansNumber}}'
+										+'{\\exp{\\str{in}}{\\input{3}}}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Identify the shape:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{Rectangular Box}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Write the formula:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = L * W * H}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Substitution:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = ( 6.5 ) * ( 4 ) * ( 3.25 )}}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Solve:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = $$ansNumber}}'
+										+'}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{ &nbsp; $$ansNumber}}'
+										+'{\\exp{\\str{in}}{\\str{3}}}'
+						),
+					template: 'flexy',
+				}
+				,
+				{	// problem 4
+					probQuestion: 'Find the volume of the shape below.',
+					illustration: '',
+					alt: 'rectangular box 2.85 x 3.6 x 4.5',
+					answerInstructions: '',
+					ansNumber: '46.17',
+					solution: dataUtils.pre(
+									'\\grp'
+										+'{\\input{$$ansNumber}}'
+										+'{\\exp{\\str{ft}}{\\input{3}}}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Identify the shape:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{Rectangular Box}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Write the formula:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = L * W * H}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Substitution:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = (2.85) * (3.6) * (4.5)}}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Solve:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = $$ansNumber}}'
+										+'}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{ &nbsp; $$ansNumber}}'
+										+'{\\exp{\\str{ft}}{\\str{3}}}'
+						),
+					template: 'flexy',
 				}
 				,
 				{	// problem 5
-					stateProblem: dataUtils.pre(
-									'\\rowgrp'
-										+'{\\str{$$probQuestion}}'
-										+'{\\html{&nbsp;}}'
-										+'{\\image{$$illustration}{$$alt}}'
-									),
+					probQuestion: 'Find the volume of the shape below.  Give the answer as a mixed number.',
+					illustration: '',
+					alt: 'Cube side 3 1/2',
+					answerInstructions: '',
 					solution: dataUtils.pre(
 								'\\css'
 									+'{\\rowgrp'
 										+'{\\str{$$answerInstructions}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\mixed{\\input{$$ansWhole}}{\\frac{\\input{$$numAnswer}}{\\input{$$denAnswer}}}}'
-											+'{\\exp{\\str{m}}{\\input{$$expAns}}}'
+											+'{\\mixed{\\input{42}}{\\frac{\\input{7}}{\\input{8}}}}'
+											+'{\\exp{\\str{m}}{\\input{3}}}'
 										+'}'
 									+'}'
 									+'{marginLeft80px}'
 						),
-					answerInstructions: '',
-					probQuestion: 'Find the volume of the shape below.  Give the answer as a mixed number.',
-					ansWhole: '42',
-					numAnswer: '7',
-					denAnswer: '8',
-					expAns: '3',
-					firstLines: dataUtils.pre(
-										'{\\str{Identify the shape: Cube}}'
-									),
-					helpFraction: dataUtils.pre(
-										'{\\html{'
-											+'<table>'
-												+'<tr>'
-													+'<td>'
-														+'Write the formula:'
-													+'</td>'
-													+'<td>'
-														+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-													+'</td>'
-													+'<td>'
-														+'V <span class=larger>=</span> s<sup> 3</sup>'
-													+'</td>'
-												+'</tr>'
-									),
 					firstTable: dataUtils.pre(
-									'{\\html{'
-										+'<table>'
-											+'<tr>'
-												+'<td>'
-													+'Write the formula:'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'V <span class=larger>=</span> s<sup> 3</sup>'
-												+'</td>'
-											+'</tr>'
-											+'<tr>'
-												+'<td>'
-													+'Substitution:'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'V <span class=larger>=</span><table><tr><td rowspan="3" class=hugeAndThin>(</td><td></td><td>4</td><td rowspan="3" class=hugeAndThin>&nbsp; )</td><td rowspan="3"><span class=exponentLarge><sup>3</sup></span></td></tr><tr><td>-</td><td><hr></td></tr><tr><td></td><td>3</td></tr></table>'
-												+'</td>'
-											+'</tr>'
-											+'<tr>'
-												+'<td>'
-													+'Solve:'
-												+'</td>'
-												+'<td>'
-													+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-												+'</td>'
-												+'<td>'
-													+'V <span class=larger>=</span> 480'
-												+'</td>'
-											+'</tr>'
-										+'</table>'
-									+'}}'
+										'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Identify the shape:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{Cube}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Write the formula:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = s<sup> 3</sup>}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Substitution:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = }}'
+											+'{\\str{(}}'
+											+'{\\css'
+												+'{\\mixed'
+													+'{\\str{3}}'
+													+'{\\frac'
+														+'{\\str{1}}'
+														+'{\\str{2}}'
+													+'}'
+												+'}'
+												+'{fracNoMargin}'
+											+'}'
+											+'{\\str{)}}'
+											+'{\\str{<sup> 3</sup>}}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Solve:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = }}'
+											+'{\\css'
+												+'{\\mixed'
+													+'{\\str{42}}'
+													+'{\\frac'
+														+'{\\str{7}}'
+														+'{\\str{8}}'
+													+'}'
+												+'}'
+												+'{}'
+											+'}'
+										+'}'
 								),
 					helpAnswer: dataUtils.pre(
 									'\\grp'
 										+'{\\css'
-											+'{\\mixed{\\str{$$ansWhole}}{\\frac{\\str{$$numAnswer}}{\\str{$$denAnswer}}}}'
-											+'{fracNoMargin}'
+											+'{\\mixed'
+												+'{\\str{42}}'
+												+'{\\frac'
+													+'{\\str{7}}'
+													+'{\\str{8}}'
+												+'}'
+											+'}'
+											+'{}'
 										+'}'
-										+'{\\exp{\\str{m}}{\\str{$$expAns}}}'
+										+'{\\exp{\\str{m}}{\\str{3}}}'
+						),
+					template: 'flexy',
+				}
+				,
+				{	// problem 6
+					probQuestion: 'Find the volume of the shape below.  Give the answer as a mixed number.',
+					illustration: '',
+					alt: 'cube side 2 3/4',
+					answerInstructions: '',
+					ansWhole: '20',
+					ansNum: '51',
+					ansDen: '64',
+					solution: dataUtils.pre(
+								'\\css'
+									+'{\\rowgrp'
+										+'{\\str{$$answerInstructions}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\mixed{\\input{$$ansWhole}}{\\frac{\\input{$$ansNum}}{\\input{$$ansDen}}}}'
+											+'{\\exp{\\str{in}}{\\input{3}}}'
+										+'}'
+									+'}'
+									+'{marginLeft80px}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Identify the shape:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{Cube}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Write the formula:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = s<sup> 3</sup>}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Substitution:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = }}'
+											+'{\\str{(}}'
+											+'{\\css'
+												+'{\\mixed'
+													+'{\\str{2}}'
+													+'{\\frac'
+														+'{\\str{3}}'
+														+'{\\str{4}}'
+													+'}'
+												+'}'
+												+'{fracNoMargin}'
+											+'}'
+											+'{\\str{)}}'
+											+'{\\str{<sup> 3</sup>}}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Solve:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = }}'
+											+'{\\css'
+												+'{\\mixed'
+													+'{\\str{$$ansWhole}}'
+													+'{\\frac'
+														+'{\\str{$$ansNum}}'
+														+'{\\str{$$ansDen}}'
+													+'}'
+												+'}'
+												+'{}'
+											+'}'
+										+'}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\css'
+											+'{\\mixed'
+												+'{\\str{$$ansWhole}}'
+												+'{\\frac'
+													+'{\\str{$$ansNum}}'
+													+'{\\str{$$ansDen}}'
+												+'}'
+											+'}'
+											+'{}'
+										+'}'
+										+'{\\exp{\\str{in}}{\\str{3}}}'
+						),
+					template: 'flexy',
+				}
+				,
+				{	// problem 7
+					probQuestion: 'Find the volume of the shape below.  Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
+					illustration: '',
+					alt: 'Cylinder radius 7 length 15',
+					answerInstructions: '',
+					answerNumber: '2310',
+					solution: dataUtils.pre(
+								'\\css'
+									+'{\\rowgrp'
+										+'{\\str{$$answerInstructions}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\input{$$answerNumber}}'
+											+'{\\exp{\\str{ft}}{\\input{3}}}'
+										+'}'
+									+'}'
+									+'{marginLeft80px}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Identify the shape:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{Cylinder}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Write the formula:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = }}'
+											+'{\\frac'
+												+'{\\str{22}}'
+												+'{\\str{7}}'
+											+'}'
+											+'{\\str{*}}'
+											+'{\\str{r<sup> 2</sup>}}'
+											+'{\\str{*}}'
+											+'{\\str{h}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Substitution:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = }}'
+											+'{\\frac'
+												+'{\\str{22}}'
+												+'{\\str{7}}'
+											+'}'
+											+'{\\str{*}}'
+											+'{\\str{( 7 )<sup> 2</sup>}}'
+											+'{\\str{*}}'
+											+'{\\str{15}}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Solve:}}'
+												+'{width140}'
+											+'}'
+											+'{\\str{V = $$answerNumber}}'
+										+'}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{ &nbsp; $$answerNumber}}'
+										+'{\\exp{\\str{ft}}{\\str{3}}}'
 						),
 					template: 'flexy',
 				}

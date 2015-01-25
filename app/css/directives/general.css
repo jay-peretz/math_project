@@ -344,6 +344,9 @@ table td .width160ValignTop {
 .width380 {
 	width: 380px;
 }
+.width140 {
+	width: 140px;
+}
 /* .width160 select is used in data8_5.js*/
 .width160 select{
 	width: 160px;
