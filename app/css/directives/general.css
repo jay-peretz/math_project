@@ -141,6 +141,11 @@ div.fakeButton {
 	float:left;
 }
 
+.hyphenByLineThrough {
+	text-decoration:line-through;
+	font-weight:normal;
+}
+
 .help-answer-text {
 	display:block;	
 	margin-left:50px;
