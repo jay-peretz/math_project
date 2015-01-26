@@ -213,6 +213,9 @@ div.fakeButton {
 sup, sub {
 	font-weight:700;
 }
+sup.normalWeight, sub.normalWeight {
+	font-weight:normal;
+}
 /*zero out padding and margin...used in ms-group*/
 .zero td{
     margin: 0;
