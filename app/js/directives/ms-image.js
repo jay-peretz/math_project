@@ -27,21 +27,22 @@ angular.module('mathSkills')
 							$scope.image = '<img src="img/math_project_images/'+imagePath+'" ';
 							if (typeof parser.extractTag($scope.expected).args[1] !== "undefined") {
 								imageAlt = parser.extractTag($scope.expected).args[1];
-								$scope.image += ' alt ='+imageAlt+' ';
+								$scope.image += ' alt ="'+imageAlt+'"';
 							}
 							if (typeof parser.extractTag($scope.expected).args[2] !== "undefined") {
 								imageWidth = parser.extractTag($scope.expected).args[2];
-								$scope.image += ' width ='+imageWidth+' ';
+								$scope.image += ' width ="'+imageWidth+'"';
 							}
 							if (typeof parser.extractTag($scope.expected).args[3] !== "undefined") {
 								imageHeight = parser.extractTag($scope.expected).args[3];
-								$scope.image += ' height ='+imageHeight+' ';
+								$scope.image += ' height ="'+imageHeight+'"';
 							}
-							if (typeof parser.extractTag($scope.expected).args[2] !== "undefined" && typeof parser.extractTag($scope.expected).args[3] !== "undefined") {
+							/*if (typeof parser.extractTag($scope.expected).args[2] !== "undefined" && typeof parser.extractTag($scope.expected).args[3] !== "undefined") {
 								$scope.image += ' style="width:'+imageWidth+'; height:'+imageHeight+';" ';
-							}
+							}*/
 							
 							$scope.image += '>';
+							console.log("$scope.image is: ",$scope.image);
                         }
                     });
                      

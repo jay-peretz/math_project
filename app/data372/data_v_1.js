@@ -26,7 +26,8 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 						problem: '\\rowgrp'
 										+'{\\str{$probQuestion}}'
 										+'{\\html{&nbsp;}}'
-										//+'{\\image{$illustration}{$alt}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\image{$illustration}{$alt}{$imageWidth}{$imageHeight}}'
 										,
 						answer: '$solution',
 						controls: {
@@ -50,7 +51,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
         data = [
 				{	// problem 1
 					probQuestion: 'Find the volume of the shape below.',
-					illustration: '',
+					illustration: 'V.1/Boxes&Cubes/Box_8ftx12ftx5ft.jpg',
 					alt: 'rectangular box 8 x 12 x 5',
 					answerInstructions: '',
 					ansNumber: '480',
@@ -103,7 +104,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 2
 					probQuestion: 'Find the volume of the shape below.',
-					illustration: '',
+					illustration: 'V.1/Boxes&Cubes/Box_10cmx6cmx7cm.jpg',
 					alt: 'rectangular box 10 x 6 x 7',
 					answerInstructions: '',
 					ansNumber: '420',
@@ -156,7 +157,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 3
 					probQuestion: 'Find the volume of the shape below.',
-					illustration: '',
+					illustration: 'V.1/Boxes&Cubes/Box_6.5inx4inx3.jpg',
 					alt: 'rectangular box 6.5 x 4 x 3.25',
 					answerInstructions: '',
 					ansNumber: '84.5',
@@ -209,7 +210,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 4
 					probQuestion: 'Find the volume of the shape below.',
-					illustration: '',
+					illustration: 'V.1/Boxes&Cubes/Box_2.85ftx3.6ftx4.jpg',
 					alt: 'rectangular box 2.85 x 3.6 x 4.5',
 					answerInstructions: '',
 					ansNumber: '46.17',
@@ -262,7 +263,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 5
 					probQuestion: 'Find the volume of the shape below.  Give the answer as a mixed number.',
-					illustration: '',
+					illustration: 'V.1/Boxes&Cubes/Cube_3_1-2m.jpg',
 					alt: 'Cube side 3 1/2',
 					answerInstructions: '',
 					solution: dataUtils.pre(
@@ -357,7 +358,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 6
 					probQuestion: 'Find the volume of the shape below.  Give the answer as a mixed number.',
-					illustration: '',
+					illustration: 'V.1/Boxes&Cubes/Cube_2_3-4in.jpg',
 					alt: 'cube side 2 3/4',
 					answerInstructions: '',
 					ansWhole: '20',
@@ -455,7 +456,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 7
 					probQuestion: 'Find the volume of the shape below.  Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
-					illustration: '',
+					illustration: 'V.1/Cylinders/Cylinder_r7ft_h15ft.jpg',
 					alt: 'Cylinder radius 7 length 15',
 					answerInstructions: '',
 					answerNumber: '2310',
@@ -531,7 +532,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 8
 					probQuestion: 'Find the volume of the shape below.  Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
-					illustration: '',
+					illustration: 'V.1/Cylinders/Cylinder_r3cm_h14cm.jpg',
 					alt: 'Cylinder radius 3 length 14',
 					answerInstructions: '',
 					answerNumber: '396',
@@ -608,7 +609,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 9
 					probQuestion: 'Find the volume of the shape below.  Use 3.14 for &pi;.',
-					illustration: '',
+					illustration: 'V.1/Cylinders/Cylinder_d8in_h12.5in.jpg',
 					alt: 'Cylinder diameter 4 length 12.5',
 					answerInstructions: '',
 					answerNumber: '628',
@@ -658,10 +659,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 												+'{width140}'
 											+'}'
 											+'{\\str{V = }}'
-											+'{\\frac'
-												+'{\\str{22}}'
-												+'{\\str{7}}'
-											+'}'
+											+'{\\str{3.14}}'
 											+'{\\str{*}}'
 											+'{\\exp'
 												+'{\\str{( 4 )}}'
@@ -688,10 +686,11 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				}
 				,
 				{	// problem 10
-					probQuestion: 'Find the volume of the shape below.  Use 3.14 for &pi;.',
-					illustration: '',
+					probQuestion: 'Find the volume of the shape below.  Use 3.14 for &pi;. Round answer to the nearest tenth of a cubic yard.',
+					illustration: 'V.1/Cylinders/Cylinder_d2.6yds_h9yds.jpg',
 					alt: 'Cylinder diameter 2.6 length 9',
 					answerInstructions: '',
+					unroundedNumber: '47.7594',
 					answerNumber: '47.8',
 					measure: 'yd',
 					solution: dataUtils.pre(
@@ -754,7 +753,14 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 												+'{\\str{Solve:}}'
 												+'{width140}'
 											+'}'
-											+'{\\str{V = $$answerNumber}}'
+											+'{\\str{V = $$unroundedNumber}}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Round to the tenth of a cubic yard.}}'
+												+'{}'
+											+'}'
 										+'}'
 								),
 					helpAnswer: dataUtils.pre(
@@ -767,13 +773,13 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 11
 					probQuestion: 'Find the volume of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;. Give the answer as a mixed number.',
-					illustration: '',
+					illustration: 'V.1/Cylinders/Cylinder_d4in_h9_1-2in.jpg',
 					alt: 'Cylinder diameter 4 length 9 1/2',
 					answerInstructions: '',
 					ansWhole: '119',
 					ansNum: '3',
 					ansDen: '7',
-					measure: 'ft',
+					measure: 'in',
 					solution: dataUtils.pre(
 								'\\css'
 									+'{\\rowgrp'
@@ -797,7 +803,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
-											+'{\\str{If the diameter is 4 feet, then we know that the radius is 2 feet (<sup>1</sup>&#8260;<sub>2</sub> of 4 feet).}}'
+											+'{\\str{If the diameter is 4 inches, then we know that the radius is 2 inches (<sup>1</sup>&#8260;<sub>2</sub> of 4 inches).}}'
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
@@ -875,7 +881,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 12
 					probQuestion: 'Find the volume of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;. Give the answer as a mixed number.',
-					illustration: '',
+					illustration: 'V.1/Cylinders/Cylinder_d6ft_h7_1-2ft.jpg',
 					alt: 'Cylinder diameter 6 length 7 1/2',
 					answerInstructions: '',
 					ansWhole: '212',
@@ -983,7 +989,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 13
 					probQuestion: 'Find the volume of the shape below.  Use 3.14 for &pi;.',
-					illustration: '',
+					illustration: 'V.1/Cones/Cone_d10in_h18in.jpg',
 					alt: 'Cone diameter 10 length 18',
 					answerInstructions: '',
 					answerNumber: '471',
@@ -1071,11 +1077,11 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 14
 					probQuestion: 'Find the volume of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;.',
-					illustration: '',
+					illustration: 'V.1/Cones/Cone_r9in_h21in.jpg',
 					alt: 'Cone radius 9 length 21',
 					answerInstructions: '',
 					answerNumber: '1782',
-					measure: 'm',
+					measure: 'in',
 					solution: dataUtils.pre(
 								'\\css'
 									+'{\\rowgrp'
@@ -1158,7 +1164,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 15
 					probQuestion: 'Find the volume of the shape below. Use 3.14 for &pi;.  Round to the hundredth of a cubic centimeter.',
-					illustration: '',
+					illustration: 'V.1/Cones/Cone_d1cm_h4.3cm.jpg',
 					alt: 'Cone diameter 1 length 4.3',
 					answerInstructions: '',
 					infiniteNumber: '1.125166...',
@@ -1238,6 +1244,13 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\str{V = $$infiniteNumber}}'
 										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Round to the hundredth of a cubic centimeter.}}'
+												+'{}'
+											+'}'
+										+'}'
 								),
 					helpAnswer: dataUtils.pre(
 									'\\grp'
@@ -1249,7 +1262,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 16
 					probQuestion: 'Find the volume of the shape below. Use 3.14 for &pi;.  Round to the nearest whole cubic foot.',
-					illustration: '',
+					illustration: 'V.1/Cones/Cone_r3.5ft_h7ft.jpg',
 					alt: 'Cone radius 3.5 length 7',
 					answerInstructions: '',
 					infiniteNumber: '89.75166...',
@@ -1325,6 +1338,13 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\str{V = $$infiniteNumber}}'
 										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Round answer to the nearest whole cubic foot.}}'
+												+'{}'
+											+'}'
+										+'}'
 								),
 					helpAnswer: dataUtils.pre(
 									'\\grp'
@@ -1336,15 +1356,15 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 17
 					probQuestion: 'Find the volume of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;. Give the answer as a mixed number.',
-					illustration: '',
-					alt: 'Cone radius 4 1/5 length 8',
+					illustration: 'V.1/Cones/Cone_r4_1-5ft_h8_1-2ft.jpg',
+					alt: 'Cone radius 4 1/5 length 8 1/2',
 					answerInstructions: '',
 					ansWhole: '157',
 					ansNum: '2',
 					ansDen: '25',
-					measure: 'm',
+					measure: 'ft',
 					solution: dataUtils.pre(
-							'\\pan{3}{9}'
+							'\\pan{2}{10}'
 								+'{\\css'
 									+'{\\rowgrp'
 										+'{\\str{$$answerInstructions}}'
@@ -1419,7 +1439,13 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 												+'{\\str{2}}'
 											+'}'
 											+'{\\str{*}}'
-											+'{\\str{8}}'
+											+'{\\mixed'
+												+'{\\str{8}}'
+												+'{\\frac'
+													+'{\\str{1}}'
+													+'{\\str{2}}'
+												+'}'
+											+'}'
 										+'}'
 										+'{\\str{&nbsp;}}'
 										+'{\\grp'
@@ -1459,7 +1485,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 18
 					probQuestion: 'Find the volume of the shape below. Use <sup>22</sup>&#8260;<sub>7</sub> for &pi;. Give the answer as a mixed number.',
-					illustration: '',
+					illustration: 'V.1/Cones/Cone_r2_2-3ft_h4_1-2ft.jpg',
 					alt: 'Cone radius 2 2/3 length 4',
 					answerInstructions: '',
 					ansWhole: '33',
@@ -1467,7 +1493,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 					ansDen: '21',
 					measure: 'ft',
 					solution: dataUtils.pre(
-							'\\pan{3}{9}'
+							'\\pan{2}{10}'
 								+'{\\css'
 									+'{\\rowgrp'
 										+'{\\str{$$answerInstructions}}'
@@ -1542,7 +1568,13 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 												+'{\\str{2}}'
 											+'}'
 											+'{\\str{*}}'
-											+'{\\str{4}}'
+											+'{\\mixed'
+												+'{\\str{4}}'
+												+'{\\frac'
+													+'{\\str{1}}'
+													+'{\\str{2}}'
+												+'}'
+											+'}'
 										+'}'
 										+'{\\str{&nbsp;}}'
 										+'{\\grp'
@@ -1582,7 +1614,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 19
 					probQuestion: 'Find the volume of the shape below. Use 3.14 for &pi;.',
-					illustration: '',
+					illustration: 'V.1/Spheres/Sphere_d24in.jpg',
 					alt: 'Sphere diameter 24 inches',
 					answerInstructions: '',
 					infiniteNumber: '7234.56',
@@ -1669,7 +1701,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 20
 					probQuestion: 'Find the volume of the shape below. Use 3.14 for &pi;.',
-					illustration: '',
+					illustration: 'V.1/Spheres/Sphere_d30ft.jpg',
 					alt: 'Sphere diameter 30 feet',
 					answerInstructions: '',
 					answerNumber: '14130',
@@ -1757,7 +1789,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 21
 					probQuestion: 'Find the volume of the shape below. Use 3.14 for &pi;. Round to the nearest whole cubic meter.',
-					illustration: '',
+					illustration: 'V.1/Spheres/Sphere_r6.5m.jpg',
 					alt: 'Sphere diameter 6.5 meters',
 					answerInstructions: '',
 					answerNumber: '1150',
@@ -1830,6 +1862,13 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\str{V = $$infiniteNumber}}'
 										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Round answer to the nearest whole cubic meter.}}'
+												+'{}'
+											+'}'
+										+'}'
 								),
 					helpAnswer: dataUtils.pre(
 									'\\grp'
@@ -1841,7 +1880,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 22
 					probQuestion: 'Find the volume of the shape below. Use 3.14 for &pi;. Round to the nearest hundredth of a cubic mile.',
-					illustration: '',
+					illustration: 'V.1/Spheres/Sphere_r0.4miles.jpg',
 					alt: 'Sphere diameter 0.4 miles',
 					answerInstructions: '',
 					answerNumber: '0.27',
@@ -1914,6 +1953,13 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\str{V = $$infiniteNumber}}'
 										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Round answer to the hundredth of a cubic mile.}}'
+												+'{}'
+											+'}'
+										+'}'
 								),
 					helpAnswer: dataUtils.pre(
 									'\\grp'
@@ -1923,9 +1969,9 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 					template: 'flexy',
 				}
 				,
-				{	// problem 21
+				{	// problem 23
 					probQuestion: 'Find the volume of the shape below. Use 3.14 for &pi;. Round to the nearest whole cubic centimeter.',
-					illustration: '',
+					illustration: 'V.1/Spheres/Sphere_d5cm.jpg',
 					alt: 'Sphere diameter 5 centimeters',
 					answerInstructions: '',
 					answerNumber: '65',
@@ -2015,6 +2061,13 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\str{V = $$infiniteNumber}}'
 										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Round answer to the nearest whole cubic centimeter.}}'
+												+'{}'
+											+'}'
+										+'}'
 								),
 					helpAnswer: dataUtils.pre(
 									'\\grp'
@@ -2026,7 +2079,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 24
 					probQuestion: 'Find the volume of the shape below. Use 3.14 for &pi;. Round to the nearest tenth of a cubic foot.',
-					illustration: '',
+					illustration: 'V.1/Spheres/Sphere_d1_4-5ft.jpg',
 					alt: 'Sphere diameter 1 4/5 feet',
 					answerInstructions: '',
 					answerNumber: '3.1',
@@ -2113,6 +2166,13 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 											+'}'
 											+'{\\str{V = $$infiniteNumber}}'
 										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Round answer to the tenth of a cubic foot.}}'
+												+'{}'
+											+'}'
+										+'}'
 								),
 					helpAnswer: dataUtils.pre(
 									'\\grp'
@@ -2124,7 +2184,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 25
 					probQuestion: 'Find the volume of the shape below.',
-					illustration: '',
+					illustration: 'V.1/Pyramids/Pyramid_Base45ft_H30ft_V3.jpg',
 					alt: 'Pyramid base 45 height 30',
 					answerInstructions: '',
 					answerNumber: '20250',
@@ -2209,7 +2269,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 26
 					probQuestion: 'Find the volume of the shape below.',
-					illustration: '',
+					illustration: 'V.1/Pyramids/Pyramids_04_Base18m_H22m_V3.jpg',
 					alt: 'Pyramid base 18 height 22',
 					answerInstructions: '',
 					answerNumber: '2376',
@@ -2292,9 +2352,9 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 					template: 'flexy',
 				}
 				,
-				{	// problem 26
+				{	// problem 27
 					probQuestion: 'Find the volume of the shape below.',
-					illustration: '',
+					illustration: 'V.1/Pyramids/Pyramid_BaseArea625cm_h34.5cm_V2.jpg',
 					alt: 'Pyramid base area 625 height 34.5',
 					answerInstructions: '',
 					answerNumber: '7187.5',
@@ -2383,7 +2443,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 28
 					probQuestion: 'Find the volume of the shape below. Round the answer to the nearest tenth of a cubic inch.',
-					illustration: '',
+					illustration: 'V.1/Pyramids/Pyramid_BaseArea16in2_h2.75in_V2.jpg',
 					alt: 'Pyramid base area 16 height 2.75',
 					answerInstructions: '',
 					answerNumber: '14.7',
@@ -2449,9 +2509,9 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 													+'{\\str{3}}'
 												+'}'
 											+'{\\str{*}}'
-											+'{\\str{( 625 )}}'
+											+'{\\str{( 16 )}}'
 											+'{\\str{*}}'
-											+'{\\str{34.5}}'
+											+'{\\str{2.75}}'
 										+'}'
 										+'{\\str{&nbsp;}}'
 										+'{\\grp'
@@ -2460,6 +2520,13 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 												+'{width140}'
 											+'}'
 											+'{\\str{V = $$infiniteNumber}}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Round answer to the tenth of a cubic inch.}}'
+												+'{}'
+											+'}'
 										+'}'
 								),
 					helpAnswer: dataUtils.pre(
@@ -2472,7 +2539,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 29
 					probQuestion: 'Find the volume of the shape below. Give the answer as a mixed number.',
-					illustration: '',
+					illustration: 'V.1/Pyramids/Pyramid_base2_1-4in_h8_1-2in_V1.jpg',
 					alt: 'Pyramid base 2 1/4 height 8 1/2',
 					answerInstructions: '',
 					ansWhole: '14',
@@ -2607,7 +2674,7 @@ angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUti
 				,
 				{	// problem 29
 					probQuestion: 'Find the volume of the shape below. Give the answer as a fraction.',
-					illustration: '',
+					illustration: 'V.1/Pyramids/Pyramid_base1-2ft_h2_5-8ft_V1.jpg',
 					alt: 'Pyramid base 1/2 height 2 5/8',
 					answerInstructions: '',
 					ansNum: '7',
