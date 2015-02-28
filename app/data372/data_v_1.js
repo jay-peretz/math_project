@@ -1,15 +1,5 @@
 /*global angular */
 
-angular.module('mathSkills').value('data_v_1', {
-    title: 'V.1 Volume',
-    path: 'V.1-volume',
-    children: [{
-        title: 'Volume',
-        children: [] }]
-});
-
-/*global angular */
-
 angular.module('mathSkills').service('data_v_1', ['dataUtils', function (dataUtils) {
     var desc = {
 			title: 'V.1 Volume',
