@@ -55,11 +55,10 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					helpFifthPiece: 'x = -3',
 					helpStringAnswer: '<span class=fontsize110>x</span> &nbsp;<span class=fontsize110>=</span> -3',
-					answerInstructions: '',
 					ansNumber: '-3',
 					solution: dataUtils.pre(
 									'\\grp'
-										+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+										+'{\\str{$$ansVariable = }}'
 										+'{\\input{$$ansNumber}}'
 						),
 					firstTable: dataUtils.pre(
@@ -117,11 +116,10 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					helpFifthPiece: 'x = -2',
 					helpStringAnswer: '<span class=fontsize110>x</span> &nbsp;<span class=fontsize110>=</span> -2',
-					answerInstructions: '',
 					ansNumber: '-2',
 					solution: dataUtils.pre(
 									'\\grp'
-										+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+										+'{\\str{$$ansVariable = }}'
 										+'{\\input{$$ansNumber}}'
 						),
 					firstTable: dataUtils.pre(
@@ -179,11 +177,10 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					helpFifthPiece: 'y = 9',
 					helpStringAnswer: '<span class=fontsize110>y</span> &nbsp;<span class=fontsize110>=</span>&nbsp; 9',
-					answerInstructions: '',
 					ansNumber: '9',
 					solution: dataUtils.pre(
 									'\\grp'
-										+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+										+'{\\str{$$ansVariable = }}'
 										+'{\\input{$$ansNumber}}'
 						),
 					firstTable: dataUtils.pre(
@@ -241,11 +238,10 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					helpFifthPiece: 'y = 13',
 					helpStringAnswer: '<span class=fontsize110>y</span> &nbsp;<span class=fontsize110>=</span> 13',
-					answerInstructions: '',
 					ansNumber: '13',
 					solution: dataUtils.pre(
 									'\\grp'
-										+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+										+'{\\str{$$ansVariable = }}'
 										+'{\\input{$$ansNumber}}'
 						),
 					firstTable: dataUtils.pre(
@@ -311,11 +307,10 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					helpFifthPiece: 'a = -5',
 					helpStringAnswer: '<span class=fontsize110>a</span> &nbsp;<span class=fontsize110>=</span> -5',
-					answerInstructions: '',
 					ansNumber: '-5',
 					solution: dataUtils.pre(
 									'\\grp'
-										+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+										+'{\\str{$$ansVariable = }}'
 										+'{\\input{$$ansNumber}}'
 						),
 					firstTable: dataUtils.pre(
@@ -381,11 +376,10 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					helpFifthPiece: 'a = 6',
 					helpStringAnswer: '<span class=fontsize110>a</span> &nbsp;<span class=fontsize110>=</span> &nbsp;6',
-					answerInstructions: '',
 					ansNumber: '6',
 					solution: dataUtils.pre(
 									'\\grp'
-										+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+										+'{\\str{$$ansVariable = }}'
 										+'{\\input{$$ansNumber}}'
 						),
 					firstTable: dataUtils.pre(
@@ -456,11 +450,10 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					helpFifthPiece: 'x = -180',
 					helpStringAnswer: '<span class=fontsize110>a</span> &nbsp;<span class=fontsize110>=</span> -180',
-					answerInstructions: '',
 					ansNumber: '-180',
 					solution: dataUtils.pre(
 									'\\grp'
-										+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+										+'{\\str{$$ansVariable = }}'
 										+'{\\input{$$ansNumber}}'
 						),
 					firstTable: dataUtils.pre(
@@ -531,13 +524,12 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					helpFifthPiece: 'x = 256',
 					helpStringAnswer: '<span class=fontsize110>x</span> &nbsp;<span class=fontsize110>=</span> &nbsp;256',
-					answerInstructions: '',
 					ansNumber: '256',
 					solution: dataUtils.pre(
 										'\\pan{3}{9}'
 											+'{\\css'
 												+'{\\grp'
-													+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+													+'{\\str{$$ansVariable = }}'
 													+'{\\input{$$ansNumber}}'
 												+'}'
 												+'{marginLeft80px}'
@@ -614,13 +606,12 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					secondHelpResult: 'x = 11',
 					helpStringAnswer: '<span class=fontsize110>x</span> &nbsp;<span class=fontsize110>=</span> &nbsp;11',
-					answerInstructions: '',
 					ansNumber: '11',
 					solution: dataUtils.pre(
 										'\\pan{3}{9}'
 											+'{\\css'
 												+'{\\grp'
-													+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+													+'{\\str{$$ansVariable = }}'
 													+'{\\input{$$ansNumber}}'
 												+'}'
 												+'{marginLeft80px}'
@@ -715,13 +706,12 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					secondHelpResult: 'x = -3',
 					helpStringAnswer: '<span class=fontsize110>x</span> &nbsp;<span class=fontsize110>=</span> -3',
-					answerInstructions: '',
 					ansNumber: '-3',
 					solution: dataUtils.pre(
 										'\\pan{3}{9}'
 											+'{\\css'
 												+'{\\grp'
-													+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+													+'{\\str{$$ansVariable = }}'
 													+'{\\input{$$ansNumber}}'
 												+'}'
 												+'{marginLeft80px}'
@@ -830,13 +820,12 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					secondHelpResult: 'x = -3',*/
 					helpStringAnswer: '<span class=fontsize110>m</span> &nbsp;<span class=fontsize110>=</span> &nbsp;10',
-					answerInstructions: '',
 					ansNumber: '10',
 					solution: dataUtils.pre(
 										'\\pan{3}{9}'
 											+'{\\css'
 												+'{\\grp'
-													+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+													+'{\\str{$$ansVariable = }}'
 													+'{\\input{$$ansNumber}}'
 												+'}'
 												+'{marginLeft80px}'
@@ -945,13 +934,12 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					secondHelpResult: 'x = -3',*/
 					helpStringAnswer: '<span class=fontsize110>y</span> &nbsp;<span class=fontsize110>=</span> -18',
-					answerInstructions: '',
 					ansNumber: '-18',
 					solution: dataUtils.pre(
 										'\\pan{3}{9}'
 											+'{\\css'
 												+'{\\grp'
-													+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+													+'{\\str{$$ansVariable = }}'
 													+'{\\input{$$ansNumber}}'
 												+'}'
 												+'{marginLeft80px}'
@@ -1061,13 +1049,12 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					secondHelpResult: 'b = 1',
 					helpStringAnswer: '<span class=fontsize110>b</span> &nbsp;<span class=fontsize110>=</span> &nbsp;1',
-					answerInstructions: '',
 					ansNumber: '1',
 					solution: dataUtils.pre(
 										'\\pan{3}{9}'
 											+'{\\css'
 												+'{\\grp'
-													+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+													+'{\\str{$$ansVariable = }}'
 													+'{\\input{$$ansNumber}}'
 												+'}'
 												+'{marginLeft80px}'
@@ -1177,13 +1164,12 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					secondHelpResult: 'x = -2',
 					helpStringAnswer: '<span class=fontsize110>x</span> &nbsp;<span class=fontsize110>=</span> -2',
-					answerInstructions: '',
 					ansNumber: '-2',
 					solution: dataUtils.pre(
 										'\\pan{3}{9}'
 											+'{\\css'
 												+'{\\grp'
-													+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+													+'{\\str{$$ansVariable = }}'
 													+'{\\input{$$ansNumber}}'
 												+'}'
 												+'{marginLeft80px}'
@@ -1310,13 +1296,12 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					secondHelpResult: 'x = -9',*/
 					helpStringAnswer: '<span class=fontsize110>x</span> &nbsp;<span class=fontsize110>=</span> -9',
-					answerInstructions: '',
 					ansNumber: '-9',
 					solution: dataUtils.pre(
 										'\\pan{2}{10}'
 											+'{\\css'
 												+'{\\grp'
-													+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+													+'{\\str{$$ansVariable = }}'
 													+'{\\input{$$ansNumber}}'
 												+'}'
 												+'{marginLeft80px}'
@@ -1454,13 +1439,12 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					secondHelpResult: 'x = -9',*/
 					helpStringAnswer: '<span class=fontsize110>m</span> &nbsp;<span class=fontsize110>=</span> &nbsp;10',
-					answerInstructions: '',
 					ansNumber: '10',
 					solution: dataUtils.pre(
 										'\\pan{2}{10}'
 											+'{\\css'
 												+'{\\grp'
-													+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+													+'{\\str{$$ansVariable = }}'
 													+'{\\input{$$ansNumber}}'
 												+'}'
 												+'{marginLeft80px}'
@@ -1583,13 +1567,12 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					secondHelpResult: 'x = 5',
 					helpStringAnswer: '<span class=fontsize110>x</span> &nbsp;<span class=fontsize110>=</span> &nbsp;5',
-					answerInstructions: '',
 					ansNumber: '5',
 					solution: dataUtils.pre(
 										'\\pan{2}{10}'
 											+'{\\css'
 												+'{\\grp'
-													+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+													+'{\\str{$$ansVariable = }}'
 													+'{\\input{$$ansNumber}}'
 												+'}'
 												+'{marginLeft80px}'
@@ -1710,13 +1693,12 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					secondHelpResult: 'a = 84',
 					helpStringAnswer: '<span class=fontsize110>a</span> &nbsp;<span class=fontsize110>=</span> &nbsp;84',
-					answerInstructions: '',
 					ansNumber: '84',
 					solution: dataUtils.pre(
 										'\\pan{2}{10}'
 											+'{\\css'
 												+'{\\grp'
-													+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+													+'{\\str{$$ansVariable = }}'
 													+'{\\input{$$ansNumber}}'
 												+'}'
 												+'{marginLeft80px}'
@@ -1863,13 +1845,12 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					secondHelpResult: 'a = 18',
 					helpStringAnswer: '<span class=fontsize110>a</span> &nbsp;<span class=fontsize110>=</span> &nbsp;18',
-					answerInstructions: '',
 					ansNumber: '18',
 					solution: dataUtils.pre(
 										'\\pan{2}{10}'
 											+'{\\css'
 												+'{\\grp'
-													+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+													+'{\\str{$$ansVariable = }}'
 													+'{\\input{$$ansNumber}}'
 												+'}'
 												+'{marginLeft80px}'
@@ -2016,13 +1997,12 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 						),
 					secondHelpResult: 'x = -27',
 					helpStringAnswer: '<span class=fontsize110>x</span> &nbsp;<span class=fontsize110>=</span> -27',
-					answerInstructions: '',
 					ansNumber: '-27',
 					solution: dataUtils.pre(
 										'\\pan{2}{10}'
 											+'{\\css'
 												+'{\\grp'
-													+'{\\str{<span class=bigger>$$ansVariable</span> = }}'
+													+'{\\str{$$ansVariable = }}'
 													+'{\\input{$$ansNumber}}'
 												+'}'
 												+'{marginLeft80px}'
@@ -2209,7 +2189,6 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 										+'}'
 										
 						),
-					answerInstructions: '',
 					solution: dataUtils.pre(
 										'\\pan{2}{10}'
 											+'{\\css'
@@ -2414,9 +2393,8 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 											+'{fracNoMargin}'
 										+'}'
 						),
-					answerInstructions: '',
 					solution: dataUtils.pre(
-										'\\pan{3}{9}'
+										'\\pan{2}{10}'
 											+'{\\css'
 													+'{\\grp'
 														+'{\\str{<span class=fontsize110>y</span> = }}'
@@ -2478,7 +2456,7 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result:}}'
 												+'{width170}'
 											+'}'
-											+'{\\str{y =}}'
+											+'{\\str{&nbsp;&nbsp;&nbsp;y =}}'
 											+'{$$secondHelpResult}'
 										+'}'
 								),
@@ -2679,7 +2657,6 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 											+'{fracNoMargin}'
 										+'}'
 						),
-					answerInstructions: '',
 					solution: dataUtils.pre(
 										'\\pan{2}{10}'
 											+'{\\css'
@@ -2944,7 +2921,6 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 											+'{fracNoMargin}'
 										+'}'
 						),
-					answerInstructions: '',
 					solution: dataUtils.pre(
 										'\\pan{2}{10}'
 											+'{\\css'
