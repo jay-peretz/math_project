@@ -2268,7 +2268,7 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 				}
 				,
 				{   // problem 22
-					probQuestion: 'Solve for the value of the variable:',
+					probQuestion: 'Solve for the value of the<br> variable:',
 					probStatement: dataUtils.pre(
 										'\\grp'
 											+'{\\str{-2y&nbsp; -}}'
@@ -2394,7 +2394,7 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 										+'}'
 						),
 					solution: dataUtils.pre(
-										'\\pan{2}{10}'
+										'\\pan{3}{9}'
 											+'{\\css'
 													+'{\\grp'
 														+'{\\str{<span class=fontsize110>y</span> = }}'
@@ -2406,7 +2406,7 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 															+'{fracNoMargin}'
 														+'}'
 													+'}'
-												+'{marginLeft80px}'
+												+'{}'
 											+'}'
 						),
 					firstTable: dataUtils.pre(
