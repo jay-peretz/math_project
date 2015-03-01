@@ -313,6 +313,10 @@ button.btn.btn-.huge {
 .fontsize125 {
 	font-size:125%;
 }
+.minusSize125 {
+	font-size:125%;
+	padding-right:4px;
+}
 .fontweightBold {
 	font-weight:bold;
 }
@@ -354,6 +358,18 @@ table td .width160ValignTop {
 }
 .width140 {
 	width: 140px;
+}
+.width170 {
+	width: 170px;
+}
+.width200 {
+	width: 200px;
+}
+.width210 {
+	width: 210px;
+}
+.width220 {
+	width: 220px;
 }
 /* .width160 select is used in data8_5.js*/
 .width160 select{
