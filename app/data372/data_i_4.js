@@ -96,7 +96,7 @@ angular.module('mathSkills').service('data_i_4', ['dataUtils', function (dataUti
 										+'{\\mixed{\\html{$problemWhole}}{\\frac{\\fracstr{$problemNum}}{\\fracstr{$problemDen}}}}'
 										+'{\\str{%}}'
 									+'}',
-						answer: '\\grp{\\input{$decimalPercent}}{\\str{%}}',			
+						answer: '\\grp{\\input{$decimalAnswerPercent}}{\\str{%}}',			
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
