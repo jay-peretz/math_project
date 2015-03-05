@@ -76,6 +76,10 @@ angular.module('mathSkills')
                             if (parsedExpected[0] === '[') {
                                 var possibleAnswers = JSON.parse(parsedExpected).map(String);
                                 var answerIndex = possibleAnswers.indexOf($scope.answer);
+								// "flip" relies on retension of problemData.index, but ms-reduce-fraction.js factorization requires that problemData.index be reset
+								if (problemData.checkData("flip") === false) {
+									problemData.resetIndex();
+								}
                                 if (answerIndex !== -1) {
                                     var correctAnswerIndex = problemData.index(answerIndex);
                                     if (correctAnswerIndex === answerIndex) {
