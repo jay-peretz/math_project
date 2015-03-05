@@ -42,7 +42,7 @@ angular.module('mathSkills')
 							}*/
 							
 							$scope.image += '>';
-							console.log("$scope.image is: ",$scope.image);
+							//console.log("$scope.image is: ",$scope.image);
                         }
                     });
                      
