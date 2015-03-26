@@ -2203,15 +2203,17 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 										+'}'
 										+'{\\str{ = }}'
 										+'{\\css'
-											+'{\\mixed'
-												+'{\\str{}}'
-												+'{\\frac'
-													+'{\\frac'
-														+'{\\str{14}}'
-														+'{\\str{15}}'
-													+'}'
-													+'{\\str{&nbsp;&nbsp;7&nbsp;&nbsp;}}'
-												+'}'
+											+'{\\frac'
+												+'{\\str{14}}'
+												+'{\\str{15}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+										+'{\\str{ / }}'
+										+'{\\css'
+											+'{\\frac'
+												+'{\\str{7}}'
+												+'{\\str{1}}'
 											+'}'
 											+'{fracNoMargin}'
 										+'}'
@@ -2405,15 +2407,17 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 										+'}'
 										+'{\\str{ = }}'
 										+'{\\css'
-											+'{\\mixed'
-												+'{\\str{}}'
-												+'{\\frac'
-													+'{\\frac'
-														+'{\\str{11}}'
-														+'{\\str{10}}'
-													+'}'
-													+'{\\str{&nbsp;-2&nbsp;&nbsp;}}'
-												+'}'
+											+'{\\frac'
+												+'{\\str{11}}'
+												+'{\\str{10}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+										+'{\\str{ / }}'
+										+'{\\css'
+											+'{\\frac'
+												+'{\\str{-2&nbsp;&nbsp;}}'
+												+'{\\str{1}}'
 											+'}'
 											+'{fracNoMargin}'
 										+'}'
@@ -3043,7 +3047,7 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 					template: 'flexy',
 				}
         ];
-		/*shuffle = [
+		shuffle = [
 				{ problems: [1,2], total: 1},
 				{ problems: [3,4], total: 1},
 				{ problems: [5,6], total: 1},
@@ -3055,13 +3059,10 @@ angular.module('mathSkills').service('data_cc_1', ['dataUtils', function (dataUt
 				{ problems: [17,18], total: 1},
 				{ problems: [19,20], total: 1},
 				{ problems: [21,22], total: 1},
-				{ problems: [23,24], total: 1},
-				{ problems: [25,26], total: 1},
-				{ problems: [27,28], total: 1},
-				{ problems: [29,30], total: 1}
+				{ problems: [23,24], total: 1}
 		];
     
-    	return dataUtils.build(desc, template, data, shuffle);*/
+    	return dataUtils.build(desc, template, data, shuffle);
 		
-		return dataUtils.build(desc, template, data);
+		//return dataUtils.build(desc, template, data);
 }]);
