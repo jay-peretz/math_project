@@ -347,7 +347,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
             },{  // 17
-                problem: 'On her orchard a farmer has 15 peach trees for every 10 Plum tree\'s and 6 orange trees.', 
+                problem: 'On her orchard a farmer has 15 peach trees for every 10 plum trees and 6 orange trees.', 
                 question: 'If the farmer has 120 peach trees, how many plum trees does she have?', 
                 answer: '80', nanswer: '',danswer: '', template: 'main',
                 lnw: '15', lnn: '', lnd: '', rnw: '120', rnn: '', rnd: '', lbln: 'peach',
@@ -357,7 +357,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
             },{  // 18
-                problem: 'On her orchard a farmer has 15 peach trees for every 10 Plum tree\'s and 6 orange trees.', 
+                problem: 'On her orchard a farmer has 15 peach trees for every 10 plum trees and 6 orange trees.', 
                 question: 'If the farmer has 34 plum trees, how many peach trees does she have?', 
                 answer: '51', nanswer: '',danswer: '', template: 'main',
                 lnw: '10', lnn: '', lnd: '', rnw: '34', rnn: '', rnd: '', lbln: 'plum',
@@ -367,7 +367,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
             },{  // 19
-                problem: 'On her orchard a farmer has 15 peach trees for every 10 Plum tree\'s and 6 orange trees.', 
+                problem: 'On her orchard a farmer has 15 peach trees for every 10 plum trees and 6 orange trees.', 
                 question: 'If the farmer has 20 orange trees, how many peach trees does she have?', 
                 answer: '50', nanswer: '',danswer: '', template: 'main',
                 lnw: '6', lnn: '', lnd: '', rnw: '20', rnn: '', rnd: '', lbln: 'orange',
@@ -377,7 +377,7 @@ angular.module('mathSkills').service('data16_4', ['dataUtils', function (dataUti
                 previousCorrect: true,
                 flip: [[1], ["lnw", "ldw"], ["lnn", "ldn"], ["lnd", "ldd"], ["rnw", "rdw"], ["rnn", "rdn"], ["rnd", "rdd"], ["lbln", "lbld"]],
             },{  // 20
-                problem: 'On her orchard a farmer has 15 peach trees for every 10 Plum tree\'s and 6 orange trees.', 
+                problem: 'On her orchard a farmer has 15 peach trees for every 10 plum trees and 6 orange trees.', 
                 question: 'If the farmer has 45 plum trees, how many orange trees does she have?', 
                 answer: '27', nanswer: '',danswer: '', template: 'main',
                 lnw: '10', lnn: '', lnd: '', rnw: '45', rnn: '', rnd: '', lbln: 'plum',
