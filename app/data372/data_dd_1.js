@@ -80,15 +80,21 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 					helpStringAnswer: '<span class=fontsize110>x</span> &nbsp;<span class=fontsize110>=</span> -1',
 					ansNumber: '-1',
 					solution: dataUtils.pre(
-									'\\rowgrp'
+								'\\css'
+									+'{\\rowgrp'
 										+'{\\grp'
 											+'{\\str{$$ansVariable = }}'
 											+'{\\input{$$ansNumber}}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\btn{no solution}{$$ansSolvable}{large}}'
+										+'{\\css'
+											+'{\\str{or}}'
+											+'{label_like fontsize125}'
 										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
+									+'}'
+									+'{marginLeft40px width140 textAlignCenter}'
 						),
 					ansSolvable: 'F',
 					firstTable: dataUtils.pre(
@@ -197,15 +203,21 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 					helpStringAnswer: '<span class=fontsize110>a</span> &nbsp;<span class=fontsize110>=</span> 3',
 					ansNumber: '3',
 					solution: dataUtils.pre(
-									'\\rowgrp'
+								'\\css'
+									+'{\\rowgrp'
 										+'{\\grp'
 											+'{\\str{$$ansVariable = }}'
 											+'{\\input{$$ansNumber}}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\grp'
-											+'{\\btn{no solution}{$$ansSolvable}{large}}'
+										+'{\\css'
+											+'{\\str{or}}'
+											+'{label_like fontsize125}'
 										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
+									+'}'
+									+'{marginLeft40px width140 textAlignCenter}'
 						),
 					firstTable: dataUtils.pre(
 										'{\\html{&nbsp;}}'
@@ -313,19 +325,22 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 					helpStringAnswer: '<span class=fontsize110>3</span> &nbsp;<span class=fontsize110>=</span> <span class=fontsize110>x</span>',
 					ansNumber: '3',
 					solution: dataUtils.pre(
-								'\\pan{3}{9}'
+								'\\pan{3}{9}'			
 									+'{\\css'
 										+'{\\rowgrp'
 											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
 												+'{\\input{$$ansNumber}}'
-												+'{\\str{ = $$ansVariable}}'
 											+'}'
 											+'{\\html{&nbsp;}}'
-											+'{\\grp'
-												+'{\\btn{no solution}{$$ansSolvable}{large}}'
+											+'{\\css'
+												+'{\\str{or}}'
+												+'{label_like fontsize125}'
 											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
 										+'}'
-										+'{marginLeft80px}'
+										+'{marginLeft132px width140 textAlignCenter}'
 									+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -434,19 +449,22 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 					helpStringAnswer: '<span class=fontsize110>5</span> &nbsp;<span class=fontsize110>=</span> <span class=fontsize110>m</span>',
 					ansNumber: '5',
 					solution: dataUtils.pre(
-								'\\pan{3}{9}'
+								'\\pan{3}{9}'			
 									+'{\\css'
 										+'{\\rowgrp'
 											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
 												+'{\\input{$$ansNumber}}'
-												+'{\\str{ = $$ansVariable}}'
 											+'}'
 											+'{\\html{&nbsp;}}'
-											+'{\\grp'
-												+'{\\btn{no solution}{$$ansSolvable}{large}}'
+											+'{\\css'
+												+'{\\str{or}}'
+												+'{label_like fontsize125}'
 											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
 										+'}'
-										+'{marginLeft80px}'
+										+'{marginLeft132px width140 textAlignCenter}'
 									+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -568,7 +586,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 						),
 					ansNumber: '3',
 					solution: dataUtils.pre(
-								'\\pan{3}{9}'
+								'\\pan{3}{9}'			
 									+'{\\css'
 										+'{\\rowgrp'
 											+'{\\grp'
@@ -579,11 +597,14 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 												+'{\\str{ = $$ansVariable}}'
 											+'}'
 											+'{\\html{&nbsp;}}'
-											+'{\\grp'
-												+'{\\btn{no solution}{$$ansSolvable}{large}}'
+											+'{\\css'
+												+'{\\str{or}}'
+												+'{label_like fontsize125}'
 											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
 										+'}'
-										+'{marginLeft80px}'
+										+'{marginLeft132px width140 textAlignCenter}'
 									+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -705,7 +726,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 						),
 					ansNumber: '3',
 					solution: dataUtils.pre(
-								'\\pan{3}{9}'
+								'\\pan{3}{9}'			
 									+'{\\css'
 										+'{\\rowgrp'
 											+'{\\grp'
@@ -716,11 +737,14 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 												+'}'
 											+'}'
 											+'{\\html{&nbsp;}}'
-											+'{\\grp'
-												+'{\\btn{no solution}{$$ansSolvable}{large}}'
+											+'{\\css'
+												+'{\\str{or}}'
+												+'{label_like fontsize125}'
 											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
 										+'}'
-										+'{marginLeft80px}'
+										+'{marginLeft132px width140 textAlignCenter}'
 									+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -827,7 +851,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 						),
 					ansNumber: '1',
 					solution: dataUtils.pre(
-								'\\pan{3}{9}'
+								'\\pan{3}{9}'			
 									+'{\\css'
 										+'{\\rowgrp'
 											+'{\\grp'
@@ -835,11 +859,14 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 												+'{\\input{$$ansNumber}}'
 											+'}'
 											+'{\\html{&nbsp;}}'
-											+'{\\grp'
-												+'{\\btn{no solution}{$$ansSolvable}{large}}'
+											+'{\\css'
+												+'{\\str{or}}'
+												+'{label_like fontsize125}'
 											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
 										+'}'
-										+'{marginLeft80px}'
+										+'{marginLeft132px width140 textAlignCenter}'
 									+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -969,7 +996,30 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 												+'{\\btn{no solution}{$$ansSolvable}{large}}'
 											+'}'
 										+'}'
-										+'{marginLeft80px}'
+										+'{marginLeft132px}'
+									+'}'
+						),
+					
+					solution: dataUtils.pre(
+								'\\pan{4}{8}'			
+									+'{\\css'
+										+'{\\rowgrp'
+											+'{\\grp'
+												+'{\\str{$$ansVariable =}}'
+												+'{\\frac'
+													+'{input{17}}'
+													+'{input{6}}'
+												+'}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\css'
+												+'{\\str{or}}'
+												+'{label_like fontsize125}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
+										+'}'
+										+'{marginLeft40px width140 textAlignCenter}'
 									+'}'
 						),
 					firstTable: dataUtils.pre(
