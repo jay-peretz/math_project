@@ -369,14 +369,20 @@ table td .width160ValignTop {
 .width40 {
 	width: 40px;
 }
+.width130 {
+	width: 130px;
+}
 .width140 {
 	width: 140px;
 }
-.width155 {
-	width: 155px;
+.width160 {
+	width: 160px;
 }
 .width170 {
 	width: 170px;
+}
+.width180 {
+	width: 180px;
 }
 .width200 {
 	width: 200px;
