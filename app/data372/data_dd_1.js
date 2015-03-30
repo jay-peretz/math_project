@@ -1843,7 +1843,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 										+'{\\rowgrp'
 											+'{\\grp'
 												+'{\\str{$$ansVariable =}}'
-												+'{\\html{<input type=text class=specialButton autofocus />}}'
+												+'{\\input{&#00;}}'
 											+'}'
 											+'{\\html{&nbsp;}}'
 											+'{\\css'

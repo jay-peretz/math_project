@@ -23,6 +23,7 @@ angular.module('mathSkills')
                 controller: function ($scope, $element) {
                     $scope.answer = '';
                     $scope.controllerId = Math.random().toString();
+					$scope.nullInput = false;
                     
                     $scope.$watch('expected', function () { 
                         if($scope.expected) {   
@@ -30,7 +31,13 @@ angular.module('mathSkills')
                             var arr = [];
                             $scope.myargs = parser.extractTag($scope.expected).args; 
                             $scope.display = $scope.myargs[0].length === 0;
-
+							
+							// reset input arg "&#00;" (null) to "" -- for dd.1 prob 15-16
+							if ($scope.myargs[0] === "&#00;") {
+								$scope.nullInput = true;
+								$scope.myargs[0] = "";
+							}
+							
                             //handle width/with multiple answers 
                             if ($scope.myargs[0][0] === '[') {
                                 arr = JSON.parse($scope.myargs[0]);
@@ -72,7 +79,12 @@ angular.module('mathSkills')
                                         $scope.class = '';
                                     }, 900);
                                 };
-
+								
+							// reset $scope.answer input arg if '' & null originally supplied
+							if ($scope.answer === '' && $scope.nullInput) {
+								data.answer = '\\input{&#00;}';
+							}
+							//console.log("data is: ",JSON.stringify(data));
                             if (parsedExpected[0] === '[') {
                                 var possibleAnswers = JSON.parse(parsedExpected).map(String);
                                 var answerIndex = possibleAnswers.indexOf($scope.answer);
