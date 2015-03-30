@@ -92,7 +92,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 											+'{label_like fontsize125}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
+										+'{\\btn{no solution}{F}{btn-primary}}'
 									+'}'
 									+'{marginLeft40px width140 textAlignCenter}'
 						),
@@ -215,7 +215,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 											+'{label_like fontsize125}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
+										+'{\\btn{no solution}{F}{btn-primary}}'
 									+'}'
 									+'{marginLeft40px width140 textAlignCenter}'
 						),
@@ -338,7 +338,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 												+'{label_like fontsize125}'
 											+'}'
 											+'{\\html{&nbsp;}}'
-											+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
+											+'{\\btn{no solution}{F}{btn-primary}}'
 										+'}'
 										+'{marginLeft132px width140 textAlignCenter}'
 									+'}'
@@ -462,7 +462,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 												+'{label_like fontsize125}'
 											+'}'
 											+'{\\html{&nbsp;}}'
-											+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
+											+'{\\btn{no solution}{F}{btn-primary}}'
 										+'}'
 										+'{marginLeft132px width140 textAlignCenter}'
 									+'}'
@@ -602,7 +602,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 												+'{label_like fontsize125}'
 											+'}'
 											+'{\\html{&nbsp;}}'
-											+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
+											+'{\\btn{no solution}{F}{btn-primary}}'
 										+'}'
 										+'{marginLeft132px width140 textAlignCenter}'
 									+'}'
@@ -742,7 +742,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 												+'{label_like fontsize125}'
 											+'}'
 											+'{\\html{&nbsp;}}'
-											+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
+											+'{\\btn{no solution}{F}{btn-primary}}'
 										+'}'
 										+'{marginLeft132px width140 textAlignCenter}'
 									+'}'
@@ -864,7 +864,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 												+'{label_like fontsize125}'
 											+'}'
 											+'{\\html{&nbsp;}}'
-											+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
+											+'{\\btn{no solution}{F}{btn-primary}}'
 										+'}'
 										+'{marginLeft132px width140 textAlignCenter}'
 									+'}'
@@ -873,7 +873,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 										'{\\html{&nbsp;}}'
 										+'{\\str{When solving an equation, <u>we first simplify each side of the equation</u>.}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{On the left side of the equation we can <u>combine like terms</u><span class=hyphenByLineThrough>&nbsp&nbsp;</span>the 2x and -5x. On the right side of the equation we can combine like terms<span class=hyphenByLineThrough>&nbsp&nbsp;</span>the 3 and the -4.}}'
+										+'{\\str{On the left side of the equation we can <u>combine like terms</u><span class=hyphenByLineThrough>&nbsp&nbsp;</span>the 2x and -5x. On the right side of the equation we can <u>combine like terms</u><span class=hyphenByLineThrough>&nbsp&nbsp;</span>the 3 and the -4.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
@@ -891,7 +891,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 											+'{\\str{$$helpFirstPiece}}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{Because we have variable terms on both sides of the equation, now we must eliminate one entire variable term. Let\'s eliminate $$helpSecondPiece.}}'
+										+'{\\str{Because we have <u>variable terms on both sides of the equation</u>, now we must eliminate one entire variable term. Let\'s eliminate \"$$helpSecondPiece\".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
@@ -993,7 +993,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 											+'}'
 											+'{\\html{&nbsp;}}'
 											+'{\\grp'
-												+'{\\btn{no solution}{$$ansSolvable}{large}}'
+												+'{\\btn{no solution}{F}{large}}'
 											+'}'
 										+'}'
 										+'{marginLeft132px}'
@@ -1017,7 +1017,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 												+'{label_like fontsize125}'
 											+'}'
 											+'{\\html{&nbsp;}}'
-											+'{\\btn{no solution}{$$ansSolvable}{btn-primary}}'
+											+'{\\btn{no solution}{F}{btn-primary}}'
 										+'}'
 										+'{marginLeft40px width140 textAlignCenter}'
 									+'}'
@@ -1026,7 +1026,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 										'{\\html{&nbsp;}}'
 										+'{\\str{When solving an equation, <u>we first simplify each side of the equation</u>.}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{On the left side of the equation we can <u>combine like terms</u><span class=hyphenByLineThrough>&nbsp&nbsp;</span>the 3n and -4n. On the right side of the equation we can combine like terms<span class=hyphenByLineThrough>&nbsp&nbsp;</span>the -5 and the -9.}}'
+										+'{\\str{On the left side of the equation we can <u>combine like terms</u><span class=hyphenByLineThrough>&nbsp&nbsp;</span>the 3n and -4n. On the right side of the equation we can <u>combine like terms</u><span class=hyphenByLineThrough>&nbsp&nbsp;</span>the -5 and the -9.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
@@ -1044,7 +1044,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 											+'{\\str{$$helpFirstPiece}}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{Because we have variable terms on both sides of the equation, now we must eliminate one entire variable term. Let\'s eliminate $$helpSecondPiece.}}'
+										+'{\\str{Because we have <u>variable terms on both sides of the equation</u>, now we must eliminate one entire variable term. Let\'s eliminate \"$$helpSecondPiece\".}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
@@ -1091,6 +1091,804 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 					helpAnswer: dataUtils.pre(
 									'\\grp'
 										+'{\\str{$$ansVariable = $$ansNumber}}'
+						),
+					template: 'flexy',
+				}
+				,
+				{	// problem 9
+					probQuestion: 'Solve for the value of the variable, or click &quot;no solution&quot; if the equation cannot be solved:',
+					probStatement: dataUtils.pre(
+									'\\grp'
+										+'{\\str{-6 - 3y + 1 = 2y - 4y - 2}}'
+						),
+					ansVariable: 'y',
+					helpFirstPiece: '-5 - 3y = -2y - 2',
+					helpSecondPiece: '-2y',
+					helpThirdPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{-5 - 3y + <strong>2y</strong> = -2y + <strong>2y</strong> - 2}}'
+						),
+					helpFourthPiece: '-5 - y = -2',
+					helpFifthPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{-5 + <strong>5</strong> - y = -2 + <strong>5</strong>}}'
+						),
+					helpSixthPiece: '-y = 3',
+					helpSeventhPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\css'
+											+'{\\frac'
+												+'{str{-y&nbsp;}}'
+												+'{str{<strong>-1</strong>&nbsp;}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+										+'{str{=}}'
+										+'{\\css'
+											+'{\\frac'
+												+'{str{3}}'
+												+'{str{<strong>-1</strong>&nbsp;}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+						),
+					ansNumber: '-3',
+					solution: dataUtils.pre(
+								'\\pan{3}{9}'			
+									+'{\\css'
+										+'{\\rowgrp'
+											+'{\\grp'
+												+'{\\str{$$ansVariable =}}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\css'
+												+'{\\str{or}}'
+												+'{label_like fontsize125}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\btn{no solution}{F}{btn-primary}}'
+										+'}'
+										+'{marginLeft132px width140 textAlignCenter}'
+									+'}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\str{When solving an equation, <u>we first simplify each side of the equation</u>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{On the left side of the equation we can <u>combine like terms</u><span class=hyphenByLineThrough>&nbsp&nbsp;</span>the -6 and 1. On the right side of the equation we can <u>combine like terms</u><span class=hyphenByLineThrough>&nbsp&nbsp;</span>the 2y and the -4y.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Original equation:}}'
+												+'{width170}'
+											+'}'
+											+'{$$probStatement}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{1st. Simplified Result.}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpFirstPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Because we have <u>variable terms on both sides of the equation</u>, now we must eliminate one entire variable term. Let\'s eliminate \"$$helpSecondPiece\".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{2nd: &nbsp;Add 2y.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpThirdPiece}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=fontsize125>&nbsp;</span>Result:}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpFourthPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We can now <u>isolate the variable</u> because it is on one side of the equation <strong>only</strong>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{3<sup>rd</sup>:&nbsp; Add 5.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpFifthPiece}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result:}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpSixthPiece}}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{4<sup>th</sup>: &nbsp;&nbsp;Divide by -1.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpSeventhPiece}'
+										+'}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{<span class=fontsize110>$$ansVariable</span> = $$ansNumber}}'
+						),
+					template: 'flexy',
+				}
+				,
+				{	// problem 10
+					probQuestion: 'Solve for the value of the variable, or click &quot;no solution&quot; if the equation cannot be solved:',
+					probStatement: dataUtils.pre(
+									'\\grp'
+										+'{\\str{-8 - 5a + 2 = 3a - 7a - 2}}'
+						),
+					ansVariable: 'a',
+					helpFirstPiece: '-6 - 5a = -4a - 2',
+					helpSecondPiece: '-4a',
+					helpThirdPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{-6 - 5a + <strong>4a</strong> = -4a + <strong>4a</strong> - 2}}'
+						),
+					helpFourthPiece: '-6 - a = -2',
+					helpFifthPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{-6 + <strong>6</strong> - a = -2 + <strong>6</strong>}}'
+						),
+					helpSixthPiece: '-a = 4',
+					helpSeventhPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\css'
+											+'{\\frac'
+												+'{str{-a&nbsp;}}'
+												+'{str{<strong>-1</strong>&nbsp;}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+										+'{str{=}}'
+										+'{\\css'
+											+'{\\frac'
+												+'{str{4}}'
+												+'{str{<strong>-1</strong>&nbsp;}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+						),
+					ansNumber: '-4',
+					solution: dataUtils.pre(
+								'\\pan{3}{9}'			
+									+'{\\css'
+										+'{\\rowgrp'
+											+'{\\grp'
+												+'{\\str{$$ansVariable =}}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\css'
+												+'{\\str{or}}'
+												+'{label_like fontsize125}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\btn{no solution}{F}{btn-primary}}'
+										+'}'
+										+'{marginLeft132px width140 textAlignCenter}'
+									+'}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\str{When solving an equation, <u>we first simplify each side of the equation</u>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{On the left side of the equation we can <u>combine like terms</u><span class=hyphenByLineThrough>&nbsp&nbsp;</span>the -8 and 2. On the right side of the equation we can <u>combine like terms</u><span class=hyphenByLineThrough>&nbsp&nbsp;</span>the 3a and the -7a.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Original equation:}}'
+												+'{width170}'
+											+'}'
+											+'{$$probStatement}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{1st. Simplified Result.}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpFirstPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Because we have <u>variable terms on both sides of the equation</u>, now we must eliminate one entire variable term. Let\'s eliminate \"$$helpSecondPiece\".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{2nd: &nbsp;Add 4a.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpThirdPiece}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=fontsize125>&nbsp;</span>Result:}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpFourthPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We can now <u>isolate the variable</u> because it is on one side of the equation <strong>only</strong>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{3<sup>rd</sup>:&nbsp; Add 6.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpFifthPiece}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result:}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpSixthPiece}}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{4<sup>th</sup>: &nbsp;&nbsp;Divide by -1.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpSeventhPiece}'
+										+'}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{<span class=fontsize110>$$ansVariable</span> = $$ansNumber}}'
+						),
+					template: 'flexy',
+				}
+				,
+				{	// problem 11
+					probQuestion: 'Solve for the value of the variable, or click &quot;no solution&quot; if the equation cannot be solved:',
+					probStatement: dataUtils.pre(
+									'\\grp'
+										+'{\\str{3 ( y - 4 ) = 2y}}'
+						),
+					ansVariable: 'y',
+					helpFirstPiece: '3y - 12 = 2y',
+					helpSecondPiece: '2y',
+					helpThirdPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{3y - <strong>2y</strong> - 12 = 2y - <strong>2y</strong>}}'
+						),
+					helpFourthPiece: 'y - 12 = 0',
+					helpFifthPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{y - 12 + <strong>12</strong> = 0 + <strong>12</strong>}}'
+						),
+					helpSixthPiece: 'y = 12',
+					ansNumber: '12',
+					solution: dataUtils.pre(
+								'\\pan{3}{9}'			
+									+'{\\css'
+										+'{\\rowgrp'
+											+'{\\grp'
+												+'{\\str{$$ansVariable =}}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\css'
+												+'{\\str{or}}'
+												+'{label_like fontsize125}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\btn{no solution}{F}{btn-primary}}'
+										+'}'
+										+'{marginLeft132px width140 textAlignCenter}'
+									+'}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\str{When solving an equation, <u>we first simplify each side of the equation</u>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{On the left side of the equation we can <u>distribute the 3 into the parenthesis</u> (multiplying the 3 by both the y and the -4). There is no simplifying on the right side of the equation.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Original equation:}}'
+												+'{width170}'
+											+'}'
+											+'{$$probStatement}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{1st. Simplified Result.}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpFirstPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Because we have <u>variable terms on both sides of the equation</u>, now we must eliminate one entire variable term. Let\'s eliminate \"$$helpSecondPiece\".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{2nd: &nbsp;Subtract 2y.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpThirdPiece}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=fontsize125>&nbsp;</span>Result:}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpFourthPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We can now <u>isolate the variable</u> because it is on one side of the equation <strong>only</strong>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{3<sup>rd</sup>:&nbsp; Add 12.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpFifthPiece}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result:}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpSixthPiece}}'
+										+'}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{<span class=fontsize110>$$ansVariable</span> = $$ansNumber}}'
+						),
+					template: 'flexy',
+				}
+				,
+				{	// problem 12
+					probQuestion: 'Solve for the value of the variable, or click &quot;no solution&quot; if the equation cannot be solved:',
+					probStatement: dataUtils.pre(
+									'\\grp'
+										+'{\\str{4 ( x - 6 ) = 3x}}'
+						),
+					ansVariable: 'x',
+					helpFirstPiece: '4x - 24 = 3x',
+					helpSecondPiece: '3x',
+					helpThirdPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{4x - <strong>3x</strong> - 24 = 3x - <strong>3x</strong>}}'
+						),
+					helpFourthPiece: 'x - 24 = 0',
+					helpFifthPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{x - 24 + <strong>24</strong> = 0 + <strong>24</strong>}}'
+						),
+					helpSixthPiece: 'x = 24',
+					ansNumber: '24',
+					solution: dataUtils.pre(
+								'\\pan{3}{9}'			
+									+'{\\css'
+										+'{\\rowgrp'
+											+'{\\grp'
+												+'{\\str{$$ansVariable =}}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\css'
+												+'{\\str{or}}'
+												+'{label_like fontsize125}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\btn{no solution}{F}{btn-primary}}'
+										+'}'
+										+'{marginLeft132px width140 textAlignCenter}'
+									+'}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\str{When solving an equation, <u>we first simplify each side of the equation</u>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{On the left side of the equation we can <u>distribute the 4 into the parenthesis</u> (multiplying the 4 by both the x and the -6). There is no simplifying on the right side of the equation.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Original equation:}}'
+												+'{width170}'
+											+'}'
+											+'{$$probStatement}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{1st. Simplified Result.}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpFirstPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Because we have <u>variable terms on both sides of the equation</u>, now we must eliminate one entire variable term. Let\'s eliminate \"$$helpSecondPiece\".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{2nd: &nbsp;Subtract 3x.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpThirdPiece}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=fontsize125>&nbsp;</span>Result:}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpFourthPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We can now <u>isolate the variable</u> because it is on one side of the equation <strong>only</strong>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{3<sup>rd</sup>:&nbsp; Add 24.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpFifthPiece}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result:}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpSixthPiece}}'
+										+'}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{<span class=fontsize110>$$ansVariable</span> = $$ansNumber}}'
+						),
+					template: 'flexy',
+				}
+				,
+				{	// problem 13
+					probQuestion: 'Solve for the value of the variable, or click &quot;no solution&quot; if the equation cannot be solved:',
+					probStatement: dataUtils.pre(
+									'\\grp'
+										+'{\\str{-5 ( m + 2 ) = m - 6}}'
+						),
+					ansVariable: 'm',
+					helpFirstPiece: '-5m - 10 = m - 6',
+					helpSecondPiece: 'm',
+					helpThirdPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{-5m - <strong>m</strong> - 10 = m - <strong>m</strong> - 6}}'
+						),
+					helpFourthPiece: '-6m - 10 = -6',
+					helpFifthPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{-6m - 10 + <strong>10</strong> = -6 + <strong>10</strong>}}'
+						),
+					helpSixthPiece: '-6m = 4',
+					helpSeventhPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\css'
+											+'{\\frac'
+												+'{str{-6m&nbsp;}}'
+												+'{str{<strong>-6</strong>&nbsp;}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+										+'{str{=}}'
+										+'{\\css'
+											+'{\\frac'
+												+'{str{4}}'
+												+'{str{<strong>-6</strong>&nbsp;}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+						),
+					ansNumber: '24',
+					solution: dataUtils.pre(
+								'\\pan{3}{9}'			
+									+'{\\css'
+										+'{\\rowgrp'
+											+'{\\grp'
+												+'{\\str{$$ansVariable =}}'
+												+'{\\frac'
+													+'{input{-2}}'
+													+'{input{3}}'
+												+'}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\css'
+												+'{\\str{or}}'
+												+'{label_like fontsize125}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\btn{no solution}{F}{btn-primary}}'
+										+'}'
+										+'{marginLeft132px width140 textAlignCenter}'
+									+'}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\str{When solving an equation, <u>we first simplify each side of the equation</u>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{On the left side of the equation we can <u>distribute the <span class=specialMinus>&minus; </span>5 into the parenthesis</u> (multiplying the -5 by both the m and the 2). There is no simplifying on the right side of the equation.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Original equation:}}'
+												+'{width170}'
+											+'}'
+											+'{$$probStatement}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{1st. Simplified Result.}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpFirstPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Because we have <u>variable terms on both sides of the equation</u>, now we must eliminate one entire variable term. Let\'s eliminate \"$$helpSecondPiece\".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{2nd: &nbsp;Subtract m.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpThirdPiece}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=fontsize125>&nbsp;</span>Result:}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpFourthPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We can now <u>isolate the variable</u> because it is on one side of the equation <strong>only</strong>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{3<sup>rd</sup>:&nbsp; Add 10.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpFifthPiece}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result:}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpSixthPiece}}'
+										+'}'
+										
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{4<sup>th</sup>: &nbsp;&nbsp;Divide by -6.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpSeventhPiece}'
+										+'}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{<span class=fontsize110>$$ansVariable</span> = $$ansNumber}}'
+						),
+					template: 'flexy',
+				}
+				,
+				{	// problem 14
+					probQuestion: 'Solve for the value of the variable, or click &quot;no solution&quot; if the equation cannot be solved:',
+					probStatement: dataUtils.pre(
+									'\\grp'
+										+'{\\str{-7 ( x + 3 ) = x + 11}}'
+						),
+					ansVariable: 'x',
+					helpFirstPiece: '-7x - 21 = x + 11',
+					helpSecondPiece: 'x',
+					helpThirdPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{-7x - <strong>x</strong> - 21 = x - <strong>x</strong> + 11}}'
+						),
+					helpFourthPiece: '-8x - 21 = 11',
+					helpFifthPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{-8x - 21 + <strong>21</strong> = 11 + <strong>21</strong>}}'
+						),
+					helpSixthPiece: '-8x = 32',
+					helpSeventhPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\css'
+											+'{\\frac'
+												+'{str{-8x&nbsp;}}'
+												+'{str{<strong>-8</strong>&nbsp;}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+										+'{str{=}}'
+										+'{\\css'
+											+'{\\frac'
+												+'{str{32}}'
+												+'{str{<strong>-8</strong>&nbsp;}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+						),
+					ansNumber: '-4',
+					solution: dataUtils.pre(
+								'\\pan{3}{9}'			
+									+'{\\css'
+										+'{\\rowgrp'
+											+'{\\grp'
+												+'{\\str{$$ansVariable =}}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\css'
+												+'{\\str{or}}'
+												+'{label_like fontsize125}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\btn{no solution}{F}{btn-primary}}'
+										+'}'
+										+'{marginLeft132px width140 textAlignCenter}'
+									+'}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\str{When solving an equation, <u>we first simplify each side of the equation</u>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{On the left side of the equation we can <u>distribute the <span class=specialMinus>&minus; </span>7 into the parenthesis</u> (multiplying the -7 by both the x and the 3). There is no simplifying on the right side of the equation.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Original equation:}}'
+												+'{width170}'
+											+'}'
+											+'{$$probStatement}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{1st. Simplified Result.}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpFirstPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Because we have <u>variable terms on both sides of the equation</u>, now we must eliminate one entire variable term. Let\'s eliminate \"$$helpSecondPiece\".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{2nd: &nbsp;Subtract x.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpThirdPiece}'
+										+'}'
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=fontsize125>&nbsp;</span>Result:}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpFourthPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We can now <u>isolate the variable</u> because it is on one side of the equation <strong>only</strong>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{3<sup>rd</sup>:&nbsp; Add 21.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpFifthPiece}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result:}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpSixthPiece}}'
+										+'}'
+										
+										+'{\\str{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{4<sup>th</sup>: &nbsp;&nbsp;Divide by -8.}}'
+												+'{width170}'
+											+'}'
+											+'{$$helpSeventhPiece}'
+										+'}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{<span class=fontsize110>$$ansVariable</span> = $$ansNumber}}'
+						),
+					template: 'flexy',
+				}
+				,
+				{	// problem 15
+					probQuestion: 'Solve for the value of the variable, or click &quot;no solution&quot; if the equation cannot be solved:',
+					probStatement: dataUtils.pre(
+									'\\grp'
+										+'{\\str{3x + 2 = 3x}}'
+						),
+					ansVariable: 'x',
+					helpFirstPiece: '3x - <strong>3x</strong> + 2 = 3x - <strong>3x</strong>',
+					helpSecondPiece: '2 = 0',
+					solution: dataUtils.pre(
+								'\\pan{3}{9}'			
+									+'{\\css'
+										+'{\\rowgrp'
+											+'{\\grp'
+												+'{\\str{$$ansVariable =}}'
+												+'{\\input{No Solution}}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\css'
+												+'{\\str{or}}'
+												+'{label_like fontsize125}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+											+'{\\btn{no solution}{T}{btn-primary}}'
+										+'}'
+										+'{marginLeft132px width140 textAlignCenter}'
+									+'}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\str{Because we have variable terms on both sides of the equation, now we must eliminate one entire variable term. Let\'s eliminate \"3x.\"}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Original equation:}}'
+												+'{width170}'
+											+'}'
+											+'{$$probStatement}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{1st. Subtract 3.}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp;$$helpFirstPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=fontsize125>&nbsp;</span>Result:}}'
+												+'{width170}'
+											+'}'
+											+'{\\str{&nbsp; $$helpSecondPiece}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{2 = 0 is a false statement. This is a bad equation. There is no solution.}}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{no solution}}'
 						),
 					template: 'flexy',
 				}

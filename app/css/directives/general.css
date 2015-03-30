@@ -320,6 +320,10 @@ button.btn.btn-.huge {
 	font-size:125%;
 	padding-right:4px;
 }
+.specialMinus {
+	font-size:85%;
+	font-weight:bold;
+}
 .fontweightBold {
 	font-weight:bold;
 }
@@ -361,6 +365,9 @@ table td .width160ValignTop {
 }
 .width380 {
 	width: 380px;
+}
+.width40 {
+	width: 40px;
 }
 .width140 {
 	width: 140px;
