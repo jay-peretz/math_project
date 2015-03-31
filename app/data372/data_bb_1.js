@@ -14,13 +14,48 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
                     title: 'Main Answer',
                     children: [{
 						problem: '\\rowgrp'
-									+'{\\str{If&nbsp; $variableOneValue$variableTwoValue<span class=large>,</span>&nbsp; evaluate the following expression:}}'
+									+'{\\str{If&nbsp; $variableOneValue$variableTwoValue<span class=fontsize110>,</span>&nbsp; evaluate the following expression:}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\str{$expression}}',
 						answer: '\\rowgrp'+
 										'{\\grp'
 											+'{\\input{$answer}}'
 										+'}',
+						controls: {
+								"checkAnswer": true,
+								"help": '\\rowgrp'
+											+'$firstLines'
+											+'{\\html{&nbsp;}}'
+											+'$firstTable'
+											+'{\\html{&nbsp;}}'
+											+'{css'
+												+'{\\str{Answer:  $textAnswer}}'
+												+'{help-answer-text}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+						}
+					}]
+				}]
+			}
+			,
+			mainWithPan: {
+                title: 'Evaluating Algebraic Expressions',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+									+'{\\str{If&nbsp; $variableOneValue$variableTwoValue<span class=fontsize110>,</span>&nbsp; evaluate the following expression:}}'
+									+'{\\html{&nbsp;}}'
+									+'{\\str{$expression}}',
+						answer: '\\pan{3}{9}'
+									+'{\\css'
+										+'{\\rowgrp'+
+											'{\\grp'
+												+'{\\input{$answer}}'
+											+'}'
+										+'}'
+										+'{marginLeft90px}'
+									+'}',
 						controls: {
 								"checkAnswer": true,
 								"help": '\\rowgrp'
@@ -1753,8 +1788,8 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 				}
 				,
 				{	// problem 23
-					variableOneValue: 'x <span class=bigger>=</span>5,&nbsp;&nbsp; y <span class=bigger>=</span>4,',
-					variableTwoValue: '&nbsp;&nbsp;and&nbsp; z <span class=bigger>=-</span>2',
+					variableOneValue: 'x <span class=fontsize110>=</span> 5,&nbsp;&nbsp; y <span class=fontsize110>=</span> 4,',
+					variableTwoValue: '&nbsp;&nbsp;and&nbsp; z <span class=fontsize110>=-</span>2',
 					expression: '-3z<sup> 2</sup> ( 2x - y<sup> 2</sup> )',
 					firstLines: dataUtils.pre(
 										'{\\str{Whenever you substitute a number value for a variable, put that number inside a parenthesis.}}'
@@ -1850,12 +1885,12 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 								),
 					textAnswer: ' &nbsp; 72',
 					answer: '72',
-					template: 'main',
+					template: 'mainWithPan',
 				}
 				,
 				{	// problem 24
-					variableOneValue: 'a <span class=bigger>= -</span>2,&nbsp;&nbsp; b <span class=bigger>=</span> 3,',
-					variableTwoValue: '&nbsp;&nbsp;and&nbsp; c <span class=bigger>=-</span>3',
+					variableOneValue: 'a <span class=fontsize110>=</span><span class=fontsize110>-</span>2,&nbsp;&nbsp; b <span class=fontsize110>=</span> 3,',
+					variableTwoValue: '&nbsp;&nbsp;and&nbsp; c <span class=fontsize110>=</span><span class=fontsize110>-</span>3',
 					expression: '-2c<sup> 2</sup> (-4a - b<sup> 2</sup> )',
 					firstLines: dataUtils.pre(
 										'{\\str{Whenever you substitute a number value for a variable, put that number inside a parenthesis.}}'
@@ -1951,7 +1986,7 @@ angular.module('mathSkills').service('data_bb_1', ['dataUtils', function (dataUt
 								),
 					textAnswer: ' &nbsp; 18',
 					answer: '18',
-					template: 'main',
+					template: 'mainWithPan',
 				}
         ];
 		shuffle = [
