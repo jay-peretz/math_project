@@ -151,7 +151,7 @@ angular.module('mathSkills').service('data_dd_2', ['dataUtils', function (dataUt
 					solution: dataUtils.pre(
 										'\\rowgrp'
 											+'{\\grp'
-												+'{\\str{<span class=fontsize110>LCD</span> = }}'
+												+'{\\str{LCD =  }}'
 												+'{\\input{$$ansNumber}}'
 											+'}'
 						),
@@ -250,7 +250,7 @@ angular.module('mathSkills').service('data_dd_2', ['dataUtils', function (dataUt
 					solution: dataUtils.pre(
 										'\\rowgrp'
 											+'{\\grp'
-												+'{\\str{<span class=fontsize110>LCD</span> = }}'
+												+'{\\str{LCD =  }}'
 												+'{\\input{$$ansNumber}}'
 											+'}'
 						),
@@ -359,7 +359,7 @@ angular.module('mathSkills').service('data_dd_2', ['dataUtils', function (dataUt
 					solution: dataUtils.pre(
 										'\\rowgrp'
 											+'{\\grp'
-												+'{\\str{<span class=fontsize110>LCD</span> = }}'
+												+'{\\str{LCD =  }}'
 												+'{\\input{$$ansNumber}}'
 											+'}'
 						),
@@ -468,7 +468,7 @@ angular.module('mathSkills').service('data_dd_2', ['dataUtils', function (dataUt
 					solution: dataUtils.pre(
 										'\\rowgrp'
 											+'{\\grp'
-												+'{\\str{<span class=fontsize110>LCD</span> = }}'
+												+'{\\str{LCD =  }}'
 												+'{\\input{$$ansNumber}}'
 											+'}'
 						),
