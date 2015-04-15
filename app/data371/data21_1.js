@@ -483,7 +483,7 @@ angular.module('mathSkills').service('data21_1', ['dataUtils', function (dataUti
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             {  //9b problem 26
-                problem: 'You buy a baseball mitt, and pay $2.90 in sales tax. If the sales tax rate is 7.25%, what was the cost of the shoes without the sales tax included?',
+                problem: 'You buy a baseball mitt, and pay $2.90 in sales tax. If the sales tax rate is 7.25%, what was the cost of the mitt without the sales tax included?',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '40.00', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', fkey: 'ld', 
@@ -603,7 +603,7 @@ angular.module('mathSkills').service('data21_1', ['dataUtils', function (dataUti
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             {  //12b problem 35
-                problem: 'Michelle bought a pair of gloves, and pays $1.54 in sales tax. If the sales tax rate is 7%, what was the cost of the coat without the sales tax included?',
+                problem: 'Michelle bought a pair of gloves, and pays $1.54 in sales tax. If the sales tax rate is 7%, what was the cost of the gloves without the sales tax included?',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '22.00', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', fkey: 'ld', 

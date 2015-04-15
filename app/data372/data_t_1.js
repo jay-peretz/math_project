@@ -251,7 +251,7 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				probQuestion: 'Solve for the perimeter of the following shape:',
 				simpleAnswer: dataUtils.pre('\\grp'+
 												'{\\input{70}}'+
-												'{\\str{m}}'
+												'{\\str{cm}}'
 								),
 				s1Value: 's<sub>1</sub>',
 				s2Value: 's<sub>2</sub>',
@@ -260,7 +260,7 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br><table><tr><td>Write the formula:&nbsp; </td><td>P = $$s1Value + $$s2Value + $$s3Value + $$s4Value</td></tr>'
 										+'<tr><td>Substitution:&nbsp; </td><td>P = 15 + 12.5 + (7.5 + 15 + 7.5) + 12.5</td></tr>'
 										+'<tr><td>Solve:&nbsp; </td><td> P = 70</td></tr></table><br>',
-				answerHelp: dataUtils.pre('\\str{70 m}'
+				answerHelp: dataUtils.pre('\\str{70 cm}'
 								),
 				template: 'simpleQuestion' 
 			}

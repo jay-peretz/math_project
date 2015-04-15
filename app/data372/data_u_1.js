@@ -199,7 +199,7 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
                 helpTexts: 'Identify the shape: &nbsp; Trapezoid<br><br>'
 								+'Identify the two bases and the height of the figure.<br><br>'
 								+'<table>'
-									+'<tr><td>Side a (5) is b<sub>1</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>1</sub> = 10</td></tr>'
+									+'<tr><td>Side a (5) is b<sub>1</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>1</sub> = 5</td></tr>'
 									+'<tr><td>Side c (5 &#43; 1.5) is b<sub>2</sub>.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>b<sub>2</sub> = 6.5</td></tr>'
 									+'<tr><td>Side b (2) is the height.</td><td><span class=marginLeft80px>&nbsp;</span></td><td>h = 2</td></tr>'
 								+'</table><br><br>'
