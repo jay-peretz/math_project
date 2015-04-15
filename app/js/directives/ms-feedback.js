@@ -32,6 +32,11 @@ angular.module('mathSkills')
                             icon: 'remove',
                             show: false
                         };
+						
+						// receive current tab from ms-problem.js
+						$scope.$on('tabForMSFeedback', function (e, currentTab) {
+							$scope.tabFromMSProblem = currentTab;
+						});
 
                         $scope.$on('answer', function (e, data) {
 													   
@@ -40,8 +45,8 @@ angular.module('mathSkills')
                                 $scope.feedback.show = true;
                             }
 							
-							// no feedback for workbook steps with control "stepwiseNextProblem": true
-							if (typeof problemData.getData('stepwiseNextProblem') !== "undefined" && problemData.getData('stepwiseNextProblem') === true) {
+							// no feedback for workbook steps with control "stepwiseNextProblem": true; however, we do want feedback on the Solution (problem) tab
+							if (typeof problemData.getData('stepwiseNextProblem') !== "undefined" && problemData.getData('stepwiseNextProblem') === true && $scope.tabFromMSProblem !=="problem") {
 								$scope.feedback.show = false;
 							}
 

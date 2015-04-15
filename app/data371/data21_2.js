@@ -472,8 +472,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
 				 helpfifth: "$4,991 + $6,512.50<br><br>",
 				 template: 'incomeTax'
             }
-        ];
-		/*shuffle = [
+        ],
+		shuffle = [
 					{ problems: [1,7,11], total: 2},
 					{ problems: [2,8,12], total: 2},
 					{ problems: [9,13], total: 1},
@@ -483,7 +483,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
 			];
 
 	    
-	    	return dataUtils.build(desc, template, data, shuffle);*/
-			return dataUtils.build(desc, template, data);
+	    	return dataUtils.build(desc, template, data, shuffle);
+			//return dataUtils.build(desc, template, data);
 			
 	}]);

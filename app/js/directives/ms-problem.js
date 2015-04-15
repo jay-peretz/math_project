@@ -11,6 +11,7 @@ angular.module('mathSkills')
                         $scope.currentTab = 'problem';
 
                         $scope.isCurrent = function (tab) {
+							$scope.$broadcast('tabForMSFeedback', $scope.currentTab);
                             return tab === $scope.currentTab;
                         };
 
