@@ -243,7 +243,7 @@ angular.module('mathSkills').service('data21_1', ['dataUtils', function (dataUti
                 flip: [[1], ["ln", "rn"], ["ld", "rd"], ["key", "fkey"]],
             },
             {  //3b problem 8
-                problem: 'You buy a baseball mitt, and pay $1.75 in sales tax. If the sales tax rate is 7%, what was the cost of the shoes without the sales tax included?',
+                problem: 'You buy a baseball mitt, and pay $1.75 in sales tax. If the sales tax rate is 7%, what was the cost of the mitt without the sales tax included?',
                 answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '25.00', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', fkey: 'ld', 
