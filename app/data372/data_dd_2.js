@@ -2920,7 +2920,7 @@ angular.module('mathSkills').service('data_dd_2', ['dataUtils', function (dataUt
 										'{\\html{&nbsp;}}'
 										+'{\\str{<u>One</u> way to solve this problem is to eliminate all the fractions. We do this by multiplying <u><strong>every term on both sides of the equation</strong></u> by the lowest common denominator (LCD) of all the terms.}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{The LCD in this equation is 12.&nbsp; 12 is the lowest number that all the denominators (2, 4, and 6) can divide into evenly.}}'
+										+'{\\str{The LCD in this equation is 12.&nbsp; 12 is the lowest number that all the denominators (1, 4, and 6) can divide into evenly.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\str{Multiply or distribute 12 to every term. Notice that all existing terms on each side of the equation have been put into a parenthesis to show this multiplication.}}'
 										+'{\\html{&nbsp;}}'
@@ -3416,7 +3416,7 @@ angular.module('mathSkills').service('data_dd_2', ['dataUtils', function (dataUt
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
-												+'{\\str{2<sup>nd</sup>:&nbsp; Subtract 20.}}'
+												+'{\\str{2<sup>nd</sup>:&nbsp; Add 9.}}'
 												+'{width180}'
 											+'}'
 											+'{$$helpThirdPiece}'
@@ -3660,7 +3660,7 @@ angular.module('mathSkills').service('data_dd_2', ['dataUtils', function (dataUt
 					template: 'flexy',
 				}
         ];
-		/*shuffle = [
+		shuffle = [
 				{ problems: [1,2], total: 1},
 				{ problems: [3,4], total: 1},
 				{ problems: [5,6], total: 1},
@@ -3670,12 +3670,10 @@ angular.module('mathSkills').service('data_dd_2', ['dataUtils', function (dataUt
 				{ problems: [13,14], total: 1},
 				{ problems: [15,16], total: 1},
 				{ problems: [17,18], total: 1},
-				{ problems: [19,20], total: 1},
-				{ problems: [21,22], total: 1},
-				{ problems: [23,24], total: 1}
+				{ problems: [19,20], total: 1}
 		];
     
-    	return dataUtils.build(desc, template, data, shuffle);*/
+    	return dataUtils.build(desc, template, data, shuffle);
 		
-		return dataUtils.build(desc, template, data);
+		//return dataUtils.build(desc, template, data);
 }]);
