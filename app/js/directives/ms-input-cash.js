@@ -1,10 +1,9 @@
-
 'use strict';
 /*global angular, jQuery */
 
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
-        parserProvider.register('inputcash', {
+		parserProvider.register('inputcash', {
             directiveTemplate: '<ms-input-cash ng-hide="display" expected={{expected}} label={{label}}></ms-input-cash>'
         });
     }])
@@ -23,14 +22,21 @@ angular.module('mathSkills')
                 controller: function ($scope, $element) {
                     $scope.answer = '';
                     $scope.controllerId = Math.random().toString();
+					$scope.nullInput = false;
                     
-                    $scope.$watch('expected', function () {
-                        if($scope.expected) {
+                    $scope.$watch('expected', function () { 
+                        if($scope.expected) {   
                             
                             var arr = [];
-                            $scope.myargs = parser.extractTag($scope.expected).args;
+                            $scope.myargs = parser.extractTag($scope.expected).args; 
                             $scope.display = $scope.myargs[0].length === 0;
-
+							
+							// reset input arg "&#00;" (null) to "" -- for dd.1 prob 15-16
+							if ($scope.myargs[0] === "&#00;") {
+								$scope.nullInput = true;
+								$scope.myargs[0] = "";
+							}
+							
                             //handle width/with multiple answers 
                             if ($scope.myargs[0][0] === '[') {
                                 arr = JSON.parse($scope.myargs[0]);
@@ -41,7 +47,7 @@ angular.module('mathSkills')
                                 directiveUtils.resize($scope, arr, 'input', 10, 10);
                             }
 
-                            // ****start live data/event stuff****
+                            //****start live data/event stuff****
                             $scope.data = {
                                 expt: ($scope.myargs.length >= 0 ? $scope.myargs[0] : false),
                                 key: ($scope.myargs.length > 1 ? $scope.myargs[1] : false),
@@ -55,15 +61,36 @@ angular.module('mathSkills')
                     $scope.$on('checkAnswer', function (e) {
                         if (e.defaultPrevented !== true) {
                             
-                            var data = {
-                                expected: '\\inputcash{' + $scope.myargs[0] + '}',
+                            var parsedExpected = parser.extractTag($scope.expected).args[0];
+
+                            var data = { 
+                                expected: '\\inputcash{' + parsedExpected + '}',
                                 answer: '\\inputcash{' + $scope.answer + '}',
                                 label: $scope.label
-                            };
-                            
-                            if ($scope.myargs[0][0] === '[') {
-                                var possibleAnswers = JSON.parse($scope.myargs[0]).map(String);
+                                },
+                                
+                                badAnswer = function () {
+                                    data.result = 'incorrect';
+                                    $scope.class = 'error';
+                                    $scope.answer = "";
+                                    $timeout(function () {
+                                        
+                                        $scope.class = '';
+                                    }, 900);
+                                };
+								
+							// reset $scope.answer input arg if '' & null originally supplied
+							if ($scope.answer === '' && $scope.nullInput) {
+								data.answer = '\\inputcash{&#00;}';
+							}
+							//console.log("data is: ",JSON.stringify(data));
+                            if (parsedExpected[0] === '[') {
+                                var possibleAnswers = JSON.parse(parsedExpected).map(String);
                                 var answerIndex = possibleAnswers.indexOf($scope.answer);
+								// "flip" relies on retension of problemData.index, but ms-reduce-fraction.js factorization requires that problemData.index be reset
+								if (problemData.checkData("flip") === false) {
+									problemData.resetIndex();
+								}
                                 if (answerIndex !== -1) {
                                     var correctAnswerIndex = problemData.index(answerIndex);
                                     if (correctAnswerIndex === answerIndex) {
@@ -71,29 +98,23 @@ angular.module('mathSkills')
                                         data.expected = data.answer;
                                         $scope.class = 'success';
                                     } else {
-                                        data.result = 'incorrect';
                                         data.expected = '\\inputcash{' + possibleAnswers[correctAnswerIndex] + '}';
-                                        $scope.class = 'error';
-                                        $scope.answer = "";
+                                        badAnswer();
                                     }
                                     $scope.$emit('answer', data);
                                 } else {
                                     problemData.getIndex().then(function (index){
-                                        data.result = 'incorrect';
                                         data.expected = '\\inputcash{' + possibleAnswers[index] + '}';
-                                        $scope.class = 'error';
-                                        $scope.answer = "";
+                                        badAnswer();
                                         $scope.$emit('answer', data);
                                     });
                                 }
-                            } else {
+                            } else { 
                                 if (data.expected === data.answer) {
                                     data.result = 'correct';
                                     $scope.class = 'success';
                                 } else {
-                                    data.result = 'incorrect';
-                                    $scope.class = 'error';
-                                    $scope.answer = '';
+                                    badAnswer();
                                 }
                                 $scope.$emit('answer', data);
                             }
@@ -114,7 +135,11 @@ angular.module('mathSkills')
                             $scope.class = 'success';
                         } else {
                             $scope.class = 'error';
-                            $scope.answer = '';
+                            $scope.answer = "";
+                            $timeout(function () {
+                                
+                                $scope.class = '';
+                            }, 900);
                         }
                     });
 
@@ -145,7 +170,7 @@ angular.module('mathSkills')
                                 if ($scope.myargs[0][0] === '[') {
                                     var possibleAnswers = JSON.parse($scope.myargs[0]);
                                     problemData.getIndex().then(function (index) {
-                                        $scope.answer = possibleAnswers[index];
+                                        $scope.answer = possibleAnswers[index].toString();
                                     });
                                 } else {
                                     // Strip out the tag part of $scope.expected and extract the value.
@@ -156,6 +181,45 @@ angular.module('mathSkills')
                                 $scope.$emit('helped');
                             } else {
                                 // If we have an answer already, fire a notHelped event.
+                                
+                                // var parsedExpected = parser.extractTag($scope.expected).args[0];
+                                
+                                // if ($scope.myargs[0][0] === '[') {
+                                //     var answersArr = JSON.parse($scope.myargs[0]).map(String); console.log('answersArr ', answersArr);
+                                //     var answerIndex = answersArr.indexOf($scope.answer);  console.log('answerIndex ', answerIndex);
+                                    
+                                //     if (answerIndex !== -1) { 
+                                //         var correctAnswerIndex = problemData.index(answerIndex);  console.log('correctAnswerIndex ', correctAnswerIndex);
+                                //         if (correctAnswerIndex === answerIndex) {
+                                             
+                                //             $scope.$emit('notHelped', {
+                                //                 controllerId: $scope.controllerId
+                                //             });
+                                //         } else {
+                                //             $scope.answer = answersArr[correctAnswerIndex];
+                                //             $scope.$emit('helped');
+                                //         }
+                                         
+                                //     } else {
+                                //         problemData.getIndex().then(function (index){
+                                //             $scope.answer = answersArr[index];
+                                //             $scope.$emit('helped');
+                                //         });
+                                        
+                                //     }
+                                // } else { 
+                                //     if (parsedExpected === $scope.answer) {
+                                        
+                                //         $scope.$emit('notHelped', {
+                                //             controllerId: $scope.controllerId
+                                //         });
+                                //     } else {
+                                //         $scope.answer = parsedExpected;
+                                //         $scope.$emit('helped');
+                                //     }
+                                     
+                                // }
+                                
                                 $scope.$emit('notHelped', {
                                     controllerId: $scope.controllerId
                                 });
@@ -181,3 +245,4 @@ angular.module('mathSkills')
             };
         }
     ]);
+

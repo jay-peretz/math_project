@@ -16,7 +16,9 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                         problem: '\\html{<span class="blue-text">$SStax</span><br><br>$problem<br><br><span class="blue-text">$round</span>}',
                         answer: '\\grp'+
                                     '{\\str{$pre_symbol}}'+
-                                    '{\\css{$answerIn}{width200px}}'+
+                                    '{\\css'+
+										'{\\inputcash{$answer}}'+
+										'{width200px}}'+
                                     '{\\str{$post_symbol}}',
                         controls: {
                             "checkAnswer": true,
@@ -183,7 +185,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'On total wages of $16,400, how much social security tax did Jacob pay?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'',
-                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '1016.80', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -199,7 +200,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'Jacob paid $1,016.80 in social security taxes this year. What were his total earnings?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'',
-                answerIn: dataUtils.pre('\\input{$$answer}'),
                 answer: '16400', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -215,7 +215,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'On total wages of $55,200, how much social security tax did Mary pay?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'',
-                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '3422.40', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -231,7 +230,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'Mary paid $3,422.40 in social security taxes this year. What were her total earnings?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'',
-                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '55200.00', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -247,7 +245,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'On total wages of $33,030, how much social security tax did Slina pay?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'',
-                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '2047.86', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -263,7 +260,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'Slina paid $2,047.86 in social security taxes this year. What were her total earnings?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'',
-                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '33030', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -279,7 +275,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'On total wages of $10010.48, how much social security tax did Tim pay?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'Round answer to the nearest cent.',
-                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '620.65', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -295,7 +290,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'Tim paid $620.65 in social security taxes this year. What were his total earnings?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'Round answer to the nearest cent.',
-                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '10010.48', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -311,7 +305,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'On total wages of $1,560,960, how much social security tax did Justin pay?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'',
-                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '8103.40', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -327,7 +320,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'Justin paid $8103.40 in social security taxes this year. What were his total earnings?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'',
-                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '130700.00', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -343,7 +335,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'On total wages of $70,234.34, how much social security tax did Alison pay?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'Round answer to the nearest cent.',
-                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '4354.53', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -359,7 +350,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'Alison paid $4,354.53 in social security taxes this year. What were her total earnings?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'Round answer to the nearest cent.',
-                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '70234.35', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rd', fkey: 'ld', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -375,7 +365,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'On total wages of $555,001, how much social security tax did Rosemary pay?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'Round answer to the nearest cent.',
-                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '8103.40', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -391,7 +380,6 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
                 problem: 'On total wages of $212,000, how much social security tax did Marcia pay?',
                 SStax:'The Social Security Tax Rate of 6.2% is to be paid on total earnings up to $130,700.',
                 round:'Round answer to the nearest cent.',
-                answerIn: dataUtils.pre('\\inputcash{$$answer}'),
                 answer: '8103.40', template: 'main', pre_symbol: '$', post_symbol: '', 
                 key: 'rn', fkey: 'ln', 
                 dln: '%', drn: 'Amount (Part Quantity)', 
@@ -484,8 +472,8 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
 				 helpfifth: "$4,991 + $6,512.50<br><br>",
 				 template: 'incomeTax'
             }
-        ],
-		shuffle = [
+        ];
+		/*shuffle = [
 					{ problems: [1,7,11], total: 2},
 					{ problems: [2,8,12], total: 2},
 					{ problems: [9,13], total: 1},
@@ -495,7 +483,7 @@ angular.module('mathSkills').service('data21_2', ['dataUtils', function (dataUti
 			];
 
 	    
-	    	return dataUtils.build(desc, template, data, shuffle);
-			//return dataUtils.build(desc, template, data);
+	    	return dataUtils.build(desc, template, data, shuffle);*/
+			return dataUtils.build(desc, template, data);
 			
 	}]);

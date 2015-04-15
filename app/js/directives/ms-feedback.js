@@ -41,7 +41,7 @@ angular.module('mathSkills')
                             }
 							
 							// no feedback for workbook steps with control "stepwiseNextProblem": true
-							if (problemData.getData('stepwiseNextProblem') !== undefined && problemData.getData('stepwiseNextProblem') === true) {
+							if (typeof problemData.getData('stepwiseNextProblem') !== "undefined" && problemData.getData('stepwiseNextProblem') === true) {
 								$scope.feedback.show = false;
 							}
 
