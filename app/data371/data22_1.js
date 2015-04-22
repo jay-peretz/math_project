@@ -267,7 +267,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 		},
         data = [
             { 	// problem 1
-                problem: 'Val Daniels borrowed $1,200 from her credit union for a period of 9 months.  If the simple interest rate is 6%, how much interest did she pay at the end of this loan period?  (round all dollar amounts to the nearest cent)',
+                problem: 'Val Daniels borrowed $1,200 from her credit union for a period of 9 months.  If the simple interest rate is 6%, how much interest did she pay at the end of this loan period?  (round the answer to the nearest dollar if necessary)',
 				 answer: '54.00',
 				 helpAnswer: '54.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
@@ -280,7 +280,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 helpsixth: "I <span class=bigger>=</span> $1200 <span class=bigger>&sdot;</span> 0.06 <span class=bigger>&sdot;</span> 0.75",
 				 template: 'timeFraction'
             },{ // problem 2
-                problem: 'Beth Roberts borrowed $1,400 at a bank where the simple interest rate is 11%.  Assuming she made no down payment on this loan, calculate the total amount she must pay back at the end of one year.  (round all dollar amounts to the nearest cent)',
+                problem: 'Beth Roberts borrowed $1,400 at a bank where the simple interest rate is 11%.  Assuming she made no down payment on this loan, calculate the total amount she must pay back at the end of one year.  (round the answer to the nearest dollar if necessary)',
 				 answer: '1554.00',
 				 helpAnswer: '1,554.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
@@ -296,7 +296,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 template: 'timeWhole'
             },
 			{ 	// problem 3
-                problem: 'Bob Jones borrowed $10,200 at a bank where the simple interest rate is 6%.  Assuming he made no down payment on this loan, calculate the total amount he must pay back at the end of two years.  (round all dollar amounts to the nearest cent)',
+                problem: 'Bob Jones borrowed $10,200 at a bank where the simple interest rate is 6%.  Assuming he made no down payment on this loan, calculate the total amount he must pay back at the end of two years.  (round the answer to the nearest dollar if necessary)',
 				 answer: '11424.00', 
 				 helpAnswer: '11,424.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
@@ -313,10 +313,10 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
             },
 			{ 	// problem 4
                 problem: 'Dana Esquival invested $15,000 into a new company.  She earned 7% simple interest for 2 years.  How much interest did she earn from her investment?',
-				part2Problem: "How much money did the company pay back to Dana? (round all dollar amounts to the nearest cent)",
+				part2Problem: "How much money did the company pay back to Dana? (round the answer to the nearest dollar if necessary)",
 				 answer1: '2100.00',
 				 helpAnswer1: '2,100.00',
-				 answer2: '17,100.00',
+				 answer2: '17100.00',
 				 helpAnswer2: '17,100.00',
 				 helpFirst: "1) The Basic Interest Formula:", 
 				 helpSecond: "Interest <span class=bigger>=</span> \xA0Principal <span class=bigger>&sdot;</span> Rate <span class=bigger>&sdot;</span> Time<br><br>The principal is the investment ($15,000).",
@@ -332,8 +332,8 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 template: 'timeFractionTwoPartShort'
             },
 			{ 	// problem 5
-                problem: 'Alicia Taylor borrowed $1,600 at a bank where the simple interest rate is 12%.  Assuming she made no down payment on this loan, calculate her pay-off amount at the end of a year. (round all dollar amounts to the nearest cent)',
-				part2Problem: "Determine Alicia's monthly payments. (round all dollar amounts to the nearest cent)",
+                problem: 'Alicia Taylor borrowed $1,600 for one year at a bank where the simple interest rate is 12%. How much will she need to pay back to the bank? (round the answer to the nearest dollar if necessary)', 
+				part2Problem: "Determine Alicia's monthly payments. (round the answer to the nearest dollar if necessary)",
 				 answer1: '1792.00',
 				 helpAnswer1: '1,792.00',
 				 answer2: '149.33',
@@ -354,8 +354,8 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 template: 'timeWholeTwoPart'
             },
 			{ 	// problem 6
-                problem: 'Jayvis Williams borrowed $100,000 at a bank where the simple interest rate is 4%.  Assuming he made no down payment on this loan, calculate his pay-off amount at the end of ten years. (round all dollar amounts to the nearest cent)',
-				part2Problem: "Determine Jayvis's monthly payments. (round all dollar amounts to the nearest cent)",
+                problem: 'Jayvis Williams borrowed $100,000 for 10 years at a bank where the simple interest is 4%. How much will he need to pay back to the bank? (round the answer to the nearest dollar if necessary)',
+				part2Problem: "Determine Jayvis's monthly payments. (round the answer to the nearest dollar if necessary)",
 				 answer1: '140000.00',
 				 helpAnswer1: '140,000.00',
 				 answer2: '1166.67',
@@ -376,8 +376,8 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 template: 'timeWholeTwoPart'
             },
 			{ 	// problem 7
-                problem: 'Sarah Maple borrowed $3,600 for 6 months at a bank where the yearly interest rate is 15%.  She decides to make monthly payments on this loan after making a down-payment of $720.  Calculate the total amount of money she must pay back to the bank in the six months after she makes her down payment (round all dollar amounts to the nearest cent).',
-				part2Problem: "Determine Sarah's monthly payments. (round all dollar amounts to the nearest cent)",
+                problem: 'Sarah Maple borrowed $3,600 for 6 months at a bank where the yearly interest rate is 15%.  She decides to make monthly payments on this loan after making a down-payment of $720.  Calculate the total amount of money she must pay back to the bank in the six months after she makes her down payment (round the answer to the nearest dollar if necessary).',
+				part2Problem: "Determine Sarah's monthly payments. (round the answer to the nearest dollar if necessary)",
 				 answer1: '3096.00',
 				 helpAnswer1: '3,096.00',
 				 answer2: '516.00',
@@ -400,8 +400,8 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 template: 'timeFractionTwoPart'
             },
 			{ 	// problem 8
-                problem: 'Greg Schwarz borrowed $2,500 for 3 months at a bank where the yearly interest rate is 12%.  He decides to make monthly payments on this loan after making a down-payment of $100.  Calculate the total amount of money he must pay back to the bank in the three months after he makes his down payment (round all dollar amounts to the nearest cent).',
-				part2Problem: "Determine Greg's monthly payments. (round all dollar amounts to the nearest cent)",
+                problem: 'Greg Schwarz borrowed $2,500 for 3 months at a bank where the yearly interest rate is 12%.  He decides to make monthly payments on this loan after making a down-payment of $100.  Calculate the total amount of money he must pay back to the bank in the three months after he makes his down payment (round the answer to the nearest dollar if necessary).',
+				part2Problem: "Determine Greg's monthly payments. (round the answer to the nearest dollar if necessary)",
 				 answer1: '2472.00',
 				 helpAnswer1: '2,472.00',
 				 answer2: '824.00',
@@ -425,7 +425,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
             },
 			{ 	// problem 9
                 problem: 'Contansa Aguilera invested $50,000 into a new company.  She earned 8% simple interest for 3 years.  How much interest did she earn from her investment?',
-				part2Problem: "How much money did the company pay back to Constanza? (round all dollar amounts to the nearest cent)",
+				part2Problem: "How much money did the company pay back to Constanza? (round the answer to the nearest dollar if necessary)",
 				 answer1: '12000.00',
 				 helpAnswer1: '12,000.00',
 				 answer2: '62000.00',
@@ -444,7 +444,7 @@ angular.module('mathSkills').service('data22_1', ['dataUtils', function (dataUti
 				 template: 'timeFractionTwoPartShort'
             },{  // problem 10
 				 problem: 'To start his new business, Yousef needed to purchase $180,000 worth of specialized packaging equipment.  He made a 20% downpayment to the manufacturer for this equipment and borrowed the rest at a 5.5% simple interest rate for 6 years.  How much money did Yousef have to pay back to the manufacturer after he made his downpayment?',
-				part2Problem: "What was Yousef's monthly payment? (round all dollar amounts to the nearest cent)",
+				part2Problem: "What was Yousef's monthly payment? (round the answer to the nearest dollar if necessary)",
 				 answer1: '191520.00',
 				 helpAnswer1: '191,520.00',
 				 answer2: '2660.00',
