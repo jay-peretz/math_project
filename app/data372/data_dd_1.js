@@ -2099,7 +2099,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 					probQuestion: 'Solve for the value of the variable, or click &quot;no solution&quot; if the equation cannot be solved:',
 					probStatement: dataUtils.pre(
 									'\\grp'
-										+'{\\str{-2a - 3 = -4 (-3a - 3 ) + 5a}}'
+										+'{\\str{2a - 3 = -4 (-3a - 3 ) + 5a}}'
 						),
 					ansVariable: 'a',
 					helpEliminate: '2a',
@@ -2159,7 +2159,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
-												+'{\\str{Original equation:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2a - 3 = -4 (-3a - 3 ) + 5a}}'
+												+'{\\str{Original equation:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2a - 3 = -4 (-3a - 3 ) + 5a}}'
 												+'{}'
 											+'}'
 										+'}'
@@ -2184,7 +2184,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
-												+'{\\str{3<sup>rd</sup>: &nbsp;Add 6x.}}'
+												+'{\\str{3<sup>rd</sup>: &nbsp;Subtract 2a.}}'
 												+'{width158}'
 											+'}'
 											+'{$$helpThirdPiece}'
@@ -2202,7 +2202,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
-												+'{\\str{4<sup>th</sup>:&nbsp; Add 2.}}'
+												+'{\\str{4<sup>th</sup>:&nbsp; Subtract 12.}}'
 												+'{width158}'
 											+'}'
 											+'{$$helpFifthPiece}'
@@ -2219,7 +2219,7 @@ angular.module('mathSkills').service('data_dd_1', ['dataUtils', function (dataUt
 										+'{\\str{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
-												+'{\\str{5<sup>th</sup>: &nbsp;&nbsp;Divide by 9.}}'
+												+'{\\str{5<sup>th</sup>: &nbsp;&nbsp;Divide by 15.}}'
 												+'{width158}'
 											+'}'
 											+'{$$helpSeventhPiece}'

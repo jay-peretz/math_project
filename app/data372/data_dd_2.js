@@ -935,7 +935,7 @@ angular.module('mathSkills').service('data_dd_2', ['dataUtils', function (dataUt
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
-												+'{\\str{Distribute the 20.}}'
+												+'{\\str{Distribute the 6.}}'
 												+'{width180}'
 											+'}'
 											+'{$$helpFirstPiece}'
