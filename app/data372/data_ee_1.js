@@ -2262,6 +2262,316 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 						),
 					template: 'flexyNextScrolls',
 				}
+				,
+				{	// problem 21
+					probQuestion: 'The circumference of a circle is 49 centimeters. Solve for the radius (use 3.14 for &pi; and round answer to the nearest tenths place).',
+					probStatement: dataUtils.pre(
+												 '\\pan{3}{9}'
+													+'{\\grp'
+														+'{\\str{&nbsp;}}'
+													+'}'
+						),
+					ansVariable: 'x',
+					ansNumber: '7.8',
+					solution: dataUtils.pre(
+									'\\rowgrp'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{radius = }}'
+												+'{\\input{$$ansNumber}}'
+												+'{\\str{cm.}}'
+											+'}'
+											+'{marginLeft80px}'
+										+'}'
+								),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\str{The formula to solve for the circumference is: C = &pi; * d or C = &pi; * 2 * r}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Since we are trying to solve for the radius, let\'s use the formula: C = &pi; * 2 * r}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We know the circumference. That is given as 49 centimeters. We are also told to use 3.14 for &pi;.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Our unknown in the formula is the radius (r).}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Substitute the above values into the formula below:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Original formula:}}'
+												+'{width160}'
+											+'}'
+											+'{\\str{<span class=hiddenSpace>x</span>C = &pi; * 2 * r}}'
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Substitution:}}'
+												+'{width160}'
+											+'}'
+											+'{\\str{49 = 3.14 * 2 * r}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{which is the same as: 49 = 6.28r}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Solve the equation by isolating the variable.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We get 7.802547... }}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Round answer to the tenths place.}}'
+								),
+					helpAnswer: dataUtils.pre(
+											  '\\grp'
+												+'{\\str{radius = }}'
+												+'{\\str{$$ansNumber}}'
+												+'{\\str{cm.}}'
+						),
+					template: 'flexyNextScrolls',
+				}
+				,
+				{	// problem 22
+					probQuestion: 'The circumference of a circle is 130 yards. Solve for the radius (use 3.14 for &pi; and round answer to the nearest tenths place).',
+					probStatement: dataUtils.pre(
+												 '\\pan{3}{9}'
+													+'{\\grp'
+														+'{\\str{&nbsp;}}'
+													+'}'
+						),
+					ansVariable: 'x',
+					ansNumber: '20.7',
+					solution: dataUtils.pre(
+									'\\rowgrp'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{radius = }}'
+												+'{\\input{$$ansNumber}}'
+												+'{\\str{yd.}}'
+											+'}'
+											+'{marginLeft80px}'
+										+'}'
+								),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\str{The formula to solve for the circumference is: C = &pi; * d or C = &pi; * 2 * r}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Since we are trying to solve for the radius, let\'s use the formula: C = &pi; * 2 * r}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We know the circumference. That is given as 130 yards. We are also told to use 3.14 for &pi;.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Our unknown in the formula is the radius (r).}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Substitute the above values into the formula below:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Original formula:}}'
+												+'{width160}'
+											+'}'
+											+'{\\str{<span class=hiddenSpace>x</span>C = &pi; * 2 * r}}'
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Substitution:}}'
+												+'{width160}'
+											+'}'
+											+'{\\str{130 = 3.14 * 2 * r}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{which is the same as: 130 = 6.28r}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Solve the equation by isolating the variable.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We get 20.70063... }}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Round answer to the tenths place.}}'
+								),
+					helpAnswer: dataUtils.pre(
+											  '\\grp'
+												+'{\\str{radius = }}'
+												+'{\\str{$$ansNumber}}'
+												+'{\\str{yd.}}'
+						),
+					template: 'flexyNextScrolls',
+				}
+				,
+				{	// problem 23
+					probQuestion: 'The area of a triangle is 40 square feet. If the base of the triangle is 8 feet, what is the height of the triangle?',
+					probStatement: dataUtils.pre(
+												 '\\pan{3}{9}'
+													+'{\\grp'
+														+'{\\str{&nbsp;}}'
+													+'}'
+						),
+					ansNumber: '10',
+					solution: dataUtils.pre(
+									'\\rowgrp'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{height = }}'
+												+'{\\input{$$ansNumber}}'
+												+'{\\str{ft.}}'
+											+'}'
+											+'{marginLeft80px}'
+										+'}'
+								),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\str{The formula to solve for the area is:&nbsp; A = }}'
+											+'{\\css'
+												+'{\\frac'
+													+'{\\str{1}}'
+													+'{\\str{2}}'
+												+'}'
+												+'{fracNoMargin}'
+											+'}'
+											+'{\\str{* b * h}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{The area (A) = 40.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{The base (b) = 8.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Our unknown in the formula is the height (h).}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Substitute the above values into the formula below:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Original formula:}}'
+												+'{width160}'
+											+'}'
+											+'{\\grp'
+												+'{\\str{A = }}'
+												+'{\\css'
+													+'{\\frac'
+														+'{\\str{1}}'
+														+'{\\str{2}}'
+													+'}'
+													+'{fracNoMargin}'
+												+'}'
+												+'{\\str{* b * h}}'
+											+'}'
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Substitution:}}'
+												+'{width160}'
+											+'}'
+											+'{\\grp'
+												+'{\\str{40 = }}'
+												+'{\\css'
+													+'{\\frac'
+														+'{\\str{1}}'
+														+'{\\str{2}}'
+													+'}'
+													+'{fracNoMargin}'
+												+'}'
+												+'{\\str{* 8 * h}}'
+											+'}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{which is the same as:&nbsp; 40 = 4h}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Solve the equation by isolating the variable.}}'
+								),
+					helpAnswer: dataUtils.pre(
+											  '\\grp'
+												+'{\\str{base = }}'
+												+'{\\str{$$ansNumber}}'
+												+'{\\str{ft.}}'
+						),
+					template: 'flexyNextScrolls',
+				}
+				,
+				{	// problem 24
+					probQuestion: 'The area of a triangle is 78 square feet. If the height of the triangle is 12 feet, what is the base of the triangle?',
+					probStatement: dataUtils.pre(
+												 '\\pan{3}{9}'
+													+'{\\grp'
+														+'{\\str{&nbsp;}}'
+													+'}'
+						),
+					ansNumber: '13',
+					solution: dataUtils.pre(
+									'\\rowgrp'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{height = }}'
+												+'{\\input{$$ansNumber}}'
+												+'{\\str{ft.}}'
+											+'}'
+											+'{marginLeft80px}'
+										+'}'
+								),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\str{The formula to solve for the area is:&nbsp; A = }}'
+											+'{\\css'
+												+'{\\frac'
+													+'{\\str{1}}'
+													+'{\\str{2}}'
+												+'}'
+												+'{fracNoMargin}'
+											+'}'
+											+'{\\str{* b * h}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{The area (A) = 78.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{The height (h) = 12.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Our unknown in the formula is the base (b).}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Substitute the above values into the formula below:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Original formula:}}'
+												+'{width160}'
+											+'}'
+											+'{\\grp'
+												+'{\\str{A = }}'
+												+'{\\css'
+													+'{\\frac'
+														+'{\\str{1}}'
+														+'{\\str{2}}'
+													+'}'
+													+'{fracNoMargin}'
+												+'}'
+												+'{\\str{* b * h}}'
+											+'}'
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Substitution:}}'
+												+'{width160}'
+											+'}'
+											+'{\\grp'
+												+'{\\str{78 = }}'
+												+'{\\css'
+													+'{\\frac'
+														+'{\\str{1}}'
+														+'{\\str{2}}'
+													+'}'
+													+'{fracNoMargin}'
+												+'}'
+												+'{\\str{* b * 12}}'
+											+'}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{which is the same as:&nbsp; 78 = 6b}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Solve the equation by isolating the variable.}}'
+								),
+					helpAnswer: dataUtils.pre(
+											  '\\grp'
+												+'{\\str{base = }}'
+												+'{\\str{$$ansNumber}}'
+												+'{\\str{ft.}}'
+						),
+					template: 'flexyNextScrolls',
+				}
         ];
 		/*shuffle = [
 				{ problems: [1,2], total: 1},
