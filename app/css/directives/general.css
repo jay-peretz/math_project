@@ -363,14 +363,26 @@ table td .width160ValignTop {
 .underline {
 	text-decoration:underline;
 }
-.width400 {
-	width: 400px;
-}
-.width380 {
-	width: 380px;
-}
 .width40 {
 	width: 40px;
+}
+.width50 {
+	width: 50px;
+}
+.width60 {
+	width: 60px;
+}
+.width70 {
+	width: 70px;
+}
+.width100 {
+	width: 100px;
+}
+.width110 {
+	width: 110px;
+}
+.width120 {
+	width: 120px;
 }
 .width130 {
 	width: 130px;
@@ -398,6 +410,12 @@ table td .width160ValignTop {
 }
 .width220 {
 	width: 220px;
+}
+.width380 {
+	width: 380px;
+}
+.width400 {
+	width: 400px;
 }
 /* .width160 select is used in data8_5.js*/
 .width160 select{

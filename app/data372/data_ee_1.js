@@ -37,6 +37,37 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 					}]
 				}]
 			}
+			,
+			flexyNextScrolls: {
+                title: 'EE.1 Solving Algebraic Equation Word Problems',
+                children: [{
+                    title: 'Main Answer',
+                    children: [{
+						problem: '\\rowgrp'
+										+'{\\html{$probQuestion}}'
+										+'{\\html{&nbsp;}}'
+										+'{$$probStatement}'
+										,
+						answer: '$solution',
+						controls: {
+								"checkAnswer": true,
+								"help": '\\rowgrp' 	 
+											+'$firstTable'
+											+'{\\html{&nbsp;}}'
+											+'{\\html{&nbsp;}}'
+											+'{css'
+												+'{\\grp'
+													+'{\\str{Answer: &nbsp;}}'
+													+'{$helpAnswer}'
+												+'}'
+												+'{help-answer-text}'
+											+'}'
+											+'{\\html{&nbsp;}}',
+								"fixHelpControls": true
+						}
+					}]
+				}]
+			}
         },
         data = [
 				{	// problem 1
@@ -430,7 +461,7 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 									'\\grp'
 										+'{\\str{<span class=fontsize110>$$ansVariable</span> &nbsp;<span class=fontsize110>=</span> $$ansNumber}}'
 						),
-					template: 'flexy',
+					template: 'flexyNextScrolls',
 				}
 				,
 				{	// problem 6
@@ -548,7 +579,7 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 									'\\grp'
 										+'{\\str{<span class=fontsize110>$$ansVariable</span> &nbsp;<span class=fontsize110>=</span> $$ansNumber}}'
 						),
-					template: 'flexy',
+					template: 'flexyNextScrolls',
 				}
 				,
 				{	// problem 7
@@ -664,7 +695,7 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 									'\\grp'
 										+'{\\str{<span class=fontsize110>$$ansVariable</span> &nbsp;<span class=fontsize110>=</span> $$ansNumber}}'
 						),
-					template: 'flexy',
+					template: 'flexyNextScrolls',
 				}
 				,
 				{	// problem 8
@@ -781,7 +812,7 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 									'\\grp'
 										+'{\\str{<span class=fontsize110>$$ansVariable</span> &nbsp;<span class=fontsize110>=</span> $$ansNumber}}'
 						),
-					template: 'flexy',
+					template: 'flexyNextScrolls',
 				}
 				,
 				{	// problem 9
@@ -829,7 +860,7 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 									'\\grp'
 										+'{\\str{<span class=fontsize110>$$ansVariable</span> &nbsp;<span class=fontsize110>=</span> $$ansNumber}}'
 						),
-					template: 'flexy',
+					template: 'flexyNextScrolls',
 				}
 				,
 				{	// problem 10
@@ -877,7 +908,7 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 									'\\grp'
 										+'{\\str{<span class=fontsize110>$$ansVariable</span> &nbsp;<span class=fontsize110>=</span> $$ansNumber}}'
 						),
-					template: 'flexy',
+					template: 'flexyNextScrolls',
 				}
 				,
 				{	// problem 11
@@ -928,7 +959,7 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 									'\\grp'
 										+'{\\str{<span class=fontsize110>$$ansVariable</span> &nbsp;<span class=fontsize110>=</span> $$ansNumber}}'
 						),
-					template: 'flexy',
+					template: 'flexyNextScrolls',
 				}
 				,
 				{	// problem 12
@@ -979,7 +1010,667 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 									'\\grp'
 										+'{\\str{<span class=fontsize110>$$ansVariable</span> &nbsp;<span class=fontsize110>=</span> $$ansNumber}}'
 						),
-					template: 'flexy',
+					template: 'flexyNextScrolls',
+				}
+				,
+				{	// problem 13
+					probQuestion: 'Solve for the value of the variable:',
+					probStatement: dataUtils.pre(
+									'\\grp'
+										+'{\\str{22.05 is what percent of 63?}}'
+						),
+					ansVariable: 'x',
+					helpFirstPiece: 'We translate word-for-word, left to right.',
+					helpSecondPiece: '(1) \"is\" becomes our equal sign.',
+					helpThirdPiece: '(2) \"what percent\" can be expressed as the unknown<span class=hyphenByLineThrough>&nbsp&nbsp;</span>an \"x\" with a percent symbol.',
+					helpFourthPiece: '\"what percent\" is the same as \"x%\", but we don\'t normally write the percent symbol, instead changing this to a decimal or fraction.',
+					helpFifthPiece: 'Remember that the percent symbol means <u>\"divide by 100\"</u> or <u>\"multiply by 1<span class=fontsize110>&#8260;</span>100\"</u> or commonly expressed with a variable as <u>\"multiply by <span class=fontsize110>&#46;</span>01\"</u>.',
+					helpSixthPiece: 'These all mean the same:',
+					helpSeventhPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{x%}}'
+										+'{\\str{ = }}'
+										+'{\\css'
+											+'{\\frac'
+												+'{\\str{x}}'
+												+'{\\str{100}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+							 			+'{\\str{ = }}'
+										+'{\\css'
+											+'{\\frac'
+												+'{\\str{1}}'
+												+'{\\str{100}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+										+'{\\str{* x}}'
+										+'{\\str{ = }}'
+										+'{\\str{.01x}}'
+						),
+					helpEighthPiece: 'In this equation we will use \".01x\" for the translation of \"what percent.\"',
+					helpNinethPiece: '(3) \"of\" means \"multiply\".',
+					helpTenthPiece: '\"22.05 is what percent of 63?\" means:',
+					helpEleventhPiece: '22.05 = ( .01x )( 63 ) which is the same as:',
+					helpTwelfthPiece: '22.05 = .63x',
+					helpThirteenthPiece: 'Solve the equation by isolating the variable.',
+					ansNumber: '35',
+					solution: dataUtils.pre(
+									'\\rowgrp'
+										+'{\\grp'
+											+'{\\str{$$ansVariable = }}'
+											+'{\\input{$$ansNumber}}'
+											+'{\\str{%}}'
+										+'}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\html{$$helpFirstPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpSecondPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpThirdPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpFourthPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpFifthPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpSixthPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{$$helpSeventhPiece}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpEighthPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpNinethPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpTenthPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpEleventhPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpTwelfthPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpThirteenthPiece}}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{<span class=fontsize110>$$ansVariable</span> &nbsp;<span class=fontsize110>=</span> $$ansNumber %}}'
+						),
+					template: 'flexyNextScrolls',
+				}
+				,
+				{	// problem 14
+					probQuestion: 'Solve for the value of the variable:',
+					probStatement: dataUtils.pre(
+									'\\grp'
+										+'{\\str{42 is what percent of 24?}}'
+						),
+					ansVariable: 'x',
+					helpFirstPiece: 'We translate word-for-word, left to right.',
+					helpSecondPiece: '(1) \"is\" becomes our equal sign.',
+					helpThirdPiece: '(2) \"what percent\" can be expressed as the unknown<span class=hyphenByLineThrough>&nbsp&nbsp;</span>an \"x\" with a percent symbol.',
+					helpFourthPiece: '\"what percent\" is the same as \"x%\", but we don\'t normally write the percent symbol, instead changing this to a decimal or fraction.',
+					helpFifthPiece: 'Remember that the percent symbol means <u>\"divide by 100\"</u> or <u>\"multiply by 1<span class=fontsize110>&#8260;</span>100\"</u> or commonly expressed with a variable as <u>\"multiply by <span class=fontsize110>&#46;</span>01\"</u>.',
+					helpSixthPiece: 'These all mean the same:',
+					helpSeventhPiece: dataUtils.pre(
+									'\\grp'
+										+'{\\str{x%}}'
+										+'{\\str{ = }}'
+										+'{\\css'
+											+'{\\frac'
+												+'{\\str{x}}'
+												+'{\\str{100}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+							 			+'{\\str{ = }}'
+										+'{\\css'
+											+'{\\frac'
+												+'{\\str{1}}'
+												+'{\\str{100}}'
+											+'}'
+											+'{fracNoMargin}'
+										+'}'
+										+'{\\str{* x}}'
+										+'{\\str{ = }}'
+										+'{\\str{.01x}}'
+						),
+					helpEighthPiece: 'In this equation we will use \".01x\" for the translation of \"what percent.\"',
+					helpNinethPiece: '(3) \"of\" means \"multiply\".',
+					helpTenthPiece: '\"42 is what percent of 24?\" means:',
+					helpEleventhPiece: '42 = ( .01x )( 24 ) which is the same as:',
+					helpTwelfthPiece: '42 = .24x',
+					helpThirteenthPiece: 'Solve the equation by isolating the variable.',
+					ansNumber: '175',
+					solution: dataUtils.pre(
+									'\\rowgrp'
+										+'{\\grp'
+											+'{\\str{$$ansVariable = }}'
+											+'{\\input{$$ansNumber}}'
+											+'{\\str{%}}'
+										+'}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\html{$$helpFirstPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpSecondPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpThirdPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpFourthPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpFifthPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpSixthPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{$$helpSeventhPiece}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpEighthPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpNinethPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpTenthPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpEleventhPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpTwelfthPiece}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{$$helpThirteenthPiece}}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+										+'{\\str{<span class=fontsize110>$$ansVariable</span> &nbsp;<span class=fontsize110>=</span> $$ansNumber %}}'
+						),
+					template: 'flexyNextScrolls',
+				}
+				,
+				{	// problem 15
+					probQuestion: 'The sum of three consecutive numbers is 51. What are the three consecutive numbers?',
+					probStatement: dataUtils.pre(
+												 '\\pan{3}{9}'
+													+'{\\grp'
+														+'{\\str{&nbsp;}}'
+													+'}'
+						),
+					ansVariable: 'x',
+					ansFirstNumber: '16',
+					ansSecondNumber: '17',
+					ansThirdNumber: '18',
+					solution: dataUtils.pre(
+									'\\rowgrp'
+										+'{\\grp'
+											+'{\\input{$$ansFirstNumber}}'
+											+'{\\str{ <span class=fontsize125>,</span> }}'
+											+'{\\input{$$ansSecondNumber}}'
+											+'{\\str{ <span class=fontsize125>,</span> }}'
+											+'{\\input{$$ansThirdNumber}}'
+										+'}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\str{Before we write an equation, we must first create an algebraic expression to represent each of the three unknown values.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Let\'s write our first unknown value as \"x\".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We don\'t know the actual values of the second and third numbers, but we do know their relationship to the first unknown of \"x\".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We know that these three values are \"consecutive\" or the \"next\" value. In fact, consecutive means \"plus 1.\"}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{If the 1<sup>st</sup> unknown is x, then the second unknown must be: &nbsp;x + 1.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{The third unknown would be:&nbsp; x + 1 + 1 or&nbsp; x + 2.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{So: &nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{1<sup>st</sup> unknown:}}'
+												+'{width100}'
+											+'}'
+											+'{\\str{x}}'
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{2<sup>nd</sup> unknown:}}'
+												+'{width100}'
+											+'}'
+											+'{\\str{x + 1}}'
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{3<sup>rd</sup> unknown:}}'
+												+'{width100}'
+											+'}'
+											+'{\\str{x + 2}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Now we can write an equation. We know that the \"sum of the values equals 51\". Let\'s write that out left to right, adding the values together.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{x + ( x + 1 ) + ( x + 2 ) = 51}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Now, simplify and solve the equation:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Original equation:}}'
+												+'{width180}'
+											+'}'
+											+'{\\str{x + ( x + 1 ) + ( x + 2 ) = 51}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{1<sup>st</sup>:&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\str{Simplify the left side of the equation. Combine the \"x\" terms and then the 1 and the 2.}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{Result:}}'
+												+'{width120}'
+											+'}'
+											+'{\\str{3x + 3 = 51}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{We can now <u>isolate the variable</u> because it is on one side of the equation <strong>only</strong>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{2<sup>nd</sup>:&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{Subtract 3.}}'
+												+'{width120}'
+											+'}'
+											+'{\\str{3x + 3 - <strong>3</strong> = 51 - <strong>3</strong>}}'
+											
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{Result:}}'
+												+'{width120}'
+											+'}'
+											+'{\\str{3x = 48}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{3<sup>rd</sup>:&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{Divide by 3.}}'
+												+'{width120}'
+											+'}'
+											+'{\\css'
+												+'{\\frac'
+													+'{\\str{3x}}'
+													+'{\\str{<strong>3</strong>}}'
+												+'}'
+												+'{fracNoMargin}'
+											+'}'
+											+'{\\str{=}}'
+											+'{\\css'
+												+'{\\frac'
+													+'{\\str{48}}'
+													+'{\\str{<strong>3</strong>}}'
+												+'}'
+												+'{fracNoMargin}'
+											+'}'
+											
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{Result:}}'
+												+'{width120}'
+											+'}'
+											+'{\\str{&nbsp;x = 16}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{So we have solved for the value of x, but we haven\'t answered the question that was asked yet.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{1<sup>st</sup> unknown:&nbsp;}}'
+												+'{width100}'
+											+'}'
+											+'{\\css'
+												+'{\\str{x}}'
+												+'{width70}'
+											+'}'
+											+'{\\str{Substitute for x:&nbsp; ( 16 )}}'
+											
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width180}'
+											+'}'
+											+'{\\str{So: 1<sup>st</sup> unknown = 16}}'
+											
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{2<sup>nd</sup> unknown:}}'
+												+'{width100}'
+											+'}'
+											+'{\\css'
+												+'{\\str{x + 1}}'
+												+'{width70}'
+											+'}'
+											+'{\\str{Substitute for x + 1:&nbsp; ( 16 ) + 1}}'
+											
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width180}'
+											+'}'
+											+'{\\str{So: 2<sup>nd</sup> unknown = 17}}'
+											
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{3<sup>rd</sup> unknown:&nbsp;}}'
+												+'{width100}'
+											+'}'
+											+'{\\css'
+												+'{\\str{x + 2}}'
+												+'{width70}'
+											+'}'
+											+'{\\str{Substitute for x + 2:&nbsp; ( 16 ) + 2}}'
+											
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width180}'
+											+'}'
+											+'{\\str{So: 3<sup>rd</sup> unknown = 18}}'
+											
+										+'}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+											+'{\\str{$$ansFirstNumber}}'
+											+'{\\str{ <span class=fontsize125>,</span> }}'
+											+'{\\str{$$ansSecondNumber}}'
+											+'{\\str{ <span class=fontsize125>,</span> }}'
+											+'{\\str{$$ansThirdNumber}}'
+						),
+					template: 'flexyNextScrolls',
+				}
+				,
+				{	// problem 16
+					probQuestion: 'The sum of three consecutive numbers is 78. What are the three consecutive numbers?',
+					probStatement: dataUtils.pre(
+												 '\\pan{3}{9}'
+													+'{\\grp'
+														+'{\\str{&nbsp;}}'
+													+'}'
+						),
+					ansVariable: 'x',
+					ansFirstNumber: '25',
+					ansSecondNumber: '26',
+					ansThirdNumber: '27',
+					solution: dataUtils.pre(
+									'\\rowgrp'
+										+'{\\grp'
+											+'{\\input{$$ansFirstNumber}}'
+											+'{\\str{ <span class=fontsize125>,</span> }}'
+											+'{\\input{$$ansSecondNumber}}'
+											+'{\\str{ <span class=fontsize125>,</span> }}'
+											+'{\\input{$$ansThirdNumber}}'
+										+'}'
+						),
+					firstTable: dataUtils.pre(
+										'{\\html{&nbsp;}}'
+										+'{\\str{Before we write an equation, we must first create an algebraic expression to represent each of the three unknown values.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Let\'s write our first unknown value as \"x\".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We don\'t know the actual values of the second and third numbers, but we do know their relationship to the first unknown of \"x\".}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{We know that these three values are \"consecutive\" or the \"next\" value. In fact, consecutive means \"plus 1.\"}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{If the 1<sup>st</sup> unknown is x, then the second unknown must be: &nbsp;x + 1.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{The third unknown would be:&nbsp; x + 1 + 1 or&nbsp; x + 2.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{So: &nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{1<sup>st</sup> unknown:}}'
+												+'{width100}'
+											+'}'
+											+'{\\str{x}}'
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{2<sup>nd</sup> unknown:}}'
+												+'{width100}'
+											+'}'
+											+'{\\str{x + 1}}'
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{3<sup>rd</sup> unknown:}}'
+												+'{width100}'
+											+'}'
+											+'{\\str{x + 2}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Now we can write an equation. We know that the \"sum of the values equals 78\". Let\'s write that out left to right, adding the values together.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{x + ( x + 1 ) + ( x + 2 ) = 78}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Now, simplify and solve the equation:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{Original equation:}}'
+												+'{width180}'
+											+'}'
+											+'{\\str{x + ( x + 1 ) + ( x + 2 ) = 78}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{1<sup>st</sup>:&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\str{Simplify the left side of the equation. Combine the \"x\" terms and then the 1 and the 2.}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{Result:}}'
+												+'{width120}'
+											+'}'
+											+'{\\str{3x + 3 = 78}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{We can now <u>isolate the variable</u> because it is on one side of the equation <strong>only</strong>.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{2<sup>nd</sup>:&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{Subtract 3.}}'
+												+'{width120}'
+											+'}'
+											+'{\\str{3x + 3 - <strong>3</strong> = 78 - <strong>3</strong>}}'
+											
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{Result:}}'
+												+'{width120}'
+											+'}'
+											+'{\\str{3x = 75}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{3<sup>rd</sup>:&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{Divide by 3.}}'
+												+'{width120}'
+											+'}'
+											+'{\\css'
+												+'{\\frac'
+													+'{\\str{3x}}'
+													+'{\\str{<strong>3</strong>}}'
+												+'}'
+												+'{fracNoMargin}'
+											+'}'
+											+'{\\str{=}}'
+											+'{\\css'
+												+'{\\frac'
+													+'{\\str{75}}'
+													+'{\\str{<strong>3</strong>}}'
+												+'}'
+												+'{fracNoMargin}'
+											+'}'
+											
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width50}'
+											+'}'
+											+'{\\css'
+												+'{\\str{Result:}}'
+												+'{width120}'
+											+'}'
+											+'{\\str{&nbsp;x = 25}}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\html{So we have solved for the value of x, but we haven\'t answered the question that was asked yet.}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{1<sup>st</sup> unknown:&nbsp;}}'
+												+'{width100}'
+											+'}'
+											+'{\\css'
+												+'{\\str{x}}'
+												+'{width70}'
+											+'}'
+											+'{\\str{Substitute for x:&nbsp; ( 25 )}}'
+											
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width180}'
+											+'}'
+											+'{\\str{So: 1<sup>st</sup> unknown = 25}}'
+											
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{2<sup>nd</sup> unknown:}}'
+												+'{width100}'
+											+'}'
+											+'{\\css'
+												+'{\\str{x + 1}}'
+												+'{width70}'
+											+'}'
+											+'{\\str{Substitute for x + 1:&nbsp; ( 25 ) + 1}}'
+											
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width180}'
+											+'}'
+											+'{\\str{So: 2<sup>nd</sup> unknown = 26}}'
+											
+										+'}'
+										+'{\\html{&nbsp;}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{3<sup>rd</sup> unknown:&nbsp;}}'
+												+'{width100}'
+											+'}'
+											+'{\\css'
+												+'{\\str{x + 2}}'
+												+'{width70}'
+											+'}'
+											+'{\\str{Substitute for x + 2:&nbsp; ( 25 ) + 2}}'
+											
+										+'}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{&nbsp;}}'
+												+'{width180}'
+											+'}'
+											+'{\\str{So: 3<sup>rd</sup> unknown = 27}}'
+											
+										+'}'
+								),
+					helpAnswer: dataUtils.pre(
+									'\\grp'
+											+'{\\str{$$ansFirstNumber}}'
+											+'{\\str{ <span class=fontsize125>,</span> }}'
+											+'{\\str{$$ansSecondNumber}}'
+											+'{\\str{ <span class=fontsize125>,</span> }}'
+											+'{\\str{$$ansThirdNumber}}'
+						),
+					template: 'flexyNextScrolls',
 				}
         ];
 		/*shuffle = [
