@@ -428,7 +428,7 @@ angular.module('mathSkills').service('data_o_1', ['dataUtils', function (dataUti
 			answer: '-10',
 			wb: dataUtils.pre('\\ordopssimple{' +
 						'\\grp{\\btn{( - 10 ) <sup>2</sup>}{T}{large}}{\\btn{/}{F}{bigger}}{\\html{<span class=large>4</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=large>5</span>}}{\\btn{*}{F}{large}}{\\html{<span class=large>7</span>}},' +
-                        '\\input{-100},' +
+                        '\\input{100},' +
                         '\\grp{\\html{<span class=large>100</span>}}{\\btn{/}{T}{bigger}}{\\html{<span class=large>4</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=large>5</span>}}{\\btn{*}{F}{large}}{\\html{<span class=large>7</span>}},' +
                         '\\input{25},' +
 						'\\grp{\\html{<span class=large>25</span>}}{\\btn{-}{F}{bigger}}{\\html{<span class=large>5</span>}}{\\btn{*}{T}{large}}{\\html{<span class=large>7</span>}},' +

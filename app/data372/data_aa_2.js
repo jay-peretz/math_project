@@ -369,7 +369,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					buttonLabelD: dataUtils.pre('\\str{-5m(mn<sup>2</sup> &#43; 3n &#43; 2m)}'),
 					firstHelp: '$$gcfHelp',
                     firstNumHelp: '5mn<sup>2</sup>',
-					secondNumFirstHelp: '-15m',
+					secondNumFirstHelp: '-15mn',
                     thirdNumFirstHelp: '-10m',
                     secondNumSecondHelp: '$$secondNumFirstHelp',
                     thirdNumSecondHelp: '$$thirdNumFirstHelp',
