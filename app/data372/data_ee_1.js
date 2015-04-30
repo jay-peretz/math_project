@@ -978,7 +978,7 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 					helpSeventhPiece: '15.3 = ( 1.2 )( x ) which is the same as:',
 					helpEighthPiece: '15.3 = 1.2x',
 					helpNinethPiece: 'Solve the equation by isolating the variable.',
-					ansNumber: '127.5',
+					ansNumber: '12.75',
 					solution: dataUtils.pre(
 									'\\rowgrp'
 										+'{\\grp'
@@ -1912,7 +1912,9 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 										'{\\html{&nbsp;}}'
 										+'{\\str{Reread the first and second sentences again, carefully and slowly. This is what we are told.}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{The formula to solve for the perimeter of a rectangle is: P = 2L + 2W}}'
+										+'{\\str{The formula to solve for the perimeter of a rectangle is:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{P = 2L + 2W}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\str{We know the perimeter. That is given as 120 feet.}}'
 										+'{\\html{&nbsp;}}'
@@ -2099,7 +2101,9 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 								),
 					firstTable: dataUtils.pre(
 										'{\\html{&nbsp;}}'
-										+'{\\str{The formula to solve for the perimeter of a rectangle is: P = 2L + 2W}}'
+										+'{\\str{The formula to solve for the perimeter of a rectangle is:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{P = 2L + 2W}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\str{We know the perimeter. That is given as 44 inches.}}'
 										+'{\\html{&nbsp;}}'
@@ -2286,9 +2290,13 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 								),
 					firstTable: dataUtils.pre(
 										'{\\html{&nbsp;}}'
-										+'{\\str{The formula to solve for the circumference is: C = &pi; * d or C = &pi; * 2 * r}}'
+										+'{\\str{The formula to solve for the circumference is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{Since we are trying to solve for the radius, let\'s use the formula: C = &pi; * 2 * r}}'
+										+'{\\str{C = &pi; * d &nbsp;or&nbsp; C = &pi; * 2 * r}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Since we are trying to solve for the radius, let\'s use the formula:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{C = &pi; * 2 * r}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\str{We know the circumference. That is given as 49 centimeters. We are also told to use 3.14 for &pi;.}}'
 										+'{\\html{&nbsp;}}'
@@ -2351,9 +2359,13 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 								),
 					firstTable: dataUtils.pre(
 										'{\\html{&nbsp;}}'
-										+'{\\str{The formula to solve for the circumference is: C = &pi; * d or C = &pi; * 2 * r}}'
+										+'{\\str{The formula to solve for the circumference is:}}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{Since we are trying to solve for the radius, let\'s use the formula: C = &pi; * 2 * r}}'
+										+'{\\str{C = &pi; * d &nbsp;or&nbsp; C = &pi; * 2 * r}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{Since we are trying to solve for the radius, let\'s use the formula:}}'
+										+'{\\html{&nbsp;}}'
+										+'{\\str{C = &pi; * 2 * r}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\str{We know the circumference. That is given as 130 yards. We are also told to use 3.14 for &pi;.}}'
 										+'{\\html{&nbsp;}}'
@@ -2470,7 +2482,13 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 											+'}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{which is the same as:&nbsp; 40 = 4h}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{which is the same as:}}'
+												+'{width160}'
+											+'}'
+											+'{\\str{&nbsp;40 = 4h}}'
+										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\str{Solve the equation by isolating the variable.}}'
 								),
@@ -2560,7 +2578,13 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 											+'}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{which is the same as:&nbsp; 78 = 6b}}'
+										+'{\\grp'
+											+'{\\css'
+												+'{\\str{which is the same as:}}'
+												+'{width160}'
+											+'}'
+											+'{\\str{&nbsp;78 = 6b}}'
+										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\str{Solve the equation by isolating the variable.}}'
 								),
