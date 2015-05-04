@@ -2645,7 +2645,7 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 					template: 'flexyNextScrolls',
 				}
         ];
-		/*shuffle = [
+		shuffle = [
 				{ problems: [1,2], total: 1},
 				{ problems: [3,4], total: 1},
 				{ problems: [5,6], total: 1},
@@ -2660,8 +2660,8 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 				{ problems: [23,24], total: 1}
 		];
     
-    	return dataUtils.build(desc, template, data, shuffle);*/
+    	return dataUtils.build(desc, template, data, shuffle);
 		
-		return dataUtils.build(desc, template, data);
+		//return dataUtils.build(desc, template, data);
 }]);
 
