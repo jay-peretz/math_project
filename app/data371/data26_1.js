@@ -17,9 +17,11 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
 										+'{\\html{$initialAmount}}'
+										+'{\\html{$unitsStart}}'
 										/*+'{\\image{23.1-Volume-Weight-Measure/$firstImage}}'*/
 										+'{\\sign{&equals;}}'
 										+'{\\html{?}}'
+										+'{\\html{$unitsSecond}}'
 										/*+'{\\image{23.1-Volume-Weight-Measure/$secondImage}}'*/
 									+'}',
                         answer: '\\grp'
@@ -40,9 +42,11 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
 										+'{\\html{$initialAmount}}'
+										+'{\\html{$unitsStart}}'
 										/*+'{\\image{23.1-Volume-Weight-Measure/$firstImage}}'*/
 										+'{\\sign{&equals;}}'
 										+'{\\html{?}}'
+										+'{\\html{$unitsSecond}}'
 										/*+'{\\image{23.1-Volume-Weight-Measure/$secondImage}}'*/
 									+'}',
                         answer: '\\pan{12}{11}'
@@ -63,15 +67,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 							   
 					}, {
                         problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount}}'
-										/*+'{\\image{23.1-Volume-Weight-Measure/$firstImage}}'*/
-										+'{\\sign{&equals;}}'
-										+'{\\html{?}}'
-										/*+'{\\image{23.1-Volume-Weight-Measure/$secondImage}}'*/
-									+'}',
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
 										+'{\\html{What is the fraction (that equals 1 whole) that you need to multiply by?}}'
@@ -99,40 +95,10 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
                         }
                     }, {
                         problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{$numeratorStart}}'
-												/*+'{\\image{23.1-Volume-Weight-Measure/$firstImage}}'*/
-											+'}'
-											+'{\\grp'
-												+'{\\css'
-													+'{\\html{&nbsp;}}'
-													+'{}'
-												+'}'
-												+'{\\html{$denominatorStart}}'
-											+'}'
-										+'}'
-										+'{\\sign{&times;}}'
-										+'{\\frac'
-											+'{\\grp'
-												+'{\\html{$numeratorSecond}}'
-												/*+'{\\image{23.1-Volume-Weight-Measure/$secondImage}}'*/
-											+'}'
-											+'{\\grp'
-												+'{\\html{$denominatorSecond}}'
-												/*+'{\\image{23.1-Volume-Weight-Measure/$firstImage}}'*/
-											+'}'
-										+'}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{?}}'
-										/*+'{\\image{23.1-Volume-Weight-Measure/$secondImage}}'*/
-									+'}',
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
+										+'{\\html{Multiply the fractions (remember to cancel out words)$answerRoundingText}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
@@ -171,10 +137,13 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\html{$initialAmount}}'
+										+'{\\html{$unitsStart}}'
+										/*+'{\\image{23.1-Volume-Weight-Measure/$firstImage}}'*/
 										+'{\\sign{&equals;}}'
 										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
+										+'{\\html{$unitsThird}}'
+										/*+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'*/
 									+'}',
                         answer: '\\grp'
 									+'{\\input{$finalAnswer}}'
@@ -193,10 +162,13 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 									+'{\\html{$problemText}}'
 									+'{\\html{&nbsp;}}'
 									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
+										+'{\\html{$initialAmount}}'
+										+'{\\html{$unitsStart}}'
+										/*+'{\\image{23.1-Volume-Weight-Measure/$firstImage}}'*/
 										+'{\\sign{&equals;}}'
 										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
+										+'{\\html{$unitsThird}}'
+										/*+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'*/
 									+'}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
@@ -216,14 +188,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 							   
 					}, {
                         problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\html{$initialAmount}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}'
-										+'{\\sign{&equals;}}'
-										+'{\\html{?}}'
-										+'{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
-									+'}',
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
 										+'{\\html{What is the first fraction (that equals 1 whole) that you need to multiply by?}}'
@@ -251,13 +216,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
                         }
                     }, {
                         problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{$denominatorSecond}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
-										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}',
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
 										+'{\\html{What is the second fraction (that equals 1 whole) that you need to multiply by?}}'
@@ -288,19 +247,10 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
                         }
                     }, {
                         problem: '\\rowgrp'
-									+'{\\html{$problemText}}'
-									+'{\\html{&nbsp;}}'
-									+'{\\grp'
-										+'{\\frac{\\grp{\\html{$numeratorStart}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}{\\grp{\\css{\\html{&nbsp;}}{image-height}}{\\html{$denominatorStart}}}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorSecond}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}{\\grp{\\html{$denominatorSecond}}{\\image{23.1-Volume-Weight-Measure/$firstImage}}}}'
-										+'{\\sign{&times;}}'
-										+'{\\frac{\\grp{\\html{$numeratorThird}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}}{\\grp{\\html{$denominatorThird}}{\\image{23.1-Volume-Weight-Measure/$secondImage}}}}'
-										+'{\\sign{&equals;}}{\\html{?}}{\\image{23.1-Volume-Weight-Measure/$thirdImage}}'
-									+'}',
+									+'{\\html{$problemText}}',
                         answer: '\\pan{12}{11}'
 									+'{\\rowgrp'
-										+'{\\html{Multiply the fractions (remember to cancel out words):}}'
+										+'{\\html{Multiply the fractions (remember to cancel out words)$answerRoundingText}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\frac{\\html{$numeratorStart $unitsStart}}{\\html{$denominatorStart}}}'
@@ -325,7 +275,8 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 											+'{\\frac{\\html{<span class=blue-text>$numeratorThird $unitsThird</span>}}{\\html{<span class=blue-text>$denominatorThird</span> <span class=line_through>$unitsSecond</span>}}}'
 											+'{\\sign{&equals;}}'
 											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsThird</span>}}'
-										+'}',
+										+'}'
+										+'{$roundingText}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
 							
@@ -577,10 +528,11 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				helpFinalAnswer: '8.05',
 				firstWordCancel: 'miles',
 				secondWordCancel: 'kilometers',
+				answerRoundingText: ':',
+				roundingText: '',
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
-				roundingText: '',
 				descriptor: '',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
@@ -605,6 +557,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				helpFinalAnswer: '6.44',
 				firstWordCancel: 'miles',
 				secondWordCancel: 'kilometers',
+				answerRoundingText: ':',
 				roundingText: '',
 				descriptor: '',
 				firstImage: '',
@@ -633,6 +586,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				helpFinalAnswer: '1589',
 				firstWordCancel: 'pounds',
 				secondWordCancel: 'grams',
+				answerRoundingText: ':',
 				roundingText: '',
 				descriptor: '',
 				firstImage: '',
@@ -660,6 +614,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				helpFinalAnswer: '227',
 				firstWordCancel: 'pounds',
 				secondWordCancel: 'grams',
+				answerRoundingText: ':',
 				roundingText: '',
 				descriptor: '',
 				firstImage: '',
@@ -687,10 +642,11 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				helpFinalAnswer: '11.320...',
 				firstWordCancel: 'qt',
 				secondWordCancel: 'L',
+				answerRoundingText: ';<br>round answer to the nearest tenth of a liter:',
 				roundingText: dataUtils.pre(
 									'\\rowgrp'
 											+'{\\html{&nbsp;}}'
-											+'{\\str{Round answer to the nearest tenth of a liter.}}'
+											+'{\\str{Round answer to the nearest tenth of a liter:}}'
 											+'{\\html{&nbsp;}}'
 											+'{css'
 												+'{\\grp'
@@ -726,10 +682,11 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				helpFinalAnswer: '2.830...',
 				firstWordCancel: 'qt',
 				secondWordCancel: 'L',
+				answerRoundingText: ';<br>round answer to the nearest tenth of a liter:',
 				roundingText: dataUtils.pre(
 									'\\rowgrp'
 											+'{\\html{&nbsp;}}'
-											+'{\\str{Round answer to the nearest tenth of a liter.}}'
+											+'{\\str{Round answer to the nearest tenth of a liter:}}'
 											+'{\\html{&nbsp;}}'
 											+'{css'
 												+'{\\grp'
@@ -765,10 +722,11 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				helpFinalAnswer: '2.202...',
 				firstWordCancel: 'grams',
 				secondWordCancel: 'pounds',
+				answerRoundingText: ';<br>round answer to the nearest tenth of a pound:',
 				roundingText: dataUtils.pre(
 									'\\rowgrp'
 											+'{\\html{&nbsp;}}'
-											+'{\\str{Round answer to the nearest tenth of a pound.}}'
+											+'{\\str{Round answer to the nearest tenth of a pound:}}'
 											+'{\\html{&nbsp;}}'
 											+'{css'
 												+'{\\grp'
@@ -804,10 +762,11 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				helpFinalAnswer: '1.651...',
 				firstWordCancel: 'grams',
 				secondWordCancel: 'pounds',
+				answerRoundingText: ';<br>round answer to the nearest tenth of a pound:',
 				roundingText: dataUtils.pre(
 									'\\rowgrp'
 											+'{\\html{&nbsp;}}'
-											+'{\\str{Round answer to the nearest tenth of a pound.}}'
+											+'{\\str{Round answer to the nearest tenth of a pound:}}'
 											+'{\\html{&nbsp;}}'
 											+'{css'
 												+'{\\grp'
@@ -823,281 +782,389 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
-			/*,
+			,
 			{ // problem 9
-				problemText: '8 cups is how many pints?',
-				labelSelect: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
-				labelAnswer: 'c',
-				firstNumSelect: '[\\"1 tbsp\\", \\"1 fl oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
-				firstDenSelect: '[\\"3 tsp\\", \\"2 tbsp\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
-				initialAmount: '8',
-				numeratorStart: '8',
+				problemText: '10 liters is how many quarts?',
+				labelSelect: '[\\"liters\\", \\"quarts\\", \\"gallons\\"]',
+				labelAnswer: 'liters',
+				firstNumSelect: '[\\"1.06 qt\\", \\"1 L\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"1.06 qt\\", \\"1 L\\", \\"1 gal\\"]',
+				initialAmount: '10',
+				numeratorStart: '10',
 				denominatorStart: '1',
-				numeratorSecond: '1',
-				denominatorSecond: '2',
-				unitsStart: 'c',
-				unitsSecond: 'pts',
-				firstNumAnswer: '1 pt',
-				firstDenAnswer: '2 c',
-				finalAnswer: '4',
-				helpFinalAnswer: '4',
-				firstWordCancel: 'cups',
-				secondWordCancel: 'pints',
+				numeratorSecond: '1.06',
+				denominatorSecond: '1',
+				unitsStart: 'L',
+				unitsSecond: 'qt',
+				firstNumAnswer: '1.06 qt',
+				firstDenAnswer: '1 L',
+				finalAnswer: '10.6',
+				helpFinalAnswer: '10.6',
+				firstWordCancel: 'liters',
+				secondWordCancel: 'quarts',
+				answerRoundingText: ':',
+				roundingText: '',
 				descriptor: '',
-				firstImage: 'cup-02-50x60.png',
-				secondImage: 'pint-01_50x70.png',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
-				template: 'oneStep' 
+				firstImage: '',
+				secondImage: '',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				template: 'oneStep'
 			}
 			,
 			{ // problem 10
-				problemText: '12 teaspoons is how many tablespoons?',
-				labelSelect: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
-				labelAnswer: 'tsp',
-				firstNumSelect: '[\\"1 tbsp\\", \\"1 fl oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
-				firstDenSelect: '[\\"3 tsp\\", \\"2 tbsp\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
-				initialAmount: '12',
-				numeratorStart: '12',
+				problemText: '65 liters is how many quarts?',
+				labelSelect: '[\\"liters\\", \\"quarts\\", \\"gallons\\"]',
+				labelAnswer: 'liters',
+				firstNumSelect: '[\\"1.06 qt\\", \\"1 L\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"1.06 qt\\", \\"1 L\\", \\"1 gal\\"]',
+				initialAmount: '65',
+				numeratorStart: '65',
 				denominatorStart: '1',
-				numeratorSecond: '1',
-				denominatorSecond: '3',
-				unitsStart: 'tsp',
-				unitsSecond: 'tbsp',
-				firstNumAnswer: '1 tbsp',
-				firstDenAnswer: '3 tsp',
-				finalAnswer: '4',
-				helpFinalAnswer: '4',
-				firstWordCancel: 'teaspoons',
-				secondWordCancel: 'tablespoons',
+				numeratorSecond: '1.06',
+				denominatorSecond: '1',
+				unitsStart: 'L',
+				unitsSecond: 'qt',
+				firstNumAnswer: '1.06 qt',
+				firstDenAnswer: '1 L',
+				finalAnswer: '68.9',
+				helpFinalAnswer: '68.9',
+				firstWordCancel: 'liters',
+				secondWordCancel: 'quarts',
+				answerRoundingText: ':',
+				roundingText: '',
 				descriptor: '',
-				firstImage: 'TeaSpoon_01_46x65.png',
-				secondImage: 'Tablepoon_TeaSpoon_01_46x65.png',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
-				template: 'oneStep' 
+				firstImage: '',
+				secondImage: '',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				template: 'oneStep'
 			}
 			,
 			{ // problem 11
-				problemText: '5 gallons is how many quarts?',
-				labelSelect: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
-				labelAnswer: 'gal',
-				firstNumSelect: '[\\"3 tsp\\", \\"2 tbsp\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
-				firstDenSelect: '[\\"1 tbsp\\", \\"1 fl oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
-				initialAmount: '5',
-				numeratorStart: '5',
+				problemText: '200 kilometers is how many miles? Round answer to the nearest whole mile.',
+				labelSelect: '[\\"miles\\", \\"kilometers\\", \\"hours\\"]',
+				labelAnswer: 'kilometers',
+				firstNumSelect: '[\\"1.61 km\\", \\"1 mile\\", \\"1 km\\"]',
+				firstDenSelect: '[\\"1.61 km\\", \\"1 mile\\", \\"1 km\\"]',
+				initialAmount: '200',
+				numeratorStart: '200',
 				denominatorStart: '1',
-				numeratorSecond: '4',
-				denominatorSecond: '1',
-				unitsStart: 'gal',
-				unitsSecond: 'qts',
-				firstNumAnswer: '4 qt',
-				firstDenAnswer: '1 gal',
-				finalAnswer: '20',
-				helpFinalAnswer: '20',
-				firstWordCancel: 'gallons',
-				secondWordCancel: 'quarts',
+				numeratorSecond: '1',
+				denominatorSecond: '1.61',
+				unitsStart: 'km',
+				unitsSecond: 'mi',
+				firstNumAnswer: '1 mile',
+				firstDenAnswer: '1.61 km',
+				finalAnswer: '124',
+				helpFinalAnswer: '124.223...',
+				firstWordCancel: 'kilometers',
+				secondWordCancel: 'miles',
+				answerRoundingText: ';<br>round answer to the mile:',
+				roundingText: dataUtils.pre(
+									'\\rowgrp'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{Round answer to the mile:}}'
+											+'{\\html{&nbsp;}}'
+											+'{css'
+												+'{\\grp'
+													+'{\\str{Answer: &nbsp;$$finalAnswer $$unitsSecond}}'
+												+'}'
+												+'{help-answer-text}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+						),
 				descriptor: '',
-				firstImage: 'gallon-01-56x70.png',
-				secondImage: 'quart-02-40x70.png',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
+				firstImage: '',
+				secondImage: '',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
 			,
 			{ // problem 12
-				problemText: '3 cups is how many fluid ounces?',
-				labelSelect: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
-				labelAnswer: 'c',
-				firstNumSelect: '[\\"3 tsp\\", \\"2 tbsp\\", \\"8 fl oz\\", \\"2 c\\", \\"2 pt\\", \\"4 qt\\", \\"1 gal\\"]',
-				firstDenSelect: '[\\"1 tbsp\\", \\"1 fl oz\\", \\"1 c\\", \\"1 pt\\", \\"1 qt\\", \\"1 gal\\"]',
-				initialAmount: '3',
-				numeratorStart: '3',
+				problemText: '1500 kilometers is how many miles? Round answer to the nearest whole mile.',
+				labelSelect: '[\\"miles\\", \\"kilometers\\", \\"hours\\"]',
+				labelAnswer: 'kilometers',
+				firstNumSelect: '[\\"1.61 km\\", \\"1 mile\\", \\"1 km\\"]',
+				firstDenSelect: '[\\"1.61 km\\", \\"1 mile\\", \\"1 km\\"]',
+				initialAmount: '1500',
+				numeratorStart: '1500',
 				denominatorStart: '1',
-				numeratorSecond: '8',
-				denominatorSecond: '1',
-				unitsStart: 'c',
-				unitsSecond: 'fl oz',
-				firstNumAnswer: '8 fl oz',
-				firstDenAnswer: '1 c',
-				finalAnswer: '24',
-				helpFinalAnswer: '24',
-				firstWordCancel: 'cups',
-				secondWordCancel: 'fluid ounces',
+				numeratorSecond: '1',
+				denominatorSecond: '1.61',
+				unitsStart: 'km',
+				unitsSecond: 'mi',
+				firstNumAnswer: '1 mile',
+				firstDenAnswer: '1.61 km',
+				finalAnswer: '932',
+				helpFinalAnswer: '931.667...',
+				firstWordCancel: 'kilometers',
+				secondWordCancel: 'miles',
+				answerRoundingText: ';<br>round answer to the mile:',
+				roundingText: dataUtils.pre(
+									'\\rowgrp'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{Round answer to the mile:}}'
+											+'{\\html{&nbsp;}}'
+											+'{css'
+												+'{\\grp'
+													+'{\\str{Answer: &nbsp;$$finalAnswer $$unitsSecond}}'
+												+'}'
+												+'{help-answer-text}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+						),
 				descriptor: '',
-				firstImage: 'cup-02-50x60.png',
-				secondImage: 'OZ_Shot_01-44x65.png',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>3 tsp</td><td>=</td><td>1 tbsp</td></tr><tr><td>2 tbsp</td><td>=</td><td>1 fl oz</td></tr><tr><td>8 fl oz</td><td>=</td><td>1 c</td></tr><tr><td>2 c</td><td>=</td><td>1 pt</td></tr><tr><td>2 pt</td><td>=</td><td>1 qt</td></tr><tr><td>4 qt</td><td>=</td><td>1 gal</td></tr></table>}'),
+				firstImage: '',
+				secondImage: '',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
 			,
 			{ // problem 13
-				problemText: '180 seconds is how many minutes?',
-				labelSelect: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
-				labelAnswer: 'sec',
-				firstNumSelect: '[\\"1 sec\\", \\"1 min\\", \\"1 hr\\",  \\"1 day\\",  \\"1 wk\\"]',
-				firstDenSelect: '[\\"60 sec\\", \\"60 min\\", \\"24 hr\\",  \\"7 day\\"]',
-				initialAmount: '180',
-				numeratorStart: '180',
+				problemText: '15 gallons is how many liters? Round answer to the nearest tenth of a liter.',
+				labelSelect: '[\\"liters\\", \\"quarts\\", \\"gallons\\"]',
+				labelAnswer: 'gallons',
+				firstNumSelect: '[\\"1 L\\", \\"4 qt\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"1 L\\", \\"1.06 qt\\", \\"1 gal\\"]',
+				initialAmount: '15',
+				numeratorStart: '15',
 				denominatorStart: '1',
-				numeratorSecond: '1',
-				denominatorSecond: '60',
-				unitsStart: 'sec',
-				unitsSecond: 'min',
-				firstNumAnswer: '1 min',
-				firstDenAnswer: '60 sec',
-				finalAnswer: '3',
-				helpFinalAnswer: '3',
-				firstWordCancel: 'seconds',
-				secondWordCancel: 'minutes',
+				numeratorSecond: '4',
+				denominatorSecond: '1',
+				numeratorThird: '1',
+				denominatorThird: '1.06',
+				unitsStart: 'gal',
+				unitsSecond: 'qt',
+				unitsThird: 'L',
+				firstNumAnswer: '4 qt',
+				firstDenAnswer: '1 gal',
+				secondNumAnswer: '1 L',
+				secondDenAnswer: '1.06 qt',
+				finalAnswer: '56.6',
+				helpFinalAnswer: '56.603...',
+				firstWordCancel: 'gallons',
+				secondWordCancel: 'quarts',
+				thirdWordCancel: 'liters',
+				answerRoundingText: ';<br>round answer to the nearest tenth of a liter:',
+				roundingText: dataUtils.pre(
+									'\\rowgrp'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{Round answer to the nearest tenth of a liter:}}'
+											+'{\\html{&nbsp;}}'
+											+'{css'
+												+'{\\grp'
+													+'{\\str{Answer: &nbsp;$$finalAnswer $$unitsThird}}'
+												+'}'
+												+'{help-answer-text}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+						),
+				firstImage: '',
+				secondImage: '',
+				thirdImage: '',
 				descriptor: '',
-				firstImage: 'clockface_seconds.png',
-				secondImage: 'clockface_minutes.png',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>60 sec</td><td>=</td><td>1 min</td></tr><tr><td>60 min</td><td>=</td><td>1 hr</td></tr><tr><td>24 hr</td><td>=</td><td>1 day</td><tr><td>7 days</td><td>=</td><td>1 wk</td></tr></table>}'),
-				template: 'oneStep' 
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				template: 'twoStep' 
 			}
 			,
 			{ // problem 14
-				problemText: '72 hours is how many days?',
-				labelSelect: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
-				labelAnswer: 'hr',
-				firstNumSelect: '[\\"1 sec\\", \\"1 min\\", \\"1 hr\\",  \\"1 day\\",  \\"1 wk\\"]',
-				firstDenSelect: '[\\"60 sec\\", \\"60 min\\", \\"24 hr\\",  \\"7 day\\"]',
-				initialAmount: '72',
-				numeratorStart: '72',
+				problemText: '1.2 gallons is how many liters? Round answer to the nearest tenth of a liter.',
+				labelSelect: '[\\"liters\\", \\"quarts\\", \\"gallons\\"]',
+				labelAnswer: 'gallons',
+				firstNumSelect: '[\\"1 L\\", \\"4 qt\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"1 L\\", \\"1.06 qt\\", \\"1 gal\\"]',
+				initialAmount: '1.2',
+				numeratorStart: '1.2',
 				denominatorStart: '1',
-				numeratorSecond: '1',
-				denominatorSecond: '24',
-				unitsStart: 'hr',
-				unitsSecond: 'days',
-				firstNumAnswer: '1 day',
-				firstDenAnswer: '24 hr',
-				finalAnswer: '3',
-				helpFinalAnswer: '3',
-				firstWordCancel: 'hours',
-				secondWordCancel: 'days',
+				numeratorSecond: '4',
+				denominatorSecond: '1',
+				numeratorThird: '1',
+				denominatorThird: '1.06',
+				unitsStart: 'gal',
+				unitsSecond: 'qt',
+				unitsThird: 'L',
+				firstNumAnswer: '4 qt',
+				firstDenAnswer: '1 gal',
+				secondNumAnswer: '1 L',
+				secondDenAnswer: '1.06 qt',
+				finalAnswer: '4.5',
+				helpFinalAnswer: '4.528...',
+				firstWordCancel: 'gallons',
+				secondWordCancel: 'quarts',
+				thirdWordCancel: 'liters',
+				answerRoundingText: ';<br>round answer to the nearest tenth of a liter:',
+				roundingText: dataUtils.pre(
+									'\\rowgrp'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{Round answer to the nearest tenth of a liter:}}'
+											+'{\\html{&nbsp;}}'
+											+'{css'
+												+'{\\grp'
+													+'{\\str{Answer: &nbsp;$$finalAnswer $$unitsThird}}'
+												+'}'
+												+'{help-answer-text}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+						),
+				firstImage: '',
+				secondImage: '',
+				thirdImage: '',
 				descriptor: '',
-				firstImage: 'clockface_hours.png',
-				secondImage: 'calendar_days.png',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>60 sec</td><td>=</td><td>1 min</td></tr><tr><td>60 min</td><td>=</td><td>1 hr</td></tr><tr><td>24 hr</td><td>=</td><td>1 day</td><tr><td>7 days</td><td>=</td><td>1 wk</td></tr></table>}'),
-				template: 'oneStep' 
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				template: 'twoStep' 
 			}
 			,
 			{ // problem 15
-				problemText: '3 weeks is how many days?',
-				labelSelect: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
-				labelAnswer: 'wk',
-				firstNumSelect: '[\\"60 sec\\", \\"60 min\\", \\"24 hr\\",  \\"7 day\\"]',
-				firstDenSelect: '[\\"1 sec\\", \\"1 min\\", \\"1 hr\\",  \\"1 day\\",  \\"1 wk\\"]',
-				initialAmount: '3',
-				numeratorStart: '3',
+				problemText: '80 ounces is how many grams?',
+				labelSelect: '[\\"grams\\", \\"pounds\\", \\"ounces\\"]',
+				labelAnswer: 'ounces',
+				firstNumSelect: '[\\"1 lb\\", \\"1 g\\", \\"454 g\\"]',
+				firstDenSelect: '[\\"16 oz\\", \\"1 lb\\", \\"454 g\\"]',
+				initialAmount: '80',
+				numeratorStart: '80',
 				denominatorStart: '1',
-				numeratorSecond: '7',
-				denominatorSecond: '1',
-				unitsStart: 'wk',
-				unitsSecond: 'days',
-				firstNumAnswer: '7 day',
-				firstDenAnswer: '1 wk',
-				finalAnswer: '21',
-				helpFinalAnswer: '21',
-				firstWordCancel: 'weeks',
-				secondWordCancel: 'days',
+				numeratorSecond: '1',
+				denominatorSecond: '16',
+				numeratorThird: '454',
+				denominatorThird: '1',
+				unitsStart: 'oz',
+				unitsSecond: 'lb',
+				unitsThird: 'g',
+				firstNumAnswer: '1 lb',
+				firstDenAnswer: '16 oz',
+				secondNumAnswer: '454 g',
+				secondDenAnswer: '1 lb',
+				finalAnswer: '2270',
+				helpFinalAnswer: '2270',
+				firstWordCancel: 'ounces',
+				secondWordCancel: 'pounds',
+				thirdWordCancel: 'grams',
+				answerRoundingText: ':',
+				roundingText: '',
+				firstImage: '',
+				secondImage: '',
+				thirdImage: '',
 				descriptor: '',
-				firstImage: 'calendar_week.png',
-				secondImage: 'calendar_days.png',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>60 sec</td><td>=</td><td>1 min</td></tr><tr><td>60 min</td><td>=</td><td>1 hr</td></tr><tr><td>24 hr</td><td>=</td><td>1 day</td><tr><td>7 days</td><td>=</td><td>1 wk</td></tr></table>}'),
-				template: 'oneStep' 
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				template: 'twoStep' 
 			}
 			,
 			{ // problem 16
-				problemText: '2.5 minutes is how many seconds?',
-				labelSelect: '[\\"sec\\", \\"min\\", \\"hr\\", \\"day\\", \\"wk\\"]',
-				labelAnswer: 'min',
-				firstNumSelect: '[\\"60 sec\\", \\"60 min\\", \\"24 hr\\",  \\"7 day\\"]',
-				firstDenSelect: '[\\"1 sec\\", \\"1 min\\", \\"1 hr\\",  \\"1 day\\",  \\"1 wk\\"]',
-				initialAmount: '2.5',
-				numeratorStart: '2.5',
+				problemText: '4 ounces is how many grams? Round answer to the nearest gram.',
+				labelSelect: '[\\"grams\\", \\"pounds\\", \\"ounces\\"]',
+				labelAnswer: 'ounces',
+				firstNumSelect: '[\\"1 lb\\", \\"1 g\\", \\"454 g\\"]',
+				firstDenSelect: '[\\"16 oz\\", \\"1 lb\\", \\"454 g\\"]',
+				initialAmount: '4',
+				numeratorStart: '4',
 				denominatorStart: '1',
-				numeratorSecond: '60',
-				denominatorSecond: '1',
-				unitsStart: 'min',
-				unitsSecond: 'sec',
-				firstNumAnswer: '60 sec',
-				firstDenAnswer: '1 min',
-				finalAnswer: '150',
-				helpFinalAnswer: '150',
-				firstWordCancel: 'minutes',
-				secondWordCancel: 'seconds',
-				descriptor: '<br>Use 2.5 in decimal form.',
-				firstImage: 'clockface_minutes.png',
-				secondImage: 'clockface_seconds.png',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>60 sec</td><td>=</td><td>1 min</td></tr><tr><td>60 min</td><td>=</td><td>1 hr</td></tr><tr><td>24 hr</td><td>=</td><td>1 day</td><tr><td>7 days</td><td>=</td><td>1 wk</td></tr></table>}'),
-				template: 'oneStep' 
+				numeratorSecond: '1',
+				denominatorSecond: '16',
+				numeratorThird: '454',
+				denominatorThird: '1',
+				unitsStart: 'oz',
+				unitsSecond: 'lb',
+				unitsThird: 'g',
+				firstNumAnswer: '1 lb',
+				firstDenAnswer: '16 oz',
+				secondNumAnswer: '454 g',
+				secondDenAnswer: '1 lb',
+				finalAnswer: '113.5',
+				helpFinalAnswer: '113.5',
+				firstWordCancel: 'ounces',
+				secondWordCancel: 'pounds',
+				thirdWordCancel: 'grams',
+				answerRoundingText: '',
+				roundingText: '',
+				firstImage: '',
+				secondImage: '',
+				thirdImage: '',
+				descriptor: '',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				template: 'twoStep' 
 			}
 			,
 			{ // problem 17
-				problemText: '108 inches is how many yards?',
-				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
-				labelAnswer: 'in',
-				firstNumSelect: '[\\"1 in\\", \\"1 ft\\", \\"1 yd\\",  \\"1 mi\\"]',
-				firstDenSelect: '[\\"12 in\\", \\"3 ft\\", \\"5,280 ft\\",  \\"1 mi\\"]',
-				initialAmount: '108',
-				numeratorStart: '108',
+				problemText: '20 feet is how many centimeters?',
+				labelSelect: '[\\"feet\\", \\"inches\\", \\"centimeters\\"]',
+				labelAnswer: 'feet',
+				firstNumSelect: '[\\"1 ft\\", \\"2.54 cm\\", \\"12 in\\"]',
+				firstDenSelect: '[\\"1 ft\\", \\"1 cm\\", \\"1 in\\"]',
+				initialAmount: '20',
+				numeratorStart: '20',
 				denominatorStart: '1',
-				numeratorSecond: '1',
-				denominatorSecond: '12',
-				numeratorThird: '1',
-				denominatorThird: '3',
-				unitsStart: 'in',
-				unitsSecond: 'ft',
-				unitsThird: 'yd',
-				firstNumAnswer: '1 ft',
-				firstDenAnswer: '12 in',
-				secondNumAnswer: '1 yd',
-				secondDenAnswer: '3 ft',
-				finalAnswer: '3',
-				helpFinalAnswer: '3',
-				firstWordCancel: 'inches',
-				secondWordCancel: 'feet',
-				thirdWordCancel: 'yards',
-				firstImage: 'Inches_01_V2_48x67.png',
-				secondImage: 'Foot_01_V2_48x67.png',
-				thirdImage: 'Yard_01_V2_48x67.png',
+				numeratorSecond: '12',
+				denominatorSecond: '1',
+				numeratorThird: '2.54',
+				denominatorThird: '1',
+				unitsStart: 'ft',
+				unitsSecond: 'in',
+				unitsThird: 'cm',
+				firstNumAnswer: '12 in',
+				firstDenAnswer: '1 ft',
+				secondNumAnswer: '2.54 cm',
+				secondDenAnswer: '1 in',
+				finalAnswer: '609.6',
+				helpFinalAnswer: '609.6',
+				firstWordCancel: 'feet',
+				secondWordCancel: 'inches',
+				thirdWordCancel: 'centimeters',
+				answerRoundingText: '',
+				roundingText: '',
+				firstImage: '',
+				secondImage: '',
+				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
 			{ // problem 18
-				problemText: '90 inches is how many yards?',
-				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
-				labelAnswer: 'in',
-				firstNumSelect: '[\\"1 in\\", \\"1 ft\\", \\"1 yd\\",  \\"1 mi\\"]',
-				firstDenSelect: '[\\"12 in\\", \\"3 ft\\", \\"5,280 ft\\",  \\"1 mi\\"]',
-				initialAmount: '90',
-				numeratorStart: '90',
+				problemText: '6.5 feet is how many centimeters? Round the answer to the nearest whole centimeter.',
+				labelSelect: '[\\"feet\\", \\"inches\\", \\"centimeters\\"]',
+				labelAnswer: 'feet',
+				firstNumSelect: '[\\"1 ft\\", \\"2.54 cm\\", \\"12 in\\"]',
+				firstDenSelect: '[\\"1 ft\\", \\"1 cm\\", \\"1 in\\"]',
+				initialAmount: '6.5',
+				numeratorStart: '6.5',
 				denominatorStart: '1',
-				numeratorSecond: '1',
-				denominatorSecond: '12',
-				numeratorThird: '1',
-				denominatorThird: '3',
-				unitsStart: 'in',
-				unitsSecond: 'ft',
-				unitsThird: 'yd',
-				firstNumAnswer: '1 ft',
-				firstDenAnswer: '12 in',
-				secondNumAnswer: '1 yd',
-				secondDenAnswer: '3 ft',
-				finalAnswer: '2.5',
-				helpFinalAnswer: '2.5',
-				firstWordCancel: 'inches',
-				secondWordCancel: 'feet',
-				thirdWordCancel: 'yards',
-				firstImage: 'Inches_01_V2_48x67.png',
-				secondImage: 'Foot_01_V2_48x67.png',
-				thirdImage: 'Yard_01_V2_48x67.png',
+				numeratorSecond: '12',
+				denominatorSecond: '1',
+				numeratorThird: '2.54',
+				denominatorThird: '1',
+				unitsStart: 'ft',
+				unitsSecond: 'in',
+				unitsThird: 'cm',
+				firstNumAnswer: '12 in',
+				firstDenAnswer: '1 ft',
+				secondNumAnswer: '2.54 cm',
+				secondDenAnswer: '1 in',
+				finalAnswer: '198',
+				helpFinalAnswer: '198.12',
+				firstWordCancel: 'feet',
+				secondWordCancel: 'inches',
+				thirdWordCancel: 'centimeters',
+				answerRoundingText: ';<br>round the answer to the nearest whole centimeter:',
+				roundingText: dataUtils.pre(
+									'\\rowgrp'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{Round the answer to the nearest whole centimeter:}}'
+											+'{\\html{&nbsp;}}'
+											+'{css'
+												+'{\\grp'
+													+'{\\str{Answer: &nbsp;$$finalAnswer $$unitsThird}}'
+												+'}'
+												+'{help-answer-text}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+						),
+				firstImage: '',
+				secondImage: '',
+				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>12 in</td><td>=</td><td>1 ft</td></tr><tr><td>3 ft</td><td>=</td><td>1 yd</td></tr><tr><td>5,280 ft</td><td>=</td><td>1 mi</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
 				template: 'twoStep' 
 			}
-			,
+			/*,
 			{ //problem 19
 				problemText: '2 miles is how many inches?',
 				labelSelect: '[\\"in\\", \\"ft\\", \\"yd\\", \\"mi\\"]',
