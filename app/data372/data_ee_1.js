@@ -85,9 +85,12 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 					ansNumber: '18',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -144,9 +147,12 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 					ansNumber: '-5',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -216,13 +222,16 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 											+'{fracNoMargin}'
 										+'}'
 						),
-					helpFifthPiece: 'x = -7',
+					helpFifthPiece: '&nbsp;&nbsp;x = -7',
 					ansNumber: '-7',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -238,7 +247,7 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 												+'{\\str{Original equation:}}'
 												+'{width140}'
 											+'}'
-											+'{\\str{$$helpSecondPiece}}'
+											+'{\\str{&nbsp;$$helpSecondPiece}}'
 										+'}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
@@ -298,13 +307,16 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 										+'{\\str{ = }}'
 										+'{\\str{-15 (<strong>-3</strong> )}}'
 						),
-					helpFifthPiece: 'x = 45',
+					helpFifthPiece: '&nbsp;&nbsp;x = 45',
 					ansNumber: '45',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -380,13 +392,16 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 											+'{fracNoMargin}'
 										+'}'
 						),
-					helpEleventhPiece: 'x = -25',
+					helpEleventhPiece: '&nbsp;&nbsp;x = -25',
 					ansNumber: '-25',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -498,13 +513,16 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 											+'{fracNoMargin}'
 										+'}'
 						),
-					helpEleventhPiece: 'x = 6',
+					helpEleventhPiece: '&nbsp;&nbsp;x = 6',
 					ansNumber: '6',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -616,13 +634,16 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 											+'{fracNoMargin}'
 										+'}'
 						),
-					helpEleventhPiece: 'x = -1',
+					helpEleventhPiece: '&nbsp;&nbsp;x = -1',
 					ansNumber: '-1',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -733,13 +754,16 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 											+'{fracNoMargin}'
 										+'}'
 						),
-					helpEleventhPiece: 'x = -8',
+					helpEleventhPiece: '&nbsp;&nbsp;x = -8',
 					ansNumber: '-8',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -833,9 +857,12 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 					ansNumber: '6.6',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -881,9 +908,12 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 					ansNumber: '27.9',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -930,9 +960,12 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 					ansNumber: '83',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -981,9 +1014,12 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 					ansNumber: '12.75',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -1058,10 +1094,13 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 					ansNumber: '35',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
-											+'{\\str{%}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+												+'{\\str{%}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -1144,10 +1183,13 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 					ansNumber: '175',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\str{$$ansVariable = }}'
-											+'{\\input{$$ansNumber}}'
-											+'{\\str{%}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\str{$$ansVariable = }}'
+												+'{\\input{$$ansNumber}}'
+												+'{\\str{%}}'
+											+'}'
+											+'{marginLeft60px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -1199,12 +1241,15 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 					ansThirdNumber: '18',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\input{$$ansFirstNumber}}'
-											+'{\\str{ <span class=fontsize125>,</span> }}'
-											+'{\\input{$$ansSecondNumber}}'
-											+'{\\str{ <span class=fontsize125>,</span> }}'
-											+'{\\input{$$ansThirdNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\input{$$ansFirstNumber}}'
+												+'{\\str{ <span class=fontsize125>,</span> }}'
+												+'{\\input{$$ansSecondNumber}}'
+												+'{\\str{ <span class=fontsize125>,</span> }}'
+												+'{\\input{$$ansThirdNumber}}'
+											+'}'
+											+'{marginLeft80px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
@@ -1443,12 +1488,15 @@ angular.module('mathSkills').service('data_ee_1', ['dataUtils', function (dataUt
 					ansThirdNumber: '27',
 					solution: dataUtils.pre(
 									'\\rowgrp'
-										+'{\\grp'
-											+'{\\input{$$ansFirstNumber}}'
-											+'{\\str{ <span class=fontsize125>,</span> }}'
-											+'{\\input{$$ansSecondNumber}}'
-											+'{\\str{ <span class=fontsize125>,</span> }}'
-											+'{\\input{$$ansThirdNumber}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{\\input{$$ansFirstNumber}}'
+												+'{\\str{ <span class=fontsize125>,</span> }}'
+												+'{\\input{$$ansSecondNumber}}'
+												+'{\\str{ <span class=fontsize125>,</span> }}'
+												+'{\\input{$$ansThirdNumber}}'
+											+'}'
+											+'{marginLeft80px}'
 										+'}'
 						),
 					firstTable: dataUtils.pre(
