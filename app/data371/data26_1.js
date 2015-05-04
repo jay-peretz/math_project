@@ -153,7 +153,8 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 											+'{\\frac{\\html{<span class=blue-text>$numeratorSecond</span> <span>$unitsSecond</span>}}{\\html{<span class=blue-text>$denominatorSecond</span> <span class=line_through>$unitsStart</span>}}}'
 											+'{\\sign{&equals;}}'
 											+'{\\html{<span class=blue-text>$helpFinalAnswer $unitsSecond</span>}}'
-										+'}',
+										+'}'
+										+'{$roundingText}',
 							"modalButton": "\\html{Equivalence Chart}",
 							"modalText": '$modalChart'
 							
@@ -558,13 +559,13 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
         },
         data = [
 			{ // problem 1
-				problemText: '1.5 miles is how many kilometers?',
+				problemText: '5 miles is how many kilometers?',
 				labelSelect: '[\\"miles\\", \\"kilometers\\", \\"hours\\"]',
 				labelAnswer: 'miles',
 				firstNumSelect: '[\\"1.61 km\\", \\"1 mile\\", \\"1 km\\"]',
 				firstDenSelect: '[\\"1.61 km\\", \\"1 mile\\", \\"1 km\\"]',
-				initialAmount: '1.5',
-				numeratorStart: '1.5',
+				initialAmount: '5',
+				numeratorStart: '5',
 				denominatorStart: '1',
 				numeratorSecond: '1.61',
 				denominatorSecond: '1',
@@ -579,19 +580,20 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
+				roundingText: '',
 				descriptor: '',
 				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
 			,
 			{ // problem 2
-				problemText: '2.4 miles is how many kilometers?',
+				problemText: '4 miles is how many kilometers?',
 				labelSelect: '[\\"miles\\", \\"kilometers\\", \\"hours\\"]',
 				labelAnswer: 'miles',
 				firstNumSelect: '[\\"1.61 km\\", \\"1 mile\\", \\"1 km\\"]',
 				firstDenSelect: '[\\"1.61 km\\", \\"1 mile\\", \\"1 km\\"]',
-				initialAmount: '2.4',
-				numeratorStart: '2.4',
+				initialAmount: '4',
+				numeratorStart: '4',
 				denominatorStart: '1',
 				numeratorSecond: '1.61',
 				denominatorSecond: '1',
@@ -603,6 +605,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				helpFinalAnswer: '6.44',
 				firstWordCancel: 'miles',
 				secondWordCancel: 'kilometers',
+				roundingText: '',
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
@@ -630,6 +633,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				helpFinalAnswer: '1589',
 				firstWordCancel: 'pounds',
 				secondWordCancel: 'grams',
+				roundingText: '',
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
@@ -656,6 +660,163 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				helpFinalAnswer: '227',
 				firstWordCancel: 'pounds',
 				secondWordCancel: 'grams',
+				roundingText: '',
+				descriptor: '',
+				firstImage: '',
+				secondImage: '',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				template: 'oneStep' 
+			}
+			,
+			{ // problem 5
+				problemText: '12 quarts is how many liters? Round answer to the nearest tenth of a liter.',
+				labelSelect: '[\\"liters\\", \\"quarts\\", \\"gallons\\"]',
+				labelAnswer: 'quarts',
+				firstNumSelect: '[\\"1.06 qt\\", \\"1 L\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"1.06 qt\\", \\"1 L\\", \\"1 gal\\"]',
+				initialAmount: '12',
+				numeratorStart: '12',
+				denominatorStart: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '1.06',
+				unitsStart: 'qt',
+				unitsSecond: 'L',
+				firstNumAnswer: '1 L',
+				firstDenAnswer: '1.06 qt',
+				finalAnswer: '11.3',
+				helpFinalAnswer: '11.320...',
+				firstWordCancel: 'qt',
+				secondWordCancel: 'L',
+				roundingText: dataUtils.pre(
+									'\\rowgrp'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{Round answer to the nearest tenth of a liter.}}'
+											+'{\\html{&nbsp;}}'
+											+'{css'
+												+'{\\grp'
+													+'{\\str{Answer: &nbsp;$$finalAnswer $$unitsSecond}}'
+												+'}'
+												+'{help-answer-text}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+						),
+				descriptor: '',
+				firstImage: '',
+				secondImage: '',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				template: 'oneStep' 
+			}
+			,
+			{ // problem 6
+				problemText: '3 quarts is how many liters? Round answer to the nearest tenth of a liter.',
+				labelSelect: '[\\"liters\\", \\"quarts\\", \\"gallons\\"]',
+				labelAnswer: 'quarts',
+				firstNumSelect: '[\\"1.06 qt\\", \\"1 L\\", \\"1 gal\\"]',
+				firstDenSelect: '[\\"1.06 qt\\", \\"1 L\\", \\"1 gal\\"]',
+				initialAmount: '3',
+				numeratorStart: '3',
+				denominatorStart: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '1.06',
+				unitsStart: 'qt',
+				unitsSecond: 'L',
+				firstNumAnswer: '1 L',
+				firstDenAnswer: '1.06 qt',
+				finalAnswer: '2.8',
+				helpFinalAnswer: '2.830...',
+				firstWordCancel: 'qt',
+				secondWordCancel: 'L',
+				roundingText: dataUtils.pre(
+									'\\rowgrp'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{Round answer to the nearest tenth of a liter.}}'
+											+'{\\html{&nbsp;}}'
+											+'{css'
+												+'{\\grp'
+													+'{\\str{Answer: &nbsp;$$finalAnswer $$unitsSecond}}'
+												+'}'
+												+'{help-answer-text}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+						),
+				descriptor: '',
+				firstImage: '',
+				secondImage: '',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				template: 'oneStep' 
+			}
+			,
+			{ // problem 7
+				problemText: '1000 grams is how many pounds? Round answer to the nearest tenth of a pound.',
+				labelSelect: '[\\"pounds\\", \\"grams\\", \\"ounces\\"]',
+				labelAnswer: 'grams',
+				firstNumSelect: '[\\"454 g\\", \\"1 lb\\", \\"1 g\\"]',
+				firstDenSelect: '[\\"454 g\\", \\"1 lb\\", \\"1 g\\"]',
+				initialAmount: '1000',
+				numeratorStart: '1000',
+				denominatorStart: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '454',
+				unitsStart: 'g',
+				unitsSecond: 'lb',
+				firstNumAnswer: '1 lb',
+				firstDenAnswer: '454 g',
+				finalAnswer: '2.2',
+				helpFinalAnswer: '2.202...',
+				firstWordCancel: 'grams',
+				secondWordCancel: 'pounds',
+				roundingText: dataUtils.pre(
+									'\\rowgrp'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{Round answer to the nearest tenth of a pound.}}'
+											+'{\\html{&nbsp;}}'
+											+'{css'
+												+'{\\grp'
+													+'{\\str{Answer: &nbsp;$$finalAnswer $$unitsSecond}}'
+												+'}'
+												+'{help-answer-text}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+						),
+				descriptor: '',
+				firstImage: '',
+				secondImage: '',
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				template: 'oneStep' 
+			}
+			,
+			{ // problem 8
+				problemText: '750 grams is how many pounds? Round answer to the nearest tenth of a pound.',
+				labelSelect: '[\\"pounds\\", \\"grams\\", \\"ounces\\"]',
+				labelAnswer: 'grams',
+				firstNumSelect: '[\\"454 g\\", \\"1 lb\\", \\"1 g\\"]',
+				firstDenSelect: '[\\"454 g\\", \\"1 lb\\", \\"1 g\\"]',
+				initialAmount: '750',
+				numeratorStart: '750',
+				denominatorStart: '1',
+				numeratorSecond: '1',
+				denominatorSecond: '454',
+				unitsStart: 'g',
+				unitsSecond: 'lb',
+				firstNumAnswer: '1 lb',
+				firstDenAnswer: '454 g',
+				finalAnswer: '1.7',
+				helpFinalAnswer: '1.651...',
+				firstWordCancel: 'grams',
+				secondWordCancel: 'pounds',
+				roundingText: dataUtils.pre(
+									'\\rowgrp'
+											+'{\\html{&nbsp;}}'
+											+'{\\str{Round answer to the nearest tenth of a pound.}}'
+											+'{\\html{&nbsp;}}'
+											+'{css'
+												+'{\\grp'
+													+'{\\str{Answer: &nbsp;$$finalAnswer $$unitsSecond}}'
+												+'}'
+												+'{help-answer-text}'
+											+'}'
+											+'{\\html{&nbsp;}}'
+						),
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
@@ -663,110 +824,6 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				template: 'oneStep' 
 			}
 			/*,
-			{ // problem 5
-				problemText: '12 quarts is how many liters?',
-				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
-				labelAnswer: 'tons',
-				firstNumSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
-				firstDenSelect: '[\\"1 fl oz\\", \\"1 lbs\\", \\"1 ton\\"]',
-				initialAmount: '3',
-				numeratorStart: '3',
-				denominatorStart: '1',
-				numeratorSecond: '2000',
-				denominatorSecond: '1',
-				unitsStart: 'tons',
-				unitsSecond: 'lbs',
-				firstNumAnswer: '2000 lbs',
-				firstDenAnswer: '1 ton',
-				finalAnswer: '6000',
-				helpFinalAnswer: '6,000',
-				firstWordCancel: 'tons',
-				secondWordCancel: 'pounds',
-				descriptor: '',
-				firstImage: 'Ton_01_40x50.png',
-				secondImage: 'Pound_02_40x60.png',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
-				template: 'oneStep' 
-			}
-			,
-			{ // problem 6
-				problemText: '7 pounds is how many ounces?',
-				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
-				labelAnswer: 'lbs',
-				firstNumSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
-				firstDenSelect: '[\\"1 fl oz\\", \\"1 lbs\\", \\"1 ton\\"]',
-				initialAmount: '7',
-				numeratorStart: '7',
-				denominatorStart: '1',
-				numeratorSecond: '16',
-				denominatorSecond: '1',
-				unitsStart: 'lbs',
-				unitsSecond: 'oz',
-				firstNumAnswer: '16 oz',
-				firstDenAnswer: '1 lbs',
-				finalAnswer: '112',
-				helpFinalAnswer: '112',
-				firstWordCancel: 'pounds',
-				secondWordCancel: 'ounces',
-				descriptor: '',
-				firstImage: 'Pound_02_40x60.png',
-				secondImage: 'Ounce_01_V2_Large_40x60.png',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
-				template: 'oneStep' 
-			}
-			,
-			{ // problem 7
-				problemText: '9000 pounds is how many tons?',
-				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
-				labelAnswer: 'lbs',
-				firstNumSelect: '[\\"1 fl oz\\", \\"1 lbs\\", \\"1 ton\\"]',
-				firstDenSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
-				initialAmount: '9000',
-				numeratorStart: '9000',
-				denominatorStart: '1',
-				numeratorSecond: '1',
-				denominatorSecond: '2000',
-				unitsStart: 'lbs',
-				unitsSecond: 'tons',
-				firstNumAnswer: '1 ton',
-				firstDenAnswer: '2000 lbs',
-				finalAnswer: '4.5',
-				helpFinalAnswer: '4.5',
-				firstWordCancel: 'pounds',
-				secondWordCancel: 'tons',
-				descriptor: '',
-				firstImage: 'Pound_02_40x60.png',
-				secondImage: 'Ton_01_40x50.png',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
-				template: 'oneStep' 
-			}
-			,
-			{ // problem 8
-				problemText: '128 ounces is how many pounds?',
-				labelSelect: '[\\"oz\\", \\"lbs\\", \\"tons\\"]',
-				labelAnswer: 'oz',
-				firstNumSelect: '[\\"1 fl oz\\", \\"1 lbs\\", \\"1 ton\\"]',
-				firstDenSelect: '[\\"16 oz\\", \\"2000 lbs\\", \\"1 ton\\"]',
-				initialAmount: '128',
-				numeratorStart: '128',
-				denominatorStart: '1',
-				numeratorSecond: '1',
-				denominatorSecond: '16',
-				unitsStart: 'oz',
-				unitsSecond: 'lbs',
-				firstNumAnswer: '1 lbs',
-				firstDenAnswer: '16 oz',
-				finalAnswer: '8',
-				helpFinalAnswer: '8',
-				firstWordCancel: 'ounces',
-				secondWordCancel: 'pounds',
-				descriptor: '',
-				firstImage: 'Ounce_01_V2_Large_40x60.png',
-				secondImage: 'Pound_02_40x60.png',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>2000 lbs</td><td>=</td><td>1 ton</td></tr></table>}'),
-				template: 'oneStep' 
-			}
-			,
 			{ // problem 9
 				problemText: '8 cups is how many pints?',
 				labelSelect: '[\\"tsp\\", \\"tbsp\\", \\"fl oz\\", \\"c\\", \\"pt\\", \\"qt\\", \\"gal\\"]',
