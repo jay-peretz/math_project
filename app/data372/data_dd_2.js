@@ -563,9 +563,9 @@ angular.module('mathSkills').service('data_dd_2', ['dataUtils', function (dataUt
 					buttonValueC: 'F',
 					buttonLabelC: dataUtils.pre('\\str{100x + 5 = -10}'),  
 					buttonValueD: 'T', 
-					buttonLabelD: dataUtils.pre('\\str{4x + 5 = -10}'),
+					buttonLabelD: dataUtils.pre('\\str{4x + 5 = 10}'),
 					ansNumber: dataUtils.pre(
-									'\\str{4x + 5 = -10}'
+									'\\str{4x + 5 = 10}'
 								),
 					helpFirstPiece: dataUtils.pre(
 									'\\grp'
@@ -592,7 +592,7 @@ angular.module('mathSkills').service('data_dd_2', ['dataUtils', function (dataUt
 										+'{\\str{(}}'
 										+'{\\css'
 											+'{\\mixed'
-												+'{\\str{-}}'
+												+'{\\str{}}'
 												+'{\\frac'
 													+'{\\str{1}}'
 													+'{\\str{2}}'
@@ -659,7 +659,7 @@ angular.module('mathSkills').service('data_dd_2', ['dataUtils', function (dataUt
 										+'{\\str{*}}'
 										+'{\\css'
 											+'{\\mixed'
-												+'{\\str{-}}'
+												+'{\\str{}}'
 												+'{\\frac'
 													+'{\\str{1}}'
 													+'{\\str{2}}'
