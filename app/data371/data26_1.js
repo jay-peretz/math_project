@@ -226,7 +226,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 											+'{\\sign{&times;}}'
 											+'{\\frac{\\html{$firstNumAnswer}}{\\html{$firstDenAnswer}}}'
 											+'{\\sign{&times;}}'
-											+'{\\frac{\\select{$secondNumAnswer}{$firstNumSelect}}{\\select{$secondDenAnswer}{$firstDenSelect}}}'
+											+'{\\frac{\\select{$secondNumAnswer}{$secondNumSelect}}{\\select{$secondDenAnswer}{$secondDenSelect}}}'
 										+'}'
 									+'}{well}',
                         controls: {
@@ -937,6 +937,8 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				unitsThird: 'L',
 				firstNumAnswer: '4 qt',
 				firstDenAnswer: '1 gal',
+				secondNumSelect: '[\\"1 L\\", \\"4 qt\\", \\"1 gal\\"]',
+				secondDenSelect: '[\\"1 L\\", \\"1.06 qt\\", \\"1 gal\\"]',
 				secondNumAnswer: '1 L',
 				secondDenAnswer: '1.06 qt',
 				finalAnswer: '56.6',
@@ -984,6 +986,8 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				unitsThird: 'L',
 				firstNumAnswer: '4 qt',
 				firstDenAnswer: '1 gal',
+				secondNumSelect: '[\\"1 L\\", \\"4 qt\\", \\"1 gal\\"]',
+				secondDenSelect: '[\\"1 L\\", \\"1.06 qt\\", \\"1 gal\\"]',
 				secondNumAnswer: '1 L',
 				secondDenAnswer: '1.06 qt',
 				finalAnswer: '4.5',
@@ -1017,7 +1021,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				problemText: '80 ounces is how many grams?',
 				labelSelect: '[\\"grams\\", \\"pounds\\", \\"ounces\\"]',
 				labelAnswer: 'ounces',
-				firstNumSelect: '[\\"1 lb\\", \\"1 g\\", \\"454 g\\"]',
+				firstNumSelect: '[\\"1 lb\\", \\"1 g\\"]',
 				firstDenSelect: '[\\"16 oz\\", \\"1 lb\\", \\"454 g\\"]',
 				initialAmount: '80',
 				numeratorStart: '80',
@@ -1031,6 +1035,8 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				unitsThird: 'g',
 				firstNumAnswer: '1 lb',
 				firstDenAnswer: '16 oz',
+				secondNumSelect: '[\\"1 lb\\", \\"1 g\\", \\"454 g\\"]',
+				secondDenSelect: '[\\"16 oz\\", \\"1 lb\\", \\"454 g\\"]',
 				secondNumAnswer: '454 g',
 				secondDenAnswer: '1 lb',
 				finalAnswer: '2270',
@@ -1052,7 +1058,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				problemText: '4 ounces is how many grams?',
 				labelSelect: '[\\"grams\\", \\"pounds\\", \\"ounces\\"]',
 				labelAnswer: 'ounces',
-				firstNumSelect: '[\\"1 lb\\", \\"1 g\\", \\"454 g\\"]',
+				firstNumSelect: '[\\"1 lb\\", \\"1 g\\"]',
 				firstDenSelect: '[\\"16 oz\\", \\"1 lb\\", \\"454 g\\"]',
 				initialAmount: '4',
 				numeratorStart: '4',
@@ -1066,6 +1072,8 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				unitsThird: 'g',
 				firstNumAnswer: '1 lb',
 				firstDenAnswer: '16 oz',
+				secondNumSelect: '[\\"1 lb\\", \\"1 g\\", \\"454 g\\"]',
+				secondDenSelect: '[\\"16 oz\\", \\"1 lb\\", \\"454 g\\"]',
 				secondNumAnswer: '454 g',
 				secondDenAnswer: '1 lb',
 				finalAnswer: '113.5',
@@ -1101,6 +1109,8 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				unitsThird: 'cm',
 				firstNumAnswer: '12 in',
 				firstDenAnswer: '1 ft',
+				secondNumSelect: '[\\"1 ft\\", \\"2.54 cm\\", \\"12 in\\"]',
+				secondDenSelect: '[\\"1 ft\\", \\"1 cm\\", \\"1 in\\"]',
 				secondNumAnswer: '2.54 cm',
 				secondDenAnswer: '1 in',
 				finalAnswer: '609.6',
@@ -1136,6 +1146,8 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				unitsThird: 'cm',
 				firstNumAnswer: '12 in',
 				firstDenAnswer: '1 ft',
+				secondNumSelect: '[\\"1 ft\\", \\"2.54 cm\\", \\"12 in\\"]',
+				secondDenSelect: '[\\"1 ft\\", \\"1 cm\\", \\"1 in\\"]',
 				secondNumAnswer: '2.54 cm',
 				secondDenAnswer: '1 in',
 				finalAnswer: '198',
