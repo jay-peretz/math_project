@@ -54,6 +54,9 @@ body {
 	margin-left:80px;
 }
 
+.pre-multiple-tables table td {
+	vertical-align: top;
+}
 .exponentLarge {
 	display: inline-block;
 	height: 2em;
