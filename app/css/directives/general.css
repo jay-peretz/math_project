@@ -100,6 +100,15 @@ body {
 .equivalence-table tr td {
  	padding: .5em .2em;
 }
+.equivalence-table .inside-equivalence-table tr td {
+	padding:0;
+	margin:0;
+}
+.equivalence-table tr td.td-inside-equivalence-table {
+	padding:0;
+	margin:0;
+	text-align:left;
+}
 
 div.fakeButton {
   display: inline-block;
