@@ -21,6 +21,14 @@ div .fraction .control-group {
 	padding:0px;
 	margin:0px;
 }
+.blue-text .fraction hr {
+	color: #0088cc;
+	border-color: transparent transparent #0088cc transparent;
+	height:1px;
+	min-width:1em;
+	padding:0px;
+	margin:0px;
+}
 .fraction tr:nth-child(2) td {
 	vertical-align:top;
 }
