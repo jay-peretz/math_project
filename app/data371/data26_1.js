@@ -887,7 +887,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				firstImage: '',
 				secondImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
 			,
@@ -916,7 +916,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				firstImage: '',
 				secondImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
 			,
@@ -944,7 +944,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
 			,
@@ -972,7 +972,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
 			,
@@ -1012,7 +1012,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
 			,
@@ -1052,7 +1052,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
 			,
@@ -1092,7 +1092,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
 			,
@@ -1132,7 +1132,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
 			,
@@ -1160,7 +1160,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep'
 			}
 			,
@@ -1188,7 +1188,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep'
 			}
 			,
@@ -1228,7 +1228,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
 			,
@@ -1268,7 +1268,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				descriptor: '',
 				firstImage: '',
 				secondImage: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table>}'),
 				template: 'oneStep' 
 			}
 			,
@@ -1317,7 +1317,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>=</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -1366,7 +1366,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>=</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -1403,7 +1403,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>=</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -1440,7 +1440,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>=</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -1477,7 +1477,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>=</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -1526,7 +1526,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>=</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -1575,7 +1575,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -1624,7 +1624,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -1673,7 +1673,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -1722,7 +1722,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -1771,7 +1771,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -1820,7 +1820,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -1869,7 +1869,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -1918,7 +1918,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -2001,7 +2001,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
 				template: 'twoStepFraction' 
 			}
 			,
@@ -2084,7 +2084,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr style="border-bottom:0px;"><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr><tr style="border-bottom:0px;"><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td><td style="padding:0em .2em;">&nbsp;</td></tr><tr><td>1 gal</td><td>=</td><td>4 qt</td></tr><tr><td>16 oz</td><td>=</td><td>1 lb</td></tr><tr><td>1 ft</td><td>=</td><td>12 in</td></tr></table>}'),
 				template: 'twoStepFraction' 
 			}
 			,
@@ -2133,7 +2133,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			,
@@ -2182,7 +2182,7 @@ angular.module('mathSkills').service('data26_1', ['dataUtils', function (dataUti
 				secondImage: '',
 				thirdImage: '',
 				descriptor: '',
-				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>=</td><td>1.61 km</td></tr><tr><td>1 in</td><td>=</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>=</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>=</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
+				modalChart: dataUtils.pre('\\html{<table class=equivalence-table><th colspan="3">Equivalence Table</th><tr><td>1 mi</td><td>&nbsp; &asymp; &nbsp;</td><td>1.61 km</td></tr><tr><td>1 in</td><td>&nbsp; &asymp; &nbsp;</td><td>2.54 cm</td></tr><tr><td>1 lb</td><td>&nbsp; &asymp; &nbsp;</td><td>454 g</td></tr><tr><td>1.06 qt</td><td>&nbsp; &asymp; &nbsp;</td><td>1 L</td></tr></table><br><br><table class=conversion-table><th>kilo<br>(k)</th><th>hecto<br>(h)</th><th>deka<br>(da)</th><th>Basic<br>Units</th><th>deci<br>(d)</th><th>centi<br>(c)</th><th>milli<br>(m)</th></tr><tr><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td style="rowspan=\'3\'"><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">METER<br>LITER<br>GRAM</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td><td style="rowspan=\'3\'">&nbsp;</td></tr></table>}'),
 				template: 'twoStep' 
 			}
 			/*
