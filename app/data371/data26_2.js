@@ -58,7 +58,7 @@ angular.module('mathSkills').service('data26_2', ['dataUtils', function (dataUti
 										'{\\html{&nbsp;}}'
 										+'{$$problem}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{We are converting to a Fahrenheit temperature, so use the \"F =\" formula.}}'
+										+'{\\str{We are converting to a Fahrenheit temperature, so use the <br>\"F =\" formula.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
@@ -313,7 +313,7 @@ angular.module('mathSkills').service('data26_2', ['dataUtils', function (dataUti
 										'{\\html{&nbsp;}}'
 										+'{$problem}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{We are converting to a Fahrenheit temperature, so use the \"F =\" formula.}}'
+										+'{\\str{We are converting to a Fahrenheit temperature, so use the <br>\"F =\" formula.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
@@ -430,7 +430,7 @@ angular.module('mathSkills').service('data26_2', ['dataUtils', function (dataUti
 											+'{blue-text}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{We are converting to a Fahrenheit temperature, so use the \"F =\" formula.}}'
+										+'{\\str{We are converting to a Fahrenheit temperature, so use the <br>\"F =\" formula.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
@@ -547,7 +547,7 @@ angular.module('mathSkills').service('data26_2', ['dataUtils', function (dataUti
 											+'{blue-text}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{We are converting to a Fahrenheit temperature, so use the \"F =\" formula.}}'
+										+'{\\str{We are converting to a Fahrenheit temperature, so use the <br>\"F =\" formula.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
@@ -664,7 +664,7 @@ angular.module('mathSkills').service('data26_2', ['dataUtils', function (dataUti
 											+'{blue-text}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{We are converting to a Fahrenheit temperature, so use the \"F =\" formula.}}'
+										+'{\\str{We are converting to a Fahrenheit temperature, so use the <br>\"F =\" formula.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
@@ -1364,7 +1364,7 @@ angular.module('mathSkills').service('data26_2', ['dataUtils', function (dataUti
 				,
 				{	// problem 11
 					ansNumber: '1832',
-					probNumber: '1100',
+					probNumber: '1000',
 					resultNumbers: '1800',
 					helpAnsNumber: '1832',
 					roundText: '',
@@ -1387,7 +1387,7 @@ angular.module('mathSkills').service('data26_2', ['dataUtils', function (dataUti
 											+'{blue-text}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{We are converting to a Fahrenheit temperature, so use the \"F =\" formula.}}'
+										+'{\\str{We are converting to a Fahrenheit temperature, so use the <br>\"F =\" formula.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
@@ -1502,7 +1502,7 @@ angular.module('mathSkills').service('data26_2', ['dataUtils', function (dataUti
 											+'{blue-text}'
 										+'}'
 										+'{\\html{&nbsp;}}'
-										+'{\\str{We are converting to a Fahrenheit temperature, so use the \"F =\" formula.}}'
+										+'{\\str{We are converting to a Fahrenheit temperature, so use the <br>\"F =\" formula.}}'
 										+'{\\html{&nbsp;}}'
 										+'{\\grp'
 											+'{\\css'
@@ -1958,19 +1958,19 @@ angular.module('mathSkills').service('data26_2', ['dataUtils', function (dataUti
 					template: 'flexy',
 				}
         ];
-		/*shuffle = [
-				{ problems: [1,2], total: 1},
-				{ problems: [3,4], total: 1},
-				{ problems: [5,6], total: 1},
+		shuffle = [
+				{ problems: [1], total: 1},
+				{ problems: [2], total: 1},
+				{ problems: [3,4,5,6], total: 2},
 				{ problems: [7,8], total: 1},
 				{ problems: [9,10], total: 1},
 				{ problems: [11,12], total: 1},
 				{ problems: [13,14], total: 1}
 		];
     
-    	return dataUtils.build(desc, template, data, shuffle);*/
+    	return dataUtils.build(desc, template, data, shuffle);
 		
-		return dataUtils.build(desc, template, data);
+		//return dataUtils.build(desc, template, data);
 }]);
 
 
