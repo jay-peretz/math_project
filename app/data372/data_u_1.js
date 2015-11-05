@@ -133,7 +133,8 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 				secondHelp: 'The bases of a trapezoid are always the only two sides which are <strong><u>parallel</u></strong> to each other.',
 				thirdHelp: '$$s1Value and $$s3Value are parallel sides. They are the bases.',
 				answerHelp: 's<sub>1</sub> and s<sub>3</sub>',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 2
@@ -155,7 +156,8 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 				secondHelp: 'Since a and c are the parallel sides of the trapezoid, they are the bases. The distance between them is either distance e or distance b. ',
 				thirdHelp: 'd is <u>not</u> the height because it is a slanted line (not perpendicular to the bases).',
 				answerHelp: 'e or b',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 3
@@ -397,6 +399,7 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 				buttonLabelD: dataUtils.pre('\\html{s<sub>1</sub> by s<sub>4</sub>}'),
                 firstHelp: 's<sub>5</sub> is a length and s<sub>6</sub> is a width that forms a rectangle. None of the other given pairs of sides form the length and width of a rectangle. ',
 				answerHelp: 's<sub>5</sub> by s<sub>6</sub>',
+				answerBtn: 'noAnswer',
 				template: 'multipleChoiceSimpleHelp'
 			}
 			,
@@ -414,6 +417,7 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 				buttonLabelD: dataUtils.pre('\\html{s<sub>1</sub> by s<sub>4</sub>}'),
                 firstHelp: 's<sub>3</sub> is a length and s<sub>2</sub> is a width that forms a rectangle. None of the other given pairs of sides form the length and width of a rectangle. ',
 				answerHelp: 's<sub>2</sub> by s<sub>3</sub>',
+				answerBtn: 'noAnswer',
 				template: 'multipleChoiceSimpleHelp'
 			}
 			,
@@ -445,7 +449,8 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 							+'(b) &nbsp; A = ($$s5Value &bull; $$s6Value)  +  ($$s2Value &bull; $$s3Value)<br><br>'
 								+'$$s5Value &bull; $$s6Value and $$s2Value &bull; $$s3Value will each solve for the area of a rectangle. The areas of these two rectangles do not overlap each other. Together they correctly measure the entire area of the given shape. (b) is the correct answer.',
 				answerHelp: 'A = (s<sub>5</sub> &bull; s<sub>6</sub>) + (s<sub>2</sub> &bull; s<sub>3</sub>)',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 14
@@ -476,7 +481,8 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 							+'(c) &nbsp; A = ($$s4Value &bull; $$s5Value)  +  ($$s1Value &bull; $$s2Value)<br><br>'
 								+'$$s4Value &bull; $$s5Value and $$s1Value &bull; $$s2Value will each solve for the area of a rectangle. The areas of these two rectangles do not overlap each other. Together they correctly measure the entire area of the given shape. (c) is the correct answer.',
 				answerHelp: 'A = (s<sub>4</sub> &bull; s<sub>5</sub>) + (s<sub>1</sub> &bull; s<sub>2</sub>)',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 15
@@ -507,7 +513,8 @@ angular.module('mathSkills').service('data_u_1', ['dataUtils', function (dataUti
 							+'(c) &nbsp; A = ($$s4Value &bull; $$s3Value)  &#8722;  ($$s1Value &bull; $$s6Value)<br><br>'
 								+'$$s4Value &bull; $$s3Value and $$s1Value &bull; $$s6Value will each solve for the area of a rectangle. The area of the first rectangle ($$s4Value &bull; $$s3Value) is larger than the area of the shape we are measuring. If we subtract the area of the second rectangle ($$s1Value &bull; $$s6Value) we are left with exactly the area of the given shape.  (c) is the correct answer.',
 				answerHelp: 'A = (s<sub>4</sub> &bull; s<sub>3</sub>) - (s<sub>1</sub> &bull; s<sub>6</sub>)',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 16

@@ -134,6 +134,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					operation: '-',
 					gcfHelp: '2',
 					leftoverHelp: 'x - 3',
+					answerBtn: 'noAnswer',
 					template: 'main',
 				}
 				,
@@ -154,6 +155,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					operation: '-',
 					gcfHelp: '3',
 					leftoverHelp: 'm - 3',
+					answerBtn: 'noAnswer',
 					template: 'main',
 				}
 				,
@@ -174,6 +176,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					operation: '-',
 					gcfHelp: 'x',
 					leftoverHelp: '5x - 8',
+					answerBtn: 'noAnswer',
 					template: 'main'
 				}
 				,
@@ -194,6 +197,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					operation: '-',
 					gcfHelp: 'a',
 					leftoverHelp: '7a - 9',
+					answerBtn: 'noAnswer',
 					template: 'main'
 				}
 				,
@@ -214,6 +218,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					operation: '&#43;',
 					gcfHelp: '4m',
 					leftoverHelp: '-2m<sup>2</sup> &#43; 3',
+					answerBtn: 'noAnswer',
 					template: 'main'
 				}
 				,
@@ -234,6 +239,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					operation: '&#43;',
 					gcfHelp: '3x',
 					leftoverHelp: '-3x<sup>2</sup> &#43; 2',
+					answerBtn: 'noAnswer',
 					template: 'main'
 				}
 				,
@@ -254,6 +260,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					operation: '&#43;',
 					gcfHelp: 'a<sup>3</sup>b',
 					leftoverHelp: 'ab &#43; c<sup>2</sup>',
+					answerBtn: 'noAnswer',
 					template: 'main'
 				}
 				,
@@ -274,6 +281,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					operation: '&#43;',
 					gcfHelp: 'x<sup>3</sup>y',
 					leftoverHelp: 'x<sup>2</sup>y &#43; z<sup>2</sup>',
+					answerBtn: 'noAnswer',
 					template: 'main'
 				}
 				,
@@ -294,6 +302,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					operation: '-',
 					gcfHelp: '6mn',
 					leftoverHelp: '2m<sup>2</sup> - 1',
+					answerBtn: 'noAnswer',
 					template: 'main'
 				}
 				,
@@ -314,6 +323,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					operation: '-',
 					gcfHelp: '10xy',
 					leftoverHelp: '2x<sup>2</sup> - 1',
+					answerBtn: 'noAnswer',
 					template: 'main'
 				}
 				,
@@ -334,6 +344,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					operation: '-',
 					gcfHelp: '-3x<sup>2</sup>y<sup>2</sup>',
 					leftoverHelp: '2y &#43; 5x<sup>3</sup>',
+					answerBtn: 'noAnswer',
 					template: 'main'
 				}
 				,
@@ -354,6 +365,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
 					operation: '-',
 					gcfHelp: '-2m<sup>2</sup>n<sup>2</sup>',
 					leftoverHelp: '3n &#43; 5m<sup>3</sup>',
+					answerBtn: 'noAnswer',
 					template: 'main'
 				}
 				,
@@ -377,6 +389,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
                     secondOperation: '-',
 					gcfHelp: '5m',
 					leftoverHelp: 'n<sup>2</sup> - 3n - 2',
+					answerBtn: 'noAnswer',
 					template: 'threeElement'
 				}
 				,
@@ -400,6 +413,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
                     secondOperation: '-',
 					gcfHelp: '5x',
 					leftoverHelp: '4y<sup>2</sup> - 3y - 2',
+					answerBtn: 'noAnswer',
 					template: 'threeElement'
 				}
 				,
@@ -423,6 +437,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
                     secondOperation: '-',
 					gcfHelp: '-8ab',
 					leftoverHelp: '4ab<sup>2</sup> &#43; 3a &#43; 1',
+					answerBtn: 'noAnswer',
 					template: 'threeElement'
 				}
 				,
@@ -446,6 +461,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
                     secondOperation: '-',
 					gcfHelp: '-7xy',
 					leftoverHelp: '2xy<sup>2</sup> &#43; 3x &#43; 1',
+					answerBtn: 'noAnswer',
 					template: 'threeElement'
 				}
 				,
@@ -469,6 +485,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
                     secondOperation: '&#43;',
 					gcfHelp: '11',
 					leftoverHelp: '4a<sup>2</sup>c - 3a<sup>2</sup>b<sup>2</sup> &#43; 1',
+					answerBtn: 'noAnswer',
 					template: 'threeElement'
 				}
 				,
@@ -492,6 +509,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
                     secondOperation: '-',
 					gcfHelp: '17',
 					leftoverHelp: '2x<sup>2</sup>z - 3x<sup>2</sup>y<sup>2</sup> - 1',
+					answerBtn: 'noAnswer',
 					template: 'threeElement'
 				}
 				,
@@ -515,6 +533,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
                     secondOperation: '-',
 					gcfHelp: '3z<sup>2</sup>',
 					leftoverHelp: '-6xyz &#43; 4x - 3y<sup>2</sup>z<sup>2</sup>',
+					answerBtn: 'noAnswer',
 					template: 'threeElement'
 				}
 				,
@@ -538,6 +557,7 @@ angular.module('mathSkills').service('data_aa_2', ['dataUtils', function (dataUt
                     secondOperation: '&#43;',
 					gcfHelp: '4m<sup>2</sup>n',
 					leftoverHelp: '-4o<sup>3</sup> - 3mn &#43; 5n<sup>3</sup>o<sup>2</sup>',
+					answerBtn: 'noAnswer',
 					template: 'threeElement'
 				}
         ];

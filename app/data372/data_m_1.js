@@ -393,7 +393,8 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": false,
-							"workbook": true
+							"workbook": true,
+							"stepwiseNextProblem": "Check Answer"
 						}
                     }]
                 }, {
@@ -454,7 +455,8 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"stepwiseNextProblem": "Check Answer"
 						},
                     }, {
 						problem: '\\grp'
@@ -488,7 +490,8 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
         									+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"stepwiseNextProblem": "Check Answer"
 						},
                     }, {
 						problem: '\\grp'
@@ -524,7 +527,8 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true,
-							"fixBottomRight": true
+							"fixBottomRight": true,
+							"stepwiseNextProblem": "Check Answer"
 						}
                     }]
                 }]
@@ -713,7 +717,8 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": false,
-							"workbook": true
+							"workbook": true,
+							"stepwiseNextProblem": "Check Answer"
 						}
                     }]
                 }, {
@@ -788,7 +793,8 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"stepwiseNextProblem": "Check Answer"
 						},
                     }, {
 						problem: '\\grp'
@@ -842,7 +848,8 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
         									+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"stepwiseNextProblem": "Check Answer"
 						}
                     }, {
 						problem: '\\grp'
@@ -898,6 +905,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true,
+							"stepwiseNextProblem": "Check Answer",
 							"fixBottomRight": true
 						}
                     }]
@@ -929,7 +937,8 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": false,
-							"workbook": true
+							"workbook": true,
+							"stepwiseNextProblem": "Check Answer"
 						}
                     }]
                 }, {
@@ -1002,7 +1011,8 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 								+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"stepwiseNextProblem": "Check Answer"
 						},
                     }, {
 						problem: '\\grp'
@@ -1055,7 +1065,8 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
         									+'}{well}',
 						controls: {
 							"checkAnswer": true,
-							"help": true
+							"help": true,
+							"stepwiseNextProblem": "Check Answer"
 						}
                     }, {
 						problem: '\\grp'
@@ -1110,6 +1121,7 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
 						controls: {
 							"checkAnswer": true,
 							"help": true,
+							"stepwiseNextProblem": "Check Answer",
 							"fixBottomRight": true
 						}
                     }]
@@ -1132,13 +1144,13 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
             //problem 7
             { firstNum: '2', firstDen: '3', secondNum: '1', secondDen: '6', firstAnswerNum: '4', secondAnswerNum: '-1', differenceNum: '-5', answerDen: '6', firstSign: '&minus;', secondSign: '+', thirdSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', oper: 'Add', template: 'twoFractionsPar' },
             //problem 8
-            { firstNum: '1', firstDen: '4', secondNum: '5', secondDen: '6', firstAnswerNum: '3', secondAnswerNum: '10', differenceNum: '7', answerDen: '12', firstSign: '&minus;', secondSign: '&minus;', thirdSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', negFrac: '<sup>5</sup>&#8260;<sub>6</sub>', oper: 'Add', template: 'twoFracDblNeg', 
+            { firstNum: '1', firstDen: '4', secondNum: '5', secondDen: '6', firstAnswerNum: '3', secondAnswerNum: '10', differenceNum: '7', answerDen: '12', firstSign: '&minus;', secondSign: '&minus;', thirdSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', negFrac: '<sup>5</sup>&#8260;<sub>6</sub>', oper: 'Add', template: 'twoFracDblNeg', answerBtn: 'noAnswer',
             buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>1/4 <span class=bigger>-</span> 5/6', 
             buttonValueB: 'F', buttonLabelB: '<span class=bigger>&nbsp;</span>1/4 <span class=bigger>+</span> 5/6', 
             buttonValueC: 'T', buttonLabelC: '<span class=bigger>-</span>1/4 <span class=bigger>+</span> 5/6', 
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>1/4 <span class=bigger>-</span> 5/6' },
              //problem 9
-            { firstNum: '2', firstDen: '5', secondNum: '3', secondDen: '8', firstAnswerNum: '16', secondAnswerNum: '15', differenceNum: '31', answerDen: '40', firstSign: '', secondSign: '&minus;', thirdSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', negFrac: '<sup>3</sup>&#8260;<sub>8</sub>', oper: 'Add', template: 'twoFracDblNeg', 
+            { firstNum: '2', firstDen: '5', secondNum: '3', secondDen: '8', firstAnswerNum: '16', secondAnswerNum: '15', differenceNum: '31', answerDen: '40', firstSign: '', secondSign: '&minus;', thirdSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', negFrac: '<sup>3</sup>&#8260;<sub>8</sub>', oper: 'Add', template: 'twoFracDblNeg', answerBtn: 'noAnswer',
             buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>2/5 <span class=bigger>-</span> 3/8', 
             buttonValueB: 'T', buttonLabelB: '<span class=bigger>&nbsp;</span>2/5 <span class=bigger>+</span> 3/8', 
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>-</span>2/5 <span class=bigger>-</span> 3/8', 
@@ -1146,13 +1158,13 @@ angular.module('mathSkills').service('data_m_1', ['dataUtils', function (dataUti
             //problem 10
             { firstNum: '11', firstDen: '10', secondNum: '3', secondDen: '4', thirdNum: '2', thirdDen: '5', firstAnswerNum: '22', secondAnswerNum: '15', thirdAnswerNum: '8', differenceNum: '-1', answerDen: '20', firstSign: '', secondSign: '&minus;', thirdSign: '', forthSign: '+', fifthSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', oper: 'Add', template: 'threeFractionsPar' },
             //problem 11
-            { firstNum: '6', firstDen: '7', secondNum: '3', secondDen: '14', thirdNum: '1', thirdDen: '4', firstAnswerNum: '24', secondAnswerNum: '6', thirdAnswerNum: '7', differenceNum: '25', answerDen: '28', firstSign: '', secondSign: '+', thirdSign: '&minus;', forthSign: '&minus;', fifthSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', negFrac: '<sup>1</sup>&#8260;<sub>4</sub>', oper: 'Subtract and add', sign1: '', sign2: '&minus;', sign3: '+',  template: 'threeFracDblNeg', 
+            { firstNum: '6', firstDen: '7', secondNum: '3', secondDen: '14', thirdNum: '1', thirdDen: '4', firstAnswerNum: '24', secondAnswerNum: '6', thirdAnswerNum: '7', differenceNum: '25', answerDen: '28', firstSign: '', secondSign: '+', thirdSign: '&minus;', forthSign: '&minus;', fifthSign: '&minus;', answerSign: '', leftParen: '(', rightParen: ')', negFrac: '<sup>1</sup>&#8260;<sub>4</sub>', oper: 'Subtract and add', sign1: '', sign2: '&minus;', sign3: '+',  template: 'threeFracDblNeg', answerBtn: 'noAnswer', 
             buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>6/7 <span class=bigger>-</span> 3/14 <span class=bigger>+</span> 1/4', 
             buttonValueB: 'F', buttonLabelB: '<span class=bigger>&nbsp;</span>6/7 <span class=bigger>+</span> 3/14 <span class=bigger>-</span> 1/4', 
             buttonValueC: 'T', buttonLabelC: '<span class=bigger>&nbsp;</span>6/7 <span class=bigger>-</span> 3/14 <span class=bigger>+</span> 1/4', 
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>6/7 <span class=bigger>+</span> 3/14 <span class=bigger>-</span> 1/4' },
             //problem 12
-            { firstNum: '7', firstDen: '8', secondNum: '3', secondDen: '16', thirdNum: '2', thirdDen: '3', firstAnswerNum: '42', secondAnswerNum: '9', thirdAnswerNum: '32', differenceNum: '-1', answerDen: '48', firstSign: '&minus;', secondSign: '&minus;', thirdSign: '&minus;', forthSign: '+', fifthSign: '', answerSign: '', leftParen: '(', rightParen: ')', negFrac: '<sup>3</sup>&#8260;<sub>16</sub>', oper: 'Add and subtract', sign1: '&minus;', sign2: '+', sign3: '+', template: 'threeFracDblNegPos', 
+            { firstNum: '7', firstDen: '8', secondNum: '3', secondDen: '16', thirdNum: '2', thirdDen: '3', firstAnswerNum: '42', secondAnswerNum: '9', thirdAnswerNum: '32', differenceNum: '-1', answerDen: '48', firstSign: '&minus;', secondSign: '&minus;', thirdSign: '&minus;', forthSign: '+', fifthSign: '', answerSign: '', leftParen: '(', rightParen: ')', negFrac: '<sup>3</sup>&#8260;<sub>16</sub>', oper: 'Add and subtract', sign1: '&minus;', sign2: '+', sign3: '+', template: 'threeFracDblNegPos',answerBtn: 'noAnswer', 
             buttonValueA: 'F', buttonLabelA: '<span class=bigger>-</span>7/8 <span class=bigger>-</span> 3/16 <span class=bigger>+</span> 2/3', 
             buttonValueB: 'T', buttonLabelB: '<span class=bigger>-</span>7/8 <span class=bigger>+</span> 3/16 <span class=bigger>+</span> 2/3', 
             buttonValueC: 'F', buttonLabelC: '<span class=bigger>&nbsp;</span>7/8 <span class=bigger>+</span> 3/16 <span class=bigger>+</span> 2/3', 

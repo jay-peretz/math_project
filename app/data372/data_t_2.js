@@ -149,7 +149,8 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 				secondHelp: 'The distance of the open half circle is only <sup>1</sup>&#8260;<sub>2</sub> of the distance of the circumference. Therefore:<br><br>Distance of open half circle = <sup>1</sup>&#8260;<sub>2</sub> of (circumference)',
 				thirdHelp: 'Now we just substitute the formula for the word \\"circumference\\"  (&pi; * d). We get:<br><br>Distance of open half circle = <sup>1</sup>&#8260;<sub>2</sub> * (&pi; * d)',
 				answerHelp: '<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d',
-				template: 'multipleChoice' 
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice'  
 			}
 			,
 			{ // problem 2
@@ -206,7 +207,8 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 				secondHelp: '(1) distance of <sup>1</sup>&#8260;<sub>2</sub> circumference = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * d<br><br>(2) diameter = d',
 				thirdHelp: 'Our formula becomes: &nbsp; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d) &#43; d',
 				answerHelp: '<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d &#43; d',
-				template: 'multipleChoice' 
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice'  
 			}
 			,
 			{ // problem 5
@@ -502,7 +504,8 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 							+'Distance of open half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * d',
 				thirdHelp: 'Add these together to get the perimeter formula.',
 				answerHelp: 'P = a &#43; b &#43; c &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)',
-				template: 'multipleChoice' 
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice'  
 			}
 			,
 			{ // problem 16
@@ -528,7 +531,8 @@ angular.module('mathSkills').service('data_t_2', ['dataUtils', function (dataUti
 							+'Distance of open half circle = <sup>1</sup>&#8260;<sub>2</sub> * &pi; * d',
 				thirdHelp: 'Add these together to get the perimeter formula.',
 				answerHelp: 'P = s<sub>1</sub> &#43; s<sub>2</sub> &#43; s<sub>3</sub> &#43; (<sup>1</sup>&#8260;<sub>2</sub> * &pi; * d)',
-				template: 'multipleChoice' 
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice'  
 			}
 			,
 			{ // problem 17

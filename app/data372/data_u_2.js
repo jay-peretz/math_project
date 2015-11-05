@@ -151,7 +151,8 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 				secondHelp: 'Now we just substitute the formula for the words \'area of a full circle\' (&pi; &bull; r<sup>2</sup>). We get:',
 				thirdHelp: 'Area of a half circle =  <sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>',
 				answerHelp: 'A = <sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>',
-				template: 'multipleChoice' 
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice'  
 			}
 			,
 			{ // problem 2
@@ -415,7 +416,8 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 							+'<br><br>'
 							+'A = (b &bull; a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>)',
 				answerHelp: 'A = (b &bull; a) &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>)',
-				template: 'multipleChoice' 
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice'  
 			}
 			,
 			{ // problem 11
@@ -447,7 +449,8 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 							+'<br>'
 							+'A = (s<sub>2</sub> &bull; s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>)',
 				answerHelp: 'A = (s<sub>2</sub> &bull; s<sub>1</sub>) &#43; (<sup>1</sup>&#8260;<sub>2</sub> &bull; &pi; &bull; r<sup>2</sup>)',
-				template: 'multipleChoice' 
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice'  
 			}
 			,
 			{ // problem 12
@@ -753,7 +756,8 @@ angular.module('mathSkills').service('data_u_2', ['dataUtils', function (dataUti
 							+'A = <sup>1</sup>&#8260;<sub>2</sub> &bull; <sup>22</sup>&#8260;<sub>7</sub> &bull; (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup> '
 							+'<br>',
 				answerHelp: 'A = <sup>1</sup>&#8260;<sub>2</sub> &bull; <sup>22</sup>&#8260;<sub>7</sub> &bull; (4 <sup>1</sup>&#8260;<sub>4</sub>)<sup>2</sup>',
-				template: 'multipleChoice' 
+					answerBtn: 'noAnswer',
+					template: 'multipleChoice'  
 			}
         ],
 		shuffle = [

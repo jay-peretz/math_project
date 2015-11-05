@@ -132,6 +132,7 @@ template = {
 			helpAnswer: '2m<sup>2</sup>', 
 			textAnswer: '2m', 
 			expoAnswer: '2',
+			answerBtn: 'noAnswer',
 			template: 'simple'
 			}
 			,
@@ -169,6 +170,7 @@ template = {
 			secondHelpQuoted: '\\"b\\"',
 			helpAnswer: '-2ab', 
 			textAnswer: '-3ab', 
+			answerBtn: 'noAnswer',
 			template: 'simple'
 			}
 			,
@@ -205,6 +207,7 @@ template = {
 			textAnswer: '5m', 
 			expoAnswer: '2',
 			secondAnswer: 'n',
+			answerBtn: 'noAnswer',
 			template: 'simple'
 			}
 			,
@@ -245,6 +248,7 @@ template = {
 			textAnswer: '-3b', 
 			expoAnswer: '5',
 			secondAnswer: '',
+			answerBtn: 'noAnswer',
 			template: 'simple'
 			}
 			,
@@ -306,6 +310,7 @@ template = {
 									+'}'
 						),
 			spaceButtons: 'tdButtonHeight80px',
+			answerBtn: 'noAnswer',
 			template: 'fractionCoefficient'
 			}
 			,
@@ -361,6 +366,7 @@ template = {
 			secondAnswer: 'x',
 			thirdAnswer: '6',
 			spaceButtons: 'tdButtonHeight',
+			answerBtn: 'noAnswer',
 			template: 'fractionCoefficient'
 			}
 			,
@@ -430,6 +436,7 @@ template = {
 			secondAnswer: '7b',
 			thirdAnswer: '4a<sup>2</sup>',
 			spaceButtons: 'tdButtonHeight80px',
+			answerBtn: 'noAnswer',
 			template: 'fractionCoefficient'
 			}
 			,
@@ -481,6 +488,7 @@ template = {
 			secondAnswer: '3',
 			thirdAnswer: '-n<sup>2</sup>',
 			spaceButtons: 'tdButtonHeight',
+			answerBtn: 'noAnswer',
 			template: 'fractionCoefficient'
 			}
 			,
@@ -548,6 +556,7 @@ template = {
 			secondAnswer: '2y',
 			thirdAnswer: '5z',
 			spaceButtons: 'tdButtonHeight80px',
+			answerBtn: 'noAnswer',
 			template: 'fractionCoefficient'
 			}
 			,
@@ -604,6 +613,7 @@ template = {
 			secondAnswer: '2',
 			thirdAnswer: '-11',
 			spaceButtons: 'tdButtonHeight80px',
+			answerBtn: 'noAnswer',
 			template: 'fractionCoefficient'
 			}
 			

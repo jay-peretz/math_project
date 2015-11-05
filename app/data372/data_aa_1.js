@@ -57,6 +57,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{3}'),
 					textAnswer: ' &nbsp; 6', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '6 is the greatest factor that can divide evenly into 18 and 12.',
 					firstVariables: 'There are no variables, so no variable can be found in common.',
@@ -73,6 +74,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{135}'),
 					textAnswer: ' &nbsp; 15', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '15 is the greatest factor that can divide evenly into 30 and 45.',
 					firstVariables: 'There are no variables, so no variable can be found in common.',
@@ -89,6 +91,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{42}'),
 					textAnswer: ' &nbsp; 1', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '1 is the greatest factor that can divide evenly into 14, 7, and 3.',
 					firstVariables: 'There are no variables, so no variable can be found in common.',
@@ -105,6 +108,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'T',
 					buttonLabelD: dataUtils.pre('\\str{1}'),
 					textAnswer: ' &nbsp; 1', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '1 is the greatest factor that can divide evenly into 5, 9, and 12.',
 					firstVariables: 'There are no variables, so no variable can be found in common.',
@@ -121,6 +125,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{2xy}'),
 					textAnswer: ' &nbsp; 1', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '2 is the greatest factor that can divide evenly into 8 and 2.',
 					firstVariables: 'The first term contains only the variable x and the second term contains only the variable y, so no variable can be found in common.',
@@ -137,6 +142,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{27mn}'),
 					textAnswer: ' &nbsp; 3', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '3 is the greatest factor that can divide evenly into 9 and 3.',
 					firstVariables: 'The first term contains only the variable m and the second term contains only the variable n, so no variable can be found in common.',
@@ -153,6 +159,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{mn}'),
 					textAnswer: ' &nbsp; 1m<sup>1</sup> or m', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '1 is the greatest factor that can divide evenly into 5 and 2.',
 					firstVariables: 'Both terms have the variable m in common.'
@@ -171,6 +178,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'T',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp;&nbsp;&nbsp; x}'),
 					textAnswer: ' &nbsp; 1x<sup>1</sup> or x', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '1 is the greatest factor that can divide evenly into 7 and 3.',
 					firstVariables: 'Both terms have the variable x in common.'
@@ -189,6 +197,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 40n<sup>3</sup>}'),
 					textAnswer: ' &nbsp; 2n<sup>1</sup> or 2n', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '2 is the greatest factor that can divide evenly into 4 and 10.',
 					firstVariables: 'Both terms have the variable n in common.'
@@ -207,6 +216,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{-2a}'),
 					textAnswer: ' &nbsp; 2a<sup>1</sup> or 2a', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '2 is the greatest factor that can divide evenly into 6 and 14.',
 					firstVariables: 'Both terms have the variable a in common.'
@@ -225,6 +235,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{x<sup>3</sup>}'),
 					textAnswer: ' &nbsp; 1x<sup>3</sup>y<sup>1</sup> or x<sup>3</sup>y', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: 'Each term has a coefficient of 1.<br> 1 is the greatest factor that can divide evenly into 1 and 1.',
 					firstVariables: 'Both terms have the variables <em>x</em> and <em>y</em> in common. Both terms do <strong><u>not</u></strong> have the variable z.'
@@ -245,6 +256,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; m<sup>2</sup>n<sup>2</sup>o<sup>4</sup>}'),
 					textAnswer: ' &nbsp; 1m<sup>2</sup>n<sup>2</sup> or m<sup>2</sup>n<sup>2</sup>', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: 'Each term has a coefficient of 1.<br> 1 is the greatest factor that can divide evenly into 1 and 1.',
 					firstVariables: 'Both terms have the variables <em>m</em> and <em>n</em> in common. Both terms do <strong><u>not</u></strong> have the variable o.'
@@ -265,6 +277,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'T',
 					buttonLabelD: dataUtils.pre('\\str{-4c<sup>3</sup>d}'),
 					textAnswer: ' &nbsp; -4c<sup>3</sup>d<sup>1</sup> or -4c<sup>3</sup>d', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '4 is the greatest factor that can divide evenly into 16 and 12.'
 										+'<br><br>'
@@ -287,6 +300,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{-3xy}'),
 					textAnswer: ' &nbsp; -3x<sup>2</sup>y<sup>4</sup>', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '3 is the greatest factor that can divide evenly into 15 and 9.'
 										+'<br><br>'
@@ -309,6 +323,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 21y}'),
 					textAnswer: ' &nbsp; 7y<sup>1</sup> or 7y', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '7 is the greatest factor that can divide evenly into 14, 7, and 21.',
 					firstVariables: 'All the terms have the variable of <em>y</em> in common.  All the terms do <strong><u>not</u></strong> have the variable <em>x</em>.'
@@ -327,6 +342,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{-2ab}'),
 					textAnswer: ' &nbsp; 6a<sup>1</sup> or 6a', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '6 is the greatest factor that can divide evenly into 18, 30, and 12.',
 					firstVariables: 'All the terms have the variable of <em>a</em> in common.  All the terms do <strong><u>not</u></strong> have the variable <em>b</em>.'
@@ -345,6 +361,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp;&nbsp; &nbsp;9mn}'),
 					textAnswer: ' &nbsp; -9m<sup>1</sup>n<sup>2</sup> or -9mn<sup>2</sup>', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '9 is the greatest factor that can divide evenly into 36, 27, and 18.'
 										+'<br><br>'
@@ -367,6 +384,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'T',
 					buttonLabelD: dataUtils.pre('\\str{-14m<sup>2</sup>n<sup>2</sup>}'),
 					textAnswer: ' &nbsp; -14m<sup>2</sup>n<sup>2</sup>', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '14 is the greatest factor that can divide evenly into 14, 42, and 28.'
 										+'<br><br>'
@@ -389,6 +407,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp;&nbsp; &nbsp;15ab}'),
 					textAnswer: ' &nbsp; 15a<sup>3</sup>b<sup>1</sup> or 15a<sup>3</sup>b', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '15 is the greatest factor that can divide evenly into 30, 15, and 45.',
 					firstVariables: 'All the terms have the variables <em>a</em> and <em>b</em> in common. All the terms do <strong><u>not</u></strong> have the variable <em>c</em>.'
@@ -409,6 +428,7 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 					buttonValueD: 'F',
 					buttonLabelD: dataUtils.pre('\\str{&nbsp; &nbsp; 12x<sup>2</sup>yz<sup>3</sup>}'),
 					textAnswer: ' &nbsp; 12x<sup>2</sup>z<sup>3</sup>', 
+					answerBtn: 'noAnswer',
 					template: 'main',
 					firstCoefficients: '12 is the greatest factor that can divide evenly into 24, 60, and 48.',
 					firstVariables: 'All the terms have the variables <em>x</em> and <em>z</em> in common. All the terms do <strong><u>not</u></strong> have the variable <em>y</em>.'
@@ -430,7 +450,8 @@ angular.module('mathSkills').service('data_aa_1', ['dataUtils', function (dataUt
 				{ problems: [17,18], total: 1},
 				{ problems: [19,20], total: 1}
 		];
-		//return dataUtils.build(desc, template, data);
     
     	return dataUtils.build(desc, template, data, shuffle);
+		
+		//return dataUtils.build(desc, template, data);
 }]);

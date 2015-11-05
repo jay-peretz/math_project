@@ -92,7 +92,8 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				secondHelp: 'Sides $$aValue and $$cValue are parallel, but not equal in length.  Side $$cValue is longer than side $$aValue.',
 				thirdHelp: 'Only sides $$bValue and $$eValue are equal in length. They are actually opposite sides of an internal rectangle.',
 				answerHelp: 'Sides $$eValue and $$bValue are equal in length',
-				template: 'multipleChoice' 
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice'  
 			}
 			,
 			{ // problem 2
@@ -114,7 +115,8 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				secondHelp: '$$s2Value and $$s4Value are not parallel, and they are not equal in length: $$s2Value is longer than $$s4Value.',
 				thirdHelp: '$$s1Value and $$s4Value would only be equal if the internal rectangle was actually a square. We don\'t know this, so we <u><strong>cannot</strong></u> assume they are equal.',
 				answerHelp: 'no sides are known to be equal in length',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 3
@@ -132,7 +134,8 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				secondHelp: 'No two sides are the same length, so no sides can be doubled.',
 				thirdHelp: 'The correct formula is: &nbsp; P = a + b + c + d',
 				answerHelp: 'P = a + b + c + d',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 4
@@ -154,7 +157,8 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				secondHelp: 'No two sides are the same length, so no sides can be doubled.',
 				thirdHelp: 'The correct formula is: &nbsp; P = $$s1Value + $$s2Value + $$s3Value + $$s4Value',
 				answerHelp: 'P = $$s1Value + $$s2Value + $$s3Value + $$s4Value',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 5
@@ -308,7 +312,8 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				secondHelp: '$$s3Value is the long horizontal side. The other two horizontal sides, $$s5Value plus $$s1Value together equal the length of $$s3Value.',
 				thirdHelp: 'If we subtract $$s5Value from $$s3Value, we have $$s1Value.',
 				answerHelp: '$$s3Value - $$s5Value',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 12
@@ -332,7 +337,8 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				secondHelp: '$$s4Value is the long vertical side. The other two vertical sides, $$s6Value plus $$s2Value together equal the length of $$s4Value.',
 				thirdHelp: 'If we subtract $$s6Value from $$s4Value, we have $$s2Value.',
 				answerHelp: '$$s4Value - $$s6Value',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 13
@@ -356,7 +362,8 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				secondHelp: '$$s3Value is the long horizontal side. ',
 				thirdHelp: 'The other two horizontal sides, $$s5Value and $$s1Value, must be added together to equal the length of $$s3Value.',
 				answerHelp: '$$s5Value + $$s1Value',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 14
@@ -380,7 +387,8 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				secondHelp: '$$s4Value is the long vertical side.',
 				thirdHelp: 'The other two vertical sides, $$s6Value and $$s2Value, must be added together to equal the length of $$s4Value.',
 				answerHelp: '$$s6Value + $$s2Value',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 15
@@ -404,7 +412,8 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				secondHelp: '$$s3Value is the long horizontal side. The other two horizontal sides, $$s5Value and $$s1Value together equal the length of $$s3Value.',
 				thirdHelp: 'If we subtract $$s1Value from $$s3Value, we have $$s5Value.',
 				answerHelp: '$$s3Value - $$s1Value',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 16
@@ -428,7 +437,8 @@ angular.module('mathSkills').service('data_t_1', ['dataUtils', function (dataUti
 				secondHelp: '$$s4Value is the long vertical side. The other two vertical sides, $$s6Value plus $$s2Value together equal the length of $$s4Value.',
 				thirdHelp: 'If we subtract $$s2Value from $$s4Value, we have $$s6Value.',
 				answerHelp: '$$s4Value - $$s2Value',
-				template: 'multipleChoice'
+				answerBtn: 'noAnswer',
+				template: 'multipleChoice' 
 			}
 			,
 			{ // problem 17

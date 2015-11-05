@@ -113,6 +113,7 @@ template = {
 				firstHelp: dataUtils.pre('{\\str{3 * 4 = 12}}'),
 				thirdHelp: dataUtils.pre('{\\str{The variable \"x\" has no other \"x\" to multiply by, so it remains a part of the multiplication (12 * x).}}'),
 				answer: '12x',
+				answerBtn: 'noAnswer',
 				template: 'main'
 			}
 			,
@@ -136,6 +137,7 @@ template = {
 										+'}'
 									),
 				answer: '15m<sup>2</sup>',
+				answerBtn: 'noAnswer',
 				template: 'main'
 			}
 			,
@@ -159,6 +161,7 @@ template = {
 										+'}'
 									),
 				answer: '-14y<sup>3</sup>',
+				answerBtn: 'noAnswer',
 				template: 'main'
 			}
 			,
@@ -182,6 +185,7 @@ template = {
 										+'}'
 									),
 				answer: '12x<sup>6</sup>y<sup>2</sup>',
+				answerBtn: 'noAnswer',
 				template: 'main'
 			}
 			,
@@ -198,6 +202,7 @@ template = {
 				firstHelp: dataUtils.pre('{\\str{-6 * 3  =  -18}}'),
 				thirdHelp: dataUtils.pre('{\\str{The variable \"m\" has no other \"m\" to multiply by. The variable \"n\" has no other \"n\" to multiply by. The m<sup>2</sup> and the n remain a part of the multiplication (-18 * m<sup>2</sup> * n).}}'),
 				answer: '-18m<sup>2</sup>n',
+				answerBtn: 'noAnswer',
 				template: 'main'
 			}
 			,
@@ -223,6 +228,7 @@ template = {
 										+'{\\str{The variable \"y\" has no other \"y\" to multiply by. The y remains part of the multiplication (-10 * x<sup>4</sup> * y).}}'
 									),
 				answer: '-10x<sup>4</sup>y',
+				answerBtn: 'noAnswer',
 				template: 'main' 
 			}
 			,
@@ -248,6 +254,7 @@ template = {
 									   ),
 				thirdHelp: dataUtils.pre('{\\str{The variable \"a\" has no other \"a\" to multiply by. The a<sup>2</sup> remains a part of the multiplication (-6 * a<sup>2</sup>).}}'),
 				answer: '-6a<sup>2</sup>',
+				answerBtn: 'noAnswer',
 				template: 'main'
 			}
 			,
@@ -300,6 +307,7 @@ template = {
 				answer: dataUtils.pre(
 									  '{\\frac{\\fracstr{m<sup>5</sup>n}}{\\fracstr{8}}}'
 									  ),
+				answerBtn: 'noAnswer',
 				template: 'fractional'
 			}
 			,
@@ -325,6 +333,7 @@ template = {
 										+'{\\str{The variable \"y\" has no other \"y\" to multiply by. The y remains part of the multiplication (4 * x<sup>3</sup> * y).}}'
 									),
 				answer: '4x<sup>3</sup>y',
+				answerBtn: 'noAnswer',
 				template: 'main'
 			}
 			,
@@ -350,6 +359,7 @@ template = {
 										+'{\\str{The variable \"y\" has no other \"y\" to multiply by. The variable \"z\" has no other \"z\" to multiply by. The y and the z remain a part of the multiplication (-56 * x<sup>2</sup> * y * z<sup>3</sup>).}}'
 									),
 				answer: '-56x<sup>2</sup>yz<sup>3</sup>',
+				answerBtn: 'noAnswer',
 				template: 'main'
 			}
         ];

@@ -132,19 +132,19 @@ angular.module('mathSkills').service('data10_5', ['dataUtils', function (dataUti
             { firstNum: '3', firstDen: '7', secondNum: '1', secondDen: '2', firstLCDNum: '6', lcdDen: '14', secondLCDNum: '7', firstButton: 'T', secondButton: 'F', thirdButton: 'F', answerSign: '<', template: 'first', answerBtn: 'noAnswer'
 			},
 			// problem 6
-			{ firstNum: '1', firstDen: '2', secondNum: '2', secondDen: '3', thirdNum: '3',thirdDen: '5', firstLCDNum: '15', secondLCDNum: '20', thirdLCDNum: '18', lcdDen: '30', firstAnswerNum: '1', firstAnswerDen: '2', secondAnswerNum: '3', secondAnswerDen: '5', thirdAnswerNum: '2', thirdAnswerDen: '3', template: 'second', answerBtn: 'noAnswer'
+			{ firstNum: '1', firstDen: '2', secondNum: '2', secondDen: '3', thirdNum: '3',thirdDen: '5', firstLCDNum: '15', secondLCDNum: '20', thirdLCDNum: '18', lcdDen: '30', firstAnswerNum: '1', firstAnswerDen: '2', secondAnswerNum: '3', secondAnswerDen: '5', thirdAnswerNum: '2', thirdAnswerDen: '3', template: 'second'
 			},
 			// problem 7
-			{ firstNum: '3', firstDen: '4', secondNum: '5', secondDen: '6', thirdNum: '2',thirdDen: '5', firstLCDNum: '45', secondLCDNum: '50', thirdLCDNum: '24', lcdDen: '60', firstAnswerNum: '2', firstAnswerDen: '5', secondAnswerNum: '3', secondAnswerDen: '4', thirdAnswerNum: '5', thirdAnswerDen: '6', template: 'second', answerBtn: 'noAnswer'
+			{ firstNum: '3', firstDen: '4', secondNum: '5', secondDen: '6', thirdNum: '2',thirdDen: '5', firstLCDNum: '45', secondLCDNum: '50', thirdLCDNum: '24', lcdDen: '60', firstAnswerNum: '2', firstAnswerDen: '5', secondAnswerNum: '3', secondAnswerDen: '4', thirdAnswerNum: '5', thirdAnswerDen: '6', template: 'second'
 			},
 			// problem 8
-			{ firstNum: '7', firstDen: '8', secondNum: '1', secondDen: '3', thirdNum: '4',thirdDen: '4', firstLCDNum: '21', secondLCDNum: '8', thirdLCDNum: '24', lcdDen: '24', firstAnswerNum: '1', firstAnswerDen: '3', secondAnswerNum: '7', secondAnswerDen: '8', thirdAnswerNum: '4', thirdAnswerDen: '4', template: 'second', answerBtn: 'noAnswer'
+			{ firstNum: '7', firstDen: '8', secondNum: '1', secondDen: '3', thirdNum: '4',thirdDen: '4', firstLCDNum: '21', secondLCDNum: '8', thirdLCDNum: '24', lcdDen: '24', firstAnswerNum: '1', firstAnswerDen: '3', secondAnswerNum: '7', secondAnswerDen: '8', thirdAnswerNum: '4', thirdAnswerDen: '4', template: 'second'
 			},
 			// problem 9
-			{ firstNum: '9', firstDen: '10', secondNum: '4', secondDen: '5', thirdNum: '5',thirdDen: '6', firstLCDNum: '54', secondLCDNum: '48', thirdLCDNum: '50', lcdDen: '60', firstAnswerNum: '4', firstAnswerDen: '5', secondAnswerNum: '5', secondAnswerDen: '6', thirdAnswerNum: '9', thirdAnswerDen: '10', template: 'second', answerBtn: 'noAnswer'
+			{ firstNum: '9', firstDen: '10', secondNum: '4', secondDen: '5', thirdNum: '5',thirdDen: '6', firstLCDNum: '54', secondLCDNum: '48', thirdLCDNum: '50', lcdDen: '60', firstAnswerNum: '4', firstAnswerDen: '5', secondAnswerNum: '5', secondAnswerDen: '6', thirdAnswerNum: '9', thirdAnswerDen: '10', template: 'second'
 			},
 			// problem 10
-			{ firstNum: '23', firstDen: '40', secondNum: '3', secondDen: '4', thirdNum: '3',thirdDen: '5', firstLCDNum: '23', secondLCDNum: '30', thirdLCDNum: '24', lcdDen: '40', firstAnswerNum: '23', firstAnswerDen: '40', secondAnswerNum: '3', secondAnswerDen: '5', thirdAnswerNum: '3', thirdAnswerDen: '4', template: 'second', answerBtn: 'noAnswer'
+			{ firstNum: '23', firstDen: '40', secondNum: '3', secondDen: '4', thirdNum: '3',thirdDen: '5', firstLCDNum: '23', secondLCDNum: '30', thirdLCDNum: '24', lcdDen: '40', firstAnswerNum: '23', firstAnswerDen: '40', secondAnswerNum: '3', secondAnswerDen: '5', thirdAnswerNum: '3', thirdAnswerDen: '4', template: 'second'
 			},
         ];
 

@@ -70,7 +70,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
         data = [
 			
 			// problem 1
-			{prob: dataUtils.pre('\\str{13z - 20z}'),
+			{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\str{13z - 20z}'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{We can only combine \"like terms.\"}}{\\html{&nbsp;}}'
 					+'{\\str{\"13z\" and \"-20z\" are like terms because they are both z<sup>1</sup>\ terms.}}'
@@ -82,7 +83,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>7z'},
 			
 			// problem 2
-			{prob: dataUtils.pre('\\str{-5x - 7x}'),
+			{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\str{-5x - 7x}'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{We can only combine \"like terms.\"}}{\\html{&nbsp;}}'
 					+'{\\str{\"-5x\" and \"-7x\" are like terms because they are both x<sup>1</sup> terms.}}'
@@ -94,7 +96,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>-</span>2x'},
 			
 			// problem 3
-			{prob: dataUtils.pre('\\str{-3ab - (-6ab)}'),
+			{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\str{-3ab - (-6ab)}'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{We can only combine \"like terms.\"}}{\\html{&nbsp;}}'
 					+'{\\html{First, we must get rid of the double negative.}}'
@@ -110,7 +113,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>-</span>3ab'},
 			
 			// problem 4
-			{prob: dataUtils.pre('\\grp'
+			{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
 										+'{\\fracstr{3m}}{\\fracstr{4}}}'
 									+'{\\str{ - }}'
@@ -150,7 +154,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 				buttonLabelD: dataUtils.pre('\\frac{\\fracstr{8}}{\\fracstr{m}}'),
 			},
 			// problem 5 
-			{prob: dataUtils.pre('\\str{-8r - (-3r) - 2r}'),
+			{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\str{-8r - (-3r) - 2r}'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{We can only combine \"like terms.\"}}'
 					+'{\\html{&nbsp;}}'
@@ -170,7 +175,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>9r'},
 			
 			// problem 6
-			{prob: dataUtils.pre('\\str{-2xy + (-7xy) - (3xy)}'),
+			{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\str{-2xy + (-7xy) - (3xy)}'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{We can only combine \"like terms.\"}}'
 					+'{\\html{&nbsp;}}'
@@ -185,7 +191,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueD: 'T', buttonLabelD: '<span class=bigger>-</span>12xy'},
 			
 			// problem 7 
-			{prob: dataUtils.pre('\\grp'
+			{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\grp'
 									+'{\\frac'
 										+'{\\fracstr{2x}}{\\fracstr{5}}}'
 									+'{\\sign{+}}'
@@ -261,7 +268,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 			},
 			
 			// problem 8 – (4m2 – 2m + 3)
-			{prob: dataUtils.pre('\\str{-(4m<sup>2</sup> - 2m + 3)'),
+			{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\str{-(4m<sup>2</sup> - 2m + 3)'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
 					+'{\\html{&nbsp;}}'
@@ -276,7 +284,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>2m<sup>2</sup> <span class=bigger>-</span> 3'},
 			
 			// problem 9 
-			{prob: dataUtils.pre('\\str{-(-5x<sup>3</sup> + 3x<sup>2</sup> -y - 5)'),
+			{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\str{-(-5x<sup>3</sup> + 3x<sup>2</sup> -y - 5)'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
 					+'{\\html{&nbsp;}}'
@@ -290,7 +299,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>-</span>5x<sup>3</sup> + 3x<sup>2</sup> + y + 5'},
 			
 			// problem 10 
-			{prob: dataUtils.pre('\\str{14n - (3n - 7)'),
+			{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\str{14n - (3n - 7)'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
 					+'{\\html{&nbsp;}}'
@@ -307,7 +317,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>42n<sup>2</sup> <span class=bigger>-</span> 98n'},
 			
 			//problem 11 
-			{prob: dataUtils.pre('\\str{(4x<sup>2</sup> - 4x) - (6x<sup>2</sup> + 2x)'),
+			{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\str{(4x<sup>2</sup> - 4x) - (6x<sup>2</sup> + 2x)'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
 					+'{\\html{&nbsp;}}'
@@ -326,7 +337,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueD: 'T', buttonLabelD: '<span class=bigger>-</span>2x <sup>2</sup> <span class=bigger>-</span> 6x'},
 			
 			//problem 12 
-			{prob: dataUtils.pre('\\str{(-2mn + n) - (-5mn - 3n)'),
+			{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\str{(-2mn + n) - (-5mn - 3n)'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
 					+'{\\html{&nbsp;}}'
@@ -352,7 +364,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>&nbsp;</span>3mn <span class=bigger>-</span> 2n'},
 			
 			//problem 13 
-			{prob: dataUtils.pre('\\str{(-7xy + 7y) - (3xy - 3x + 3y)'),
+			{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\str{(-7xy + 7y) - (3xy - 3x + 3y)'),
 			help: dataUtils.pre('\\rowgrp'
 					+'{\\html{First, we must distribute the negative sign into the parenthesis. The minus sign in front of the parenthesis means to take the <u>opposite sign</u> of <u>every</u> term inside the parenthesis.}}'
 					+'{\\html{&nbsp;}}'
@@ -380,7 +393,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
             buttonValueD: 'F', buttonLabelD: '<span class=bigger>-</span>10x <sup>2</sup>y <sup>2</sup> <span class=bigger>-</span> 3x &nbsp;+&nbsp; 4y'},
 			
 				//problem 14 (4m2/5 – 1/3) – (2m2/3 + 3/4)
-				{prob: dataUtils.pre('\\pan{5}{7}'
+				{answerBtn: 'noAnswer',
+			prob: dataUtils.pre('\\pan{5}{7}'
 										 +'{\\grp'
 											+'{\\str{(}}'
 											+'{\\frac{\\html{4m<sup>2}}{\\fracstr{5}}}'
@@ -491,7 +505,8 @@ angular.module('mathSkills').service('data_x_1', ['dataUtils', function (dataUti
 										+'{\\fracstr{5}}{\\fracstr{12}}}'),
 			},
 			//problem 15 (a/2 – 2b/3) – (3a/5 – b/7)
-				{prob: dataUtils.pre('\\pan{5}{7}'
+				{answerBtn: 'noAnswer',
+					prob: dataUtils.pre('\\pan{5}{7}'
 										 +'{\\grp'
 											+'{\\str{(}}'
 											+'{\\frac{\\fracstr{a}}{\\fracstr{2}}}'
