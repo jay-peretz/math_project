@@ -33,7 +33,7 @@ angular.module('mathSkills').service('data13_2', ['dataUtils', function (dataUti
 			{ questionLayout: 'math', firstDecimal: '3', secondDecimal: '0.12', answer: '2.88', template: 'twoDecimals' },
 			{ questionLayout: 'math', firstDecimal: '8.42', secondDecimal: '5.75', answer: '2.67', template: 'twoDecimals' },
 			{ questionLayout: 'english', firstDecimal: '8.7', secondDecimal: '5.33', answer: '3.37', template: 'twoDecimals' },
-			{ questionLayout: 'math', firstDecimal: '27.15', secondDecimal: '2.75', answer: '24.4', template: 'twoDecimals' },
+			{ questionLayout: 'math', firstDecimal: '27.15', secondDecimal: '2.75', answer: '[\\"24.4\\",\\"24.40\\"]', template: 'twoDecimals' },
 			{ questionLayout: 'english', firstDecimal: '22.1', secondDecimal: '3.8', answer: '18.3', template: 'twoDecimals' },
 			{ questionLayout: 'math', firstDecimal: '458.5', secondDecimal: '84.158', answer: '374.342', template: 'twoDecimals' },
 			{ questionLayout: 'english', firstDecimal: '292.653', secondDecimal: '6.32', answer: '286.333', template: 'twoDecimals' },

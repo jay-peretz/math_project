@@ -843,7 +843,7 @@ angular.module('mathSkills').service('data10_3', ['dataUtils', function (dataUti
 			// problem 4
 			{ whole1: 2, num1: 1, den1: 10, whole2: 1 , num2: 5, den2: '\xA06\xA0', wholeanswer1: 3, numanswer1: 28, answerDen1: 30, numnew1: 3, numnew2: 25, wholeanswer2: 3, numanswer2: 14, answerDen2: 15, template: 'third' },
 			// problem 5
-			{ whole1: 2, num1: 3, den1: 8, whole2: 1, num2: 1, den2: 5, wholeanswer1: 3, wholeanswer2: 3, numanswer1: 23,  numanswer2: 23,answerDen: 40, numnew1: 15, numnew2: '\xA08', template: 'second' },
+			{ whole1: 2, num1: 3, den1: 8, whole2: 1, num2: 1, den2: 5, wholeanswer1: 3, wholeanswer2: 3, numanswer1: 23,  numanswer2: 23,answerDen: 40, numnew1: 15, numnew2: '8', template: 'second' },
 			// problem 6
 			{ whole1: 2, num1: 7, den1: 12, whole2: 1 , num2: 1, den2: '\xA06\xA0', wholeanswer1: 3, numanswer1: 9, answerDen1: 12, numnew1: 7, numnew2: 2, wholeanswer2: 3, numanswer2: 3, answerDen2: 4, template: 'third' },
 			// problem 7

@@ -56,7 +56,7 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
 						problem: '\\html{'+
                                         '$problemStatement'+
                                     '}',
-						answer: '\\wb'
+						answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{$problemLeftAligned}}'
 										+'{\\html{&nbsp;}}'
@@ -98,7 +98,7 @@ angular.module('mathSkills').service('data_k_3', ['dataUtils', function (dataUti
                         }
 					}, {
 						problem: '\\html{$problemStatement}',
-						answer: '\\wb'
+						answer: '\\css'
 									+'{\\rowgrp'
 										+'{\\html{$labelCorrect}}'
 										+'{\\html{&nbsp;}}'
