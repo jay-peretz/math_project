@@ -137,17 +137,29 @@ angular.module('mathSkills').service('data_e_3', ['dataUtils', function (dataUti
             }
         },
         data = [
+			//problem 1
             { n1: '3', d1: '7', na: '7', da: '3', template: 'one' },
+			//problem 2
 			{ n1: '8', d1: '5', na: '5', da: '8', template: 'one' },
+			//problem 3
             { w1:'', n1: '2', d1: '9', w2:'', n2: '1', d2: '3', wn1:'2', wd1:'9', wn2:'1', wd2:'3', wa:'', na: '2', da: '3', wna: '2', wda: '3', template: 'two' },
+			//problem 4
             { w1:'', n1: '7', d1: '8', w2:'', n2: '3', d2: '2', wn1:'7', wd1:'8', wn2:'3', wd2:'2', wa:'', na: '7', da: '12', wna: '7', wda: '12', template: 'two' },
+			//problem 5
             { w1:'', n1: '4', d1: '5', w2:'', n2: '2', d2: '15', wn1:'4', wd1:'5', wn2:'2', wd2:'15', wa:'6', na: '', da: '',  wna: '6', wda: '1', template: 'two' },
+			//problem 6
             { w1:'', n1: '1', d1: '2', w2:'5', n2: '', d2: '', wn1:'1', wd1:'2', wn2:'5', wd2:'1', wa:'', na: '1', da: '10', na1: '', da1: '1', wna: '1', wda: '10', template: 'two' },
+			//problem 7
             { w1:'8', n1: '', d1: '', w2:'', n2: '5', d2: '6', wn1:'8', wd1:'1', wn2:'5', wd2:'6', wa:'9', na: '3', da: '5', wna: '48', wda: '5', template: 'two' },
+			//problem 8
             { w1:'', n1: '14', d1: '15', w2:'', n2: '7', d2: '3',  wn1:'14', wd1:'15', wn2:'7', wd2:'3', wa:'', na: '2', da: '5', wna: '2', wda: '5', template: 'two' },
+			//problem 9
             { w1:'', n1: '7', d1: '10', w2:'', n2: '2', d2: '3', wn1:'7', wd1:'10', wn2:'2', wd2:'3', wa:'1', na: '1', da: '20', wna: '21', wda: '20', template: 'two' },
+			//problem 10
             { w1:'', n1: '3', d1: '4', w2:'', n2: '2', d2: '5', w3:'', n3: '9', d3: '8', wn2: '2', wd2: '5', wa:'1', na: '2', da: '3', wna: '5', wda: '3', template: 'three' },
+			//problem 11
             { w1:'', n1: '28', d1: '15', w2:'2', n2: '', d2: '', w3:'', n3: '14', d3: '20', wn2: '2', wd2: '1', wa:'1', na: '1', da: '3', wna: '4', wda: '3', template: 'three' },
+			//problem 12
             { w1:'', n1: '4', d1: '9', w2:'', n2: '3', d2: '5', w3:'', n3: '6', d3: '7', wn2: '3', wd2: '5', wa:'', na: '70', da: '81', wna: '70', wda: '81', template: 'three' }
         ];
 
