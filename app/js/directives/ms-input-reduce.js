@@ -4,11 +4,11 @@
 
 angular.module('mathSkills')
     .config(['parserProvider', function (parserProvider) {
-        parserProvider.register('input', {
-            directiveTemplate: '<ms-input ng-hide="display" expected={{expected}} label={{label}}></ms-input>'
+        parserProvider.register('inputreduce', {
+            directiveTemplate: '<ms-input-reduce ng-hide="display" expected={{expected}} label={{label}}></ms-input-reduce>'
         });
     }])
-    .directive('msInput', [
+    .directive('msInputReduce', [
         'directiveUtils',
         '$timeout',
         'parser',
@@ -88,7 +88,8 @@ angular.module('mathSkills')
                             if (parsedExpected[0] === '[') {
                                 var possibleAnswers = JSON.parse(parsedExpected).map(String);
                                 var answerIndex = possibleAnswers.indexOf($scope.answer);
-								// "flip" relies on retension of problemData.index, but ms-reduce-fraction.js factorization requires that problemData.index be reset-- ms-input-reduce.js directive for use with ms-reduce-fraction.js includes reset here, but this version does not
+								// "flip" relies on retension of problemData.index, but ms-reduce-fraction.js factorization requires that problemData.index be reset- this version of the "input" directive is specifically for use in ms-reduce-fraction.js
+								problemData.resetIndex();
 								
                                 if (answerIndex !== -1) {
                                     var correctAnswerIndex = problemData.index(answerIndex);
@@ -240,7 +241,7 @@ angular.module('mathSkills')
                     });
 
                 },
-                template: '<div class="control-group {{class}}"><label><span>{{label}}</span><input style="width:{{width}};" ng-model=answer ms-strip-commas ms-add-zero ms-to-lowercase ms-remove-plus></label></div>'
+                template: '<div class="control-group {{class}}"><input style="width:{{width}};" ng-model=answer ms-strip-commas ms-add-zero ms-to-lowercase ms-remove-plus></label></div>'
             };
         }
     ]);

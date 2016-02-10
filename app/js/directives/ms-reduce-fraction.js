@@ -111,7 +111,7 @@ angular.module('mathSkills')
 								if (data.result === "correct") {
 									if (parser.extractTag(data.expected).args[0] !== '\\btn{Yes}{F}') {
 										$scope.instructions = "\\grp{\\str{What is a common factor of the numerator and denominator of \xA0}}{"+currentFraction()+"}{\\str{\xA0 ?}}";
-										$scope.answerexp = '\\input{["' + commonFactors(reduceFraction(false).numerator, reduceFraction(false).denominator).join('","') + '"]}';
+										$scope.answerexp = '\\inputreduce{["' + commonFactors(reduceFraction(false).numerator, reduceFraction(false).denominator).join('","') + '"]}';
 										$scope.answerlbl = "factor";
                                         focus();
 									} else {
@@ -133,7 +133,7 @@ angular.module('mathSkills')
 									panelGroupData.resetIndex();
 									factorsUsed.push(parser.extractTag(data.answer).args[0]);
 									$scope.instructions = "\\row{\\str{Factor a "+factorsUsed[factorsUsed.length - 1]+" out of \xA0}}{"+currentFraction(true)+"}{\\str{\xA0 :}}";
-									$scope.answerexp = '\\grp{\\frac{\\str{'+reduceFraction(true).numerator+' \xF7 '+factorsUsed[factorsUsed.length - 1]+'}}{\\str{'+reduceFraction(true).denominator+' \xF7 '+factorsUsed[factorsUsed.length - 1]+'}}}{\\str{\xA0 = \xA0}}{\\frac{\\input{'+reduceFraction(false).numerator+'}}{\\input{'+reduceFraction(false).denominator+'}}}';
+									$scope.answerexp = '\\grp{\\frac{\\str{'+reduceFraction(true).numerator+' \xF7 '+factorsUsed[factorsUsed.length - 1]+'}}{\\str{'+reduceFraction(true).denominator+' \xF7 '+factorsUsed[factorsUsed.length - 1]+'}}}{\\str{\xA0 = \xA0}}{\\frac{\\inputreduce{'+reduceFraction(false).numerator+'}}{\\inputreduce{'+reduceFraction(false).denominator+'}}}';
 									$scope.answerlbl = "reduce";
                                     focus();
 								} else {
