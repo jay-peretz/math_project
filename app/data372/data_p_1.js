@@ -2187,7 +2187,8 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 			 // prob 29
 			{
 				problemStatement: dataUtils.pre(
-								'\\rowgrp'
+							'\\pan{3}{9}'
+								+'{\\rowgrp'
 									+'{\\grp'
 										+'{\\str{Simplify: &nbsp;}}'
 										+'{\\frac'
@@ -2195,6 +2196,7 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 											+'{\\exp{\\str{&nbsp;$$base2}}{\\str{$$exp2}}}'
 										+'}'
 									+'}'
+								+'}'
 							),
 				answerInstructions: '',
 				base1: '3',
@@ -2323,7 +2325,8 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 			 // prob 30
 			{
 				problemStatement: dataUtils.pre(
-								'\\rowgrp'
+							'\\pan{3}{9}'
+								+'{\\rowgrp'
 									+'{\\grp'
 										+'{\\str{Simplify: &nbsp;}}'
 										+'{\\frac'
@@ -2331,6 +2334,7 @@ angular.module('mathSkills').service('data_p_1', ['dataUtils', function (dataUti
 											+'{\\exp{\\str{&nbsp;$$base2}}{\\str{$$exp2}}}'
 										+'}'
 									+'}'
+								+'}'
 							),
 				answerInstructions: '',
 				base1: '11',
