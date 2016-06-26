@@ -23,7 +23,7 @@ angular.module('mathSkills').service('data14_1', ['dataUtils', function (dataUti
             }
         },
         data = [
-            { number1: '84', number2: '6.5', mathorenglish1: 'math', answer: '546.0', template: 'main' },
+            { number1: '84', number2: '6.5', mathorenglish1: 'math', answer: '[\\"546.0\\",\\"546\\"]', template: 'main' },
             { number1: '0.4', number2: '8.7', mathorenglish1: 'math', answer: '3.48', template: 'main' },
             { number1: '8.7', number2: '23', mathorenglish1: 'english', answer: '200.1', template: 'main' },
             { number1: '2.6', number2: '0.14', mathorenglish1: 'math', answer: '0.364', template: 'main' },

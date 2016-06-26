@@ -110,7 +110,7 @@ angular.module('mathSkills').service('data18_1', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                        	problem: '\\rowgrp{\\row{\\str{Express the fractional precent as a decimal percent:}}}{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}{\\str{%}}}',
-						answer: '\\row{\\input{$answerDecimal}}{\\str{%}}',
+						answer: '\\grp{\\input{$answerDecimal}}{\\str{%}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'
@@ -129,7 +129,7 @@ angular.module('mathSkills').service('data18_1', ['dataUtils', function (dataUti
                     title: 'Main Answer',
                     children: [{
                        	problem: '\\rowgrp{\\row{\\str{Express the fractional precent as a decimal percent:}}}{\\row{\\mixed{\\html{$fractionWhole}}{\\frac{\\fracstr{$fractionNum}}{\\fracstr{$fractionDen}}}}{\\str{%}}}',
-						answer: '\\row{\\input{$answerDecimal}}{\\str{%}}',
+						answer: '\\grp{\\input{$answerDecimal}}{\\str{%}}',
 						controls: {
 							"checkAnswer": true,
 							"help": '\\rowgrp'

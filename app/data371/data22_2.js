@@ -176,7 +176,7 @@ angular.module('mathSkills').service('data22_2', ['dataUtils', function (dataUti
 				 template: "timeFraction"
             },{ //problem 7
                 problem: 'Jayvis Williams saved $3,200 with his credit union for a period of one year.  The interest rate is 2% compounded semi-annually.  If he made no additional deposits to his account, what is his balance at the end of the year?  (round all dollar amounts to the nearest cent)',
-				 answer: '3,264.32', 
+				 answer: '3264.32', 
 				 helpFirst: "The Basic Interest Formula:", 
 				 timeNumerator: "6",
 				 timeDenominator: "12",
