@@ -31,6 +31,31 @@ angular.module('mathSkills').service('data_q_1', ['dataUtils', function (dataUti
 					}]
                 }]
             },
+			firstSimplifyFixControls: {
+                title: 'Simplifying Exponential Expressions: Power raised to a Power',
+				children: [{
+					title: 'Main Answer',
+					children: [{
+						problem: '$problemStatement',
+						answer: '$solutionAnswer',		
+						controls: {
+                            "checkAnswer": true,
+							"fixHelpControls": true,
+                            "help": '\\rowgrp'
+										+'{\\html{&nbsp;}}'
+										+'{$line1}'
+										+'{\\html{&nbsp;}}'
+										+'{\\css'
+											+'{\\grp'
+												+'{$helpAnswer}'
+											+'}'
+											+'{help-answer-text}'
+										+'}'
+										+'{\\html{&nbsp;}}'
+						}
+					}]
+                }]
+            },
 			evaluateAfterSimplify: {
                 title: 'Simplifying Exponential Expressions: Power raised to a Power',
 				children: [{
@@ -4267,9 +4292,11 @@ angular.module('mathSkills').service('data_q_1', ['dataUtils', function (dataUti
 								'\\rowgrp'
 									+'{\\str{The exponent raised above a parenthesis affects every base inside the parenthesis.}}'	
 									+'{\\str{&nbsp;}}'
-									+'{\\str{In this problem the exponent of &quot;$$thirdExp&quot; is raised above the expression of ($$firstBase<sup>$$firstExp</sup> * $$secondBase<sup>$$secondExp</sup>). It affects the base of $$firstBase<sup>$$firstExp</sup> and the base of $$secondBase<sup>$$secondExp</sup>.}}'
+									+'{\\str{In this problem the exponent of &nbsp;&quot;$$thirdExp&quot;&nbsp; is raised above the expression of &nbsp;($$firstBase<sup>$$firstExp</sup> * $$secondBase<sup>$$secondExp</sup>). &nbsp;It affects the base of &nbsp;$$firstBase<sup>$$firstExp</sup>&nbsp; and the base of &nbsp;$$secondBase<sup>$$secondExp</sup>.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\str{($$firstBase<sup>$$firstExp</sup> * $$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>&nbsp; is the same as &nbsp;($$firstBase<sup>$$firstExp</sup>)<sup>$$thirdExp</sup>  * ($$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{We use the exponent rule &quot;Power raised to a Power&quot; here and <u>multiply the exponents</u>.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\str{($$firstBase<sup>$$firstExp</sup>)<sup>$$thirdExp</sup>&nbsp; means &nbsp;$$firstBase<sup>$$firstExp</sup><sup>*</sup><sup>$$thirdExp</sup>&nbsp; or &nbsp;$$firstBase<sup>$$expFirstProduct</sup>}}'
 									+'{\\str{&nbsp;}}'
@@ -4278,7 +4305,8 @@ angular.module('mathSkills').service('data_q_1', ['dataUtils', function (dataUti
 								),
 				helpAnswer: dataUtils.pre(
 								'\\rowgrp'
-									+'{\\str{$$answerInstructions}}'
+									+'{\\str{Simplified Answer: &nbsp;}}'
+									+'{\\str{&nbsp;}}'
 									+'{\\grp'
 										+'{\\exp{\\str{$$firstBase}}{\\str{$$expFirstProduct}}}'
 										+'{\\str{*}}'
@@ -4286,6 +4314,241 @@ angular.module('mathSkills').service('data_q_1', ['dataUtils', function (dataUti
 									+'}'
 							),
 				template: 'firstSimplify' 
+			 }
+			  ,
+			 // prob 38
+			 {
+				problemStatement: dataUtils.pre(
+								'\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\grp'
+											+'{\\str{Simplify: &nbsp;}}'
+											+'{\\exp'
+												+'{\\grp'
+													+'{\\str{(}}'
+													+'{\\exp{\\str{&nbsp;$$firstBase}}{\\str{$$firstExp}}}'
+													+'{\\str{*}}'
+													+'{\\exp{\\str{&nbsp;$$secondBase}}{\\str{$$secondExp}}}'
+													+'{\\str{)}}'
+												+'}'
+												+'{\\str{$$thirdExp}}'
+											+'}'
+										+'}'
+									+'}'
+							),
+				answerInstructions: 'All simplified answers must have only positive exponents.<br><br>',
+				firstBase: '2',
+				secondBase: '7',
+				firstExp: '6',
+				secondExp: '3',
+				thirdExp: '2',
+				expFirstProduct: '12',
+				expSecondProduct: '6',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\exp{\\input{$$firstBase}}{\\input{$$expFirstProduct}}}'
+										+'{\\str{*}}'
+										+'{\\exp{\\input{$$secondBase}}{\\input{$$expSecondProduct}}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{The exponent raised above a parenthesis affects every base inside the parenthesis.}}'	
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In this problem the exponent of &nbsp;&quot;$$thirdExp&quot;&nbsp; is raised above the expression of &nbsp;($$firstBase<sup>$$firstExp</sup> * $$secondBase<sup>$$secondExp</sup>). &nbsp;It affects the base of &nbsp;$$firstBase<sup>$$firstExp</sup>&nbsp; and the base of &nbsp;$$secondBase<sup>$$secondExp</sup>.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{($$firstBase<sup>$$firstExp</sup> * $$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>&nbsp; is the same as &nbsp;($$firstBase<sup>$$firstExp</sup>)<sup>$$thirdExp</sup>  * ($$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{We use the exponent rule &quot;Power raised to a Power&quot; here and <u>multiply the exponents</u>.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{($$firstBase<sup>$$firstExp</sup>)<sup>$$thirdExp</sup>&nbsp; means &nbsp;$$firstBase<sup>$$firstExp</sup><sup>*</sup><sup>$$thirdExp</sup>&nbsp; or &nbsp;$$firstBase<sup>$$expFirstProduct</sup>}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{($$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>&nbsp; means &nbsp;$$secondBase<sup>$$secondExp</sup><sup>*</sup><sup>$$thirdExp</sup>&nbsp; or &nbsp;$$secondBase<sup>$$expSecondProduct</sup>}}'
+									+'{\\str{&nbsp;}}'
+								),
+				helpAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{Simplified Answer: &nbsp;}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\exp{\\str{$$firstBase}}{\\str{$$expFirstProduct}}}'
+										+'{\\str{*}}'
+										+'{\\exp{\\str{$$secondBase}}{\\str{$$expSecondProduct}}}'
+									+'}'
+							),
+				template: 'firstSimplify' 
+			 }
+			  ,
+			 // prob 39
+			 {
+				problemStatement: dataUtils.pre(
+								'\\pan{4}{8}'
+									+'{\\rowgrp'
+										+'{\\grp'
+											+'{\\str{Simplify: &nbsp;}}'
+											+'{\\exp'
+												+'{\\grp'
+													+'{\\str{(}}'
+													+'{\\exp{\\str{&nbsp;$$firstBase}}{\\str{$$firstExp}}}'
+													+'{\\str{*}}'
+													+'{\\exp{\\str{&nbsp;$$secondBase}}{\\str{$$secondExp}}}'
+													+'{\\str{)}}'
+												+'}'
+												+'{\\str{$$thirdExp}}'
+											+'}'
+										+'}'
+									+'}'
+							),
+				answerInstructions: 'All simplified answers must have only positive exponents.<br><br>',
+				firstBase: '2',
+				secondBase: '4',
+				firstExp: '&minus;3',
+				secondExp: '2',
+				thirdExp: '5',
+				expFirstProduct: '-15',
+				expSecondProduct: '10',
+				expPositiveFirstProduct: '15',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\frac'
+										+'{\\exp{\\input{$$secondBase}}{\\input{$$expSecondProduct}}}'
+										+'{\\exp{\\input{$$firstBase}}{\\input{$$expPositiveFirstProduct}}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{The exponent raised above a parenthesis affects every base inside the parenthesis.}}'	
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In this problem the exponent of &nbsp;&quot;$$thirdExp&quot;&nbsp; is raised above the expression of &nbsp;($$firstBase<sup>$$firstExp</sup> * $$secondBase<sup>$$secondExp</sup>). &nbsp;It affects the base of &nbsp;$$firstBase<sup>$$firstExp</sup>&nbsp; and the base of &nbsp;$$secondBase<sup>$$secondExp</sup>.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{($$firstBase<sup>$$firstExp</sup> * $$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>&nbsp; is the same as &nbsp;($$firstBase<sup>$$firstExp</sup>)<sup>$$thirdExp</sup>  * ($$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{We use the exponent rule &quot;Power raised to a Power&quot; here and <u>multiply the exponents</u>.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{($$firstBase<sup>$$firstExp</sup>)<sup>$$thirdExp</sup>&nbsp; means &nbsp;$$firstBase<sup>$$firstExp</sup><sup>*</sup><sup>$$thirdExp</sup>&nbsp; or &nbsp;$$firstBase<sup>$$expFirstProduct</sup>}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{($$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>&nbsp; means &nbsp;$$secondBase<sup>$$secondExp</sup><sup>*</sup><sup>$$thirdExp</sup>&nbsp; or &nbsp;$$secondBase<sup>$$expSecondProduct</sup>}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{So: &nbsp;($$firstBase<sup>$$firstExp</sup> * $$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>&nbsp;  becomes  &nbsp;$$firstBase<sup>$$expFirstProduct</sup> * $$secondBase<sup>$$expSecondProduct</sup>}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Now we still need to &quot;get rid of the negative exponent&quot; by taking the <u>reciprocal of the base</u> and changing the sign of the exponent.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$firstBase<sup> $$expFirstProduct</sup>}}'
+										+'{\\str{&nbsp; = &nbsp;}}'
+										+'{\\frac'
+											+'{\\str{1}}'
+											+'{\\str{$$firstBase<sup>$$expPositiveFirstProduct</sup>}}'
+										+'}'
+									+'}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$firstBase<sup>$$expFirstProduct</sup> * $$secondBase<sup>$$expSecondProduct</sup>&nbsp; is the same as:}}'
+										+'{\\frac'
+											+'{\\str{1}}'
+											+'{\\str{$$firstBase<sup>$$expPositiveFirstProduct</sup>}}'
+										+'}'
+										+'{\\str{*}}'
+										+'{\\str{$$secondBase<sup>$$expSecondProduct}}'
+								),
+				helpAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{Simplified Answer: &nbsp;}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\frac'
+										+'{\\exp{\\str{$$secondBase}}{\\str{$$expSecondProduct}}}'
+										+'{\\exp{\\str{$$firstBase}}{\\str{$$expPositiveFirstProduct}}}'
+									+'}'
+							),
+				template: 'firstSimplifyFixControls' 
+			 }
+			  ,
+			 // prob 40
+			 {
+				problemStatement: dataUtils.pre(
+								'\\pan{4}{8}'
+									+'{\\rowgrp'
+										+'{\\grp'
+											+'{\\str{Simplify: &nbsp;}}'
+											+'{\\exp'
+												+'{\\grp'
+													+'{\\str{(}}'
+													+'{\\exp{\\str{&nbsp;$$firstBase}}{\\str{$$firstExp}}}'
+													+'{\\str{*}}'
+													+'{\\exp{\\str{&nbsp;$$secondBase}}{\\str{$$secondExp}}}'
+													+'{\\str{)}}'
+												+'}'
+												+'{\\str{$$thirdExp}}'
+											+'}'
+										+'}'
+									+'}'
+							),
+				answerInstructions: 'All simplified answers must have only positive exponents.<br><br>',
+				firstBase: '5',
+				secondBase: '11',
+				firstExp: '&minus;1',
+				secondExp: '2',
+				thirdExp: '4',
+				expFirstProduct: '-4',
+				expSecondProduct: '8',
+				expPositiveFirstProduct: '4',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\frac'
+										+'{\\exp{\\input{$$secondBase}}{\\input{$$expSecondProduct}}}'
+										+'{\\exp{\\input{$$firstBase}}{\\input{$$expPositiveFirstProduct}}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{The exponent raised above a parenthesis affects every base inside the parenthesis.}}'	
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In this problem the exponent of &nbsp;&quot;$$thirdExp&quot;&nbsp; is raised above the expression of &nbsp;($$firstBase<sup>$$firstExp</sup> * $$secondBase<sup>$$secondExp</sup>). &nbsp;It affects the base of &nbsp;$$firstBase<sup>$$firstExp</sup>&nbsp; and the base of &nbsp;$$secondBase<sup>$$secondExp</sup>.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{($$firstBase<sup>$$firstExp</sup> * $$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>&nbsp; is the same as &nbsp;($$firstBase<sup>$$firstExp</sup>)<sup>$$thirdExp</sup>  * ($$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{We use the exponent rule &quot;Power raised to a Power&quot; here and <u>multiply the exponents</u>.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{($$firstBase<sup>$$firstExp</sup>)<sup>$$thirdExp</sup>&nbsp; means &nbsp;$$firstBase<sup>$$firstExp</sup><sup>*</sup><sup>$$thirdExp</sup>&nbsp; or &nbsp;$$firstBase<sup>$$expFirstProduct</sup>}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{($$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>&nbsp; means &nbsp;$$secondBase<sup>$$secondExp</sup><sup>*</sup><sup>$$thirdExp</sup>&nbsp; or &nbsp;$$secondBase<sup>$$expSecondProduct</sup>}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{So: &nbsp;($$firstBase<sup>$$firstExp</sup> * $$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>&nbsp;  becomes  &nbsp;$$firstBase<sup>$$expFirstProduct</sup> * $$secondBase<sup>$$expSecondProduct</sup>}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{Now we still need to &quot;get rid of the negative exponent&quot; by taking the <u>reciprocal of the base</u> and changing the sign of the exponent.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$firstBase<sup> $$expFirstProduct</sup>}}'
+										+'{\\str{&nbsp; = &nbsp;}}'
+										+'{\\frac'
+											+'{\\str{1}}'
+											+'{\\str{$$firstBase<sup>$$expPositiveFirstProduct</sup>}}'
+										+'}'
+									+'}'
+									+'{\\str{&nbsp;}}'
+									+'{\\grp'
+										+'{\\str{$$firstBase<sup>$$expFirstProduct</sup> * $$secondBase<sup>$$expSecondProduct</sup>&nbsp; is the same as:}}'
+										+'{\\frac'
+											+'{\\str{1}}'
+											+'{\\str{$$firstBase<sup>$$expPositiveFirstProduct</sup>}}'
+										+'}'
+										+'{\\str{*}}'
+										+'{\\str{$$secondBase<sup>$$expSecondProduct}}'
+								),
+				helpAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{Simplified Answer: &nbsp;}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\frac'
+										+'{\\exp{\\str{$$secondBase}}{\\str{$$expSecondProduct}}}'
+										+'{\\exp{\\str{$$firstBase}}{\\str{$$expPositiveFirstProduct}}}'
+									+'}'
+							),
+				template: 'firstSimplifyFixControls' 
 			 }
 		];
 		
