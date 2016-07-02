@@ -4225,9 +4225,71 @@ angular.module('mathSkills').service('data_q_1', ['dataUtils', function (dataUti
 							),
 				template: 'firstSimplify' 
 			 }
+			  ,
+			 // prob 37
+			 {
+				problemStatement: dataUtils.pre(
+								'\\pan{12}{11}'
+									+'{\\rowgrp'
+										+'{\\grp'
+											+'{\\str{Simplify: &nbsp;}}'
+											+'{\\exp'
+												+'{\\grp'
+													+'{\\str{(}}'
+													+'{\\exp{\\str{&nbsp;$$firstBase}}{\\str{$$firstExp}}}'
+													+'{\\str{*}}'
+													+'{\\exp{\\str{&nbsp;$$secondBase}}{\\str{$$secondExp}}}'
+													+'{\\str{)}}'
+												+'}'
+												+'{\\str{$$thirdExp}}'
+											+'}'
+										+'}'
+									+'}'
+							),
+				answerInstructions: 'All simplified answers must have only positive exponents.<br><br>',
+				firstBase: '3',
+				secondBase: '5',
+				firstExp: '2',
+				secondExp: '4',
+				thirdExp: '3',
+				expFirstProduct: '6',
+				expSecondProduct: '12',
+				solutionAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\exp{\\input{$$firstBase}}{\\input{$$expFirstProduct}}}'
+										+'{\\str{*}}'
+										+'{\\exp{\\input{$$secondBase}}{\\input{$$expSecondProduct}}}'
+									+'}'
+							),
+				line1: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{The exponent raised above a parenthesis affects every base inside the parenthesis.}}'	
+									+'{\\str{&nbsp;}}'
+									+'{\\str{In this problem the exponent of &quot;$$thirdExp&quot; is raised above the expression of ($$firstBase<sup>$$firstExp</sup> * $$secondBase<sup>$$secondExp</sup>). It affects the base of $$firstBase<sup>$$firstExp</sup> and the base of $$secondBase<sup>$$secondExp</sup>.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{($$firstBase<sup>$$firstExp</sup> * $$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>&nbsp; is the same as &nbsp;($$firstBase<sup>$$firstExp</sup>)<sup>$$thirdExp</sup>  * ($$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>.}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{($$firstBase<sup>$$firstExp</sup>)<sup>$$thirdExp</sup>&nbsp; means &nbsp;$$firstBase<sup>$$firstExp</sup><sup>*</sup><sup>$$thirdExp</sup>&nbsp; or &nbsp;$$firstBase<sup>$$expFirstProduct</sup>}}'
+									+'{\\str{&nbsp;}}'
+									+'{\\str{($$secondBase<sup>$$secondExp</sup>)<sup>$$thirdExp</sup>&nbsp; means &nbsp;$$secondBase<sup>$$secondExp</sup><sup>*</sup><sup>$$thirdExp</sup>&nbsp; or &nbsp;$$secondBase<sup>$$expSecondProduct</sup>}}'
+									+'{\\str{&nbsp;}}'
+								),
+				helpAnswer: dataUtils.pre(
+								'\\rowgrp'
+									+'{\\str{$$answerInstructions}}'
+									+'{\\grp'
+										+'{\\exp{\\str{$$firstBase}}{\\str{$$expFirstProduct}}}'
+										+'{\\str{*}}'
+										+'{\\exp{\\str{$$secondBase}}{\\str{$$expSecondProduct}}}'
+									+'}'
+							),
+				template: 'firstSimplify' 
+			 }
 		];
 		
-		shuffle = [
+		/*shuffle = [
 				{ problems: [1,2], total: 1},
 				{ problems: [3,4], total: 1},
 				{ problems: [5,6], total: 1},
@@ -4247,8 +4309,8 @@ angular.module('mathSkills').service('data_q_1', ['dataUtils', function (dataUti
 				{ problems: [33,34], total: 1},
 				{ problems: [35,36], total: 1}
 				
-		];
-		//return dataUtils.build(desc, template, data);
+		];*/
+		return dataUtils.build(desc, template, data);
     
-    	return dataUtils.build(desc, template, data, shuffle);
+    	//return dataUtils.build(desc, template, data, shuffle);
 }]);
