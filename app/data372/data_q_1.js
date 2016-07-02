@@ -4552,7 +4552,7 @@ angular.module('mathSkills').service('data_q_1', ['dataUtils', function (dataUti
 			 }
 		];
 		
-		/*shuffle = [
+		shuffle = [
 				{ problems: [1,2], total: 1},
 				{ problems: [3,4], total: 1},
 				{ problems: [5,6], total: 1},
@@ -4570,10 +4570,12 @@ angular.module('mathSkills').service('data_q_1', ['dataUtils', function (dataUti
 				{ problems: [29,30], total: 1},
 				{ problems: [31,32], total: 1},
 				{ problems: [33,34], total: 1},
-				{ problems: [35,36], total: 1}
+				{ problems: [35,36], total: 1},
+				{ problems: [37,38], total: 1},
+				{ problems: [39,40], total: 1}
 				
-		];*/
-		return dataUtils.build(desc, template, data);
+		];
+		//return dataUtils.build(desc, template, data);
     
-    	//return dataUtils.build(desc, template, data, shuffle);
+    	return dataUtils.build(desc, template, data, shuffle);
 }]);
