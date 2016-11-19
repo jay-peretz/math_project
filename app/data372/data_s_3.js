@@ -189,7 +189,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 				unitsSelect: '[\\"yd\\",\\"yd&sup2;\\",\\"yd&sup3;\\"]',
 				identifyShape: 'Rectangle',
                 formula: 'A = L &bull; W',
-				substitution: 'A = ( 18 <sup>1</sup>&#8260;<sub>2</sub> ) + ( 5 <sup>1</sup>&#8260;<sub>3</sub> )',
+				substitution: 'A = ( 18 <sup>1</sup>&#8260;<sub>2</sub> ) &bull; ( 5 <sup>1</sup>&#8260;<sub>3</sub> )',
 				lineOneSolve: 'A = 98 <sup>2</sup>&#8260;<sub>3</sub>',
 				finalAnswer: dataUtils.pre('\\mixed{\\input{98}}{\\frac{\\input{2}}{\\input{3}}}'),
 				helpAnswer: '98 <sup>2</sup>&#8260;<sub>3</sub>',
