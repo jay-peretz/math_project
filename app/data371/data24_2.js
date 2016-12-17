@@ -371,7 +371,7 @@ angular.module('mathSkills').service('data24_2', ['dataUtils', function (dataUti
 									+'{\\str{&nbsp;}}'
 									+'{\\str{<u>Second</u>, simplify as necessary. Remember to always start with the smallest unit of measurement.}}'
 									+'{\\str{&nbsp;}}'
-									+'{\\str{5 qt. can be simplified because it is more than the 4 qt. that make a pound.}}'
+									+'{\\str{5 qt. can be simplified because it is more than the 4 qt. that make a gallon.}}'
 									+'{\\str{&nbsp;}}'
 									+'{\\str{Divide 5 qt. by 4 to find out how many \"gallons\" are in 5 qt.}}'
 									+'{\\str{&nbsp;}}'
@@ -8832,7 +8832,7 @@ angular.module('mathSkills').service('data24_2', ['dataUtils', function (dataUti
 				{ problems: [23,24], total: 1}
 		];
     
-    	return dataUtils.build(desc, template, data, shuffle);
+    	//return dataUtils.build(desc, template, data, shuffle);
 		
-		//return dataUtils.build(desc, template, data);
+		return dataUtils.build(desc, template, data);
 }]);
