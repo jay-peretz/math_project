@@ -174,7 +174,7 @@ angular.module('mathSkills').service('data_s_3', ['dataUtils', function (dataUti
 				unitsSelect: '[\\"cm\\",\\"cm&sup2;\\",\\"cm&sup3;\\"]',
 				identifyShape: 'Rectangle',
                 formula: 'A = L &bull; W',
-				substitution: 'A = ( 8 <sup>3</sup>&#8260;<sub>5</sub> ) + ( 12 <sup>1</sup>&#8260;<sub>2</sub> )',
+				substitution: 'A = ( 8 <sup>3</sup>&#8260;<sub>5</sub> ) &bull; ( 12 <sup>1</sup>&#8260;<sub>2</sub> )',
 				lineOneSolve: 'A = 107 <sup>1</sup>&#8260;<sub>2</sub>',
 				finalAnswer: dataUtils.pre('\\mixed{\\input{107}}{\\frac{\\input{1}}{\\input{2}}}'),
 				helpAnswer: '107 <sup>1</sup>&#8260;<sub>2</sub>',
