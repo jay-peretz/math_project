@@ -8832,7 +8832,7 @@ angular.module('mathSkills').service('data24_2', ['dataUtils', function (dataUti
 				{ problems: [23,24], total: 1}
 		];
     
-    	//return dataUtils.build(desc, template, data, shuffle);
+    	return dataUtils.build(desc, template, data, shuffle);
 		
-		return dataUtils.build(desc, template, data);
+		//return dataUtils.build(desc, template, data);
 }]);
